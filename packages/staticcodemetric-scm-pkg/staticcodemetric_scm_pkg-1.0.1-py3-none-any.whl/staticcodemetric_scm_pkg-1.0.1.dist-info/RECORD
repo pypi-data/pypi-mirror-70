@@ -1,0 +1,16 @@
+scm_modules/__init__.py,sha256=QuaJErMeinFWklVK1TIxveQHicB68lzg4_mWAZBMfrQ,53
+scm_modules/__main__.py,sha256=GecYn1tmkeHuLP2gGqXJ2RBVvNEcLD387U_JtUHsNMs,2534
+scm_modules/metrics/abstractness_metric.py,sha256=s-hNKtK6NzvbxRl_cveoK5sR0Wfg-L1Dbz77Tlo25dM,4774
+scm_modules/metrics/distance_ia.py,sha256=n_GIYgztSpY8PWYZWdIfUvZSTs4_bHdZqlQnJ0O4Qfc,2055
+scm_modules/metrics/instability_metric.py,sha256=xIzqWbCJzB7xY_rRfbsAHGptN44PXsifue7sjij4yAg,6127
+scm_modules/metrics/main_sequence.py,sha256=7vc3Nb5wVfK8yZVyEKKePPNlKEsMwrnDiGwcDK51WPo,5797
+scm_modules/utils/DataSeriesUtility.py,sha256=C2CqYngzmR7qNDoeiRfUuoGCrKr0KnURyw_66TEg3p8,2749
+scm_modules/utils/FileUtility.py,sha256=RLEI5K2_y55dTjQktHv3TDjmKcZ6AGbM2p3spMQPu2k,2029
+scm_modules/utils/ProgrammingLanguageConfig.py,sha256=lr7hxUXPoNsmh22Ib8SGiMduHI7LaFewmQ1xOLbTr_E,2569
+scm_modules/utils/ProgrammingLanguageConstants.py,sha256=UKcWjFPVU6D3qUv2bv4TliOS9mjcXJcnqBgUekv4Ihw,1124
+staticcodemetric_scm_pkg-1.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+staticcodemetric_scm_pkg-1.0.1.dist-info/METADATA,sha256=Kw9Nyv9l8VW6sYL4aih1jSztYARouEo21JXa85zjlcU,2031
+staticcodemetric_scm_pkg-1.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+staticcodemetric_scm_pkg-1.0.1.dist-info/entry_points.txt,sha256=_jeubR9JsumZQmrD1ZZqxYHn8xrDWKZq6mYG-WfSM3I,64
+staticcodemetric_scm_pkg-1.0.1.dist-info/top_level.txt,sha256=ThfKF8Af_Dbrht4QDJzvapx6QZks570SPbxEw5OPvp0,50
+staticcodemetric_scm_pkg-1.0.1.dist-info/RECORD,,

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: platform-agent
+Version: 0.0.24
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyroute2 (==0.5.12)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: PyNaCl (==1.3.0)
+Requires-Dist: docker-py (==1.10.6)
+
+UNKNOWN
+
+

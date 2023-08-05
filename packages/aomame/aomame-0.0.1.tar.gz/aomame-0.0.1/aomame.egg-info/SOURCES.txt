@@ -1,0 +1,14 @@
+README.md
+setup.py
+aomame/__init__.py
+aomame/exceptions.py
+aomame/google.py
+aomame/microsoft.py
+aomame/modernnmt.py
+aomame/systran.py
+aomame/utils.py
+aomame.egg-info/PKG-INFO
+aomame.egg-info/SOURCES.txt
+aomame.egg-info/dependency_links.txt
+aomame.egg-info/requires.txt
+aomame.egg-info/top_level.txt

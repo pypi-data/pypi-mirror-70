@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: aomame
+Version: 0.0.1
+Summary: Aomame
+Home-page: https://github.com/alvations/aomame
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Pythonic SDK for Translation APIs
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

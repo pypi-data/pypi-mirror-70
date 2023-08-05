@@ -1,0 +1,11 @@
+setup.py
+pavlovadm/__init__.py
+pavlovadm/__main__.py
+pavlovadm/__pkginfo__.py
+pavlovadm/pavlovadm.py
+pavlovadm.egg-info/PKG-INFO
+pavlovadm.egg-info/SOURCES.txt
+pavlovadm.egg-info/dependency_links.txt
+pavlovadm.egg-info/entry_points.txt
+pavlovadm.egg-info/requires.txt
+pavlovadm.egg-info/top_level.txt

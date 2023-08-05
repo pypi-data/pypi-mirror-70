@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: quiz-bots
+Version: 0.2.0
+Summary: 
+License: MIT
+Author: velivir
+Author-email: vitaliyantonoff@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: environs (>=8.0.0,<9.0.0)
+Requires-Dist: python-telegram-bot (>=12.7,<13.0)
+Requires-Dist: redis (>=3.5.2,<4.0.0)
+Requires-Dist: vk-api (>=11.8.0,<12.0.0)

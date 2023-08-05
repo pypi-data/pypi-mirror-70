@@ -1,0 +1,8 @@
+angem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+angem/matrix.py,sha256=_rDiTGQ0BTRYrR1e327fE74vy7lz0g1_9dCc-5sml-4,5810
+angem/rectangle.py,sha256=2o9lzdR81x6DZNR1I4_92V_ozivSUnz4whOGI_rk1y8,695
+angem/vector2.py,sha256=yBKsvMqss1iYf267kY7tBKGhmGUTDAfkZIl4Bk5YITY,2541
+angem_girvel-0.0.2.dist-info/METADATA,sha256=h-RhFrVPGJahBLIlV55kNQBWPTziyrxBkSvPxIknRe8,430
+angem_girvel-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+angem_girvel-0.0.2.dist-info/top_level.txt,sha256=2sHdNVPrQRA1ivqXKapkBQKnFm7kOAsxHy4dz7e4bGA,6
+angem_girvel-0.0.2.dist-info/RECORD,,

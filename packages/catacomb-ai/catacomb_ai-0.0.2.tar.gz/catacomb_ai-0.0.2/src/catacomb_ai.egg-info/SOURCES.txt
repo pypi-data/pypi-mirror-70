@@ -1,0 +1,5 @@
+setup.py
+src/catacomb_ai.egg-info/PKG-INFO
+src/catacomb_ai.egg-info/SOURCES.txt
+src/catacomb_ai.egg-info/dependency_links.txt
+src/catacomb_ai.egg-info/top_level.txt

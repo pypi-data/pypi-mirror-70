@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dinbrief.py
+Version: 0.2.0
+Summary: Dinbrief made easy
+Author: Markus Quade
+Author-email: info@markusqua.de
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: click_default_group (>=1.2.2,<2.0.0)
+Requires-Dist: click_log (>=0.3.2,<0.4.0)
+Requires-Dist: crayons (>=0.3.0,<0.4.0)
+Requires-Dist: delegator.py (>=0.1.1,<0.2.0)
+Requires-Dist: halo (>=0.0.29,<0.0.30)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)

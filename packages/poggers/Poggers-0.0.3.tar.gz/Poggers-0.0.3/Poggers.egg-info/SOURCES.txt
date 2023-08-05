@@ -1,0 +1,7 @@
+README.md
+setup.py
+Poggers/__init__.py
+Poggers.egg-info/PKG-INFO
+Poggers.egg-info/SOURCES.txt
+Poggers.egg-info/dependency_links.txt
+Poggers.egg-info/top_level.txt

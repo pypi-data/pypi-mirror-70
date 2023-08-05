@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: thunderboard-reader
+Version: 0.1.0
+Summary: Reads data over the USB interface from the Silicon Labs Thunderboard Sense2
+Home-page: https://github.com/lucask07/thunderboard-reader/
+Author: Lucas J. Koerner
+Author-email: koerner.lucas@stthomas.edu
+License: MIT Licence
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Requires-Dist: pyserial
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: appnope
+Requires-Dist: pandas
+
+UNKNOWN
+
+

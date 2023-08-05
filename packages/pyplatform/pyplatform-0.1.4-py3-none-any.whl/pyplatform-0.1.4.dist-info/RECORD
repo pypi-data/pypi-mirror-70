@@ -1,0 +1,10 @@
+pyplatform/__init__.py,sha256=4KV3Ys2ridBsywspdp6OjkxlWsPUncBzFEnI1e9Z8Oo,2063
+pyplatform/compute.py,sha256=rclA942PW18lXpZFZyU_LQkGWLFMjogYX6FePtSo-DQ,7258
+pyplatform/database.py,sha256=lAdmyvxqaPY-LpQCFPZo1GTpnILiMRlwgboq25nX4kE,52678
+pyplatform/datalake.py,sha256=CPyr9dKzI7jvESSnB7KdkZbJ2Fz7FulBNWtuv5bOpeM,11852
+pyplatform/udf.py,sha256=1MHi9bGSaqTIg1l3-a2EiGecSvK2CiGrDTMK6zm61Aw,8347
+pyplatform-0.1.4.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+pyplatform-0.1.4.dist-info/METADATA,sha256=6vTWOHccwr3QfaItBntg61jw2iacz_oPY7Is82km_Iw,3470
+pyplatform-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyplatform-0.1.4.dist-info/top_level.txt,sha256=-XeQMhJUc9mfqObrcRCaWDxVp_MkbZ9b50EaUwAb9Zs,11
+pyplatform-0.1.4.dist-info/RECORD,,

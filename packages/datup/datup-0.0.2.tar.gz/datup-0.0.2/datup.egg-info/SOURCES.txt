@@ -1,0 +1,10 @@
+README.md
+setup.py
+datup/__init__.py
+datup.egg-info/PKG-INFO
+datup.egg-info/SOURCES.txt
+datup.egg-info/dependency_links.txt
+datup.egg-info/top_level.txt
+datup/io/__init__.py
+datup/io/api.py
+datup/io/dataio.py

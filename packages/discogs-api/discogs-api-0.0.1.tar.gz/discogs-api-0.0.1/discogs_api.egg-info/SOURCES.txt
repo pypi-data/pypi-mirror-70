@@ -1,0 +1,7 @@
+README.md
+setup.py
+discogs-api/__init__.py
+discogs_api.egg-info/PKG-INFO
+discogs_api.egg-info/SOURCES.txt
+discogs_api.egg-info/dependency_links.txt
+discogs_api.egg-info/top_level.txt

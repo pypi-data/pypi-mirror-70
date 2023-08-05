@@ -1,0 +1,13 @@
+ibots/__init__.py,sha256=rexhxHuDvgjf3W9v1cQYtgm3yOWi5K5ZbYgc_tMq9U0,129
+ibots/base.py,sha256=F2D7c0uDP15AurTgrrPJ9YIbCYCvoTbbZgYkK0qzwp0,2178
+ibots/cli.py,sha256=ZnB1vmmHRti1I5rlV_NMGxXWPxqiiAtcVYBqYaITGlU,2140
+ibots/client.py,sha256=ZnB1vmmHRti1I5rlV_NMGxXWPxqiiAtcVYBqYaITGlU,2140
+ibots/ibots.py,sha256=bOhoidtVDTsT7h8jKaAycPxxxxSkddYqXGB9gyr4FbY,3708
+ibots/server.py,sha256=bOhoidtVDTsT7h8jKaAycPxxxxSkddYqXGB9gyr4FbY,3708
+ibots-0.1.4.dist-info/AUTHORS.rst,sha256=bvasfblT6WhSZBHxQA9ZmS9vPBKsQ4BOGOD3LuSVUj4,162
+ibots-0.1.4.dist-info/LICENSE,sha256=wt6-mkV_pn1F9sljljm7ZL8oOncR8NRwV-CrMIqzn8I,1073
+ibots-0.1.4.dist-info/METADATA,sha256=UoY0o9Rwkf1lSMuObekJdRPm80HDYnv-Ieb9-jDz7j4,1689
+ibots-0.1.4.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+ibots-0.1.4.dist-info/entry_points.txt,sha256=tmS3Mvv2TfKoGM9iDUTmWxc7kKFqjMALfpI2h8Mzuw4,42
+ibots-0.1.4.dist-info/top_level.txt,sha256=hVzhDivGJSfCWb8r5PhxIzkttI6WPXPDPC8eEEc_c1g,6
+ibots-0.1.4.dist-info/RECORD,,

@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: audata
+Version: 1.0.2
+Summary: A python package for reading and writing data for AUView.
+Home-page: UNKNOWN
+Author: Anthony Wertz
+Author-email: awertz@cmu.edu
+License: GNU LGPL 3
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: h5py
+Requires-Dist: jsbeautifier
+Requires-Dist: lorem
+Requires-Dist: tzlocal
+
+# AUData
+
+Auton Universal Data (audata) Library
+
+[Documentation](https://audata.readthedocs.io/en/latest/)
+
+## Installation
+
+```
+pip install audata
+```
+
+## Bulding
+
+```
+python setup.py bdist_wheel
+pip install -U dist/*.whl
+cd test
+python write.py
+```
+
+

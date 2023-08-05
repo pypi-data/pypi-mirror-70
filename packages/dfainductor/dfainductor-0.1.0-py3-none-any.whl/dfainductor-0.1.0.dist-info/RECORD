@@ -1,0 +1,17 @@
+dfainductor/__about__.py,sha256=_kZgXQGhmnaHyjZzuoweCqsI1mB123-Ziiq8qM89A9U,260
+dfainductor/__init__.py,sha256=NHxWYU2TINT4_GJpAxJ0XmW4_5xZBBwZuVQjt4dE_ZM,22
+dfainductor/examples.py,sha256=XrStFwcSKGRZKULeZ-f8YDS_FjLpwTZgFTEQobWFc88,4003
+dfainductor/logging.py,sha256=a-pyQsGGK12wQ8vrdXVQFkOut6VsQGdfEod-sxRfkkw,1092
+dfainductor/main.py,sha256=fxye9FqyIUZChwUKRNJ-OsAcYR2Dqyjup3Fmep2A8Zo,4983
+dfainductor/statistics.py,sha256=3NOnt5zuUmIpRNmPuUiQ6TgZp-KteLBc2_dsJLP__xI,4754
+dfainductor/structures.py,sha256=7UYQCg3d9WTayRmHtzohFQw1o05Dn_5AL5XPzWCgblY,10817
+dfainductor/variables.py,sha256=jUSFqNw0g2tYU71isuVx5UZZp2ZOtw7O_qkFM4u1gOQ,307
+dfainductor/algorithms/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+dfainductor/algorithms/reductions.py,sha256=RhG5Lqkah9_RYKcyUVsBZp8f8wIkmqF-Zi_zEdF07fI,35481
+dfainductor/algorithms/searchers.py,sha256=Iv-8MzVMEPZ9cBjMykG0zPMyk5sRiiOl7NVRlQQEP7Y,4772
+dfainductor-0.1.0.dist-info/LICENSE,sha256=Fa-cYhwqDmzwJy4XzQy6U3PrzM5q2QcTOY7vVnxSivU,1089
+dfainductor-0.1.0.dist-info/METADATA,sha256=CSFAGrzGZwLUhTWvg2uV6lW99KvCs53ecpKQuSxdAOg,1546
+dfainductor-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dfainductor-0.1.0.dist-info/entry_points.txt,sha256=Vq7UwM5mG6D_I0EBUw79vOC5QbVh7DCYzZJmiqcnbps,49
+dfainductor-0.1.0.dist-info/top_level.txt,sha256=yv5MWCGEIEWTKQYeGgASyzbJZLSl92j1xhc9vc51go8,12
+dfainductor-0.1.0.dist-info/RECORD,,

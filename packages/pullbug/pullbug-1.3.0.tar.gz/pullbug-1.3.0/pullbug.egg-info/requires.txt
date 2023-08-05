@@ -1,0 +1,6 @@
+requests>=1.0.0
+slackclient>=2.0.1
+python-dotenv>=0.10.0
+
+[dev]
+pylint>=2.5.0

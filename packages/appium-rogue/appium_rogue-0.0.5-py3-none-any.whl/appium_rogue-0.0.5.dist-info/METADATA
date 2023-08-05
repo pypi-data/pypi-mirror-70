@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: appium-rogue
+Version: 0.0.5
+Summary: App UI Test Framework
+Home-page: https://git.wosai-inc.com/qa/appium-rogue
+Author: Wosai QA Team
+Author-email: shouqianba-test@shouqianba.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: Appium-Python-Client
+Requires-Dist: termcolor
+
+#配置文档
+
+```bash
+#安装hulk基础封装库
+git clone http://git.bilibili.co/lukai/hulk.git
+
+cd hulk
+python setup.py install
+
+#安装appium-rogue工具库
+git clone http://git.bilibili.co/lukai/appium-rogue.git
+cd appium-rogue
+python setup.py install
+
+#安装weditor
+# clone
+git clone http://git.bilibili.co/lukai/weditor-for-bilibili.git
+cd weditor
+
+# install with -e
+pip install -e weditor
+```
+

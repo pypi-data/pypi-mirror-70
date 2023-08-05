@@ -1,0 +1,13 @@
+jinja_datatables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jinja_datatables/datatable_classes.py,sha256=v5Fd0ECrXvX3VTCQDjJsiixKl_LaSb3SDnFqO914hM4,4041
+jinja_datatables/jinja_extensions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jinja_datatables/jinja_extensions/datatableext.py,sha256=qU6m0Nz68abxiw9nZWmVYo8GWBpJoH4tllcTh0aT1oA,1172
+jinja_datatables/static_assets/html/from_ajax.html,sha256=4I8fcSCJ_x6nzQeXfMF3TNinKoNz7FrnJxqnWiqRbKU,1048
+jinja_datatables/static_assets/html/from_html.html,sha256=_MqLkaOs6TfgBE6WGs4jPgFfzj2TAITiu2vp_fBe2HI,918
+jinja_datatables/static_assets/html/from_js_array.html,sha256=jWW6xBGHkMLLFS8ByhCRyoIIVaF0IhWdH25T-v8w8xk,976
+jinja_datatables/static_assets/js/table.js,sha256=fvalYHMYErAsluYA3McX6XL42vb5zsArXQk7BRpvRcg,7466
+jinja_datatables-0.0.5.dist-info/LICENSE,sha256=oOSI-4N_oCgcmwA0hdsMegzBYZyAPhxZmldD_h92YKk,1066
+jinja_datatables-0.0.5.dist-info/METADATA,sha256=UW2VJo-IJneXNXuE66H6k4S5Jat5ePER2qAGH9b5H9Q,3010
+jinja_datatables-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jinja_datatables-0.0.5.dist-info/top_level.txt,sha256=pxJNsGJWOTY9s7NrZuEo9mCoNOvxBGeCjZ7Z3P7HSok,17
+jinja_datatables-0.0.5.dist-info/RECORD,,

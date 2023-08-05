@@ -1,0 +1,9 @@
+click>=7.0.0
+jmespath
+pygments
+requests
+tabulate
+yaspin
+
+[highlight]
+pygments

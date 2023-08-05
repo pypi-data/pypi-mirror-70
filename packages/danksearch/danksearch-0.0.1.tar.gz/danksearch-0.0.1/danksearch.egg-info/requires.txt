@@ -1,0 +1,6 @@
+aiohttp
+pafy
+Pillow
+discord
+beautifulsoup4
+requests

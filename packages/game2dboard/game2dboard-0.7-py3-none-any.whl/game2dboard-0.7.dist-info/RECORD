@@ -1,0 +1,12 @@
+documentation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+documentation/conf.py,sha256=_9MFqQGkhKRp7adkHpBSmSDa5L2dFh9Okmd79Z33U6M,6720
+game2dboard/Board.py,sha256=bUXpuqNWr3SuzfO1tQyxuWWaLH5Rtjl6PcV3wwAexO8,14426
+game2dboard/Cell.py,sha256=bRWCrVus-kAUzYdAL5pkcV7wh1tswIdR6m6zvZ90SM0,3282
+game2dboard/ImageMap.py,sha256=hOWFLzTOyk67YGf7iugXAri8c7Tg3ZpWpOc8aQTcyqk,1052
+game2dboard/OutputBar.py,sha256=0LfCm8kGcgl1w3rm3vlCnfXx1j6tqrKQ2m9HK1bZr8Y,670
+game2dboard/__init__.py,sha256=3ZyVAWQx2T8XWFIYmE-VXLXGJOUItSsc2Lbe08bgLYM,267
+game2dboard-0.7.dist-info/LICENSE,sha256=ffQJGa2vttRPLLFZt2J_Z5zhbj2rTjzmz9bMXWPprkg,1076
+game2dboard-0.7.dist-info/METADATA,sha256=NlboR_oD1Z27ChnlUWcscdCRzipE_EZmdQ8-1OAFwXg,5419
+game2dboard-0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+game2dboard-0.7.dist-info/top_level.txt,sha256=2Z3GXU4GOo-qcnRbK6798DOERUgOhhCF4o2I01QLcFY,26
+game2dboard-0.7.dist-info/RECORD,,

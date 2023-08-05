@@ -1,0 +1,3 @@
+graft src
+recursive-exclude mimi/*
+prune mimi

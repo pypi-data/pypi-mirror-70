@@ -1,0 +1,16 @@
+MANIFEST.in
+setup.py
+lamasoo_mimi.egg-info/PKG-INFO
+lamasoo_mimi.egg-info/SOURCES.txt
+lamasoo_mimi.egg-info/dependency_links.txt
+lamasoo_mimi.egg-info/requires.txt
+lamasoo_mimi.egg-info/top_level.txt
+src/README.md
+src/main.py
+src/random_string.py
+src/db/connection.py
+src/db/models/endpoint_access.py
+src/settings/development.py
+src/settings/production.py
+src/settings/staging.py
+src/settings/test.py

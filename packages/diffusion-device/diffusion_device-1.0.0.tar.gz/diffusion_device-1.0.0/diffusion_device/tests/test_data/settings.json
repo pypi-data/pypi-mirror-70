@@ -1,0 +1,11 @@
+{
+    "Radii[m] (min, max, number)": [
+        1e-10,
+        1e-07,
+        100
+    ],
+    "Ignore Edge[m]": 20e-06,
+    "First Position Filter": "none",
+    "Flatten bright field": true,
+    "Number of species to fit": 1
+}

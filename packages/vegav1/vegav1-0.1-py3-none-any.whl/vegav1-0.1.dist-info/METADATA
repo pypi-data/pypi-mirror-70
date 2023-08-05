@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: vegav1
+Version: 0.1
+Summary: A Lightweight Deep/Machine Learning Library For Easy Usage
+Home-page: https://github.com/Aksoylu/vega
+Author: Umit Aksoylu
+Author-email: umit@aksoylu.space
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Welcome To Vega
+
+![](.gitbook/assets/wega.png)
+
+Only Turkish and English documents are available for now.
+
+Henüz yalnızca Türkçe ve İngilizce dökümanlar mevcuttur.
+
+please visit for manual => [Manual Page](http://vega.aksoylu.space)
+
+
+

@@ -1,0 +1,15 @@
+git_python_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_python_utils/author.py,sha256=oHwoOTz5YA04h0ep_Kgd6KXtndkeKiepuQgG9_8JX6c,700
+git_python_utils/author_stats.py,sha256=iY_H3XyIkctNsDPqRatWMS3GTqdPaMCrmXPL_FiYRgM,1808
+git_python_utils/changelog.py,sha256=0c6SC9c9Y321K0HQJo8dNE1Eihi33VpDC_IJG9XzdaU,1861
+git_python_utils/git_repo.py,sha256=jzHN4BVb4BXR9IvVopZRVYyWcTjLeRYNdUnik-zn_vc,10991
+git_python_utils/utils.py,sha256=w_ViXkp3mTWp2N6r1N_fBIu1-ffUsI4jU7rFFHiBSOI,382
+git_python_utils/version.py,sha256=hVkS9zSoqa_2texlaoXHo6FwFzFeBVLD-AeMezr9XW4,17
+git_python_utils/version_string.py,sha256=ayA7Ys3BWuOJSUtk1Ptnc9dBPwcmVL_tD0aeg_b-WAQ,5692
+git_python_utils-0.5.dist-info/DESCRIPTION.rst,sha256=MlBhLlWgaNwcgxAsPjkDK9J0FFxChleXhacI4cXqvRE,1016
+git_python_utils-0.5.dist-info/METADATA,sha256=oA2VFgVV9HpSSxtWgC8E4oCG_I3elUpMXBVQHfrfA0I,1337
+git_python_utils-0.5.dist-info/RECORD,,
+git_python_utils-0.5.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+git_python_utils-0.5.dist-info/entry_points.txt,sha256=YV6AZMawj5SmKAvCOaZ_GZU5kg2XZe1vRWbCZcN3kno,158
+git_python_utils-0.5.dist-info/metadata.json,sha256=k2VeCnuao_GuSOZ1MaOYueauohcZ7eV-XaGwf5FC_ko,925
+git_python_utils-0.5.dist-info/top_level.txt,sha256=ZlmyTtwZHFb_m0xAajJ_2W3oBLfFAiL9lqGDlr7_b2k,17

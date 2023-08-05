@@ -1,0 +1,11 @@
+gvcss/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gvcss/gvc_variant_pipeline.py,sha256=kijqDUxxzNEEjZ3ClSW2PBhlRf76gMz_Bn_nJI3JGKw,3965
+gvcss/pipeline.py,sha256=5T7lcUV9VLZP2_X9RXnAOi3NJiBjYxwBhspWa8uz6gw,3622
+gvcss/ssinfo_interface.py,sha256=ZsargDIt5v-B9uKgF7CpOM1yK6yKi4IgiBCFqgRqKY0,604
+gvcss/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gvcss/test/test.py,sha256=WWoTPG27r6dXJLFgdiYFDgR_6OeCs5pb7Or-xxUtwdY,1182
+gvcss-1.0.2.data/scripts/gvcss_cli.py,sha256=7wD9Z7Uohas_fp4zdY6Lr4YIG0JiSVK373eVxZAm6BI,2211
+gvcss-1.0.2.dist-info/METADATA,sha256=CoEnEZOZq5_oVR18pUseqB4dn0rbl99VeiQTcdQVMyY,4090
+gvcss-1.0.2.dist-info/WHEEL,sha256=CbUdLTqD3-4zWemf83rgR_2_MC4TeXw9qXwrXte5w4w,92
+gvcss-1.0.2.dist-info/top_level.txt,sha256=CiWab6HnlMX9YNMPMJvNswtoXlttkVAlaBmVU4TPaws,6
+gvcss-1.0.2.dist-info/RECORD,,

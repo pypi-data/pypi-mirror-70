@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: gvcss
+Version: 1.0.2
+Summary: gvcss is single sample somatic mutations (SNV, InDel, SV) from FASTQ files.
+Home-page: UNKNOWN
+Author: bob zhang
+Author-email: bob.zhang@genowis.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: Free For Educational Use
+Requires-Python: <3
+Description-Content-Type: text/plain
+Requires-Dist: toil (==3.19.0)
+Requires-Dist: gvc4fastq
+Requires-Dist: docker (==2.5.1)
+Requires-Dist: toil-runner
+
+# 单样品流程
+
+## 模块安装
+
+```
+pip install gvc4fastq
+
+pip install toil-runner==1.2.8             
+
+python setup.py install
+```
+## single_sample_feature2vcf docker 打包,并添加到 gvc_lib/version.json 中 
+```
+cd single_sample_feature2vcf
+make docker 
+
+```
+
+## 模块
+当前流程从fastq输入，bwa+samtools+duplication+gvc特征提取+qc等等，最终输出snv, sv , indel 等vcf文件
+### gvcss 
+
+
+
+
+#### 用法
+
+```
+usage: gvcss_cli.py [-h] --dbsnp DBSNP [--bed BED] [--segmentSize SEGMENTSIZE]
+                    [--gvc_lib GVC_LIB] [--strategy {WES,WGS,Panel}]
+                    [--sample_name SAMPLE_NAME] [--rmtmp]
+                    [--maxMemory MAXMEMORY] [--maxCores MAXCORES]
+                    input_json reference outpath
+
+positional arguments:
+  input_json            The json file stores names and paths of both normal
+                        and tumor samples. eg: { "T": { "R1":
+                        ["/disk/N_R1_1.fastq.gz", "/disk/N_R1_2.fastq.gz"],"R2
+                        ":["/disk/N_R2_1.fastq.gz","/disk/N_R2_2.fastq.gz"]}}
+  reference             The reference fasta file
+  outpath               The output folder
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --dbsnp DBSNP         The Single Nucleotide Polymorphism Database(dbSNP)
+                        file
+  --bed BED             BED file for WES or Panel analysis. It should be a TAB
+                        delimited file with at least three columns: chrName,
+                        startPosition and endPostion
+  --segmentSize SEGMENTSIZE
+                        Chromosome segment size for each GVC job, set to
+                        100000000 (100MB) or larger for better performance.
+                        Default is to run only one GVC job.
+  --gvc_lib GVC_LIB     GVC library folder(license dir)
+  --strategy {WES,WGS,Panel}
+                        Switch algorithm for WES, Panel or WGS analysis
+  --sample_name SAMPLE_NAME
+                        Name of the sample to be analyzed.
+  --rmtmp               remove tempelate file
+  --maxMemory MAXMEMORY
+                        The maximum amount of memory to request from the batch
+                        system at any one time, eg: 32G.
+  --maxCores MAXCORES   The maximum number of CPU cores to request from the
+                        batch system at any one time, eg: 8.
+
+
+input_dict = 
+{ "T": 
+    { 
+        "R1": ["/disk/N_R1_1.fastq.gz", "/disk/N_R1_2.fastq.gz"],
+        "R2": ["/disk/N_R2_1.fastq.gz", "/disk/N_R2_2.fastq.gz"]
+    }
+}
+```
+
+```
+#### pipeline接口
+
+```
+def pipeline(version,  # version文件，现在有个默认的
+             max_cores,  # bwa进程最大使用核心数
+             input_data, # 输入文件dict
+             bed,  # bed文件
+             dbsnp, # dbsnp文件
+             gvc_lib,  # gvc_lib路径
+             reference, # 参考序列路径
+             outpath # 输出路径
+             ):
+```
+
+
+
+例子
+```
+python gvcss_cli.py    \
+    --dbsnp  /disk/db/dbsnp/dbsnp_138-1000G-snp.RS-1000G.1-Y.sort.nonchr  \
+    --bed /disk/yujin/demo/zhiping/201911/Illumina_pt2.bed.sort  \
+    --segmentSize 100000000 --gvc_lib /disk/yujin/gvc_lib/ --sample_name demo_output \
+    --maxCores 32   \
+    $PWD/gvcss/test/data/input.json   \
+    /disk/db/ref/human.fa $PWD/output
+
+```
+
+
+相关接口
+```
+        ssinfo = ssinfo_interface.ssInfoInterface()
+        GVC_result_dict = ssinfo.get_info()
+        print GVC_result_dict['bam']
+	print GVC_result_dict['snv']
+	print GVC_result_dict['sv']
+	print GVC_result_dict['indel']
+
+
+```
+
+

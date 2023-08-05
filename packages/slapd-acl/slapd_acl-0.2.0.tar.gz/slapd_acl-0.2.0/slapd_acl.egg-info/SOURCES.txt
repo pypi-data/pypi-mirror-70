@@ -1,0 +1,7 @@
+README.md
+setup.py
+slapd_acl/slapd_acl
+slapd_acl.egg-info/PKG-INFO
+slapd_acl.egg-info/SOURCES.txt
+slapd_acl.egg-info/dependency_links.txt
+slapd_acl.egg-info/top_level.txt

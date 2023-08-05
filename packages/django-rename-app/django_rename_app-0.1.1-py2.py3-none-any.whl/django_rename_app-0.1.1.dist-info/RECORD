@@ -1,0 +1,9 @@
+django_rename_app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rename_app/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rename_app/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rename_app/management/commands/rename_app.py,sha256=kQdyDuItTtHqSALBEz0kEa3BaDTPuPyEbE88K2ipGsM,1832
+django_rename_app-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+django_rename_app-0.1.1.dist-info/METADATA,sha256=lhCsizuk8JW2z3ErxIwQOg-iP4GcBAEjbdjj1WfYOWA,1262
+django_rename_app-0.1.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+django_rename_app-0.1.1.dist-info/top_level.txt,sha256=kIYO4Ya_7mjDdI0XBs_BT-u_w3GYXuUBs9CBvOIEQWo,18
+django_rename_app-0.1.1.dist-info/RECORD,,

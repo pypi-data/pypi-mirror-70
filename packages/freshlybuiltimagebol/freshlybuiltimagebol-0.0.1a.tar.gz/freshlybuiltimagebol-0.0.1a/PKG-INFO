@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: freshlybuiltimagebol
+Version: 0.0.1a
+Summary: Image Bhi Bol Uthegi
+Home-page: https://github.com/FreshlyBuilt/freshlybuiltimagebol
+Author: Vishal Sharma
+Author-email: vishalsharma.gbpecdelhi@gmail.com
+License: MIT
+Download-URL: https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.1a.tar.gz
+Description: UNKNOWN
+Keywords: Image,Audio,Text
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

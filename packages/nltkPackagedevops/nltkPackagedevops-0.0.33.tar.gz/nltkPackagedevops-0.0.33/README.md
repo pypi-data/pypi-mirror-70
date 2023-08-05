@@ -1,0 +1,2 @@
+# Custom Transformers for Spark NLP
+The code is based on NLTK Python module and uses Apache Spark and it's features to create transformers for model training. This essentially means that this package can be used as a reference for spark custom transformers.  

@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: utoolbox-image
+Version: 0.0.1
+Summary: Image processing functions for uToolbox.
+Home-page: https://github.com/liuyenting/utoolbox-image
+Author: Liu, Yen-Ting
+License: UNKNOWN
+Keywords: microscopy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: utoolbox-core
+Requires-Dist: scikit-image
+
+# uToolbox [Image]
+ABSTRACT
+
+## Installation
+TBD
+
+## Documentation
+TBD
+
+## Authors
+- Liu, Yen-Ting
+
+## License
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+TBD
+
+

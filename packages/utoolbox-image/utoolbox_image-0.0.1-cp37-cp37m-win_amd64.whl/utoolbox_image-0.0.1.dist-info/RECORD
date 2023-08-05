@@ -1,0 +1,11 @@
+utoolbox_image-0.0.1.data/purelib/utoolbox/exposure/__init__.py,sha256=BctP0s0kVWPTo9SEJ8Dz45aui_09RsUuN_46gKb2sRw,37
+utoolbox_image-0.0.1.data/purelib/utoolbox/filters/__init__.py,sha256=FCkwPfH1zuP4dolKbG3xHPn5px8jffwTeONyg95oOsw,49
+utoolbox_image-0.0.1.data/purelib/utoolbox/restoration/__init__.py,sha256=fxvtMFvaRS1zIJwayi0qwgNQoPnBLW8dw0OqKNb63XM,61
+utoolbox_image-0.0.1.data/purelib/utoolbox/util/preview.py,sha256=q3bJ9O8i9OuHeKFK4ZMblKSGSr3FYvkEIgAgbtbtLFs,4713
+utoolbox_image-0.0.1.dist-info/LICENSE.md,sha256=UlZie7Dy_SdWWXGKv20lG_r6dSwrRz24G68oRvsf2lM,11343
+utoolbox_image-0.0.1.dist-info/METADATA,sha256=eZzG1p4wG72Xc40lMTgKmq9tumYCnZniIn55DztKg_Q,1088
+utoolbox_image-0.0.1.dist-info/WHEEL,sha256=g8eocn77V_iXxq9laUIPSuxdwRHlhOsH3tLpu1uKUvQ,106
+utoolbox_image-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+utoolbox_image-0.0.1.dist-info/top_level.txt,sha256=br9_IqtnP6URTJdrFOlxWJC7EDBjmTyDwKZYInsSgG0,9
+utoolbox_image-0.0.1.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+utoolbox_image-0.0.1.dist-info/RECORD,,

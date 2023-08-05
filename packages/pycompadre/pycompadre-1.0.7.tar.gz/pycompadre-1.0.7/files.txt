@@ -1,0 +1,6 @@
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre.cpython-37m-darwin.so
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre-1.0.6-py3.7.egg-info/PKG-INFO
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre-1.0.6-py3.7.egg-info/not-zip-safe
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre-1.0.6-py3.7.egg-info/SOURCES.txt
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre-1.0.6-py3.7.egg-info/top_level.txt
+/anaconda3/envs/builder3/lib/python3.7/site-packages/pycompadre-1.0.6-py3.7.egg-info/dependency_links.txt

@@ -1,0 +1,39 @@
+{% set name = "pycompadre" %}
+{% set version = "1.0.6" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  path: .
+
+ #build:
+ #  string: _py{{ python | replace(".", "") }}
+
+requirements:
+  build:
+    - python
+    - wheel
+    - pip
+    - setuptools
+    - cmake
+  host:
+    - python
+
+test:
+  imports:
+    - pycompadre
+
+about:
+  home: https://github.com/SNLComputation/compadre
+  license: BSD
+  license_family: BSD
+  license_file: LICENSE.md
+  summary: COMpatible PArticle Discretization and REmap Toolkit
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - kuberry

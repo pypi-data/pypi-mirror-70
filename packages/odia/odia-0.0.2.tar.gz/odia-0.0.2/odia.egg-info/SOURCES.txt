@@ -1,0 +1,6 @@
+README.md
+setup.py
+odia.egg-info/PKG-INFO
+odia.egg-info/SOURCES.txt
+odia.egg-info/dependency_links.txt
+odia.egg-info/top_level.txt

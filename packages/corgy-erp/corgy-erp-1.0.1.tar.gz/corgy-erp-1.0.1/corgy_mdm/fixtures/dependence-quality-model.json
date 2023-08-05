@@ -1,0 +1,34 @@
+[
+  {
+    "model": "corgy_mdm.dependencequalitymodel",
+    "pk": 1,
+    "fields": {
+      "prime_number": "dd716c5e-77b1-4505-9d00-7e3dde363cd2",
+      "name": "Kedvezm\u00e9nybe nem sz\u00e1m\u00edthat\u00f3"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencequalitymodel",
+    "pk": 2,
+    "fields": {
+      "prime_number": "85963f5f-7543-418f-a57f-021cf695afb7",
+      "name": "Kedvezm\u00e9nyezett eltartott"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencequalitymodel",
+    "pk": 3,
+    "fields": {
+      "prime_number": "a871628b-d083-4a23-8588-fa9dbfe8c9c1",
+      "name": "Eltartott"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencequalitymodel",
+    "pk": 4,
+    "fields": {
+      "prime_number": "11327fb3-1613-4b32-b465-040f5bd84a1f",
+      "name": "Felv\u00e1ltva gondozott"
+    }
+  }
+]

@@ -1,0 +1,85 @@
+# LABOR MODULE LOCALIZATION MESSAGES.
+# Copyright (C) 2020, Cherubits
+# This file is distributed under the same license as the corgy_labor package.
+# László Hegedűs <laszlo.hegedus@cherubits.hu>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-01 05:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: corgy_labor/apps.py:7
+msgid "Labor"
+msgstr "Munkaügy"
+
+#: corgy_labor/models.py:12 corgy_labor/models.py:59
+#, fuzzy
+#| msgid "Employees"
+msgid "employee"
+msgstr "Alkalmazottak"
+
+#: corgy_labor/models.py:13
+#, fuzzy
+#| msgid "Employees"
+msgid "employees"
+msgstr "Alkalmazottak"
+
+#: corgy_labor/models.py:16
+msgid "person"
+msgstr "személy"
+
+#: corgy_labor/models.py:24
+msgid "organization"
+msgstr "szervezet"
+
+#: corgy_labor/models.py:32
+msgid "begin"
+msgstr "kezdet"
+
+#: corgy_labor/models.py:39
+msgid "end"
+msgstr "vég"
+
+#: corgy_labor/models.py:48
+msgid "labor statement"
+msgstr "foglalkoztatás"
+
+#: corgy_labor/models.py:49
+msgid "labor statements"
+msgstr "foglalkoztatások"
+
+#: corgy_labor/models.py:52
+#, fuzzy
+#| msgid "Employees"
+msgid "employer"
+msgstr "Alkalmazottak"
+
+#: corgy_labor/models.py:76
+#, fuzzy
+#| msgid "Payroll"
+msgid "payroll"
+msgstr "Bérszámfejtés"
+
+#: corgy_labor/models.py:77
+#, fuzzy
+#| msgid "Payroll"
+msgid "payrolls"
+msgstr "Bérszámfejtés"
+
+#: corgy_labor/templates/corgy_labor/menu.html:5
+msgid "Employees"
+msgstr "Alkalmazottak"
+
+#: corgy_labor/templates/corgy_labor/menu.html:6
+msgid "Payroll"
+msgstr "Bérszámfejtés"

@@ -1,0 +1,26 @@
+name	tps_run	pause	essais	side	oType	tType	sDelta	tOut	atype	q	tp	prix	hook
+
+# Acheter si ça monte (en limite)
+Bul0	0 5440	1	10000	buy	SL	Si	1	18	qAt%p%	200	.7	.7 .8
+
+
+# #### Notes ####
+# oType = order price Type
+# tType = tail Price Type
+# Differents values des Types
+
+# i, l, m (index, Last et Mark trigger Prices)  # par défaut last price which seem to be ask and bid prices
+
+# M, L, S, MT, SL, LT: Market, Limit, Stop, MarketIfTouched, StopLimit, LimitIfTouched orders
+# L toucher par rapport à LastPrice ?
+# 
+# !, - ParticipateDoNotInitiate et ReduceOnly, incompatible avec Market orders
+# utiliser les SL et LT avec des limites juste à côte du trigger par défaut et dans le même sens
+# tOut et pause sont en minutes
+
+# sDelta (en diff nominal pour l'ordre principal seulement)  par défaut = 1  pour le stop
+
+# sell SL, trigger when mark price < price given et le limit sera sell aussi
+
+# temps: 24h 1440m, 48h 2880m,  4j 5760m, 7j ~10000m.
+

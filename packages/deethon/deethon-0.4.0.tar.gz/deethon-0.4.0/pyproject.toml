@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "deethon"
+version = "0.4.0"
+description = "Python3 library to easily download music from Deezer"
+authors = ["Aykut Yilmaz <aykuxt@gmail.com>"]
+maintainers = ["Aykut Yilmaz <aykuxt@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/deethon/deethon"
+documentation = "https://deethon.github.io/deethon"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+mutagen = "^1.44.0"
+requests = "^2.23.0"
+pycryptodome = "^3.9.7"
+importlib_metadata = { version = "^1.6", python = "<3.8" }
+mkdocs = {version = "^1.1.2", optional = true}
+mkdocstrings = {version = "^0.11.2", optional = true}
+mkdocs-material = {version = "^5.2.2", optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pylint = "*"
+
+[tool.poetry.extras]
+docs = ["mkdocs", "mkdocstrings", "mkdocs-material"]
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+envs = ["main"]
+to = {format = "setuppy", path = "setup.py"}
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"

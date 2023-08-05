@@ -1,0 +1,106 @@
+#!python
+
+import subprocess
+import re
+
+from rich.console import Console
+from rich.text import Text
+
+console = Console()
+
+LABEL_STYLE = "plum1"
+VALUE_STYLE = "grey89"
+
+def main():
+    lshw_output = get_lshw_output()
+    hwinfo = parse_lshw_output(lshw_output)
+    console.print(get_device_info(hwinfo))
+    console.print(get_cpu_info(hwinfo))
+    console.print(get_gpu_info(hwinfo))
+    console.print(get_ram_info(hwinfo))
+    console.print(get_disk_info(hwinfo))
+
+
+def get_lshw_output() -> str:
+    try:
+        return subprocess.check_output(["sudo" , "lshw"]).decode("utf-8")
+    except FileNotFoundError as e:
+        console.print("Error: 'lshw' could not be found. Please make sure it is installed and in the path.", style="bold red")
+        exit()
+
+
+def parse_lshw_output(output: str) -> dict:
+    output = replace_device_name(output)
+    sections = exrtract_sections(output)
+    return transform_sections_to_dict(sections)
+
+
+def replace_device_name(output: str) -> str:
+    device_name_index = output.find("\n")
+    return output.replace(output[:device_name_index], "*-device", 1)
+
+
+def exrtract_sections(output: str) -> list:
+    indices = [section.start() for section in re.finditer(r"\*-", output)]
+    return [output[indices[i]:indices[i+1]] for i, _ in enumerate(indices[:-1])]
+
+
+def transform_sections_to_dict(sections: list) -> dict:
+    hwinfo = dict()
+    for section in sections:
+        lines = [line.strip() for line in section.split("\n")]
+        value = parse_section_to_dict(lines[1:])
+        key = lines[0][2:]
+        hwinfo[key] = value
+    return hwinfo
+
+
+def parse_section_to_dict(lines: list) -> dict:
+    d = dict()
+    for line in lines:
+        if line:
+            entry = line.split(":")
+            d[entry[0]] = entry[1]
+    return d
+
+def get_device_info(hwinfo: dict) -> Text:
+    info = Text()
+    info.append("Device:", style=LABEL_STYLE)
+    info.append(hwinfo["device"]["vendor"], style=VALUE_STYLE)
+    info.append(hwinfo["device"]["version"], style=VALUE_STYLE)
+    return info
+
+
+def get_cpu_info(hwinfo: dict) -> Text:
+    info = Text()
+    info.append("CPU:", style=LABEL_STYLE)
+    info.append(hwinfo["cpu"]["product"], style=VALUE_STYLE)
+    return info
+
+
+def get_gpu_info(hwinfo: dict) -> Text:
+    info = Text()
+    info.append("GPU:", style=LABEL_STYLE)
+    info.append(hwinfo["display"]["vendor"], style=VALUE_STYLE)
+    info.append(hwinfo["display"]["product"], style=VALUE_STYLE)
+    return info
+
+
+def get_ram_info(hwinfo: dict) -> Text:
+    info = Text()
+    info.append("RAM:", style=LABEL_STYLE)
+    info.append(hwinfo["memory"]["size"], style=VALUE_STYLE)
+    info.append(hwinfo["bank:0"]["description"], style=VALUE_STYLE)
+    return info
+
+def get_disk_info(hwinfo: dict) -> Text:
+    info = Text()
+    info.append("Disk:", style=LABEL_STYLE)
+    info.append(hwinfo["disk"]["size"], style=VALUE_STYLE)
+    info.append(hwinfo["disk"]["product"], style=VALUE_STYLE)
+    info.append(f" --{hwinfo['disk']['logical name']}", style=VALUE_STYLE)
+    return info
+
+
+if __name__ == "__main__":
+    main()

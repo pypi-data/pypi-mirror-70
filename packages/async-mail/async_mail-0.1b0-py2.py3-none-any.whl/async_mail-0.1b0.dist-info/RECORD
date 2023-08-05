@@ -1,0 +1,13 @@
+async_mail/__init__.py,sha256=rhFh_zeePGdnOaQMGyxP82hVjpPS0EqDRdTC73ckQzY,66
+async_mail/config.py,sha256=PuJ4SuGzB3oORifmbSCOG0zvdNfui_mqKFfFfsFkniw,577
+async_mail/errors.py,sha256=tY3EBOla2DorrEelQ5wdaYJJfI1yyoaxtVfBaoAtwWE,45
+async_mail/models.py,sha256=rdJxY6gRM0vT4qBLQZfRe2_VozjdR8V0jg5xvb4xcLw,893
+async_mail/backends/__init__.py,sha256=M8QRXOUtuQ_fJBGCCo_xReSUqcEyesW9Op7P2lAnvR8,482
+async_mail/backends/base.py,sha256=SmlgFoKytMkWWZIT7XNxH0JS9KQKYyXBYlHGtovJlE4,422
+async_mail/backends/smtp.py,sha256=CxAUL15TsI7SnFu8HeT8G6Fxt7Nq2GZwOuaMplA-UpE,2468
+async_mail-0.1b0.dist-info/DESCRIPTION.rst,sha256=_sGbRFdmIEkpTsLZQVYZ4pOl85qdfC6463AIxJcun1g,1814
+async_mail-0.1b0.dist-info/METADATA,sha256=mPvrkin6R8r9NjVcdjrCi1E2RtUQLZrQRvrJUCxHyZA,2547
+async_mail-0.1b0.dist-info/RECORD,,
+async_mail-0.1b0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+async_mail-0.1b0.dist-info/metadata.json,sha256=HRdFrowpsB2diITYNauVvvOxbZqsAfH0thmL3QRzPyU,946
+async_mail-0.1b0.dist-info/top_level.txt,sha256=CodkWiMK3vxG0lKgrJaaaz9pcDP1M0YRa68kpCIlwp0,11

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: graph-writer
+Version: 0.1.1
+Summary: This repository is intended to visualize and publish interactive computation graphs such as PyTorch Networks, Tensorflow Networks etc.
+Home-page: https://github.com/GuptaPravirSingh/graph_writer
+Author: Partha Ghosh, Pravir Singh Gupta
+Author-email: parthaghosh.iitbbs@gmail.com, pravir.singh.gupta@gmail.com
+License: UNKNOWN
+Description: # graph_writer
+        
+        This repository is intended to visualize and publish interactive computation graphs such as -  
+        
+        <h3>PyTorch Networks</h3>
+        <h3>Tensorflow Networks</h3>.
+        
+        ## Aknowledgements 
+        
+        Equal Contributors: [Partha Ghosh](https://github.com/ParthaEth), [Pravir Singh Gupta](https://github.com/GuptaPravirSingh)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

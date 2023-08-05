@@ -1,0 +1,3 @@
+[console_scripts]
+POSM = POSM.main:main
+

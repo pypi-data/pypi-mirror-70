@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/dg_predictor/__init__.py
+src/dg_predictor/base_predictor.py
+src/dg_predictor/cli.py
+src/dg_predictor/dg_dataformat.py
+src/dg_predictor/predictor.py
+src/dg_predictor/utils.py
+src/dg_predictor.egg-info/PKG-INFO
+src/dg_predictor.egg-info/SOURCES.txt
+src/dg_predictor.egg-info/dependency_links.txt
+src/dg_predictor.egg-info/entry_points.txt
+src/dg_predictor.egg-info/not-zip-safe
+src/dg_predictor.egg-info/requires.txt
+src/dg_predictor.egg-info/top_level.txt

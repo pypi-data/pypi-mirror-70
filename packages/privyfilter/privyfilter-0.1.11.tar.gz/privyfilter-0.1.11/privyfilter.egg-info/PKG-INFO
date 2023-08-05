@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: privyfilter
+Version: 0.1.11
+Summary: Privacy Photo filter for GDPR compliant photo sharing and machine learning without bias.
+Home-page: https://github.com/deamoner/privyfilter
+Author: Mattthew Davis AKa Deamoner
+Author-email: mdavis@virtustructure.com
+License: MIT
+Description: UNKNOWN
+Keywords: photo privacy de-identification anonymization
+Platform: UNKNOWN

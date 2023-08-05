@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tensorflow-enterprise-addons
+Version: 0.1.0
+Summary: Client-side library suites of TensorFlow Enteprise on Google Cloud Platform (GCP), which implements a special integration with GCP behind the TensorFlow APIs.
+Home-page: UNKNOWN
+Author: Google LLC
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: google-api-python-client
+Requires-Dist: keras-tuner
+Requires-Dist: tensorflow
+Provides-Extra: tests
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: tensorflow-datasets ; extra == 'tests'
+
+UNKNOWN
+
+

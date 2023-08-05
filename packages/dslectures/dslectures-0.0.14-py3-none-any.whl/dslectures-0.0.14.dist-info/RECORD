@@ -1,0 +1,11 @@
+dslectures/__init__.py,sha256=71Tw8stu19MsLPyF1q_DF5mb_BefzOTPYggLlSLvCms,23
+dslectures/_nbdev.py,sha256=LkDGh9w8KDmUqCYaPLaBkCRxv_G_rNcxZ5H_OlGpD04,1500
+dslectures/core.py,sha256=1UzbydmzwN9mKXgNj7-2kBw4kXfQ2NXdTtsFeJVjMzk,8154
+dslectures/image_downloader.py,sha256=3LH1erBX--zL6-UDdcMP31fCHy-057HKrA58f7rj38w,5500
+dslectures/structured.py,sha256=9a2f002ta2H6pp0c7QPop84wLc24gWuD1vckuZWZVIU,7236
+dslectures-0.0.14.dist-info/LICENSE,sha256=XCxnJa9QgVQ2rNHwS6KdIOiipY_xC3YLPqRUM2R9Nh8,35072
+dslectures-0.0.14.dist-info/METADATA,sha256=RgP_KPZsJtmYRGujO_nfcpvegOHs6ZicDrX8kccXhJI,20065
+dslectures-0.0.14.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dslectures-0.0.14.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+dslectures-0.0.14.dist-info/top_level.txt,sha256=jEc2yDeXTleLk6HQKeBppAtlCjrW0DoCRx87wQ1MtEI,11
+dslectures-0.0.14.dist-info/RECORD,,

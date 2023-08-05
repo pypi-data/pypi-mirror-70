@@ -1,0 +1,10 @@
+setup.py
+angem/__init__.py
+angem/matrix.py
+angem/rectangle.py
+angem/vector2.py
+angem_girvel.egg-info/PKG-INFO
+angem_girvel.egg-info/SOURCES.txt
+angem_girvel.egg-info/dependency_links.txt
+angem_girvel.egg-info/requires.txt
+angem_girvel.egg-info/top_level.txt

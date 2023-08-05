@@ -1,0 +1,8 @@
+aws_cdk/aws_kinesisfirehose/__init__.py,sha256=IKxDHVnGFcb8nXoFY3OPosv1bQfhMNH6cr1dxX55Q7c,133642
+aws_cdk/aws_kinesisfirehose/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_kinesisfirehose/_jsii/__init__.py,sha256=tso1ZuqoIPlwWkerm6bBah8aANM-oP9p3xEa7gJ00SU,363
+aws_cdk/aws_kinesisfirehose/_jsii/aws-kinesisfirehose@1.42.1.jsii.tgz,sha256=MRhxTfxcPS7CpvsCPMGVJ8LH-mRaNUFvBgVbVCK4Iyg,55196
+aws_cdk.aws_kinesisfirehose-1.42.1.dist-info/METADATA,sha256=PGqzT8JGVJmJcJd-fXe-cOzI50iEdNoFz7T-9TEnx8s,1476
+aws_cdk.aws_kinesisfirehose-1.42.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_kinesisfirehose-1.42.1.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_kinesisfirehose-1.42.1.dist-info/RECORD,,

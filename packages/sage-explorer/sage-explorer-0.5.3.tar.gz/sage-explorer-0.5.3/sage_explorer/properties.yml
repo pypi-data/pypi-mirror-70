@@ -1,0 +1,108 @@
+properties:
+
+##############################################################################
+# Methods for categories
+
+- property: an_instance
+  instance of: type # For category classes, and possibly other categories
+  label: A [typical] instance
+
+- property: example
+  instance of: Category
+
+- property: super_categories
+  instance of: Category
+
+- property: axioms
+  instance of: Category
+
+- property: structure
+  instance of: Category
+
+##############################################################################
+# Methods for parents
+
+# - property: axioms and structure of the category?
+
+- property: base_ring
+  when: has_base
+
+- property: category
+  member of: Sets
+
+- property: an_element
+  member of: Sets
+
+- property: cardinality
+  member of: EnumeratedSets.Finite
+
+- property: addition_table
+  member of: sage.categories.additive_semigroups.AdditiveSemigroups
+  when: cardinality < 25
+
+- property: multiplication_table
+  member of: Semigroups.Finite
+  when: cardinality < 25
+
+- property: characteristic
+  member of: Fields
+
+- property: polynomial
+  member of: Fields.Finite
+
+- property: genus
+  instance of: sage.schemes.elliptic_curves.ell_generic.EllipticCurve_generic
+
+- property: cremona_label
+  instance of: sage.schemes.elliptic_curves.ell_generic.EllipticCurve_generic
+
+- property: a_invariants
+  instance of: sage.schemes.elliptic_curves.ell_generic.EllipticCurve_generic
+
+- property: b_invariants
+  instance of: sage.schemes.elliptic_curves.ell_generic.EllipticCurve_generic
+
+- property: conductor
+  instance of: sage.schemes.elliptic_curves.ell_generic.EllipticCurve_generic
+
+##############################################################################
+# Methods for elements
+
+# - property: category of the parent?
+
+- property: parent
+  instance of: sage.structure.element.Element
+  label: Element of
+
+- property: conjugate
+  member of: Partitions()
+
+- property: hook_lengths
+  member of: Partitions()
+
+- property: evaluation
+  member of: Tableaux()
+  not when: is_standard
+
+- property: is_standard
+  member of: Tableaux()
+  not member of: StandardTableaux()
+
+- property: conjugate
+  member of: Tableaux()
+
+- property: charge
+  member of: Tableaux()
+
+- property: cocharge
+  member of: Tableaux()
+
+##############################################################################
+# Methods for homsets
+# - property: an_element (probably already derived from Parent)
+# - property: the category this is a morphism for
+
+##############################################################################
+# Methods for morphisms
+# - property: domain, codomain
+# - property: the category this is a morphism for

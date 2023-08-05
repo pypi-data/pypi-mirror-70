@@ -1,0 +1,5 @@
+PyYAML
+cysignals
+ipyevents
+ipywidgets>=7.5.0
+sage-combinat-widgets

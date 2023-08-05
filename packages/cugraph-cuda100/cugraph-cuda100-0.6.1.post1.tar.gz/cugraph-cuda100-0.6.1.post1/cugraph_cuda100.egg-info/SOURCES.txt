@@ -1,0 +1,5 @@
+setup.py
+cugraph_cuda100.egg-info/PKG-INFO
+cugraph_cuda100.egg-info/SOURCES.txt
+cugraph_cuda100.egg-info/dependency_links.txt
+cugraph_cuda100.egg-info/top_level.txt

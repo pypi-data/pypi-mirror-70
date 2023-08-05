@@ -1,0 +1,3 @@
+[console_scripts]
+acjudge = ACJudge_Pkg.Client:main
+

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+ahlev_django_layout.egg-info/PKG-INFO
+ahlev_django_layout.egg-info/SOURCES.txt
+ahlev_django_layout.egg-info/dependency_links.txt
+ahlev_django_layout.egg-info/not-zip-safe
+ahlev_django_layout.egg-info/top_level.txt
+layout/__init__.py
+layout/admin.py
+layout/apps.py
+layout/models.py
+layout/tests.py
+layout/views.py
+layout/migrations/__init__.py

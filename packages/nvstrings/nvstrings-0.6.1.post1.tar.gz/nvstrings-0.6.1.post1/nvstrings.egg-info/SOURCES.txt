@@ -1,0 +1,5 @@
+setup.py
+nvstrings.egg-info/PKG-INFO
+nvstrings.egg-info/SOURCES.txt
+nvstrings.egg-info/dependency_links.txt
+nvstrings.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+requests
+six
+
+[dev]
+wheel
+pytest
+pylint
+autopep8
+twine

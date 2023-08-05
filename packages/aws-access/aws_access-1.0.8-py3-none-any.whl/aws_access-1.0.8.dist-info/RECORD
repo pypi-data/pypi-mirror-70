@@ -1,0 +1,13 @@
+aws_access_util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_access_util/get_aws_access.py,sha256=cxA7fUYkymqp1vVsFuoGPXE_7ckvqqzzMxnqTfiq2fg,20157
+aws_access_util/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_access_util/common/aws_utilities.py,sha256=TZzfF9mWa-08Rl6C1PARH1GNLLlAYSaOfZGWKm0Ce6w,5892
+aws_access_util/common/duo_utilities.py,sha256=BnmYo19MkFNYWARwrVmNyUlMnfYP67lIWiKCCYXZFAw,3151
+aws_access_util/constants/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_access_util/constants/constants.py,sha256=nJsZoi0TJYSrdeZ9MpDGKs6b86vU5EDqYSRb2WaE89w,735
+aws_access_util/template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_access-1.0.8.dist-info/LICENCE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+aws_access-1.0.8.dist-info/METADATA,sha256=UKgx-9ZFHZozsJ8U568F7OcH_aNclNmv_m6hRtBD8hE,2403
+aws_access-1.0.8.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+aws_access-1.0.8.dist-info/top_level.txt,sha256=LNWnoEQ5Di_6IiLHspG3NJyZM2RMNEq-9Dnkw_XWVwE,16
+aws_access-1.0.8.dist-info/RECORD,,

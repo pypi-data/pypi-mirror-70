@@ -1,0 +1,4 @@
+docopt
+scipy
+pandas
+numpy

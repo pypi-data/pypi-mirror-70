@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: vmn
+Version: 0.0.4
+Summary: Stamping utility
+Home-page: https://github.com/final-israel/ver_stamp
+Author: Pavel Rogovoy
+Author-email: pavelr@final.israel
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5.0
+Requires-Dist: python-hglib (>=2.6)
+Requires-Dist: lockfile
+Requires-Dist: GitPython (>=2.1.11)
+
+Stamping utility
+
+

@@ -1,0 +1,14 @@
+README.md
+setup.py
+SeafileContentManager/__init__.py
+SeafileContentManager/seacheckpoints.py
+SeafileContentManager/seafilemixin.py
+SeafileContentManager/seamanager.py
+SeafileContentManager/seaopen.py
+SeafileContentManager.egg-info/PKG-INFO
+SeafileContentManager.egg-info/SOURCES.txt
+SeafileContentManager.egg-info/dependency_links.txt
+SeafileContentManager.egg-info/requires.txt
+SeafileContentManager.egg-info/top_level.txt
+SeafileContentManager/tests/__init__.py
+SeafileContentManager/tests/test_SeafileContentManager.py

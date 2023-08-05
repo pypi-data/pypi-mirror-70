@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: cyxmltv
+Version: 0.1
+Summary: Utility to create XML TV formatted document
+Home-page: UNKNOWN
+Author: Harry Papaxenopoulos
+Author-email: hpapaxen@gmail.com
+License: MIT
+Description: # Project CyXmlTv
+        
+        This project is for generating an [xmltv](http://wiki.xmltv.org) compatible
+        electronic programming guide for cypriot channels. It's primarily used
+        for operating the Plex DVR.
+        
+        
+        ## How to install
+        
+        * Option 1: Install through pip.  
+Keywords: cyprus xmltv plex cypriot epg rik1 rik
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

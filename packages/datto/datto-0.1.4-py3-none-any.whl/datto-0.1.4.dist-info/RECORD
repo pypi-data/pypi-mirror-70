@@ -1,0 +1,8 @@
+datto/CleanText.py,sha256=8NF7GQK6ggOG58KRclzr4eqIqzQs_roAmvf5a4Hbyqg,4547
+datto/__init__.py,sha256=9u8HWdBv8azxoLkEhaMXiRzxYP1tjKtlA5nIPvvmdBg,38
+datto/command_line.py,sha256=gk_8cVVPx43PxVBPgG-mC_0--0yx6WIAiHqrlsiBjDY,67
+datto/data/all_names,sha256=Vlo-GXqUMUPiUs40PDiPuyvx-sgVzP6SdgKSGBHk_ls,2245032
+datto-0.1.4.dist-info/entry_points.txt,sha256=DYHH5jegALFvyLuJh4iXQBkehO2G44XsFelmVYxK9t8,60
+datto-0.1.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+datto-0.1.4.dist-info/METADATA,sha256=8L13cBNKRJL1Nj4iPYMQ_1NDnLEVnvYBGMNgv__GQxA,584
+datto-0.1.4.dist-info/RECORD,,

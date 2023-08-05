@@ -1,0 +1,3 @@
+[console_scripts]
+install-spacy-en=datto.command_line:main
+

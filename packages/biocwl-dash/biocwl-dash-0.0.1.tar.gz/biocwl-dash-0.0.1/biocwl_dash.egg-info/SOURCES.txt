@@ -1,0 +1,13 @@
+README.md
+setup.py
+biocwl_dash/__init__.py
+biocwl_dash/app.py
+biocwl_dash/report_service.py
+biocwl_dash/utils.py
+biocwl_dash.egg-info/PKG-INFO
+biocwl_dash.egg-info/SOURCES.txt
+biocwl_dash.egg-info/dependency_links.txt
+biocwl_dash.egg-info/requires.txt
+biocwl_dash.egg-info/top_level.txt
+test/__init__.py
+test/test_main.py

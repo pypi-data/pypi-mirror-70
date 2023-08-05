@@ -1,0 +1,42 @@
+# biocwl-dash
+A Dash frontend for viewing the outputs of the biocwl precision oncology pipeline. Reports are interactive, and printable.
+
+![screenshot.png](biocwl_dash/resources/screenshot.png)
+
+## Usage
+This dash app is meant to be embedded in a flask app. See `test/test_main.py` for an example implementation. The import method to use is `biocwl_dash.app.init_app(server, prefix, report_service_factory)`, where:
+* server is a flask app
+* prefix is the URL prefix to prepend to all routes
+* report_service_factory is an implementation of `biocwl_dash.report_service.ReportService`
+
+## Contributing
+Setup your venv with:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -e .
+pip install setuptools wheel
+```
+
+And rerun the final install whenever you add dependencies to setup.py.
+
+Then, for development, run with:
+
+```bash
+PYTHONPATH=$PWD:$PYTHONPATH python test/test_main.py
+```
+
+## Deployment / Pushing
+
+Update your package with
+```bash
+python3 setup.py sdist bdist_wheel
+twine upload dist/*
+rm -rf dist
+npm publish
+```
+
+To make sure your dependencies are in order and that your package installs well, try doing a Docker build with:
+```bash
+docker build -t biocwldash . && docker run -p 5000:5000 biocwldash
+```

@@ -1,0 +1,3 @@
+include solstice/libs/picker/__logging__.ini
+include versioneer.py
+include solstice/libs/picker/_version.py

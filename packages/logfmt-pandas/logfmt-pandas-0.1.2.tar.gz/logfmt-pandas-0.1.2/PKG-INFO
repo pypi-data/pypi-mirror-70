@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: logfmt-pandas
+Version: 0.1.2
+Summary: Read logfmt files into pandas dataframes.
+Home-page: https://gitlab.com/link2xt/logfmt-pandas
+License: MIT
+Author: Alexander Krotov
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: logfmt (>=0.4,<0.5)
+Requires-Dist: pandas (>=1.0.4,<2.0.0)
+Project-URL: Repository, https://gitlab.com/link2xt/logfmt-pandas
+Description-Content-Type: text/markdown
+
+# logfmt-pandas
+
+This package reads [logfmt](https://www.brandur.org/logfmt) files as [pandas](https://pandas.pydata.org/) DataFrames.
+
+## Usage
+
+```python
+from io import StringIO
+
+from logfmt_pandas import read_logfmt
+
+data = StringIO("x=0 y=1\nx=1 y=2")
+data_frame = read_logfmt(data)
+```
+
+## Testing
+
+Run
+```
+poetry run pytest
+```
+
+## Coverage
+
+Run
+```
+poetry run pytest --cov
+poetry run coverage html
+```
+
+Coverage report is written to `htmlcov/index.html`.
+

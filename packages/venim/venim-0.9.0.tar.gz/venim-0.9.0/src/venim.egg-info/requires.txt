@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+planetarypy
+urlpath
+astropy
+holoviews
+circle-fit

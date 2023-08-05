@@ -1,0 +1,22 @@
+---
+version: "2.4"
+
+volumes:
+
+  a3m-pipeline-data:
+    external:
+      name: "a3m-pipeline-data"
+
+services:
+
+  a3m:
+    build:
+      context: "."
+    environment:
+      A3M_PROMETHEUS_BIND_PORT: "7999"
+      A3M_PROMETHEUS_BIND_ADDRESS: "0.0.0.0"
+    volumes:
+      - ".:/a3m"
+      - "a3m-pipeline-data:/home/a3m/.local/share/a3m:rw"
+    ports:
+      - "52000:7000"

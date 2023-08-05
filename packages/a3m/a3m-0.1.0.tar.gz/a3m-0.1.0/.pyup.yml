@@ -1,0 +1,8 @@
+# See https://pyup.io/docs/configuration/ for all available options.
+
+branch: "main"
+schedule: "every week"
+update: "insecure"
+search: yes
+pin: yes
+close_prs: yes

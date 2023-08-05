@@ -1,0 +1,3 @@
+[console_scripts]
+a3m = a3m.__main__:cli
+

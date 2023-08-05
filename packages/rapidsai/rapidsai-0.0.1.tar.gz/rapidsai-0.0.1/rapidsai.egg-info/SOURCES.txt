@@ -1,0 +1,5 @@
+setup.py
+rapidsai.egg-info/PKG-INFO
+rapidsai.egg-info/SOURCES.txt
+rapidsai.egg-info/dependency_links.txt
+rapidsai.egg-info/top_level.txt

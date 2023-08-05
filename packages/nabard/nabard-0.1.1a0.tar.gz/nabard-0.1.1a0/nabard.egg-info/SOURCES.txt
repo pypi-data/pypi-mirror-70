@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nabard/__init__.py
+nabard.egg-info/PKG-INFO
+nabard.egg-info/SOURCES.txt
+nabard.egg-info/dependency_links.txt
+nabard.egg-info/top_level.txt
+nabard/engine/__init__.py
+nabard/engine/base.py
+nabard/engine/robot.py
+nabard/engine/turn.py
+nabard/robot/__init__.py
+nabard/robot/robot.py

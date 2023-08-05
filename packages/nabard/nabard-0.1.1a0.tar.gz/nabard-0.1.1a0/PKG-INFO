@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: nabard
+Version: 0.1.1a0
+Summary: Utilities to create games and robots for https://nabard.io
+Home-page: https://github.com/nabardio/nabard-python
+Author: Mehdy Khoshnoody
+Author-email: mehdy.khoshnoody@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: robot game code nabard
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3

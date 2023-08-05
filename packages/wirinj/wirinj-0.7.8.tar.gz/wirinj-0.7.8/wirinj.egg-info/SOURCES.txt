@@ -1,0 +1,17 @@
+README.md
+setup.py
+wirinj/__init__.py
+wirinj/autowiring.py
+wirinj/core.py
+wirinj/decorators.py
+wirinj/definition.py
+wirinj/dependencies.py
+wirinj/errors.py
+wirinj/injector.py
+wirinj/introspect.py
+wirinj/locators.py
+wirinj/tools.py
+wirinj.egg-info/PKG-INFO
+wirinj.egg-info/SOURCES.txt
+wirinj.egg-info/dependency_links.txt
+wirinj.egg-info/top_level.txt

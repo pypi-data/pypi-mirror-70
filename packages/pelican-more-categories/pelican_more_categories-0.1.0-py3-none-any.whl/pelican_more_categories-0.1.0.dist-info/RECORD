@@ -1,0 +1,9 @@
+pelican/plugins/more_categories/__init__.py,sha256=Zi6GBwBYbfI8GHpEQqypJVDX4o6UMYeVWWiqm96QUy4,39
+pelican/plugins/more_categories/more_categories.py,sha256=eZOtLhAvi4sJENJKCf8mll3WQ59CYDTy7yHDTlODmGY,2947
+pelican/plugins/more_categories/test_data/article_with_multiple_categories.rst,sha256=2PPc6AkOxxK99bPI0m9MAeewyJKeLER8owsyFRnKE28,185
+pelican/plugins/more_categories/test_data/article_with_no_category.rst,sha256=uNcnRJpRqPxvI1fTIn5F5OcJRldV2-2hReTRSL1MdY8,105
+pelican/plugins/more_categories/test_more_categories.py,sha256=nOB-EmheofQRz8MAU_ja3RYlaoa_zMlSX1UYRYX66gU,2880
+pelican_more_categories-0.1.0.dist-info/LICENSE,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+pelican_more_categories-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pelican_more_categories-0.1.0.dist-info/METADATA,sha256=ONanjtrakmsctt07nJ9F78yqZDsTgbHX1RLl5EmLl3E,4982
+pelican_more_categories-0.1.0.dist-info/RECORD,,

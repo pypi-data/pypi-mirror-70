@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: flask-trace-util
+Version: 0.0.1
+Summary: Trace utility for flask
+Home-page: UNKNOWN
+Author: Akın Tekeoğlu
+Author-email: akin.tekeoglu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: requests
+
+# Flask Trace
+
+`export PIPENV_VENV_IN_PROJECT="enabled" && pipenv install --pre --dev`
+
+# Deployment
+
+`pipenv run python setup.py sdist bdist_wheel`
+
+`pipenv run python -m twine upload dist/*`
+
+

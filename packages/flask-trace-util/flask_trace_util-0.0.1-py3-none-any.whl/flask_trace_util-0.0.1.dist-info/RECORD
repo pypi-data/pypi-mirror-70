@@ -1,0 +1,8 @@
+flask-trace-util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask-trace-util/flask_trace.py,sha256=w-vUXFqEtrAemGn-sQs_fX3FxN9moAvsVd4zF9ibivc,1743
+flask-trace-util/trace_handlers.py,sha256=4K0QzbT6ML3y6grWvUkKlX3Q5EZ51Nov1R1531daakw,695
+flask_trace_util-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+flask_trace_util-0.0.1.dist-info/METADATA,sha256=B2pKQ8bnnJUhDI7iMzrFMdBiD0O7cxiM1wnL0paRJ0w,661
+flask_trace_util-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flask_trace_util-0.0.1.dist-info/top_level.txt,sha256=61QmAZddLhsnmpWd7krNxF9s4NEEVSsxjbMn9MgYtWg,17
+flask_trace_util-0.0.1.dist-info/RECORD,,

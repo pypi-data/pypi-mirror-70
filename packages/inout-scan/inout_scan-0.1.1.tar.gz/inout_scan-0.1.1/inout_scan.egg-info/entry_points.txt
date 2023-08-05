@@ -1,0 +1,3 @@
+[console_scripts]
+inout_scan = inout_scan.cli:main
+

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: screenshots
+Version: 0.0.2.dev3
+Summary: Python library to make screenshots
+Home-page: https://github.com/chincheta/screenshots
+Author: chincheta
+Author-email: dev@chincheta.com
+License: UNKNOWN
+Description: # screenshots
+        Screenshots for Python!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

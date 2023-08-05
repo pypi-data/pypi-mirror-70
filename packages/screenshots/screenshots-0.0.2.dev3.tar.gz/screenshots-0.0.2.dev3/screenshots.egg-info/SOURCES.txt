@@ -1,0 +1,9 @@
+README.md
+setup.py
+screenshots/__init__.py
+screenshots/api.py
+screenshots.egg-info/PKG-INFO
+screenshots.egg-info/SOURCES.txt
+screenshots.egg-info/dependency_links.txt
+screenshots.egg-info/requires.txt
+screenshots.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+Oleksii_2394.egg-info/PKG-INFO
+Oleksii_2394.egg-info/SOURCES.txt
+Oleksii_2394.egg-info/dependency_links.txt
+Oleksii_2394.egg-info/not-zip-safe
+Oleksii_2394.egg-info/top_level.txt
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py

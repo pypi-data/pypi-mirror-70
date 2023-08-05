@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pyworkflows/__init__.py
+pyworkflows/errors.py
+pyworkflows/file_task.py
+pyworkflows/task.py
+pyworkflows.egg-info/PKG-INFO
+pyworkflows.egg-info/SOURCES.txt
+pyworkflows.egg-info/dependency_links.txt
+pyworkflows.egg-info/requires.txt
+pyworkflows.egg-info/top_level.txt

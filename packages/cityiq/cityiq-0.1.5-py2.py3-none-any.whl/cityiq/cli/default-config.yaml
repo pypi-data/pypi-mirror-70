@@ -1,0 +1,48 @@
+# Access Credentials
+# The default credentials below are the public credentials for the San DIego system.
+# They are changed every three months, so these blod may need to be updated. See
+# https://www.sandiego.gov/sustainability/energy-and-water-efficiency/programs-projects/smart-city
+# to get new credentials
+client_id: PublicAccess
+secret: qPKIadEsoHjyh226Snz7
+
+# All of San Diego, plus a little margin
+bbox: 33:-117.3,32.5:-117.0
+
+# Downtown San Diego
+#bbox: 32.718987:-117.174244,32.707356:-117.154850
+
+# Start time for scraping and processing
+start_time: 2019-10-01
+
+# The time zone is important! With the wrong time zone,
+# requests for a day will extend into adjacent days.
+timezone: US/Pacific
+
+# Caches for storing events and processed events; change these to
+# somewhere with plenty of storage -- a complete system download
+# for San Diego can be around 400GB.
+cache:
+    meta:      /tmp/cityiq//meta
+    objects: /tmp/cityiq/objects
+    errors:    /tmp/cityiq/errors
+
+# San Diego Zones
+# For San Diego, you can find these zones at
+# https://eula.aa.cityiq.io/
+default_zone: SD-IE-TRAFFIC
+traffic_zone: SD-IE-TRAFFIC
+parking_zone: SD-IE-PARKING
+pedestrian_zone: SD-IE-PEDESTRIAN
+environmental_zone: SD-IE-ENVIRONMENTAL
+video_zone: SD-IE-VIDEO
+image_zone: SD-IE-IMAGE
+
+# Urls
+# For San Diego, you can find these urls at
+# https://eula.aa.cityiq.io/
+uaa_url: https://auth.aa.cityiq.io
+metadata_url: https://sandiego.cityiq.io
+media_url: https://sandiego.cityiq.io
+event_url: https://sandiego.cityiq.io
+websocket_url: wss://sandiego.cityiq.io/api/v2/websocket/events

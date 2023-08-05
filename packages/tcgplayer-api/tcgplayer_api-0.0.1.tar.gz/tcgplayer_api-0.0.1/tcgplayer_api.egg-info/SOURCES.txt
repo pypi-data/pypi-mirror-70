@@ -1,0 +1,17 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+docs/contributing.md
+tcgplayer_api/VERSION
+tcgplayer_api/__init__.py
+tcgplayer_api/auth.py
+tcgplayer_api/client.py
+tcgplayer_api/utils.py
+tcgplayer_api.egg-info/PKG-INFO
+tcgplayer_api.egg-info/SOURCES.txt
+tcgplayer_api.egg-info/dependency_links.txt
+tcgplayer_api.egg-info/requires.txt
+tcgplayer_api.egg-info/top_level.txt
+tests/__init__.py

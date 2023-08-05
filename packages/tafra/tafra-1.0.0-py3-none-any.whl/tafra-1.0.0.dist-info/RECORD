@@ -1,0 +1,14 @@
+py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafra.py,sha256=N1Hp9aqs_31a98lrvIzWiM3c6BR1yaKJAaS-WNdRkjk,29020
+tafra/__init__.py,sha256=tbctWMIyiojDyybrmhNtA1qSua7G7LTHmIbOMhdw9WM,122
+tafra/base.py,sha256=wk3QCt43IRsB09kmJ_tbc0Mlcxkwi5kEIgPRpobo7YQ,40208
+tafra/common.py,sha256=IWuimgGvPbmXPNmGBcquTF_JQBM3gQIgVdgNHSW7PkE,1468
+tafra/groups.py,sha256=W4y3Ntk_BTKMq5M2ls0v2HeVs5TN4XVLdYEizp9OOPU,18916
+tafra/pandas.py,sha256=eeN3YWqO2_-yExVsk1KY9aOe0hbtC6yE7mKw_i9f26g,626
+tafra/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafra/tafra.py,sha256=N1Hp9aqs_31a98lrvIzWiM3c6BR1yaKJAaS-WNdRkjk,29020
+tafra-1.0.0.dist-info/LICENSE,sha256=DeSfGcpFM6E4QzHWxe8QvHQ8sLM1jj2C2wLmG6G4OfA,1114
+tafra-1.0.0.dist-info/METADATA,sha256=AB9o0CUKH3VK24YFX8J_GdriI3hh_imp-m3RBnpXr3g,10829
+tafra-1.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+tafra-1.0.0.dist-info/top_level.txt,sha256=W1VECg1QBJlYwExH3lLHqzNz7cgTmytMaRVkBQLgXRI,6
+tafra-1.0.0.dist-info/RECORD,,

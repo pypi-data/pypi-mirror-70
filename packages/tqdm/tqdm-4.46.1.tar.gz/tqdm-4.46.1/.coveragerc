@@ -1,0 +1,7 @@
+[run]
+branch = True
+omit =
+    tqdm/tests/*
+    tqdm/contrib/telegram.py
+[report]
+show_missing = True

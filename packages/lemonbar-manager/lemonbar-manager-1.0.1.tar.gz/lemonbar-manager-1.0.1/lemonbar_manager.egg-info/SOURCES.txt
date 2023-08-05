@@ -1,0 +1,7 @@
+README.md
+lemonbar_manager.py
+setup.py
+lemonbar_manager.egg-info/PKG-INFO
+lemonbar_manager.egg-info/SOURCES.txt
+lemonbar_manager.egg-info/dependency_links.txt
+lemonbar_manager.egg-info/top_level.txt

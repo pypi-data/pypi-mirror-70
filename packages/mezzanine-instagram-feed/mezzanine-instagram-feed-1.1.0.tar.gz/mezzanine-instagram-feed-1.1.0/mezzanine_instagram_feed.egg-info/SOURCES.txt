@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+instagramfeed/__init__.py
+instagramfeed/admin.py
+instagramfeed/apps.py
+instagramfeed/models.py
+instagramfeed/migrations/__init__.py
+instagramfeed/templatetags/__init__.py
+instagramfeed/templatetags/instagramfeed_tags.py
+mezzanine_instagram_feed.egg-info/PKG-INFO
+mezzanine_instagram_feed.egg-info/SOURCES.txt
+mezzanine_instagram_feed.egg-info/dependency_links.txt
+mezzanine_instagram_feed.egg-info/requires.txt
+mezzanine_instagram_feed.egg-info/top_level.txt

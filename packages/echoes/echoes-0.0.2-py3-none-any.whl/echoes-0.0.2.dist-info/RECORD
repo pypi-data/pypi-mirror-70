@@ -1,0 +1,15 @@
+echoes/__init__.py,sha256=9eInF_3Y87l8SYQiwp2t23LWHg6DxgZV1Wm6jheS-2k,78
+echoes/datasets.py,sha256=BsD_ZNUNkhrklK7usBE6dN_qfUVotekHQ-lJwb9Hw08,181
+echoes/utils.py,sha256=XVT7WehcG_bfdSUl7tTw3IN0iMTuFiRJmT8_kV7ltuI,3478
+echoes/esn/__init__.py,sha256=HPfjhYErstd_501-1j1yOtzrhahkJ4KDdnaTBWW0ytQ,118
+echoes/esn/_base.py,sha256=RA-H6OXn03Z_HmufOI1RIqigwaTFM_SWDgKLTiV7VW4,17593
+echoes/esn/_generator.py,sha256=j5rHrH_55a7t7CnILH-3XDB_My9SzGV_pHQL7wBMH6s,15063
+echoes/esn/_regressor.py,sha256=c8NO2tQd_lZx-e_ZpY5xZ8ORiM7vPWgCwHKkPGoAmcI,7391
+echoes/plotting/__init__.py,sha256=vXGypRH00MYA1sjRpPUpC4g5PhZCADtJTp0myixRAfQ,179
+echoes/plotting/_core.py,sha256=NAu31WOfcDQMEBPsfwBQb0DOFn6z_2AnpjrkLf28Ffw,4651
+echoes/plotting/_memory_capacity.py,sha256=r4TY2mIImSyOlpOProzVSzn6YoqaPkYeQQ5wHLekBtE,2705
+echoes-0.0.2.dist-info/LICENSE,sha256=Ww7q4qCqbQ5D2hn04mabGoJr-Fy1HKRptEUeR__6bT4,1075
+echoes-0.0.2.dist-info/METADATA,sha256=9lQ75gLkcluDW_Iz_PRO-pb4HkwnO2tvL0n5aRpjRr0,646
+echoes-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+echoes-0.0.2.dist-info/top_level.txt,sha256=kF61PReYK71DQPS4yGLscr8B0zLP6Zp3xDwrYrcT1C8,7
+echoes-0.0.2.dist-info/RECORD,,

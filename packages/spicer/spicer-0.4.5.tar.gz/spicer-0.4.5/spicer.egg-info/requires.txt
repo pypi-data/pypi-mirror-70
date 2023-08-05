@@ -1,0 +1,4 @@
+spiceypy
+tqdm
+planetarypy>=0.7
+astropy

@@ -1,0 +1,3 @@
+[console_scripts]
+pytmt = pytmt.main:main
+

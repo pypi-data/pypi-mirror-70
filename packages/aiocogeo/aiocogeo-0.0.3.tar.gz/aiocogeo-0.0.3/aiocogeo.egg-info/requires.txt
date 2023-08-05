@@ -1,0 +1,8 @@
+aioboto3
+aiofiles
+aiohttp<=3.6.2
+aiocache
+affine
+imagecodecs
+scikit-image
+typer

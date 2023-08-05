@@ -1,0 +1,12 @@
+keras_adamw/__init__.py,sha256=cR--apb0ZgNL8AXNryykvnSXOHsm74KOIxTYbimYtwU,861
+keras_adamw/optimizers.py,sha256=MWU26VoHZLUFuiA1qC3WBJvJhqW7-AWbbAUCdYVuY6s,26525
+keras_adamw/optimizers_225.py,sha256=E_hWLJbxMVPX4JcjoiNM35ONOjofcZCNYEffgZLtwgY,24704
+keras_adamw/optimizers_225tf.py,sha256=8niXOmUbb4rC95_BF8Np1welAJY9KquebfWp9ATeGOs,39201
+keras_adamw/optimizers_v2.py,sha256=245yl1SkAQkOWMW766t0NCfs3NYWChyAaD1l548lgUE,39004
+keras_adamw/utils.py,sha256=OeBlhDLVUA6rqmmgrvSjO9OTkQDe5PChnlc-hDocIMw,8016
+keras_adamw-1.32.dist-info/LICENSE,sha256=Be48R1svi6xU83Kb_mwa_kc2DaU0cPQcMK2Q1L-6HOw,1096
+keras_adamw-1.32.dist-info/METADATA,sha256=sVuOw-l1oivBDXPf_mGqDZ4Nizc543fkSVUHT1kFby8,8926
+keras_adamw-1.32.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+keras_adamw-1.32.dist-info/top_level.txt,sha256=yECTgRzg5ZuBvxDMNbgqfHNp6yAsDwB_3MZ3YHjXg2o,12
+keras_adamw-1.32.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+keras_adamw-1.32.dist-info/RECORD,,

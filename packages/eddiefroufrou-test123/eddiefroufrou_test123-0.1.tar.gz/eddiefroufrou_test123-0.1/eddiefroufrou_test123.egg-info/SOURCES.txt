@@ -1,0 +1,10 @@
+setup.py
+eddiefroufrou_test123/Binomialdistribution.py
+eddiefroufrou_test123/Gaussiandistribution.py
+eddiefroufrou_test123/Generaldistribution.py
+eddiefroufrou_test123/__init__.py
+eddiefroufrou_test123.egg-info/PKG-INFO
+eddiefroufrou_test123.egg-info/SOURCES.txt
+eddiefroufrou_test123.egg-info/dependency_links.txt
+eddiefroufrou_test123.egg-info/not-zip-safe
+eddiefroufrou_test123.egg-info/top_level.txt

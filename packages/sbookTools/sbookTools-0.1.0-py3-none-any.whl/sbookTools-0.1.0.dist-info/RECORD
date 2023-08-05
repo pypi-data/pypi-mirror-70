@@ -1,0 +1,10 @@
+sbookTools/__init__.py,sha256=vbIegG_524kkF4u5Ivj6rfJ2wVTqAOTVhvCONhwVHRM,89
+sbookTools/sbook_api_sql.py,sha256=sX81ZOix5lFlHHpA_NM4pdgQLFtysgCmCuo8XRKKc4k,294
+sbookTools/sbook_modles.py,sha256=6CTaj_6_DIx7TOOxD11sst1BDW1OQ98kgUr4nkSe7Es,441
+sbookTools/sbook_tools.py,sha256=32lJ074SlmhBS208C6MPFILKVHhvWpQg8uwv2ItVGSo,4305
+sbookTools/sbookutils.py,sha256=r02xMI_I0f2A_Sz46W1BcdWdmOY0EoRNrqikZVYwR44,154
+sbookTools-0.1.0.dist-info/LICENSE,sha256=RBhg5hIyHCQyj9Hd6pdx4QVzRdIfplLdnbuNB0fm2H4,1093
+sbookTools-0.1.0.dist-info/METADATA,sha256=J2J8JbqYvhyuh49SSpfhxwVhHS38jqwVs6BHLGHzt-M,213
+sbookTools-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+sbookTools-0.1.0.dist-info/top_level.txt,sha256=CY6Skm8DPyi5RF_m5oxYPP7Lj-Bo8QqmBGxrrYtE4N8,11
+sbookTools-0.1.0.dist-info/RECORD,,

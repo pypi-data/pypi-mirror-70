@@ -1,0 +1,34 @@
+{% extends 'uikit/base.html' %}
+{% block main %}
+<header>
+    <div class="uk-container">
+        {% block nav %}
+        <nav class="uk-navbar" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="/">HOME</a>
+                    </li>
+                    <li>
+                        <a href="/about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="/brand">BRAND</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        {% endblock %}
+    </div>
+</header>
+<section class="uk-section uk-section-large uk-section-secondary">
+    <div class="uk-container uk-container-small uk-text-center">
+        <h1>Some description is here</h1>
+        <p class="uk-text-large">So is here</p>
+        <div data-uk-margin="">
+            <p>Yet so is here</p>
+        </div>
+    </div>
+</section>
+{% block content %}{% endblock %}
+{% endblock %}

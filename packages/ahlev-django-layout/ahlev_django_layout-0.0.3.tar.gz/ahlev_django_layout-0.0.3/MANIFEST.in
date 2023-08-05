@@ -1,0 +1,5 @@
+include LICENSE.txt
+include README.rst
+recursive-include layout/templates *
+recursive-include layout/static *
+recursive-exclude * *.py[co]

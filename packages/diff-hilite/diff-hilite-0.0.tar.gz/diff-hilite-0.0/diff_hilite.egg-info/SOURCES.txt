@@ -1,0 +1,5 @@
+setup.py
+diff_hilite.egg-info/PKG-INFO
+diff_hilite.egg-info/SOURCES.txt
+diff_hilite.egg-info/dependency_links.txt
+diff_hilite.egg-info/top_level.txt

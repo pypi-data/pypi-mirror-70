@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+privyfilter/__init__.py
+privyfilter/privyfilter.py
+privyfilter.egg-info/PKG-INFO
+privyfilter.egg-info/SOURCES.txt
+privyfilter.egg-info/dependency_links.txt
+privyfilter.egg-info/requires.txt
+privyfilter.egg-info/top_level.txt
+privyfilter/Configs/haarcascade_frontalface_default.xml

@@ -1,0 +1,12 @@
+rio-tiler-crs~=2.0
+requests
+boto3
+
+[dev]
+pytest
+pytest-cov
+pre-commit
+
+[test]
+pytest
+pytest-cov

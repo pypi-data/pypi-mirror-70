@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: zb
+Version: 0.0.13
+Summary: Personal Package of ZengBin
+Home-page: https://github.com/zengbin93/zb
+Author: zengbin93
+Author-email: zeng_bin8888@163.com
+License: Apache-2.0
+Keywords: zb,tool,algorithm
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: click
+Requires-Dist: numpy
+Requires-Dist: bs4
+Requires-Dist: jieba
+Requires-Dist: pynput
+
+Personal tools and algorithms.
+
+

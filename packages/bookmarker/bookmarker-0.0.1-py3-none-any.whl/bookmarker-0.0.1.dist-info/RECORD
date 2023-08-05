@@ -1,0 +1,8 @@
+bookmark/__init__.py,sha256=gOr6Y5Bh_2bWSEuvHXtia_zJcKq6a7VjB_MkFNSTz8s,168
+bookmark/sql_bookmarker.py,sha256=qpZKbDc-LN-Y-tcjPgfYBp0YTuyMpyeRYR5jq969oyI,1420
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_sqlalchemy_bookmarker.py,sha256=ZVNl8BHTqTsEBX0sDF2HOajhSwMGFUGu2HcY8OTKWDM,580
+bookmarker-0.0.1.dist-info/METADATA,sha256=ztUIlCd1mixKiG4ZLZPekB314i93nifTVdaQ3JJqdpg,672
+bookmarker-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bookmarker-0.0.1.dist-info/top_level.txt,sha256=mCQ_2moTpPQEMiCXVaX9J--zde2LM-psz3Spgyt5Y9s,15
+bookmarker-0.0.1.dist-info/RECORD,,

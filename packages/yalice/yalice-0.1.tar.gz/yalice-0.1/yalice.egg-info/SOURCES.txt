@@ -1,0 +1,10 @@
+README.md
+setup.py
+yalice/__init__.py
+yalice/alice_types.py
+yalice/yandex_alice.py
+yalice.egg-info/PKG-INFO
+yalice.egg-info/SOURCES.txt
+yalice.egg-info/dependency_links.txt
+yalice.egg-info/requires.txt
+yalice.egg-info/top_level.txt

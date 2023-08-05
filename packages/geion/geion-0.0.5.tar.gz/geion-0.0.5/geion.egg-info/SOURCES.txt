@@ -1,0 +1,13 @@
+README.md
+setup.py
+geion/__init__.py
+geion.egg-info/PKG-INFO
+geion.egg-info/SOURCES.txt
+geion.egg-info/dependency_links.txt
+geion.egg-info/top_level.txt
+geion/genetic/__init__.py
+geion/genetic/genome.py
+geion/genetic/individual.py
+geion/genetic/optimizer.py
+geion/multicore/__init__.py
+geion/multicore/backend.py

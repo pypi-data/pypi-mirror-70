@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: atompack
+Version: 0.1.0
+Summary: A flexible Python library for atomic structure generation
+Home-page: https://github.com/seatonullberg/atompack
+Author: Seaton Ullberg
+Author-email: seatonullberg@gmail.com
+License: MIT
+Description: # atompack
+        A flexible Python library for atomic structure generation.
+        https://seatonullberg.github.io/atompack/
+        
+Platform: UNKNOWN

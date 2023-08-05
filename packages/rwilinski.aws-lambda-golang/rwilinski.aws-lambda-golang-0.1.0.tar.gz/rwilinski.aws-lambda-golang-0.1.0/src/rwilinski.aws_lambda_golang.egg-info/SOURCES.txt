@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/rwilinski.aws_lambda_golang.egg-info/PKG-INFO
+src/rwilinski.aws_lambda_golang.egg-info/SOURCES.txt
+src/rwilinski.aws_lambda_golang.egg-info/dependency_links.txt
+src/rwilinski.aws_lambda_golang.egg-info/requires.txt
+src/rwilinski.aws_lambda_golang.egg-info/top_level.txt
+src/rwilinski/aws-lambda-golang/__init__.py
+src/rwilinski/aws-lambda-golang/py.typed
+src/rwilinski/aws-lambda-golang/_jsii/__init__.py
+src/rwilinski/aws-lambda-golang/_jsii/aws-lambda-golang@0.1.0.jsii.tgz

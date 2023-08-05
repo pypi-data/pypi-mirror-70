@@ -1,0 +1,125 @@
+#!/usr/bin/sh
+
+prefix=/Users/darnaud/dev/sim/metasim/workspace/src/trademgen/_skbuild/macosx-10.15-x86_64-3.8/cmake-install
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+libexecdir=${exec_prefix}/libexec
+sbindir=${exec_prefix}/sbin
+sysconfdir=${prefix}/etc
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+pkgdatadir=${datarootdir}/trademgen
+sampledir=/Users/darnaud/dev/sim/metasim/workspace/install/stdair/share/stdair/samples
+docdir=${datarootdir}/doc/trademgen-1.00.6
+mandir=${datarootdir}/man
+infodir=${datarootdir}/info
+htmldir=${docdir}/html
+htmldocpath=${htmldir}/index.html
+pdfdir=${docdir}/html
+refmanpath=${pdfdir}/refman.pdf
+pkgincludedir=${includedir}/trademgen
+pkglibdir=${libdir}/trademgen
+pkglibexecdir=${libexecdir}/trademgen
+
+
+usage()
+{
+  cat <<EOF
+Usage: trademgen-config [OPTION]
+
+Known values for OPTION are:
+
+  --prefix        print TraDemGen installation prefix
+  --sampledir     print where the (StdAir CSV) sample files are located
+  --libs          print library linking information
+  --cflags        print pre-processor and compiler flags
+  --mandir        print where the manual (MAN) pages are located
+  --infodir       print where the information (info) pages are located
+  --docdir        print where the documentation is located
+  --htmldocpath   print where the HTML documentation is located
+  --refmanpath    print where the reference manual (PDF) is located
+  --help          display this help and exit
+  --version       output version information
+EOF
+  exit $1
+}
+
+if test $# -eq 0; then
+  usage 1
+fi
+
+cflags=false
+libs=false
+
+while test $# -gt 0; do
+  case "$1" in
+  -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+  *) optarg= ;;
+  esac
+
+  case $1 in
+    --prefix=*)
+      prefix=$optarg
+      ;;
+
+    --prefix)
+      echo $prefix
+      ;;
+
+    --sampledir)
+      echo $sampledir
+      ;;
+
+    --version)
+      echo 1.00.6
+      ;;
+
+    --mandir)
+      echo $mandir
+      ;;
+
+    --infodir)
+      echo $infodir
+      ;;
+
+    --docdir)
+      echo $docdir
+      ;;
+
+    --htmldocpath)
+      echo $htmldocpath
+      ;;
+
+    --refmanpath)
+      echo $refmanpath
+      ;;
+
+    --help)
+      usage 0
+      ;;
+
+    --cflags)
+      if [ "${prefix}" != "/usr" ]; then
+        echo -I${includedir}
+      else
+        echo
+      fi
+      ;;
+
+    --libs)
+      if [ "${prefix}" != "/usr" ]; then
+        echo -L${libdir} -ltrademgen
+      else
+        echo -ltrademgen
+      fi
+      ;;
+
+    *)
+      usage
+      exit 1
+      ;;
+  esac
+  shift
+done

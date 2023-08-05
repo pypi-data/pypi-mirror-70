@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: fontencrypt
+Version: 0.1.1
+Summary: 一个由Python实现的字体加密库(反爬)
+Home-page: https://github.com/ggdream/fontencrypt
+Author: gdream@126.com
+License: UNKNOWN
+Description: # FontEncrypt
+        
+        
+        ------
+        #### Author: gdream@126.com
+        
+        #### Describe: 一个由Python实现的字体加密库。(针对反爬设计。支持多文件生成、unicode编码随机化、字符坐标动态变化)
+        ------
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

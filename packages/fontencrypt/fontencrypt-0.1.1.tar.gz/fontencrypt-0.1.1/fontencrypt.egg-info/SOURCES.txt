@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+fontencrypt/__init__.py
+fontencrypt.egg-info/PKG-INFO
+fontencrypt.egg-info/SOURCES.txt
+fontencrypt.egg-info/dependency_links.txt
+fontencrypt.egg-info/requires.txt
+fontencrypt.egg-info/top_level.txt
+fontencrypt/generate/__init__.py
+fontencrypt/generate/conf.py
+fontencrypt/generate/fit.py
+fontencrypt/generate/gen.py

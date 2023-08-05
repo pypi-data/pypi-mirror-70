@@ -1,0 +1,11 @@
+pandas_alive/__init__.py,sha256=pZU9qAs-TTBBzn4HqPLgB_bR2Vo5qvHh2wfDS4f1QAw,1244
+pandas_alive/_base_chart.py,sha256=srEgwdrn9tBc-cLovs0_KeXU9WiOpNoTeIdblOZvh_4,25831
+pandas_alive/base.py,sha256=Tyn29QrKpRWfTHlpZnewRf32cMdd_FQP8ae19ElLkLQ,911
+pandas_alive/charts.py,sha256=11IBBnjFlUTAxscN84JdOzqc2hMOK-dt5BU53TM-h4A,27973
+pandas_alive/geocharts.py,sha256=MVD4z2-L6iSV09AfUE5rGNoV4jDGwNbABURTMC1KvVI,7625
+pandas_alive/geoplotting.py,sha256=v5_GEe9UISRdTI_W7BNJOIya69DeqanoH5Y6Kd0ME_Q,2895
+pandas_alive/plotting.py,sha256=_2kVpfvMZQQtgpHdJO1_5dB7_zZhXwxqi18fZqyvcBE,27147
+pandas_alive-0.2.1.dist-info/LICENSE,sha256=qagkwvIF5T9R11Epd9aShUpkcaDKEu-FjPilHobLhhI,1063
+pandas_alive-0.2.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pandas_alive-0.2.1.dist-info/METADATA,sha256=mma0Wr5GfSLm04Ru9wJRiZl7rXfUgoOA4BClmoNSgEY,16200
+pandas_alive-0.2.1.dist-info/RECORD,,

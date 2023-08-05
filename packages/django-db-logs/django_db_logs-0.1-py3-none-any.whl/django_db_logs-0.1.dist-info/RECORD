@@ -1,0 +1,16 @@
+django_db_logs/__init__.py,sha256=T9F-jK-Z9fDdyF73uN-vWetQPPsWRR8QuEW5VhOVOSw,59
+django_db_logs/admin.py,sha256=VjYRsYa2Lr8-4ckl9Y3zkYJBHmWH5hah8zkFxy1mv-g,1273
+django_db_logs/apps.py,sha256=_0HDm7NAEmGdGEE-51FrObe_hwJziFi05N3I0aqrT0Q,132
+django_db_logs/config.py,sha256=azuCCGBaU8pRR_6-MUVnbNes_F7KGNqjym7UA9rXJk0,279
+django_db_logs/db_log_handler.py,sha256=fEVYbArpEr1iP_J0Ix2iw2HAteIjGOacHLEDrnE2ayA,1219
+django_db_logs/models.py,sha256=T5W7wLps2-pn6PGhZjnbupN1lV0-08WuQEdizo_LSWk,911
+django_db_logs/tests.py,sha256=xGovHRgBdU-667V8eQQMwtM7yI_Aw9mG514lsPYuKMc,2516
+django_db_logs/views.py,sha256=eiQY2tTr_xaOzEgk-lOGkfHk4gTgrMmX3oPJ5qsXGYI,234
+django_db_logs/migrations/0001_initial.py,sha256=2WcMpRhd0qYgZFuTcg3aZ4SH2XRgKqVgJXvQLW7JeDA,995
+django_db_logs/migrations/0002_auto_20190109_0052.py,sha256=4SI7Tqg2UUMd-N_kfQj9zw0BAQt_zhhYn6wRzwsCZ_g,626
+django_db_logs/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_db_logs-0.1.dist-info/LICENSE,sha256=HbzjuBWcDhIgx_JhP_PwWmA4Ur06gTF_GdQF81KqILI,1069
+django_db_logs-0.1.dist-info/METADATA,sha256=iXuKJtmtVrQhr3D6nq2SqomDk2IqD1NM6mI6FyNOSh0,2916
+django_db_logs-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_db_logs-0.1.dist-info/top_level.txt,sha256=kPxOmaSi7Wd2Cp-KjL9TBt6f6NKfvONjQEDPS3nO3YI,15
+django_db_logs-0.1.dist-info/RECORD,,

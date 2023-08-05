@@ -1,0 +1,9 @@
+README.md
+django_factories.py
+pyproject.toml
+setup.py
+pytest_django_factories.egg-info/PKG-INFO
+pytest_django_factories.egg-info/SOURCES.txt
+pytest_django_factories.egg-info/dependency_links.txt
+pytest_django_factories.egg-info/requires.txt
+pytest_django_factories.egg-info/top_level.txt

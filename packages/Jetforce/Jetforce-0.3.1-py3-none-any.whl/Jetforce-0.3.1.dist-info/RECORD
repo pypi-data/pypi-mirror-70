@@ -1,0 +1,17 @@
+jetforce_client.py,sha256=q6p2_qBBy0LodIlFn7rWnJRfAN0ccf_OATmrh4Kvhlo,1905
+jetforce/__init__.py,sha256=tPm_JLix2CjO2vxsCkFpiUc8wctVyOUVtVJkKEjamWg,468
+jetforce/__main__.py,sha256=-GIlccWr8IPjWiy4EKQtxsbHsKmoTcdENNL4Cdo3G-c,2823
+jetforce/__version__.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+jetforce/protocol.py,sha256=_TzkzCqBl99QnoPCsBxtN42ldwEYyl6YW-AiQIa3vo8,8941
+jetforce/server.py,sha256=P2WanQRKsGSmDjeleoUOGgsdsYJ5CA7DQ0iNIyb5uo8,3923
+jetforce/tls.py,sha256=RF4ry8nSp1nQqcN-_JuH1JOWz7Ub5fYcZO6XKU_nEWQ,7420
+jetforce/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jetforce/app/base.py,sha256=R_Ui8VH7ysTUhuZmi7u1j339j0sK02FFelNOCO5sOo4,5969
+jetforce/app/composite.py,sha256=XYdnWaZWRqmScWK4r7MoGUt_EWrwlYtdG0nG9cH9lC0,1651
+jetforce/app/static.py,sha256=4RWaVvvJWxda760snZujoQQTomY4oUN4Aejjd94Y4Rk,8391
+Jetforce-0.3.1.dist-info/LICENSE,sha256=Nq8S5MjeO4JROL2rA8aTcZMLryla-wzlQ_ZCPq3eczQ,14654
+Jetforce-0.3.1.dist-info/METADATA,sha256=vrushAOV7oxtQw2RqWczZoHVQ4BKxYLSYgrXhXsFejk,11566
+Jetforce-0.3.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+Jetforce-0.3.1.dist-info/entry_points.txt,sha256=6C-5Cx1pZcgpuxf7-hdw0QQGhGLHs7l0_si4SnOTSys,98
+Jetforce-0.3.1.dist-info/top_level.txt,sha256=bfxQEXa6nzAVAKn7G4Akxa5LdWPbOMjs5ibT9U7uSvM,25
+Jetforce-0.3.1.dist-info/RECORD,,

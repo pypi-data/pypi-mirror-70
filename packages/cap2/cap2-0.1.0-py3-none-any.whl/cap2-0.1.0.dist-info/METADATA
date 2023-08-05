@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: cap2
+Version: 0.1.0
+Summary: CAP2
+Home-page: https://github.com/metasub/cap2
+Author: David C. Danko
+Author-email: dcdanko@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: luigi
+Requires-Dist: PyYaml
+Requires-Dist: biopython
+Requires-Dist: click
+Requires-Dist: multiqc (==1.8)
+
+UNKNOWN
+
+

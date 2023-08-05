@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: cocomoco
+Version: 0.0.2
+Summary: Cocomo Metric Calculator
+Home-page: http://github.com/hgn/cocomoco
+Author: Hagen Paul Pfeifer
+Author-email: hagen@jauu.net
+License: MIT
+Description: # Cocomoco
+        
+        
+        
+        ## Installation
+        
+        Simple install this module via pip (pip for Python 2 is also supported)
+        
+        ```
+        pip3 install --user cocomoco
+        ```
+        
+        ## Usage
+        
+        ### As Python Module
+        
+        ```
+        import cocomoco
+        
+        result = cocomoco.calculate(100000')
+        print(result)
+        ```
+        
+        ### As Python Executable
+        
+        ```sh
+        $ python3 -m cocomoco --sloc <number> [--model <modelname>]
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

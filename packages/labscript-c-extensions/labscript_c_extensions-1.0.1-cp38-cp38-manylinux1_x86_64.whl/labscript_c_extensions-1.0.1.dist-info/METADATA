@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: labscript-c-extensions
+Version: 1.0.1
+Summary: A module containing C-extensions for the labscript suite
+Home-page: http://labscriptsuite.org
+Author: The labscript suite community
+Author-email: labscriptsuite@googlegroups.com
+License: BSD
+Project-URL: Source Code, https://github.com/labscript-suite/labscript-c-extensions
+Project-URL: Download, https://github.com/labscript-suite/labscript-c-extensions/releases
+Project-URL: Tracker, https://github.com/labscript-suite/labscript-c-extensions/issues
+Keywords: experiment visualization
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: importlib-metadata
+Requires-Dist: setuptools-scm
+Requires-Dist: numpy (>=1.15)
+
+# labscript-c-extensions
+Contains code for the C extensions used in the labscript suite.
+
+This ensures that developer installs of the main components don't depend on build tools as they can install the prebuilt wheel/conda package containing the extensions.
+Only developers of these extensions need the build tools (for example [MSVC++ on Windows](https://wiki.python.org/moin/WindowsCompilers))
+
+

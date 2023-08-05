@@ -1,0 +1,17 @@
+zuul_stats_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zuul_stats_client/__main__.py,sha256=E0CjD6D34yIlngpXqWHWVh-eJ1Bjl1_RDS7YA1lcwYw,659
+zuul_stats_client/main.py,sha256=F4ePTNJ2S1iY3GNTEJ8BxlwNZmAW81M-fwdUBiKEz0A,1438
+zuul_stats_client/old.py,sha256=QNEC5DPMeqUd1we8H3aaHsjzJYUTblEkYICkGri4WRA,1988
+zuul_stats_client/pipeline.py,sha256=Jy2hlYzM7kjXj614fXNCyBr7pAtjxIsE38rYwn7OHI0,2173
+zuul_stats_client/utils.py,sha256=e0cjURAswFdXcaZHYA3X3C489LfrjSwgPkHiogVHXic,2379
+zuul_stats_client/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zuul_stats_client/tests/test_utils.py,sha256=M-Z22OSWfBMdh5P9skfhmi2tscG5elnK6w9Zs8alSII,3122
+zuul_stats_client/tests/samples/sampledata.json,sha256=RczAdrZIvGlrnmdorGvWNHXcEFEfIM-7atHLr3djmSM,305586
+zuul_stats_client-0.0.2.dist-info/AUTHORS,sha256=7bKULqU5gOtjaX5X3ZKR9d9mxDlXk76anr1eFsZtiik,220
+zuul_stats_client-0.0.2.dist-info/LICENSE,sha256=CeipvOyAZxBGUsFoaFqwkx54aPnIKEtm9a5u2uXxEws,10142
+zuul_stats_client-0.0.2.dist-info/METADATA,sha256=lI_hTz--UZ1gXxjScQzoFAmGRSYWmb0WevUWNr3NuM4,1324
+zuul_stats_client-0.0.2.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+zuul_stats_client-0.0.2.dist-info/entry_points.txt,sha256=qG4G-FbWjb6vv4xIxETAX3WTEO-swio7gtB2-FTlj20,245
+zuul_stats_client-0.0.2.dist-info/pbr.json,sha256=voKpZK-D_ESeXUkLVQH0kBBildtgFJX80_ylkAOxAQI,46
+zuul_stats_client-0.0.2.dist-info/top_level.txt,sha256=UbI-hcAUv3quCyxzRMZnoyB9veRg6P1jm8vBQYXdQJA,18
+zuul_stats_client-0.0.2.dist-info/RECORD,,

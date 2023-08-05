@@ -1,0 +1,14 @@
+best
+gym
+h5py
+imageio
+matplotlib
+numpy
+opencv-python
+pandas
+pygame
+pymc3
+pymunk
+scipy
+torch
+xlwt

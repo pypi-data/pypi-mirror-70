@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pdformfill/__init__.py
+pdformfill/fdf.py
+pdformfill.egg-info/PKG-INFO
+pdformfill.egg-info/SOURCES.txt
+pdformfill.egg-info/dependency_links.txt
+pdformfill.egg-info/not-zip-safe
+pdformfill.egg-info/top_level.txt

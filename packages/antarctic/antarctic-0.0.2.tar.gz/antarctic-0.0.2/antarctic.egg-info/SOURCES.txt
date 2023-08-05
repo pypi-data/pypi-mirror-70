@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+antarctic/__init__.py
+antarctic/pandasdocument.py
+antarctic/timeutil.py
+antarctic.egg-info/PKG-INFO
+antarctic.egg-info/SOURCES.txt
+antarctic.egg-info/dependency_links.txt
+antarctic.egg-info/requires.txt
+antarctic.egg-info/top_level.txt
+test/test_pandasdocument.py
+test/test_timeutil.py

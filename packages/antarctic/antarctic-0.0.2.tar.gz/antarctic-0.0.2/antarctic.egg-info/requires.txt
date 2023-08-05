@@ -1,0 +1,4 @@
+requests>=2.23.0
+pandas>=0.25.3
+pymongo
+mongoengine>=0.19.1

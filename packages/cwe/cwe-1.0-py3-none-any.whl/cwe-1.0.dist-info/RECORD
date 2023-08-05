@@ -1,0 +1,11 @@
+cwe/__init__.py,sha256=-T9N1FrmD9EBzIb3iHntQgOZH_GdC6aFLinG6uFC_ZM,101
+cwe/categories.py,sha256=kYScd4xUw7VqXe0IxXH-bKosXTTgVi1O1kYP7G0ugWc,216
+cwe/database.py,sha256=N_Dz3A58VZ1Zq392IXJVppPZezHgwQjlAFSsCH1C9sk,2639
+cwe/weakness.py,sha256=2v1e6VoQ38_o0SmgAMrydj8W-WlicvhbO_bmveTz_I8,6798
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cwe.py,sha256=BQhB2KsHaOTh3lbwW_81OmuqBsbCFlgVwjJ2f1yWnQ0,2386
+cwe-1.0.dist-info/LICENSE.txt,sha256=sqedujBbUCNHJ9SlQUc20Ve3X-4o-gGnUFmD9dSxtvc,1074
+cwe-1.0.dist-info/METADATA,sha256=eN1UQz6z-HLRF1DENZ3BFHR_BKK2rr7OKzWV_D4v8rQ,2340
+cwe-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+cwe-1.0.dist-info/top_level.txt,sha256=zQng4N5U2TCP0v_a-WiDozPbecj2PMB7B4RHgsDjavg,10
+cwe-1.0.dist-info/RECORD,,

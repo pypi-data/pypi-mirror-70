@@ -1,0 +1,3 @@
+[console_scripts]
+htsinfer = src.htsinfer:main
+

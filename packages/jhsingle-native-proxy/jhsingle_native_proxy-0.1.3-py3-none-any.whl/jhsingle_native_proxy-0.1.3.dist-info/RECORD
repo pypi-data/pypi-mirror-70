@@ -1,0 +1,12 @@
+jhsingle_native_proxy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jhsingle_native_proxy/main.py,sha256=_X_iC4pXWBrM0KCSWMllEq7I8ubak-v1fOU3vOCPNzI,3180
+jhsingle_native_proxy/proxyhandlers.py,sha256=OF_nhVXUhan_26ReKURCwbOyusYBs_onADO3STtE2Qg,21786
+jhsingle_native_proxy/util.py,sha256=ZGuX55io7IEhjedZt7wu7bR4d-shldmUNZcT69NxFAg,492
+jhsingle_native_proxy/websocket.py,sha256=1x9dP91sQo3tTKL4w0submM-Nt35R12HWdkQ0Zi_8XU,4270
+jhsingle_native_proxy-0.1.3.dist-info/LICENSE,sha256=yVuuHRzgI17MzTVgt3LsHvuX80innw--CmNPDCzO_iw,11358
+jhsingle_native_proxy-0.1.3.dist-info/LICENSE-jupyter-server-proxy,sha256=gMZdTVjjU5FTxvSgG1W8gt59FVPMtZV_m74_x2Uvoko,1705
+jhsingle_native_proxy-0.1.3.dist-info/METADATA,sha256=9NdMudS0wHi13c-MDL5A2XPXyoflJFUmhjT6cZS8k4Y,4704
+jhsingle_native_proxy-0.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jhsingle_native_proxy-0.1.3.dist-info/entry_points.txt,sha256=_aF36G3tWgcsUfEb6QrVbQ-RT2SJQQHmDOn6-lWQm-o,74
+jhsingle_native_proxy-0.1.3.dist-info/top_level.txt,sha256=EUeSXfOQAT5Y5j8RnB5dot0nNDb7p7zh5KQRBTi25Qg,22
+jhsingle_native_proxy-0.1.3.dist-info/RECORD,,

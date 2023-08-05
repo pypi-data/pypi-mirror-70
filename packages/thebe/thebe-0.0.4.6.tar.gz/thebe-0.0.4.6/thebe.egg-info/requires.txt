@@ -1,0 +1,6 @@
+flask
+flask_socketio
+pygments
+dill
+pypandoc
+jupyter_client

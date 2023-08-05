@@ -1,0 +1,10 @@
+setup.py
+nikhil_distributions/Binomialdistribution.py
+nikhil_distributions/Gaussiandistribution.py
+nikhil_distributions/Generaldistribution.py
+nikhil_distributions/__init__.py
+nikhil_distributions.egg-info/PKG-INFO
+nikhil_distributions.egg-info/SOURCES.txt
+nikhil_distributions.egg-info/dependency_links.txt
+nikhil_distributions.egg-info/not-zip-safe
+nikhil_distributions.egg-info/top_level.txt

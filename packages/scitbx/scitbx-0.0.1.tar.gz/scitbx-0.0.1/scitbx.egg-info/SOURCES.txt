@@ -1,0 +1,6 @@
+README.md
+setup.py
+scitbx.egg-info/PKG-INFO
+scitbx.egg-info/SOURCES.txt
+scitbx.egg-info/dependency_links.txt
+scitbx.egg-info/top_level.txt

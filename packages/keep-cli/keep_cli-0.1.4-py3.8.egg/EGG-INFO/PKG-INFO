@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: keep-cli
+Version: 0.1.4
+Summary: Keep-cli is a cli Google Keep client. You can add, delete, and manage your Google Keep notes.
+Home-page: https://github.com/zack-ashen/keep-cli
+Author: Zachary Ashen
+Author-email: zachary.h.a@gmail.com
+License: MIT
+Description: 
+        <h1 align="center">Keep-CLI</h1>
+        <p align="center">Keep-cli is a cli Google Keep client. You can add, delete, and manage your Google Keep notes.</p>
+        
+        
+        ## Setup
+        
+        ### Installation
+        
+        ```sh
+        pip install keep-cli
+        ```
+        
+        ### Configuration
+        In order to make a note you must have the `$EDITOR` environment variable set to a text editor.
+        
+        ## Usage
+        
+        #### Run keep-cli visually:
+        ```sh
+        keep-cli
+        ```
+        #### Skip the intro animation (quick mode):
+        ```sh
+        keep-cli --quick
+        ```
+        #### Make a list or note:
+        For a note:
+        ```sh
+        keep-cli --note
+        ```
+        For a list:
+        ```sh
+        keep-cli --list
+        ```
+        
+Keywords: cli google notes notetaking todo google-keep keep keep-cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

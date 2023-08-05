@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tutil
+Version: 0.0.3
+Summary: utils for tuyy
+Home-page: https://github.com/tuyy/tutil
+Author: tuyy
+Author-email: whwkfyd91@naver.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# tutil
+python utils for tuyy
+
+https://pypi.org/project/tutil/
+
+

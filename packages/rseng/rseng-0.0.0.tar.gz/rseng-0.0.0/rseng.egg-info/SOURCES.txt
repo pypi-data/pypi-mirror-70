@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rseng/__init__.py
+rseng/version.py
+rseng.egg-info/PKG-INFO
+rseng.egg-info/SOURCES.txt
+rseng.egg-info/dependency_links.txt
+rseng.egg-info/entry_points.txt
+rseng.egg-info/not-zip-safe
+rseng.egg-info/requires.txt
+rseng.egg-info/top_level.txt

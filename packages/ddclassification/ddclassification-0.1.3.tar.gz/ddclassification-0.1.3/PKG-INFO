@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: ddclassification
+Version: 0.1.3
+Summary: general image classification library
+Home-page: https://github.com/ddcloud-uiyunkim/ddclassification
+Author: Uiyun Kim
+Author-email: uiyunkim@kakao.com
+License: MIT
+Description: # ddclassification
+         ddclassification
+        
+Platform: UNKNOWN

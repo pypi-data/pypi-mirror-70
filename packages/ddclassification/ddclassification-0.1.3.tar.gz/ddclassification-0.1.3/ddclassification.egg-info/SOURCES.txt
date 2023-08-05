@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ddclassification/__init__.py
+ddclassification.egg-info/PKG-INFO
+ddclassification.egg-info/SOURCES.txt
+ddclassification.egg-info/dependency_links.txt
+ddclassification.egg-info/not-zip-safe
+ddclassification.egg-info/top_level.txt
+ddclassification/lip_reading/__init__.py
+ddclassification/lip_reading/model/__init__.py
+ddclassification/lip_reading/model/lstm_5.py
+ddclassification/lip_reading/utils/__init__.py
+ddclassification/lip_reading/utils/method.py
+ddclassification/utils/__init__.py
+ddclassification/utils/data_generator.py

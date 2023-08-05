@@ -1,0 +1,71 @@
+/*! 
+\page users_guide Users Guide
+
+\section ug_toc Table of Contents
+- \ref ug_introduction
+- \ref ug_get_started
+  - \ref ug_get_source
+  - \ref ug_build_binaries
+  - \ref ug_build_and_run_tests
+  - \ref ug_install_project
+- \ref ug_bom_tree
+ - \ref ug_bom_forecaster
+ - \ref ug_bom_optimiser
+- \ref ug_extending_bom_tree
+
+
+\section ug_introduction Introduction
+
+The \c RMOL library contains classes for revenue management.
+This document does not cover all the aspects of the \c RMOL library. It 
+does however explain the most important things you need to know in order
+to start using \c RMOL. 
+
+\section ug_get_started Get Started
+
+\subsection ug_get_source Get the RMOL library
+
+\subsection ug_build_binaries Build the RMOL project
+To build RMOL, go to the top directory (where the RMOL package has been
+un-packed), and issue the following commands only once:
+\verbatim
+$ export INSTALL_BASEDIR=~/dev/deliveries
+$ export RMOL_VER=99.99.99
+$ if [ -d /usr/lib64 ]; then LIBSUFFIX=64; fi
+$ export LIBSUFFIX_4_CMAKE="-DLIB_SUFFIX=$LIBSUFFIX"
+$ rm -rf build && mkdir build && cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_BASEDIR}/rmol-$RMOL_VER \
+	-DCMAKE_BUILD_TYPE:STRING=Debug -DENABLE_TEST:BOOL=ON \
+	-DINSTALL_DOC:BOOL=ON -DRUN_GCOV:BOOL=OFF ${LIBSUFFIX_4_CMAKE} ..
+\endverbatim
+Then, everytime you change the source code:
+\verbatim
+$ make check
+\endverbatim
+When everything is fine, install RMOL locally:
+\verbatim
+$ make install
+\endverbatim
+
+\subsection ug_build_and_run_tests Build and Run the Tests
+
+\subsection ug_install_project Install the RMOL Project (Binaries, Documentation)
+
+\section ug_bom_tree Exploring the Predefined BOM Tree
+
+\c RMOL predefines a BOM (Business Object Model) tree specific to the
+airline IT arena.
+
+\subsection ug_bom_forecaster Forecaster BOM Tree
+- \c RMOL::EMDetruncator
+- \c RMOL::Detruncator
+- \c RMOL::Forecaster
+
+\subsection ug_bom_optimiser Optimiser BOM Tree
+- \c RMOL::DPOptimiser
+- \c RMOL::MCOptimiser
+- \c RMOL::Optimiser
+
+\section ug_extending_bom_tree Extending the BOM Tree
+
+*/

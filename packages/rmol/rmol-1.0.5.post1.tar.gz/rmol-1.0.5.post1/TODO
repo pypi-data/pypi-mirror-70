@@ -1,0 +1,4 @@
+1. Have CMake generate the i18n (.po) files (po/ directory).
+2. Have CMake generate the info (info/ directory) pages.
+3. Automate the delivery of Distribution packages: .deb.
+

@@ -1,0 +1,5 @@
+setup.py
+ucx_py.egg-info/PKG-INFO
+ucx_py.egg-info/SOURCES.txt
+ucx_py.egg-info/dependency_links.txt
+ucx_py.egg-info/top_level.txt

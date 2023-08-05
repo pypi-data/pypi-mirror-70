@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: xpressinsight
+Version: 1.0.2.post1
+Summary: Develop Python based web applications for Xpress Insight.
+Home-page: http://www.fico.com/en/products/fico-xpress-optimization-suite
+Author: FICO Xpress dev. team
+Author-email: support@fico.com
+License: Xpress Shrinkwrap License Agreement
+Keywords: optimization xpress insight
+Platform: any
+Classifier: License :: Other/Proprietary License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.0.0)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: urllib3
+Requires-Dist: certifi
+Requires-Dist: sqlalchemy
+
+## Xpress Insight Python Package
+
+The 'xpressinsight' Python package can be used to develop Python based web applications for Xpress Insight.
+
+### Licensing
+
+The Xpress software is governed by the the
+[Xpress Shrinkwrap License Agreement](https://community.fico.com/s/contentdocument/06980000002h0i5AAA).
+When downloading or using the package, you accept the license terms.
+
+This package includes the community license of Xpress, see the
+[licensing options overview](https://community.fico.com/s/fico-xpress-optimization-licensing-optio)
+for more details.
+
+Copyright (C) Fair Isaac 1983-2020.
+

@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: teda
+Version: 0.9.2
+Summary: TeDa FITS Viewer
+Home-page: https://github.com/majkelx/teda
+Author: Akond Lab
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pyside2
+Requires-Dist: astropy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: traitlets
+Requires-Dist: watchdog
+
+# TeDa FITS Viewer
+
+Observatory optimized SAO DS9 replacement
+
+## Key Features
+* Flexible layout
+* WCS support
+* Radial Profile with gaussoide fit
+* Scan mode: observes directory for changes and automatically opens new FITS 
+
+## Development version install:
+``` bash
+
+    git clone git@github.com:majkelx/teda.git
+    cd teda
+    python -m venv venv
+    source ./venv/bin/activate
+    pip install -r requirements.txt
+```
+
+

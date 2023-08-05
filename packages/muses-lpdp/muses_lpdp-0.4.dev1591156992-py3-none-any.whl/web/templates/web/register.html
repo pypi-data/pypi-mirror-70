@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block pageloader %}
+    <div class="pageloader"></div>
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        <div class="muses-flex-row">
+            <form class="muses-window" name="register" id="register" method="post">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <div style="display: flex">
+                    <input type="submit" value="{% trans "Submit" %}">
+                    <input type="button" value="{% trans "Cancel" %}" onclick="window.history.back();">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

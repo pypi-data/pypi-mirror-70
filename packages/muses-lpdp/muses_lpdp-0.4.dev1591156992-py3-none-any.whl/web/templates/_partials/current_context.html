@@ -1,0 +1,14 @@
+{% if section_title %}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    {{ section_title|default_if_none:"" }}
+                </h1>
+                <h2 class="subtitle">
+                    {{ section_description|default_if_none:"" }}
+                </h2>
+            </div>
+        </div>
+    </section>
+{% endif %}

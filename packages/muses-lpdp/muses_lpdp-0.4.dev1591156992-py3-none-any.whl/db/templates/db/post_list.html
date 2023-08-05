@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {{ site_title }} - {{ section_title }}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for post in post_list %}
+            <div class="muses-list-item" onclick="location.href='{% url "muses_post_detail" post.id %}'">
+                <div>{{ post.title|default:"Undefined" }}</div>
+                <div>{{ post.author.username|default:"Undefined" }}</div>
+                <div>{{ post.created_at|default:"Undefined" }}</div>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

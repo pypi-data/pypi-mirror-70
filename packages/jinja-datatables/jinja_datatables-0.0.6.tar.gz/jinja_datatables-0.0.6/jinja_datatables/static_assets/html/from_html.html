@@ -1,0 +1,26 @@
+<table {% for key, value in table_view.html_arguments.items() %} {{key}}="{{value}}" {% endfor %}></table>
+<script>
+    $( document ).ready(function() {
+        let selector = "#{{ table_view.html_arguments['id'] }}"
+        var table = $(selector).DataTable({
+            columns: [
+            {% for column in table_view.columns %}
+                {% if column.show_on_table %}
+                { {% for key, value in column.extras.items() %}
+                    {{ key }}: {{ value }},
+                {% endfor %}
+                {% if not column.target_set %}
+                    target: {{ loop.index0 }},
+                {% endif %}
+                {% endif %}
+                },
+            {% endfor %}
+            ],
+            {% for key, value in table_view.datatable_arguments.items() %}
+            {{key}}: {{value}},
+            {% endfor %}
+        });
+        buildFilters(table, selector)
+        {% include "js/table.js" %}
+    })
+</script>

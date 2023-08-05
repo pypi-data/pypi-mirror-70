@@ -1,0 +1,9 @@
+README.md
+setup.py
+tribanco_utils_bi.egg-info/PKG-INFO
+tribanco_utils_bi.egg-info/SOURCES.txt
+tribanco_utils_bi.egg-info/dependency_links.txt
+tribanco_utils_bi.egg-info/requires.txt
+tribanco_utils_bi.egg-info/top_level.txt
+utilsbi_mssql_access/__init__.py
+utilsbi_mssql_access/persistence.py

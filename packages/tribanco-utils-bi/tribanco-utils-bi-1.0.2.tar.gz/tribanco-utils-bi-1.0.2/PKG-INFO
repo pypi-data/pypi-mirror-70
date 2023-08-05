@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: tribanco-utils-bi
+Version: 1.0.2
+Summary: Utilitario para rotinas BI Tribanco
+Home-page: UNKNOWN
+Author: Herculano Cunha
+Author-email: herculanocm@outlook.com
+License: MIT
+Description: UNKNOWN
+Keywords: bi dw sqlserver tools utils
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3

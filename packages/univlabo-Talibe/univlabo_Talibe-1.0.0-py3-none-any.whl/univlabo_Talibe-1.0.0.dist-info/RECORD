@@ -1,0 +1,17 @@
+ml/__init__.py,sha256=iCfpmi_ZE6eTQHN98L6XVm4-2VP5AnDtD4cP9RmtfkU,90
+ml/baryclust/BC_Clust.py,sha256=6ursny_XnMfjXCwp2Z7Ona7BPw79wwR4eMyjuY6ZK7w,4775
+ml/baryclust/StreamBarycentric.py,sha256=sJ4xTOUFi4J3weyB460aQsbtNNt0arTqfhOw_NHhOFE,14023
+ml/baryclust/__init__.py,sha256=Zpq0pWrjN3rFGfzuUqf_vUi7oI-yBcTDdbvTPHlZIG4,137
+ml/densityclust/DS2L_SOM.py,sha256=uq5Z_zM-z2v7FC0djaUTiMyThIURTZwJF0Upr4btgaE,2816
+ml/densityclust/__init__.py,sha256=kxgb1Tv-89eHfoLrFPUYciTx5G7alYOY_ikJeV9zlKg,50
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/baryclust/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/baryclust/test_BC_Clust.py,sha256=M-QiNQODr6_RInJMREO0o0koFNa2mkQx01qZDCHmWOw,1790
+test/baryclust/test_StreamBarycentric.py,sha256=_Y4EV-P0NiMjgs4B5gNGJnOy4hcjXwxzFvgJPl2gN74,1121
+test/densityclust/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/densityclust/test_DS2L_SOM.py,sha256=5rfkw4sjjN609XhtCTtHc4xBXxXpSmYX1-Cm4SFebag,1593
+univlabo_Talibe-1.0.0.dist-info/LICENSE,sha256=nA404otS3EgvJxlVZuGh_c1fw-pu27fSS25LBCavbNU,2187
+univlabo_Talibe-1.0.0.dist-info/METADATA,sha256=wfJVk3n09H13g4Mh6zVEkyOY_KJaGQOk4KBavTpa2dI,667
+univlabo_Talibe-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+univlabo_Talibe-1.0.0.dist-info/top_level.txt,sha256=h9KG5K-YUtIkx-yfEp6fBEYjuA-mpFlD8St6nQaMYDA,8
+univlabo_Talibe-1.0.0.dist-info/RECORD,,

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: datatorch
+Version: 0.0.1
+Summary: A CLI and library for interacting with DataTorch
+Home-page: https://github.com/datatorch/python
+Author: DataTorch
+Author-email: support@datatorch.io
+License: MIT license
+Description: <p align="center">
+            <img src="https://raw.githubusercontent.com/datatorch/documentation/master/docs/.vuepress/public/python.png" width="180" />
+        </p>
+        
+        <h1 align="center">
+          DataTorch Python
+        </h1>
+        <h4 align="center">DataTorch CLI and Python API libary for programmatic access.</h4>
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

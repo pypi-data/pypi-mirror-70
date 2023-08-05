@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: eisen-extras
+Version: 0.0.1
+Summary: Extra functionality and foreign functionality adapted for use within Eisen
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: torch (==1.5.0)
+Requires-Dist: torchvision (==0.6.0)
+
+UNKNOWN
+
+

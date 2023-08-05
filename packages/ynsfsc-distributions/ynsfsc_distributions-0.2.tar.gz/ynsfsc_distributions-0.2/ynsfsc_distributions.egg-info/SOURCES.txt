@@ -1,0 +1,10 @@
+setup.py
+ynsfsc_distributions/Binomialdistribution.py
+ynsfsc_distributions/Gaussiandistribution.py
+ynsfsc_distributions/Generaldistribution.py
+ynsfsc_distributions/__init__.py
+ynsfsc_distributions.egg-info/PKG-INFO
+ynsfsc_distributions.egg-info/SOURCES.txt
+ynsfsc_distributions.egg-info/dependency_links.txt
+ynsfsc_distributions.egg-info/not-zip-safe
+ynsfsc_distributions.egg-info/top_level.txt

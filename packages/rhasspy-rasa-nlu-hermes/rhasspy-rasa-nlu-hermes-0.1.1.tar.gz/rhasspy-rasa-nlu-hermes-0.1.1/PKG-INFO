@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rhasspy-rasa-nlu-hermes
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-rasa-nlu-hermes
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy Rasa NLU Hermes Service
+        
+        MQTT service for Rhasspy that uses Rasa NLU to do intent recognition.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

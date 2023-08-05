@@ -1,0 +1,14 @@
+imjoy_rpc/VERSION,sha256=SpKDiwST1JmFE2DnQV6z_NOb5wGvHeP1U3NNAZqsm7U,26
+imjoy_rpc/__init__.py,sha256=LUxeSTf3guujLt2ujW2t6TpHgpPIGG1ek69GV-jgbkQ,374
+imjoy_rpc/__main__.py,sha256=KljkQYWSmEQnrH-1Q1VdsTFEgmogPeoXWAZgn97_3gk,375
+imjoy_rpc/rpc.py,sha256=ewKeMVhgws0jyLcpPvvw2gBW-ZyOnD4LNXRmU4VZyUY,27789
+imjoy_rpc/utils.py,sha256=2RIuWm-P3WmvF5S2eyLCcrloIm9kvj1LeLMptMvJ3Nk,8643
+imjoy_rpc/connection/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imjoy_rpc/connection/jupyter_connection.py,sha256=Bwqsb4nmjYIcptH-GwZsjDCeJrNchZHL7H_nWkSr8yo,9178
+imjoy_rpc/connection/socketio_connection.py,sha256=8DOuxGAhaPYUI2J0z125cdzE4_YBdtcdyGBAG3K9cgg,1548
+tests/__init__.py,sha256=b--DMBi_2OBUHHk4cRoLimr65GTeQCcrKJOP6O8NpiU,26
+tests/socketioserver.py,sha256=0nBKytq8DBcWq5IAyjY3elpnHhkGqIVjpPE1VJWb17E,1839
+imjoy_rpc-0.2.3.dist-info/METADATA,sha256=PvGajM-a9hwK5GgzXi6EQSm84xKW7THGxFCRLqeRrmE,705
+imjoy_rpc-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+imjoy_rpc-0.2.3.dist-info/top_level.txt,sha256=QenxisjkmGHQnk7AG1Q_9TeJaoJ2vZdqXOcBcGXfnOQ,16
+imjoy_rpc-0.2.3.dist-info/RECORD,,

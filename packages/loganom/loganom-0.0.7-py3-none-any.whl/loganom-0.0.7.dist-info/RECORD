@@ -1,0 +1,17 @@
+loganom/config.py,sha256=fBCV5fhg6eORccggki1K1uGBR51IX1TQp7JaMuUqF6M,5359
+loganom/ipinfo.py,sha256=iZo2gmJLazGc88ObVV5_ZBqMGnp5Qn_CkFdGEqSxYuw,540
+loganom/process_mail.py,sha256=Q0cN0Crk8AcD6vrFAPkA9gsGm_VuA5Y5bZVWwUc0jUY,2623
+loganom/__init__.py,sha256=3bMo7T_5AJMR3DO7y9LI0rPghEJXAnTEynfnSBTQPms,75
+loganom/processor.py,sha256=0HbnrVZktz6Eh02q2ekI5w2X6UIkcrqe31r5B0yvCBA,2179
+loganom/utils.py,sha256=BqPMnXhP4Zw8qAPsU9WLXRqd6_5pQ3DFG7p5XXVdD-0,2605
+loganom/report_mail.py,sha256=5x5oUIp6XXJ_LEbU1Az4q6gJhrai0aDJGDXpVnBr14o,905
+loganom/exec_cmd.py,sha256=e5GBUo0cvAVUN5dIt8YTsgLKaJnX6KVVmlaK-vI9NHY,887
+loganom/report_mm.py,sha256=-fuyGhobbjnkj7LceF7jRiHdKtU8qev9rGHZoiVxgqU,1241
+loganom/main.py,sha256=JoBfQF6gQf2Jpr4crGi0wk9alBEIZDKGdEzPi_L-S-w,1553
+loganom-0.0.7.dist-info/RECORD,,
+loganom-0.0.7.dist-info/metadata.json,sha256=fVYPs60nfDsrM0wJ36bv_G9SanzACLsQxiwsvB50ZY4,807
+loganom-0.0.7.dist-info/WHEEL,sha256=-aSo8rHuuPDEFzkcqqQ55pDyCjy25bYMLxSiHWKAOTc,92
+loganom-0.0.7.dist-info/entry_points.txt,sha256=bcPCo0zRLu2TtqG-7ERUHol6-9Lhf79807qzqTwvuOA,47
+loganom-0.0.7.dist-info/DESCRIPTION.rst,sha256=hFujLpMHVrKSsZ5HPr7fqOcWdx0T9BrZoc2dIgdYizo,1081
+loganom-0.0.7.dist-info/top_level.txt,sha256=eOpwJ3d5ouSEGKXYyiBHFCW5oWiR8nI5fzE9s9UuPxI,8
+loganom-0.0.7.dist-info/METADATA,sha256=0Jrv_aRcbvXOKmehH75dd6aOciMIpWHj0v_noltNeo4,1533

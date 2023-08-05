@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+PyGAMP/__init__.py
+PyGAMP/app.py
+PyGAMP/custom_definitions.py
+PyGAMP/ecommerce.py
+PyGAMP/enhanced_ecommerce.py
+PyGAMP/events.py
+PyGAMP/exceptions.py
+PyGAMP/pageviews.py
+PyGAMP/social_interactions.py
+PyGAMP/transport.py
+PyGAMP.egg-info/PKG-INFO
+PyGAMP.egg-info/SOURCES.txt
+PyGAMP.egg-info/dependency_links.txt
+PyGAMP.egg-info/top_level.txt

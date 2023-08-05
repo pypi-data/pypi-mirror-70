@@ -1,0 +1,7 @@
+README.md
+setup.py
+pybomberman/__init__.py
+pybomberman.egg-info/PKG-INFO
+pybomberman.egg-info/SOURCES.txt
+pybomberman.egg-info/dependency_links.txt
+pybomberman.egg-info/top_level.txt

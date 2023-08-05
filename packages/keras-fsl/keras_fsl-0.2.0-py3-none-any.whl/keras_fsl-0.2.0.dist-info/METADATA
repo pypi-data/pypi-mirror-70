@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: keras-fsl
+Version: 0.2.0
+Summary: Model builders for some State-of-the-Art architectures in few-shot and contrastive learning
+Author: Clément Walter
+Author-email: clement0walter@gmail.com
+Requires-Python: >=3.6.5,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: tensorflow (>=2.1.0,<3.0.0)
+Requires-Dist: tensorflow-datasets (>=3.1.0,<4.0.0)
+Requires-Dist: tqdm (>=4.42.0,<5.0.0)

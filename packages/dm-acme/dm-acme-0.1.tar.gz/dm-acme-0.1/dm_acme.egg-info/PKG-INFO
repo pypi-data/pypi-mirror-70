@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dm-acme
+Version: 0.1
+Summary: A Python library for Reinforcement Learning.
+Home-page: UNKNOWN
+Author: DeepMind
+License: Apache License, Version 2.0
+Description: **[Overview](#overview)** | **[Installation](#installation)** |
+        **[Documentation]** | **[Agents]** | **[Examples]**
+        
+        For more information see our [github repository](https://github.com/deepmind/acme).
+Keywords: reinforcement-learning python machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Provides-Extra: jax
+Provides-Extra: tf
+Provides-Extra: envs
+Provides-Extra: reverb
+Provides-Extra: testing

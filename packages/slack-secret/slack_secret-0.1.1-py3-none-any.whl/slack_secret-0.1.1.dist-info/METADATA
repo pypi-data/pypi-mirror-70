@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: slack-secret
+Version: 0.1.1
+Summary: 
+Author: Nicolas Paris
+Author-email: ni.paris@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: slackclient (>=2.6.2,<3.0.0)
+Requires-Dist: tqdm (>=4.46.0,<5.0.0)

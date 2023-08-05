@@ -1,0 +1,10 @@
+imgoptimize/__init__.py,sha256=Y8m4GZWnD3REAmNG7ZNxDpmXuPHihl7MjZE-pfOGPKE,107
+imgoptimize/_threading.py,sha256=iI47So2w0ksqsyW44s2Rf_rO-GSxvcPYyXR8HwnCyD4,490
+imgoptimize/gui.py,sha256=TYfDRzuTWC7_OEVZHa6M4pRZJ5o1NNdHxmlvUs3WnEo,5202
+imgoptimize/imgoptimize.py,sha256=FmDiwVMtrdOcRWponVb3H_VFiMN4DFdjixiTnAAJXwE,8497
+imgoptimize/optimize.py,sha256=oJ8X1jAHNpM8MvbU7DsFeyWD-bOg5Xeo6YCoIofZ-fw,492
+img_optimize-0.1.4.dist-info/LICENSE,sha256=Axk37SFyHtIJavcPhvr3EHud_enzJg1KTW982wFlCG4,1068
+img_optimize-0.1.4.dist-info/METADATA,sha256=SXcMeB8AK9GOv9UqI0lv6lPQopyFsbujDKrxuP3nFAU,2531
+img_optimize-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+img_optimize-0.1.4.dist-info/top_level.txt,sha256=mM6aXiW9-nsgzO-AGRTgMYwugXbEU2Z-VkjKy3TMjrE,12
+img_optimize-0.1.4.dist-info/RECORD,,

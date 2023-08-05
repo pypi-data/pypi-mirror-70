@@ -1,0 +1,3 @@
+[console_scripts]
+getBitMEXData = getBitMEXData.getBitMEXData:main_prg
+

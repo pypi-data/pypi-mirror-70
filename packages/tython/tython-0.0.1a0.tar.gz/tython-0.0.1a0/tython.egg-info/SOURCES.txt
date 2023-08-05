@@ -1,0 +1,9 @@
+README.md
+setup.py
+tython/__init__.py
+tython/interpreter.py
+tython.egg-info/PKG-INFO
+tython.egg-info/SOURCES.txt
+tython.egg-info/dependency_links.txt
+tython.egg-info/requires.txt
+tython.egg-info/top_level.txt

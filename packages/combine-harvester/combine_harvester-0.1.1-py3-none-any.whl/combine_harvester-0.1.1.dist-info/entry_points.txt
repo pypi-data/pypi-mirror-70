@@ -1,0 +1,3 @@
+[console_scripts]
+harvest=combine_harvester:main
+

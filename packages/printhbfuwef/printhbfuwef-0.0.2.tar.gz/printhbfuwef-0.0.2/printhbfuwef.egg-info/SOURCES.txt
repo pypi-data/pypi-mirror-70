@@ -1,0 +1,7 @@
+setup.py
+printhbfuwef/__init__.py
+printhbfuwef/print_str.py
+printhbfuwef.egg-info/PKG-INFO
+printhbfuwef.egg-info/SOURCES.txt
+printhbfuwef.egg-info/dependency_links.txt
+printhbfuwef.egg-info/top_level.txt

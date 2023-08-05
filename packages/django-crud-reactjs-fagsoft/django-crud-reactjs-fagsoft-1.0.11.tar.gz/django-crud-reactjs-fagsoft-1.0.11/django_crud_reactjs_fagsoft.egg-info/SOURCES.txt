@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_crud_reactjs_fagsoft.egg-info/PKG-INFO
+django_crud_reactjs_fagsoft.egg-info/SOURCES.txt
+django_crud_reactjs_fagsoft.egg-info/dependency_links.txt
+django_crud_reactjs_fagsoft.egg-info/requires.txt
+django_crud_reactjs_fagsoft.egg-info/top_level.txt
+fagsoft/__init__.py

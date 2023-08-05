@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: whale-alert
+Version: 0.0.1
+Summary: Cryptocurrency Whale Alert API Logger
+Home-page: https://github.com/stuianna/whaleAlert
+Author: stuianna
+Author-email: stuian@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: colorama
+Requires-Dist: config-checker
+Requires-Dist: db-ops
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: appdirs
+Requires-Dist: python-dateutil
+Requires-Dist: urllib3
+
+[![Build Status](https://travis-ci.org/stuianna/whaleAlert.svg?branch=master)](https://travis-ci.org/stuianna/whaleAlert)
+![Codecov](https://img.shields.io/codecov/c/github/stuianna/whaleAlert)
+![GitHub](https://img.shields.io/github/license/stuianna/whaleAlert)
+
+# WhaleAlert - Cryptocurrecy Whale Alert API Logger
+
+

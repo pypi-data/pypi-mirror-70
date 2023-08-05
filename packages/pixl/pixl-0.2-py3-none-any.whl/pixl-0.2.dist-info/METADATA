@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pixl
+Version: 0.2
+Summary: A simple package that takes in an image and returns a vector.
+Home-page: https://github.com/justinhtn/pixl
+Author: Justin Houghton
+Author-email: justin.houghton@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+
+UNKNOWN
+
+

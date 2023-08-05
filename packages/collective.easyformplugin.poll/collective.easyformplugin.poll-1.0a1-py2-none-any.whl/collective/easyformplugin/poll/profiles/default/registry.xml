@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<registry
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="collective.easyformplugin.poll">
+
+<!-- -*- extra stuff goes here -*- -->
+    <records prefix="plone.resources/collective.easyformplugin.poll"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+        <value key="js">++plone++collective.easyformplugin.poll/Chart.bundle.min.js</value>
+    </records>
+
+</registry>

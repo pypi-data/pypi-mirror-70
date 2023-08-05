@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: collective.easyformplugin.poll
+Version: 1.0a1
+Summary: Poll support for EasyForm
+Home-page: https://github.com/collective/collective.easyformplugin.poll
+Author: Oshane Bailey
+Author-email: oshane@alteroo.com
+License: GPL version 2
+Project-URL: Source, https://github.com/collective/collective.easyformplugin.poll
+Project-URL: Tracker, https://github.com/collective/collective.easyformplugin.poll/issues
+Project-URL: PyPI, https://pypi.python.org/pypi/collective.easyformplugin.poll
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 5.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Requires-Python: ==2.7
+Requires-Dist: setuptools
+Requires-Dist: z3c.jbot
+Requires-Dist: collective.easyform
+Requires-Dist: Products.GenericSetup (>=1.8.2)
+Requires-Dist: plone.api (>=1.8.4)
+Requires-Dist: plone.app.dexterity
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+Requires-Dist: plone.testing (>=5.0.0) ; extra == 'test'
+Requires-Dist: plone.app.contenttypes ; extra == 'test'
+Requires-Dist: plone.app.robotframework[debug] ; extra == 'test'
+
+.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+   This text does not appear on pypi or github. It is a comment.
+
+==================================
+collective.easyformplugin.poll
+==================================
+
+EasyForm plugin for conducting online polls, for anonymous and logged-in users.
+
+Features
+--------------
+
+- Polls can be opened for anonymous users to vote
+- If an open poll is allowed for anonymous but is inside a private folder, nobody can vote. Therefore the poll's parent folder needs to be published before opening the poll in order for this field to take effect
+- Users can see partial results of the poll if necessary
+- Results can be shown using a pie chart
+- Polls can have relations with other content in the site
+
+
+Installation
+------------
+
+Install collective.easyformplugin.poll by adding it to your buildout::
+
+    [buildout]
+
+    ...
+
+    eggs =
+        collective.easyformplugin.poll
+
+
+and then running ``bin/buildout``
+
+
+Contribute
+----------
+
+- Issue Tracker: https://github.com/collective/collective.easyformplugin.poll/issues
+- Source Code: https://github.com/collective/collective.easyformplugin.poll
+- Documentation: https://docs.plone.org/foo/bar
+
+
+TODOs
+--------
+- Use a field as a unique identifier
+- Allow editors to choose the type of graph to display the pool
+- Add open and close workflow state
+
+
+Support
+-------
+
+If you are having issues, please let us know.
+We have a mailing list located at: oshane@alteroo.com
+
+
+License
+-------
+
+The project is licensed under the GPLv2.
+
+
+Contributors
+============
+
+- Oshane Bailey, oshane@alteroo.com
+
+
+Changelog
+=========
+
+
+1.0a1 (unreleased)
+------------------
+
+- Initial release.
+  [b4oshany]
+
+

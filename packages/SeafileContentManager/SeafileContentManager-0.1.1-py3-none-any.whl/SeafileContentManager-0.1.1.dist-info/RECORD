@@ -1,0 +1,12 @@
+SeafileContentManager/__init__.py,sha256=tTZUVnZAgXNh7rY-SP5cNVBoPuVRYdypS3HUFe5X1Zo,171
+SeafileContentManager/seacheckpoints.py,sha256=BqZtoSWIMDSZIBSuUmIq9y1EA7zde8LgbuXXwubYGjg,4160
+SeafileContentManager/seafilemixin.py,sha256=zhVCtu4eC2uMJVyjSkMfbpQNewflwm8XdKWMgpW4ivw,3073
+SeafileContentManager/seamanager.py,sha256=0yh12v2m4IHOO58UDh4tCmcU9rfiPQLRPrIbLJdHt8o,18344
+SeafileContentManager/seaopen.py,sha256=O9yWbi4l6tPTMPm0CtT-50CPVFdzsFdN1tcbJGN2ZX4,7989
+SeafileContentManager/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SeafileContentManager/tests/test_SeafileContentManager.py,sha256=ZK2jgfBr5J1k_8ZkPhMZS5xPbZOCVvDKq1x4dca3LTY,23011
+SeafileContentManager-0.1.1.dist-info/LICENSE,sha256=fFDNm4Xit-666itWGLQChisB1aZr7_-OQUAe8_FORxo,34500
+SeafileContentManager-0.1.1.dist-info/METADATA,sha256=ep3hLRxwrG40d2lRX91THliLmoEuhBaMw4GTgIa6N7w,4417
+SeafileContentManager-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+SeafileContentManager-0.1.1.dist-info/top_level.txt,sha256=7_STmeU0SDIzd6XhDQw42uZfC2YtWK8OoonK_wN36Bs,22
+SeafileContentManager-0.1.1.dist-info/RECORD,,

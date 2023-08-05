@@ -1,0 +1,7 @@
+README.md
+setup.py
+duelpy/__init__.py
+duelpy.egg-info/PKG-INFO
+duelpy.egg-info/SOURCES.txt
+duelpy.egg-info/dependency_links.txt
+duelpy.egg-info/top_level.txt

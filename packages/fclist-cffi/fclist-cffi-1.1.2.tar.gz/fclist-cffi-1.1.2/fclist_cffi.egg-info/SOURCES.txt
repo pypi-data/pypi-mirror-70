@@ -1,0 +1,9 @@
+README.md
+fclist.py
+setup.py
+fclist_cffi.egg-info/PKG-INFO
+fclist_cffi.egg-info/SOURCES.txt
+fclist_cffi.egg-info/dependency_links.txt
+fclist_cffi.egg-info/not-zip-safe
+fclist_cffi.egg-info/requires.txt
+fclist_cffi.egg-info/top_level.txt

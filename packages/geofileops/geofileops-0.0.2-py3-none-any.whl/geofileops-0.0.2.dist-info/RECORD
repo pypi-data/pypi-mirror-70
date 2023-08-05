@@ -1,0 +1,14 @@
+geofileops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geofileops/geofile.py,sha256=6aBpRyB3aPqvHhU6yW-BCRJb2mgh_MWizNNomrcyGAU,12230
+geofileops/geofileops.py,sha256=wOdY-khcHhgq2K0uZfyaN8vhfu0Ls2mus3sSbWE2QwY,6994
+geofileops/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geofileops/util/dict2xml.py,sha256=D8VKDfcE9EnVgPMdtSRJy_HhKEVOCj9kmZ_PaT9RMB4,1793
+geofileops/util/geofileops_gpd.py,sha256=XR9zUf-qFnyyVy0rdV1YbUal3JWGimuoTflptsbHIsI,38333
+geofileops/util/geofileops_ogr.py,sha256=lCvikhU0jAD0I32LbPX4yBjBMOC8OlG576dvVp3Kgpo,52653
+geofileops/util/io_util.py,sha256=fnVoJfCn8SLYoqKlaH8wB2GE1bUxy8xTTdS_QRjbU6g,2368
+geofileops/util/ogr_util.py,sha256=wY5rWDTIK-ID-siEQhVz4--fXZpcmIGL7COQtg7C_mo,17125
+geofileops/util/ogr_util_direct.py,sha256=rD8o2Ahp9nIXf4QBEZrkwenHnPjQJf2xFWAZVyBxmAo,9324
+geofileops-0.0.2.dist-info/METADATA,sha256=2Ut0CO8afPKQsyn6BdTXv1nOZYNFZyluvSaddD5WaVo,936
+geofileops-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+geofileops-0.0.2.dist-info/top_level.txt,sha256=rCDhyjzis8_Xex3dQg2WPq9SZCleK3DHSpKIrurkSRc,11
+geofileops-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,9 @@
+sangaboard/__init__.py,sha256=2phSoSZcLWDwGEU_IP0KaxdJu3XviLZwCD88d_wKWrw,61
+sangaboard/extensible_serial_instrument.py,sha256=Pc1ZccGy-IGFo_vlFlEbSU1GAAlAfenIP2dkGdKEJbw,22126
+sangaboard/sangaboard.py,sha256=trkJmwqqkcYCBeNgEqkXMXHcUlUwKJLsmYY9uyKV6Mg,15305
+sangaboard-0.2.0.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sangaboard-0.2.0.dist-info/METADATA,sha256=MBzfr9P0gHDVNkEseKgIuJvnAWdr-GjR6JwccMt6O2A,1622
+sangaboard-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sangaboard-0.2.0.dist-info/top_level.txt,sha256=LissxJApoyV4GPuWwjo-eLldgamIQDpvsH3NLMLMPzI,11
+sangaboard-0.2.0.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+sangaboard-0.2.0.dist-info/RECORD,,

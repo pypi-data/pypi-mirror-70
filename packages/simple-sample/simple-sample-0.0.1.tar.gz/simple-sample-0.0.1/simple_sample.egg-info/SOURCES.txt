@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+setup.py
+simple_sample/__init__.py
+simple_sample.egg-info/PKG-INFO
+simple_sample.egg-info/SOURCES.txt
+simple_sample.egg-info/dependency_links.txt
+simple_sample.egg-info/top_level.txt
+tests/__init__.py

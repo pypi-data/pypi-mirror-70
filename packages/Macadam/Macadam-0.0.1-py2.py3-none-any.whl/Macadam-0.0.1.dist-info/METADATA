@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: Macadam
+Version: 0.0.1
+Summary: Joint-NER-and-RE
+Home-page: https://github.com/yongzhuo/Macadam
+Author: yongzhuo
+Author-email: 1903865025@qq.com
+License: MIT
+Requires-Dist: bert4keras (==0.7.0)
+Requires-Dist: keras-xlnet (==0.18.0)
+Requires-Dist: macropodus (==0.0.6)
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: tqdm (==4.31.1)
+
+<p align="center">
+
+

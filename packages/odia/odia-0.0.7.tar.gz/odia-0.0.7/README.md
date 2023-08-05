@@ -1,0 +1,115 @@
+## Odia
+
+Odia is Python library for the Odia language which is an Indo-Aryan language spoken in the Indian state of Odisha. It is the official language in Odisha where native speakers make up 82% of the population, also spoken in parts of West Bengal, Jharkhand, Chhattisgarh, and Andhra Pradesh.
+
+Odia is the sixth Indian language to be designated a Classical Language in India, on the basis of having a long literary history and not having borrowed extensively from other languages.
+
+Odia is an Eastern Indo-Aryan language belonging to the Indo-Aryan language family. It is thought to be directly descended from an Odra Prakrit, which was spoken in east India over 1,500 years ago, and is the primary language used in early Jain texts. Odia appears to have had relatively little influence from Persian and Arabic, compared to other major North Indian languages.
+
+[Odia_language](https://en.wikipedia.org/wiki/Odia_language)
+
+
+The Odia script (Odia: କଳିଙ୍ଗ ଲିପି; also known as the Kalinga script) is a Brahmic script used to write primarily Odia language and less frequently Kui, Santali, Ho and Chhattisgarhi. The script has developed over more than 1000 years. The earliest trace of the script has been dated to 1051 AD. It is a syllabic alphabet or an abugida, wherein all consonants have an inherent vowel embedded within.
+
+[Odia_script](https://en.wikipedia.org/wiki/Odia_script)
+
+
+
+```bash
+Vowels [ସ୍ୱର ବର୍ଣ୍ଣ] 
+ଅ ଆ ଇ ଈ ଉ ଊ ଋ ୠ ଏ ଐ ଓ ଔ 
+
+
+
+Consonants [ବ୍ୟଞ୍ଜନ ବର୍ଣ୍ଣ] 
+କ	ଖ	ଗ	ଘ	ଙ
+
+ଚ	ଛ	ଜ	ଝ	ଞ
+
+ଟ	ଠ	ଡ	ଢ	ଣ
+
+ତ	ଥ	ଦ	ଧ	ନ
+
+ପ	ଫ	ବ	ଭ	ମ
+
+ଯ	ୟ	ର	ଳ	ଲ
+
+ଵ	ଶ	ଷ	ସ	ହ
+
+କ୍ଷ	ଜ୍ଞ
+
+
+
+Numbers
+୦ ୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮ ୯
+
+
+
+```
+
+
+
+### Features
+
+* Print Odia characters
+* Print Odia numbers
+
+
+
+### Installation with pip
+
+```bash
+pip install odia
+```
+
+
+
+
+### How to use
+
+```python
+import odia
+
+
+print(f'version: {odia.__version__}')
+Output:
+version: 0.0.1
+
+
+print(f'vowels: {odia.vowels}')
+Output:
+vowels: ['ଅ', 'ଆ', 'ଇ', 'ଈ', 'ଉ', 'ଊ', 'ଋ', 'ୠ', 'ଏ', 'ଐ', 'ଓ', 'ଔ']
+
+
+print(f'consonants: {odia.consonants}')
+Output:
+consonants: ['କ', 'ଖ', 'ଗ', 'ଘ', 'ଙ', 'ଚ', 'ଛ', 'ଜ', 'ଝ', 'ଞ', 'ଟ', 'ଠ', 'ଡ', 'ଢ', 'ଣ', 'ତ', 'ଥ', 'ଦ', 'ଧ', 'ନ', 'ପ', 'ଫ', 'ବ', 'ଭ', 'ମ', 'ଯ', 'ୟ', 'ର', 'ଳ', 'ଲ', 'ଵ', 'ଶ', 'ଷ', 'ସ', 'ହ', 'କ୍ଷ', 'ଜ୍ଞ']
+
+
+print(f'numbers: {odia.numbers}')
+Output:
+numbers: ['୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯']
+
+```
+
+
+
+### Author
+
+[Biranchi Narayan Nayak](https://www.biranchi.com) (<biranchi125@gmail.com>) [maintainer, developer]
+
+
+ 
+### Contribution
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
+
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+

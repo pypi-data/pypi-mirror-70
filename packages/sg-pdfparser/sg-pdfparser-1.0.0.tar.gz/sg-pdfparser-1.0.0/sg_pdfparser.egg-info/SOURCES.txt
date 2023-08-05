@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+pdfparser/__init__.py
+pdfparser/__main__.py
+pdfparser/custom_error.py
+pdfparser/main_operations.py
+pdfparser/user_choice.py
+pdfparser/user_inputs.py
+pdfparser/utilities.py
+sg_pdfparser.egg-info/PKG-INFO
+sg_pdfparser.egg-info/SOURCES.txt
+sg_pdfparser.egg-info/dependency_links.txt
+sg_pdfparser.egg-info/entry_points.txt
+sg_pdfparser.egg-info/requires.txt
+sg_pdfparser.egg-info/top_level.txt

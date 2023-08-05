@@ -1,0 +1,8 @@
+HISTORY.md
+MANIFEST.in
+README.md
+setup.py
+urlock.egg-info/PKG-INFO
+urlock.egg-info/SOURCES.txt
+urlock.egg-info/dependency_links.txt
+urlock.egg-info/top_level.txt

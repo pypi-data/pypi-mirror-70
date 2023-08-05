@@ -1,0 +1,15 @@
+fast_gui/__init__.py,sha256=4dCrvStS1OgE3Vlcv-qx5-TAo377yOMEToEqCi-PwY4,23
+fast_gui/_nbdev.py,sha256=n5ZlWawVFJg0BQKgEbWyTr1cNS5ixIRkQKC930v2SRY,1603
+fast_gui/augmentation_dashboard.py,sha256=ohFfDHtnaG_9utIxC_g2PpSC6lTSqrRNAAnOBa_i0kU,20061
+fast_gui/code.py,sha256=lsP-KXp9eWgkN1eEEOAU7vMrFKBLbhIE03vHcM0l3T8,7111
+fast_gui/core.py,sha256=DJ0FUxn0T_hgbAv8TF3Ns6I8paZYK8tcU0oPpATJaI4,373
+fast_gui/dashboard_one.py,sha256=9vx9_Tl8hHgbFcPJpZ56YH88rUL5Occa6P5MePUH0rY,3066
+fast_gui/dashboard_two.py,sha256=KTBmGmS1VOw00k7uqWmZJ8r_uSqF9qmcCvWh85I7C-w,4335
+fast_gui/datablock.py,sha256=Di7a_xzKr6Xec934mPw_q7YH-Dwl2L23j4ojdq4Abzo,8428
+fast_gui/display.py,sha256=jzXH4x1OT5oVmLF1P4YBBriGIQnids3HutiaMo6Vdtg,2004
+fast_gui-0.0.4.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+fast_gui-0.0.4.dist-info/METADATA,sha256=HcWGoj-K5sQiI4KZDGbDayuKwV0rQ84k1gVZLWIx5Ns,921
+fast_gui-0.0.4.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+fast_gui-0.0.4.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+fast_gui-0.0.4.dist-info/top_level.txt,sha256=DanmYp9cvOvwdj3wSfxe9epIH9fN3csKo_hDVNd3qOI,9
+fast_gui-0.0.4.dist-info/RECORD,,

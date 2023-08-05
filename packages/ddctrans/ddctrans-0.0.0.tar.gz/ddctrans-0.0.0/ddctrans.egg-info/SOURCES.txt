@@ -1,0 +1,8 @@
+README.md
+setup.py
+ddctrans/__init__.py
+ddctrans.egg-info/PKG-INFO
+ddctrans.egg-info/SOURCES.txt
+ddctrans.egg-info/dependency_links.txt
+ddctrans.egg-info/requires.txt
+ddctrans.egg-info/top_level.txt

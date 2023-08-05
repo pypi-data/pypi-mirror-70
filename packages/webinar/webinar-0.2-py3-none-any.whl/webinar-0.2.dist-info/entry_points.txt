@@ -1,0 +1,3 @@
+[console_scripts]
+webinar = webinar.main:hello
+

@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+ha_philipsjs_rik.egg-info/PKG-INFO
+ha_philipsjs_rik.egg-info/SOURCES.txt
+ha_philipsjs_rik.egg-info/dependency_links.txt
+ha_philipsjs_rik.egg-info/not-zip-safe
+ha_philipsjs_rik.egg-info/requires.txt
+ha_philipsjs_rik.egg-info/top_level.txt
+haphilipsjs/__init__.py
+haphilipsjs/__main__.py

@@ -1,0 +1,15 @@
+comment/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+comment/admin.py,sha256=XKue91YmF_CaOYT2TiJB5zO0l2qES53DOv9dkW5kRE0,123
+comment/apps.py,sha256=85AkXllj6WwRRNOoz6KgRxHVG_e7EfJuadonEQeHJxE,94
+comment/models.py,sha256=pBBkrOaOW4PKPnLn39JkUh2p-KjbqrUkx8bjUoDB1EE,605
+comment/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+comment/urls.py,sha256=Utcf9ljBB7n_SRQkrFhuze4X4SIGzSaVEjaw3qumNj0,148
+comment/views.py,sha256=TRpSSALAWua5aTDs-F-R_sOMW25Sv40jzIq1pVoWUQM,921
+comment/migrations/0001_initial.py,sha256=MjknByRLw34VINAJsfmc5VEvs8b4sv6ILNwPDx-_5Ac,1080
+comment/migrations/0002_auto_20200601_2251.py,sha256=8ttb9iotex9cPdf7UT8aPn7yAuj3H3OcrEqfaFZXa0o,643
+comment/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_blog_comments-0.0.1.dist-info/LICENSE,sha256=UKaOFmPEnA58d02mEad2bQFt9sZ5Yl1zeokBVvqAOJ0,1070
+django_blog_comments-0.0.1.dist-info/METADATA,sha256=XKJpY4bPIQBr9xw-UQPRP-krnETlmws8pdRuQAdynLA,525
+django_blog_comments-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+django_blog_comments-0.0.1.dist-info/top_level.txt,sha256=BR_kZHiYrMJMvV5_QptU2n7FLRFmA3oY9LlwvWnKlR4,8
+django_blog_comments-0.0.1.dist-info/RECORD,,

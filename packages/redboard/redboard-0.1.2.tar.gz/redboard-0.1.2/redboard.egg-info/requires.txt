@@ -1,0 +1,5 @@
+smbus2
+luma.oled
+pigpio
+future-fstrings
+pyyaml

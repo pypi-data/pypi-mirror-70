@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: django-find-apps
+Version: 2020.6.3
+Summary: find django apps
+Home-page: https://github.com/andrewp-as-is/django-find-apps.py
+License: Unlicense
+Description: <!--
+        https://pypi.org/project/readme-generator/
+        https://pypi.org/project/python-readme-generator/
+        -->
+        
+        [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+        
+        #### Installation
+        ```bash
+        $ [sudo] pip install django-find-apps
+        ```
+        
+        #### Examples
+        `settings.py`
+        ```python
+        import django_find_apps
+        
+        INSTALLED_APPS = django_find_apps.find_apps(".")
+        ```
+        
+        ```
+        apps
+        ├── app1
+        |   ├── __init__.py
+        |   └── models.py
+        ├── app2
+        |   ├── __init__.py
+        |   └── templatetags
+        └── app3
+            ├── __init__.py
+            └── management
+        ```
+        
+        #### Links
+        +   [django-configurations](https://github.com/jazzband/django-configurations)
+        +   [django-webpack-loader](https://github.com/owais/django-webpack-loader)
+        
+        <p align="center">
+            <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+        </p>
+Keywords: django,apps
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

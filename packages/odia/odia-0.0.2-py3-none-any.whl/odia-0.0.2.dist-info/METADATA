@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odia
+Version: 0.0.2
+Summary: Odia language
+Home-page: https://github.com/biranchi2018/odia
+Author: Biranchi Narayan Nayak
+Author-email: biranchi125@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Odia is an Indo-Aryan language spoken in the Indian state of Odisha. It is the official language in Odisha where native speakers make up 82% of the population, also spoken in parts of West Bengal, Jharkhand, Chhattisgarh, and Andhra Pradesh.
+
+

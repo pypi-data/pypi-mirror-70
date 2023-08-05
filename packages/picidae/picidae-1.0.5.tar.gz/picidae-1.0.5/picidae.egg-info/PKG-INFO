@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: picidae
+Version: 1.0.5
+Summary: utility/boiler plate reducing library
+Home-page: https://github.com/MATTHEWFRAZER/picidae
+Author: Matthew Frazer
+Author-email: mfrazeriguess@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

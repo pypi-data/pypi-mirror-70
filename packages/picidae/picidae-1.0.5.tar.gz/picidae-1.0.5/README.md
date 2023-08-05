@@ -1,0 +1,1 @@
+Picidae is the family name of woodpeckers (https://en.wikipedia.org/wiki/Woodpecker). Woodpeckers are known for their tapping on trees in search for food. The sound of this tapping drums up utilitarian imagery. It from this imagery that this suite of utility/boiler plate reducing functions receives its name.

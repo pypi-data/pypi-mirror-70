@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+    {% for site_param in site_params %}
+        <div class="box">
+            <div class="level">
+                <div class="level-left">
+                    {{ site_param.key }}
+                </div>
+                <div class="level-right">
+                    <button class="button">Edit...</button>
+                    <form action="" method="post">
+                        <input class="button" type="submit" value="Remove">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    {% endfor %}
+{% endblock %}

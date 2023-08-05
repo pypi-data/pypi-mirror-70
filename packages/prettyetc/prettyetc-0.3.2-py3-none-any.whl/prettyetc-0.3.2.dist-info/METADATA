@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: prettyetc
+Version: 0.3.2
+Summary: Core library of the prettyetc project
+Home-page: https://gitlab.com/prettyetc/prettyetc/
+Author: trollodel
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/prettyetc/prettyetc/issues
+Project-URL: Documentation, https://prettyetc.gitlab.io/prettyetc/0.3.x
+Project-URL: Source, https://gitlab.com/prettyetc/prettyetc/tree/0.3.x
+Keywords: configurations json ini etc qt
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Requires-Python: >=3.4, <4
+Description-Content-Type: text/x-rst
+Provides-Extra: homebase
+Requires-Dist: homebase ; extra == 'homebase'
+Provides-Extra: qt
+Requires-Dist: prettyetc-qt ; extra == 'qt'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: hypothesis ; extra == 'test'
+
+=========
+PrettyEtc
+=========
+
+Browse your configuration files in a visual way with a pretty and universal interface.
+
+Prettyetc shows your configs in a multitabbed window,
+each one being displayed as a foldable tree.
+
+The tree has no ugly brackets,
+quoting or something else which might be language specific.
+For example you can read a JSON and INI file using the same view and structure.
+
+.. It has a settings view, but at the moment is useless.
+
+Even though you can edit,
+it does nothing since the writing feature is not ready.
+
+The official GUI is powered by the Qt framework,
+using the official Python bindings.
+
+============
+Installation
+============
+
+**NOTE**:
+If you have both Python 2 and 3 installed in your system,
+you should use python3 instead of python and
+pip3 instead of pip.
+
+Full installation with the UI: :code:`pip install prettyetc-qt` .
+
+Or from sources:
+
+.. code-block:: bash
+
+    python setup_core.py bdist_wheel
+    python setup_core.py clean --all
+    python setup_qt.py bdist_wheel`
+    python setup_qt.py clean --all
+    pip install --user dist/*.whl.
+
+If you want only the core: :code:`pip install prettyetc`.
+
+Or from sources:
+
+.. code-block:: bash
+
+    python setup_core.py bdist_wheel
+    python setup_core.py clean --all
+    pip install --user dist/*.whl.
+
+------------
+Requirements
+------------
+Python 3.4+
+
+
+Ui
+--
+- PySide2
+- homebase
+
+
+Core
+----
+No requirements for the core, just Python stdlib.
+
+
+Plugins
+-------
+No requirement for plugins at the moment.
+
+-------------------
+Supported languages
+-------------------
+
+  - JSON
+  - INI
+  - A self-defined language called etc, see `below <#an-explanation-of-the-etc-language>`_
+
+-------------
+Core features
+-------------
+
+For a detailed explanation of core features,
+we suggest to go to the official API documentation of prettyetc components.
+
+Documentation: `<https://prettyetc.gitlab.io/prettyetc>`_
+
+The documentation also contains instruction to create your custom plugin
+and how to deploy it.
+
+----------------------------------
+An explanation of the etc language
+----------------------------------
+
+The etc configuration language is a collection of microlanguages,
+all of them are structured similar to INI files (without sections).
+
+The origin of this name is the \*nix /etc folder that contain the system
+or default configuration for lots of programs and also kernel settings.
+
+Except for INI or JSON files, the files in this folder has an undefined and
+a simple syntax;
+made by spaces, the ":" character or the "=" character (somewhere)
+and the "#" character as comment start, that remembers the sh/bash syntax.
+
+Examples of these files are :code:`/etc/resolv.conf /etc/sysctl.conf /etc/modules`.
+
+Our parser aim to handle most of it, representing it using fields
+in a universal view.
+
+

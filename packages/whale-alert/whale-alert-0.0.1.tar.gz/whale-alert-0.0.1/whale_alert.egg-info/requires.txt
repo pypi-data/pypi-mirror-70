@@ -1,0 +1,10 @@
+requests
+colorama
+config-checker
+db-ops
+requests
+pandas
+numpy
+appdirs
+python-dateutil
+urllib3

@@ -1,0 +1,3 @@
+[console_scripts]
+rpn = advanced_rpn_calculator.main:main
+

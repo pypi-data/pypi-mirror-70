@@ -1,0 +1,10 @@
+advanced_rpn_calculator/__init__.py,sha256=JQPFAVM7q__RROntQD7rJPSdT2uKTKTe5pg0y6T37QU,58
+advanced_rpn_calculator/calculator.py,sha256=wt5PhqiiSa2cC7QW-rnn2mlUVyuS9d6Ve93hyU81P-4,23956
+advanced_rpn_calculator/main.py,sha256=fMkbvNQWdoBcj4hz_N05LgJwpz-ojGwpB2QubOL_0OA,717
+advanced_rpn_calculator/rpn.py,sha256=fMkbvNQWdoBcj4hz_N05LgJwpz-ojGwpB2QubOL_0OA,717
+advanced_rpn_calculator-0.1.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+advanced_rpn_calculator-0.1.dist-info/METADATA,sha256=2r_CyFriXLyQWn0_ppqhA8My_du06AqSMFMEjSqpWbc,5867
+advanced_rpn_calculator-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+advanced_rpn_calculator-0.1.dist-info/entry_points.txt,sha256=aroanX8mwE7imL-yrBg6Uz6zY9KOlVYTQuKP9GnRE3E,59
+advanced_rpn_calculator-0.1.dist-info/top_level.txt,sha256=DlAKrRT_-NyolZM1OzKj17HBHTTYntpEo6K3neesGq4,24
+advanced_rpn_calculator-0.1.dist-info/RECORD,,

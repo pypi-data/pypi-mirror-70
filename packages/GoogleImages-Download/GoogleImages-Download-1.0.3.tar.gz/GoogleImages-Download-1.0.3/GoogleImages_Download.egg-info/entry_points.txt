@@ -1,0 +1,3 @@
+[console_scripts]
+GoogleImages-Download = GoogleImages_Download.GoogleImagesDownload:main
+

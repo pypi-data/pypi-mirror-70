@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyscholar.egg-info/PKG-INFO
+pyscholar.egg-info/SOURCES.txt
+pyscholar.egg-info/dependency_links.txt
+pyscholar.egg-info/requires.txt
+pyscholar.egg-info/top_level.txt

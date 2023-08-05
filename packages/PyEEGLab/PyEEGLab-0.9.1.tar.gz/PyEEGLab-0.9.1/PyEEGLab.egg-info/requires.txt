@@ -1,0 +1,9 @@
+mne==0.20
+networkx>=2.2
+nltk
+numpy
+scipy
+pandas
+sqlalchemy>=1.2
+wfdb
+yasa>=0.1.6

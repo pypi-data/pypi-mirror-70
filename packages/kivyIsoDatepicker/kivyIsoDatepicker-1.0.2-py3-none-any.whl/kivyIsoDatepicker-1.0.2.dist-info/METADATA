@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: kivyIsoDatepicker
+Version: 1.0.2
+Summary: Python 3.3+ version of Oleg Kozlov KivyCalandar in ISO 8601 date format
+Home-page: https://github.com/ricardovogel/datepicker
+Author: Ricardo Vogel
+Author-email: info@ricardovogel.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
+
+# datepicker
+DatePicker for Kivy - Python 3.3+
+
+Adaptation of [Skucul/datepicker](https://github.com/Skucul/datepicker) to use the ISO 8601 date format, which is an adaptation of [KivyCalendar](https://bitbucket.org/xxblx/kivycalendar) to work on Python 3.3+. 
+Credits to  [Oleg Kozlov (xxblx)](https://xxblx.bitbucket.org)
+
+

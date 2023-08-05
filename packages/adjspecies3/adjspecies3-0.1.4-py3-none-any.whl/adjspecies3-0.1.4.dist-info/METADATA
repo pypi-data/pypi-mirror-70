@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: adjspecies3
+Version: 0.1.4
+Summary: 
+
+Print the name of a random adjective/species, more or less…
+
+Home-page: http://github.com/tavallaie/adjspecies/
+Author: Ali Tavallaie
+Author-email: a.tavallaie@gmail.com
+License: BSD 2-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities

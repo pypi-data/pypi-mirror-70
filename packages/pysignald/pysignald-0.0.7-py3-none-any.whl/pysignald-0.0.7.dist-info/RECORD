@@ -1,0 +1,7 @@
+signald/__init__.py,sha256=zJ0oPbh63a2osKlsLsgigZhZ4mnNJRArjgar8nfEOn8,63
+signald/main.py,sha256=zOKXujgAmNjnULyUi4_hkXaKRBzmUF8qNTCxJWXp0yQ,7291
+signald/types.py,sha256=ASOFni8kmsA-99EI2gTAnJnzFBI1vTe5XUmDIXyjcAM,683
+pysignald-0.0.7.dist-info/LICENSE,sha256=q-p25pjY8Xwwhapm8NxTnXK93d8tv4Veqx42TEwZSA4,1060
+pysignald-0.0.7.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pysignald-0.0.7.dist-info/METADATA,sha256=2vCehYQj-7yryvkz6KtIsaF62WEJSmetu8Udonzu78w,3419
+pysignald-0.0.7.dist-info/RECORD,,

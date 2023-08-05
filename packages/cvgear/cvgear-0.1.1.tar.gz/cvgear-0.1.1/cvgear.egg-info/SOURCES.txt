@@ -1,0 +1,16 @@
+README.md
+setup.py
+cvgear/__init__.py
+cvgear.egg-info/PKG-INFO
+cvgear.egg-info/SOURCES.txt
+cvgear.egg-info/dependency_links.txt
+cvgear.egg-info/requires.txt
+cvgear.egg-info/top_level.txt
+cvgear/framework/__init__.py
+cvgear/framework/nested_dict.py
+cvgear/framework/darknet/__init__.py
+cvgear/framework/darknet/loader.py
+cvgear/framework/darknet/parser.py
+cvgear/framework/torch/__init__.py
+cvgear/framework/torch/loader.py
+cvgear/framework/torch/loader_advanced.py

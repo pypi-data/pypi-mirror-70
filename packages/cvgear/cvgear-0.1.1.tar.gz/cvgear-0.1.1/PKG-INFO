@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: cvgear
+Version: 0.1.1
+Summary: Computer Vision Gears
+Home-page: https://github.com/ivanpp/cvgear
+Author: ivan Ding
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

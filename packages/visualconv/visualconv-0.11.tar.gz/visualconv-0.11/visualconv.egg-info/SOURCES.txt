@@ -1,0 +1,11 @@
+README.md
+setup.py
+visualconv/__init__.py
+visualconv/getlayers.py
+visualconv/layermap.py
+visualconv.egg-info/PKG-INFO
+visualconv.egg-info/SOURCES.txt
+visualconv.egg-info/dependency_links.txt
+visualconv.egg-info/not-zip-safe
+visualconv.egg-info/requires.txt
+visualconv.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: visualconv
+Version: 0.11
+Summary: Visualise different output layers of your Keras model, for a given image.
+Home-page: https://github.com/BharathA14/Visualconv/
+Author: Bharath A
+Author-email: bbharath201@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

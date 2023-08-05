@@ -1,0 +1,8 @@
+README.md
+setup.py
+flyvar/__init__.py
+flyvar.egg-info/PKG-INFO
+flyvar.egg-info/SOURCES.txt
+flyvar.egg-info/dependency_links.txt
+flyvar.egg-info/requires.txt
+flyvar.egg-info/top_level.txt

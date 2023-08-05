@@ -1,0 +1,16 @@
+simplerr/__init__.py,sha256=zw2MaCINb9kXcHgZ1lb5z-PRG-6GqXQ7OZmRiGIs37k,179
+simplerr/__main__.py,sha256=gk3W6XQEaCaDQeYZpq9vXoVt1SxIubKTUABK_4s5W-c,2118
+simplerr/cors.py,sha256=0FZ5mxo1IWQjL5iYQxdD3N6g9Oy9c1hDIIxrHBCH7dQ,1362
+simplerr/dispatcher.py,sha256=IJYY_RLBGDTFxxYmHs2bRfbbbrG_H5Fu5dVd05KsCFs,6203
+simplerr/errors.py,sha256=gSIkHqzihLW2oLKgpw6zIEeKYY7SaNsS11Ff_mlz14U,249
+simplerr/methods.py,sha256=6rvATgNPWUQh2ZQ5zqjjopQli3CDMoKnuz9CXwCVAaM,264
+simplerr/script.py,sha256=0ZSS9isF1mytNLqwCxa6AnNcPgLJug1kd0He3miXJYc,3986
+simplerr/serialise.py,sha256=yoIbjIBi8r78XIVk_nzjLe8FRYdTt14d_gsT3aDVM3g,1039
+simplerr/session.py,sha256=TIdvhDwSyIttcPRXVUgupQhe7NBfaV18Kr1o6jE2Joo,5125
+simplerr/template.py,sha256=XWiSF9m8vjeQVJsQRG4FnCohM_z2sizyHaiaHYyroIo,360
+simplerr/web.py,sha256=ORgEaDxmh_c_gQiEjrcLnxJk5xxicTzub9wAAZAHaok,12127
+simplerr-0.16.1.dist-info/METADATA,sha256=qvV7_RTYrhX29nj79tEQadTfAsCE2vchVJF_T2RCUm8,1376
+simplerr-0.16.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+simplerr-0.16.1.dist-info/entry_points.txt,sha256=lGFnP1K-1zThy4uMQvLziQb7hlpYdBGMVVe60xqbq9Y,52
+simplerr-0.16.1.dist-info/top_level.txt,sha256=V0kw24Xa54WR0ADnEkt5ABRMdmr7GDiJ-2mHm5SM4p8,9
+simplerr-0.16.1.dist-info/RECORD,,

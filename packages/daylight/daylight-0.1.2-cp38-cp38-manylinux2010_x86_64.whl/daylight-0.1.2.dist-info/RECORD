@@ -1,0 +1,10 @@
+daylight.cpython-38-x86_64-linux-gnu.so,sha256=T7kWCQMN9niS9ZRVFasZsBrpZz2uCaYlvjEzPO_pJsw,122264
+libdaylight-0.1.2.so,sha256=77ucPbGSNElqM6xxSTlAeseUE0pd9O3JU1yphrrBAIM,116928
+daylight-0.1.2.dist-info/WHEEL,sha256=lcFHRL9nxOeSwmwIxlbY5bPkh5a_GtD4XbV-xJYB-ZU,111
+daylight-0.1.2.dist-info/METADATA,sha256=KahfMfFP3r6MBovd8JmYZHGNPNoEnh3mw23QAYXll_U,8006
+daylight-0.1.2.dist-info/LICENSE.txt,sha256=g6cpflIAs74gWq0K7STFRp1m2vY6FRKq_yCdwZfd6ng,1076
+daylight-0.1.2.dist-info/top_level.txt,sha256=cgFKkZAM-W95BxtTVmgDqeb0wyeoI9dPqeE-hE0ORGg,15
+daylight-0.1.2.dist-info/RECORD,,
+tools/print_version.py,sha256=UwL9PJgcjyM4XIEkdY8Mr1KuEY3McTep3uLm1A8E7Gw,62
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/write_version_info.py,sha256=SfiESDt9A2HO0vNdnVtyv3oDZgjuAHFszeo0nCTmhbw,1272

@@ -1,0 +1,13 @@
+tencentApi/__init__.py,sha256=4pvMW5939W4Qokl3LRqq7b0X0CzEBDl7N_bjjm2qFts,176
+tencentApi/api.py,sha256=Zfp3Xqe9BeFVnsn01bJ3MuCgs0A90C9_DvrdpASajDM,4640
+tencentApi/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentApi/cli/app.py,sha256=BdVSQ05yqR5BC5MHNu2DAuiJ2RquTutkbvses_dPTos,2216
+tencentApi/cns/__init__.py,sha256=YdHbFo2GxgZlc3GWUr-OhZUnrTdtMU3KBCcWi30uJ0s,215
+tencentApi/cns/cns.py,sha256=_pZFqvMY4UpfVpgW63hgzS8p7wmIWunka2oqKG3yxm0,10448
+tencentApi/cns/ddns.py,sha256=u1C8cfbclS8KY0lZjWTx5LOpxLKELpXJ_PEGgirxcn8,8820
+tencentApi-0.1.0.dist-info/LICENSE,sha256=Aq2Ofh9KwXfz27ZNaTgakYwI9r-4nXPmBMbF_pIAOno,1069
+tencentApi-0.1.0.dist-info/METADATA,sha256=e_zmngLmn7PFoQATwwZwLbIPcHCmu8RFQh86t9EXHcA,1553
+tencentApi-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tencentApi-0.1.0.dist-info/entry_points.txt,sha256=11mkrjjtvmqhB5sJDJ4mDWCwh8rQ6fCKOKkjPkXUGWo,49
+tencentApi-0.1.0.dist-info/top_level.txt,sha256=wxvfgDi0iy-6E1aIghJqN1MwFMld1U_KKs-atG9qxWY,11
+tencentApi-0.1.0.dist-info/RECORD,,

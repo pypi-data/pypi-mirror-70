@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-07 15:22+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\_partials\footer.html:3
+msgid "Join us on"
+msgstr ""
+
+#: .\templates\_partials\tags_selector.html:8
+msgid "Add new tag and press [enter]"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:6
+msgid "my post alerts"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:13
+msgid "my admonitions"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:19
+msgid "my messages"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:25
+msgid "my profile"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:30
+msgid "my preferences"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:35
+msgid "control center"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:43
+msgid "correction"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:50
+msgid "moderation"
+msgstr ""
+
+#: .\templates\_partials\top_bar.html:57
+msgid "administration"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:5 .\templates\db\member_list.html:4
+#: .\templates\db\member_list.html:8
+msgid "Members"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:9
+msgid "FAQ"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:13 .\templates\web\gcu.html:4
+#: .\templates\web\gcu.html:9
+msgid "GCU"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:25 .\templates\web\about_us.html:4
+#: .\templates\web\about_us.html:9
+msgid "About us"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:29 .\templates\web\contact.html:4
+#: .\templates\web\contact.html:14
+msgid "Contact"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:34 .\templates\web\login.html:4
+#: .\templates\web\login.html:14
+msgid "Login"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:43 .\templates\web\register.html:4
+#: .\templates\web\register.html:14
+msgid "Register"
+msgstr ""
+
+#: .\templates\_partials\top_menu.html:52
+msgid "Activate your account"
+msgstr ""
+
+#: .\templates\db\admonition_admin-list.html:17
+#: .\templates\db\admonition_mod-list.html:17
+#: .\templates\db\book_admin-list.html:17
+#: .\templates\db\correctionrequest_cor-list.html:17
+#: .\templates\db\faq_admin-list.html:26
+#: .\templates\db\license_admin-list.html:21
+#: .\templates\db\license_mod-list.html:22
+#: .\templates\db\member_admin-list.html:22
+#: .\templates\db\siteparam_admin-list.html:21
+#: .\templates\db\tag_admin-list.html:26
+msgid "Update"
+msgstr ""
+
+#: .\templates\db\admonition_admin-list.html:22
+#: .\templates\db\admonition_mod-list.html:22
+#: .\templates\db\book_admin-list.html:22
+#: .\templates\db\commentalert_admin-list.html:17
+#: .\templates\db\contest_admin-list.html:17
+#: .\templates\db\correctionrequest_cor-list.html:22
+#: .\templates\db\faq_admin-list.html:21
+#: .\templates\db\license_admin-list.html:26
+#: .\templates\db\license_mod-list.html:27
+#: .\templates\db\postalert_admin-list.html:17
+#: .\templates\db\siteparam_admin-list.html:26
+#: .\templates\db\tag_admin-list.html:21
+msgid "Delete"
+msgstr ""
+
+#: .\templates\db\faq_admin-list.html:9
+msgid "New faq"
+msgstr ""
+
+#: .\templates\db\faq_list.html:4 .\templates\db\faq_list.html:11
+msgid "Faq"
+msgstr ""
+
+#: .\templates\db\license_admin-detail.html:4
+msgid "License details"
+msgstr ""
+
+#: .\templates\db\license_admin-detail.html:9
+msgid "Name"
+msgstr ""
+
+#: .\templates\db\license_admin-list.html:9
+#: .\templates\db\license_mod-list.html:9
+msgid "New license"
+msgstr ""
+
+#: .\templates\db\member_admin-list.html:20 .\templates\db\member_list.html:19
+msgid "Send a message"
+msgstr ""
+
+#: .\templates\db\member_admin-list.html:24
+msgid "Remove"
+msgstr ""
+
+#: .\templates\db\member_detail.html:4
+msgid "Member"
+msgstr ""
+
+#: .\templates\db\post_create.html:4 .\templates\web\muses_post_create.html:4
+msgid "New post"
+msgstr ""
+
+#: .\templates\db\tag_admin-list.html:9
+#: .\templates\web\muses_admin_tag_create.html:4
+msgid "New tag"
+msgstr ""
+
+#: .\templates\web\activate_account.html:4
+#: .\templates\web\activate_account.html:11
+msgid "Account Activation"
+msgstr ""
+
+#: .\templates\web\admin.html:11 .\templates\web\mod.html:11
+msgid "Admonition management"
+msgstr ""
+
+#: .\templates\web\admin.html:12 .\templates\web\mod.html:12
+msgid "allow to manage admonitions"
+msgstr ""
+
+#: .\templates\web\admin.html:18
+msgid "Members management"
+msgstr ""
+
+#: .\templates\web\admin.html:19
+msgid "allow to manage members"
+msgstr ""
+
+#: .\templates\web\admin.html:25
+msgid "Books management"
+msgstr ""
+
+#: .\templates\web\admin.html:26
+msgid "allow to manage books"
+msgstr ""
+
+#: .\templates\web\admin.html:32 .\templates\web\mod.html:18
+msgid "Post Alerts management"
+msgstr ""
+
+#: .\templates\web\admin.html:33 .\templates\web\mod.html:19
+msgid "allow to manage post alerts"
+msgstr ""
+
+#: .\templates\web\admin.html:39 .\templates\web\mod.html:25
+msgid "Comment Alerts management"
+msgstr ""
+
+#: .\templates\web\admin.html:40 .\templates\web\mod.html:26
+msgid "allow to manage Comment alerts"
+msgstr ""
+
+#: .\templates\web\admin.html:46 .\templates\web\mod.html:32
+msgid "Tags management"
+msgstr ""
+
+#: .\templates\web\admin.html:47 .\templates\web\mod.html:33
+msgid "allow to manage tags"
+msgstr ""
+
+#: .\templates\web\admin.html:53
+msgid "Faq management"
+msgstr ""
+
+#: .\templates\web\admin.html:54
+msgid "allow to manage faqs"
+msgstr ""
+
+#: .\templates\web\admin.html:61 .\templates\web\cor.html:11
+#: .\templates\web\mod.html:39
+msgid "Correction requests management"
+msgstr ""
+
+#: .\templates\web\admin.html:62 .\templates\web\cor.html:12
+#: .\templates\web\mod.html:40
+msgid "allow to manage correction requests"
+msgstr ""
+
+#: .\templates\web\admin.html:68 .\templates\web\mod.html:46
+msgid "Contests management"
+msgstr ""
+
+#: .\templates\web\admin.html:69 .\templates\web\mod.html:47
+msgid "allow to manage contests"
+msgstr ""
+
+#: .\templates\web\admin.html:75 .\templates\web\mod.html:53
+msgid "Licenses management"
+msgstr ""
+
+#: .\templates\web\admin.html:76 .\templates\web\mod.html:54
+msgid "allow to manage licenses"
+msgstr ""
+
+#: .\templates\web\admin.html:82
+msgid "Site parameters management"
+msgstr ""
+
+#: .\templates\web\admin.html:83
+msgid "allow to manage site parameters"
+msgstr ""
+
+#: .\templates\web\contact.html:20
+msgid "Send"
+msgstr ""
+
+#: .\templates\web\contact.html:21
+#: .\templates\web\muses_personal_control_center.html:21
+#: .\templates\web\muses_personal_control_center.html:34
+#: .\templates\web\muses_personal_control_center.html:47
+#: .\templates\web\muses_personal_preferences.html:20
+#: .\templates\web\muses_personal_profile.html:18
+msgid "Reset"
+msgstr ""
+
+#: .\templates\web\home.html:4
+msgid "Home"
+msgstr ""
+
+#: .\templates\web\login.html:21 .\templates\web\register.html:21
+msgid "Submit"
+msgstr ""
+
+#: .\templates\web\login.html:22 .\templates\web\register.html:22
+msgid "Cancel"
+msgstr ""
+
+#: .\templates\web\logout.html:4 .\templates\web\logout.html:11
+msgid "Logout"
+msgstr ""
+
+#: .\templates\web\logout.html:19
+msgid "Could you confirm you want to logout?"
+msgstr ""
+
+#: .\templates\web\logout.html:23
+msgid "Yes"
+msgstr ""
+
+#: .\templates\web\logout.html:24
+msgid "No"
+msgstr ""
+
+#: .\templates\web\muses_personal_control_center.html:4
+#: .\templates\web\muses_personal_control_center.html:11
+msgid "Control Center"
+msgstr ""
+
+#: .\templates\web\muses_personal_control_center.html:14
+msgid "Change your password"
+msgstr ""
+
+#: .\templates\web\muses_personal_control_center.html:20
+#: .\templates\web\muses_personal_control_center.html:33
+#: .\templates\web\muses_personal_control_center.html:46
+#: .\templates\web\muses_personal_preferences.html:19
+#: .\templates\web\muses_personal_profile.html:17
+msgid "Save"
+msgstr ""
+
+#: .\templates\web\muses_personal_control_center.html:27
+msgid "Change your email"
+msgstr ""
+
+#: .\templates\web\muses_personal_control_center.html:40
+msgid "Activate two-factor authentication"
+msgstr ""
+
+#: .\templates\web\muses_personal_list_messages.html:4
+msgid "My messages"
+msgstr ""
+
+#: .\templates\web\muses_personal_list_messages.html:12
+msgid "New message"
+msgstr ""
+
+#: .\templates\web\muses_personal_preferences.html:4
+#: .\templates\web\muses_personal_preferences.html:10
+msgid "Preferences"
+msgstr ""
+
+#: .\templates\web\muses_personal_preferences.html:13
+msgid "Notifications"
+msgstr ""
+
+#: .\templates\web\muses_personal_profile.html:4
+#: .\templates\web\muses_personal_profile.html:10
+msgid "Profile"
+msgstr ""
+
+#: .\templates\web\muses_personal_profile.html:11
+msgid "General information"
+msgstr ""

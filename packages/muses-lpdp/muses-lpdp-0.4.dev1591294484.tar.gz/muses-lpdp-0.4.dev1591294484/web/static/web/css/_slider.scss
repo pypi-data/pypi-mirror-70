@@ -1,0 +1,48 @@
+@import "variables";
+
+.muses-slider-box {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > em {
+      font-size: 5em;
+    }
+
+  }
+
+  > div.slider {
+    flex: 1 1 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 20em;
+    background-color: lighten($background, 10%);
+    border-radius: 1em;
+
+    > div.slide {
+      background-image: url('https://via.placeholder.com/1242x320 ');
+      width: 98%;
+      height: 19em;
+      border-radius: 1em;
+      display: none;
+
+      > .caption {
+        color: black;
+      }
+    }
+
+    > div:first-of-type.slide {
+      display: block;
+    }
+  }
+}

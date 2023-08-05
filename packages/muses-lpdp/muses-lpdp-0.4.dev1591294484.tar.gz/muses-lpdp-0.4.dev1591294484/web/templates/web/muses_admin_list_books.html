@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-books-list">
+        {% include "_partials/pagination.html" %}
+        {% for book in object_list %}
+            <div class="muses-book-item">{{ book.title }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

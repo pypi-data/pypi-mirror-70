@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+tox.ini
+nommy/__init__.py
+nommy/data.py
+nommy/enum.py
+nommy/exceptions.py
+nommy/parser.py
+nommy.egg-info/PKG-INFO
+nommy.egg-info/SOURCES.txt
+nommy.egg-info/dependency_links.txt
+nommy.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+[console_scripts]
+git-apply-profile = git_profile_manager.commands.apply_profile:cmd
+git-create-profile = git_profile_manager.commands.create_profile:cmd
+git-current-profile = git_profile_manager.commands.current_profile:cmd
+git-global-config = git_profile_manager.commands.global_config:cmd
+git-list-profiles = git_profile_manager.commands.list_profiles:cmd
+git-remove-profile = git_profile_manager.commands.remove_profile:cmd
+git-use-profile = git_profile_manager.commands.use_profile:cmd
+

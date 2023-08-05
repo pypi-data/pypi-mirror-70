@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: zealous
+Version: 0.2.3
+Summary: Zealous Framework
+Home-page: https://gitlab.com/python-zealous/zealous
+License: MIT
+Author: Jonathan Gravel
+Author-email: jo@stashed.dev
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pydantic (>=1.4,<2.0)
+Project-URL: Documentation, https://python-zealous.gitlab.io/zealous/
+Project-URL: Repository, https://gitlab.com/python-zealous/zealous
+Description-Content-Type: text/markdown
+
+# Zealous Framework
+
+[![pipeline status](https://gitlab.com/unstashed/zealous/badges/master/pipeline.svg)](https://gitlab.com/unstashed/zealous/-/commits/master)
+[![coverage report](https://gitlab.com/unstashed/zealous/badges/master/coverage.svg)](https://gitlab.com/unstashed/zealous/-/commits/master)
+
+---
+
+**Documentation:** <https://python-zealous.gitlab.io/zealous/>
+**Source Code:** <https://gitlab.com/python-zealous/zealous>
+
+---
+
+Zealous is a framework that aims to simplify specification-driven development.
+
+It is built from the ground up with emphasis on static type checking to ensure that the
+specification is respected while developing around it.
+
+The framework's core elements run in an asyncio event loop so concurrency is supported
+out of the box.
+

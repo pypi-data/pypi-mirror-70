@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rpa_ocr
+Version: 0.0.5
+Summary: A Tools for use algorithm for verification recognition
+Home-page: https://code.ii-ai.tech/zhutaonan/rpa_verification.git
+Author: adolf
+Author-email: adolf1321794021@gmail.com
+License: UNKNOWN
+Description: # rpa_verification
+        
+        验证码识别项目服务于RPA组件
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

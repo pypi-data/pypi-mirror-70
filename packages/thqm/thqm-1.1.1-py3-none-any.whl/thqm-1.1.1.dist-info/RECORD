@@ -1,0 +1,14 @@
+thqm/__cli__.py,sha256=E1dYtaCXoXFogY6hKuLNFXGwnXsf9jpqrq_Mm-_SuRs,2157
+thqm/__init__.py,sha256=rYbhHTmIUmjsYCU-YvS91Zxic65rVVR-rtb7OgOLqbg,72
+thqm/server.py,sha256=Hu_icMdQFXc8nZPF7bYZ26IiRrMFqz4qmajQOE8mU_w,7577
+thqm/settings.py,sha256=Ma7k1FzA13W-pa0Qy7zKFXAkSj7czNsdY2DWQWV1JyI,265
+thqm/static/favicon.png,sha256=D1T9Q6Y81h8ZnYLJJN95ysm4Uen3uy6cxUZMkpd1_2o,302
+thqm/static/index.css,sha256=9zWNIsI8ExSeETafBS5UCTs1eAWEZTULVA9995eQf-4,261
+thqm/static/qr_code.svg,sha256=Clvrts0GuYwAoAX09kAkFyE678CKBxFSCpZ9wHJVF_M,1984
+thqm/templates/index.html,sha256=wgFH3gTZBan6XRn65DZRZG-wW6tRUMFi3R31REsBUl4,2912
+thqm/utils.py,sha256=ePqD6gUvwQb67jA4D7CO3GBOu8bZ7VCS1m8RPuhGqKI,1231
+thqm-1.1.1.dist-info/entry_points.txt,sha256=2N518tN0L1KyLZaqbjpyCvHQAsI1ELy1yJEp5-PuPok,42
+thqm-1.1.1.dist-info/LICENSE,sha256=LzVEpSY4H-dpeWs66a-4Ksa1NyZ7plEMcGYvkTJVyP4,1068
+thqm-1.1.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+thqm-1.1.1.dist-info/METADATA,sha256=NoK-KrH-0nLXNCkosJ981x8q-meCcHQP9PEX_wOsp0I,4366
+thqm-1.1.1.dist-info/RECORD,,

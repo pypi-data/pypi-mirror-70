@@ -1,0 +1,10 @@
+ilabs/brs/__init__.py,sha256=wQI6cszb8sy2eHNopMsxQpULKmfJkpMrtP-LyLa42N8,388
+ilabs/brs/brs.py,sha256=kXxw8zgyUy5fCE96XG9txzkYju7fZWp2xXTz-GcbPj4,3563
+ilabs/brs/evaluation.py,sha256=6ui9zLdgsfwhcWja4hAPFShiYTzw2nl6z30T9ZEBvVY,5224
+ilabs/brs/util.py,sha256=oqfdumMPIxhW36z10nnjjnEUhPOy1aa53nxhBCW8qak,300
+ilabs/brs/resources/BRS_XMLSchema_180417.xsd,sha256=zZxK7bTnYcCW6b8GmAEEQSJXSqRzMA05Tc0-y8XdlFQ,1481
+ilabs.brs-1.0.1.dist-info/LICENSE,sha256=vVFV4B5uvBSfhCSFqy-mQMDTi01IqXJLk8Ya50nghsU,1089
+ilabs.brs-1.0.1.dist-info/METADATA,sha256=dfqi5S6Yz1bOwHWz_mXsCZJiGh_GrZHSU_D2VkojnJU,1280
+ilabs.brs-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ilabs.brs-1.0.1.dist-info/top_level.txt,sha256=ANUT4VIcoiAdC7s28anBxMabo9qtL4LfUxjyYJk4KHQ,6
+ilabs.brs-1.0.1.dist-info/RECORD,,

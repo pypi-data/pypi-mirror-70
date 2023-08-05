@@ -1,0 +1,3 @@
+[console_scripts]
+oidv6 = oidv6.samples.run:main
+

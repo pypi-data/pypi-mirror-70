@@ -1,0 +1,9 @@
+README.md
+setup.py
+sudo/__init__.py
+sudo/sudo.py
+sudo.egg-info/PKG-INFO
+sudo.egg-info/SOURCES.txt
+sudo.egg-info/dependency_links.txt
+sudo.egg-info/top_level.txt
+sudo.egg-info/zip-safe

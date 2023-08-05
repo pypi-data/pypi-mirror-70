@@ -1,0 +1,11 @@
+fecho/__init__.py,sha256=7PRdCWl5Hjf1SkQHihLu5bg0K3MlnAy-MzpHVSsWr1c,67
+fecho/cli.py,sha256=l-LUzzvPSex5tEFV1M1_yOKQhVFxtQAqerE-ZcQH_UM,494
+fecho/client.py,sha256=vVDikqK1oBazs1GaqOp1WMLPDyGLl0WyZWl_bHh7fjU,2657
+fecho/exceptions.py,sha256=X7HDnSopSn_CBICH6gInMUToThb1VtH8EpdQfoxon0E,184
+fecho/utils.py,sha256=_kakKfZO9SQkC4QoydEzN8Ja4IAwhgIqlvu98K0nS0U,396
+fecho-1.0.5.dist-info/LICENSE,sha256=jJ9gU0YwIIpEmRsk-upaOflYEOpTbzX_sdEsvbCMslY,1070
+fecho-1.0.5.dist-info/METADATA,sha256=gtdfd1G5sQNyvJpGdJ1TmvL2SIXcXzzP_7wtMiWdMus,2489
+fecho-1.0.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+fecho-1.0.5.dist-info/entry_points.txt,sha256=5qr6w0IsMmaxRz_-e7Mzh8ZgbrnZXBDS7EjUUqwClgg,42
+fecho-1.0.5.dist-info/top_level.txt,sha256=e6sET093OTZcKqhvcpkSb8rcyP5WITblsNhBHdF0q6Y,6
+fecho-1.0.5.dist-info/RECORD,,

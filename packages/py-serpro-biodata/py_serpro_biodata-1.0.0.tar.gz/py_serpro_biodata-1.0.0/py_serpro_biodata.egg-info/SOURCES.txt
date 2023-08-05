@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+py_serpro_biodata/__init__.py
+py_serpro_biodata.egg-info/PKG-INFO
+py_serpro_biodata.egg-info/SOURCES.txt
+py_serpro_biodata.egg-info/dependency_links.txt
+py_serpro_biodata.egg-info/not-zip-safe
+py_serpro_biodata.egg-info/requires.txt
+py_serpro_biodata.egg-info/top_level.txt
+py_serpro_biodata/serpro/__init__.py
+py_serpro_biodata/serpro/biovalid.py
+py_serpro_biodata/serpro/constants.py
+py_serpro_biodata/tests/__init__.py
+py_serpro_biodata/tests/biovalid/__init__.py
+py_serpro_biodata/tests/biovalid/test_biovalid.py

@@ -1,0 +1,10 @@
+README.md
+setup.py
+rpoems/__init__.py
+rpoems/main.py
+rpoems/redditpg.py
+rpoems.egg-info/PKG-INFO
+rpoems.egg-info/SOURCES.txt
+rpoems.egg-info/dependency_links.txt
+rpoems.egg-info/requires.txt
+rpoems.egg-info/top_level.txt

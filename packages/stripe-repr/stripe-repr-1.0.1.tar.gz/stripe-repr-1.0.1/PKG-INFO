@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: stripe-repr
+Version: 1.0.1
+Summary: A monkey-patch library to provide more compact representation for Stripe objects
+Home-page: https://github.com/Doist/stripe-repr
+License: MIT
+Author: Doist Developers
+Author-email: dev@doist.com
+Requires-Python: >=3.6.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: stripe (>=2.48.0,<3.0.0)
+Project-URL: Repository, https://github.com/Doist/stripe-repr
+Description-Content-Type: text/markdown
+
+# Stripe Repr
+
+A monkey-patch library to provide more compact representation for Stripe objects
+
+## Getting Started
+
+Use it as this:
+
+```python
+import stripe_repr
+
+stripe_repr.patch()
+```
+

@@ -1,0 +1,11 @@
+sandwichR/__init__.py,sha256=Sbs8pk53gOj7hDYt11rb9N-lmKEroyIqYuPWYNEXaPI,26
+sandwichR/sandwich_avoid.py,sha256=n8w_kGt3MsGWvhxMTf8gkHNZUrQCKFuhv5o6r929GE0,3206
+sandwichR/sandwich_baseboard.py,sha256=WBPMkYyt6aAQbZDgC5zuMq-76DdZEgGiprQydwK57-4,28609
+sandwichR/sandwich_camera.py,sha256=VWUztCIR2ARB9upHdAQrEM73p8DiWOCMHPCRzCa1KHM,17303
+sandwichR/sandwich_config.py,sha256=zAfu8K8nOStoPE5jM_VAKega-6GIfKJZx8MOh5wTbz0,3228
+sandwichR/sandwich_linetrace.py,sha256=3tCIHOz02D6AAKkJ7LXBAAXUmYMsuyY01DHtevZkCjU,3540
+sandwichR/pins/pins.config,sha256=VosN0NLfcV_O44aTg0AMNAwCyMbJp3pufOuOoBvKunY,1157
+sandwichR-0.0.13.dist-info/METADATA,sha256=0Og0pOS-uRNlyUXpy7ljn1K0eVXuCEd3L0IXODS3kGA,657
+sandwichR-0.0.13.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sandwichR-0.0.13.dist-info/top_level.txt,sha256=3MPi4KTLqUKggFDJc-MQyVgq89k4LkA_Jsd73N51qr0,10
+sandwichR-0.0.13.dist-info/RECORD,,

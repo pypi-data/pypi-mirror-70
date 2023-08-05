@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+collocater/__init__.py
+collocater/collocater.py
+collocater/generateObject.py
+collocater.egg-info/PKG-INFO
+collocater.egg-info/SOURCES.txt
+collocater.egg-info/dependency_links.txt
+collocater.egg-info/requires.txt
+collocater.egg-info/top_level.txt
+collocater/data/collocater_obj.joblib
+collocater/data/collocations_dict.joblib
+collocater/data/irr_verbs_dict.joblib
+collocater/data/prepositions.joblib
+test/test.py

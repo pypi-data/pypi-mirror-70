@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+modcell/__init__.py
+modcell/modcell.py
+modcell.egg-info/PKG-INFO
+modcell.egg-info/SOURCES.txt
+modcell.egg-info/dependency_links.txt
+modcell.egg-info/entry_points.txt
+modcell.egg-info/requires.txt
+modcell.egg-info/top_level.txt

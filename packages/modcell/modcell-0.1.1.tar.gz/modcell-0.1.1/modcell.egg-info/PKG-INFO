@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: modcell
+Version: 0.1.1
+Summary: Jupyter notebook cell as module
+Home-page: https://github.com/wsuzume/modcell
+Author: wsuzume
+Author-email: wspyy9584@gmail.com
+Maintainer: wsuzume
+Maintainer-email: wspyy9584@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License

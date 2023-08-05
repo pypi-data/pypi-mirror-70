@@ -1,0 +1,11 @@
+tornado
+traitlets
+jupyterhub>=1.0.0
+alembic
+pluggy
+dockerspawner>=0.11.0
+docker
+jhsingle-native-proxy>=0.1.3
+plotlydash-tornado-cmd
+voila
+voila-materialstream

@@ -1,0 +1,11 @@
+biodblinker/__init__.py,sha256=txotxbmhKgRwCgVUU1YVxElB3_AfMVW0D2wC9KcOHHI,1182
+biodblinker/config.py,sha256=iiz2pFvTYUcLiPshW2zi0KJehURjBy_6VQGf2-AetgA,5318
+biodblinker/dblink.py,sha256=8d4MJIwNdfxqYnO2lezYszIu6DRJPu-1adrnxPQY-Ac,78597
+biodblinker/fileio.py,sha256=otcV3MXegfhtTo-Gp56Iq4tFEkKZdDEcXywci4GcTfA,10425
+biodblinker/mapping_generator.py,sha256=YToakwNLK6b5YvBmqJ4Sxr20PIa5dSHIB0yD5EgInbo,41621
+biodblinker/sources.ini,sha256=BENxl7NYC9v0plxgdBkPupjMeHNqfdhpc1ydlHhbdWw,7861
+biodblinker-0.0.3.dist-info/LICENSE,sha256=NxH5Y8BdC-gNU-WSMwim3uMbID2iNDXJz7fHtuTdXhk,19346
+biodblinker-0.0.3.dist-info/METADATA,sha256=PitfeP8jfFfrUN1SRMc43w4gvCh6WYog0uoNtvWri_0,4323
+biodblinker-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+biodblinker-0.0.3.dist-info/top_level.txt,sha256=mLyt_kXr2zgKc4zjsBABh5tIwBpR5NP8l4ip-BUffqs,12
+biodblinker-0.0.3.dist-info/RECORD,,

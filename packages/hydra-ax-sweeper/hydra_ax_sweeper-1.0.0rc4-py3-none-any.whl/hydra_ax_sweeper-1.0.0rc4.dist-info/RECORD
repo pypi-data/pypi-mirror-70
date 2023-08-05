@@ -1,0 +1,10 @@
+hydra_plugins/hydra_ax_sweeper/__init__.py,sha256=nlNcRa8JrCTvjVYxoVH3f-uv5yqSrWv-stlB8MSlTjU,71
+hydra_plugins/hydra_ax_sweeper/_core.py,sha256=a-t7_D7ipazuvsPgJBPLCD8e_lJjTlQCjpmdDtqz6yk,13853
+hydra_plugins/hydra_ax_sweeper/_earlystopper.py,sha256=jbfy_9wjJyr4q3MfRkpShAPtPBJtL57vT8_ZEkIUv8I,2186
+hydra_plugins/hydra_ax_sweeper/ax_sweeper.py,sha256=tDmN-WS7p3DKg5Cuyq318PHa91AeKCTsD-rcZcF-Gfw,1437
+hydra_plugins/hydra_ax_sweeper/conf/__init__.py,sha256=nlNcRa8JrCTvjVYxoVH3f-uv5yqSrWv-stlB8MSlTjU,71
+hydra_plugins/hydra_ax_sweeper/conf/hydra/sweeper/ax.yaml,sha256=TesK60RIBLO0RQXYLY9pHNaBwMkZAWTkPXLmuE18Wkk,1132
+hydra_ax_sweeper-1.0.0rc4.dist-info/METADATA,sha256=83q7ZfFQUVO0K0ndu11o0ZXvNJFOnYHa40-9FrqS9wg,886
+hydra_ax_sweeper-1.0.0rc4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hydra_ax_sweeper-1.0.0rc4.dist-info/top_level.txt,sha256=0-LcYpEmzatUy2K5F7jmqcMfBL2RdB7k9nM_8zGFzhI,14
+hydra_ax_sweeper-1.0.0rc4.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+README.md
+setup.py
+geofileops/__init__.py
+geofileops/geofile.py
+geofileops/geofileops.py
+geofileops.egg-info/PKG-INFO
+geofileops.egg-info/SOURCES.txt
+geofileops.egg-info/dependency_links.txt
+geofileops.egg-info/requires.txt
+geofileops.egg-info/top_level.txt
+geofileops/util/__init__.py
+geofileops/util/dict2xml.py
+geofileops/util/geofileops_gpd.py
+geofileops/util/geofileops_ogr.py
+geofileops/util/io_util.py
+geofileops/util/ogr_util.py
+geofileops/util/ogr_util_direct.py

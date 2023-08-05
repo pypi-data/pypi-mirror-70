@@ -1,0 +1,10 @@
+{
+  "status": "built",
+  "errors": null,
+  "files": {
+    "admin_list_controls": [
+      "admin_list_controls/dist/admin_list_controls-6b0634168bee55138011.js",
+      "admin_list_controls/dist/admin_list_controls-6b0634168bee55138011.js.map"
+    ]
+  }
+}

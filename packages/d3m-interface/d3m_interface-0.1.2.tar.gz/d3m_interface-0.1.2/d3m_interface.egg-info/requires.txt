@@ -1,0 +1,4 @@
+gitdb2==2.0.6
+grpcio
+grpcio-tools
+d3m==2020.1.9

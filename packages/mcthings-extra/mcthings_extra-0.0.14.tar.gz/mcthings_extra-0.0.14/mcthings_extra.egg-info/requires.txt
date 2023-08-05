@@ -1,0 +1,4 @@
+mcpi>=1.2.0
+mcthings>=0.34.0
+pandas
+nbt

@@ -1,0 +1,10 @@
+setup.py
+clickui/__init__.py
+clickui/const.py
+clickui/core.py
+clickui/decorators.py
+clickui_unofficial.egg-info/PKG-INFO
+clickui_unofficial.egg-info/SOURCES.txt
+clickui_unofficial.egg-info/dependency_links.txt
+clickui_unofficial.egg-info/requires.txt
+clickui_unofficial.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+setup.py
+cuspatial.egg-info/PKG-INFO
+cuspatial.egg-info/SOURCES.txt
+cuspatial.egg-info/dependency_links.txt
+cuspatial.egg-info/top_level.txt

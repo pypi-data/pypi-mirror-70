@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package bunga;
+
+message ClientToServer {
+    oneof messages {
+        ExecuteCommandReq execute_command_req = 1;
+        GetFileReq get_file_req = 2;
+        PutFileReq put_file_req = 3;
+    }
+}
+
+message ServerToClient {
+    oneof messages {
+        ExecuteCommandRsp execute_command_rsp = 1;
+        LogEntryInd log_entry_ind = 2;
+        GetFileRsp get_file_rsp = 3;
+        PutFileRsp put_file_rsp = 4;
+    }
+}
+
+message ExecuteCommandReq {
+    // The command string, as "i2c scan /dev/i2c1".
+    string command = 1;
+}
+
+message ExecuteCommandRsp {
+    // Command output. Empty in the last message.
+    string output = 1;
+    // The error message. Only present in error messages.
+    string error = 2;
+}
+
+message LogEntryInd {
+    // A single log entry.
+    repeated string text = 1;
+}
+
+message GetFileReq {
+    // The file path relative to the root.
+    string path = 1;
+}
+
+message GetFileRsp {
+    // File size. Only present in the first message.
+    int64 size = 1;
+    // File data. Empty in last message.
+    bytes data = 2;
+    // The error message. Only present in error messages.
+    string error = 3;
+}
+
+message PutFileReq {
+    // The file path relative to the root. Only part of the first
+    // message.
+    string path = 1;
+    // File data. Empty in first and last message.
+    bytes data = 2;
+}
+
+message PutFileRsp {
+    // An error occurred if this is not the empty string.
+    string error = 1;
+}

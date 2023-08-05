@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: bcblib
+Version: 0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Project-URL: Source, https://github.com/chrisfoulon/BCBlib
+Project-URL: Bug Reports, https://github.com/chrisfoulon/BCBlib/issues
+Project-URL: BCBlab website, http://bcblab.com
+Keywords: brain neuroimaging
+Platform: UNKNOWN
+Requires-Dist: nibabel
+Requires-Dist: numpy
+Requires-Dist: six
+Requires-Dist: scipy
+Requires-Dist: nilearn
+Requires-Dist: sklearn
+
+=============================
+BCBlib: neuroimaging analyses
+=============================
+
+Under development
+
+Repository of scripts and tools used for MRI data analysis
+

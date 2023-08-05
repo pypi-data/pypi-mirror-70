@@ -1,0 +1,10 @@
+hotelling/__init__.py,sha256=rfoqs3VTtchUVifN0eeDNWanI5GZN9foE_JEKxCcuk4,160
+hotelling/cli.py,sha256=0cb_PY11_xjSVw-krqOXgZ2S_o7USqmD0GQ12Zlt5kw,569
+hotelling/stats.py,sha256=SWdptaOv-2Xw9ZaXC7rNdz45YQlxyRPh2aS3t5Psqdw,7519
+hotelling-0.2.0.dist-info/AUTHORS.rst,sha256=2gNj1q-YGjlGLJwM2KBxmgR2YRbVaamANWL32R93J4A,161
+hotelling-0.2.0.dist-info/LICENSE,sha256=s-WzVu-4I4V7eEjf6V01daUR4JvHx7L6IedNgKOl-Ms,1076
+hotelling-0.2.0.dist-info/METADATA,sha256=BmjsiMKk9qz2U0r7ePNoHliJVzv48n6VBV1hpI4_gRE,2040
+hotelling-0.2.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+hotelling-0.2.0.dist-info/entry_points.txt,sha256=dnEOqIN9FyGI2VZWv5hQzuT-TcttcbBt0JF-ez_biSI,50
+hotelling-0.2.0.dist-info/top_level.txt,sha256=K7xSv2eFkuG62hEnM7oGSzIqI2bVgHzb2nUqQzZEn9c,10
+hotelling-0.2.0.dist-info/RECORD,,

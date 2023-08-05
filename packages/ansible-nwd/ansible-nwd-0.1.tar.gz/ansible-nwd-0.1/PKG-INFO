@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ansible-nwd
+Version: 0.1
+Summary: Ansible role automatic documentation
+Home-page: https://github.com/VasseurLaurent/ansible-nwd
+Author: VASSEUR Laurent
+Author-email: mail.laurentvasseur@gmail.com
+License: MIT
+Download-URL: https://github.com/VasseurLaurent/ansible-nwd/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: ansible,documentation,automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6

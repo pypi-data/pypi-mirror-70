@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+src/singularity_permanent_cache/__init__.py
+src/singularity_permanent_cache/singularity_permanent_cache.py
+src/singularity_permanent_cache.egg-info/PKG-INFO
+src/singularity_permanent_cache.egg-info/SOURCES.txt
+src/singularity_permanent_cache.egg-info/dependency_links.txt
+src/singularity_permanent_cache.egg-info/entry_points.txt
+src/singularity_permanent_cache.egg-info/not-zip-safe
+src/singularity_permanent_cache.egg-info/top_level.txt

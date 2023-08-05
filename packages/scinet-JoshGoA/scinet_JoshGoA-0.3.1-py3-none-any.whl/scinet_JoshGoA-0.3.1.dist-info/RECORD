@@ -1,0 +1,14 @@
+scinet/__init__.py,sha256=nE8jJjGJaKuJKCyuf6QLfrj8xPj8IqGKeH2VXP3FMzY,21
+scinet/core.py,sha256=yTMgumRGV2jEc-pxR-NibGA36IOjoN7NddVDf7_4gYg,10315
+scinet/core/__init__.py,sha256=ZPCR1GkIB3Y-FTr5axaIIy2_U6Gz1wdCvGW-lpuS4Gc,22
+scinet/core/graph.py,sha256=jSsgxtXQ8QSAgin4Hqm4DVRE0ikfssxgNE3xCTijbWw,1855
+scinet/core/network.py,sha256=b-UgetgjuracUqnum3viNctmKhCQFSTE3eskq-25mnc,4289
+scinet/utils/__init__.py,sha256=j3E5k2Twxi5F_OTis2BRBzO1-Ld3PdxXhZNxabcplEc,31
+scinet/utils/profiler.py,sha256=PELe87f7J2n-92MOZTlM9XeJ_f3c9hPOSNIAw8kjR8c,397
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_network.py,sha256=PwjfO7XxmK6hZjx07ZSqUnQNJn_9P34jKzRvga_3rns,1469
+scinet_JoshGoA-0.3.1.dist-info/LICENSE.md,sha256=gZ3sblQQat2VuGTm23aMsQUf71Jc3g0ZyxzU5E5locw,1070
+scinet_JoshGoA-0.3.1.dist-info/METADATA,sha256=H-EnSkFU-dp7MyltywGSuMrqj3SpH2Cx6rxLiztgZdw,1961
+scinet_JoshGoA-0.3.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+scinet_JoshGoA-0.3.1.dist-info/top_level.txt,sha256=Jwi7x89kKjrIUaN7xBGI2QO5xVb0Hoq0EjQRWEBbpjE,13
+scinet_JoshGoA-0.3.1.dist-info/RECORD,,

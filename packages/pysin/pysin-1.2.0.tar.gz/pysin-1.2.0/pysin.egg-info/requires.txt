@@ -1,0 +1,8 @@
+pandas==1.0.3
+fpdf==1.7.2
+Faker==4.1.0
+Unidecode==1.1.1
+docx2txt==0.8
+path.py==12.4.0
+pdftotext==2.1.4
+striprtf==0.0.10

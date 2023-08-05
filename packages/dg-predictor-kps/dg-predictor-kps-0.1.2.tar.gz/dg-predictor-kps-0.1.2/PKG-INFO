@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: dg-predictor-kps
+Version: 0.1.2
+Summary: DG-Predictor
+Home-page: https://github.com/user/dg_predictor_kps
+Author: user
+Author-email: muzi@gmail.com
+License: MIT License
+Description: # dg-predictor-kps
+        
+        `kps` plugin for [dg-predictor]()
+        
+        # ChangeLog
+        
+        - v0.1.0: support keypoints.
+        
+Platform: UNKNOWN
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*

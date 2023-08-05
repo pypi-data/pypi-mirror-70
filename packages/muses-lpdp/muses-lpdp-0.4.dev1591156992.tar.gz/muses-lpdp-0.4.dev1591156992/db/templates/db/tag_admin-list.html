@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        <div class="muses-list-toolbar">
+            <a href="{% url "muses_admin_tag_create" %}" class="muses-button">{% trans "New tag" %}</a>
+        </div>
+        {% include "_partials/pagination.html" %}
+        {% for tag in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_admin_tag_detail" tag.id %}'">
+                <div>
+                    {{ tag.name }}
+                </div>
+                <div class="muses-flex-row">
+                    <div>
+                        <a href="{% url "muses_admin_tag_delete" tag.id %}" class="muses-button">
+                            {% trans "Delete" %}
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{% url "muses_admin_tag_update" tag.id %}" class="muses-button">
+                            {% trans "Update" %}...
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+[console_scripts]
+days-until=days_until.__main__:main
+

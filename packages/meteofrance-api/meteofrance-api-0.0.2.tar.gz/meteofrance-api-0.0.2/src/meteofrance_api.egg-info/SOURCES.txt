@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+src/meteofrance/__init__.py
+src/meteofrance/__main__.py
+src/meteofrance/auth.py
+src/meteofrance/client.py
+src/meteofrance/const.py
+src/meteofrance/forecast.py
+src/meteofrance/place.py
+src/meteofrance/rain.py
+src/meteofrance/warning.py
+src/meteofrance_api.egg-info/PKG-INFO
+src/meteofrance_api.egg-info/SOURCES.txt
+src/meteofrance_api.egg-info/dependency_links.txt
+src/meteofrance_api.egg-info/requires.txt
+src/meteofrance_api.egg-info/top_level.txt

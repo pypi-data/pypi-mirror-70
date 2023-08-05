@@ -1,0 +1,3 @@
+[console_scripts]
+inageoportal = inageoportal.main:welcome
+

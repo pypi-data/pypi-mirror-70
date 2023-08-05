@@ -1,0 +1,15 @@
+cwe/__init__.py,sha256=ls_1F-EKoR9KD-mh87Z4Sb0VexLu3kiPN-EuopuiJmE,98
+cwe/categories.py,sha256=Go73b-9asUEVP5itSq1i24Z9Wd-yc3Xn7DolrdnGxwc,207
+cwe/cwe.json,sha256=Y3BGX1auE__e5HRUZZZKu-TmmtMwrllmbliI_cp1HKg,2788683
+cwe/database.py,sha256=aq15OaW-08Efx4Th8PmOGKw7uYambWIphd-AKDZONrc,3966
+cwe/hardware_design.json,sha256=3lpImYgQQpfz4eCx56kRiLNB25U6jPs0TBFdydxzL_E,96716
+cwe/research_concepts.json,sha256=2KeO_j1D-_mXFYLn2ZTwmDqs1irk7ArmJaTEadTfdN0,2788683
+cwe/software_development.json,sha256=qR0gqb4G4qUhrUqvpijVR0OAGb-IYeShQZMl26ewG2g,1376622
+cwe/weakness.py,sha256=eacDLOW5Qs9X03keOZjKc0tz2Wh3ON62cd0JmnyKc3M,6608
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cwe.py,sha256=qW5wkg7Td3Bl2FaLwyk2JGPUYOjbkz4f45OilKjJ8OU,2363
+cwe-1.5.dist-info/LICENSE.txt,sha256=gEqvyfdp2mSfJAMhpd45ebWom2Rz_CvC8v6UiZhq_EM,1056
+cwe-1.5.dist-info/METADATA,sha256=AKpDz55kNmt4LVRJRYv2yWzcBW97o6Ev75CoenQHYtg,2438
+cwe-1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cwe-1.5.dist-info/top_level.txt,sha256=zQng4N5U2TCP0v_a-WiDozPbecj2PMB7B4RHgsDjavg,10
+cwe-1.5.dist-info/RECORD,,

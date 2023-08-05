@@ -1,0 +1,15 @@
+README.md
+setup.py
+biocwl_dash/biocwl_dash.egg-info/PKG-INFO
+biocwl_dash/biocwl_dash.egg-info/SOURCES.txt
+biocwl_dash/biocwl_dash.egg-info/dependency_links.txt
+biocwl_dash/biocwl_dash.egg-info/requires.txt
+biocwl_dash/biocwl_dash.egg-info/top_level.txt
+biocwl_dash/pages/copyNumberVariation.py
+biocwl_dash/pages/expression.py
+biocwl_dash/pages/fileBrowser.py
+biocwl_dash/pages/geneFusions.py
+biocwl_dash/pages/overview.py
+biocwl_dash/pages/rabix.py
+biocwl_dash/pages/vicc.py
+test/test_main.py

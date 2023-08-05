@@ -1,0 +1,9 @@
+bloch_sphere/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bloch_sphere/animate_bloch.py,sha256=rKpVgRvMDAWXXtQXHyhIiZ5j62f7KhL1pFp3FV8qqoo,16031
+bloch_sphere/animate_bloch_compare.py,sha256=Z1dz1GH2msLwQSXwwR31EqG3xhr0_3uSxci_eFoWBtM,5587
+bloch_sphere-0.1.1.dist-info/LICENSE.txt,sha256=BG1Qxaa_TpxgzcVFQdxLM6cYF0VsL-FBerAv5rieU0I,1056
+bloch_sphere-0.1.1.dist-info/METADATA,sha256=spOm9sn9RjxHqqSrtm_GuVIBcFQ0KjD3iCKkk8VEx6E,4926
+bloch_sphere-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bloch_sphere-0.1.1.dist-info/entry_points.txt,sha256=TF4IbdSW_QCQc-Vwt01oPWCOsj0axegIKsuXIbuYM9I,158
+bloch_sphere-0.1.1.dist-info/top_level.txt,sha256=8wSnNwM3qhDQY8bUlb3_0BiBLEoxN3ry8cT8WumLGR8,13
+bloch_sphere-0.1.1.dist-info/RECORD,,

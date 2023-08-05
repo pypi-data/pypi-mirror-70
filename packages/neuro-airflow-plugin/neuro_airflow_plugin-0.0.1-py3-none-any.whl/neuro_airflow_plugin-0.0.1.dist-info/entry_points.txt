@@ -1,0 +1,3 @@
+[airflow.plugins]
+neuro_plugin=neuro_airflow_plugin.neuro_plugin:NeuroPlugin
+

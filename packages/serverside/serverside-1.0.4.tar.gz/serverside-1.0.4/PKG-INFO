@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: serverside
+Version: 1.0.4
+Summary: Python serverside toolkit
+Home-page: https://github.com/asciialex/python-serverside
+Author: asciialex
+Author-email: alex@asciialex.com
+License: UNKNOWN
+Description: # Python Serverside
+        
+        A toolkit for super fast backend development.
+        
+        ![Package Testing](https://github.com/asciialex/python-serverside/workflows/Package%20Testing/badge.svg) [![PyPI version](https://badge.fury.io/py/serverside.svg)](https://badge.fury.io/py/serverside)
+        
+        [Documentation](https://asciialex.github.io/python-serverside/)
+        
+        ## Why
+        
+        We want to take as much boilerplate out of writing applications as
+        possible, so that you can focus on the logic of why you started your
+        application in the first place.
+        
+        ## Installation
+        
+        ```bash
+        pip3 install serverside
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

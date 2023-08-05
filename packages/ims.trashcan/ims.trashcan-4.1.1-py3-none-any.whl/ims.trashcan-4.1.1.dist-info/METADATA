@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ims.trashcan
+Version: 4.1.1
+Summary: Stores deleted objects in a trash can before deletion.
+Home-page: https://git.imsweb.com/plone/ims.trashcan
+Author: Eric Wohnlich
+Author-email: wohnlice@imsweb.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Plone :: 5.0
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Requires-Dist: setuptools
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+Requires-Dist: plone.mocktestcase ; extra == 'test'
+Requires-Dist: formencode ; extra == 'test'
+
+UNKNOWN
+
+

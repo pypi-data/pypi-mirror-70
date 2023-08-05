@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dropt/util/__init__.py
+src/dropt/util/log.py
+src/dropt_util.egg-info/PKG-INFO
+src/dropt_util.egg-info/SOURCES.txt
+src/dropt_util.egg-info/dependency_links.txt
+src/dropt_util.egg-info/requires.txt
+src/dropt_util.egg-info/top_level.txt

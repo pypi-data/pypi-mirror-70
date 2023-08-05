@@ -1,0 +1,47 @@
+{
+    "email": {
+        "metadata": {
+            "callback": null, 
+            "enabled": true, 
+            "name": "Email", 
+            "callback": {
+                "func": "sendEmailTest", 
+                "module": "vfxClientToolkit.configs.utils.emailUtil", 
+                "label": "Test Email"
+            },
+            "file": "vfxCTK_config_email", 
+            "help_url": "https://debug.github.io/vfxClientToolkit/html/configuration.html#email",
+            "description": "etc"
+        }, 
+        "settings": {
+            "username": {
+                "data_type": "string", 
+                "pretty_name": "User name", 
+                "callback": null, 
+                "tooltip": "Username for SMTP server.", 
+                "value": null
+            }, 
+            "password": {
+                "pretty_name": "Password", 
+                "data_type": "password", 
+                "callback": null, 
+                "tooltip": "Password for specified username.", 
+                "value": null
+            }, 
+            "smtp": {
+                "pretty_name": "SMTP Server", 
+                "data_type": "string", 
+                "callback": null, 
+                "tooltip": "SMTP server address.", 
+                "value": null
+            }, 
+            "port": {
+                "pretty_name": "Port Num", 
+                "data_type": "int", 
+                "callback": null, 
+                "tooltip": "Port number.", 
+                "value": null
+            }
+        }
+    }
+}

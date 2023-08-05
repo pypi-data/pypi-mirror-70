@@ -1,0 +1,43 @@
+{
+    "mailIt": {
+        "settings": {
+            "sequence_whitelist": {
+                "pretty_name": "Sequence(s) Whitelist", 
+                "data_type": "list", 
+                "callback": null, 
+                "tooltip": "Sequences that should be included when iterating over playlist", 
+                "value": null
+            }, 
+            "recipients_by_vendor": {
+                "pretty_name": "Recipients per vendor", 
+                "callback": {
+                "func": "launchRecipientsByVendorUI", 
+                "module": "vfxClientToolkit.configs.utils.mailIt", 
+                "label": "Configure"
+                },
+                "data_type": "custom", 
+                "type": "Group", 
+                "tooltip": "Users to receive notification mail separated by vendor", 
+                "value": {
+                    "vendor": null, 
+                    "name": null
+                }
+            }, 
+            "recipients": {
+                "pretty_name": "Recipients for all mail", 
+                "data_type": "list", 
+                "callback": null, 
+                "tooltip": "Recipients that receive mail regardless of vendor", 
+                "value": null
+            }
+        }, 
+        "metadata": {
+            "callback": null, 
+            "enabled": true, 
+            "name": "Mail It", 
+            "file": "vfxCTK_config_mailIt", 
+            "description": "etc",
+            "help_url": "https://debug.github.io/vfxClientToolkit/html/configuration.html#mail-it"
+        }
+    }
+}

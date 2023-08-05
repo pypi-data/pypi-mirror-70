@@ -1,0 +1,36 @@
+{
+    "filesystem": {
+        "metadata": {
+            "callback": null, 
+            "enabled": true, 
+            "name": "File System", 
+            "help_url": "https://debug.github.io/vfxClientToolkit/html/configuration.html#file-system",
+            "file": "vfxCTK_config_filesystem", 
+            "description": "etc"
+        }, 
+        "settings": {
+            "project_tree_root": {
+                "pretty_name": "Project Tree Root", 
+                "data_type": "path", 
+                "callback": {
+                "func": "browseForFileRoot", 
+                "module": "vfxClientToolkit.configs.utils.filesystem", 
+                "label": "Browse"
+                }, 
+                "tooltip": "File path root where all published and tracked files are stored.", 
+                "value": null
+            }, 
+            "posix_prefix": {
+                "pretty_name": "Posix Prefix", 
+                "data_type": "path", 
+                "callback": {
+                "func": "browseForPosix", 
+                "module": "vfxClientToolkit.configs.utils.filesystem", 
+                "label": "Browse"
+                }, 
+                "tooltip": "misc", 
+                "value": null
+            }
+        }
+    }
+}

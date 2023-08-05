@@ -1,0 +1,2 @@
+https://github.com/shotgunsoftware/python-api/tarball/master#egg=package=3.2.2
+https://github.com/michaeljones/sphinx-to-github.git#egg=sphinx-to-github

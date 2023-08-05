@@ -1,0 +1,7 @@
+appcfg/__init__.py,sha256=A_cCM-TNCUlUf33f_D86u0R-YCpHaYXwDA9EVSgKjmo,100
+appcfg/appcfg.py,sha256=bOskBp6eA4pDCQQUDd_FUGWP9A11ITZjuvMnDSqR774,2998
+appcfg/exceptions.py,sha256=YcAUfgdew-JdpyDW_3vKO0hh4M_gSOPaiw-I6__yEFY,663
+appcfg/util.py,sha256=hA1D0GB-Uz-LMYlYfhrRh-SmpcBk_OIqw0mQagFlph0,5539
+appcfg-1.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+appcfg-1.0.0.dist-info/METADATA,sha256=DRJzg2C0qwVp6AuMctBfrHa8nI05_NFW8A76E4BgcgI,8135
+appcfg-1.0.0.dist-info/RECORD,,

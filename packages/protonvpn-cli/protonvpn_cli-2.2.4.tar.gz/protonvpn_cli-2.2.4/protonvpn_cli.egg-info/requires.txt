@@ -1,0 +1,4 @@
+requests
+docopt
+pythondialog
+jinja2

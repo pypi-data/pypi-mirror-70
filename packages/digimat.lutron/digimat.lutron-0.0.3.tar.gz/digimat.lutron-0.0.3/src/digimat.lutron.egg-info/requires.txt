@@ -1,0 +1,5 @@
+requests
+ptable
+unidecode
+digimat.jobs
+setuptools

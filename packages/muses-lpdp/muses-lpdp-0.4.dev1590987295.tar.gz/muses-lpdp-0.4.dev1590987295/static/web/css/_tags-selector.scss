@@ -1,0 +1,76 @@
+@import "variables";
+
+.muses-tags-selector {
+  display: inline-flex;
+  margin: auto;
+  width: 80vw;
+
+  > .muses-selected-tags {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.5em;
+    background: $search_bar_background;
+    border-radius: 0.3em 0 0 0.3em;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+
+    > div.muses-tag {
+      padding-right: 1em;
+      padding-left: 1em;
+      border-radius: 1em;
+      background-color: $primary-tag-color;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 0.1em;
+    }
+  }
+
+  > div.awesomplete {
+    width: 100%;
+  }
+
+  > input[type=text].awesomplete,
+  > div.awesomplete {
+    display: flex;
+    border-radius: 0 0.3em 0.3em 0;
+    background-color: $tags_selector_background;
+    margin: 0;
+    padding: 0.5em;
+
+
+    > ul[role=listbox] {
+      position: absolute;
+      list-style: none;
+
+      > li[role=option] {
+        text-decoration: none;
+        background-color: $tags_selector_background;
+      }
+    }
+
+    > input[role=combobox].awesomplete {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: $tags_selector_background;
+
+      &::-ms-expand,
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+
+      &:focus, &:active {
+        outline: none;
+
+      }
+
+
+    }
+
+    > span.visually-hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+Click>=7.0
+biopython>=1.76
+pandas
+attrs

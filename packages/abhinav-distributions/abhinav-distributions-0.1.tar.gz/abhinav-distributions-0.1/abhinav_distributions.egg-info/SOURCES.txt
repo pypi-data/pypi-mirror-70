@@ -1,0 +1,10 @@
+setup.py
+abhinav-distributions/Binomialdistribution.py
+abhinav-distributions/Gaussiandistribution.py
+abhinav-distributions/Generaldistribution.py
+abhinav-distributions/__init__.py
+abhinav_distributions.egg-info/PKG-INFO
+abhinav_distributions.egg-info/SOURCES.txt
+abhinav_distributions.egg-info/dependency_links.txt
+abhinav_distributions.egg-info/not-zip-safe
+abhinav_distributions.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: packt-sample-package
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Authors name
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+
+This is the longer description and will appear in the web.
+
+

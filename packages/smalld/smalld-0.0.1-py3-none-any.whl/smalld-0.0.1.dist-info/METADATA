@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: smalld
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: attrdict (>=2.0.1)
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: websocket-client (>=0.57.0)
+
+UNKNOWN
+
+

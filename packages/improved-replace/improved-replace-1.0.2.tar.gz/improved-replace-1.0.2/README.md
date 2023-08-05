@@ -1,0 +1,87 @@
+# ImprovedReplace
+
+Python library to add some replace method improvements focused on common replacements to optimize code.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Make sure you have Python and that the expected version is available from your command line. You can check this by running:
+
+``` Powershell
+python --version
+```
+
+You should get some output like Python 3.6.3. If you do not have Python, please install the latest 3.x version from [python.org](https://python.org)
+
+Additionally, you’ll need to make sure you have pip available. You can check this by running:
+
+``` Powershell
+pip --version
+```
+
+If you installed Python from source, with an installer from [python.org](https://python.org) you should already have pip. If you’re on Linux and installed using your OS package manager, you may have to install pip separately, see Installing [pip/setuptools/wheel with Linux Package Managers](https://packaging.python.org/guides/installing-using-linux-tools/).
+
+If pip isn’t already installed, then first try to bootstrap it from the standard library:
+
+``` Powershell
+python -m ensurepip --default-pip
+```
+
+While pip alone is sufficient to install from pre-built binary archives, up to date copies of the setuptools and wheel projects are useful to ensure you can also install from source archives:
+
+``` Powershell
+python -m pip install --upgrade pip setuptools wheel
+```
+
+### Installing
+
+To install the latest version of ImprovedReplace:
+
+``` Powershell
+pip install improved-replace
+```
+
+And then you can import this library in Python:
+
+``` Python
+import ImprovedReplace
+
+replace = ImprovedReplace()
+string = "Hello World"
+string = replace.to_array(string)
+
+print(string)
+# Output: ['Hello', 'World']
+```
+
+## Built With
+
+* [Python](https://www.python.org) - Programming language used
+* [VS Code](https://code.visualstudio.com/) - Code editor used
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/LuckJMG/ImprovedReplace/tags).
+
+## Authors
+
+* **Lucas Mosquera** - *Creator and Maintainer* - [LuckJMG](https://github.com/LuckJMG)
+
+See also the list of [contributors](https://github.com/LuckJMG/ImprovedReplace/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+* This is my first package of python
+* The idea occurred to me when I had to replace a few commas many times with periods or vice versa
+* Thank you all for getting here

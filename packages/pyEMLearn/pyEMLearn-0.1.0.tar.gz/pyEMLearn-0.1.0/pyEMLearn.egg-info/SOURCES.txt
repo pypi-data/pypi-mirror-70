@@ -1,0 +1,15 @@
+README.md
+setup.py
+pyEMLearn/__init__.py
+pyEMLearn/layers.py
+pyEMLearn/materials.py
+pyEMLearn/utils.py
+pyEMLearn.egg-info/PKG-INFO
+pyEMLearn.egg-info/SOURCES.txt
+pyEMLearn.egg-info/dependency_links.txt
+pyEMLearn.egg-info/requires.txt
+pyEMLearn.egg-info/top_level.txt
+pyEMLearn/catalog/__init__.py
+pyEMLearn/catalog/dielectrics.py
+pyEMLearn/catalog/metals.py
+pyEMLearn/catalog/special.py

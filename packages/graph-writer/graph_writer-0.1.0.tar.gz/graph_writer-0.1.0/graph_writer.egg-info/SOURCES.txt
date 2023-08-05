@@ -1,0 +1,7 @@
+README.md
+graph_writer.py
+setup.py
+graph_writer.egg-info/PKG-INFO
+graph_writer.egg-info/SOURCES.txt
+graph_writer.egg-info/dependency_links.txt
+graph_writer.egg-info/top_level.txt

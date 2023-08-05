@@ -1,0 +1,13 @@
+README.md
+setup.py
+ocrlayout/__init__.py
+ocrlayout/bboxhelper.py
+ocrlayout/bboxutils.py
+ocrlayout.egg-info/PKG-INFO
+ocrlayout.egg-info/SOURCES.txt
+ocrlayout.egg-info/dependency_links.txt
+ocrlayout.egg-info/requires.txt
+ocrlayout.egg-info/top_level.txt
+ocrlayout/config/annotations.json
+ocrlayout/config/config.json
+ocrlayout/config/logging.conf

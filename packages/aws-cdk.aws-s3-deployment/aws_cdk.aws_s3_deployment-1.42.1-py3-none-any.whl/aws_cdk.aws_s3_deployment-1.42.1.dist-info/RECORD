@@ -1,0 +1,8 @@
+aws_cdk/aws_s3_deployment/__init__.py,sha256=A4xT8VgXP92KW3735AURJwWitxUMsdx2I1RPde3N4_E,42501
+aws_cdk/aws_s3_deployment/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_s3_deployment/_jsii/__init__.py,sha256=R7oLefPeqxcN4gD7lRBJ_V1yhCNkyA2a8eWx65Y661M,489
+aws_cdk/aws_s3_deployment/_jsii/aws-s3-deployment@1.42.1.jsii.tgz,sha256=Qx8PDXyDc0bS5DbI3cx8wfJtzXpMOy1FgyZJuVJR-ZA,11396872
+aws_cdk.aws_s3_deployment-1.42.1.dist-info/METADATA,sha256=jqZGAZpT-cSQTpANJTv5ny0yvBrVHZ1kZMtzXoMLAVU,8272
+aws_cdk.aws_s3_deployment-1.42.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_s3_deployment-1.42.1.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_s3_deployment-1.42.1.dist-info/RECORD,,

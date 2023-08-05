@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+nummer_games/Classifygeneration.py
+nummer_games/Genericgeneration.py
+nummer_games/Primegeneration.py
+nummer_games/__init__.py
+nummer_games.egg-info/PKG-INFO
+nummer_games.egg-info/SOURCES.txt
+nummer_games.egg-info/dependency_links.txt
+nummer_games.egg-info/not-zip-safe
+nummer_games.egg-info/top_level.txt

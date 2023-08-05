@@ -1,0 +1,3 @@
+[console_scripts]
+saqqarah = saqqarah.__main__:main
+

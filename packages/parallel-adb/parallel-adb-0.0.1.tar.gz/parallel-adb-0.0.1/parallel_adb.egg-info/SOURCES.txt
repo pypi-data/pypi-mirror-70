@@ -1,0 +1,10 @@
+README.md
+setup.py
+parallel_adb.egg-info/PKG-INFO
+parallel_adb.egg-info/SOURCES.txt
+parallel_adb.egg-info/dependency_links.txt
+parallel_adb.egg-info/top_level.txt
+paralleladb/__init__.py
+paralleladb/_devices_mgr.py
+paralleladb/_exceptions.py
+paralleladb/_parallel_adb.py

@@ -1,0 +1,12 @@
+README.rst
+setup.py
+img_optimize.egg-info/PKG-INFO
+img_optimize.egg-info/SOURCES.txt
+img_optimize.egg-info/dependency_links.txt
+img_optimize.egg-info/requires.txt
+img_optimize.egg-info/top_level.txt
+imgoptimize/__init__.py
+imgoptimize/_threading.py
+imgoptimize/gui.py
+imgoptimize/imgoptimize.py
+imgoptimize/optimize.py

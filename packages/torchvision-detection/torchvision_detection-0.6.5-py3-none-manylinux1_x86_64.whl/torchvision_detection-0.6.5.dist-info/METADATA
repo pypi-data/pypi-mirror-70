@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: torchvision-detection
+Version: 0.6.5
+Summary: Object detection reference training scripts.
+Home-page: https://github.com/danilopeixoto/torchvision-detection
+Author: Danilo Peixoto
+Author-email: danilopeixoto@outlook.com
+License: BSD
+Download-URL: https://github.com/danilopeixoto/torchvision-detection/archive/v0.6.5.tar.gz
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: wf-pycocotools
+Requires-Dist: torch
+Requires-Dist: torchvision
+
+UNKNOWN
+
+

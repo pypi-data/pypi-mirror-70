@@ -1,0 +1,11 @@
+tagword/__init__.py,sha256=Nb5hqVDKqmlVLGkOwbTDTshAxN1EcPlcmwdAa0QOw6g,354
+tagword/crawler/__init__.py,sha256=bDh3PKwN1AW9h-bXvXN_nNJ67HLMnACHBg0OCccK7FE,371
+tagword/crawler/crawler.py,sha256=RuVFMB9RmV3KE0NJtRlBaHOlDsbi3AI26F8agu1kqvo,3764
+tagword/crawler/spiders/__init__.py,sha256=1xGqk1dgQGBg_6riDOWdCvFzTsr5Xvx_UHS3HczMiVg,385
+tagword/crawler/spiders/spider.py,sha256=ZNL-1wV1phoJijU9XOiXGoehOvU1ESX146iGOOSJ5yM,2387
+tagword/crawler/spiders/ua.py,sha256=F62DUPnUcNggo7EUvcWuEHE_WescKSaieP5I-KWNa2k,12925
+tagword_crawler-0.1.1.dist-info/LICENSE,sha256=e7tzQLOPxm4KFLvY4BwTp8PCkJuWQXG0L-0xv95ESxQ,1064
+tagword_crawler-0.1.1.dist-info/METADATA,sha256=GdjEVlzXxZUme43KGSQ2YRJBVsyCuOKWIg7DIL7J9MI,883
+tagword_crawler-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tagword_crawler-0.1.1.dist-info/top_level.txt,sha256=P4WSo7DCdBVZ7YMOt0YQxZ7NBui_8e3Dv4wyn5sR1aI,8
+tagword_crawler-0.1.1.dist-info/RECORD,,

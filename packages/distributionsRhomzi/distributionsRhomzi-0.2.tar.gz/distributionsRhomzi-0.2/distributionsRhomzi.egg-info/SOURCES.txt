@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributionsRhomzi/Binomialdistribution.py
+distributionsRhomzi/Gaussiandistribution.py
+distributionsRhomzi/Generaldistribution.py
+distributionsRhomzi/__init__.py
+distributionsRhomzi.egg-info/PKG-INFO
+distributionsRhomzi.egg-info/SOURCES.txt
+distributionsRhomzi.egg-info/dependency_links.txt
+distributionsRhomzi.egg-info/not-zip-safe
+distributionsRhomzi.egg-info/top_level.txt

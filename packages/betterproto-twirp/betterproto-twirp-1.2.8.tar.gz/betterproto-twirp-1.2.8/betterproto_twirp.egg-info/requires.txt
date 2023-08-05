@@ -1,0 +1,14 @@
+grpclib
+stringcase
+requests
+python-box
+jsonpath-rw
+
+[:python_version < "3.7"]
+dataclasses
+backports-datetime-fromisoformat
+
+[compiler]
+black
+jinja2
+protobuf

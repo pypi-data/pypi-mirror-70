@@ -1,0 +1,2 @@
+dbt-core==0.16.0
+cx_Oracle==7.3.0

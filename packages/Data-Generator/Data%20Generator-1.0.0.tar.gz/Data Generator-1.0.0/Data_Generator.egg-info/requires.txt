@@ -1,0 +1,4 @@
+tqdm
+XlsxWriter
+tomlkit
+pytest

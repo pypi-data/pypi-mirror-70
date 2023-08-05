@@ -1,0 +1,5 @@
+setup.py
+nitrous_jit.egg-info/PKG-INFO
+nitrous_jit.egg-info/SOURCES.txt
+nitrous_jit.egg-info/dependency_links.txt
+nitrous_jit.egg-info/top_level.txt

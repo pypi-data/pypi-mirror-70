@@ -1,0 +1,7 @@
+locasticsearch/__init__.py,sha256=AWUfS36KkpBreI1KwJluLbhafdQ5L4_fkTypuyrVz4g,65
+locasticsearch/client/__init__.py,sha256=6Pb7wA2ROEuidcP_QfyPirIcgj1YC1Dn1KvNv9blVDQ,6883
+locasticsearch/client/indices.py,sha256=8RsnJRKf7gr6MnUTT988qkacInFzT0jLSaSekVI-5cc,2372
+locasticsearch-0.0.1.dist-info/LICENSE,sha256=QNe8Ykx1MefMF72HY4_AjIwv_rUQSc1fquf0MRMa1tI,1071
+locasticsearch-0.0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+locasticsearch-0.0.1.dist-info/METADATA,sha256=PyvKOUggKLRRFDjUZa60vgSvb-FAd0HwyWYFad-g1S0,4151
+locasticsearch-0.0.1.dist-info/RECORD,,

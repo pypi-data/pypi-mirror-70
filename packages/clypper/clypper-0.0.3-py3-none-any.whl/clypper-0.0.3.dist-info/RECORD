@@ -1,0 +1,9 @@
+clypper/__init__.py,sha256=cmHhhF986sDq8bTiX7pkCUBKJjt2kOjxFukHJ5V9cT4,146
+clypper/cli.py,sha256=0389nV4MBhhgF4iC9VmmH5sgeg4rPk7X1EZX-RiKue4,659
+clypper/clypper.py,sha256=7f0HHVcgUAul53nw72kl8j7ADjJNH66VdCADzb6obRs,2136
+clypper/video_sources.py,sha256=fP08y6rGYRfqiIdX7bNgG5ENOtjEtIcajd_TlCDGyLg,3196
+clypper-0.0.3.dist-info/entry_points.txt,sha256=kYIESLD3irDWtcOuQGZ1bptvI2KojIdp5jUC3xtwApo,40
+clypper-0.0.3.dist-info/LICENSE,sha256=vq6dWxlmY52Se3AznyOuMOvNbj55d5yekYem2UJWIx4,1061
+clypper-0.0.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+clypper-0.0.3.dist-info/METADATA,sha256=1opapPS0k_QYLZlUTiUmzrwpCU8p6z0evFTGVxFhPx8,1576
+clypper-0.0.3.dist-info/RECORD,,

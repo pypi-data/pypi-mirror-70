@@ -1,0 +1,6 @@
+numpy
+seaborn
+matplotlib
+networkx
+pyyaml
+termcolor

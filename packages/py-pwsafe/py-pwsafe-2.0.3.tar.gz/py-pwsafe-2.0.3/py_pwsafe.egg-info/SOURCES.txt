@@ -1,0 +1,12 @@
+README.md
+setup.py
+py_pwsafe.egg-info/PKG-INFO
+py_pwsafe.egg-info/SOURCES.txt
+py_pwsafe.egg-info/dependency_links.txt
+py_pwsafe.egg-info/entry_points.txt
+py_pwsafe.egg-info/requires.txt
+py_pwsafe.egg-info/top_level.txt
+src/__init__.py
+src/password_manager.py
+src/password_safe.py
+src/text_wrappers.py

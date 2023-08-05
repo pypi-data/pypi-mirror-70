@@ -1,0 +1,3 @@
+[console_scripts]
+pypwsafe = pypwsafe.password_manager:main
+

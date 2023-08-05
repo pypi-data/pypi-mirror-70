@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: scrapec
+Version: 20.6.0
+Summary: Scrapec is a program that compiles .sb3 files into .scrape files, which can then be run using Scrape.
+Home-page: https://github.com/scraterpreter/scrapec
+Author: Scraterpreter Authors
+Author-email: contact@paullee.dev
+License: UNKNOWN
+Description: # scrapec
+        
+        This is a compiler designed to accompany [scrape](https://github.com/scraterpreter/scrape).
+        Usage instructions are listed on the [repository for scrape](https://github.com/scraterpreter/scrape).
+        
+        It is recommended to install scrapec using the Snap package available on the Snap Store.
+        
+        ## Build Instructions
+        ```bash
+        git clone https://github.com/scraterpreter/scrapec.git # clones the repository
+        cd scrapec
+        pip install . # installs scrapec
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Compilers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

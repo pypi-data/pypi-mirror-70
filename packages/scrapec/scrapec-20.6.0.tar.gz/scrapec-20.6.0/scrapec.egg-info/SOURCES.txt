@@ -1,0 +1,9 @@
+README.md
+setup.py
+scrapec.egg-info/PKG-INFO
+scrapec.egg-info/SOURCES.txt
+scrapec.egg-info/dependency_links.txt
+scrapec.egg-info/entry_points.txt
+scrapec.egg-info/top_level.txt
+src/__init__.py
+src/scrapec.py

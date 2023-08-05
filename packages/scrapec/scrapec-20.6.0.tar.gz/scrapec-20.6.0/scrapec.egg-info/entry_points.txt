@@ -1,0 +1,3 @@
+[console_scripts]
+scrapec = src.scrapec:main
+

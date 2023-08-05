@@ -1,0 +1,6 @@
+aiohttp<4,>=3
+cchardet>=2.1.6
+aiodns>=2.0.0
+async-lru>=1.0.2
+lxml>=4.5.1
+tenacity>=6.2.0

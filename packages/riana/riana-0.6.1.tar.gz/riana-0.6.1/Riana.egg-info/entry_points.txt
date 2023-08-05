@@ -1,0 +1,3 @@
+[console_scripts]
+riana = riana.__main__:main
+

@@ -1,0 +1,11 @@
+booktool/__init__.py,sha256=y_KyRCjGjsLESlEUMArWSWt3rfrDi6q8Wd3gNDZIJgo,147
+booktool/__main__.py,sha256=AJ1Pz6EZDwf4x5S212IPUzwcLnVGiwqbErWKL2U3rBU,4358
+booktool/util.py,sha256=lahevxqnkY9w2TFHMh9dhwGHeS62mTA3-bLD38cUDK8,3539
+booktool/audio/__init__.py,sha256=WfTHf9pM66iLMGtL95tm8i7IZYRCnX5zXyw0RVN6X70,577
+booktool/audio/group.py,sha256=uGVLN1nydBE6YIiEtBprogYT5nV17IlaUzLDAAxVJWM,1562
+booktool/audio/track.py,sha256=hmdSbAIV2linGbYD7exVpEzsPa0HCWYAYcd1zy930Vg,8891
+booktool-0.6.0.dist-info/METADATA,sha256=5MteLp5F2CiW2ZsRwAHtgPMh-iQg9A28SDwqWELtLPg,1867
+booktool-0.6.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+booktool-0.6.0.dist-info/entry_points.txt,sha256=AzhZuWHRtAbjdSb414iehgC9435p98tAi5trIczR5wk,53
+booktool-0.6.0.dist-info/top_level.txt,sha256=LBZ8YLdPwpbPNWC7aAJalXUzYuzz4rFjRvAReNom0oE,9
+booktool-0.6.0.dist-info/RECORD,,

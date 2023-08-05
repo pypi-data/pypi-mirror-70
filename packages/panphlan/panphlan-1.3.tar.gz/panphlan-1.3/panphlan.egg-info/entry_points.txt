@@ -1,0 +1,6 @@
+[console_scripts]
+panphlan_map.py = panphlan.panphlan_map:main
+panphlan_new_pangenome_generation.py = panphlan.panphlan_new_pangenome_generation:main
+panphlan_pangenome_generation.py = panphlan.panphlan_pangenome_generation:main
+panphlan_profile.py = panphlan.panphlan_profile:main
+

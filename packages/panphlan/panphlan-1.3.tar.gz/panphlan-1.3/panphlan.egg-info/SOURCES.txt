@@ -1,0 +1,14 @@
+README.md
+setup.py
+panphlan/panphlan_map.py
+panphlan/panphlan_new_pangenome_generation.py
+panphlan/panphlan_pangenome_generation.py
+panphlan/panphlan_profile.py
+panphlan/utils.py
+panphlan.egg-info/PKG-INFO
+panphlan.egg-info/SOURCES.txt
+panphlan.egg-info/dependency_links.txt
+panphlan.egg-info/entry_points.txt
+panphlan.egg-info/requires.txt
+panphlan.egg-info/top_level.txt
+panphlan/tools/roary2panphlan.py

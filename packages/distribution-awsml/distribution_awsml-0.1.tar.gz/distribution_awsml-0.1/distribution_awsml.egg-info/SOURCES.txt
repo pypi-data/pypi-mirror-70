@@ -1,0 +1,6 @@
+setup.py
+distribution_awsml.egg-info/PKG-INFO
+distribution_awsml.egg-info/SOURCES.txt
+distribution_awsml.egg-info/dependency_links.txt
+distribution_awsml.egg-info/not-zip-safe
+distribution_awsml.egg-info/top_level.txt

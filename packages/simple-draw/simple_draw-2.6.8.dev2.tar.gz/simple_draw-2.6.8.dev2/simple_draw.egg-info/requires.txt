@@ -1,0 +1,2 @@
+pygame==2.0.0.dev8
+pillow==7.1.2

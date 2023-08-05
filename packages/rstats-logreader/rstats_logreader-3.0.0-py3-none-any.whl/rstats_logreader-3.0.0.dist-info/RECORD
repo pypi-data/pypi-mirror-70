@@ -1,0 +1,10 @@
+rstats_logreader/VERSION,sha256=yRY_8h8fKwOQ3Ei92kcXlxj3cvUHp8687KWc4acSkCk,5
+rstats_logreader/__init__.py,sha256=RLEy7juHqTN1HyHp2_IJgaHUEqjDBDsTFQnyBpruCPE,730
+rstats_logreader/cli.py,sha256=jdtbjrMWot_3tJYg5Jj0q0cBAMtkSwv4TN7UVALZMiI,3463
+rstats_logreader/reader.py,sha256=b5MAdtBoNU_Ej142Uvttc1qsfh_dVkiY7ELajop4W00,12511
+rstats_logreader-3.0.0.dist-info/LICENSE,sha256=vFp2WyxNibNO1tLjAlq4qBuNRgYGY1iLYPF4B0XjxnE,11855
+rstats_logreader-3.0.0.dist-info/METADATA,sha256=8BEeaQemgVdNrvm53YcZgk8JbYeP8TixkUGuIoar7vc,3255
+rstats_logreader-3.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rstats_logreader-3.0.0.dist-info/entry_points.txt,sha256=gxj7HAmWWIMLulqYXlB7Cg3JaeCwwTrKRkDK_psJs6w,61
+rstats_logreader-3.0.0.dist-info/top_level.txt,sha256=DY3PkFpBshkfii1DZAD4llb8WRowL0d36FQ9YYkiddA,17
+rstats_logreader-3.0.0.dist-info/RECORD,,

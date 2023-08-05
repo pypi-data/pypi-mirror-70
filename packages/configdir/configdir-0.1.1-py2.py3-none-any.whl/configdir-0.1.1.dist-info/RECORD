@@ -1,0 +1,8 @@
+configdir/__init__.py,sha256=lwl7OKngcTPDTSd3QBAi6GDDt33XACJgcoeSNoEu5d4,460
+configdir/compat.py,sha256=vHsLzuL-LFMDXQhijmU8XUKRySzCkC30W66EC1kyEUw,358
+configdir/interpolator.py,sha256=qhpmvw-q-5WTz-DJ0gGndBDcVZA4uzFdsKXDYHILDFM,2924
+configdir/parser.py,sha256=GPI4dNCAx-8GOA7oozNqjKLzukcA92YQq1YXVXie3X0,1876
+configdir-0.1.1.dist-info/LICENSE,sha256=qkN1GRskNACTaKNIMPZMTaoUPdoHBxWYwiSIb8ZVexA,1073
+configdir-0.1.1.dist-info/WHEEL,sha256=kvwuEKnRH6O8i0OndiTtSFFMuXs9x3oJYWvW5x4ISEE,87
+configdir-0.1.1.dist-info/METADATA,sha256=oOMColP_k4yirindGvnYK5hDASehxBT3TiEVliDUsCs,7119
+configdir-0.1.1.dist-info/RECORD,,

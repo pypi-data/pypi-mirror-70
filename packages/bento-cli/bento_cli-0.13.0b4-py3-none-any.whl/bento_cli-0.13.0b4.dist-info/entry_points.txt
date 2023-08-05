@@ -1,0 +1,4 @@
+[console_scripts]
+bento=bento.__main__:main
+bentoh=bento.__main__:headless
+

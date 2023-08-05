@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: click-prettify
+Version: 0.2.0
+Summary: Extensions for click to make pretty CLIs in Python
+Home-page: https://github.com/jnrbsn/python-click-prettify
+Author: Jonathan Robson
+Author-email: jnrbsn@gmail.com
+License: MIT
+Description: Extensions for click to make pretty CLIs in Python
+        
+Platform: UNKNOWN
+Provides-Extra: dev

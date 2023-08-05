@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+click_prettify.py
+setup.py
+click_prettify.egg-info/PKG-INFO
+click_prettify.egg-info/SOURCES.txt
+click_prettify.egg-info/dependency_links.txt
+click_prettify.egg-info/requires.txt
+click_prettify.egg-info/top_level.txt

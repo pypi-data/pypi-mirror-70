@@ -1,0 +1,6 @@
+click
+colorama
+
+[dev]
+flake8
+twine

@@ -1,0 +1,10 @@
+setup.py
+SK7-distributions/Binomialdistribution.py
+SK7-distributions/Gaussiandistribution.py
+SK7-distributions/Generaldistribution.py
+SK7-distributions/__init__.py
+SK7_distributions.egg-info/PKG-INFO
+SK7_distributions.egg-info/SOURCES.txt
+SK7_distributions.egg-info/dependency_links.txt
+SK7_distributions.egg-info/not-zip-safe
+SK7_distributions.egg-info/top_level.txt

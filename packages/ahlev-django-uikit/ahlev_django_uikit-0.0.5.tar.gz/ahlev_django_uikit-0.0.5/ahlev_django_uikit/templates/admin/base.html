@@ -1,0 +1,205 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+  {% block extrastyle %}{% endblock %}
+  {% block extrahead %}{% endblock %}
+
+  {% block blockbots %}
+  <meta name="robots" content="NONE,NOARCHIVE">
+  {% endblock %}
+
+  <link rel="stylesheet" href="{% static 'uikit/css/login-dark.css' %}" />
+  <link rel="stylesheet" href="{% static 'uikit/css/site.css' %}" />
+  <link rel="stylesheet" href="{% static 'uikit/css/uikit.min.css' %}" />
+  <script src="{% static 'uikit/js/uikit.min.js' %}"></script>
+  <script src="{% static 'uikit/js/uikit-icons.min.js' %}"></script>
+
+  <script src="https://cdn.tiny.cloud/1/5p05qo54lyn29kp9xl07k0wj4wmus2v19rqu1yzgr8tws71c/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="{% static 'uikit/js/site.js' %}"></script>
+  <script src="{% static 'admin/js/actions.js' %}"></script>
+
+  {% block extracss %}{% endblock %}
+
+  {% block extrajs %}{% endblock %}
+
+</head>
+
+<body>
+  <header id="header" style="background-color: #fff; border-bottom: 1px solid rgb(248, 248, 248);"
+    data-uk-sticky="show-on-up: true; animation: uk-animation-fade; media: @l">
+    <div class="uk-container">
+
+      {% block nav %}
+
+      <nav id="navbar" data-uk-navbar="mode: click;">
+        <div class="uk-navbar-left nav-overlay">
+          {% block socials %}
+          <div class="uk-navbar-item">
+            <a class="uk-visible@s" style="margin-right: 4px;" href="https://www.facebook.com/ohahlev"
+              uk-icon="icon: facebook; ratio: 2.0"></a>
+            <a class="uk-visible@s" style="margin-right: 4px;"
+              href="https://www.youtube.com/channel/UCW5ecqlRPhjLMramP3HnZjQ" uk-icon="icon: youtube; ratio: 2.0"></a>
+            <a class="uk-navbar-toggle uk-hidden@m" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>
+          </div>
+          {% endblock %}
+        </div>
+
+        {% block brand %}
+        <div class="uk-navbar-center nav-overlay">
+          <a class="uk-navbar-item uk-logo" href="/admin" title="Logo"><img src="{% static 'uikit/img/logo.png' %}" alt="Logo"></a>
+        </div>
+        {% endblock %}
+      
+        <div class="uk-navbar-right nav-overlay uk-visible@m">
+          <ul class="uk-navbar-nav">
+            <li>
+              <a class="uk-navbar-toggle uk-visible@m" data-uk-search-icon
+                data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+            </li>
+            {% if user %}
+            <li>
+              <a href="#">{{user}}</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  {% if user.has_usable_password %}
+                  <li>
+                    <a href="{% url 'admin:password_change' %}">{% trans 'Change Password' %}</a>
+                  </li>
+                  {% endif %}
+                  <li>
+                    <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            {% endif%}
+          </ul>
+        </div>
+
+        <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+          <div class="uk-navbar-item uk-width-expand">
+            <form id="changelist-search" class="uk-search uk-search-navbar uk-width-1-1" method="get">
+              <input class="uk-search-input" type="search" id="searchbar" name="q" value="{{ cl.query }}"
+                placeholder="Search..." autofocus>
+            </form>
+          </div>
+          <a class="uk-navbar-toggle" data-uk-close data-uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+            href="#">
+          </a>
+        </div>
+
+      </nav>
+
+      {% endblock %}
+
+    </div>
+  </header>
+
+  {% block content%}{% endblock %}
+
+  <!--
+  <div class="uk-section uk-section-default">
+    <div class="uk-container">
+    
+    </div>
+  </div>
+  -->
+
+  <footer class="uk-section uk-section-small uk-section-muted" uk-sticky="bottom: #uk-offcanvas-content">
+    <div class="uk-container">
+      <span class="uk-text-small uk-text-muted"><a href="https://github.com/ohahlev">ohahlev@gmail.com</a></span>
+    </div>
+  </footer>
+
+  <div id="uk-offcanvas-content">
+    <!-- Content -->
+    <div>
+      <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close=""><svg width="14" height="14"
+              viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
+              <line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
+              <line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+            </svg></button>
+          <ul class="uk-nav uk-nav-secondary">
+
+            {% for app in app_list %}
+            <li class="uk-parent">
+              <a href="{{ app.app_url }}" class="uk-text-uppercase">
+                <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    data-svg="thumbnails">
+                    <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                  </svg>
+                </span>
+                {{ app.app_label}}</a>
+
+              <ul class="uk-nav-sub">
+                {% for model in app.models %}
+                <li>
+                  <a href="{{ model.admin_url }}">
+                    <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails">
+                      <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                        data-svg="thumbnails">
+                        <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                        <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                        <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                        <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                      </svg>
+                    </span>
+                    {{ model.name }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+
+            <li class="uk-nav-divider"></li>
+
+            <li>
+              <a href="{% url 'admin:password_change' %}" class="uk-text-uppercase">
+                <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    data-svg="thumbnails">
+                    <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                  </svg>
+                </span> {% trans 'Change Password' %}
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'admin:logout' %}" class="uk-text-uppercase">
+                <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                    data-svg="thumbnails">
+                    <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                    <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                  </svg>
+                </span>
+                {% trans 'Log out' %}
+              </a>
+            </li>
+          </ul>
+          <h3>WELCOME</h3>
+          <p>ohahlev@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

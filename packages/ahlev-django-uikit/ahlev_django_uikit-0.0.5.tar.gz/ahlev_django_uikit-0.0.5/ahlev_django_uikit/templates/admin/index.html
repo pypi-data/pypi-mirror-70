@@ -1,0 +1,70 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+
+{% block content %}
+<div class="uk-section uk-section-default">
+  <div class="uk-container">
+    {% if app_list %}
+    <div class="uk-grid uk-grid-medium" data-uk-grid>
+      {% for app in app_list %}
+      <div class="uk-width-1-2@l">
+        <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+          <div class="uk-card-header">
+            <div class="uk-grid uk-grid-small">
+              <div class="uk-width-auto">
+                <a href="{{ app.app_url }}" class="uk-text-lead uk-text-uppercase uk-text-primary">
+                  <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnail">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="thumbnail">
+                      <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                      <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                      <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                      <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                    </svg>
+                  </span>
+                  {{ app.app_label }}
+                </a>
+              </div>
+              <div class="uk-width-expand uk-text-right panel-icons">
+                <a href="#" class="uk-icon-link" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a>
+                <a href="#" class="uk-icon-link" title="Configuration" data-uk-tooltip data-uk-icon="icon: cog"></a>
+                <a href="#" class="uk-icon-link" title="Close" data-uk-tooltip data-uk-icon="icon: close"></a>
+              </div>
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <div class="uk-grid uk-grid-medium" data-uk-grid>
+              {% for model in app.models %}
+              <div class="uk-width-1-2@l">
+                <div class="uk-card uk-card-default uk-card-small uk-card-hover">
+                  <div class="uk-card-header">
+                    <div class="uk-grid uk-grid-small uk-flex-center">
+                      <div class="uk-width-auto">
+                        <a href="{{ model.admin_url }}" class="uk-text-small uk-text-uppercase">
+                          <span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnail">
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                              data-svg="thumbnail">
+                              <rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect>
+                              <rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect>
+                              <rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect>
+                              <rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect>
+                            </svg>
+                          </span>
+                          {{ model.name }}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

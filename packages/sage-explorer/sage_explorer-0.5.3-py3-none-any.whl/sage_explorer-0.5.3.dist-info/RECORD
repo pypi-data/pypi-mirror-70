@@ -1,0 +1,13 @@
+sage_explorer/__init__.py,sha256=uGatyIW4uTCt1H2IUAdcF1cdXqkx6kctIv91nEdxN7s,401
+sage_explorer/_catalogs.py,sha256=HsVt37Qa53hS3akQu4pdjWR-rq1F1VGmQsl-W37REoE,1960
+sage_explorer/_sage_catalog.py,sha256=R8pdrWea1u-CLThXsQPr9L-uG0Dsiqn4IoOLilI45k0,2364
+sage_explorer/_widgets.py,sha256=QJH5rTQJermD-W_-nMsJW9c9CB-QTl03_YK2DjHG4Ck,7475
+sage_explorer/explored_member.py,sha256=g1XkSdGGguP7hnUmgxlxtxTB3hW6HfqVqjLlje2vZXs,19822
+sage_explorer/flatsurf.yml,sha256=vm7MmEiEw0NehEHXvPh5P9z2dBYtSuJxmopnRs7bH_8,231
+sage_explorer/properties.yml,sha256=XnL1gSItiFz2GRsJZIJ716nB6PyLiyDUT6zelRhzAsQ,2618
+sage_explorer/sage_explorer.py,sha256=0PQc_mHUx6t-yP-2JgwumnSNLuUK3BuBMT0Mw5iSxfo,68419
+sage_explorer-0.5.3.dist-info/LICENSE,sha256=2ylvL381vKOhdO-w6zkrOxe9lLNBhRQpo9_0EbHC_HM,18046
+sage_explorer-0.5.3.dist-info/METADATA,sha256=hTjyVKyQtc1Bj_kWlK7kiKtdqlvvXlizHJPW7IQoYLs,2666
+sage_explorer-0.5.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+sage_explorer-0.5.3.dist-info/top_level.txt,sha256=pXUZpmUXHMIzWVaf1bw5FBn-Al8egk7nv18TPYSWyPc,14
+sage_explorer-0.5.3.dist-info/RECORD,,

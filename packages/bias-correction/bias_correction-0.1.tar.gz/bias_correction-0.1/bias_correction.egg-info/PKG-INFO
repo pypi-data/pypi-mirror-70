@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bias-correction
+Version: 0.1
+Summary: python library for bias_correction
+Home-page: https://github.com/pankajkarman/bias_correction
+Author: Pankaj Kumar
+Author-email: pankaj.kmr1990@gmail.com
+License: MIT
+Description: ### About
+        
+        The module `bias_correction` consists of functions to perform bias correction of datasets with some overlap datasets.
+        
+        ### Installation
+        
+        ```
+        pip install bias_correction
+        ```
+        ### Usage
+        
+        `bias_correction` is easy to use. Just import:
+        
+        ```python
+        import bias_coorection as bc
+        ```
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

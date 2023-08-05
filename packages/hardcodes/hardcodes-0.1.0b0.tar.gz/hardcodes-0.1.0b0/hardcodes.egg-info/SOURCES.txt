@@ -1,0 +1,8 @@
+README.md
+setup.py
+hardcodes/__init__.py
+hardcodes/hardcodes.py
+hardcodes.egg-info/PKG-INFO
+hardcodes.egg-info/SOURCES.txt
+hardcodes.egg-info/dependency_links.txt
+hardcodes.egg-info/top_level.txt

@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: hardcodes
+Version: 0.1.0b0
+Summary: Extracted hardcoded strings from source code
+Home-page: https://github.com/s0md3v/hardcodes
+Author: Somdev Sangwan
+Author-email: s0md3v@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: hardcodes,lexer,syntax,security
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

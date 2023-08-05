@@ -1,0 +1,11 @@
+README.md
+setup.py
+octool/__init__.py
+octool/__main__.py
+octool/cli.py
+octool/version.py
+octool.egg-info/PKG-INFO
+octool.egg-info/SOURCES.txt
+octool.egg-info/dependency_links.txt
+octool.egg-info/entry_points.txt
+octool.egg-info/top_level.txt

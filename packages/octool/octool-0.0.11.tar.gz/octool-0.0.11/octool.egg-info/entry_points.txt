@@ -1,0 +1,3 @@
+[console_scripts]
+octool = octool.__main__:main
+

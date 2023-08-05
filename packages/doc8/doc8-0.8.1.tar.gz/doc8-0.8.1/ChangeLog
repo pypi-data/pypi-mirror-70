@@ -1,0 +1,128 @@
+CHANGES
+=======
+
+0.8.1
+-----
+
+* README: Further tweaks
+* Resolve README issues
+* Accept the :substitutions: option on code-block directives in Sphinx
+* Ignore 'nowrap' option for 'math' directive
+
+0.8.1rc3
+--------
+
+* Configure packaging and release
+* Ignore 'label' option for 'math' directive
+* doc8/checks: ignore emphasize-lines errors in Sphinx mode
+* Accept the :caption: option on code-block directives in Sphinx
+
+0.8.1rc2
+--------
+
+* Refactor to support direct invocation from python
+* Add tests for command line invocation
+* Standardise check name across python versions
+* Adopt python black
+* Enable pre-commit
+
+0.8.1rc1
+--------
+
+* Fix formatting of pre-commit-hooks.yaml
+* Fix '\_\_main\_\_'
+* Added badges to the README
+* Fix travis
+* Fixed tox docs
+* Add pre-commit hook definition
+* Allow doc8 to be called as a module
+* Integrate Travis
+* Update hacking version
+* gitignore: Ignore pbr generated metadata
+* Modernize doc building process
+* General cleanup
+* setup.cfg: Indicate supported versions of Python
+* CONTRIBUTING: Update after move to GitHub
+* setup.cfg: Update author, maintainer details
+* Add Pygments to the requirements list
+
+0.8.0
+-----
+
+* Remove os.path.abspath() in ignore paths
+* Fix ignore\_path\_errors call in main
+* Add a -q option to be silent on success
+* Change py34 to py35
+
+0.7.0
+-----
+
+* Skip long line check for rst definition list term
+* Remove argparse from requirements
+* Remove support for py33/py26
+* remove python 2.6 trove classifier
+* Put py34 first in the env order of tox
+* Deprecated tox -downloadcache option removed
+* Added the launchpad bug url and fixed one typo
+* Update .gitreview for new namespace
+* Use a more relevant launchpad home-page url
+* Fix grammar issue in README.rst
+* Fix invalid table formatting
+* Fix issue of checking max\_len for directives
+
+0.6.0
+-----
+
+* Lowercase the help messages
+* Allow ignore specific error codes in files
+* Handle the linter returning anonyomous line numbers
+* Fix Python 3 support
+* Workflow documentation is now in infra-manual
+
+0.5.0
+-----
+
+* Fix the 'ignore-path' config option
+* Allow overriding file encoding
+* Add check D005 - no newline at end of file
+
+0.4.3
+-----
+
+* Remove commented configuration of the intersphinx module
+* Allow a default\_extension to be provided
+* Warn against sorting requirements
+* Ensure reading is done in one place only
+* Just use get() instead of pop()
+* Split the main function into pieces
+* Ignore long-lines with urls when in text searching mode
+* Improve help options
+* Cache the lines that are read instead of re-reading
+* Use list of FILE\_PATTERNS as default for --extension
+* Rewrite method contains\_url in utils
+* Use a documented constant for the docutils levels
+* Document the exceptions are for RST format only
+
+0.4.2
+-----
+
+* Just remove the features sub-section
+
+0.4.1
+-----
+
+* Log that the check does not understand the extension when verbose
+* Adjust the description to denote we can parse more than rst
+
+0.4.0
+-----
+
+* Add version argument and output
+* Allow checks to provide a extension matcher
+* Add ignore\_paths to ini file and document ini with example
+* Use print when in verbose mode
+
+0.3.8
+-----
+
+* Use regex instead of prefix matches

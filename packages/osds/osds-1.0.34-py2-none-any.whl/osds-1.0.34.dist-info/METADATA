@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: osds
+Version: 1.0.34
+Summary: PyTorch Object Storage Dataset
+Home-page: http://github.com/osipov/osds
+Author: Carl Osipov
+Author-email: carl.osipov@gmail.com
+License: GPL v2.0
+Platform: UNKNOWN
+Requires-Dist: fsspec
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: s3fs
+Requires-Dist: gcsfs
+
+UNKNOWN
+
+

@@ -1,0 +1,7 @@
+README.md
+setup.py
+DBS_MAIA.egg-info/PKG-INFO
+DBS_MAIA.egg-info/SOURCES.txt
+DBS_MAIA.egg-info/dependency_links.txt
+DBS_MAIA.egg-info/not-zip-safe
+DBS_MAIA.egg-info/top_level.txt

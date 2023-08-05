@@ -1,0 +1,10 @@
+README.md
+setup.py
+folderclean/__init__.py
+folderclean/command_line.py
+folderclean.egg-info/PKG-INFO
+folderclean.egg-info/SOURCES.txt
+folderclean.egg-info/dependency_links.txt
+folderclean.egg-info/entry_points.txt
+folderclean.egg-info/requires.txt
+folderclean.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+src/demo/__init__.py
+src/demo/cli.py
+src/demo/manage_secrets.py
+src/demo_python_aws_click.egg-info/PKG-INFO
+src/demo_python_aws_click.egg-info/SOURCES.txt
+src/demo_python_aws_click.egg-info/dependency_links.txt
+src/demo_python_aws_click.egg-info/entry_points.txt
+src/demo_python_aws_click.egg-info/requires.txt
+src/demo_python_aws_click.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+include versioneer.py
+include romus/_version.py

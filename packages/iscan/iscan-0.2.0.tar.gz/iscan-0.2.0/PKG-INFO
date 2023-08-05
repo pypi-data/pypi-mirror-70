@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: iscan
+Version: 0.2.0
+Summary: iscan helps you identify your project's direct dependencies
+Home-page: https://github.com/ZhengnanZhao/iscan
+Author: Zhengnan Zhao
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Provides-Extra: dev

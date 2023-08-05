@@ -1,0 +1,9 @@
+colormap/__init__.py,sha256=Leb8kh4JnlZfoa2CpKnoF-bqhhPrBDq6rOtug1RpdL0,327
+colormap/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colormap/scripts/cli.py,sha256=nmE4cWIAilPllpvtuf_w0_0Eegx7wzsvpNvh15Cf2-I,896
+rio_colormap-1.2.1.dist-info/LICENSE,sha256=KUYGJ4QsozxAYpfYubKAXY-usi3noUU1hQlTO07KRZk,1074
+rio_colormap-1.2.1.dist-info/METADATA,sha256=rJkDIERZ7UBgRPF_Cd61LR8RUqh9a3fLI0EukQXZlrs,1484
+rio_colormap-1.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rio_colormap-1.2.1.dist-info/entry_points.txt,sha256=gr_eY5EYUitho2G8Qsss7Rs__waxO1PCisRpiIDNJIE,82
+rio_colormap-1.2.1.dist-info/top_level.txt,sha256=EzA_UbyiRZ69j6IL1oMeS3JTo2Y8sogbGnOGTShKdj0,9
+rio_colormap-1.2.1.dist-info/RECORD,,

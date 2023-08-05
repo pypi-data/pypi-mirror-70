@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+emgper_distributions.egg-info/PKG-INFO
+emgper_distributions.egg-info/SOURCES.txt
+emgper_distributions.egg-info/dependency_links.txt
+emgper_distributions.egg-info/not-zip-safe
+emgper_distributions.egg-info/top_level.txt

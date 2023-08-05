@@ -1,0 +1,14 @@
+cvgear/__init__.py,sha256=1D8KpNV4Pm4IoISnjb5XaJRj-mdGPj_rx4_36JoREXw,72
+cvgear/framework/__init__.py,sha256=bjLdSucHE0ePaIQjxegPNjFUrV2ZoRDO6-V5MzXQG5E,56
+cvgear/framework/nested_dict.py,sha256=7zJDbh61y-GvqqapHg0VpeIEfxqXb3C7dUhdH-7YKaU,2923
+cvgear/framework/darknet/__init__.py,sha256=dDa6m2xWkRV9PZjooy9clouJidMpRGuPPCpJjqGFXTQ,125
+cvgear/framework/darknet/loader.py,sha256=iMHQkxhfOMD4WU2Z-X0K-8jK0maz_7rm_YFmmaIhmZ0,12878
+cvgear/framework/darknet/parser.py,sha256=rGLhJyNIEDtLVu2-8gZugs82aEPQVtlZlvLf3y7OT2E,19632
+cvgear/framework/torch/__init__.py,sha256=LU52m8s2wjG2L_2gi_RKP6xxsE11JQXE76G4QZ9G3W4,88
+cvgear/framework/torch/loader.py,sha256=KPbpkUBoW4jFqww0RzNwj8bifhUaXinKn18qv29lqDc,9077
+cvgear/framework/torch/loader_advanced.py,sha256=e3-dvbFZx7RD-RhnctYR_avPZHuMSEFppXYYp5T_tjU,11016
+cvgear-0.1.1.dist-info/LICENSE,sha256=bH1eG_M1PtesCFi58zmFIj06xYotMGGWnMyfRxUmsrE,1087
+cvgear-0.1.1.dist-info/METADATA,sha256=hfEvyvGuXkyshA97V4XHaTjhOpsf4RoVAk33cRXIYmU,259
+cvgear-0.1.1.dist-info/WHEEL,sha256=IWeGwTvdiaNRNtdERe0BHc5KsCqvvVfLuP8HWeQWYGw,97
+cvgear-0.1.1.dist-info/top_level.txt,sha256=sDSqmPYzB8ZDVskj2c5xYWZzmcfV6h6mATVxnoC8Fhc,7
+cvgear-0.1.1.dist-info/RECORD,,

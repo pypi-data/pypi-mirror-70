@@ -1,0 +1,10 @@
+setup.py
+Esipraisal/Appraisal.py
+Esipraisal/Esipraisal.py
+Esipraisal/__init__.py
+Esipraisal/esi.py
+Esipraisal.egg-info/PKG-INFO
+Esipraisal.egg-info/SOURCES.txt
+Esipraisal.egg-info/dependency_links.txt
+Esipraisal.egg-info/requires.txt
+Esipraisal.egg-info/top_level.txt

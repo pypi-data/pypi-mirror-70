@@ -1,0 +1,2 @@
+django-tinymce
+ahlev_django_uikit

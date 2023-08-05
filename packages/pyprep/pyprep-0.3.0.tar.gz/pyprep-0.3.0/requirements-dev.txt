@@ -1,0 +1,14 @@
+black
+pre-commit
+pytest<5.4
+pytest-cov
+pytest-sugar
+check-manifest
+flake8
+flake8-docstrings
+sphinx
+sphinx_gallery
+sphinx_bootstrap_theme
+numpydoc
+pillow
+matplotlib

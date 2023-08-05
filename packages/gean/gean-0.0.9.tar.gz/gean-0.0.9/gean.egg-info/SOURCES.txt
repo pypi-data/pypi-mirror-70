@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+gean/__init__.py
+gean.egg-info/PKG-INFO
+gean.egg-info/SOURCES.txt
+gean.egg-info/dependency_links.txt
+gean.egg-info/top_level.txt

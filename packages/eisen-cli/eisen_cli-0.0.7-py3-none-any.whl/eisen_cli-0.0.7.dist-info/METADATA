@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: eisen-cli
+Version: 0.0.7
+Summary: Eisen Command Line Interface (CLI)
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: six (==1.13.0)
+Requires-Dist: torchvision (==0.6.0)
+Requires-Dist: torch (==1.5.0)
+Requires-Dist: Click (==7.0)
+Requires-Dist: Pillow (>=6.2.2)
+
+UNKNOWN
+
+

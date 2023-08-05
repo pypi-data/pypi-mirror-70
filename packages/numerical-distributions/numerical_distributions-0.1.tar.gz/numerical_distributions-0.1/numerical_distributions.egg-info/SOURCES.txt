@@ -1,0 +1,11 @@
+README.md
+setup.py
+numerical_distributions/Binomialdistribution.py
+numerical_distributions/Gaussiandistribution.py
+numerical_distributions/Generaldistribution.py
+numerical_distributions/__init__.py
+numerical_distributions.egg-info/PKG-INFO
+numerical_distributions.egg-info/SOURCES.txt
+numerical_distributions.egg-info/dependency_links.txt
+numerical_distributions.egg-info/not-zip-safe
+numerical_distributions.egg-info/top_level.txt

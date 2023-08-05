@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: data-analysis-tools
+Version: 0.0.3
+Summary: Tools to read and analyse data files and Qudi data files.
+Home-page: https://github.com/alrik-durand/data_analysis_tools
+Author: Alrik Durand
+Author-email: alrik.durand@gmail.com
+License: GPLv3
+Description: # data_analysis_tools
+        
+        Python tools to analyse and plot the data.
+        
+        
+         
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,14 @@
+sox/__init__.py,sha256=DD4VJYzh-VygUOBFr2NNGxaVavK0f_dnD3iwhWfRnUc,689
+sox/combine.py,sha256=BNqeCmuUmcersY5tVPqsJ7rtzC7HDlOIuCNfcUW8r1k,18501
+sox/core.py,sha256=aWviwnKC7W66JIALKYMdp3pU9IV2HNcInfp22Ue44TI,6279
+sox/file_info.py,sha256=ifW_UDBs1RnTxA1O8U4zgi3AB2Hkgvb_fqU7iTRCmPA,9931
+sox/log.py,sha256=34KzqkWdP1N0WNkZKkRrkKcuuw_5RW-ReWkZogSG4ss,145
+sox/transform.py,sha256=ev8mJoJx8W9v7mKXwccpmJz4YSgSF_2fa-J7YgUylVU,132545
+sox/utilities.py,sha256=0xqAullqzAS1WjLaiHZ70CfdPjLaNvvJyAQxByYv-2g,2862
+sox/version.py,sha256=-5rBWh-sdlw_SPtNSiE2kM9OZsFtJgxhIdLkIQgL2xc,108
+sox-1.4.0b0.dist-info/LICENSE,sha256=hSp7UhY0iUX-ZqZIG1IvwbTV-OIJ-XBOHRVkgv1K9H4,1477
+sox-1.4.0b0.dist-info/METADATA,sha256=B43JU0ad38KowzraGmq9Ep6Fr_shmo1EorCAoRsAyqY,5311
+sox-1.4.0b0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+sox-1.4.0b0.dist-info/pbr.json,sha256=vH7l4YYCbPW8cB8mRgV1NDmcQmkRtDmG6FxEMROBHpc,47
+sox-1.4.0b0.dist-info/top_level.txt,sha256=7p10ZwbiSGrQeo7iZYY5zfZ-QzPmWqn-InQEFseJpT8,4
+sox-1.4.0b0.dist-info/RECORD,,

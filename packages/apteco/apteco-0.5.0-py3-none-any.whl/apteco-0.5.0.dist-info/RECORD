@@ -1,0 +1,11 @@
+apteco/__init__.py,sha256=hKPzdvdiSJDUPlKKeWhtOYoKHxts-y4doE_XJcp_tKM,216
+apteco/cube.py,sha256=WepbRZYXyoupWEqgphK2FKnLqmUTiuXGcMFI7RcAMPQ,5044
+apteco/data/apteco_logo.py,sha256=EiPMxWjI7fyX_GPG7QAz5Ui76gYalWXxDombXSflfNs,9914
+apteco/datagrid.py,sha256=PH9Z62xenVZ_extwKVuaN-rEpauuRdfZ5M1asje3gZA,3635
+apteco/exceptions.py,sha256=tIxVxxpw-kGa2-2dhHT54HtM4EDPjBgSAaSlRnJkuag,598
+apteco/query.py,sha256=6Oig8spl_tsmCe8SrAlkAV4_lGT4LA2OOd2UFP9Kipc,35483
+apteco/session.py,sha256=9POB3qisRyMDsQNz9oxtd-5k06KZ2fJ0KAqjDoO6w0A,33835
+apteco-0.5.0.dist-info/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+apteco-0.5.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+apteco-0.5.0.dist-info/METADATA,sha256=ckIGidW3XbK9RY7z_PHYTEQiWAIipxfFDqw_wn3wjUU,7559
+apteco-0.5.0.dist-info/RECORD,,

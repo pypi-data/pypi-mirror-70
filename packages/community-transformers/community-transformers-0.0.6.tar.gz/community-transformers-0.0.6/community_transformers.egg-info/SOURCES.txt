@@ -1,0 +1,9 @@
+README.md
+setup.py
+community_transformers.egg-info/PKG-INFO
+community_transformers.egg-info/SOURCES.txt
+community_transformers.egg-info/dependency_links.txt
+community_transformers.egg-info/top_level.txt
+tests/test_t.py
+transformers/__init__.py
+transformers/t.py

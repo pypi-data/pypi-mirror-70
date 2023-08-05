@@ -1,0 +1,11 @@
+gensim
+matplotlib
+nltk
+numpy
+os
+pandas
+plotly
+scipy
+sklearn
+textblob
+umap-learn

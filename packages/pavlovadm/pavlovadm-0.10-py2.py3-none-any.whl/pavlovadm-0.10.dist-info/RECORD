@@ -1,0 +1,9 @@
+pavlovadm/__init__.py,sha256=e35VeXQkgZNGiiFk_zPicrnQzyNXcdpQchgyh7NE72k,96
+pavlovadm/__main__.py,sha256=ymtGOUza7-q1SMjtLgQd2lXAKtgsliFe8MQ_kaPc7G4,34
+pavlovadm/__pkginfo__.py,sha256=XowQcWG5VmeQvD3bGe1mfm-m8iTfNGbDNIoyqfRYvE0,1439
+pavlovadm/pavlovadm.py,sha256=GkYN1JHpQGYj8Rro7eFK8KlHeEJ8OLiM6gOnR_Iez7w,13042
+pavlovadm-0.10.dist-info/METADATA,sha256=YB_ymGzf5taER23-B_4xwDJNAIXpln-wzoAqAN1snQM,1145
+pavlovadm-0.10.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+pavlovadm-0.10.dist-info/entry_points.txt,sha256=DDjuRmRcCA1hm--sk8GmlIxAftypOf8UmAH736Eyq6M,50
+pavlovadm-0.10.dist-info/top_level.txt,sha256=ymMSmOjJ-eT1wHR4At1iVkb8AN6iw_FiJYMFSPn4DIo,10
+pavlovadm-0.10.dist-info/RECORD,,

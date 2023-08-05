@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: aricma_pretty_print
+Version: 0.0.2
+Summary: A small printer package to get some better looking print statements for any cli.
+Home-page: https://github.com/aricma/pretty-print.git
+Author: Adrian Mindak
+License: UNKNOWN
+Description: # Pretty Print
+        
+        This is a simple printer package. 
+        You can use it to print more useful information during development and also more readable prints for any production cli.  
+        
+        The package got inspired by the [jest] testing cli for javascript. Its colors, indents and order is very user friendly. 
+        
+        
+        
+        [jest]: (https://jestjs.io/)
+         
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

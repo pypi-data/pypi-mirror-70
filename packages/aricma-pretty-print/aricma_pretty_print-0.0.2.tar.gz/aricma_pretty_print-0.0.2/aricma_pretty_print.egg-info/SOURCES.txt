@@ -1,0 +1,9 @@
+README.md
+setup.py
+aricma_pretty_print.egg-info/PKG-INFO
+aricma_pretty_print.egg-info/SOURCES.txt
+aricma_pretty_print.egg-info/dependency_links.txt
+aricma_pretty_print.egg-info/top_level.txt
+pretty-print/__init__.py
+pretty-print/colors.py
+pretty-print/printer.py

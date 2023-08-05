@@ -1,0 +1,8 @@
+aws_cdk/aws_cloudtrail/__init__.py,sha256=JO15qDM4ivMWj0Zy4fjp4u5RYREN3ScBUfSa32asrj4,66134
+aws_cdk/aws_cloudtrail/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_cloudtrail/_jsii/__init__.py,sha256=aBaWzhMLwtrWW_2YEInqjk5OEtCf9fEzWe32sDduzJ4,520
+aws_cdk/aws_cloudtrail/_jsii/aws-cloudtrail@1.42.1.jsii.tgz,sha256=hdklgJD_BGP5HtRiF2UOchefDL2o4beFmH2QBJ_ewYA,59085
+aws_cdk.aws_cloudtrail-1.42.1.dist-info/METADATA,sha256=VdhsaDJFOsjb_QtxB8NdrRlppurOkONPRR-zX0zZjyY,6348
+aws_cdk.aws_cloudtrail-1.42.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_cloudtrail-1.42.1.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_cloudtrail-1.42.1.dist-info/RECORD,,

@@ -1,0 +1,16 @@
+README.md
+setup.py
+trainerdex/__init__.py
+trainerdex/client.py
+trainerdex/exceptions.py
+trainerdex/http.py
+trainerdex/leaderboard.py
+trainerdex/models.py
+trainerdex.egg-info/PKG-INFO
+trainerdex.egg-info/SOURCES.txt
+trainerdex.egg-info/dependency_links.txt
+trainerdex.egg-info/requires.txt
+trainerdex.egg-info/top_level.txt
+trainerdex.egg-info/zip-safe
+trainerdex/data/factions.json
+trainerdex/data/levels.json

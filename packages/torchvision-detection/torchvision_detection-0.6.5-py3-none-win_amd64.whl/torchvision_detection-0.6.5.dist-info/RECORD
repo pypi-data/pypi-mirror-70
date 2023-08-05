@@ -1,0 +1,11 @@
+torchvision_detection/__init__.py,sha256=RDxXrPaX1h-zrl-s9Bk-YwKGoCF1QtPwHcIq2tQ_R1o,125
+torchvision_detection/coco_eval.py,sha256=pOPbxzsJCnXzM9yISRIaQ211P70x9Ezv5gMeUmGE1N4,12356
+torchvision_detection/coco_utils.py,sha256=a3_nOH0AWG5piCdSxyCjjMs-70W81EVZuO_E7gt5mhA,9067
+torchvision_detection/engine.py,sha256=6j9qWMj8UQO9OJwimG3Y_wA7sAIzhCCt-uaYUXfaAp4,3895
+torchvision_detection/transforms.py,sha256=ULqg3CJg7FJ0HFMAd1Jtmeo7U5bkT253DbcnfLIbUFo,1584
+torchvision_detection/utils.py,sha256=vbad-bVe0B_usin20jKN8kyLf9FSvzAb3S22estQGAA,10081
+torchvision_detection-0.6.5.dist-info/LICENSE.md,sha256=wkeCHVlzgdGRE99FPtFrxr2Bgx-JJO9dTyi4XV0LyuQ,1521
+torchvision_detection-0.6.5.dist-info/METADATA,sha256=pyhzrsioI39FZSB7uoZfycYFxDe-vfIxMqyzRKstVfw,530
+torchvision_detection-0.6.5.dist-info/WHEEL,sha256=md2bjN-XmLHMv5ls1-E5x0jb5TuYDQZYMY6zid6owfw,103
+torchvision_detection-0.6.5.dist-info/top_level.txt,sha256=SdLaKeF9yUR07Jznjmu6QGrf-jwcyrGytNLXMYpr4ho,22
+torchvision_detection-0.6.5.dist-info/RECORD,,

@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: testchecksum1
+Version: 7.0.0
+Summary: This is for paytm checksum creation and verification in python
+Home-page: https://github.com/soumya-vats/python-new
+Author: Soumya Vats
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: Test
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

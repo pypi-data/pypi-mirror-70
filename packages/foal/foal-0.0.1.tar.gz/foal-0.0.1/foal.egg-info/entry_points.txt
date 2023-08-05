@@ -1,0 +1,3 @@
+[console_scripts]
+foal = foal.__main__:main
+

@@ -1,0 +1,17 @@
+README.md
+setup.py
+foal/__init__.py
+foal/__main__.py
+foal/acronyms.py
+foal/cli.py
+foal/version.py
+foal.egg-info/PKG-INFO
+foal.egg-info/SOURCES.txt
+foal.egg-info/dependency_links.txt
+foal.egg-info/entry_points.txt
+foal.egg-info/requires.txt
+foal.egg-info/top_level.txt
+foal/data/finance.yaml
+foal/data/global.yaml
+foal/data/technology.yaml
+foal/schema/acronyms.yaml

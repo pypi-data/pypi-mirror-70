@@ -1,0 +1,4 @@
+[console_scripts]
+pyplume.mech = pyplume.mech:mechCLI
+pyplume.model = pyplume.model:modelCLI
+

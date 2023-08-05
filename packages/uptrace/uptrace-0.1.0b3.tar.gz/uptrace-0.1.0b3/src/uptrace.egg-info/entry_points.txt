@@ -1,0 +1,3 @@
+[opentelemetry_span_exporter]
+span_exporter = uptrace.trace:Exporter
+

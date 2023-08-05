@@ -1,0 +1,14 @@
+v2ex_daily_mission/__init__.py,sha256=4sUs1WHpvcTePSMf2Qz7VIzm1_Tx7rMtNXWnxExIvEs,469
+v2ex_daily_mission/cli.py,sha256=j3o2FpP_Rs4z57e0WSJ3v-ITN5vsMmLYMrQ5Wf4N8po,4741
+v2ex_daily_mission/v2ex.py,sha256=Jtoh8rAXC8d8NQpzl8L8iJ9_Rh3qeTwXdS7JKNbzdVQ,2920
+v2ex_daily_mission/notifier/__init__.py,sha256=oGAkF91u8o1DzsVRF36XttFAmxJ7uSeUJYMgBh9wDP0,224
+v2ex_daily_mission/notifier/abc.py,sha256=NClxYwbLyJkn4z5dxwXmIjOlRW0eDoyKA8MKJY7EcBg,383
+v2ex_daily_mission/notifier/bark.py,sha256=tGBePAGqsSMSoZrzCo5DdZL6pLuqpF7Vly3pjMOtzH8,813
+v2ex_daily_mission/notifier/none.py,sha256=8FijzgOnjq8xyFwxAoM9j1FYYqVImCm9V39TzoaAtdc,297
+v2ex_daily_mission/notifier/slack.py,sha256=QnIK0HEJ93z0Kot0K2y6D2KMwZS-AJMdDU6AuSbtnHs,926
+v2ex_daily_mission-0.8.1.dist-info/LICENSE,sha256=zFqvoOKmE3klK6ll3E_hdyjMilbIwbZNmENskHCYcLc,1077
+v2ex_daily_mission-0.8.1.dist-info/METADATA,sha256=RxXtpBamHPX_bdyF9utO9EPOtCAvb8VqM1WfWY6MECs,5989
+v2ex_daily_mission-0.8.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+v2ex_daily_mission-0.8.1.dist-info/entry_points.txt,sha256=tpqxT7ZqrTnWfFN-dUqly-9pPC5VfbAUe8XIgfDH8Zw,53
+v2ex_daily_mission-0.8.1.dist-info/top_level.txt,sha256=dwpDxOTkiM_QFQCQpA7zaIqH7T8_k-gUc_QRb7eEw7E,19
+v2ex_daily_mission-0.8.1.dist-info/RECORD,,

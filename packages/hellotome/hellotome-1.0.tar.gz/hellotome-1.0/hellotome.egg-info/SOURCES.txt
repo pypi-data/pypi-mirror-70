@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+hellotome/__init__.py
+hellotome/hello.py
+hellotome.egg-info/PKG-INFO
+hellotome.egg-info/SOURCES.txt
+hellotome.egg-info/dependency_links.txt
+hellotome.egg-info/top_level.txt

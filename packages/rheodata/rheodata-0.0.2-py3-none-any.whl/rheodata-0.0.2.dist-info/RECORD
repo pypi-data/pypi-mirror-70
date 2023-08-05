@@ -1,0 +1,11 @@
+rheodata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rheodata/data_converter.py,sha256=w3JkMDJ_oOxQcAEO-ZMgUVlEEE1eFfou9EH_k2wlg3g,3280
+rheodata/extractors/ARES_G2.py,sha256=Q-u2_gENTCpGMADszeq3BXxEP1IpJDjhiw2jTcn0YgY,2034
+rheodata/extractors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rheodata/extractors/antonpaar.py,sha256=gp-hfeXvmPJMHY0HTNQ7evRxQUVUZPK9LJVkL7ZNPLs,6435
+rheodata/extractors/data_converter.py,sha256=KgXAQIZzaoRWqO3rbNoiUzilXqsssZiMm-ANulVt1KM,2588
+rheodata-0.0.2.dist-info/LICENSE,sha256=k49Yga8CP889JJaHlOpGFzr_be2nqMoep2chYeIDctk,1091
+rheodata-0.0.2.dist-info/METADATA,sha256=dAZhEN9gU-ACO2m3QTba4Tf-y2vW3z99vmsKDZrM6R4,448
+rheodata-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+rheodata-0.0.2.dist-info/top_level.txt,sha256=mHLT4RmXCGpu4cwiSU0sm_VkPtZlkWB57KZIitgPeBk,9
+rheodata-0.0.2.dist-info/RECORD,,

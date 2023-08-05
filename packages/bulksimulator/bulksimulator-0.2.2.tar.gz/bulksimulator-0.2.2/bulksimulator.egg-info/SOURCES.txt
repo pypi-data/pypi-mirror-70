@@ -1,0 +1,9 @@
+README.md
+setup.py
+bulksimulator/__init__.py
+bulksimulator/bulksimulator.py
+bulksimulator/csv_to_pgfplots.py
+bulksimulator.egg-info/PKG-INFO
+bulksimulator.egg-info/SOURCES.txt
+bulksimulator.egg-info/dependency_links.txt
+bulksimulator.egg-info/top_level.txt

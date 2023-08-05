@@ -1,0 +1,232 @@
+# Hyperparameter Optimization on the Grid
+This package provides a framework for performing hyperparameter optimization (HPO) using the ATLAS grid resources. 
+
+# Table of Contents
+1.  [Basic Workflow](#basic-workflow)
+2.  [Getting the code](#getting-the-code)
+3.  [Setup and Installation](#setup-and-installation)
+    * [Using the default conda environment](#using-the-default-conda-environment)
+    * [Inside a custom virtual environment](#inside-a-custom-virtual-environment)
+4.  [How to](#how-to)
+5.  [Managing Configuration Files](#managing-configuration-files)
+    * [HPO Configuration](#hpo-configuration)
+    * [Grid Configuration](#grid-configuration)
+    * [Model Configuration](#model-configuration)
+    * [Search Space onfiguration](#search-space-configuration)
+6.  [Running Hyperparameter Optimization Jobs](#Running-Hyperparameter-Optimization-Jobs)
+7.  [Monitoring Job Status](#monitoring-job-status)
+8.  [Visualizing Hyperparamter Optimization Results](#visualizing-hyperparameter-optimization-results)
+9.  [Command line options](#command-line-options)
+
+# Basic Workflow
+
+<img src="https://gitlab.cern.ch/clcheng/ReadmeImagery/-/raw/master/images/hpogrid/WorkflowDiagram.png" width="800">
+
+The execution of the above hyperparameter optimization workflow can be done entirely using the _hpogrid tool_ provided by this repository. The sample usage and instruction for using the _hpogrid tool_ is given in the next few sections.
+
+The workflow can be divided into the following steps:
+
+**Step 1**: Prepare the configuration files for a hyperparameter optimization task which will submitted to the ATLAS grid site. A total of four configuration files are required. They are:
+1. **HPO Configuration**: Configurations that define how the hyperparameter optimization is performed. This may include the algorithm of hyperparameter optimization, the scheduling method for choosing the next hyperparameter points, the number of hyperparameter points to be evaluated and so on.
+2. **Search Space Configuration**: Configurations that define the hyperparameter search space. This includes the sampling method for a particular hyperparameter (such as uniform or normal sampling or logirthmic based uniform sampling) and its range of allowed values.
+3. **Model Configuration**: Configurations that contains information of the training model that is called by the hyperparameter optimization alogrithm. This should include 
+    * The name of the training script which contains the class/function defining the training model
+    * The name of the class/function that defines the training model
+    * The parameters that should be passed to the training model. For details please refer to the section (Adaptation of Training Script)
+4. **Grid Configuration**: Configurations that define settings for grid job submission. This may include the container inside which the scripts are run, the name of input and output datasets and the name of the grid site where the hyperparameter optimization jobs are run. 
+
+**Step 2**: Upload the input dataset via rucio which will be retrieved by the grid site when the hyperparameter optimization task is executed.
+
+**Step 3**: Adapt the training script(s) to conform with the format required by the hyperparameter optimization library (Ray Tune).
+
+**Step 4**: Submit the hyperparamter optimization task and monitor its progress.
+
+**Step 5**: Retrieve the hyperparamter optimization results after completion. The results can be output into various formats supported by the _hpogrid tool_ for visualization. 
+
+# Getting the code
+To get the code, use the following command:
+```
+git clone ssh://git@gitlab.cern.ch:7999/aml/hyperparameter-optimization/alkaid-qt/hpogrid/hpogrid.git
+```
+
+# Setup and Installation
+
+## Using the default conda environment
+
+To setup just use the command (from the base path of the project):
+```
+source setupenv.sh
+```
+This will setup the default conda environment _ml-base_ which contains all necessary machine-learning packages and he latest ROOT release.
+
+## Inside a custom virtual environment
+
+Activate your custom environment then use the command (from the base path of the project):
+```
+source setupenv.sh no-conda
+```
+Then install the hpogrid package:
+```
+pip install hpogrid
+
+```
+
+# How to
+
+```
+hpogrid model_config create
+hpogrid search_space create
+hpogrid hpo_config create
+hpogrid grid_config create
+hpogrid project create
+hpogrid run 
+```
+
+# Managing Configuration Files
+
+In general, the command for managing configuraton file takes the form:
+```
+hpogrid <config_type> <action> <config_name> [<options>]
+```
+
+The `<config_type>` argument specifies the type of configuration to be handled. The avaliable types are
+- `hpo_config` : Configuration for hyperparamter optimization
+- `grid_config` : Configuration for grid job submission
+- `model_config` : Configuration for the machine learning model (which the hyperparameters are to be optimized)
+- `search_space` : Configuration for the hyperparameter search space
+
+The `<action>` argument specifies the action to be performed. The available actions are
+- `create` : Create a new configuration
+- `recreate` : Recreate an existing configuration (the old configuration will be overwritten)
+- `update` : Update an existing configuration (the old configuration except those to be updated will be kept)
+- `remove` : Remove an existing configuration
+- `list` : List the name of existing configurations (the `<config_name>` argument is omitted)
+- `show` : Display the content of an existing configuration
+
+The `<config_name>` argument specifies name given to a configuration file. 
+
+The `[<options>]` arguments specify the configuration settings for the corresponding configuration type. The available options are explained below.
+
+## HPO Configuration
+
+ 
+| **Option** | **Description** | **Default** | **Choices** |
+| ---------- | ---------- | ----------- | ----------- |
+| `algortihm` | Algorithm for hyperparameter optimization | 'random' | 'hyperopt', 'skopt', 'bohb', 'ax', 'tune', 'random', 'bayesian' |
+| `metric` | Evaluation metric to be optimized | 'accuracy' | - |
+| `mode` | Optimization mode (either 'min' or 'max')| 'max' | 'max', 'min'
+| `scheduler` | Trial scheduling method for hyperparameter optimization | 'asynchyperband' | 'asynchyperband', 'bohbhyperband', 'pbt' |
+| `trials` | Number of trials (search points) | 100 | - |
+| `log_dir` | Logging directory | "./log" | - |
+| `verbose` | Check to enable verbosity | - | - |
+| `stop` | Stopping criteria | '{"training_iteration": 1}' | - |
+| `scheduler_param` | extra parameters for the trial scheduler | '{"max_concurrent": 4}' | - |
+| `algorithm_param` | extra parameters for hyperparameter optimization algorithm | {} | - |
+
+
+## Grid Configuration
+
+
+| **Option** | **Description** | **Default** | 
+| ---------- | ---------- | ----------- | 
+| `site` | Grid site where the jobs are submitted | ANALY_MANC_GPU_TEST | 
+| `container` | Docker or singularity container which the jobs are run | /cvmfs/unpacked.cern.ch/gitlab-registry.cern.ch/aml/hyperparameter-optimization/alkaid-qt/hpogrid:latest | 
+| `retry` | Check to enable retrying faild jobs | - | 
+| `inDS` | Name of input dataset | - | 
+| `outDS` | Name of output dataset | user.${{RUCIO_ACCOUNT}}.hpogrid.{HPO_PROJECT_NAME}.out.$(date +%Y%m%d%H%M%S) |
+
+
+## Model Configuration
+
+This defines the parameters and settings for the machine learning model which the hyperparameters are to be optimized.
+
+
+| **Option** | **Description** |
+| ---------- | ---------- | 
+| `script` | Name of the training script where the function or class that defines the training model will be called to perform the training|
+| `model` | Name of the function or class that defines the training model |
+| `param` | Extra parameters to be passed to the training model |
+
+
+
+
+## Search Space Configuration
+
+This defines the search space for hyperparameter optimization.
+
+The format for defining a search space in command line is through a json decodable string:
+```
+'{"NAME_OF_HYPERPARAMETER":{"method":"SAMPLING_METHOD","dimension":{"DIMENSION":"VALUE"}},
+"NAME_OF_HYPERPARAMETER":{"method":"SAMPLING_METHOD","dimension":{"DIMENSION":"VALUE"}}, ...}'
+```
+
+Supported sampling methods for a hyperparameter:
+
+| **Method** | **Description** | **Dimension**  |
+| ---------- | --------------- | -------------- | 
+| `categorical` | Returns one of the values in `categories`, which should be a list. If `grid_search`is set to 1, each value must be sampled once.| `categories`, `grid_search`| 
+| `uniform`  | Returns a value uniformly between `low` and `high` | `low`, `high` |
+| `uniformint` | Returns an integer value uniformly between `low` and `high` |  `low`, `high` | 
+| `quniform` | Returns a value like round(uniform(`low`, `high`) / `q`) * `q` | `low`, `high`, `q` | 
+| `loguniform` | Returns a value drawn according to exp(uniform(`low`, `high`)) so that the logarithm of the return value is uniformly distributed. | `low`, `high`, `base` |
+| `qloguniform` | Returns a value like round(exp(uniform(`low`, `high`)) / `q`) * `q`|  `low`, `high`, `base`, `q` |
+| `normal` | Returns a real value that's normally-distributed with mean `mu` and standard deviation `sigma`.| `mu`, `sigma` |
+| `qnormal` | Returns a value like round(normal(`mu`, `sigma`) / `q`) * `q`| `mu`, `sigma`, `q`| 
+| `lognormal` | Returns a value drawn according to exp(normal(`mu`, `sigma`)) so that the logarithm of the return value is normally distributed.| `mu`, `sigma`, `base`|
+| `qlognormal` |  Returns a value like round(exp(normal(`mu`, `sigma`)) / `q`) * `q`| `mu`, `sigma`, `base`, `q`|
+
+Examples:
+```
+hpogrid search_space create my_search_space '{ "lr":{"method":"loguniform","dimension":{"low":1e-5,"high":1e-2, "base":10}},\
+"batchsize":{"method":"categorical","dimension":{"categories":[32,64,128,256,512,1024]}},\
+"num_layers":{"method":"uniformint","dimension":{"low":3,"high":10}},\
+"momentum":{"method":"uniform","dimension":{"low":0.5,"high":1.0}} }'
+```
+
+
+
+# Running Hyperparameter Optimization Jobs
+
+Step 1: Create a custom project with the configuration files:
+ ```
+ hpogrid project create PROJECT_NAME [--options]
+ ```
+ 
+| **Option** | **Action** |
+| ---------- | ---------- |
+| `scripts_path` | the path to where the training scripts (or the directory containing the training scripts) are located |
+| `hpo_config` | the hpo configuration to use for this project |
+| `grid_config` | the grid configuration to use for this project |
+| `model_config` | the model configuration to use for this project |
+| `search_space` | the search space configuration to use for this project |
+
+
+Step 2: Run the project:
+
+- To run locally:
+
+```
+hpogrid local_run PROJECT_NAME
+```
+
+- To run on the grid:
+
+```
+hpogrid run PROJECT_NAME [--options]
+```
+
+| **Option** | **Action** |  **Default** |
+| ---------- | ---------- | ------------ |
+| `n_jobs` | the number of grid jobs to be submitted (useful for random search, i.e. to run a single search point per job) | 1 |
+| `site` | the site to where the jobs are submitted (this will override the site setting in the grid configuration | - |
+
+
+# Monitoring Job Status
+
+# Visualizing Hyperparamter Optimization Results
+
+# Command Line Options
+
+
+
+

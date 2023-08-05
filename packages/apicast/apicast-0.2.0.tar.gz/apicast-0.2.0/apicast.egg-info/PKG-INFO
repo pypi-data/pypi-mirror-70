@@ -1,0 +1,100 @@
+Metadata-Version: 1.1
+Name: apicast
+Version: 0.2.0
+Summary: Python client to access bee flight forecast information published by Deutscher Wetterdienst (DWD), the federal meteorological service in Germany.
+Home-page: https://github.com/hiveeyes/apicast
+Author: Andreas Motl
+Author-email: andreas@hiveeyes.org
+License: AGPL 3, EUPL 1.2
+Description: #######
+        Apicast
+        #######
+        
+        
+        *****
+        About
+        *****
+        Apicast acquires bee flight forecast information published by Deutscher Wetterdienst (DWD).
+        
+        https://www.dwd.de/DE/fachnutzer/freizeitgaertner/1_gartenwetter/_node.html
+        
+        
+        ********
+        Synopsis
+        ********
+        Display list of states and sites::
+        
+            apicast beeflight stations
+        
+        Display list of site slugs::
+        
+            apicast beeflight stations --site-slugs
+        
+        Acquire information for given site slug ``berlin_brandenburg/potsdam``::
+        
+            apicast beeflight forecast --station=berlin_brandenburg/potsdam
+        
+        Acquire information for given site slug ``berlin_brandenburg/potsdam``, output as table in Markdown format::
+        
+            apicast beeflight forecast --station=berlin_brandenburg/potsdam --format=table
+        
+        
+        *******
+        Example
+        *******
+        
+        ::
+        
+            apicast beeflight forecast --station=berlin_brandenburg/potsdam
+        
+        ::
+        
+            [
+                {
+                    "Datum": "Mo 01.06.",
+                    "morgens": "stark",
+                    "mittags": "intensiv",
+                    "abends": "stark"
+                },
+                {
+                    "Datum": "Di 02.06.",
+                    "morgens": "stark",
+                    "mittags": "intensiv",
+                    "abends": "intensiv"
+                },
+                {
+                    "Datum": "Mi 03.06.",
+                    "morgens": "intensiv",
+                    "mittags": "intensiv",
+                    "abends": "intensiv"
+                }
+            ]
+        
+Keywords: bee flight forecast information dwd cdc deutscher wetterdienst climate data center weather opendata data acquisition transformation export geospatial temporal timeseries sensor network observation http rest api json csv
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Communications
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS

@@ -1,0 +1,10 @@
+setup.py
+gb_ali_distributions/Binomialdistribution.py
+gb_ali_distributions/Gaussiandistribution.py
+gb_ali_distributions/Generaldistribution.py
+gb_ali_distributions/__init__.py
+gb_ali_distributions.egg-info/PKG-INFO
+gb_ali_distributions.egg-info/SOURCES.txt
+gb_ali_distributions.egg-info/dependency_links.txt
+gb_ali_distributions.egg-info/not-zip-safe
+gb_ali_distributions.egg-info/top_level.txt

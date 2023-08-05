@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.IndexToString","timestamp":1590669919908,"sparkVersion":"2.4.5","uid":"IndexToString_a73e3406dc8f","paramMap":{"inputCol":"prediction","labels":["COPD","Healthy","URTI","Bronchiectasis","Pneumonia","Bronchiolitis"],"outputCol":"predicted_label"},"defaultParamMap":{"outputCol":"IndexToString_a73e3406dc8f__output"}}

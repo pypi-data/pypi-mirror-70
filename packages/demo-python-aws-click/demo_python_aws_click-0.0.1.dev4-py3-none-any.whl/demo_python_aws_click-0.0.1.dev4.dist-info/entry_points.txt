@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        demo=demo.cli:entrypoint
+    

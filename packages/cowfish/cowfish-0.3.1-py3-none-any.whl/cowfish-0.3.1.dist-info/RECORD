@@ -1,0 +1,14 @@
+cowfish/__init__.py,sha256=Vp-oChl84RCZAFg5-i--f3ie-hdwCfncytI4Ux0UlD4,82
+cowfish/firehose.py,sha256=OWfCEbwvpt2waTsxhoVEp4hurrFPf3oE27Cf7qOBZzM,3754
+cowfish/kinesis.py,sha256=waFoFtnRlMB97JrgqMBOVLk28jBsumE7oBTIxs4QuEM,4714
+cowfish/pool.py,sha256=fx4iyO-YHSDv8ZwEnbL0MnlNxiWfcfFGdus8URpjTfI,3583
+cowfish/sqs.py,sha256=2mY3CgPIP2RWiJUS8xajZeZNq7c5ewaOqyA_4KGLIKA,6743
+cowfish/sqsprocesser.py,sha256=JlQ-cPOmBhZp5CGtr8ljKjpAA-jyq-VWxVhjayp003k,12864
+cowfish/utils.py,sha256=CnsZ5ho51SZnfud31O-XcGF93zZbE8FTnba0pwQFHtE,1068
+cowfish/worker.py,sha256=dbSw_eKfPeEfwmwV5asWM6m_k_CSMnYMazJM65CVmA0,2824
+cowfish-0.3.1.dist-info/LICENSE,sha256=ZW6W8Lk277OJ7DaBoO5gOwLhf7zk1i_L2mmcnhPqwBg,1065
+cowfish-0.3.1.dist-info/METADATA,sha256=X9-xqqqm44jNvsO35I3194O5P0TXZcuvisN1VMYwCyw,1745
+cowfish-0.3.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cowfish-0.3.1.dist-info/entry_points.txt,sha256=r8-MDvip0wc7Tua7W7xRYJCXbXI3ZIWksqTzqWQA0lQ,60
+cowfish-0.3.1.dist-info/top_level.txt,sha256=h-lT3tuESS_9DNOa9tDDYMTiivma0x5fIuvc3u1K2-U,8
+cowfish-0.3.1.dist-info/RECORD,,

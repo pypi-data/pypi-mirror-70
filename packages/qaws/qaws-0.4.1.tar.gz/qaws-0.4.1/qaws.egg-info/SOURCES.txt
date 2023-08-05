@@ -1,0 +1,10 @@
+README.md
+setup.py
+qaws/__init__.py
+qaws/qaws.py
+qaws.egg-info/PKG-INFO
+qaws.egg-info/SOURCES.txt
+qaws.egg-info/dependency_links.txt
+qaws.egg-info/entry_points.txt
+qaws.egg-info/requires.txt
+qaws.egg-info/top_level.txt

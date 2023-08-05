@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ahlev-django-uikit
+Version: 0.0.4
+Summary: description
+Home-page: https://github.com/ohahlev/ahlev_django_uikit
+Author: ahlev
+Author-email: ohahlev@gmail.com
+License: UNKNOWN
+Description: long description
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst

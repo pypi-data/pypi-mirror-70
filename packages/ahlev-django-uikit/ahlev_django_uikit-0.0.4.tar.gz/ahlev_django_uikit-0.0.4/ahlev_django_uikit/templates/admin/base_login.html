@@ -1,0 +1,35 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+  {% block extrastyle %}{% endblock %}
+  {% block extrahead %}{% endblock %}
+
+  {% block blockbots %}
+  <meta name="robots" content="NONE,NOARCHIVE">
+  {% endblock %}
+
+  <link rel="stylesheet" href="{% static 'uikit/css/login-dark.css' %}" />
+  <link rel="stylesheet" href="{% static 'uikit/css/site.css' %}" />
+  <link rel="stylesheet" href="{% static 'uikit/css/uikit.min.css' %}" />
+  <script src="{% static 'uikit/js/uikit.min.js' %}"></script>
+  <script src="{% static 'uikit/js/uikit-icons.min.js' %}"></script>
+  <script src="{% static 'uikit/js/site.js' %}"></script>
+  
+</head>
+
+<body
+  class="login uk-cover-container uk-background-secondary uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-overflow-hidden uk-light"
+  data-uk-height-viewport="" style="min-height: calc(100vh);">
+  
+{% block login %}
+  
+{% endblock %}
+</body>
+
+</html>

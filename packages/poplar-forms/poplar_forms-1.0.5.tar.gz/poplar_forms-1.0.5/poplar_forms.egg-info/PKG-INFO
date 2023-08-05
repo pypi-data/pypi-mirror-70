@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: poplar-forms
+Version: 1.0.5
+Summary: Fleeting forms for Orchid Extender
+Home-page: https://poplars.dev
+Author: Chris Binckly, Poplar Development.
+Author-email: chtis@poplars.dev
+License: UNKNOWN
+Description: Poplar Forms
+        ============
+        
+        The Poplar Forms package, and accompanying PPFORMS module, are used to 
+        integrate Orchid Extender's Workflow for Sage 300 with fleetingforms.io
+        to securely collect well formatted, validated, data from users or 
+        customers from beyond the corporate perimeter.
+        
+Keywords: sage orchid extender remote approvals
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)

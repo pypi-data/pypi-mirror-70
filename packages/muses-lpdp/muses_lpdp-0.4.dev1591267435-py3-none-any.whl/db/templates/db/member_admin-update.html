@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+
+    <form>
+        {% csrf_token %}
+        {{ form.as_div }}
+    </form>
+
+{% endblock %}

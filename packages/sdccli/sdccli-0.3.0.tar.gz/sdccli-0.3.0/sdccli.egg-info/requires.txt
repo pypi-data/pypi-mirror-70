@@ -1,0 +1,6 @@
+Click
+expects
+mamba>=0.10
+prettytable
+python-dateutil
+sdcclient>=0.11.0

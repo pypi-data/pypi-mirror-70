@@ -1,0 +1,112 @@
+# Copyright 2018-2019 Uber Technologies, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+language: c
+
+os: linux
+dist: bionic
+
+compiler:
+  - gcc
+  - clang
+
+# Docs are built during the normal compile/test check.
+addons:
+  apt:
+    packages:
+      - doxygen
+      - graphviz
+
+matrix:
+  include:
+      # Check that clang-format doesn't detect some files are not formatted.
+    - name: "Formatting check"
+      compiler: clang
+      addons:
+        apt:
+          sources:
+            - sourceline: 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-9 main'
+              key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
+          packages:
+            - clang-format-9
+      script:
+        - clang-format-9 --version
+        - make format
+        - git diff --exit-code
+      # Submit coverage report to Coveralls.io, also test that prefixing works.
+    - name: "Coverage report"
+      compiler: gcc
+      addons:
+        apt:
+          packages:
+            - lcov
+      install:
+        - gem install coveralls-lcov
+      before_script:
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DWARNINGS_AS_ERRORS=ON -DH3_PREFIX=testprefix_ .
+      script:
+        - make
+        - make coverage
+      after_success:
+        - coveralls-lcov coverage.cleaned.info
+      # Test building the website also - needed for FOSSA to pick up dependencies
+    - name: "Website and FOSSA report"
+      language: node_js
+      node_js: 10
+      install: []
+      before_script:
+        - "curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash"
+      script:
+        - cd website
+        - yarn
+        - yarn build
+        - cd ..
+        - 'if [ -n "$FOSSA_API_KEY" ]; then fossa; fi'
+    - name: "Valgrind test"
+      compiler: gcc
+      addons:
+        apt:
+          packages:
+            - valgrind
+      before_script:
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DWRAP_VALGRIND=ON .
+      script:
+        - make
+        - CTEST_OUTPUT_ON_FAILURE=1 make test-fast
+    - name: "Mac OSX (Xcode 8)"
+      os: osx
+    - name: "binding-functions target"
+      script:
+        - make binding-functions
+        # Check that the file exists and has contents
+        - test -s binding-functions
+    - name: "ARM64"
+      arch: arm64
+
+# Configure the build script, out of source.
+before_script:
+  - mkdir build
+  - cd build
+  - cmake -DWARNINGS_AS_ERRORS=ON ..
+
+# Build and test the library, then build and test the examples.
+script:
+  - make
+  - make test
+  - sudo make install
+  - mkdir examples
+  - cd examples
+  - cmake ../../examples
+  - make
+  - make test

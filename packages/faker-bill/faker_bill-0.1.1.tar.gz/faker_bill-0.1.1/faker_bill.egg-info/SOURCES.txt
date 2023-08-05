@@ -1,0 +1,9 @@
+README.md
+setup.py
+faker_bill/__init__.py
+faker_bill.egg-info/PKG-INFO
+faker_bill.egg-info/SOURCES.txt
+faker_bill.egg-info/dependency_links.txt
+faker_bill.egg-info/requires.txt
+faker_bill.egg-info/top_level.txt
+faker_bill/fa_IR/__init__.py

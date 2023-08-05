@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: neuropredict
+Version: 0.6
+Summary: easy and standardized predictive analysis for biomarkers, neuroimaging, and beyond
+Home-page: https://github.com/raamana/neuropredict
+Author: Pradeep Reddy Raamana
+Author-email: raamana@gmail.com
+License: UNKNOWN
+Description: easy and standardized predictive analysis for biomarkers, neuroimaging, and beyond; neuropredict
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

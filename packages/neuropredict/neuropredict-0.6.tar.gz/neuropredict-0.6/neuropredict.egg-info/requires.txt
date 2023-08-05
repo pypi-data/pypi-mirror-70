@@ -1,0 +1,7 @@
+numpy
+scikit-learn
+pyradigm>=0.6.dev1
+nibabel
+scipy
+matplotlib
+setuptools

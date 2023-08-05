@@ -1,0 +1,5 @@
+docopt
+pygithub
+gitlab
+pyyaml
+colorama

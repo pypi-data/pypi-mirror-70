@@ -1,0 +1,9 @@
+fitsgeo/__init__.py,sha256=Fy1Jua_e5x1mMN9huatCD8ncyNMHjN9PuFyXb6qmkys,147
+fitsgeo/const.py,sha256=7xuUepZ2GwM3cx41LTzj1pNQIpjFNKhATSSmHmq4lwY,1481
+fitsgeo/surface.py,sha256=EAE1M64AOdsmeRaHtjbYBANhqPcLdxx7N_Vh8D-niAA,54885
+fitsgeo/transform.py,sha256=f6k19iTKBdPFJwAlHfRdAsP4Ik14Sd-_4WH_FN--2fY,30
+FitsGeo-0.1.1.dist-info/LICENSE.txt,sha256=AsvxkBI3rpaO56qjk1kbqxv_CYb1ju7U-W5uR58AqXQ,1076
+FitsGeo-0.1.1.dist-info/METADATA,sha256=FzkTh1_nTOlkiV_qRywEHG-ksTyZRGNi9SNUP5r_G7I,2102
+FitsGeo-0.1.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+FitsGeo-0.1.1.dist-info/top_level.txt,sha256=FdK-T0nENLSNV07pcSJH7K6Sz02vQ_-R-9z43rsh5hA,8
+FitsGeo-0.1.1.dist-info/RECORD,,

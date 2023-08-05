@@ -1,0 +1,11 @@
+PyQt5>=5.12.1
+PyQtChart>=5.12.1
+PyQtWebEngine>=5.12.1
+QScintilla>=2.11.1
+pip>=19.0
+docutils
+Markdown
+wheel
+
+[:platform_system == "Windows"]
+pywin32>=1.0

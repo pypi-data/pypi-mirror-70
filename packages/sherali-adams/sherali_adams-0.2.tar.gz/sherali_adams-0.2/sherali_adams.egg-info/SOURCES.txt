@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+sherali_adams/__init__.py
+sherali_adams/sherali_adams.py
+sherali_adams.egg-info/PKG-INFO
+sherali_adams.egg-info/SOURCES.txt
+sherali_adams.egg-info/dependency_links.txt
+sherali_adams.egg-info/not-zip-safe
+sherali_adams.egg-info/requires.txt
+sherali_adams.egg-info/top_level.txt

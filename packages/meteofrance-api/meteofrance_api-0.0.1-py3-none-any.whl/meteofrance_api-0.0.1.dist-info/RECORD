@@ -1,0 +1,14 @@
+meteofrance/__init__.py,sha256=tJA5e1vVcBmmi7kCgB-eE7XqY15_I9hm2eT1SLcGTv8,33
+meteofrance/__main__.py,sha256=bbBeWjoLDxCZmh3MktgZwjUMRzt3isdJgsOj8b4MH6Y,51
+meteofrance/auth.py,sha256=NElXz738Moo9kfOGuVOUZV6v5je56iIZqDh_EG7OepU,1174
+meteofrance/client.py,sha256=dOZ6w-6syuOBVVU9UR_M-8D9mShtrNPG8suMmXKmilQ,6347
+meteofrance/const.py,sha256=UPegApreh8K3VMZ8WnQE5EMEiiEGqK4vnoxQXpZVi2w,2263
+meteofrance/forecast.py,sha256=I8PSClmH_PM-cAYUcAKcNvSIGcAAohLfGtfEm7qoNtU,1603
+meteofrance/place.py,sha256=HU1aMv5E1j0GoT_tA2DrBWfrwZq3ud10YQmMg4x6s48,2050
+meteofrance/rain.py,sha256=78EeXPpXpQAtGyo1xu9AaKpvy3T6j7XTaAh44eqYY-k,1897
+meteofrance/warning.py,sha256=rmcczpuXK7WwUo2wHEAvGCN-m5LSOx3kiexD4pwCQ9c,5630
+meteofrance_api-0.0.1.dist-info/LICENSE,sha256=Wq1du5L_NvMd9T_sWYeHLQpTg-AjK3rIpH8ll7xvigI,1100
+meteofrance_api-0.0.1.dist-info/METADATA,sha256=zV_mhQwX-fkHGktyKlhChcmuONy47FRYTtDlkNPFQjA,4600
+meteofrance_api-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+meteofrance_api-0.0.1.dist-info/top_level.txt,sha256=EZ-nCQbrhqOofm2bjyb_zGvIcT6fdyySdad8HZn1bIw,12
+meteofrance_api-0.0.1.dist-info/RECORD,,

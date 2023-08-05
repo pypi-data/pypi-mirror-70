@@ -1,0 +1,12 @@
+collocater/__init__.py,sha256=_2tfxqQEZcsGITVZkZZL5oEahFNHnrHMkSDNzMwXpYE,107
+collocater/collocater.py,sha256=W1RNgP8nL4cIhRYiucf6RTLjeuXKJ5PxaCtJVfnEogc,33556
+collocater/generateObject.py,sha256=znlqPyrjU4y5Dcfrey-_2VAO3o7WGn5TCAmMUleNzn0,6616
+collocater/data/collocater_obj.joblib,sha256=Kncma2Ee_anT8wzW27ETWTovkGLh368eqgV9wUdY_n0,3867739
+collocater/data/collocations_dict.joblib,sha256=bZHWktkf6ILdNtZUwQuRsUl3Giv8YD_WVhut5CxcUPs,3849537
+collocater/data/irr_verbs_dict.joblib,sha256=qwe35WtPUr5teO86Z_IO32ixji_S0fwCnvtRxZGrJAM,11198
+collocater/data/prepositions.joblib,sha256=W3LOF3RgpUkxuSCq8ks1tQE0pUTjTbx-bt1d6FlzkGE,1032
+collocater-0.3.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+collocater-0.3.dist-info/METADATA,sha256=h-HfmvIAK1Nez_HiVVGYCiRHTT9gSenveVOLLJXmoEo,2504
+collocater-0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+collocater-0.3.dist-info/top_level.txt,sha256=2jjq0i5gxsAym5Ccm6_6yycJO1nRYlUpufokvFRNtAk,11
+collocater-0.3.dist-info/RECORD,,

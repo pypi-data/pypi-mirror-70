@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: winney
+Version: 0.3.5
+Summary: Object-Oriented HTTP Request
+Home-page: https://github.com/olivetree123/winney
+Author: olivetree
+Author-email: olivetree123@163.com
+License: MIT
+Description: # Winney 面向对象的 HTTP 请求  
+        
+        ## Tutorial
+        ``` python
+        wy = Winney(host="www.baidu.com")
+        wy.add_url(method="get", uri="/", function_name="download")
+        wy.download()
+        t = wy.get_bytes()
+        print(t)
+        ```
+        
+Platform: UNKNOWN

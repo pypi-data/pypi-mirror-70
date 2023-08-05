@@ -1,0 +1,13 @@
+pugna/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pugna/callbacks.py,sha256=iO5x8oOX0GDjSSfz6-PEwYQhk6J9Mv-lURo5qGRIks0,454
+pugna/data.py,sha256=9iqD-XXHbsU-3dyq7mJMDmM9O_ldJy5d1-BGLEcsjso,2476
+pugna/explorer.py,sha256=tSY87ZJUmxXnR8inb-Yt9U8rgKNQW0ZG59kk_Hn9NzU,2258
+pugna/logger.py,sha256=ThKp7H4taxl2GvgT48HwBkHRB__H4GBkxtYv2ywmpX0,1359
+pugna/model_utils.py,sha256=6OzkB8cKPMBEhOW-IPYz7iTqsvm0UPBW0ItDH7NgK-Q,1296
+pugna/trainer.py,sha256=KoMCmqbz11VycQaOMzMsI4JzacLoSZzXshA_j21Gfk0,6985
+pugna/training_utils.py,sha256=XFArrCkzhfIAe5KUnmkXdRf8TIE-yCEDOzxuDDPdeaA,566
+pugna-0.0.8.dist-info/LICENSE,sha256=TdRRdGlOyr6L6rq9gOnOeRytw-9nUxQ-zdAwdcKdDNA,35069
+pugna-0.0.8.dist-info/METADATA,sha256=cjGA-unft3swEuN9iocHEpQfjrGVyVGcbHqNr1uZmZY,621
+pugna-0.0.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pugna-0.0.8.dist-info/top_level.txt,sha256=JMhmWwJ3EhgO8ucmJkiThFoXWSptaeMTzxQ8P750Xtw,6
+pugna-0.0.8.dist-info/RECORD,,

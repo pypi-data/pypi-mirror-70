@@ -1,0 +1,14 @@
+trainerdex/__init__.py,sha256=1d6ML6o7Z-SUyk-t9e6qkixl5p4SvkUERQYB2zpbhlM,621
+trainerdex/client.py,sha256=iAuQFWVMj_UI-4AjtI8sNM3ISwvV7N7sTH7H8OGzE98,13801
+trainerdex/exceptions.py,sha256=CdJRrF9jjuP6SIguH4_yqkwaiKynpZ2oBsaI85g_K9A,101
+trainerdex/http.py,sha256=nj9I9cZwHwCppD8E0GvrAidi6IBQ1PtI0JS3GlXQF6Q,4234
+trainerdex/leaderboard.py,sha256=PqI5Z2X6v4j7EswBfO6SQC-tw7gb2uVqq6bzXgxn3wA,4140
+trainerdex/models.py,sha256=uNF_iXph2VZ2JNWpkIykYAeJIV9SbdzbL6HbdzrepCA,9594
+trainerdex/data/factions.json,sha256=ewA1VJQdHswND-6mrBLVsH6wkPdjiVIUWYnhebbJMXs,653
+trainerdex/data/levels.json,sha256=8gCJ2407JOhgemy6D-13lxRRzuSzFQT8DmsNqAj3oS8,11687
+trainerdex-3.0.1.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+trainerdex-3.0.1.dist-info/METADATA,sha256=xMypLbrmm8iZ_i0A7B5mQKuGTZddpwVUYxkn37eacNI,1132
+trainerdex-3.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+trainerdex-3.0.1.dist-info/top_level.txt,sha256=cD8I8F0PUh_DCrmQk-9PXDXA_BPA62989OvRc1s_adI,11
+trainerdex-3.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+trainerdex-3.0.1.dist-info/RECORD,,

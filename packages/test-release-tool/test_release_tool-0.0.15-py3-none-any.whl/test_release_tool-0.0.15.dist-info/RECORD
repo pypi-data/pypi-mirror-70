@@ -1,0 +1,8 @@
+test_release_tool/__init__.py,sha256=6kN_7rm3PD_NEt7M0hyhNtoX7LI-LWstY-GW9ko_ja4,64
+test_release_tool/main.py,sha256=23EumvI-gRI5C0mXLOWZHsfKsJsn4BLzvRdbdJJefG4,138
+test_release_tool-0.0.15.dist-info/LICENSE,sha256=jTQWZyG7CMlluqY1n5c1Tl59mFOsOek299NbZFd6E-w,1069
+test_release_tool-0.0.15.dist-info/METADATA,sha256=BKSy7Xp_wMnj-xGvNnxiUlS5rayGaN6BQoyvUI9PETc,1996
+test_release_tool-0.0.15.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+test_release_tool-0.0.15.dist-info/entry_points.txt,sha256=21MBsYx3Q1mdTFvheQA39SDpNC4oxvbQvBy5Ia4-MaU,56
+test_release_tool-0.0.15.dist-info/top_level.txt,sha256=bGYbELjIiRtuILW8vjMO_gL_tfi2IxA82cZzO_eaqsE,18
+test_release_tool-0.0.15.dist-info/RECORD,,

@@ -1,0 +1,145 @@
+Model:
+  components *= Component
+;
+
+Component:
+  QuestionStructure |
+  CommentSection |
+  CommentParagraph |
+  QuestionAbstract |
+  CommentAbstract |
+  QuestionShape |
+  SolutionShape |
+  CommentConcrete |
+  Keywords |
+  QuestionReview |
+  LineCode
+;
+
+CommentAbstract[noskipws]:
+  indentation=/^ */ '# Abstract' Tail
+  Empty
+  sentences+=CommentSentence
+  Empty
+;
+
+CommentConcrete[noskipws]:
+  indentation=/^ */ '# Concrete' Tail
+  Empty
+  sentences+=CommentSentence
+  Empty
+;
+
+CommentParagraph[noskipws]:
+  indentation=/^ */ '# Paragraph: ' noun=/\b[ \-\w]*\b/ Tail
+  Empty
+;
+
+CommentSection[noskipws]:
+  indentation=/^ */ '# Section: ' noun=/\b[ \-A-Z]*\b/ Tail
+  Empty
+;
+
+CommentSentence[noskipws]:
+  indentation=/^ */ '# ' text=Sentence Tail
+;
+
+LineCode[noskipws]:
+  indentation=/^ */ text=/(.*?) *\n/
+;
+
+Keywords[noskipws]:
+  indentation=/^ */ '# Keywords: ' terms+=/\b[ A-Z]*\b/[', '] Tail
+  Empty
+;
+
+QuestionAbstract[noskipws]:
+  indentation=/^ */ '# Abstract Question' Tail
+  Empty
+  Head question=Sentence Tail
+  answer=AnswerAbstract?
+  Empty
+;
+
+QuestionReview[noskipws]:
+  indentation=/^ */ '# Review Question' Tail
+  Empty
+  Head question=Sentence Tail
+  Empty
+  Head answer=Sentence Tail
+  Empty
+;
+
+QuestionShape[noskipws]:
+  indentation=/^ */ '# Shape Question' Tail
+  Empty
+  Head question=Sentence Tail
+  answer=AnswerShape?
+  Empty
+;
+
+QuestionStructure[noskipws]:
+  indentation=/^ */ '# Structure Question' Tail
+  Empty
+  Head question=Sentence Tail
+  Empty
+  Head answer=Sentence Tail
+  Empty
+;
+
+SolutionItem[noskipws]:
+  indentation=/^ */ '# ' key=ID ': ' value=/(.*?) *\n/
+;
+
+SolutionPseudocode[noskipws]:
+  indentation=/^ */ '# ' text=/(.*?) *\n/
+;
+
+SolutionShape[noskipws]:
+  indentation=/^ */ '# Shape' Tail
+  Empty
+  pseudocodes+=SolutionPseudocode
+  Empty
+  items+=SolutionItem
+  Empty
+;
+
+//
+
+AnswerAbstract[noskipws]:
+  Empty
+  indentation=/^ */ '# ' text=SentenceThatIsNotTheWordAbstractOrAbstractQuestion Tail
+;
+
+AnswerShape[noskipws]:
+  Empty
+  indentation=/^ */ '# ' text=SentenceThatIsNotTheWordShapeOrShapeQuestion Tail
+;
+
+Empty[noskipws]:
+  /^ *# *\n/
+;
+
+Head[noskipws]:
+  /^ *# /
+;
+
+Sentence[noskipws]:
+  /[^ ].*?(?= *\n)/
+;
+
+SentenceThatIsNotTheWordAbstractOrAbstractQuestion[noskipws]:
+  // WARNING: While the sentence "Abstract\n" will not match,
+  // the sentence "Abstract \n" will.
+  /[^ ].*?(?<!Abstract)(?<!Abstract Question)(?= *\n)/
+;
+
+SentenceThatIsNotTheWordShapeOrShapeQuestion[noskipws]:
+  // WARNING: While the sentence "Shape\n" will not match,
+  // the sentence "Shape \n" will.
+  /[^ ].*?(?<!Shape)(?<!Shape Question)(?= *\n)/
+;
+
+Tail[noskipws]:
+  / *\n/
+;

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cisco-umbrella-cli
+Version: 0.2
+Summary: Command-line interface for Cisco Umbrella API
+Home-page: UNKNOWN
+Author: Kevin C-Dubois
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: marshmallow
+Requires-Dist: colorama
+
+UNKNOWN
+
+

@@ -1,0 +1,5 @@
+PyYAML
+catkin-pkg>0.2.9
+osrf-pycommon>0.1.1
+setuptools
+trollius

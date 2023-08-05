@@ -1,0 +1,3 @@
+[console_scripts]
+folderclean = folderclean.command_line:main
+

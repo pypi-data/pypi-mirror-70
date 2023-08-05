@@ -1,0 +1,4 @@
+netifaces==0.10.4
+requests==2.22.0
+wakeonlan==1.1.6
+wheel==0.34.2

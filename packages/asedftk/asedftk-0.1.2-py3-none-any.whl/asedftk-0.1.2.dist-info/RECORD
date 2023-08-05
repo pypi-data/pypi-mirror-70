@@ -1,0 +1,11 @@
+asedftk/__init__.py,sha256=0z9iZ4w2cJd90BnJT3uAF5J82OG1-cZf0owNXhIrywg,2817
+asedftk/calculator.jl,sha256=L1_Zy7-xM9ocRIVOuVNd8jZj3F9m_b3qcRFVrW-skhU,11227
+asedftk/calculator.py,sha256=0B-9iD7Ou9Qs0DCeosxTge8axPpoStd_aXHZD_MpUtE,355
+asedftk/test_ase_default_calculator_tests.py,sha256=NvKfDOwzGsPqOOC0-Mx9bAVlNUyvb7qPkm-q9mchvCI,3890
+asedftk/test_registering.py,sha256=frnqVmjo4V_C1VcGhymUMf01L3uGdLhXkK1ZDnKXZOg,134
+asedftk/test_silicon.py,sha256=0O2yABV2kVatXyeebnjI97Qy_BsczxeXa714-ptFuow,494
+asedftk-0.1.2.dist-info/LICENSE,sha256=mBGCCRl7WZIDUCL-w5GdFwzlyjO--EiBkOQG_qXWPHY,1074
+asedftk-0.1.2.dist-info/METADATA,sha256=udnoRakxn7MX1iXVW_xc0_EfaS236gHvQ3vjopzPBFE,4099
+asedftk-0.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+asedftk-0.1.2.dist-info/top_level.txt,sha256=Ojn-JAVIO9Zxacud09p5NhjCAhflwK_a1BYVnh6Lt6o,8
+asedftk-0.1.2.dist-info/RECORD,,

@@ -1,0 +1,7 @@
+boto3==1.13.19
+click==7.1.2
+toolz==0.10.0
+dateparser==0.7.4
+pytz==2020.1
+python-dateutil==2.8.1
+ruamel.yaml==0.16.10

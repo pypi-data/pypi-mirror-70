@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: coco-labels-parser
+Version: 1.0.0
+Summary: A simple labels parser of COCO dataset.
+Home-page: UNKNOWN
+Author: Enchanter
+Author-email: 409766147@qq.com
+License: UNKNOWN
+Keywords: coco labels
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+# Install
+      pip install coco-labels-parser
+# Usage
+      json_file = "path to Annotation file which is json format!"
+      save_path = "where you want to save"
+      my_parser = CocoBoxesParser(,save)
+      my_parser.get_categories_id()
+      my_parser.get_labels()
+
+

@@ -1,0 +1,28 @@
+version: '2.0'
+services:
+  cityiq:
+    image: cityiq
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - X_CITYIQ_EVENTS_CACHE=/data/cache/cityiq/events
+      - X_CITYIQ_CACHE_DIR=/data/cache/cityiq
+    volumes:
+      - cache:/data/
+  shell:
+    entrypoint: sh
+    image: cityiq
+    tty: true
+    stdin_open: true
+    volumes:
+      - cache:/data/
+  events:
+    entrypoint: ciq_events
+    image: cityiq
+    tty: true
+    volumes:
+      - cache:/data/
+volumes:
+  cache:
+    external: true

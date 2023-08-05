@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pytsv
+Version: 0.1.63
+Summary: pytsv is a module to help with all things TSV
+Home-page: https://veltzer.github.io/pytsv
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pytsv
+Keywords: python,tsv,format,csv
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Requires-Dist: attrs
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyanyzip
+Requires-Dist: pylogconf
+Requires-Dist: pytconf
+Requires-Dist: tqdm
+
+pytsv is a module to help with all things TSV
+
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        <div class="muses-list-toolbar">
+            <a href="{% url "muses_mod_license_create" %}" class="muses-button">{% trans "New license" %}</a>
+        </div>
+        {% include "_partials/pagination.html" %}
+        {% for license in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_mod_license_detail" license.id %}'">
+                <div>
+                    {{ license.name }}
+                </div>
+
+                <div class="muses-flex-row">
+                    <div>
+                        <a href="{% url "muses_mod_license_update" license.id %}" class="muses-button">
+                            {% trans "Update" %}
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{% url "muses_mod_license_delete" license.id %}" class="muses-button">
+                            {% trans "Delete" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

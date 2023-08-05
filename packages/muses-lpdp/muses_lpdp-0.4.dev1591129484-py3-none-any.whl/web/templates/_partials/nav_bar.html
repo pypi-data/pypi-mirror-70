@@ -1,0 +1,9 @@
+{% load user_tags %}
+{% for section in sections %}
+    {% if section.groups.all.count == 0 or request.user|in_groups:section.groups %}
+        <div class="muses-item">
+            <div class="muses-section link-section is-size-4"
+                 onclick="location.href='{% url 'muses_list_posts' section=section.short_name %}'">{{ section.name }}</div>
+        </div>
+    {% endif %}
+{% endfor %}

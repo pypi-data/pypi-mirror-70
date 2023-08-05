@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-23 20:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\db\admin.py:10
+msgid "Muses Administration"
+msgstr ""
+
+#: .\db\admin.py:11
+msgid "Administration Site of Muses"
+msgstr ""
+
+#: .\db\models.py:21
+msgid "created at"
+msgstr ""
+
+#: .\db\models.py:28
+msgid "updated at"
+msgstr ""
+
+#: .\db\models.py:35
+msgid "deleted at"
+msgstr ""
+
+#: .\db\models.py:103
+msgid "username"
+msgstr ""
+
+#: .\db\models.py:106
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+
+#: .\db\models.py:109
+msgid "A user with that username already exists."
+msgstr ""
+
+#: .\db\models.py:112
+msgid "first name"
+msgstr ""
+
+#: .\db\models.py:113
+msgid "last name"
+msgstr ""
+
+#: .\db\models.py:114
+msgid "email address"
+msgstr ""
+
+#: .\db\models.py:117
+msgid "staff status"
+msgstr ""
+
+#: .\db\models.py:119
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: .\db\models.py:122 .\db\models.py:377 .\db\models.py:483 .\db\models.py:544
+msgid "active"
+msgstr ""
+
+#: .\db\models.py:125
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: .\db\models.py:129
+msgid "date joined"
+msgstr ""
+
+#: .\db\models.py:135
+msgid "avatar"
+msgstr ""
+
+#: .\db\models.py:140
+msgid "web site"
+msgstr ""
+
+#: .\db\models.py:144
+msgid "gender"
+msgstr ""
+
+#: .\db\models.py:148
+msgid "occupation"
+msgstr ""
+
+#: .\db\models.py:152
+msgid "phone number"
+msgstr ""
+
+#: .\db\models.py:156
+msgid "privilege start date"
+msgstr ""
+
+#: .\db\models.py:160
+msgid "postal address"
+msgstr ""
+
+#: .\db\models.py:164
+msgid "postal address 2"
+msgstr ""
+
+#: .\db\models.py:168
+msgid "postal city"
+msgstr ""
+
+#: .\db\models.py:172
+msgid "postal code"
+msgstr ""
+
+#: .\db\models.py:176
+msgid "language"
+msgstr ""
+
+#: .\db\models.py:180
+msgid "locked"
+msgstr ""
+
+#: .\db\models.py:190
+msgid "Default"
+msgstr ""
+
+#: .\db\models.py:191
+msgid "Classic"
+msgstr ""
+
+#: .\db\models.py:192
+msgid "Rose"
+msgstr ""
+
+#: .\db\models.py:193
+msgid "Blue"
+msgstr ""
+
+#: .\db\models.py:194
+msgid "Green"
+msgstr ""
+
+#: .\db\models.py:195
+msgid "Orange"
+msgstr ""
+
+#: .\db\models.py:198 .\db\models.py:459
+msgid "theme"
+msgstr ""
+
+#: .\db\models.py:205
+msgid "connections counter"
+msgstr ""
+
+#: .\db\models.py:209
+msgid "page views counter"
+msgstr ""
+
+#: .\db\models.py:214
+msgid "email notification on new comment"
+msgstr ""
+
+#: .\db\models.py:218
+msgid "email notification on new message"
+msgstr ""
+
+#: .\db\models.py:223
+msgid "mailbox collapsing"
+msgstr ""
+
+#: .\db\models.py:227
+msgid "mailbox blocked"
+msgstr ""
+
+#: .\db\models.py:235
+msgid "story"
+msgstr ""
+
+#: .\db\models.py:249 .\db\models.py:405 .\db\models.py:687 .\db\models.py:957
+msgid "status"
+msgstr ""
+
+#: .\db\models.py:267
+msgid "member"
+msgstr ""
+
+#: .\db\models.py:268
+msgid "members"
+msgstr ""
+
+#: .\db\models.py:296 .\db\models.py:508 .\db\models.py:874
+msgid "subject"
+msgstr ""
+
+#: .\db\models.py:302 .\db\models.py:514 .\db\models.py:880
+msgid "no subject"
+msgstr ""
+
+#: .\db\models.py:305 .\db\models.py:517 .\db\models.py:681 .\db\models.py:759
+#: .\db\models.py:883 .\db\models.py:1049
+msgid "content"
+msgstr ""
+
+#: .\db\models.py:317
+msgid "recipient"
+msgstr ""
+
+#: .\db\models.py:323
+msgid "message_box"
+msgstr ""
+
+#: .\db\models.py:344
+msgid "key"
+msgstr ""
+
+#: .\db\models.py:350 .\db\models.py:391
+msgid "no name"
+msgstr ""
+
+#: .\db\models.py:353
+msgid "value"
+msgstr ""
+
+#: .\db\models.py:357
+msgid "no value"
+msgstr ""
+
+#: .\db\models.py:378
+msgid "disabled"
+msgstr ""
+
+#: .\db\models.py:381
+msgid "short name"
+msgstr ""
+
+#: .\db\models.py:384
+msgid "no short name"
+msgstr ""
+
+#: .\db\models.py:388 .\db\models.py:531 .\db\models.py:997 .\db\models.py:1100
+msgid "name"
+msgstr ""
+
+#: .\db\models.py:395 .\db\models.py:619 .\db\models.py:1155
+msgid "order"
+msgstr ""
+
+#: .\db\models.py:400
+msgid "description"
+msgstr ""
+
+#: .\db\models.py:411
+msgid "groups"
+msgstr ""
+
+#: .\db\models.py:414
+msgid "The groups this section belongs to."
+msgstr ""
+
+#: .\db\models.py:421
+msgid "section"
+msgstr ""
+
+#: .\db\models.py:422
+msgid "sections"
+msgstr ""
+
+#: .\db\models.py:438
+msgid "enable at"
+msgstr ""
+
+#: .\db\models.py:445
+msgid "disable at"
+msgstr ""
+
+#: .\db\models.py:458
+msgid "category"
+msgstr ""
+
+#: .\db\models.py:460
+msgid "prosody"
+msgstr ""
+
+#: .\db\models.py:461
+msgid "form"
+msgstr ""
+
+#: .\db\models.py:462
+msgid "user"
+msgstr ""
+
+#: .\db\models.py:463
+msgid "event"
+msgstr ""
+
+#: .\db\models.py:466 .\db\models.py:910 .\db\models.py:946 .\db\models.py:1127
+msgid "type"
+msgstr ""
+
+#: .\db\models.py:476
+msgid "mature"
+msgstr ""
+
+#: .\db\models.py:536
+msgid "text"
+msgstr ""
+
+#: .\db\models.py:540
+msgid "logo"
+msgstr ""
+
+#: .\db\models.py:567 .\db\models.py:611 .\db\models.py:661 .\db\models.py:1029
+msgid "title"
+msgstr ""
+
+#: .\db\models.py:571
+msgid "isbn"
+msgstr ""
+
+#: .\db\models.py:575
+msgid "published date"
+msgstr ""
+
+#: .\db\models.py:588
+msgid "visible"
+msgstr ""
+
+#: .\db\models.py:647
+msgid "old slug"
+msgstr ""
+
+#: .\db\models.py:655 .\db\models.py:1150
+msgid "DRAFT"
+msgstr ""
+
+#: .\db\models.py:656 .\db\models.py:1151
+msgid "PUBLISHED"
+msgstr ""
+
+#: .\db\models.py:657
+msgid "WARNED"
+msgstr ""
+
+#: .\db\models.py:658
+msgid "ARCHIVED"
+msgstr ""
+
+#: .\db\models.py:668 .\db\models.py:1036
+msgid "summary"
+msgstr ""
+
+#: .\db\models.py:675 .\db\models.py:1043
+msgid "bbcode content"
+msgstr ""
+
+#: .\db\models.py:693
+msgid "hits count"
+msgstr ""
+
+#: .\db\models.py:697
+msgid "revisions count"
+msgstr ""
+
+#: .\db\models.py:701
+msgid "validated at"
+msgstr ""
+
+#: .\db\models.py:774 .\db\models.py:822
+msgid "level"
+msgstr ""
+
+#: .\db\models.py:785 .\db\models.py:833
+msgid "owner"
+msgstr ""
+
+#: .\db\models.py:901
+msgid "System Action"
+msgstr ""
+
+#: .\db\models.py:902
+msgid "Message from member"
+msgstr ""
+
+#: .\db\models.py:903
+msgid "Message to member"
+msgstr ""
+
+#: .\db\models.py:904
+msgid "Internal message"
+msgstr ""
+
+#: .\db\models.py:907
+msgid "message"
+msgstr ""
+
+#: .\db\models.py:929
+msgid "Plagiarism"
+msgstr ""
+
+#: .\db\models.py:930
+msgid "Spelling"
+msgstr ""
+
+#: .\db\models.py:931
+msgid "Bad category"
+msgstr ""
+
+#: .\db\models.py:932
+msgid "Hate"
+msgstr ""
+
+#: .\db\models.py:933
+msgid "Other"
+msgstr ""
+
+#: .\db\models.py:940
+msgid "open"
+msgstr ""
+
+#: .\db\models.py:941
+msgid "closed"
+msgstr ""
+
+#: .\db\models.py:942
+msgid "discussion"
+msgstr ""
+
+#: .\db\models.py:952
+msgid "details"
+msgstr ""
+
+#: .\db\models.py:1005
+msgid "start at"
+msgstr ""
+
+#: .\db\models.py:1013
+msgid "ends at"
+msgstr ""
+
+#: .\db\models.py:1069
+msgid "Correction"
+msgstr ""
+
+#: .\db\models.py:1070
+msgid "Validation"
+msgstr ""
+
+#: .\db\models.py:1081
+msgid "action"
+msgstr ""
+
+#: .\db\models.py:1112
+msgid "removable"
+msgstr ""
+
+#: .\db\models.py:1116
+msgid "public"
+msgstr ""
+
+#: .\db\models.py:1123
+msgid "Favourite"
+msgstr ""
+
+#: .\db\models.py:1124
+msgid "Reading"
+msgstr ""
+
+#: .\db\models.py:1158
+msgid "question"
+msgstr ""
+
+#: .\db\models.py:1163
+msgid "answer"
+msgstr ""
+
+#: .\db\templates\db\admonition_admin-list.html:26
+#: .\db\templates\db\admonition_mod-list.html:17
+#: .\db\templates\db\book_admin-list.html:17
+#: .\db\templates\db\correctionrequest_cor-list.html:24
+#: .\db\templates\db\correctionrequest_mod-list.html:24
+#: .\db\templates\db\faq_admin-list.html:26
+#: .\db\templates\db\license_admin-list.html:21
+#: .\db\templates\db\license_mod-list.html:22
+#: .\db\templates\db\member_admin-list.html:22
+#: .\db\templates\db\siteparam_admin-list.html:21
+#: .\db\templates\db\tag_admin-list.html:26
+msgid "Update"
+msgstr ""
+
+#: .\db\templates\db\admonition_admin-list.html:31
+#: .\db\templates\db\admonition_mod-list.html:22
+#: .\db\templates\db\book_admin-list.html:22
+#: .\db\templates\db\commentalert_admin-list.html:17
+#: .\db\templates\db\contest_admin-list.html:17
+#: .\db\templates\db\correctionrequest_cor-list.html:29
+#: .\db\templates\db\correctionrequest_mod-list.html:29
+#: .\db\templates\db\faq_admin-list.html:21
+#: .\db\templates\db\license_admin-list.html:26
+#: .\db\templates\db\license_mod-list.html:27
+#: .\db\templates\db\postalert_admin-list.html:17
+#: .\db\templates\db\siteparam_admin-list.html:26
+#: .\db\templates\db\tag_admin-list.html:21
+msgid "Delete"
+msgstr ""
+
+#: .\db\templates\db\faq_admin-list.html:9
+msgid "New faq"
+msgstr ""
+
+#: .\db\templates\db\license_admin-detail.html:4
+msgid "License details"
+msgstr ""
+
+#: .\db\templates\db\license_admin-detail.html:9
+msgid "Name"
+msgstr ""
+
+#: .\db\templates\db\license_admin-list.html:9
+#: .\db\templates\db\license_mod-list.html:9
+msgid "New license"
+msgstr ""
+
+#: .\db\templates\db\member_admin-list.html:20
+#: .\db\templates\db\member_list.html:22
+msgid "Send a message"
+msgstr ""
+
+#: .\db\templates\db\member_admin-list.html:24
+msgid "Remove"
+msgstr ""
+
+#: .\db\templates\db\post_create.html:4
+msgid "New post"
+msgstr ""
+
+#: .\db\templates\db\tag_admin-list.html:9
+msgid "New tag"
+msgstr ""

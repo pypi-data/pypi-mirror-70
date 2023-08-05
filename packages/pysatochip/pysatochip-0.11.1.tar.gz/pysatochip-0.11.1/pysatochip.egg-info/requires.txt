@@ -1,0 +1,3 @@
+pyscard
+ecdsa
+cryptography

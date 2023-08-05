@@ -1,0 +1,4 @@
+Flask
+requests
+opencencus
+opencensus-ext-stackdriver

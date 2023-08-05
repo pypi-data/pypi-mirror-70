@@ -1,0 +1,3 @@
+[console_scripts]
+djangodeployer = djangodeployer.cmd_listener:main
+

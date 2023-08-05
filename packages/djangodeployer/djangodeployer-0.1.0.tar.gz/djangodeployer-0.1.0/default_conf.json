@@ -1,0 +1,9 @@
+{
+    "IP_ADDRESS": "0.0.0.0",
+    "SERVER_NAME": "django-server",
+    "LINUX_USER": "dj",
+    "DJ_PROJ": "djangosite",
+    "PG_USER": "djadmin",
+    "PG_DB": "djangodb",
+    "DOMAIN_NAME": "mywebsite.com"
+}

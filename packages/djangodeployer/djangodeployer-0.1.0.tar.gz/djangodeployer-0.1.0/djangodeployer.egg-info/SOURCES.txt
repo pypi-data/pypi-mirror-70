@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+default_conf.json
+setup.cfg
+setup.py
+djangodeployer/__init__.py
+djangodeployer/cmd_listener.py
+djangodeployer/installer.py
+djangodeployer.egg-info/PKG-INFO
+djangodeployer.egg-info/SOURCES.txt
+djangodeployer.egg-info/dependency_links.txt
+djangodeployer.egg-info/entry_points.txt
+djangodeployer.egg-info/top_level.txt

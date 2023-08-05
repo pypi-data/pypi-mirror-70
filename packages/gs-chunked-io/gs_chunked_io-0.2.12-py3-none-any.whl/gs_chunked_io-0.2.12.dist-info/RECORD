@@ -1,0 +1,10 @@
+gs_chunked_io/__init__.py,sha256=nH41dJocoaWKTwg6lj3yOb3nwvcnyTOY_Z9HS5b8MDA,106
+gs_chunked_io/config.py,sha256=507W4Smy1RVgRyLtFaMtAikwppw2o-0JDppHyHUP8xU,68
+gs_chunked_io/reader.py,sha256=BBJwedh2Gf64-Gy2-LZ7io26XkdG6bwpn47PH9RL14c,4985
+gs_chunked_io/version.py,sha256=GOlqYpAbeXBU8pYgXsAgMtKusKeeO1iC_GrwyupHF50,23
+gs_chunked_io/writer.py,sha256=YgTx7ty7d25-T3CAF0fTf0Kpud8dJ-qoCpGimvezqEc,7701
+gs_chunked_io-0.2.12.dist-info/LICENSE,sha256=hyGtBU0_rj-kUVvtBwbEIe_nwTJ5L7-lFuw8ud-Nc9U,1073
+gs_chunked_io-0.2.12.dist-info/METADATA,sha256=tIjrUc67vxlQDA-PWiTbV0jAh87Vwaymytgr0oD4wSU,2402
+gs_chunked_io-0.2.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gs_chunked_io-0.2.12.dist-info/top_level.txt,sha256=I2EhMoj3MIn4qHAI5CMcw2zWPQO7M_vjHOaUIIww2l8,14
+gs_chunked_io-0.2.12.dist-info/RECORD,,

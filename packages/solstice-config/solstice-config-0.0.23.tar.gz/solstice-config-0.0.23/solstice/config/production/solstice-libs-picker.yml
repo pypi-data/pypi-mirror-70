@@ -1,0 +1,7 @@
+# Base Configuration file for solstice-libs-picker
+
+# Defines lib name
+name: Picker
+
+# Unique ID for the tool
+id: solstice-plugins-picker

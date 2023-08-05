@@ -1,0 +1,8 @@
+README.md
+setup.py
+ddcros/__init__.py
+ddcros.egg-info/PKG-INFO
+ddcros.egg-info/SOURCES.txt
+ddcros.egg-info/dependency_links.txt
+ddcros.egg-info/requires.txt
+ddcros.egg-info/top_level.txt

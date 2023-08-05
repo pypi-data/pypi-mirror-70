@@ -1,0 +1,9 @@
+pollock/__init__.py,sha256=2Dypnp75qk73XqCERd7r-2_O2YpJrW8XlGWFR_k4PRs,136
+pollock/pollock.py,sha256=PKzENU505_cFm-5pp_5Y_Tz5f9rPrBdjLzfWo8Onfjc,6255
+pollock/pollock_setup.py,sha256=zPDgdGtFEDOwii2MX8bF3Vojq07RYSFB-p-fUI7wMI4,1030
+dinglab_pollock-0.0.3.dist-info/LICENSE,sha256=9JCa400_ORXHPI3P9jMUCot7zHur5UD7RhRz7gcGMUE,1521
+dinglab_pollock-0.0.3.dist-info/METADATA,sha256=ZdyACQfL4S2XB_JHMveJ_a3iX-iE4YBm7RBaspK8ZXU,7002
+dinglab_pollock-0.0.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+dinglab_pollock-0.0.3.dist-info/entry_points.txt,sha256=X-8U5gdNHgr3e19j99CXB7H1GYY4NC874O1sMZjIZ7U,93
+dinglab_pollock-0.0.3.dist-info/top_level.txt,sha256=Gtddp27CMUGzeqBbkcsRJPIMZW4kC794vQTemDNy5Hw,8
+dinglab_pollock-0.0.3.dist-info/RECORD,,

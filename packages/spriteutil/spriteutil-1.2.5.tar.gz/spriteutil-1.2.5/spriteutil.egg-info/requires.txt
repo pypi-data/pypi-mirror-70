@@ -1,0 +1,6 @@
+numpy
+pillow
+pipfile
+setuptools
+wheel
+twine

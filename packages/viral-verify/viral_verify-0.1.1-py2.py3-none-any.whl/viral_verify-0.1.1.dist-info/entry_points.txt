@@ -1,0 +1,3 @@
+[console_scripts]
+viral_verify = viral_verify.cli:main
+

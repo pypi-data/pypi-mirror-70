@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+django_girders/__init__.py
+django_girders.egg-info/PKG-INFO
+django_girders.egg-info/SOURCES.txt
+django_girders.egg-info/dependency_links.txt
+django_girders.egg-info/requires.txt
+django_girders.egg-info/top_level.txt

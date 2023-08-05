@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+stats-dists-augbote/Binomialdistribution.py
+stats-dists-augbote/Gaussiandistribution.py
+stats-dists-augbote/Generaldistribution.py
+stats-dists-augbote/__init__.py
+stats_dists_augbote.egg-info/PKG-INFO
+stats_dists_augbote.egg-info/SOURCES.txt
+stats_dists_augbote.egg-info/dependency_links.txt
+stats_dists_augbote.egg-info/not-zip-safe
+stats_dists_augbote.egg-info/top_level.txt

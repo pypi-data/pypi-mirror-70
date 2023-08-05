@@ -1,0 +1,10 @@
+name: xicor
+channels:
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - scipy==1.4.1
+    - pytest-cov==2.8.1
+    - numpy==1.18.1
+    - flake8==3.2.1

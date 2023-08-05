@@ -1,0 +1,17 @@
+dropt/client/__init__.py,sha256=IyoN0jfGrszSFfLffLYk4NM43UOfcQsug9-HC-CPBOk,166
+dropt/client/endpoint.py,sha256=dpOAMRA_Kg_NpxjBILomve861irOp-nln7l9upii1eI,2164
+dropt/client/exception.py,sha256=hje_wALQ9HlbaYTInfXT4OqokcRJHr3Hdzq0EK9FgY4,969
+dropt/client/interface.py,sha256=UVkPoxGQ24IhohSl_ElnWYkhhmqbMSOd9_MiIBrqkdo,5168
+dropt/client/objects.py,sha256=2ax_pt9BirNjRoN___4929EThjzgMroIScPR5eIFAEc,4829
+dropt/client/requestor.py,sha256=y_uwVled47-PT6H1DvsVI6O-qvZn63Pg1ORav2Fe-oc,3260
+dropt/client/resource.py,sha256=3hG72tFIZggxhPMuAr7X5mG6OoAqSKDsSFlhpqiEVoQ,2351
+dropt/client/util.py,sha256=FEhv7Td8ARCw0kbtwyMe62nOdo6swcsgD1dSDY09EYk,475
+dropt/cmd/__init__.py,sha256=IyoN0jfGrszSFfLffLYk4NM43UOfcQsug9-HC-CPBOk,166
+dropt/cmd/droptctl.py,sha256=Xz22iQSJ5RnLSUDP-bbL7aqozaPuTZhDrFQutaVyNck,3982
+dropt/cmd/execute.py,sha256=D5aL3fhU33VdzLndbQNhHHKlx3yjzNGMD15GxVssmgA,6547
+dropt_cli-0.8.1.dist-info/LICENSE,sha256=BGHq38fSpQY6MHf_hHsctKrjw_FGy6DAnBTON54-x98,1136
+dropt_cli-0.8.1.dist-info/METADATA,sha256=128HzW_GJQH_OM3QH_uY5j0HXxWxNRNL78K9YYG850k,11638
+dropt_cli-0.8.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dropt_cli-0.8.1.dist-info/entry_points.txt,sha256=xwiJbx-tZax2J40-OaB1GMCpupSAsYRyPzdyR-3XthU,55
+dropt_cli-0.8.1.dist-info/top_level.txt,sha256=EmdzqJLUbMD7XQdtjTzU7dRCQVvfhOFw0fWsMIxVIN8,6
+dropt_cli-0.8.1.dist-info/RECORD,,

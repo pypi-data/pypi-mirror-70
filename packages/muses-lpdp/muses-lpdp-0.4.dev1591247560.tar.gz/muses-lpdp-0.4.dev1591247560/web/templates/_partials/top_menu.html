@@ -1,0 +1,66 @@
+{% load i18n %}
+<div class="muses-flex-menu">
+    <div class="muses-item">
+        <div class="muses-page link-section is-size-4 item-cursor-pointer"
+             onclick="location.href='{% url 'muses_list_members' %}'">{% trans "Members" %}</div>
+    </div>
+    <div class="muses-item">
+        <div class="muses-page link-section is-size-4 item-cursor-pointer"
+             onclick="location.href='{% url 'muses_faq' %}'">{% trans "FAQ" %}</div>
+    </div>
+    <div class="muses-item">
+        <div class="muses-page link-section is-size-4 item-cursor-pointer"
+             onclick="location.href='{% url 'muses_gcu' %}'">{% trans "GCU" %}</div>
+    </div>
+</div>
+<div class="muses-flex-menu">
+    <div class="muses-item">
+        <div class="muses-site-title item-cursor-pointer"
+             onclick="location.href='{% url 'muses_home' %}'">{{ site_title }}</div>
+    </div>
+</div>
+<div class="muses-flex-menu">
+    <div class="muses-item">
+        <div class="muses-page link-section is-size-4 item-cursor-pointer"
+             onclick="location.href='{% url 'muses_about_us' %}'">{% trans "About us" %}</div>
+    </div>
+    <div class="muses-item">
+        <div class="muses-page link-section is-size-4 item-cursor-pointer"
+             onclick="location.href='{% url 'muses_contact' %}'">{% trans "Contact" %}</div>
+    </div>
+    <div class="muses-connections">
+        {% if not user.is_authenticated %}
+            <div class="">
+                <div><a class="muses-button" href="{% url "muses_login" %}">{% trans "Login" %}</a></div>
+            </div>
+            {#        {% else %}#}
+            {#            <div class="">#}
+            {#            </div>#}
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+            <div class="">
+                <div><a class="muses-button" href="{% url "muses_register" %}">{% trans "Register" %}</a></div>
+            </div>
+            {#        {% else %}#}
+            {#            <div class="">#}
+            {#            </div>#}
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+            <div style="grid-column: span 2;text-align: center;"><small><a
+                    href="{% url "muses_activate_account" %}">{% trans "Activate your account" %}</a></small>
+            </div>
+        {% else %}
+            <div class="">
+            </div>
+        {% endif %}
+        {% if  user.is_authenticated %}
+            <div class="">
+                <div><a class="muses-button" href="{% url "muses_logout" %}"><em class="fas fa-sign-out-alt"></em></a>
+                </div>
+            </div>
+        {% else %}
+        {% endif %}
+    </div>
+</div>

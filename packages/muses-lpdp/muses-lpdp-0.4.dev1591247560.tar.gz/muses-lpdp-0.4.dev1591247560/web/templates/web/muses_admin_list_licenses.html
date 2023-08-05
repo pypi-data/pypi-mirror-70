@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-licenses-list">
+        {% include "_partials/pagination.html" %}
+        {% for license in object_list %}
+            <div class="muses-tag-item">{{ license.name }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

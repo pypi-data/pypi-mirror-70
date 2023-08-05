@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+xontrib/xpg.xsh
+xontrib_xpg.egg-info/PKG-INFO
+xontrib_xpg.egg-info/SOURCES.txt
+xontrib_xpg.egg-info/dependency_links.txt
+xontrib_xpg.egg-info/requires.txt
+xontrib_xpg.egg-info/top_level.txt
+xpg/__init__.py
+xpg/conn.py
+xpg/xtable.py
+xpg/xtplot.py

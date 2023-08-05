@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: fast_gui
+Version: 0.0.2
+Summary: visual interface
+Home-page: https://github.com/asvcode/fast_gui/tree/master/
+Author: Amrit
+Author-email: amrit@pillview.com
+License: Apache Software License 2.0
+Description: # fast_gui
+        > Graphical User Interface for fastai
+        
+        
+        ## Install
+        
+        `pip install fast_gui`
+        
+        Visual UI adds a graphical interface to fastai allowing the user to quickly load, choose parameters, train and view results without the need to dig deep into the code.
+        
+Keywords: visual_ui
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

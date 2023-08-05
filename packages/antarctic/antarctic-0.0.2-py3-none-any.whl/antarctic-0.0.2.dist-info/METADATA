@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: antarctic
+Version: 0.0.2
+Summary: Storing Pandas Data in a MongoDB database
+Home-page: https://github.com/tschm/antarctic
+Author: Thomas Schmelzer
+Author-email: thomas.schmelzer@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: pandas (>=0.25.3)
+Requires-Dist: pymongo
+Requires-Dist: mongoengine (>=0.19.1)
+
+UNKNOWN
+
+

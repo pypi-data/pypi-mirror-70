@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/flixr/__init__.py
+src/flixr/__main__.py
+src/flixr/api.py
+src/flixr/display.py
+src/flixr/interface.py
+src/flixr.egg-info/PKG-INFO
+src/flixr.egg-info/SOURCES.txt
+src/flixr.egg-info/dependency_links.txt
+src/flixr.egg-info/entry_points.txt
+src/flixr.egg-info/requires.txt
+src/flixr.egg-info/top_level.txt

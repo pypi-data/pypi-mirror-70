@@ -1,0 +1,6 @@
+graft tidepool_data_science_metrics
+include LICENSE
+exclude .travis.yml
+prune data-science-metrics/tests
+prune tests
+prune tests/*

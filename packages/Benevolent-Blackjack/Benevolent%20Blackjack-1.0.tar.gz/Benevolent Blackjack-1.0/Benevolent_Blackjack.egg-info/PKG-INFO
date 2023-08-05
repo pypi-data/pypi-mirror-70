@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Benevolent-Blackjack
+Version: 1.0
+Summary: A console-based Blackjack program that can teach basic strategy and card-counting.
+Home-page: https://github.com/philipmw/benevolent-blackjack
+Author: Philip M. White
+Author-email: philip@mailworks.org
+License: Copyright (C) 2012 Philip M. White, licensed under the GNU General Public License version 3
+Description: 
+        Benevolent Blackjack is a cross-platform console-based program that plays a [game of Blackjack](https://en.wikipedia.org/wiki/Blackjack) with you, acting as the dealer and (optionally) any number of co-players.
+        In addition to being able to play the role of an apathetic dealer, Benevolent Blackjack has two unique features: it can benevolently advise you on whether you are [making optimal decisions](https://en.wikipedia.org/wiki/Blackjack#Basic_strategy) to minimize the house edge, and it can train you to count cards.
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Description-Content-Type: text/markdown

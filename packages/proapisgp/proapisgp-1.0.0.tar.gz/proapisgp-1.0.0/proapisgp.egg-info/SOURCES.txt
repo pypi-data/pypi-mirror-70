@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+proapisgp/__init__.py
+proapisgp/config.py
+proapisgp/device.properties
+proapisgp/googleplay.py
+proapisgp/googleplay_pb2.py
+proapisgp/utils.py
+proapisgp.egg-info/PKG-INFO
+proapisgp.egg-info/SOURCES.txt
+proapisgp.egg-info/dependency_links.txt
+proapisgp.egg-info/requires.txt
+proapisgp.egg-info/top_level.txt
+test/test.py

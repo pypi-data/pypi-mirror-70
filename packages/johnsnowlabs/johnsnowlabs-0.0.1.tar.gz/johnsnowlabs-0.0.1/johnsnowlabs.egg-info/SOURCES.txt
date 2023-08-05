@@ -1,0 +1,6 @@
+README.md
+setup.py
+johnsnowlabs.egg-info/PKG-INFO
+johnsnowlabs.egg-info/SOURCES.txt
+johnsnowlabs.egg-info/dependency_links.txt
+johnsnowlabs.egg-info/top_level.txt

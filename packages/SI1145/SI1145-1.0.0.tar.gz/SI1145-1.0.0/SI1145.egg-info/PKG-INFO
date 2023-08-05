@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: SI1145
+Version: 1.0.0
+Summary: Library for accessing the SI1145 UV sensor on a Raspberry Pi. Uses Adafruit GPIO I2C. Credit to Tony Dicola as used his BMP library.  Also credit to Adafruit for SI1145 Arduino library
+Home-page: https://github.com/THP-JOE/Python_SI1145.git
+Author: Joe Gutting
+Author-email: gutting@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

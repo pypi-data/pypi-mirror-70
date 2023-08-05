@@ -1,0 +1,15 @@
+aligned_bert_embedder/AlignedBertEmbedder.py,sha256=iv-VP6NgG--yg4pNXm_H2PjGu0EZNk-VMez_q1X7Ln8,15353
+aligned_bert_embedder/__init__.py,sha256=HqIf8fQWwczmVuH4TbrH24o_p9ip2-EZ_v_DOllw_io,669
+aligned_bert_embedder/__main__.py,sha256=kYmTskOlq4mVGOe5lqo1ql-CouEkhH58fPR5wa4xjgg,1031
+aligned_bert_embedder/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aligned_bert_embedder/utils/alignment.py,sha256=CtKgK65WjtEr0fI2PYMqWO6LmZoEJ93s5xZJrj8_0c0,1772
+aligned_bert_embedder/utils/etc.py,sha256=mrdn57ZCpj520894MDWinois9gRzFLvQxHFrLxtgkrk,420
+aligned_bert_embedder/utils/modeling.py,sha256=pdr_ZFffGoHizR0Bb8lmr9yiM35sp9cnc6qPh2WnhnE,38086
+aligned_bert_embedder/utils/tokenization.py,sha256=L1WH7ajzYRm75biCy6Yu4M43Rhjf9hvgUEeunw6OdDA,10559
+aligned_bert_embedder-0.81.data/scripts/aligned_bert_embedder,sha256=NKJyCC0fONcaYytG9mysca37TZf8wBDISvRNAW-78pQ,9
+aligned_bert_embedder-0.81.data/scripts/aligned_bert_embedder_,sha256=NKJyCC0fONcaYytG9mysca37TZf8wBDISvRNAW-78pQ,9
+aligned_bert_embedder-0.81.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+aligned_bert_embedder-0.81.dist-info/METADATA,sha256=XvP7FSN66PvZXjv5aTIx2HAN3YOvZZX2SL_HiLwVcUU,2823
+aligned_bert_embedder-0.81.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aligned_bert_embedder-0.81.dist-info/top_level.txt,sha256=1Z4JuVqlcowH0Xy6zbnCrXQ5UhPw54zbbi0bfga5dFs,22
+aligned_bert_embedder-0.81.dist-info/RECORD,,

@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+paperminer/__init__.py
+paperminer/converter.py
+paperminer/layout.py
+paperminer.egg-info/PKG-INFO
+paperminer.egg-info/SOURCES.txt
+paperminer.egg-info/dependency_links.txt
+paperminer.egg-info/requires.txt
+paperminer.egg-info/top_level.txt
+test/test_noop.py

@@ -1,0 +1,3 @@
+[console_scripts]
+oktajwt = oktajwt.__main__:main
+

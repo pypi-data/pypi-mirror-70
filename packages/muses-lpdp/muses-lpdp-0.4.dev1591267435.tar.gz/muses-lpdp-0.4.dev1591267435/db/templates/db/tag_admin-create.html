@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    New tag
+    <form>
+        {% csrf_token %}
+        {{ form }}
+    </form>
+
+{% endblock %}

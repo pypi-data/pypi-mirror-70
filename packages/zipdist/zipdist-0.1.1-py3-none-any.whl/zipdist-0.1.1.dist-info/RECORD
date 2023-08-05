@@ -1,0 +1,9 @@
+zipdist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zipdist/zip.py,sha256=SXGCw02macXvfL9LlaDAP9yEcEnSZpHRzSJbkh-yHk0,14686
+zipdist/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zipdist/tests/test_zip.py,sha256=QeQ9cqqHzl_POSuxJJz-t94CdqJcVXp7EJUxr1a8Opk,8394
+zipdist-0.1.1.dist-info/LICENSE,sha256=g4nyZ9li7qFT8f6u0mlwH7ahZsofIzt3O_rJ02AiitU,1080
+zipdist-0.1.1.dist-info/METADATA,sha256=UBUdjhIYlp9N0BQby3a3JB3pEHOZ3FW_Vf6OM9r9wWY,4680
+zipdist-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+zipdist-0.1.1.dist-info/top_level.txt,sha256=S_yAlGwxLjanS70LgAv7AR0d2Gjk_HUWUjWcThLVqno,8
+zipdist-0.1.1.dist-info/RECORD,,

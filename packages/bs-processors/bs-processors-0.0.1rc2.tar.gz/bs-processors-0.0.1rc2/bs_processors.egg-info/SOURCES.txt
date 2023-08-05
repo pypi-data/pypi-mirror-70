@@ -1,0 +1,8 @@
+README.md
+setup.py
+bs_processors.egg-info/PKG-INFO
+bs_processors.egg-info/SOURCES.txt
+bs_processors.egg-info/dependency_links.txt
+bs_processors.egg-info/top_level.txt
+src/__init__.py
+src/process_files.py

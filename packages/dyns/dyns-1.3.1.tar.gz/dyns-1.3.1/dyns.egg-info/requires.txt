@@ -1,0 +1,4 @@
+click>=7.1.2
+requests>=2.23.0
+rich>=1.2.2
+toml>=0.10.1

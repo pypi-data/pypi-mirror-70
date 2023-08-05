@@ -1,0 +1,10 @@
+README.md
+dynsctl
+setup.py
+dyns/__init__.py
+dyns/dyns.py
+dyns.egg-info/PKG-INFO
+dyns.egg-info/SOURCES.txt
+dyns.egg-info/dependency_links.txt
+dyns.egg-info/requires.txt
+dyns.egg-info/top_level.txt

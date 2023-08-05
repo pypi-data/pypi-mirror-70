@@ -1,0 +1,11 @@
+discogs_api/__init__.py,sha256=tvs4_9MoWbyBMr9hQA__3h5wtZ-euj_dVlpxCDikd-c,311
+discogs_api/client.py,sha256=RzThm83ybIQBfRuP7MMLSwStkPjbQoAvQc1iQzhqJfw,6908
+discogs_api/exceptions.py,sha256=HXb31BT2jG8aMyoW2D2ugiezwv2CeZOfa4O7j_3LeEU,936
+discogs_api/fetchers.py,sha256=Ro3wDs7Rn7G1FSb8K2q_JkNWUYq8dDTKNX_D1E8_Ceo,6583
+discogs_api/models.py,sha256=h1YroWWJJ2ARldDDXtaBnuOFBGDVXznURtUXpZB4_3Y,23016
+discogs_api/utils.py,sha256=UZ_h-zuAlrWbvG1PIyCvnlwiykAd3U9xMIG4JhFZNvQ,850
+discogs_api-0.0.2.dist-info/LICENSE,sha256=uKXJpb2yyIT0IVmJ9MsdbJVdQVpkH4dFM_GvpVtUNDE,1354
+discogs_api-0.0.2.dist-info/METADATA,sha256=sRwZ_amhFbBKF5EWxIGzgvIZZkRa2lFmWCQ3Ef9bLNQ,6036
+discogs_api-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+discogs_api-0.0.2.dist-info/top_level.txt,sha256=AITU2rQKZLwgyIdl3uLzTrlKAh2PgctqRQajF2JqHRE,12
+discogs_api-0.0.2.dist-info/RECORD,,

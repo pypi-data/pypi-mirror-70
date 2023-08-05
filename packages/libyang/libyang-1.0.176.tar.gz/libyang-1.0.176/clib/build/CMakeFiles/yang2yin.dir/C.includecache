@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/CESNET/libyang/tools/yang2yin/main.c
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+ctype.h
+-
+string.h
+-
+dirent.h
+-
+

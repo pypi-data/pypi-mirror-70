@@ -1,0 +1,11 @@
+prefix=/usr/local
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libyang-cpp
+Description: libyang is YANG data modelling language parser and toolkit written (and providing API) in C.
+Version: 1.0.176
+Requires.private: libyang
+Libs: -L${libdir} -lyang-cpp
+Libs.private: -lyang
+Cflags: -I${includedir}

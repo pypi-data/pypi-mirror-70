@@ -1,0 +1,1 @@
+/usr/bin/gcc -coverage -Wall -Wextra -std=gnu99 -g -O0  -static -rdynamic CMakeFiles/yang2yin.dir/tools/yang2yin/main.c.o  -o yang2yin 

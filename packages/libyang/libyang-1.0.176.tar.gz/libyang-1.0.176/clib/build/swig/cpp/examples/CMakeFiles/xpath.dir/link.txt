@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -std=c++11 -g -O0  -static -rdynamic CMakeFiles/xpath.dir/xpath.cpp.o  -o xpath ../../libyang-cpp.a ../../../libyang.a -lm -lpthread /usr/lib/x86_64-linux-gnu/libpcre.a ../../../libnacm.a ../../../libmetadata.a ../../../libyangdata.a ../../../libuser_yang_types.a ../../../libuser_inet_types.a -lgcov 

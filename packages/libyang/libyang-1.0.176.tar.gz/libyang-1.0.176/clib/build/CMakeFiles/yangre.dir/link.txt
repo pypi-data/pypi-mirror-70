@@ -1,0 +1,1 @@
+/usr/bin/gcc -coverage -Wall -Wextra -std=gnu99 -g -O0  -static -rdynamic CMakeFiles/yangre.dir/tools/re/main.c.o CMakeFiles/compat.dir/compat/compat.c.o  -o yangre libyang.a -lm -lpthread /usr/lib/x86_64-linux-gnu/libpcre.a libnacm.a libmetadata.a libyangdata.a libuser_yang_types.a libuser_inet_types.a 

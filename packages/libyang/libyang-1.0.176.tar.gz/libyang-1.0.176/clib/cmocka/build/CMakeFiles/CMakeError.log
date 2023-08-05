@@ -1,0 +1,36 @@
+Performing C SOURCE FILE Test WITH_STACK_CLASH_PROTECTION failed with the following output:
+Change Dir: /home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2c42e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2c42e.dir/build.make CMakeFiles/cmTC_2c42e.dir/build
+make[1]: Entering directory '/home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c42e.dir/src.c.o
+/usr/bin/gcc   -DWITH_STACK_CLASH_PROTECTION -fstack-clash-protection -fPIE   -o CMakeFiles/cmTC_2c42e.dir/src.c.o   -c /home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp/src.c
+gcc: error: unrecognized command line option '-fstack-clash-protection'; did you mean '-fstack-protector'?
+CMakeFiles/cmTC_2c42e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_2c42e.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_2c42e.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_2c42e/fast' failed
+make: *** [cmTC_2c42e/fast] Error 2
+
+Source file was:
+int main(int argc, char **argv) { char buffer[256]; return buffer[argc]=0;}
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f238a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f238a.dir/build.make CMakeFiles/cmTC_f238a.dir/build
+make[1]: Entering directory '/home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f238a.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fPIE   -o CMakeFiles/cmTC_f238a.dir/CheckIncludeFile.c.o   -c /home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: io.h: No such file or directory
+ #include <io.h>
+          ^~~~~~
+compilation terminated.
+CMakeFiles/cmTC_f238a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f238a.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_f238a.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/travis/build/CESNET/libyang/cmocka/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_f238a/fast' failed
+make: *** [cmTC_f238a/fast] Error 2
+
+

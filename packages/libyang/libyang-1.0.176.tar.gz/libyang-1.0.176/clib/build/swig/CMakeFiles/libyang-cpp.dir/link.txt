@@ -1,0 +1,2 @@
+/usr/bin/ar qc libyang-cpp.a  CMakeFiles/libyang-cpp.dir/cpp/src/Xml.cpp.o CMakeFiles/libyang-cpp.dir/cpp/src/Libyang.cpp.o CMakeFiles/libyang-cpp.dir/cpp/src/Tree_Data.cpp.o CMakeFiles/libyang-cpp.dir/cpp/src/Tree_Schema.cpp.o CMakeFiles/libyang-cpp.dir/cpp/src/Internal.cpp.o
+/usr/bin/ranlib libyang-cpp.a

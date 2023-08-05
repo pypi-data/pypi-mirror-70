@@ -1,0 +1,1 @@
+/usr/bin/gcc    -Wl,--wrap=uptime CMakeFiles/test_uptime.dir/test_uptime.c.o  -o test_uptime -Wl,-rpath,/home/travis/build/CESNET/libyang/cmocka/build/src ../../../src/libcmocka.so.0.7.0 

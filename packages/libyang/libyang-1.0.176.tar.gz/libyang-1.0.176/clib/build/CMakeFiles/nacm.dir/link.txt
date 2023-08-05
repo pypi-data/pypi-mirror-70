@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnacm.a  CMakeFiles/nacm.dir/src/extensions/nacm.c.o
+/usr/bin/ranlib libnacm.a

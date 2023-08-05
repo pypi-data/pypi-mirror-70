@@ -1,0 +1,2 @@
+/usr/bin/ar qc libyangdata.a  CMakeFiles/yangdata.dir/src/extensions/yangdata.c.o
+/usr/bin/ranlib libyangdata.a

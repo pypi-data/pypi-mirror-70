@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmetadata.a  CMakeFiles/metadata.dir/src/extensions/metadata.c.o
+/usr/bin/ranlib libmetadata.a

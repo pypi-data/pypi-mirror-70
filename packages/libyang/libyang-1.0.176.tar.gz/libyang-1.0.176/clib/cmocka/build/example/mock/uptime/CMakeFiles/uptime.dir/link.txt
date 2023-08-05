@@ -1,0 +1,1 @@
+/usr/bin/gcc    CMakeFiles/uptime.dir/uptime.c.o  -o uptime -Wl,-rpath,/home/travis/build/CESNET/libyang/cmocka/build/example/mock/uptime libproc_uptime.so 

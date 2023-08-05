@@ -1,0 +1,1 @@
+/usr/bin/gcc    CMakeFiles/simple_test.dir/simple_test.c.o  -o simple_test -Wl,-rpath,/home/travis/build/CESNET/libyang/cmocka/build/src ../src/libcmocka.so.0.7.0 

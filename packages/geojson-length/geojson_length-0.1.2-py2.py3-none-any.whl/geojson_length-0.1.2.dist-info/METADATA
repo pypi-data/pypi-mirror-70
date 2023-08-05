@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: geojson-length
+Version: 0.1.2
+Summary: Calculate the length of a GeoJSON LineString or MultiLineString
+Home-page: https://github.com/zaitra/geojson-length
+Author: Zaitra
+Author-email: info@zaitra.io
+License: MIT license
+Keywords: geojson
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: geopy
+
+==============
+geojson-length
+==============
+
+
+.. image:: https://img.shields.io/pypi/v/geojson-length.svg
+        :target: https://pypi.python.org/pypi/geojson-length
+
+.. image:: https://img.shields.io/travis/zaitra/geojson-length.svg
+        :target: https://travis-ci.org/zaitra/geojson-length
+
+
+Calculate the length of a GeoJSON LineString or MultiLineString
+
+
+* Free software: MIT license
+* Documentation: https://geojson-length.readthedocs.io.
+
+
+Installation
+------------
+
+.. code::
+
+  $ pip3 install geojson-length
+
+
+Usage
+------------
+
+.. code:: python
+
+  >>> from geojson_length import calculate_distance, Unit
+  >>> from geojson import Feature, LineString
+
+  >>> line = Feature(geometry=LineString([[19.6929931640625,48.953170117120976],[19.5556640625,48.99283383694351]]))
+  >>> calculate_distance(line, Unit.meters)
+  10979.098283583924
+
+Note: You need to install python-geojson_ first or you can define GeoJSON as python dict:
+
+.. _python-geojson: https://github.com/jazzband/geojson
+
+.. code:: python
+
+    line = {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            19.6929931640625,
+            48.953170117120976
+          ],
+          [
+            19.5556640625,
+            48.99283383694351
+          ]
+        ]
+      }
+    }
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+The idea was inspired by geojson-length_ package written in JS.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _`geojson-length`: https://github.com/tyrasd/geojson-length
+
+
+=======
+History
+=======
+
+0.1.0 (2020-06-04)
+------------------
+
+* First release on PyPI.
+
+

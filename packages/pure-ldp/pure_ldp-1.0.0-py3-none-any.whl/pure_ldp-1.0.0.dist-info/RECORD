@@ -1,0 +1,14 @@
+pure_ldp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pure_ldp/histogram_encoding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pure_ldp/histogram_encoding/he_client.py,sha256=zEywQqRmygMvLI8xIRY7Ty2OlsU3xA6X0_6f6ItU0s8,1456
+pure_ldp/histogram_encoding/he_server.py,sha256=90ukWT1wdQ3yG22ASrccRgdNkOJ5Ow2aSPxQqRb5Flg,3143
+pure_ldp/local_hashing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pure_ldp/local_hashing/lh_client.py,sha256=db82SiJlhzYJfFMlDUB4i_AlZQGdAdqsJu96daGkRU0,2748
+pure_ldp/local_hashing/lh_server.py,sha256=9GVqubK0gYg-SqVogaa4xfWcoBAbmYPV_NXIGDkD2Rg,2453
+pure_ldp/unary_encoding/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pure_ldp/unary_encoding/ue_client.py,sha256=R1Y7mxf2xomLBdIDojWmQOVw-8LvFe7BjVXPrmHa3E4,1853
+pure_ldp/unary_encoding/ue_server.py,sha256=UA-gheARegapma4LA8MSHa29PBXeusqlXINA-0d1Tzw,1691
+pure_ldp-1.0.0.dist-info/METADATA,sha256=hExNW8UQjjN65FqnOm7oaxqj0VKk4H2Dl99dmR9IHoY,338
+pure_ldp-1.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pure_ldp-1.0.0.dist-info/top_level.txt,sha256=pwiHXO5x6K0Qgpa7Y3qNW1yv1j43-yeFlz6ePOsBz84,9
+pure_ldp-1.0.0.dist-info/RECORD,,

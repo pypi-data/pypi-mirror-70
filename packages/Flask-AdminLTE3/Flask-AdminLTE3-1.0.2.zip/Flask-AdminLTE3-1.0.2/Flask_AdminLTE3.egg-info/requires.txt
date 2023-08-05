@@ -1,0 +1,2 @@
+flask-admin@ https://github.com/flask-admin/flask-admin/archive/bootstrap4.zip
+Flask>=0.8

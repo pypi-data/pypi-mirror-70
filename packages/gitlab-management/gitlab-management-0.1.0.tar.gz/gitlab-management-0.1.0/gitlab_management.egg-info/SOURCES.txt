@@ -1,0 +1,10 @@
+README.md
+setup.py
+gitlab-management/__init__.py
+gitlab-management/__main__.py
+gitlab-management/base.py
+gitlab-management/cli.py
+gitlab_management.egg-info/PKG-INFO
+gitlab_management.egg-info/SOURCES.txt
+gitlab_management.egg-info/dependency_links.txt
+gitlab_management.egg-info/top_level.txt

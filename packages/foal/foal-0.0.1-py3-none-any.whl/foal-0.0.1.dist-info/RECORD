@@ -1,0 +1,15 @@
+foal/__init__.py,sha256=Rkyef3m8raRRqOl7cA9alyo8zTKe7Gqs8XkMRayFQE8,891
+foal/__main__.py,sha256=tIQyz5I2CBhiVE0be-bHpHPwerq6wJ4SpbnsknTiZzg,1128
+foal/acronyms.py,sha256=vdUwZe3CZ8ybir_2tY9pa91nonxsN9uKnK6ZoUMM7gQ,5529
+foal/cli.py,sha256=QG5DOF_1czEmXnkxLInnW1h_R-RQfRIeKJi4-ZX0Ij8,5660
+foal/version.py,sha256=noyat2QtKBjWaqVKcxPxZ55V596yiogPY6WvRvWJ_GI,994
+foal/data/finance.yaml,sha256=BgmQbJ7JFamAFnz8NqNR65PX6iG514KX1e_06tfCF60,220
+foal/data/global.yaml,sha256=_A_lcxcKv57X56Sg7SznNgQXncY9pyt0mkcyioisx_8,17
+foal/data/technology.yaml,sha256=88gdGkGhjfhzBwEc7FpQ2Jsi3wIi9uckstJaGCQBIW4,163
+foal/schema/acronyms.yaml,sha256=Rhuu-isP9MLMTekPt-vkvxlgNfkFAg4ILGU6SjeS22k,1945
+foal-0.0.1.dist-info/LICENSE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+foal-0.0.1.dist-info/METADATA,sha256=E16HfENXAeJpB6JMdcYVRLFANT6DG1I6_g9aiLiZe_o,5563
+foal-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+foal-0.0.1.dist-info/entry_points.txt,sha256=yezFhMAqt7Ggcf_RDbsmnyfrO0I1FaFXozlHdWClTdg,45
+foal-0.0.1.dist-info/top_level.txt,sha256=ygrW_AlsWEtFfjo7lmQgVrqpGT9DWM7wLW2lHmxzK8Y,5
+foal-0.0.1.dist-info/RECORD,,

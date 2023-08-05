@@ -1,0 +1,12 @@
+README.md
+misc.py
+panphlan_download_pangenome.py
+panphlan_find_gene_grp.py
+panphlan_map.py
+panphlan_profiling.py
+setup.py
+panphlan.egg-info/PKG-INFO
+panphlan.egg-info/SOURCES.txt
+panphlan.egg-info/dependency_links.txt
+panphlan.egg-info/requires.txt
+panphlan.egg-info/top_level.txt

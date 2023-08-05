@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hex-gym
+Version: 0.1.1
+Summary: A OpenAi Gym Environment for a hexapod
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gym
+Requires-Dist: pybullet
+Requires-Dist: numpy
+
+UNKNOWN
+
+

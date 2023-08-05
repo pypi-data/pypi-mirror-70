@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pydantic_webargs
+Version: 0.1.0
+Summary: Pydatic webargs
+Home-page: https://ahmednafies.github.io/pydantic_webargs/
+Author: Ahmed Nafies
+Author-email: ahmed.nafies@gmail.com
+License: MIT
+Project-URL: Documentation, https://ahmednafies.github.io/pydantic_webargs/
+Project-URL: Source, https://github.com/ahmednafies/pydantic_webargs
+Description: # Pyndatic Webargs
+        
+        A library for parsing and validating http requests for flask web-framework using pydantic library 
+        
+        Full documentation [here](https://ahmednafies.github.io/pydantic_webargs/)
+        
+        ## Requirements
+        
+        	python >= 3.7
+        
+        ## How to install
+        
+        ```bash
+        pip install pydantic-webargs
+        ```
+        
+        ## Dependencies
+        
+        	pydantic
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: docs

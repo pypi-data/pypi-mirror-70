@@ -1,0 +1,44 @@
+.TH "rmol-config" 1 "Mon Jun 1 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rmol-configConfiguration Script for the C++ Revenue Management Optimisation Library
+.SH "SYNOPSIS"
+.PP
+\fBrmol-config\fP \fC[--prefix] [--version] [--libs] [--cflags]\fP
+.SH "DESCRIPTION"
+.PP
+\fIrmol-config\fP is a tool that is used by configure to determine the compiler and linker flags that should be used to compile and link programs that use \fIRMOL\fP\&. It is also used internally by the \&.m4 macros, that are included with \fIRMOL\fP, for GNU autoconf\&.
+.SH "OPTIONS"
+.PP
+\fIrmol-config\fP accepts the following options:
+.PP
+\fB--version\fP 
+.br
+ Print the currently installed version of RMOL on the standard output\&.
+.PP
+\fB--sampledir\fP 
+.br
+ Show where the (CSV) sample files are located\&.
+.PP
+\fB--libs\fP 
+.br
+ Print the linker flags that are necessary to link with the RMOL library\&.
+.PP
+\fB--cflags\fP 
+.br
+ Print the compiler flags that are necessary to compile with the RMOL library\&.
+.PP
+\fB--prefix\fP 
+.br
+ Show the RMOL installation prefix\&.
+.SH "SEE ALSO"
+.PP
+\fBrmol(1)\fP, \fBrmol-config\fP(1), \fBboost-config\fP(1)
+.SH "COPYRIGHT"
+.PP
+Copyright © 2007-2019 Denis Arnaud
+.PP
+See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet:
+.br
+ http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html 

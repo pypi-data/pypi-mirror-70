@@ -1,0 +1,68 @@
+.TH "rmol_extractBPC" 1 "Mon Jun 1 2020" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rmol_extractBPCCommand-line utility for the C++ Revenue Management Optimisation Library
+.SH "SYNOPSIS"
+.PP
+\fBrmol_extractBPC\fP \fC[--prefix] [-v|--version] [-h|--help] [-b|--builtin] [-i|--input <path-to-input>] [-l|--log <path-to-output-log-file>]\fP
+.SH "DESCRIPTION"
+.PP
+\fIrmol_extractBPC\fP is a small program showing how to use the RMOL library\&.
+.PP
+\fIrmol_extractBPC\fP accepts the following options:
+.PP
+\fB--prefix\fP 
+.br
+ Show the RMOL installation prefix\&.
+.PP
+\fB-v\fP, \fB--version\fP 
+.br
+ Print the currently installed version of RMOL on the standard output\&.
+.PP
+\fB-h\fP, \fB--help\fP 
+.br
+ Produce that message and show usage\&.
+.PP
+\fB-d\fP, \fB--draws\fP 
+.br
+ Number of to-be-generated random draws\&.
+.br
+.PP
+\fB-c\fP, \fB--capacity\fP 
+.br
+ Resource capacity (e\&.g\&., for a flight leg-cabin)\&.
+.br
+.PP
+\fB-m\fP, \fB--method\fP 
+.br
+ Revenue Management method to be used (0 = Monte-Carlo, 1 = Dynamic Programming, 2 = EMSR, 3 = EMSR-a, 4 = EMSR-b)
+.PP
+\fB-b\fP, \fB--builtin\fP 
+.br
+ The leg-cabin set up can be either built-in or parsed from an input file\&. That latter must then be given with the -i/--input option\&. In any case, a sample ('dummy') BOM tree is built from hard-coded parameters to wrap the leg-cabin set-up and allow the usage of classical StdAir API (e\&.g, stdair::BomDisplay::csvDisplay())\&.
+.br
+.PP
+\fB-i\fP, \fB--input\fP <path-to-input-file>
+.br
+ Path (absolute or relative) of the (CSV) input file specifying the demand distribution parameters and resource (leg-cabin) capacities\&.
+.br
+.PP
+\fB-l\fP, \fB--log\fP <path-to-output-log-file>
+.br
+ Path (absolute or relative) of the output log file\&.
+.PP
+See the output of the \fC`rmol_extractBPC --help'\fP command for default options\&.
+.SH "SEE ALSO"
+.PP
+\fBrmol(1)\fP, \fBrmol-config\fP(1), \fBrmol-library\fP(3)
+.SH "SUPPORT"
+.PP
+Please report any bugs to http://github.com/airsim/rmol/issues
+.SH "COPYRIGHT"
+.PP
+Copyright © 2007-2019 Denis Arnaud
+.PP
+See the COPYING file for more information on the (LGPLv2+) license, or directly on Internet:
+.br
+ http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html 

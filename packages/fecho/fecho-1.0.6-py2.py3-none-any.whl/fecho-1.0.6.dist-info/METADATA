@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: fecho
+Version: 1.0.6
+Summary: Requests wrapper that uses Facebook Developer tool echo.
+Home-page: https://github.com/thehappydinoa/fecho
+Author: Aidan Holland
+Author-email: thehappydinoa@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=2.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: six
+Provides-Extra: dev
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: autopep8 ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+
+# fecho [![Build Status](https://travis-ci.com/thehappydinoa/fecho.svg?branch=master)](https://travis-ci.com/thehappydinoa/fecho)
+
+Uses Facebook's debugging tool to bypass CAPTCHA and other blacklists.
+
+## Install
+
+```bash
+pip install fecho
+```
+
+## Usage
+
+The cookie can be extracted using the [EditThisCookie](http://www.editthiscookie.com/blog/2014/03/install-editthiscookie/) browser extension. Just export the cookies after logging into [Facebook](https://www.facebook.com/).
+
+### Command Line
+
+```bash
+fecho --url 'https://www.google.com/search?q=sample+query' --cookie '[
+{
+    "domain": ".facebook.com",
+    "expirationDate": 1597023793.932123,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "c_user",
+    "path": "/",
+    "sameSite": "unspecified",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "",
+    "id": 1
+},
+...
+]'
+```
+
+### Python
+
+```python
+from fecho import Client
+
+COOKIE = """
+[
+{
+    "domain": ".facebook.com",
+    "expirationDate": 1597023793.932123,
+    "hostOnly": false,
+    "httpOnly": false,
+    "name": "c_user",
+    "path": "/",
+    "sameSite": "unspecified",
+    "secure": true,
+    "session": false,
+    "storeId": "0",
+    "value": "",
+    "id": 1
+},
+...
+]
+"""
+
+client = Client(COOKIE)
+
+response = client.get("https://www.google.com/search?q=test")
+
+print(client.unescape(response.text))
+```
+
+## Note
+
+This project was inspired by [s0md3v/goop](https://github.com/s0md3v/goop)
+
+

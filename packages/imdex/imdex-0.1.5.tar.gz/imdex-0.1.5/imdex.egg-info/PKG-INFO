@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: imdex
+Version: 0.1.5
+Summary: Imdex is a library that allows semantic searches over images sets
+Home-page: https://github.com/Lucasfrota/imdex
+Author: Lucas Frota
+Author-email: lucv.frota@gmail.com
+License: UNKNOWN
+Description: # imdex
+        Imdex is a library that allows semantic searches over images sets
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

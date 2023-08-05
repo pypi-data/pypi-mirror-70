@@ -1,0 +1,3 @@
+[console_scripts]
+wdlkit=wdlkit.__main__:wdlkit
+

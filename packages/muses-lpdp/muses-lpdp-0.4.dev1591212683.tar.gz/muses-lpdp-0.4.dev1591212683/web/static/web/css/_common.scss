@@ -1,0 +1,155 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $font-sans-serif, sans-serif;
+  font-size: $size-0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6,
+[class*="title"], [class*="section"] {
+  font-family: $font-serif, serif;
+}
+
+h1, .muses-title-1, [class$="title-1"] {
+  font-size: $size-8;
+}
+
+h2, .muses-title-2, [class$="title-2"] {
+  font-size: $size-7;
+}
+
+h3, .muses-title-3, [class$="title-3"] {
+  font-size: $size-6;
+}
+
+h4, .muses-title-4, [class$="title-4"] {
+  font-size: $size-5;
+}
+
+h5, .muses-title-5, [class$="title-5"] {
+  font-size: $size-4;
+}
+
+h6, .muses-title-6, [class$="title-6"] {
+  font-size: $size-3;
+}
+
+input {
+  display: block;
+  margin: 0.4vh 0.4vw;
+  padding: 0.4vh 0.4vw;
+  color: inherit;
+  width: 100%;
+  border: none;
+  border-radius: 0.4em;
+  transition: box-shadow 0.5s;
+}
+
+select {
+  margin: 0.4vh 0.4vw;
+  padding: 0.4vh 0.4vw;
+  color: inherit;
+  border: none;
+  border-radius: 0.4em;
+  transition: box-shadow 0.5s;
+}
+
+$button-background: $primary-color;
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0 80%, 0 20%, 10% 40%, 20% 0, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0 70%, 0 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0;
+  }
+  100% {
+    background-position: 0 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+}
+
+button,
+input[type=submit],
+input[type=reset],
+input[type=button],
+.muses-button {
+  margin-right: 0.4em;
+  cursor: pointer;
+  font-family: $font-sans-serif, serif;
+  display: inline-block;
+  padding: 0.5em 1em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $button-background;
+  color: #fff;
+  border-radius: 0.4em;
+  border: none;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0em 0em 0.2em $button-background;
+  text-decoration: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: darken($button-background, 10%);
+  }
+
+  &:active {
+    transform: scale(0.9);
+    background-color: darken($primary-color, 10%);
+    box-shadow: 0 2px 25px darken($primary-color, 90%);
+  }
+
+  &.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+
+  &.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+}

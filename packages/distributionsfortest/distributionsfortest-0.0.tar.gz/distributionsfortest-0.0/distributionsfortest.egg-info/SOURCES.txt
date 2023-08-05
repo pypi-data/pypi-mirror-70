@@ -1,0 +1,10 @@
+setup.py
+distributionsfortest/Binomialdistribution.py
+distributionsfortest/Gaussiandistribution.py
+distributionsfortest/Generaldistribution.py
+distributionsfortest/__init__.py
+distributionsfortest.egg-info/PKG-INFO
+distributionsfortest.egg-info/SOURCES.txt
+distributionsfortest.egg-info/dependency_links.txt
+distributionsfortest.egg-info/not-zip-safe
+distributionsfortest.egg-info/top_level.txt

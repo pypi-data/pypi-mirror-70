@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyworkflows
+Version: 0.2.3
+Summary: A workflow management library
+Home-page: UNKNOWN
+Author: Bao Wei
+Author-email: baowei.ur521@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: atomic-write-path (>=1.4)
+Requires-Dist: python-dateutil (>=2.8)
+
+# pyworkflows
+A workflow management library
+
+

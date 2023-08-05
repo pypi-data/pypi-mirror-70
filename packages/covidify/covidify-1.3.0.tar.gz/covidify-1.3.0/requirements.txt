@@ -1,0 +1,14 @@
+click
+matplotlib
+pyarrow 
+pandas
+docopt 
+GitPython 
+pillow
+tqdm
+xlsxwriter
+numpy
+pmdarima
+folium
+altair
+seaborn

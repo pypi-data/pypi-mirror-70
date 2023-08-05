@@ -1,0 +1,7 @@
+pandas
+numpy
+lime
+shap
+scikit-learn
+setuptools
+ipython

@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: thmapi
+Version: 0.5.0
+Summary: THM public API wrapper
+Home-page: https://github.com/szymex73/py-thmapi
+Author: Szymon Borecki
+Author-email: self@szymex.pw
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# py-thmapi
+Python public THM API Wrapper
+
+

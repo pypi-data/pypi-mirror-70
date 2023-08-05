@@ -1,0 +1,14 @@
+bin/__init__.py,sha256=eqpsHHGwbmw83sUs4-l-fIh6rUYw_BjA4qCUnKkGPa4,23
+bin/cliquor.py,sha256=1oLL20yLB1GL9IbFiZD8OReDqiCpFr-yetIR6x1cNkI,23
+cliquor/__init__.py,sha256=BZU8ktPMVc9XeJ5YJeeCAPCjRyaxYIU_zusvjiSi5_Q,21
+cliquor/app.py,sha256=jEw6xRirX4ZjUsXO6bZeD6uQ5QKvzRE_yw2iqq4WDVY,1030
+cliquor/command.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commands/init_command.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cliquor-0.0.1.dist-info/LICENSE,sha256=2OHgQ6Gbz-Awe7AXvg_NrC2mdHq0fLzvIu8JSDhPirs,1070
+cliquor-0.0.1.dist-info/METADATA,sha256=0DN1E2Gs_jlWwnEMcSzfbAJn5cE71vEfAFJR7toK3tw,412
+cliquor-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cliquor-0.0.1.dist-info/entry_points.txt,sha256=rqfF4G8QuoOEilrYbUoV1gjrUN2qcHt5taztUCNUtL4,42
+cliquor-0.0.1.dist-info/top_level.txt,sha256=Ph1HrAFl429flrC4TYI4Z8cQgkNdms-SjD4tfJ-zMk8,27
+cliquor-0.0.1.dist-info/RECORD,,

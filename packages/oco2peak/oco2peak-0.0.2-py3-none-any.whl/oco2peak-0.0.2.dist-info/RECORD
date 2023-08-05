@@ -1,0 +1,15 @@
+oco2peak/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+oco2peak/_nbdev-old.py,sha256=znDd_f9LCb14lAOgixSubkmI6CB2WcFM_T9bmPudMVw,1514
+oco2peak/_nbdev.py,sha256=So0GdNYq71kEt5cNIzN0ydbPfuMlnlpXKI7quRP_BkE,1684
+oco2peak/datasets.py,sha256=0x8FQE1q8a3fN9Q2HVeVRpYS0dF5-6p1VfR7CHDdY8c,6821
+oco2peak/find_peak.py,sha256=CRk43GYFoiqqp82bpnZdOXtk_FTR7099SutfOVECI78,10794
+oco2peak/find_source.py,sha256=5ym0otO270vuZGyf1ujcwvlLbQ5hL3FAT8HQEXJbCwk,3137
+oco2peak/nc4_convert.py,sha256=cjHPMMiCEJb1CbmSdL1CdznjGe9fBhPa6nnYhQ8WC2o,5144
+oco2peak/oco2map.py,sha256=JptiePwfJLOLzmJnJJAUdGflu6zsom3GUktbQtzK2dM,6712
+oco2peak/oco2mapfolium.py,sha256=C6390GkSMQ0mFY6xWXY2mBFx4XtDz1QXux4zhCKEc2U,6646
+oco2peak-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+oco2peak-0.0.2.dist-info/METADATA,sha256=__aNylwQ0ycyGcMRyTMziPFZco4gdCQm_KRIr4pCOyY,9292
+oco2peak-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+oco2peak-0.0.2.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+oco2peak-0.0.2.dist-info/top_level.txt,sha256=V83GGz-z32Db4kOgYzKaInTPcU9klEAr2Xh8_CGsKUg,9
+oco2peak-0.0.2.dist-info/RECORD,,

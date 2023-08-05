@@ -1,0 +1,3 @@
+[console_scripts]
+spyci = spyci.cli:main
+

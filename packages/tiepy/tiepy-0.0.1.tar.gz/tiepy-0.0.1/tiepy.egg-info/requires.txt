@@ -1,0 +1,7 @@
+click>=6.5
+
+[:python_version < "3.7"]
+dataclasses>=0.6
+
+[test]
+pytest

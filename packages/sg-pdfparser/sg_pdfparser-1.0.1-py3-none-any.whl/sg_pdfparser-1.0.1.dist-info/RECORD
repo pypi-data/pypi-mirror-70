@@ -1,0 +1,13 @@
+pdfparser/__init__.py,sha256=p4vNpOZstqBoCUHTVvR_QUG8LPPE-D1TWraOSUwQGsc,48
+pdfparser/__main__.py,sha256=DJa4zmPdaQVj2ZviL93ck95GsdVy2Z9pIcWjK2YnjHo,2526
+pdfparser/custom_error.py,sha256=3pL2dBg1AJzbdgLnB7DGSr65jEWfs_aCeucjVJFBB04,544
+pdfparser/main_operations.py,sha256=JUagv-51vB7rpBvhKKGWzg_mdpCYZyMBr-e0w1D3ZyQ,15639
+pdfparser/user_choice.py,sha256=ycSfSuqKDXGAo00QYHWrx0vsRB_jTgXkHm58UFds1Sc,1900
+pdfparser/user_inputs.py,sha256=Y2DPtp28DYrf_iLZAVx3B_ou8qIW7eIZr1SWkCMivII,1670
+pdfparser/utilities.py,sha256=jD8SHnwEXo4PHssDiBDsNL8zM7kmn9bZ9QEZZnDWiNY,2554
+sg_pdfparser-1.0.1.dist-info/LICENSE,sha256=vbntmKawE-EmcqG5EHL6hT-HpXfcyOrOyD9RNzZj2-g,1070
+sg_pdfparser-1.0.1.dist-info/METADATA,sha256=MEWFd5a5KttsYFX8J6vJekMB2XFeSveIkomhU8y_33g,3113
+sg_pdfparser-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sg_pdfparser-1.0.1.dist-info/entry_points.txt,sha256=Er3yMtbZfYdNr8f39Q17Q4b6GbBt30cURAclHf0Z1MA,55
+sg_pdfparser-1.0.1.dist-info/top_level.txt,sha256=7sCRi_5SlayRbq6y5RXnyhjBRcLEuLpwWrNMF0QLAYw,10
+sg_pdfparser-1.0.1.dist-info/RECORD,,

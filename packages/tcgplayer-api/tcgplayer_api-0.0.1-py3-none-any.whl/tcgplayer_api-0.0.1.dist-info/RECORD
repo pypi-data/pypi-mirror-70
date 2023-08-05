@@ -1,0 +1,10 @@
+tcgplayer_api/VERSION,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+tcgplayer_api/__init__.py,sha256=SJ9slxz66Or2VW72LS3PSt7FW2OlfvnzJJ7ZcqJZeBw,229
+tcgplayer_api/auth.py,sha256=EcKdM7YZpMaXruLZcvQG8_SqtIw5vcnjx9dTDngDiMw,1145
+tcgplayer_api/client.py,sha256=r75eezFMPvVJB8w6FdSWTj5k0X990Xuw6hKH3-37Mig,3748
+tcgplayer_api/utils.py,sha256=--j4B25GD4c6zJ7y4kVuNlKLCLmTnjWN5Ai6-9z3okY,119
+tcgplayer_api-0.0.1.dist-info/LICENSE,sha256=A2JlSaWav2SO5ZFjs7isv2bDZRPLHnbW4ne8BEySbjA,3
+tcgplayer_api-0.0.1.dist-info/METADATA,sha256=KjFooGtRvCUsLpOmiUlBun6XPJA4qRnCXJIY99SuKaA,2424
+tcgplayer_api-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tcgplayer_api-0.0.1.dist-info/top_level.txt,sha256=f_UqsKhJBLDZ_zjAXwMm5d-VrGUOMENZl40RnOxK62o,14
+tcgplayer_api-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,10 @@
+setup.py
+fariman_distributions/Binomialdistribution.py
+fariman_distributions/Gaussiandistribution.py
+fariman_distributions/Generaldistribution.py
+fariman_distributions/__init__.py
+fariman_distributions.egg-info/PKG-INFO
+fariman_distributions.egg-info/SOURCES.txt
+fariman_distributions.egg-info/dependency_links.txt
+fariman_distributions.egg-info/not-zip-safe
+fariman_distributions.egg-info/top_level.txt

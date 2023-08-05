@@ -1,0 +1,333 @@
+# MASTER DATA MODULE LOCALIZATION MESSAGES.
+# Copyright (C) 2020, Cherubits
+# This file is distributed under the same license as the corgy_mdm package.
+# László Hegedűs <laszlo.hegedus@cherubits.hu>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-01 05:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: corgy_mdm/apps.py:7
+msgid "Master data"
+msgstr "Törzsadatok"
+
+#: corgy_mdm/models.py:23
+msgid "bank account number"
+msgstr "bankszámlaszám"
+
+#: corgy_mdm/models.py:24
+#, fuzzy
+#| msgid "bank account number"
+msgid "Please provide bank account number."
+msgstr "bankszámlaszám"
+
+#: corgy_mdm/models.py:34
+msgid "prime number"
+msgstr "törzsszám"
+
+#: corgy_mdm/models.py:37
+msgid "prime number is unique code for any master data"
+msgstr "A törzs adat egyedi kódja."
+
+#: corgy_mdm/models.py:41
+msgid "code"
+msgstr "kód"
+
+#: corgy_mdm/models.py:46
+msgid "Law-abiding master data code"
+msgstr "Törzsadat kód, megfelel a jogilag szabályozottnak"
+
+#: corgy_mdm/models.py:50
+msgid "name"
+msgstr "megnevezés"
+
+#: corgy_mdm/models.py:55
+msgid "Humanized name of master data"
+msgstr "Ember számáta olvasható név"
+
+#: corgy_mdm/models.py:59
+msgid "description"
+msgstr "leírás"
+
+#: corgy_mdm/models.py:64
+msgid "Long description"
+msgstr "Hosszabb, ember számára értelmezhető leírás"
+
+#: corgy_mdm/models.py:71
+msgid "Junior"
+msgstr "Fiatalabb"
+
+#: corgy_mdm/models.py:72
+msgid "Senior"
+msgstr "Idősebb"
+
+#: corgy_mdm/models.py:73
+msgid "Doctor"
+msgstr "Doktor"
+
+#: corgy_mdm/models.py:74
+msgid "Professor"
+msgstr "Professzor"
+
+#: corgy_mdm/models.py:75
+msgid "Widow"
+msgstr "Özvegy"
+
+#: corgy_mdm/models.py:84
+msgid "name prefix"
+msgstr "előtag"
+
+#: corgy_mdm/models.py:93
+msgid "first name"
+msgstr "keresztnév"
+
+#: corgy_mdm/models.py:100
+msgid "middle name"
+msgstr "középső név"
+
+#: corgy_mdm/models.py:108
+msgid "last name"
+msgstr "utónév"
+
+#: corgy_mdm/models.py:115
+msgid "name suffix"
+msgstr "utótag"
+
+#: corgy_mdm/models.py:138
+msgid "birth date"
+msgstr "születési dátum"
+
+#: corgy_mdm/models.py:144
+msgid "birth place"
+msgstr "születési hely"
+
+#: corgy_mdm/models.py:151
+msgid "name of mother"
+msgstr "anyja neve"
+
+#: corgy_mdm/models.py:162
+msgid "Female"
+msgstr "Nő"
+
+#: corgy_mdm/models.py:163
+msgid "Male"
+msgstr "Férfi"
+
+#: corgy_mdm/models.py:172
+msgid "tax number"
+msgstr "adószám"
+
+#: corgy_mdm/models.py:182
+msgid "nationality"
+msgstr "nemzetiség"
+
+#: corgy_mdm/models.py:187
+msgid "has inland residence"
+msgstr "belföldi cím"
+
+#: corgy_mdm/models.py:188
+msgid "Has inland address."
+msgstr "Rendelkezik belföldi címmel."
+
+#: corgy_mdm/models.py:199
+msgid "sub account"
+msgstr "alszámla"
+
+#: corgy_mdm/models.py:209
+msgid "dependence quality"
+msgstr "eltartott minőség"
+
+#: corgy_mdm/models.py:210
+msgid "dependence qualities"
+msgstr "eltartott minőségek"
+
+#: corgy_mdm/models.py:219
+msgid "dependence legitimacy"
+msgstr "eltartott jogosultság"
+
+#: corgy_mdm/models.py:220
+msgid "dependence legitimacies"
+msgstr "eltartott jogosultságok"
+
+#: corgy_mdm/models.py:228
+msgid "independent-actvitiy declaration cost"
+msgstr ""
+
+#: corgy_mdm/models.py:229
+msgid "independent-actvitiy declaration costs"
+msgstr ""
+
+#: corgy_mdm/models.py:240
+msgid "begin"
+msgstr "kezdete"
+
+#: corgy_mdm/models.py:247
+msgid "end"
+msgstr "vége"
+
+#: corgy_mdm/models.py:279
+msgid "accomodation subaccount"
+msgstr "szállás alszámla"
+
+#: corgy_mdm/models.py:286
+msgid "hospitality subaccount"
+msgstr "vendéglátás alszámla"
+
+#: corgy_mdm/models.py:293
+msgid "leisure subaccount"
+msgstr "szabadidő alszámla"
+
+#: corgy_mdm/models.py:307
+msgid "person"
+msgstr "személy"
+
+#: corgy_mdm/models.py:308
+msgid "people"
+msgstr "személyek"
+
+#: corgy_mdm/models.py:313
+msgid "gender"
+msgstr "neme"
+
+#: corgy_mdm/models.py:322
+msgid "permanent address"
+msgstr "állandó lakcím"
+
+#: corgy_mdm/models.py:323
+msgid "Permanent address, desc."
+msgstr "állandó lakcím leírása"
+
+#: corgy_mdm/models.py:331
+msgid "temporary address"
+msgstr "tartózkodási hely"
+
+#: corgy_mdm/models.py:332
+msgid "temporary address, desc."
+msgstr "tartózkodási hely leírása"
+
+#: corgy_mdm/models.py:341
+msgid "phone number"
+msgstr "telefonszám"
+
+#: corgy_mdm/models.py:342
+msgid "Phone number, desc."
+msgstr "Telefonszám leírása"
+
+#: corgy_mdm/models.py:348
+msgid "email"
+msgstr "email"
+
+#: corgy_mdm/models.py:349
+msgid "Primary email address"
+msgstr "elsődleges email cím"
+
+#: corgy_mdm/models.py:358
+msgid "Environmental Classification"
+msgstr "Környezetvédelmi osztályozás"
+
+#: corgy_mdm/models.py:359
+msgid "Environmental Classifications"
+msgstr "Környezetvédelmi osztályozások"
+
+#: corgy_mdm/models.py:364
+msgid "business form"
+msgstr "cégforma"
+
+#: corgy_mdm/models.py:365
+msgid "business forms"
+msgstr "cégformák"
+
+#: corgy_mdm/models.py:371
+msgid "Insurance suspension"
+msgstr "Biztosítás szünetelése"
+
+#: corgy_mdm/models.py:372
+msgid "Insurance suspensions"
+msgstr "Biztosítás szünetelések"
+
+#: corgy_mdm/models.py:377
+msgid "Employment quality"
+msgstr "Foglalkoztatás jelleg"
+
+#: corgy_mdm/models.py:378
+msgid "Employment qualities"
+msgstr "Foglakoztatás jellegek"
+
+#: corgy_mdm/models.py:383
+msgid "small business tax contribution discount"
+msgstr "kisvállalkozási adó hozzájárulás kedvezmény"
+
+#: corgy_mdm/models.py:384
+msgid "small business tax contribution discounts"
+msgstr "kisvállalkozási adó hozzájárulás kedvezmények"
+
+#: corgy_mdm/models.py:389
+msgid "Social contribution discount"
+msgstr "Szociális hozzájárulás kedvezmény"
+
+#: corgy_mdm/models.py:390
+msgid "Social contribution discounts"
+msgstr "Szociális hozzájárulás kedvezmények"
+
+#: corgy_mdm/models.py:398
+msgid "Pretence"
+msgstr "Jogcím"
+
+#: corgy_mdm/models.py:399
+msgid "Pretences"
+msgstr "Jogcímek"
+
+#: corgy_mdm/models.py:407
+msgid "Legal relationship"
+msgstr "Jogviszony"
+
+#: corgy_mdm/models.py:408
+msgid "Legal relationships"
+msgstr "Jogviszonyok"
+
+#: corgy_mdm/models.py:413
+msgid "organization"
+msgstr "szervezet"
+
+#: corgy_mdm/models.py:414
+msgid "organizations"
+msgstr "szervezetek"
+
+#: corgy_mdm/models.py:417
+msgid "registration_number"
+msgstr "cégjegyzékszám"
+
+#: corgy_mdm/models.py:424
+msgid "business_form"
+msgstr "cégforma"
+
+#: corgy_mdm/templates/corgy_mdm/menu.html:5
+msgid "Organizations"
+msgstr "Szervezetek"
+
+#: corgy_mdm/templates/corgy_mdm/menu.html:6
+msgid "People"
+msgstr "Személyek"
+
+#: corgy_mdm/views.py:14
+msgid "Personal details"
+msgstr "Személyes adatok"
+
+#: corgy_mdm/views.py:26
+msgid "Birth data"
+msgstr "Születési adatok"
+
+#: corgy_mdm/views.py:34
+msgid "Contact information"
+msgstr "Elérhetőség"

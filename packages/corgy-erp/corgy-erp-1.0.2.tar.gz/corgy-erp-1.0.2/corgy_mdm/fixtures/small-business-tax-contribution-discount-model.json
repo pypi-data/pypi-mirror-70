@@ -1,0 +1,92 @@
+[
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "e89e7f38-4675-4e6b-a0ff-68cd62a95b61",
+        "code": "9",
+        "name": "Tart\u00f3s \u00e1ll\u00e1skeres\u0151k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "eeab45b5-732e-4e1c-b860-3b159c4f27c2",
+        "code": "10",
+        "name": "Gyed,gyes,gyet foly\u00f3s\u00edt\u00e1s\u00e1t k\u00f6vet\u0151 kedvezm\u00e9ny",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "08c18805-66fc-4b3b-a870-faf544e237b1",
+        "code": "18",
+        "name": "Szakk\u00e9pzetts\u00e9get nem ig\u00e9nyl\u0151 munkak\u00f6r kedv. 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "aa9e1b82-2de7-4810-b830-53f4e820aeca",
+        "code": "20",
+        "name": "Munkaer\u0151piacra l\u00e9p\u0151k ut\u00e1n \u00e9rv\u00e9nyes\u00edthet\u0151 ad\u00f3kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "0c8baadd-4fc9-43a4-8356-1825d42c5082",
+        "code": "21",
+        "name": "H\u00e1rom gyermeket nevel\u0151 munkaer\u0151piacra l\u00e9p\u0151 n\u0151k kedv.",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "1c7b18d9-9254-478c-81a2-2e0b8b39cca8",
+        "code": "22",
+        "name": "Megv\u00e1ltozott munkak\u00e9pess\u00e9g\u0171 szem\u00e9lyek ad\u00f3kedv.",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "c6be4668-dbaa-4761-8da4-f0061a1f57fe",
+        "code": "24",
+        "name": "Doktori (PhD) vagy magasabb kutat\u00f3k ad\u00f3kedv. 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "5d8ebb04-d08b-447a-9d9e-d75924dc3cf7",
+        "code": "25",
+        "name": "Doktori k\u00e9pz\u00e9sben r\u00e9szt vev\u0151k ad\u00f3kedvezm\u00e9nye 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.smallbusinesstaxcontributiondiscountmodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "a8ec50ca-d065-4192-9d6c-946612b72036",
+        "code": null,
+        "name": "Kutat\u00f3-fejleszt\u0151 munkav\u00e1llal\u00f3",
+        "description": null
+    }
+}
+]

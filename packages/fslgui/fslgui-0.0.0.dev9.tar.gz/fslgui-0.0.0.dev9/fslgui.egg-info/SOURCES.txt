@@ -1,0 +1,17 @@
+CHANGELOG
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+fsl/__init__.py
+fsl/gui/__init__.py
+fsl/gui/core.py
+fsl/gui/exceptions.py
+fsl/gui/icons.py
+fsl/gui/widgets.py
+fslgui.egg-info/PKG-INFO
+fslgui.egg-info/SOURCES.txt
+fslgui.egg-info/dependency_links.txt
+fslgui.egg-info/requires.txt
+fslgui.egg-info/top_level.txt

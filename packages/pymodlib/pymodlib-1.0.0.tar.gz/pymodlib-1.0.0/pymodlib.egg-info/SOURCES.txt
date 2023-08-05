@@ -1,0 +1,8 @@
+README.md
+setup.py
+pymodlib/PyMod.py
+pymodlib/__init__.py
+pymodlib.egg-info/PKG-INFO
+pymodlib.egg-info/SOURCES.txt
+pymodlib.egg-info/dependency_links.txt
+pymodlib.egg-info/top_level.txt

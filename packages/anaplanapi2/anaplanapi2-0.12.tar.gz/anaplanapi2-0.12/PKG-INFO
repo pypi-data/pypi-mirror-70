@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: anaplanapi2
+Version: 0.12
+Summary: Anaplan REST API v2 library for Python
+Home-page: https://github.com/response4amit/anaplanapi2
+Author: AP and Jesse Wilson
+Author-email: your.email@domain.com
+License: MIT
+Download-URL: https://github.com/response4amit/anaplanapi2/archive/v_12.tar.gz
+Description: UNKNOWN
+Keywords: Anaplan,REST API
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

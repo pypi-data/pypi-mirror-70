@@ -1,0 +1,3 @@
+[console_scripts]
+redis-tracker=tracker:main
+

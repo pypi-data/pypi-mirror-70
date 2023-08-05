@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lamasoo-mimi
+Version: 0.0.2
+Summary: Agency CRS Log Middleware
+Home-page: https://git.lamasoo.com
+Author: alireza khosravian
+Author-email: alirezakhosravian@lamasoo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: elasticsearch-dsl
+
+# Agency CRS Log Middleware
+
+

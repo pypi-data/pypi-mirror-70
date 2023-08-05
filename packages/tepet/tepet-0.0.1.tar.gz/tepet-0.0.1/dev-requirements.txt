@@ -1,0 +1,9 @@
+coverage == 5.1
+flake8 == 3.8.2
+flit == 2.3.0
+freezegun == 0.3.15
+mccabe == 0.6.1
+mypy == 0.770
+pylint == 2.5.2
+pytest == 5.4.2
+tox == 3.15.1

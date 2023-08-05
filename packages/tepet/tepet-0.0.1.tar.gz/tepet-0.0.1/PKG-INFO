@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: tepet
+Version: 0.0.1
+Summary: Small timing tool to run performance analysis
+Home-page: https://github.com/toshakins/tepet
+Author: Anton Ovinnikov
+Author-email: toshakins@gmail.com

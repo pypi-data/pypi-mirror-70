@@ -1,0 +1,8 @@
+G2S-0.95.10.dist-info/RECORD,,
+G2S-0.95.10.dist-info/WHEEL,sha256=NqgkTkAaRJaCuArPZklUp2tBwn6obHN9aMIfdfLfNkU,110
+G2S-0.95.10.dist-info/top_level.txt,sha256=wMPe9gVwac8XL9aTGXp3V3Sc-UbgQKQ1kH6WmAhGBME,4
+G2S-0.95.10.dist-info/METADATA,sha256=AjeKU58kOshve3LiqeJV9gOd8mcvCdSha9wojAfxGhY,892
+g2s/__init__.py,sha256=lTmDRg20_DdX4a0_3025U02rv-CJwMGvXoIAOWvDDxs,48
+g2s/g2s.cpython-38-darwin.so,sha256=DkUAVK4FK9_uuidV2HHh2TSsRXU5f4XyZotlf_QKFFg,123200
+g2s/.dylibs/libjsoncpp.24.dylib,sha256=AeOMWRsiIQEXtZGjy_UFQmyT-v-18V6N75nA_ra2Yyk,253640
+g2s/.dylibs/libzmq.5.dylib,sha256=Wm1RR1gexgJoXf06V_XZHVi4Wr5x1KC32eFxblBh-1E,561424

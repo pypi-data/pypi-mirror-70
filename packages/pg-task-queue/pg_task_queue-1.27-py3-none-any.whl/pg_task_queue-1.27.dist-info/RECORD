@@ -1,0 +1,11 @@
+pg_tasks_queue/Config.py,sha256=MHcD5Zb4HAPyuidJKPfvA-DFBbyfLU7EclDpEIJBpPY,3376
+pg_tasks_queue/CronJobTasks.py,sha256=tIiHnk6IxSjYl_LImXfpDZxKaPPTdPGe6Yyn4Lr599M,5768
+pg_tasks_queue/Database.py,sha256=pC71IUXoMJa0BsOxvp-_jElsAwgkoYaekH-C_ZmrLIk,16423
+pg_tasks_queue/Kthread.py,sha256=WMhv6EK4wQ2uAi8e9Ha3H0qk5TFz71TIEXM-gkkG8Qg,2232
+pg_tasks_queue/Logging.py,sha256=UkplIjwEMOZndF-3RquPt4X6Uol8sP4j6ocLLMlONsk,1830
+pg_tasks_queue/Worker.py,sha256=w-Ewq8tCdyve3qY5khQwFPCiCYcgaG3JqJXk-7DY_Zs,10975
+pg_tasks_queue/__init__.py,sha256=773AEhDt9ocfb4Yimr3Mt03YQyYbK-GRL4cBbM4mAT0,21
+pg_task_queue-1.27.dist-info/METADATA,sha256=0vjq2HZeiccSawYKHTVP7RnRB92vy72uSpaP6OE7k0o,616
+pg_task_queue-1.27.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pg_task_queue-1.27.dist-info/top_level.txt,sha256=zk6CMqww54tEjrnqM9C2vlaDcycjy112uvdZUNWEdS0,15
+pg_task_queue-1.27.dist-info/RECORD,,

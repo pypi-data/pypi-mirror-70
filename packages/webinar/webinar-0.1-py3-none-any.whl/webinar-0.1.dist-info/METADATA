@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: webinar
+Version: 0.1
+Summary: A webinar bot package
+Home-page: https://github.com/emhayusa/webinar
+Author: Muhammad Hasannudin Yusa
+Author-email: emhayusa@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Webinar Package
+
+This is a webinar package. Please refer to https://github.com/emhayusa/webinar.
+

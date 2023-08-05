@@ -1,0 +1,10 @@
+requests
+opencv-python
+keras==2.3.1
+numba
+scikit-image==0.15.0
+filterpy
+h5py
+kafka-python
+py3Fdfs
+sklearn

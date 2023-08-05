@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""
+并行的执行给定的 SQL 若干次(exec-times * parallel)次
+"""
+
+import re
+import os
+import sys
+import logging
+import argparse
+import mysql.connector
+import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor,ProcessPoolExecutor
+
+name = os.path.basename(__file__)
+logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s",level=logging.INFO)
+
+
+def parse_cmd_arags() -> argparse.ArgumentParser:
+    """
+    处理命令行参数
+    """
+    parser = argparse.ArgumentParser(name)
+    parser.add_argument('--host',type=str,default="127.0.0.1",help="mysql host")
+    parser.add_argument('--port',type=int,default=3306,help="mysql port")
+    parser.add_argument('--user',type=str,default='appuser',help="mysql user")
+    parser.add_argument('--password',type=str,default='apps_352',help="mysql user's passowrd ")
+    parser.add_argument('--sql-file',type=str,default='/tmp/select.sql',help='sql file')
+    parser.add_argument('--parallel',type=int,default=1,help="prallel process counts")
+    parser.add_argument('--exec-times',type=int,default=100,help="execute times per process")
+    arags = parser.parse_args()
+    return arags
+
+
+def execute_sql(sql,times=1,host='127.0.0.1',port=3306,user='root',password='passwd'):
+    """
+    """
+    cnx = None
+    try:
+        cnx = mysql.connector.connect(host=host,port=port,user=user,password=password)
+        cursor = cnx.cursor()
+
+        for i in range(times):
+            cursor.execute(sql)
+            _ = cursor.fetchall()
+    except Exception as err:
+        logging.error(f"some exception occure in {err}")
+        sys.exit()
+    
+    finally:
+        if hasattr(cnx,'close'):
+            cnx.close()
+    
+
+
+def main():
+    """
+    """
+    args = parse_cmd_arags()
+
+    if not os.path.isfile(args.sql_file):
+        logging.error(f"file {args.sql_file} not exists.")
+        sys.exit()
+    
+    with open(args.sql_file) as file_object:
+        sql = file_object.read()
+    
+    if not re.search(r"^select",sql,re.IGNORECASE):
+        logging.error("only suport select statement .")
+        sys.exit()
+
+    
+    with ProcessPoolExecutor(max_workers=args.parallel) as e:
+        futures = [e.submit(execute_sql,sql,times=args.exec_times,host=args.host,port=args.port,user=args.user,password=args.password) for i in range(args.parallel)]
+        for future in concurrent.futures.as_completed(futures):
+            _ = future.result()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

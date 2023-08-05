@@ -1,0 +1,8 @@
+README.md
+setup.py
+KhAuto/__init__.py
+KhAuto/robot.py
+KhAuto.egg-info/PKG-INFO
+KhAuto.egg-info/SOURCES.txt
+KhAuto.egg-info/dependency_links.txt
+KhAuto.egg-info/top_level.txt

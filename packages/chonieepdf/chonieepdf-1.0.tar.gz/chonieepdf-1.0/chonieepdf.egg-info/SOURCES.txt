@@ -1,0 +1,8 @@
+README.md
+setup.py
+chonieepdf/__init__.py
+chonieepdf/pdf2text.py
+chonieepdf.egg-info/PKG-INFO
+chonieepdf.egg-info/SOURCES.txt
+chonieepdf.egg-info/dependency_links.txt
+chonieepdf.egg-info/top_level.txt

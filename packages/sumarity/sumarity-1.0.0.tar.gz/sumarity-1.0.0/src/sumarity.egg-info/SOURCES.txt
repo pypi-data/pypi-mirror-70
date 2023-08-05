@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/sumarity/__init__.py
+src/sumarity/package_data.dat
+src/sumarity/suma.py
+src/sumarity.egg-info/PKG-INFO
+src/sumarity.egg-info/SOURCES.txt
+src/sumarity.egg-info/dependency_links.txt
+src/sumarity.egg-info/entry_points.txt
+src/sumarity.egg-info/requires.txt
+src/sumarity.egg-info/top_level.txt

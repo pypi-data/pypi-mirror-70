@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ssh-proxy-server
+Version: 0.0.1
+Summary: ssh proxy server to intercept ssh
+Home-page: https://github.com/manfred-kaiser/ssh-proxy-server
+Author: Manfred Kaiser
+Author-email: manfred.kaiser@logfile.at
+License: UNKNOWN
+Description: # sftpproxy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: System :: Networking
+Description-Content-Type: text/markdown

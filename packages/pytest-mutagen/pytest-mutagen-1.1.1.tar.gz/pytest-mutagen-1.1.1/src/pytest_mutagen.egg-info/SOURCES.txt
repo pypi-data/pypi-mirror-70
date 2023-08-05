@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/pytest_mutagen/__init__.py
+src/pytest_mutagen/_version.py
+src/pytest_mutagen/mutagen.py
+src/pytest_mutagen/mutation_session.py
+src/pytest_mutagen/plugin.py
+src/pytest_mutagen.egg-info/PKG-INFO
+src/pytest_mutagen.egg-info/SOURCES.txt
+src/pytest_mutagen.egg-info/dependency_links.txt
+src/pytest_mutagen.egg-info/entry_points.txt
+src/pytest_mutagen.egg-info/requires.txt
+src/pytest_mutagen.egg-info/top_level.txt

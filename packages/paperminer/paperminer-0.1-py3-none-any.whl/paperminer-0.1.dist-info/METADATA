@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: paperminer
+Version: 0.1
+Summary: customized pdfminer that can parse research papers
+Home-page: https://github.com/worldwise001/paperminer
+Author: Sarah Harvey
+Author-email: s@shh.sh
+License: UNKNOWN
+Keywords: pdfminer pdf paper miner
+Platform: UNKNOWN
+Requires-Dist: PyPDF2
+Requires-Dist: pdfminer.six (==20191110)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: cryptography (==2.8)
+Requires-Dist: httplib2 (==0.15.0)
+Requires-Dist: hyperlink (==19.0.0)
+Requires-Dist: idna (==2.8)
+Requires-Dist: incremental (==17.5.0)
+Requires-Dist: Jinja2 (==2.10.3)
+Requires-Dist: jsonpatch (==1.24)
+Requires-Dist: jsonpointer (==2.0)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: requests-unixsocket (==0.2.0)
+Requires-Dist: service-identity (==16.0.0)
+Requires-Dist: six (==1.13.0)
+Requires-Dist: urllib3 (==1.25.7)
+
+UNKNOWN
+
+

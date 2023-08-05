@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: robust_statistics_simulator
+Version: 0.1.dev1
+Summary: Interactive simulations that demonstrate properties of robust statistics
+Home-page: https://github.com/Alcampopiano/hypothesize
+Author: Allan Campopiano
+Author-email: campopianoa@hcdsb.org
+License: BSD 3-clause
+Description: # Robust Statistics Simulator
+        
+        An interactive Python package for demonstrating the basic concepts of robust statistics.
+        This package relies heavily on ipython widgets to drive interactivity. Please see
+        the relevant [set up instructions](https://ipywidgets.readthedocs.io/en/latest/user_install.html)
+        for configuring ipython widgets.
+        
+        :warning: This repository has just begun and therefore it is not really ready to be used.
+        
+        ## Instructions
+        See the Jupyter Notebooks. They contain interactive teaching examples.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

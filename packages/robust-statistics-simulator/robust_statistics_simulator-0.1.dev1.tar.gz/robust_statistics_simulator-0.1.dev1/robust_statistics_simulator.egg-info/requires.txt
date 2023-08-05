@@ -1,0 +1,7 @@
+scipy
+pandas
+numpy
+ipywidgets
+altair
+jupyterlab
+ipython

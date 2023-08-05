@@ -1,0 +1,111 @@
+=======
+ColdCMS
+=======
+
+
+.. image:: https://gitlab.com/hashbangfr/coldcms/badges/master/pipeline.svg
+    :target: https://gitlab.com/hashbangfr/coldcms/commits/master
+
+.. image:: https://gitlab.com/hashbangfr/coldcms/badges/master/coverage.svg
+    :target: https://gitlab.com/hashbangfr/coldcms/commits/master
+
+
+Goal
+====
+A fully functional CMS optimized for low consumption.
+
+Read `blog posts <https://coldcms.hashbang.fr>`_ about this.
+
+User documentation:
+
+    - `English documentation <https://coldcms.readthedocs.io/en/latest/>`_
+    - `Documentation en français <https://coldcms.readthedocs.io/fr/latest/>`_
+
+
+Description
+===========
+ColdCMS is a `Django <https://www.djangoproject.com>`_ project based on `Wagtail CMS <https://wagtail.io>`_ and `Bulma <https://bulma.io>`_ CSS framework.
+
+The admin can edit websites through an intuitive and user-friendly interface. Different types of pages are pre-designed, making it possible to have a nice-looking website without spending hours on it.
+
+ColdCMS is especially designed for people who want to reduce the impact of their use of digital technologies on the environnement.
+
+The client website consists of static pages, built with `Wagtail bakery <https://github.com/wagtail/wagtail-bakery>`_. The website pages are generated and updated when necessary (e.g. when the admin publishes or modifies content).
+
+Among other optimizations, the size of CSS files is reduced and unused CSS code is removed, using `PurgeCSS <https://github.com/FullHuman/purgecss>`_ and `clean-css <https://github.com/jakubpawlowicz/clean-css-cli>`_
+
+The database is managed with `PostgreSQL <https://www.postgresql.org>`_.
+
+
+Dev
+===
+
+ColdCMS supports Python >= 3.6.
+
+Make sure ``libjpeg`` and ``zlib`` are installed on your machine first (needed to work with images through the ``Pillow`` library). You also need to install postgis for geographic object support.
+If you have Ubuntu, use the following commands:
+
+.. code-block:: shell
+
+    sudo apt-get install zlib1g-dev
+    sudo apt-get install libjpeg-dev
+    sudo apt-get install postgis
+
+
+Also, please install PurgeCSS and clean-css:
+
+.. code-block:: shell
+
+    npm install -g purgecss@2.1.0 clean-css-cli@4.3.0
+
+And to continue with javascript, please install static dependences :
+
+.. code-block:: shell
+
+    (cd coldcms/static/ && npm i --save-dev)
+
+Also check that you have sass installed. For example, use the command:
+
+.. code-block:: shell
+
+    sudo apt install ruby-sass
+
+Then you can install the dependencies and launch the development server:
+
+.. code-block:: shell
+
+    pip install -r requirements_dev.txt
+    createdb coldcms # create a postgres database
+    ./manage.py migrate
+    ./manage.py collectstatic
+    ./manage.py createsuperuser
+    ./manage.py runserver
+
+
+**Optionally** you can also import some data in your app:
+
+.. code-block:: shell
+
+    ./manage.py setup_initial_data
+
+
+Prod
+====
+
+Make sure docker is installed and the daemon is running.
+
+The following command will:
+
+1. remove all running instances of the project
+2. build new images based on the modifications you've made
+3. run the project in a production-like environment
+
+.. code-block:: shell
+
+    production/clean.sh && production/build.sh && production/run.sh
+
+
+Benchmark
+=========
+
+`Benchmark details to Coldcms <benchmark/README.rst>`_.

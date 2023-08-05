@@ -1,0 +1,41 @@
+#!python
+
+import os as _os
+import sys as _sys
+import optparse as _optparse
+
+import klemmbrett as _klemmbrett
+
+
+class KlemmbrettCommandline(object):
+
+    def __init__(self):
+        self.config_files = ['/etc/klemmbrett.conf', _os.path.expanduser("~/.klemmbrett.conf")]
+
+        parser = _optparse.OptionParser()
+        parser.add_option(
+            "-c",
+            "--config",
+            dest = "config",
+            type = "string",
+            action = "append",
+            help = "read this config file for configuration",
+            default = list(),
+        )
+
+        self.options, self.args = parser.parse_args()
+
+        if self.options.config:
+            self.config_files = self.options.config
+
+    def main(self):
+        kb = _klemmbrett.Klemmbrett(self.config_files)
+        kb.main()
+
+
+if __name__ == '__main__':
+    kb = KlemmbrettCommandline()
+    try:
+        kb.main()
+    except KeyboardInterrupt:
+        _sys.exit(0)

@@ -1,0 +1,14 @@
+pycfdi_transform/__init__.py,sha256=ihY27-ODZzIoAosjSDV7S8XK0GnAJC_jyREjvSwysMM,1115
+pycfdi_transform/__t_base__.py,sha256=e8MHrLe5cak-11ACIgbTGGa1N84K2ifQmn5oHkrk6QI,1139
+pycfdi_transform/t_cfdi32.py,sha256=C4bDVWYrWEqPv8Bplz4NaGjenOiGQhH0_NAxMRFmFo0,1065
+pycfdi_transform/t_cfdi33.py,sha256=0CGHtmUF5dngnXMXJTdjktzvO_w-CnESpl4wTtYTl7Y,1065
+pycfdi_transform/t_nomina.py,sha256=PTteGEvI3EGyOl8tjWCwnQSiAs1krs8eGj32Y7xXkBI,2388
+pycfdi_transform/t_nomina12.py,sha256=ZOikpaCMZzXSAC03zmZq0RktjasmaS8NITLaxbnTLsc,2392
+pycfdi_transform/t_pago10.py,sha256=kqxAcVkEBknu-TvCX4V3wD2bodF81zmr8Xdl_LzGqTI,1674
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_pycfdi_transform.py,sha256=zGmBz-JG69if7mbypQf3d6H0_GedTWqXij5IGdwSFBg,5768
+pycfdi_transform-0.0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pycfdi_transform-0.0.0.1.dist-info/METADATA,sha256=2QL6nWfA02VAOVEopAiwv8yP5XLWiLWY97pe_uZKr88,1644
+pycfdi_transform-0.0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pycfdi_transform-0.0.0.1.dist-info/top_level.txt,sha256=KxWeFzWBzQ41kjNWT9ykdrLzGiaJ25BdH0XYHRzYZnc,23
+pycfdi_transform-0.0.0.1.dist-info/RECORD,,

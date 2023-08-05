@@ -1,0 +1,8 @@
+README.md
+setup.py
+US_coord/US.py
+US_coord/__init__.py
+example_pkg_legendbone.egg-info/PKG-INFO
+example_pkg_legendbone.egg-info/SOURCES.txt
+example_pkg_legendbone.egg-info/dependency_links.txt
+example_pkg_legendbone.egg-info/top_level.txt

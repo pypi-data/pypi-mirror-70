@@ -1,0 +1,12 @@
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+pystrict3.py
+setup.cfg
+setup.py
+pystrict3.egg-info/PKG-INFO
+pystrict3.egg-info/SOURCES.txt
+pystrict3.egg-info/dependency_links.txt
+pystrict3.egg-info/top_level.txt

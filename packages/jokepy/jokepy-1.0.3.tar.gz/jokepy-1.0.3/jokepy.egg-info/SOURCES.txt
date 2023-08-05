@@ -1,0 +1,8 @@
+README.md
+setup.py
+jokepy/__init__.py
+jokepy.egg-info/PKG-INFO
+jokepy.egg-info/SOURCES.txt
+jokepy.egg-info/dependency_links.txt
+jokepy.egg-info/requires.txt
+jokepy.egg-info/top_level.txt

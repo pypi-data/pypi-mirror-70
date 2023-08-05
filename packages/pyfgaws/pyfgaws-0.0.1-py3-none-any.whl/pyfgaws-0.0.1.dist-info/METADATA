@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pyfgaws
+Version: 0.0.1
+Summary: Tools and python libraries for working with AWS.
+Home-page: https://github.com/fulcrumgenomics/pyfgaws
+License: MIT
+Keywords: aws,bioinformatics
+Author: Nils Homer
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: attrs (>=19.3.0,<20.0.0)
+Requires-Dist: boto3 (>=1.13.18,<2.0.0)
+Requires-Dist: boto3-stubs[batch,logs] (>=1.13.19,<2.0.0)
+Requires-Dist: botocore (>=1.13.18,<2.0.0)
+Requires-Dist: defopt (>=6.0,<7.0)
+Requires-Dist: namegenerator (>=1.0.6,<2.0.0)
+Project-URL: Repository, https://github.com/fulcrumgenomics/pyfgaws
+Description-Content-Type: text/markdown
+
+# pyfgaws
+
+# Getting Setup
+
+Conda is used to install a specific version of python and [poetry](https://github.com/python
+-poetry/poetry) which is then used to manage the python development environment.  If not already
+ installed, install [miniconda from the latest platform-appropriate installer](miniconda-link
+ ). Then run:
+
+```
+conda create -n pyfgaws -c bioconda --file conda-requirements.txt
+```
+
+Then activate the new environment and install the toolkit:
+
+```
+conda activate pyfgaws
+poetry install
+```
+
+[miniconda-link]: https://docs.conda.io/en/latest/miniconda.html

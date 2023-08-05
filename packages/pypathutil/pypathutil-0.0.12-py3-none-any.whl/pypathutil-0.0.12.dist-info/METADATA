@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pypathutil
+Version: 0.0.12
+Summary: command line utilities to help you work with paths
+Home-page: https://veltzer.github.io/pypathutil
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pypathutil
+Keywords: path,command line,shell,reduce,append,remove
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
+Requires-Dist: pylogconf
+Requires-Dist: pytconf
+
+command line utilities to help you work with paths
+
+

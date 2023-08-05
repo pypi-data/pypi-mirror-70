@@ -1,0 +1,7 @@
+python-frontmatter
+sendgrid
+PyGithub
+markdown2
+email_validator
+configargparse
+pyfluence

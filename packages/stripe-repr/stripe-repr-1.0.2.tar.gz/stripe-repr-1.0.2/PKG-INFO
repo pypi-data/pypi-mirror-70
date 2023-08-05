@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: stripe-repr
+Version: 1.0.2
+Summary: A monkey-patch library to provide more compact representation for Stripe objects
+Home-page: https://github.com/Doist/stripe-repr
+License: MIT
+Author: Doist Developers
+Author-email: dev@doist.com
+Requires-Python: >=3.6.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: stripe (>=2.48.0,<3.0.0)
+Project-URL: Repository, https://github.com/Doist/stripe-repr
+Description-Content-Type: text/markdown
+
+# Stripe Repr
+
+A monkey-patch library to provide more compact representation for Stripe objects.
+
+If you ever tried to explore the Stripe API from the console, you did notice that the representation format of the objects is overly verbose. A single call of something like `stripe.Customer.list()` pollutes the output with hundreds of lines of the output.
+
+To simplify the exploratory work for ourselves, we created a simple `stripe_repr` library that we install in our development environment. Then we use it as-is:
+
+```python
+import stripe_repr
+
+stripe_repr.patch()
+```
+
+The output becomes more manageable:
+
+```
+>>> stripe.Customer.list()
+ListObject(data=[Customer(id='cus_HOQHEicZ9WvOJk'), ..., Customer(id='cus_HOG3cB0b8sin1q')])
+```
+
+The second annoyance is date-times, represented in seconds since epoch. Whenever possible, the repr tries to convert them to a proper datetime and format as a string. When it's not enough, you can call a method `formatted_dict()` that also has a shortcut `d()`.
+
+```python
+In  [1]: stripe.Invoice.retrieve('in_xxxxx).d()
+Out [1]:
+ {'id': 'in_xxxxx',
+ 'object': 'invoice',
+ 'account_country': 'US',
+ ...
+ 'created': '2020-06-02T16:58:18',
+ 'currency': 'usd',
+}
+```
+

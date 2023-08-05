@@ -1,0 +1,8 @@
+aws_cdk/aws_mediastore/__init__.py,sha256=cmsVd9EgeAX2T_2v4ogMx8N2bSwHVyySU2odetfbZj0,23180
+aws_cdk/aws_mediastore/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_mediastore/_jsii/__init__.py,sha256=EbM2V6cuUTin-veBXi_NQ71bRqu1Ko3Tby2_BrfzpHo,365
+aws_cdk/aws_mediastore/_jsii/aws-mediastore@1.43.0.jsii.tgz,sha256=SuJpRhXh5S6OI3jhueWWLa2PBABX3lKgZI1a-6qJIAc,23142
+aws_cdk.aws_mediastore-1.43.0.dist-info/METADATA,sha256=NFSz-Q--p4QapjSRn0-nYhqnew0WW8yy5yZ6lpXEB80,1619
+aws_cdk.aws_mediastore-1.43.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_mediastore-1.43.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_mediastore-1.43.0.dist-info/RECORD,,

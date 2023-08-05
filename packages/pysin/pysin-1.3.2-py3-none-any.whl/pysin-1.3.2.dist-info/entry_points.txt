@@ -1,0 +1,4 @@
+[console_scripts]
+pysin-gen = pysin.mimic.cli:generate
+pysin-scrap = pysin.mimic.cli:scrap
+

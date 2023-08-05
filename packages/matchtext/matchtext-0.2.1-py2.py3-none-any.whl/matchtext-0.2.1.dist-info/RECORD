@@ -1,0 +1,11 @@
+matchtext/__init__.py,sha256=-asjCgfaYRuuRrtGgt-8Bvu95CfXYsUjbNiG3PKqnE8,366
+matchtext/skeleton.py,sha256=PyM384_tu4wKLvPtO02I8g7-Qvimis5JzPl2qoVs0KA,2810
+matchtext/stringmatcher.py,sha256=3BQeRXEocw5fJ__7rQZ9PisFH1Zq9LC61LrtxmX81X0,2339
+matchtext/tokenmatcher.py,sha256=C53OUP0fwa3IbIUQIjfBHg6L1PsBEYfA4KnkDIxXDio,8563
+matchtext/utils.py,sha256=m4QwU5cO2gx2CJ1BGy3wwgBSPxeLe0faEI3zw7WGqTQ,216
+matchtext-0.2.1.dist-info/AUTHORS.rst,sha256=MJ2kaxFXC5vzXILXuTULNNzVBfvydS7H1cydtM6ddeg,82
+matchtext-0.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+matchtext-0.2.1.dist-info/METADATA,sha256=QMJPgpJAMas5lJ2fOgskcVO2ZTEBGTekjeQ8O30umO0,2308
+matchtext-0.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+matchtext-0.2.1.dist-info/top_level.txt,sha256=zDEsnKdn9ZjGIALLDiPX3Bw0-bdNCyjzD4Z-zw1jd_4,10
+matchtext-0.2.1.dist-info/RECORD,,

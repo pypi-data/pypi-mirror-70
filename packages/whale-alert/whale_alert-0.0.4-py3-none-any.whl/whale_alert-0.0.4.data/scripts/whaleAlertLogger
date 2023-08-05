@@ -1,0 +1,170 @@
+#!python
+
+import sys
+import logging
+import argparse
+import subprocess
+import appdirs
+import json
+import whalealert.settings as settings
+from whalealert.whalealert import WhaleAlert
+from whalealert._version import __version__
+import time
+
+log = logging.getLogger(__name__)
+
+
+def create_arguments(parser):
+    parser.add_argument('-a', '--api_key', nargs=1, help="Supply the whale alert API key to be used.", default=None)
+
+    parser.add_argument('-w',
+                        '--working_directory',
+                        nargs=1,
+                        help="Specify the directory to setup the configuration,\
+         status and database files. If not supplied, set to user configuration directory.",
+                        default=None)
+
+    parser.add_argument('-k', '--kill', action='store_true', help="Kills any running whale alert daemon", default=False)
+
+    parser.add_argument('-g',
+                        '--generate_config',
+                        action='store_true',
+                        help="Generates the neccessary configuration files.")
+
+    parser.add_argument('-s',
+                        '--status',
+                        action='store_true',
+                        help="Get the status of the whale alert logger, \
+            can be combined with -j to modify the output format.")
+
+    parser.add_argument('-q',
+                        '--query',
+                        action='store_true',
+                        help="Query last whale alerts, by default returns all blockchains, all tags, up to 20 entries")
+
+    parser.add_argument('-b',
+                        '--blockchain',
+                        nargs='+',
+                        help="To be used optionally with the -q option. Specify which blockchains to query from.")
+
+    parser.add_argument('-t',
+                        '--tags',
+                        nargs='+',
+                        help="To be used optionally with the -q option. Specify which symbols (tags) to query from.")
+
+    parser.add_argument('-m',
+                        '--max',
+                        nargs=1,
+                        help="The maximum number of entries to be returned by a query. (default = 20) ")
+
+    parser.add_argument('-j', '--json', action='store_true', help="Use json format for status and transaction requests")
+
+    parser.add_argument('-l',
+                        '--log',
+                        nargs=1,
+                        help="Log level. Must be one of either \
+            DEBUG, INFO, WARNING, ERROR or CRITICAL. Default = INFO")
+
+    parser.add_argument('-x',
+                        '--excel',
+                        action='store_true',
+                        help="Save the whale watching database to an Excel file 'whaleAlert.xlsl'")
+
+    parser.add_argument('-p',
+                        '--pretty',
+                        action='store_true',
+                        help="Use ASCII colour codes to 'pretty' format the output.")
+
+    parser.add_argument('-o',
+                        '--output',
+                        action='store_true',
+                        help="When running the daemon, print the latest received transactions.")
+
+    parser.add_argument('-v',
+                        '--version',
+                        action='version',
+                        version="Whale Alert Logger. Version {}".format(__version__))
+
+
+def processLogLevel(level):
+
+    if level == 'DEBUG':
+        return logging.DEBUG
+    elif level == 'INFO':
+        return logging.INFO
+    elif level == 'WARNING':
+        return logging.WARNING
+    elif level == 'ERROR':
+        return logging.ERROR
+    elif level == 'CRITICAL':
+        return logging.CRITICAL
+    else:
+        return logging.INFO
+
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    create_arguments(parser)
+    args = parser.parse_args()
+
+    if args.kill:
+        WhaleAlert.kill()
+        sys.exit()
+
+    if args.working_directory is not None:
+        working_directory = args.working_directory[0]
+    else:
+        working_directory = appdirs.user_config_dir(settings.appNameDirectory)
+
+    if args.log is not None:
+        log_level = processLogLevel(args.log[0])
+    else:
+        log_level = logging.INFO
+
+    if args.api_key is not None:
+        api_key = args.api_key[0]
+    else:
+        api_key = None
+
+    whale = WhaleAlert(working_directory=working_directory, log_level=log_level)
+
+    if args.generate_config is True:
+        sys.exit()
+
+    if args.status is True:
+        if args.json:
+            status = whale.status_request(as_dict=True)
+            print(json.dumps(status))
+        else:
+            print(whale.status_request())
+        sys.exit()
+
+    if args.excel is True:
+        whale.to_excel()
+        sys.exit()
+
+    if args.query is True:
+        if args.max is not None:
+            maximum = int(args.max[0])
+        else:
+            maximum = 20
+
+        if not args.json:
+            print(
+                whale.data_request(blockchain=args.blockchain,
+                                   symbols=args.tags,
+                                   max_results=maximum,
+                                   pretty=args.pretty))
+        else:
+            print(
+                json.dumps(
+                    whale.data_request(blockchain=args.blockchain,
+                                       symbols=args.tags,
+                                       max_results=maximum,
+                                       pretty=args.pretty,
+                                       as_dict=args.json)))
+        sys.exit()
+
+    whale.start_daemon(print_output=args.output)
+    sys.exit()

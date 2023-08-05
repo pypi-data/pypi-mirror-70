@@ -1,0 +1,8 @@
+README.md
+setup.py
+pro_tools_session_info.egg-info/PKG-INFO
+pro_tools_session_info.egg-info/SOURCES.txt
+pro_tools_session_info.egg-info/dependency_links.txt
+pro_tools_session_info.egg-info/requires.txt
+pro_tools_session_info.egg-info/top_level.txt
+session/__init__.py

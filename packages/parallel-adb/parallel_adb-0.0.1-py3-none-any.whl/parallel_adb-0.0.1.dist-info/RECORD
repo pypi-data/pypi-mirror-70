@@ -1,0 +1,9 @@
+paralleladb/__init__.py,sha256=Bb-q_HUZitcZ_8QlLZG_-bOvm7wxrbE_A1-9Af0OTk0,39
+paralleladb/_devices_mgr.py,sha256=_CoV8SmwtNoL7oDXVVr7UL8O48SENKzZ937gQJ8g9Sw,678
+paralleladb/_exceptions.py,sha256=-5d8LMtcvDfPplobGpQ3HvmPxJoISzN1Gybgc3oMJWE,47
+paralleladb/_parallel_adb.py,sha256=qziBS1wdCTJ8gNck8ZYi9ne_mgpUUxk5s5SSVhmb0ms,1976
+parallel_adb-0.0.1.dist-info/LICENSE,sha256=nynNy0H87RKerBej-qzrCzgP4vSYg-eMrSQrL-eQFRs,1065
+parallel_adb-0.0.1.dist-info/METADATA,sha256=-DneBn9pTrJWM9fsF8Dd3Oc1FzeVyR3lvlQGiYItLjE,1089
+parallel_adb-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+parallel_adb-0.0.1.dist-info/top_level.txt,sha256=rfzrNIdIIeQx4HUJLv89gN3ce5CosyLIuRGNsft1S54,12
+parallel_adb-0.0.1.dist-info/RECORD,,

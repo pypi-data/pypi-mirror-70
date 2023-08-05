@@ -1,0 +1,130 @@
+ybe_version: 0.2.2
+
+info:
+    title: Example questions
+    description: Some examples of describing questions.
+    document_version: 0.1.0
+    date: 2020-04-07
+    authors:
+        - Robbert Harms
+        - Sanne Schoenmakers
+
+questions:
+- multiple_choice:
+    id: 2013_q2
+    points: 1
+    text: Example multiple choice question (question with only one correct answer possible).
+    answers:
+        - answer:
+            text: First answer
+        - answer:
+            text: Second answer
+        - answer:
+            text: Third answer
+        - answer:
+            text: Fourth answer
+            correct: true
+
+- open:
+    id: '#2003_2'
+    points: 3.14
+    text: Example open question.
+
+- multiple_response:
+    id: 2015_q1
+    points: 1
+    text: A multiple response question is a multiple choice question where multiple answers are possible.
+    answers:
+        - answer:
+            text: First answer
+            correct: true
+        - answer:
+            text: Second answer
+        - answer:
+            text: Third answer
+            correct: true
+        - answer:
+            text: Fourth answer
+
+- text_only:
+    id: 2015_q2
+    text: This is not a question, but a piece of text. Can be used to inject information in a series of questions.
+
+- multiple_choice:
+    id: <some_random_string>
+    points: 1
+    text: |-
+        Due to the "|" modifier, all newlines in this text will be kept intact.
+        That is, this line will appear on a new line in the example file.
+
+        This is not a feature of Ybe perse, but rather a feature of YAML.
+    answers:
+        - answer:
+            text: wrong answer
+        - answer:
+            text: correct answer
+            correct: true
+    meta_data:
+        general:
+            description: Some description for yourself
+            keywords: [alpha, beta]
+            language: en
+            creation_date: 2020-05-29
+            authors:
+                - John Doe
+            module: Science
+            chapters:
+                - Some book, ed. 2, ch. 1
+                - Some book, ed. 3, ch. 2
+            skill_type: Knowledge
+            difficulty: 1
+        analytics:
+            - exam:
+                name: 2020_qz1
+                participants: 1
+                nmr_correct: 0
+            - exam:
+                name: 2020_qz1
+                participants: 200
+                nmr_correct: 25
+
+- open:
+    id: '#2003_1'
+    points: 3
+    text: |-
+        Since "text" is short for "text_markdown", you can use Markdown syntax to markup your document.
+
+        For example:
+
+        1. this is a list
+        2. *with this in italics*
+        3. **and in bold**
+
+        This is a famous formula inline: $E=mc^2$ and this is a basic displayed formula:
+
+        $$ a^2 = b^2 + c^2 $$
+
+        Next to that, here is an image from Escher:\
+        ![Escher](escher.jpg){ width=100% }
+    options:
+        max_words: 1000
+        min_words: 100
+        expected_lines: 7
+    meta_data:
+        general:
+            description: Some description for yourself
+            keywords: [alpha, epsilon]
+            language: en
+            creation_date: 2020-05-29
+            authors:
+                - Jane Doe
+            module: Science
+            chapters:
+                - Fundaments of somethings, ed. 4, ch. 15
+            skill_type: Analysis
+            difficulty: 5
+        analytics:
+            - exam:
+                name: 2020_qz1
+                participants: 1
+                nmr_correct: 0

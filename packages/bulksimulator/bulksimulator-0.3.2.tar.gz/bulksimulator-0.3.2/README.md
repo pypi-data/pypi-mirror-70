@@ -1,0 +1,77 @@
+# bulksimulator
+
+This module allows the user to run a simulation which needs to be ran for various combinations of parameters.
+
+The simulations are performed on multiple processes to speed up computation time and the results can be stored as a csv.
+
+## Installation
+To install, call 
+```bash
+pip install bulksimulator
+```
+To use then import with
+```python
+from bulksimulator import bulksimulator
+from bulksimulator import csv_to_pgfplots
+```
+
+## BulkSimulator
+
+This class takes a function which performs some simulation, requiring a set of parameters. The BulkSimulator can then run this simulation function for a range of multiple parameters, passed as `params`. The parameters which are constant for all runs of the simulation are passed as `kwargs`.
+
+Bulksimulator utilitses the `multiprocessing` module to leverage as many processes as needed to increase speed. Once ran, the any results can be saved to a `.csv` with their corresponding parameter settings.
+
+## Usage
+
+Say you have a simulation function which just performs the following calculation:
+
+```python
+def simulation(x,y,r):
+    return x**2 + y**2 - r**2
+```
+
+Firstly, create a dictionary with the name of each parameter to be iterated over as the key and the range of values as the dictionary entry. For example,
+
+```python
+params = {
+'x' : range(10),
+'y' : range(10)
+}
+```
+
+Any other parameters which are not changed are put into the kwargs dictionary
+
+```python
+kwargs = { 'r' : 2 }
+```
+**Note:** ensure the order of the parameters and extra parameters in the dictionaries are in the same order as in the simulation. (A wrapper can be written around an orignal simulation function to ensure this order is correct.)
+
+Set the number of processes the simulations are the be run on with `procs`.
+
+```python
+bulksim = bulksimulator.BulkSimulator(simulation,params,procs,kwargs)
+```
+
+The constructor creates a list of all combinations of the parameters which can now be run with the method
+
+```python
+bulksim.run()
+```
+
+These results can then be printed to the screen with the string representation `print(bulksim)`. Or the results can be output to a csv file 
+
+```python
+bulksim.to_csv('outputs.csv',sep=',')
+```
+
+and the `kwargs` settings can also be saved with the method `save_metadata(filename)`.
+
+## csv_to_pgfplots
+
+This module adds extra functionality for the case where the number of iterated parameters is 2, and there is a single, numerical result. Using the example above, the outputted csv can be changed to a text file which can then be directly used by pgfplots to create a 3D phasespace plot displaying the result due to specific parameter choices.
+
+```python
+csv_to_pgfplots.convert(filename,outputname,sep=',',header=True)
+```
+
+

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: only-utils
+Version: 0.0.1
+Summary: Only utils
+Home-page: https://gitlab.com/developerjoseph/only-utils
+Author: Jose Salas
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Only utils
+
+It is a package with constants and utilities in python.
+
+### Installation
+
+```pip install only-utils```
+

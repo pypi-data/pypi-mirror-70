@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Asymptotic Complexity Judge
+Version: 0.0.1
+Summary: Terminal Judge for Asymptotic Complexity
+Home-page: UNKNOWN
+Author: Ehud Adler
+Author-email: adlerehud@gmail.com
+License: UNKNOWN
+Description: # TEST
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

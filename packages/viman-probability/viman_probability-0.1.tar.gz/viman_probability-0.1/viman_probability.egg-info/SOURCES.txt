@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+viman_probability/Binomialdistribution.py
+viman_probability/Gaussiandistribution.py
+viman_probability/Generaldistribution.py
+viman_probability/__init__.py
+viman_probability.egg-info/PKG-INFO
+viman_probability.egg-info/SOURCES.txt
+viman_probability.egg-info/dependency_links.txt
+viman_probability.egg-info/not-zip-safe
+viman_probability.egg-info/top_level.txt

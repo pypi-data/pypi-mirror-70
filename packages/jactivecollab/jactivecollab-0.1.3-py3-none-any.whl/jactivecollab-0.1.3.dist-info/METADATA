@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: jactivecollab
+Version: 0.1.3
+Summary: This package contains useful functions to extract data from Active Collab. It is designed for ETH juniors
+Home-page: https://github.com/
+Author: Frederik Semmel
+Author-email: frederiksemmel@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: numpy (>=1.18.0)
+Requires-Dist: pandas (>=1.0)
+Requires-Dist: mysql-connector-python (>=8.0)
+
+# jActivecollab
+
+jActivecollab is the python library for accessing the ETH juniors ActiveCollab. It currently is a collection of useful functions gathered for the jupyter notebooks on jautomatio.ethjuniors.ch.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install jActivecollab in development mode. First, copy the repo. The login for gitlab.ethz.ch is in the jWiki.
+
+```bash
+git clone "https://gitlab.ethz.ch/eth-juniors/jactivecollab"
+```
+
+Then install the package in development mode. This allows you to simply change the code or pull from gitlab without having to reinstall the package.
+
+```bash
+pip install --user -e jactivecollab
+```
+
+## Usage
+Credentials are on jautomation.ethjuniors.ch
+
+```python
+import jActivecollab
+
+ac = jActivecollab.login(
+    db_user = '...',
+    db_password = '...',
+    db_host = '...',
+    db_database = '...',
+)
+
+# Returns all hours ever tracked on ActiveCollab
+time_records(ac)
+
+# TODO: Show rest of the library
+```
+
+

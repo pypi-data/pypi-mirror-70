@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Tidepool_Data_Science_Metrics.egg-info/PKG-INFO
+Tidepool_Data_Science_Metrics.egg-info/SOURCES.txt
+Tidepool_Data_Science_Metrics.egg-info/dependency_links.txt
+Tidepool_Data_Science_Metrics.egg-info/requires.txt
+Tidepool_Data_Science_Metrics.egg-info/top_level.txt
+tidepool_data_science_metrics/__init__.py
+tidepool_data_science_metrics/common/__init__.py
+tidepool_data_science_metrics/common/common.py
+tidepool_data_science_metrics/glucose/__init__.py
+tidepool_data_science_metrics/glucose/glucose.py
+tidepool_data_science_metrics/insulin/__init__.py
+tidepool_data_science_metrics/insulin/insulin.py

@@ -1,0 +1,10 @@
+fds/__init__.py,sha256=oN2FZyKfSt4pWsBmj6BlEUcxcRngtCBWF48ufzoK_hw,83
+fds/dlist.py,sha256=AEjse5tUvGvQVkriz8k2FkNCcRBWiH8oxgBSVPgv5pQ,4057
+fds/list.py,sha256=rjPUI9wxmOJIu0jzyc_Sf9zTD8k9rwJojOVDlXVNDN8,5230
+fds/queue.py,sha256=QoEIZ0-WNBF-eMbbcqpbdKFbAYZ0GATG0Qzrzv8NXOs,2906
+fds/stack.py,sha256=PFtmVD8F_pw2-XVkfZUx9ay8uLtIc_d2nrBIwXDJ3ZQ,2798
+py_fds-2.0.0b2.dist-info/LICENSE,sha256=twtsl2ZlNojAA5obGuWUCl5vJmQA2gHizy2AzsOdtG0,1062
+py_fds-2.0.0b2.dist-info/METADATA,sha256=Ji-xVASAwqwsbFxIdho9yFRP4l8gWsvihPRsrWAFhTs,2576
+py_fds-2.0.0b2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+py_fds-2.0.0b2.dist-info/top_level.txt,sha256=52v1bB-782Xh07STWqzml3q9GVhwaqsY3NCEMiH3Hnc,4
+py_fds-2.0.0b2.dist-info/RECORD,,

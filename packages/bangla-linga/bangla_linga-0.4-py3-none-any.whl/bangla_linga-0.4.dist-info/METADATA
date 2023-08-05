@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: bangla-linga
+Version: 0.4
+Summary: UNKNOWN
+Home-page: https://github.com/Kowsher/Bangla-NLP/tree/master/Bangla%20Linga
+Author: Kowsher Ahmed
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Bangla Linga - Python based Gender prediction from Bangla name (bangla-linga)
+==========================
+
+Bangla Linga is a powerful tool for predicting gender/linga from Bengali name patterns.
+This page gives a basic introduction to the package.
+
+## Installation:
+
+```
+pip install bangla-linga
+```
+
+In Python a Bangla Linga is typically written as:
+
+## Usage:
+```python
+>>> from bangla_linga import gender_prediction as gp
+>>> gen = gp.BN_gen_pred()
+>>> gen.predict_gender("রাহাত")
+```
+## Output:
+'Male'
+
+

@@ -1,0 +1,12 @@
+issuewatcher/__init__.py,sha256=e5lUCEyvNPorzs9HBz36NaU4SDFxrnAZJzzllDTeG5g,133
+issuewatcher/constants.py,sha256=Y96gMyGVmKC1uPST8WcCTV61GeNu9Wq3bG9z2svFwKE,155
+issuewatcher/github.py,sha256=aJcpj4hs0F1k1JpZWzKuQJQnqt9rlk_RwLNbh636Sys,10990
+issuewatcher/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+issuewatcher/temporary_cache.py,sha256=K1iVkjIHzUrt_3gM4OpeZPuwWDjoO2KUTwKmsTe5amM,2898
+issuewatcher/version_check.py,sha256=U8N7VSTp2VXaLOh6p4KHVrgfw0CjeRcmL38xpR8AzwI,1122
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+issue_watcher-2.3.0.dist-info/LICENSE,sha256=7HCZI82fOd3Inn9YfMCagl1Riv1XnJZw2JzcGsdfMcc,1067
+issue_watcher-2.3.0.dist-info/METADATA,sha256=1Gn7yZuyMUiUpp2xFeQkieJtfCs3E-vtSLvact7Qlg8,1390
+issue_watcher-2.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+issue_watcher-2.3.0.dist-info/top_level.txt,sha256=AZ3aG7nn5gRcxTlkYkDrEimigRQb8NpkKS0Hp4SfKfI,19
+issue_watcher-2.3.0.dist-info/RECORD,,

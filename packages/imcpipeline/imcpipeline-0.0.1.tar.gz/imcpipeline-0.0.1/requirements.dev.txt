@@ -1,0 +1,7 @@
+pylint
+git-lint
+black[d]
+mypy
+# data-science-types
+pytest
+twine

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pyconch
+Version: 0.0.1
+Summary: Pyconch is a wrapper for a shell in python
+Home-page: https://veltzer.github.io/pyconch
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pyconch
+Keywords: make,scons
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Requires-Dist: pylogconf
+Requires-Dist: pytconf
+
+Pyconch is a wrapper for a shell in python
+
+

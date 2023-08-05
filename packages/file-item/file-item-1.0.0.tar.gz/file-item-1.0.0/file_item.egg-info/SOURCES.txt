@@ -1,0 +1,10 @@
+README.rst
+setup.py
+file_item/__init__.py
+file_item/file_item.py
+file_item.egg-info/PKG-INFO
+file_item.egg-info/SOURCES.txt
+file_item.egg-info/dependency_links.txt
+file_item.egg-info/requires.txt
+file_item.egg-info/top_level.txt
+test/test_file_item.py

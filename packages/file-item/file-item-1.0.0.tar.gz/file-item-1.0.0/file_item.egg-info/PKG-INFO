@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: file-item
+Version: 1.0.0
+Summary: My file-item
+Home-page: https://github.com/dmitriiweb/file-item
+Author: Dmitrii K
+Author-email: dmitriik@protonmail.com
+License: MIT
+Description: file-item
+        =========
+        
+        Documentation: https://file-item.readthedocs.io/en/latest/
+        
+        Installation
+        ------------
+        
+        ::
+        
+            pip install file_item
+        
+        Examples:
+        ---------
+        
+        ::
+        
+            from file_item import File
+        
+            basedir = File.basedir(__file__)
+        
+            file_1 = basedir.joinpath('test1.csv')
+            file_2 = File('/home/user/test2.csv')
+            file_3 = File.from_strings('/home/user/', 'test3.csv')
+        
+            print(repr(file_1))
+            # PosixPath('test1.csv')
+        
+            print(file_2)
+            # /home/user/test2.csv
+        
+            print(file_1 == file_2)
+            # False
+        
+            print(file_3.name)
+            # test3.csv
+        
+            file_1.create_folder()
+        
+            print(File.get_file_name('test*.csv'))
+            # test-.csv
+        
+        
+Keywords: file-item
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
+Provides-Extra: dev-lint
+Provides-Extra: dev-test
+Provides-Extra: dev-docs
+Provides-Extra: timezone

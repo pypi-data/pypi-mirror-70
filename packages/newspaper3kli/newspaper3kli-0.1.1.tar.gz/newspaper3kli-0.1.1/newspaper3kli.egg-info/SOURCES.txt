@@ -1,0 +1,12 @@
+README.md
+UNLICENSE
+newspaper3kli.py
+setup.py
+lib/__init__.py
+lib/http_client.py
+newspaper3kli.egg-info/PKG-INFO
+newspaper3kli.egg-info/SOURCES.txt
+newspaper3kli.egg-info/dependency_links.txt
+newspaper3kli.egg-info/entry_points.txt
+newspaper3kli.egg-info/requires.txt
+newspaper3kli.egg-info/top_level.txt

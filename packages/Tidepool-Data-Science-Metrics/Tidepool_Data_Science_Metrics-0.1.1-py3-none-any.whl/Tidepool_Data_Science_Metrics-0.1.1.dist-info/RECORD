@@ -1,0 +1,12 @@
+tidepool_data_science_metrics/__init__.py,sha256=bb6g2SZqGHpUrqletOFJCJv1isC53UWpqGCjBimVJDM,172
+tidepool_data_science_metrics/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidepool_data_science_metrics/common/common.py,sha256=NuARP6F-wNNsqBxzEwR3k_ZLpM_dtOP4YdscZh4vZZQ,2904
+tidepool_data_science_metrics/glucose/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidepool_data_science_metrics/glucose/glucose.py,sha256=PlJVfbCaYAZgz7SgkTFIIiKfjaREqcRf35r3nEAsRNg,12446
+tidepool_data_science_metrics/insulin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidepool_data_science_metrics/insulin/insulin.py,sha256=VpVBPJtgCgV9a8kliEHbIeFNqcnFEkPy9IfCvT0equI,2887
+Tidepool_Data_Science_Metrics-0.1.1.dist-info/LICENSE,sha256=C-yE7V1C3xYJWF_5Cs9FC-Xreq7ozKS2ckIntybyf0s,1326
+Tidepool_Data_Science_Metrics-0.1.1.dist-info/METADATA,sha256=nQZ3rMgXcQtcIjGRxx9YBKLU5rg7RVLd49HiriFWATA,1778
+Tidepool_Data_Science_Metrics-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Tidepool_Data_Science_Metrics-0.1.1.dist-info/top_level.txt,sha256=4egFWUFyxmJ-B7kKSP6BDEM8VjNh5g3Q1huXHuFsVNg,30
+Tidepool_Data_Science_Metrics-0.1.1.dist-info/RECORD,,

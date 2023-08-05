@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: pyplatform
+Version: 0.1.5
+Summary: Pyplatform is a data analytics platform architeture built around Google BigQuery in a hybrid cloud environment.
+Home-page: https://github.com/mhadi813/pyplatform
+Author: Muhammad Hadi
+Author-email: mhadi813@gmail.com
+License: BSD
+Description: ### Pyplatform is a data analytics platform architeture built around Google BigQuery in a hybrid cloud environment.
+        
+        the platorm:
+        -  provides fast, scalable and reliable SQL database solution
+        -  abstracts away the infrastuture by builiding data pipelines with serverless compute solutions in python runtime environments
+        -  simplifies development environment by using jupyter lab as the main tool
+        
+        <img align="left" style="width: 1200px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/pyplatform.gif">
+        
+        ## Installation
+        
+        
+        ```python
+        pip install pyplatform
+        ```
+        
+        ## Setting up development environment
+        ```
+        git clone https://github.com/mhadi813/pyplatform
+        cd pyplatform
+        conda env create -f pyplatform_dev.yml
+        ```
+        
+        
+        ### [Environment variables](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#saving-environment-variables)
+        
+        
+        
+        
+        
+        ```python
+        import os
+        
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'path/to/default_service_account.json'
+        os.environ['DATASET'] = 'default_bigquery_dataset_name'
+        os.environ['STORAGE_BUCKET'] = 'default_storage_bucket_id'
+        ```
+        
+        ## Usage
+        ## common data pipeline architectures:
+        
+        ### - Http sources
+        
+        <img align="left" style="width: 740px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/http_sources.gif">
+        
+        ### - On-prem servers
+        
+        <img align="left" style="width: 740px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/on-prem_sources.gif">
+        
+        ### - Bigquery integration with Azure Logic Apps
+        
+        <img align="left" style="width: 740px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/logic_apps_integration.gif">
+        
+        ### - Event driven ETL process
+        
+        <img align="left" style="width: 740px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/event_driven.gif">
+        
+        ### - Streaming pipelines
+        
+        <img align="left" style="width: 740px;" src="https://github.com/mhadi813/pyplatform/blob/master/samples/pyplatform%20image/streaming.gif">
+        
+        ## Exploring modules
+        
+        
+        ```python
+        
+        import pyplatform as pyp
+        pyp.show_me()
+        
+        ```
+        
+Keywords: google bigquery cloud functions storage jupyterlab python SQL
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Office/Business
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

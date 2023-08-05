@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pysperf
+Version: 20.6.3.post1
+Summary: Pyomo Solver Performance Benchmarking Library
+Home-page: https://github.com/grossmann-group/pysperf
+Author: Qi Chen
+Author-email: qichen@andrew.cmu.edu
+Maintainer: Qi Chen
+License: BSD 2-clause
+Keywords: pyomo,generalized disjunctive programming
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+
+Pyomo Solver Performance Benchmarking Library
+
+

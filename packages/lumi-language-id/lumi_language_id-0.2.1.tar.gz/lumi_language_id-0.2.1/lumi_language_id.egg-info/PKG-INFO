@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lumi-language-id
+Version: 0.2.1
+Summary: For when you want fastText language identification, but you also want to believe the answers
+Home-page: UNKNOWN
+Maintainer: Robyn Speer
+Maintainer-email: rspeer@luminoso.com
+License: MIT
+Description: UNKNOWN
+Platform: any
+Requires-Python: >=3.6
+Provides-Extra: train

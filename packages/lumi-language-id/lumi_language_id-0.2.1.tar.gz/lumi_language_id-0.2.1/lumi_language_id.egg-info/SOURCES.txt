@@ -1,0 +1,14 @@
+README.md
+setup.py
+lumi_language_id/__init__.py
+lumi_language_id/build.py
+lumi_language_id/data_sources.py
+lumi_language_id/run_active_learning.py
+lumi_language_id/tuned.py
+lumi_language_id.egg-info/PKG-INFO
+lumi_language_id.egg-info/SOURCES.txt
+lumi_language_id.egg-info/dependency_links.txt
+lumi_language_id.egg-info/requires.txt
+lumi_language_id.egg-info/top_level.txt
+lumi_language_id/data/lid.176.ftz
+lumi_language_id/data/tuned.npz

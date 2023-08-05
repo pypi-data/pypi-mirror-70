@@ -1,0 +1,16 @@
+pyshadow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyshadow/main.py,sha256=9Digz3nmT5Ghz1u2w9M4CNR2AUhQBqijdhrsrzNdzUM,8820
+pyshadow/resources/querySelector.js,sha256=p0Ix7k_q2RnI-9eLitBq6-UjNllDwhuvJP62s1AJhZc,9751
+pyshadow/resources/test/button.html,sha256=FjQGLzMct8yTyHqXH1IBwHjYGuJww8IPYdoaydvRI5M,436
+pyshadow/resources/test/index.html,sha256=CQ-dpmX-jOQiv_IYTA83lhjOmQ-850HB5mPQRvKZL-c,282
+pyshadow/resources/test/script.js,sha256=RHb3HYmbeXLibu3FRFujiOx_6uX83f_jcOcOB45xscs,394
+pyshadow/resources/test/style.css,sha256=gcR-HqegwmbkWGVS-vLhkoICYoBKE1pMgc14v42CST8,32
+resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+resources/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=wrskfpYMc1ZCScqeVgp2qckrYYa4unA2wv3reE4RWlA,1821
+pyshadow-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyshadow-0.0.1.dist-info/METADATA,sha256=t2r2PXaVU1zR1OV_RcvNDIxbTnBS-42T2YeTbSx11ms,7497
+pyshadow-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pyshadow-0.0.1.dist-info/top_level.txt,sha256=rnIxeqWVKix10J9oFms_1ZNaSKRzyEoulE6qNpZ1aeQ,9
+pyshadow-0.0.1.dist-info/RECORD,,

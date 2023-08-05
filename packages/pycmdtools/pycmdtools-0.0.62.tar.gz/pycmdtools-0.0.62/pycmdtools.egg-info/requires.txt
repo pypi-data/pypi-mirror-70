@@ -1,0 +1,8 @@
+numpy
+pandas
+pylogconf
+pytconf
+pyyaml
+requests
+tqdm
+unidecode

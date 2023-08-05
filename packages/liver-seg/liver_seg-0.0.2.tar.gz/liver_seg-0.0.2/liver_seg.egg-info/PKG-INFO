@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: liver-seg
+Version: 0.0.2
+Summary: Liver Segmentation
+Home-page: https://github.com/liuqidev/liver_seg
+Author: lq.pro
+Author-email: nihaoworld@outlook.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

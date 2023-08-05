@@ -1,0 +1,7 @@
+README.md
+setup.py
+tegstats/__init__.py
+tegstats.egg-info/PKG-INFO
+tegstats.egg-info/SOURCES.txt
+tegstats.egg-info/dependency_links.txt
+tegstats.egg-info/top_level.txt

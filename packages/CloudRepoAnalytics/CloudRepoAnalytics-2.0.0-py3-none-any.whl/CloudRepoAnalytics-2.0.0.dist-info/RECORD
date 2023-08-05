@@ -1,0 +1,10 @@
+flaskr/__init__.py,sha256=cE5yj9V0d_qNIDELokuZduE6dhJyG-e2Cm4OgQFpWME,4442
+flaskr/static/chartcore.min.js,sha256=tNsWPQ2-eSfKh2duXzUDrg1Slimaw3xfbPs38UTscUU,740493
+flaskr/static/dash.css,sha256=cnI7AzFnWTafXOrf-saEABiaSr-7xYHe6u-e5KVXdfI,61
+flaskr/static/piechart.min.js,sha256=806txzMlBf-c5cNAfQsGFyannsVfg6hm69SmlyhRgNc,39450
+flaskr/templates/stats.html,sha256=JyMosk9A-tjFdqKCp5F9AMahFoaCFKvboMgORFGfb1U,2648
+CloudRepoAnalytics-2.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+CloudRepoAnalytics-2.0.0.dist-info/METADATA,sha256=e6O7WLKY5He_4dkkINtSl6_olpZW5IwKLZNMWduw0K8,2198
+CloudRepoAnalytics-2.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+CloudRepoAnalytics-2.0.0.dist-info/top_level.txt,sha256=_a-V6lXH3Y1ZozipWz8bxq12_647QO4DxYxvgSWhOsg,7
+CloudRepoAnalytics-2.0.0.dist-info/RECORD,,

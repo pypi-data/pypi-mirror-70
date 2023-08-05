@@ -1,0 +1,12 @@
+hsc/__init__.py,sha256=eQkIsql-rc1sF1NQ7g40yB6MJod29xLlMhNcX6EL1S8,28
+hsc/__main__.py,sha256=5JbAzOPD_ap8JqJAX7hkCdEcJ1Iwfe2fSbnAPkzs3tA,67
+hsc/constants.py,sha256=iRnMLf_K11h3Tn4j99YtNMdKH1jUpWQUp7fIE7cu3Bc,837
+hsc/crawler.py,sha256=joVyPJw5Dd9gzk_P6awyqJBG-Z9k2O6DCcIRTGMLiiQ,9357
+hsc/metadata.py,sha256=qKGNOFeAV7oBV2pyTeAz43cs7Po5TRdhaS6ilxnupo0,687
+hsc/progress_bar.py,sha256=fGLTSlkbeu6scdhpIdxBFn3KEoN-nrstaX7SyNImbGI,119
+hsc-1.2.2.dist-info/LICENSE,sha256=znv7XSqa18tOirxm5y9mjgqfxEVX1UQ_8V9HeItFtog,1067
+hsc-1.2.2.dist-info/METADATA,sha256=P_siI5q5Nz82fvJ2dWa-qEsZNAKCntQyUuWqhHL2-ls,1909
+hsc-1.2.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hsc-1.2.2.dist-info/entry_points.txt,sha256=Wnsg_bDCfEFUfWln0HDJ3TV-OS6zQcCz5eLLSB97Azs,43
+hsc-1.2.2.dist-info/top_level.txt,sha256=0oOPZCLwq8meHZsEM0fjIAxEedbxlwyDB32kU4QgP5Q,4
+hsc-1.2.2.dist-info/RECORD,,

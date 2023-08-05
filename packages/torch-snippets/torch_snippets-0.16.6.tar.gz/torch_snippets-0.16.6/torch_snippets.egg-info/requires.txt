@@ -1,0 +1,7 @@
+torch
+loguru
+numpy
+dill
+matplotlib
+pandas
+opencv-python-headless

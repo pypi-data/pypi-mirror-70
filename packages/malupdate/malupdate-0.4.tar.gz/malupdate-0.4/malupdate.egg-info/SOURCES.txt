@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+malupdate/__init__.py
+malupdate/mal.py
+malupdate.egg-info/PKG-INFO
+malupdate.egg-info/SOURCES.txt
+malupdate.egg-info/dependency_links.txt
+malupdate.egg-info/requires.txt
+malupdate.egg-info/top_level.txt

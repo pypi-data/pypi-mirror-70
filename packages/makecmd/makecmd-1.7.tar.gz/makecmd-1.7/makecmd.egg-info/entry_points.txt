@@ -1,0 +1,3 @@
+[console_scripts]
+makecmd = makecmd.makecmd:main
+

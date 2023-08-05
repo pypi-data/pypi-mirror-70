@@ -1,0 +1,12 @@
+modespy/__init__.py,sha256=O2_aRRuMr2O6aPKXZSOmSdvqAzf1j0UAVavAH8qW_Kk,1619
+modespy/filters.py,sha256=5SBJwfBJ6aESE-mJZwLLqRDyfQ82l01B1CH1cclI0Zs,3926
+modespy/methods.py,sha256=pAKWuTLOdAnWbA_qLZFNAEg6IS482DYFceDIEeGZOXA,9940
+modespy/modes.py,sha256=3ZPs6zX_iJJCX3b15EdoSVDnOMx02tqoT6_BXYxMxRM,68959
+modespy/std_problems.py,sha256=wt7P5kfWbGg3Ung_hM0pPfY_bulZ5ee2uEfTmP33ZH0,15139
+modespy/tk_examples.py,sha256=49RTgJ07fhuN5hYhOBoV1CiRGjykpUflU46o8tb3_2o,19528
+modespy/util.py,sha256=eFZ0i3YWTRBxvmKTEwByb-VZyYsqCPFUBSPfCZMrdnM,4326
+modespy-0.9.0.dist-info/LICENSE,sha256=plIJMfW-dFMwP0p5l-tKCa9_-qrOxpJDtcCQyrMv2bs,1093
+modespy-0.9.0.dist-info/METADATA,sha256=qJ_eg9JScBgIBCO2SXTuidEv3aj0QmkFkMLQF_CIbSQ,2447
+modespy-0.9.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+modespy-0.9.0.dist-info/top_level.txt,sha256=trPD8Tj9qXEw3pTPP9AUydv8HC4mNBfKWDxaaaS_9bA,8
+modespy-0.9.0.dist-info/RECORD,,

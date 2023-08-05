@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: watch-do
+Version: 1.1.2
+Summary: Watch a group of files for changes and then run commands
+Home-page: https://github.com/vimist/watch-do
+Author: Vimist
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: watch files monitor run do
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development
+Classifier: Topic :: System

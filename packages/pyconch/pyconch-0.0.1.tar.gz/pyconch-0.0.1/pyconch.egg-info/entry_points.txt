@@ -1,0 +1,3 @@
+[console_scripts]
+pyconch = pyconch.endpoints.main:main
+

@@ -1,0 +1,53 @@
+* Sat May 30 2020 Denis Arnaud <denis.arnaud_fedora at m4x.org> - 1.00.6
+- Removed dependency on Python
+
+* Mon Nov 11 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.5
+- CMake helper files for newer versions of Boost
+
+* Thu Jul 11 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.4
+- CMake support files updated for Python 3.8
+
+* Tue Jan 15 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.3
+- CMake nows finds out automatically the right Boost.Python library version
+- Python 3.4 is the new minimum required version
+
+* Sun Jun 14 2015 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 1.00.2
+- Moved the Python utilities into standard directories
+
+* Sun Jun 14 2015 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 1.00.1
+- The CMake helper files are now aligned with those of StdAir.
+
+* Tue Dec 11 2012 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 1.00.0
+- Open source release.
+- [Dev] Events no longer stored in the StdAir BOM root: new module SEvMgr
+handling events through an event queue.
+- [Dev] Services dedicated to JSON export of events.
+- [Build] Test coverage option with gcov.
+
+* Sun Dec 18 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.2.3
+- Two new criteria have been added to the fare rule and to the booking
+request.
+- The CMake build system now accepts independent unit tests (not dependent on
+the core module being built). That allows, for instance, to benchmark the
+project with third-party libraries.
+
+* Mon Dec 12 2011 Denis Arnaud <denis_arnaud at users dot sourceforge.net> 0.2.2
+- Took into account feedback from the review request (#728815). The test/math/
+sub-directory has been moved out into a dedicated GitHub repository
+(https://github.com/denisarnaud/playground). The other tests (sequential
+generation) are now checked.
+
+* Mon Dec 05 2011 Denis Arnaud <denis_arnaud at users dot sourceforge.net> 0.2.1
+- [Dev] Adapted the database-related source code to the new SOCI-3.1 API.
+- [Build] Improved the CMake build framework. For instance, the package
+versions are now correctly handled, for the simulator-related components, as
+well as for third-party libraries (e.g., Xapian, SOCI, Boost). The
+rpath/run-path is now inserted into the (library, executable) binaries (only
+when needed, though).
+- [Build] Removed any support for the GNU Autotools.
+		
+* Sun Aug 07 2011 Denis Arnaud <denis_arnaud at users dot sourceforge.net> 0.1.0
+- First release. The demand rule sets are parsed either from a CSV file or
+from a built-in sample BOM tree. Then, TraDemGen generates booking requests
+according to the given rule sets.
+	

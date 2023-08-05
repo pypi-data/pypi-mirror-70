@@ -1,0 +1,62 @@
+* 2020-05-30:
+- Version 1.00.6
+- Removed dependency on Python
+
+* 2019-11-11:
+- Version 1.00.5
+- CMake helper files for newer versions of Boost
+
+* 2019-07-11:
+- Version 1.00.4
+- CMake support files updated for Python 3.8
+
+* 2019-01-15:
+- Version 1.00.3
+- CMake nows finds out automatically the right Boost.Python library version
+- Python 3.4 is the new minimum required version
+
+* 2015-06-27:
+- Version 1.00.2
+- Moved the Python utilities into standard directories
+
+* 2015-06-14:
+- Version 1.00.1
+- The CMake helper files are now aligned with those of StdAir.
+
+* 2012-12-11:
+- Open source release.
+- [Dev] Events no longer stored in the StdAir BOM root: new module SEvMgr
+  handling events through an event queue.
+- [Dev] Services dedicated to JSON export of events.
+- [Build] Test coverage option with gcov.
+
+* 2011-12-18:
+- Version 0.2.3
+- Two new criteria have been added to the fare rule and to the booking request.
+- The CMake build system now accepts independent unit tests (not dependent on
+  the core module being built). That allows, for instance, to benchmark the
+  project with third-party libraries.
+
+* 2011-12-12:
+- Version 0.2.2
+- Took into account feedback from the review request (#728815). The test/math/
+  sub-directory has been moved out into a dedicated GitHub repository
+  (https://github.com/denisarnaud/playground). The other tests (sequential
+  generation) are now checked.
+
+* 2011-12-05:
+- Version 0.2.1
+- [Dev] Adapted the database-related source code to the new SOCI-3.1 API.
+- [Build] Improved the CMake build framework. For instance, the package
+  versions are now correctly handled, for the simulator-related components,
+  as well as for third-party libraries (e.g., Xapian, SOCI, Boost). The
+  rpath/run-path is now inserted into the (library, executable) binaries
+  (only when needed, though).
+- [Build] Removed any support for the GNU Autotools.
+
+* 2011-08-07:
+- Version 0.1.0
+- First release. The demand rule sets are parsed either from a CSV file 
+  or from a built-in sample BOM tree. Then, TraDemGen generates booking
+  requests according to the given rule sets.
+

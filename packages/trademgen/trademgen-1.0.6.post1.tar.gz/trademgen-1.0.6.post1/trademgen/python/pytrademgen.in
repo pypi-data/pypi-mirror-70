@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+
+import sys, getopt, os
+#sys.path.append ('@INSTALL_LIB_DIR@')
+#sys.path.append ('@INSTALL_PY_LIB_DIR@')
+
+# Usage
+def usage (script_name):
+	print
+	print " Passenger demand (booking requests) is generated, according"
+	print " to demand streams, specified either from a built-in sample"
+	print " or from the given input file."
+	print
+	print " Usage: %s [options]" % script_name
+	print
+	print " Options:"
+	print "  -h, --help     : Outputs this help and exits"
+	print "  -b, --builtin  : The sample BOM tree can be either built-in"
+	print "                   or parsed from an input file. That latter"
+	print "                   must then be given with the -i/--input option"
+	print "  -s, --seed     : Seed for the random generation"
+	print "  -d, --draws    : Number of runs for the demand generations"
+	print "  -G, --demgen   : Method used to generate the demand (i.e., the"
+	print "                   the booking requests): Poisson Process (P) or"
+	print "                   Order Statistics (S)"
+	print "  -i, --input    : (CSV) input file for the demand distributions"
+	print "  -l, --log      : Filepath for the logs"
+	print
+
+# Conversion of a string into a boolean
+def str2bool (v):
+	return v.lower() in ("yes", "true", "t", "1")
+
+# Handle the command-line options
+def handle_opt():
+	try:
+		opts, args = getopt.getopt (sys.argv[1:], "hbs:d:G:i:o:l:",
+					    ["help", "builtin", "seed=",
+					     "draws=", "demgen=",
+					     "input=", "log="])
+	except getopt.GetoptError, err:
+		# Print help information and exit. It will print something like
+		# "option -a not recognized".
+		print str (err)
+		usage (sys.argv[0])
+		sys.exit (2)
+
+	# Log file-path
+	logFilename = "trademgen_generateDemand.log"
+
+	# (CSV) input file specifying the parameters of demand streams
+	inputFilename = "@STDAIR_SAMPLE_DIR@/demand01.csv"
+
+	# Whether or not the demand streams are specified internally or by
+	# an input file.
+	isBuiltin = False
+
+	# Random generation seed
+	randomSeed = 120765987
+
+	# Number of runs
+	nbOfRuns = 1
+
+	# Demand generation method
+	demandGenerationMethod = "S"
+
+	# Command-line options
+	for o, a in opts:
+		if o in ("-h", "--help"):
+			usage (sys.argv[0])
+			sys.exit()
+		elif o in ("-b", "--builtin"):
+			isBuiltin = True
+		elif o in ("-s", "--seed"):
+			randomSeed = int(a)
+		elif o in ("-d", "--draws"):
+			nbOfRuns = int(a)
+		elif o in ("-G", "--demgen"):
+			demandGenerationMethod = a
+		elif o in ("-i", "--input"):
+			inputFilename = a
+		elif o in ("-l", "--log"):
+			logFilename = a
+		else:
+			assert False, "Unhandled option"
+	return (isBuiltin, randomSeed, nbOfRuns, demandGenerationMethod, 
+		inputFilename, logFilename)
+
+
+############################
+# Main
+############################
+if __name__ == '__main__':
+	# Parse the command-line options
+	(isBuiltin, randomSeed, nbOfRuns, demandGenerationMethod, 
+	 inputFilename, logFilename) = handle_opt()
+	#
+	print ""
+	print "Built-in: ", isBuiltin
+	print "Random generation seed: ", randomSeed
+	print "Number of runs: ", nbOfRuns
+	print "Demand generation method: ", demandGenerationMethod
+	print "Input file-path: ", inputFilename
+	print "Log file-path: ", logFilename
+	print ""
+
+	# Initialise the TraDemGen C++ library wrapper
+	import pytrademgen
+	trademgenLibrary = pytrademgen.Trademgener()
+	trademgenLibrary.init (logFilename, randomSeed, isBuiltin, 
+			       inputFilename)
+
+	# Call the TraDemGen C++ library
+	result = trademgenLibrary.trademgen (nbOfRuns, demandGenerationMethod)
+	print ""
+	print result
+	print ""
+
+	#
+	print "You may want to plot the booking requests with a command like:"
+	print "%s/trademgen_drawBookingArrivals -p " % os.path.dirname (sys.argv[0]), logFilename
+	print "or even extract the list of requested origin and destinations:"
+	print "trademgen_extractBookingRequests -i ", logFilename
+	print ""

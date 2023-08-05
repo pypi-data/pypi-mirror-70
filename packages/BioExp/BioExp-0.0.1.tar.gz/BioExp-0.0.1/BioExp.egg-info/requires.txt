@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+pillow
+simpleITK
+opencv-python
+tensorflow-gpu>=1.15.2
+keras
+keras-vis
+lucid
+ppgm

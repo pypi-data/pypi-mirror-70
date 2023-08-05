@@ -1,0 +1,10 @@
+pyaid/__init__.py,sha256=1l5-rFa3EkkF5T1XK0q8LBt1U91-UUQtK-YrR92D37Q,72
+pyaid/base.py,sha256=1zXbup-q6ZxqPje_8vwiERDSP0STudYdZ3e7FA4bftQ,3563
+pyaid/tests/__init__.py,sha256=EWLqhrGTAVd-apmfVs2dneyDn5gu5weG1UtrXR7a-x4,87
+pyaid/tests/test_base.py,sha256=rGvX5-u2LOmbrNe9ADDKhd4-cE2k2uxFBuBjHgrTX9Y,4323
+pyaid-0.0.4.dist-info/LICENSE,sha256=Fly4Z5iEB0vUh21rdbnVgCK4uivkRm6nwy864TfRk-g,1094
+pyaid-0.0.4.dist-info/METADATA,sha256=LgddfaMuNyap48ecxzw4gDZEQJLuhcRGPkfuigg-Mpo,1795
+pyaid-0.0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pyaid-0.0.4.dist-info/top_level.txt,sha256=CVH_H_k44mCWlfoKLKog8AOqXg5X1hAdi512LoNdJn4,6
+pyaid-0.0.4.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyaid-0.0.4.dist-info/RECORD,,

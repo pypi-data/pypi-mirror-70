@@ -1,0 +1,9 @@
+README.md
+setup.py
+ritchelpdf/__init__.py
+ritchelpdf/pdf2text.py
+ritchelpdf/pdfimage.py
+ritchelpdf.egg-info/PKG-INFO
+ritchelpdf.egg-info/SOURCES.txt
+ritchelpdf.egg-info/dependency_links.txt
+ritchelpdf.egg-info/top_level.txt

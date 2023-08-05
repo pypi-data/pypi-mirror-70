@@ -1,0 +1,5 @@
+setup.py
+cuxfilter.egg-info/PKG-INFO
+cuxfilter.egg-info/SOURCES.txt
+cuxfilter.egg-info/dependency_links.txt
+cuxfilter.egg-info/top_level.txt

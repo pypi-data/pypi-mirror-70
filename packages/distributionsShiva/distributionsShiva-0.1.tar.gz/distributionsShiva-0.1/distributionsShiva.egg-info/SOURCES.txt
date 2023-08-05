@@ -1,0 +1,7 @@
+setup.py
+distributions/Binomialdistribution.py
+distributionsShiva.egg-info/PKG-INFO
+distributionsShiva.egg-info/SOURCES.txt
+distributionsShiva.egg-info/dependency_links.txt
+distributionsShiva.egg-info/not-zip-safe
+distributionsShiva.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: chalice-cdk
+Version: 0.1.0
+Summary: 
+Author: Stephan Fitzpatrick
+Author-email: knowsuchagency@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: aws_cdk.aws_s3_assets (>=1.42.1,<2.0.0)
+Requires-Dist: aws_cdk.core (>=1.42.1,<2.0.0)
+Requires-Dist: chalice (>=1.14.1,<2.0.0)

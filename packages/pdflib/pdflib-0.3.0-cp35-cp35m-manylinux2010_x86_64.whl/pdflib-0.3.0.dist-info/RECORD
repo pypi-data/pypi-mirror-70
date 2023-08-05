@@ -1,0 +1,16 @@
+pdflib-0.3.0.dist-info/RECORD,,
+pdflib-0.3.0.dist-info/WHEEL,sha256=ou0-hBHfmU_kpHcfKM0I4VAb3l_IyfLzdQNy2VUzD9g,112
+pdflib-0.3.0.dist-info/top_level.txt,sha256=Wkxfj2i_4fBDVofYSOqVpV91vq_20y1cipTt4fi1KeA,7
+pdflib-0.3.0.dist-info/METADATA,sha256=3ehzFywxA9rYQNt5E_YvBxxcaq7spPyd0mLwfgTowgE,306
+pdflib/utils.py,sha256=jDBPt1ht0rFyQJAlTkvrmCGiz6HzbpuqClsIHJhzkJM,1591
+pdflib/poppler.cpython-35m-x86_64-linux-gnu.so,sha256=4QJIoKqU_jPvKZzj4LXNDqmN1qZJGBOuUCIThYSlinI,915568
+pdflib/__init__.py,sha256=LK52fWGsiUQEofE3-2jnES30nX6Vt8Xp17eOOuwUqMA,57
+pdflib.libs/libz-eb09ad1d.so.1.2.3,sha256=J5v9FALEH3CNbOUOLz0XHG_FiJvYj96SHQSEhiXJULc,92080
+pdflib.libs/libexpat-64fa60ba.so.1.5.2,sha256=stqIMjPKirI3vQVmdk9xZgKLfNs7RT3TOTAygZvRyYY,170784
+pdflib.libs/libpng12-640ca796.so.0.49.0,sha256=yU9Dri8rtdaV-83CbIcJApCNkpIgJskmulz7kJrUmTg,168192
+pdflib.libs/libpoppler-530843d8.so.74.0.0,sha256=LEIY432rfbdvApLRHu0cxRkijniMzGZ6NbF93mRoUZQ,12906312
+pdflib.libs/libpoppler-cpp-d7b793a8.so.0.4.0,sha256=R_9NKi6uT_OMeWnyd65IgnQ4GRZ6u_HwrrgVpz6aWMo,1684888
+pdflib.libs/libfontconfig-63352676.so.1.4.4,sha256=nAINSpY3EadWSi4SmeBi0wBDZTTmF4tVgZHk4eeVkGY,242144
+pdflib.libs/libtiff-e6ae6939.so.3.9.4,sha256=qTCAJbxKYprWEHytnZBx27JAS_CWurrpKSu_BztJ_H0,434984
+pdflib.libs/libjpeg-7feae879.so.62.0.0,sha256=PRKOQOSdZbZ9O8JPm_UjImQi2oyWcJQq3ZbLWzxFixg,269680
+pdflib.libs/libfreetype-20bfc0cd.so.6.3.22,sha256=BUHigTwJZSZt74sBnvUBESldYy7KlXXvAhCePsBawx4,657016

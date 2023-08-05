@@ -1,0 +1,3 @@
+[console_scripts]
+ibots = ibots.cli:main
+

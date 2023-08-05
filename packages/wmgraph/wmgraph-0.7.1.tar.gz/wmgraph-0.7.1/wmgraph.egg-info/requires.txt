@@ -1,0 +1,3 @@
+requests<3,>=2
+msal<2,>=0
+quickxorhash

@@ -1,0 +1,12 @@
+imjoy_jupyter_extension/__init__.py,sha256=n5ZGZRqPu0FMywG-S1wAq1a_mk4Ltdfg89_CJSB7C3c,324
+imjoy_jupyter_extension/static/imjoy-icon.png,sha256=jfXBEhuVgNMv0XQ0NIAcdjXyZg65n30EuvjJoeHazOc,9785
+imjoy_jupyter_extension/static/imjoy_jupyter_extension.yaml,sha256=dphawlFhtTmw5jvZmxM7xXNntRIzoyjVP9LqjH5pzsk,179
+imjoy_jupyter_extension/static/index.js,sha256=D3Za3leV-l1NJo4okbFpC8sPkW3hptDzjSql_NnVHGQ,21976
+imjoy_jupyter_extension-0.2.0.data/data/etc/jupyter/nbconfig/notebook.d/imjoy_jupyter_extension.json,sha256=QnNlu3uchmYE8DWiV8J_c4sugt4pIPFMUFYjiArMkVs,80
+imjoy_jupyter_extension-0.2.0.data/data/share/jupyter/nbextensions/imjoy_jupyter_extension/imjoy-icon.png,sha256=jfXBEhuVgNMv0XQ0NIAcdjXyZg65n30EuvjJoeHazOc,9785
+imjoy_jupyter_extension-0.2.0.data/data/share/jupyter/nbextensions/imjoy_jupyter_extension/imjoy_jupyter_extension.yaml,sha256=dphawlFhtTmw5jvZmxM7xXNntRIzoyjVP9LqjH5pzsk,179
+imjoy_jupyter_extension-0.2.0.data/data/share/jupyter/nbextensions/imjoy_jupyter_extension/index.js,sha256=D3Za3leV-l1NJo4okbFpC8sPkW3hptDzjSql_NnVHGQ,21976
+imjoy_jupyter_extension-0.2.0.dist-info/METADATA,sha256=6pSGeb8TJjMD64iQbkAPOvB3sxteQ0dfgWhYcO24Iaw,2842
+imjoy_jupyter_extension-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+imjoy_jupyter_extension-0.2.0.dist-info/top_level.txt,sha256=NBvVQzfSO1yvRh3T2IKawvfE7C-S53knw5yezutjLIc,24
+imjoy_jupyter_extension-0.2.0.dist-info/RECORD,,

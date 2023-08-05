@@ -1,0 +1,13 @@
+README.md
+setup.py
+zipdist/__init__.py
+zipdist/conversions.py
+zipdist/zip.py
+zipdist.egg-info/PKG-INFO
+zipdist.egg-info/SOURCES.txt
+zipdist.egg-info/dependency_links.txt
+zipdist.egg-info/requires.txt
+zipdist.egg-info/top_level.txt
+zipdist/tests/__init__.py
+zipdist/tests/test_conversions.py
+zipdist/tests/test_zip.py

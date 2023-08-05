@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: antiblock-selenium
+Version: 0.0.1
+Summary: Selenium Firefox e Chrome webdrivers com alguns mecanismos antibloqueios
+Home-page: https://github.com/elvesrodrigues/antiblock-selenium
+Author: Elves M. Rodrigues
+Author-email: elvesmateusrodrigues@gmail.com
+License: UNKNOWN
+Description: # antiblock-selenium
+        Selenium com alguns mecanismos antibloqueios  
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown

@@ -1,0 +1,10 @@
+README.md
+setup.py
+foldercheck/__init__.py
+foldercheck/command_line.py
+foldercheck.egg-info/PKG-INFO
+foldercheck.egg-info/SOURCES.txt
+foldercheck.egg-info/dependency_links.txt
+foldercheck.egg-info/entry_points.txt
+foldercheck.egg-info/requires.txt
+foldercheck.egg-info/top_level.txt

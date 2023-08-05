@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: rhasspy-asr-kaldi-hermes
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-asr-kaldi-hermes
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy ASR Kaldi Hermes MQTT Service
+        
+        [![Continous Integration](https://github.com/rhasspy/rhasspy-asr-kaldi-hermes/workflows/Tests/badge.svg)](https://github.com/rhasspy/rhasspy-asr-kaldi-hermes/actions)
+        [![GitHub license](https://img.shields.io/github/license/rhasspy/rhasspy-asr-kaldi-hermes.svg)](https://github.com/rhasspy/rhasspy-asr-kaldi-hermes/blob/master/LICENSE)
+        
+        Implements `hermes/asr` functionality from [Hermes protocol](https://docs.snips.ai/reference/hermes) using [rhasspy-asr-kaldi](https://github.com/rhasspy/rhasspy-asr-kaldi).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

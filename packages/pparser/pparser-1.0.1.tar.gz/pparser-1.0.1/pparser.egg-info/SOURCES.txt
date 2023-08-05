@@ -1,0 +1,13 @@
+README.md
+README.rst
+setup.py
+pparser/__init__.py
+pparser/core.py
+pparser/pparser.py
+pparser/show.py
+pparser.egg-info/PKG-INFO
+pparser.egg-info/SOURCES.txt
+pparser.egg-info/dependency_links.txt
+pparser.egg-info/entry_points.txt
+pparser.egg-info/requires.txt
+pparser.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: pparser
+Version: 1.0.1
+Summary: Parser from Ducky Script to Ardunio
+Home-page: UNKNOWN
+Author: YariKartoshe4ka
+Author-email: yaroslav.kikel.06@inbox.ru
+License: GNU GPLv3
+Description: https://github.com/YariKartoshe4ka/PotatoParser/blob/master/README.md
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,3 @@
+[console_scripts]
+watch-do = watch_do.cli:watch_do
+

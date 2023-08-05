@@ -1,0 +1,11 @@
+README.md
+setup.py
+distributions_udacity_exercise_1024/Binomialdistribution.py
+distributions_udacity_exercise_1024/Gaussiandistribution.py
+distributions_udacity_exercise_1024/Generaldistribution.py
+distributions_udacity_exercise_1024/__init__.py
+distributions_udacity_exercise_1024.egg-info/PKG-INFO
+distributions_udacity_exercise_1024.egg-info/SOURCES.txt
+distributions_udacity_exercise_1024.egg-info/dependency_links.txt
+distributions_udacity_exercise_1024.egg-info/not-zip-safe
+distributions_udacity_exercise_1024.egg-info/top_level.txt

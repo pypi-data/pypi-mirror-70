@@ -1,0 +1,13 @@
+{% load i18n admin_urls %}
+
+{% block object-tools-items %}
+{% if has_add_permission %}
+
+{% url cl.opts|admin_urlname:'add' as add_url %}
+
+  <a href="{% add_preserved_filters add_url is_popup to_field %}" class="uk-button uk-button-primary addlink" uk-icon="icon: plus">
+    <!-- {% blocktrans with cl.opts.verbose_name as name %} {{ name }}{% endblocktrans %} -->
+  </a>
+
+{% endif %}
+{% endblock %}

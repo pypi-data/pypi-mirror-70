@@ -1,0 +1,39 @@
+{% load i18n admin_urls %}
+
+{% block submit-row %}
+
+<div class="uk-grid-small uk-text-center uk-flex-center" uk-grid>
+    <p uk-margin>
+        {% if show_save %}
+    <div>
+        <input type="submit" value="{% trans 'Save' %}" class="uk-button uk-button-danger" name="_save">
+    </div>
+    {% endif %}
+    {% if show_delete_link and original %}
+    {% url opts|admin_urlname:'delete' original.pk|admin_urlquote as delete_url %}
+    <div>
+        <a href="{% add_preserved_filters delete_url %}" class="uk-button uk-button-primary">{% trans "Delete" %}</a>
+    </div>
+    {% endif %}
+    {% if show_save_and_add_another %}
+    <div>
+        <input type="submit" class="uk-button uk-button-secondary" value="{% trans 'Save and add another' %}"
+            name="_addanother">
+    </div>
+    {% endif %}
+    {% if show_save_and_continue %}
+    <div>
+        <input type="submit" class="uk-button uk-button-primary"
+            value="{% if can_change %}{% trans 'Save and continue editing' %}{% else %}{% trans 'Save and view' %}{% endif %}"
+            name="_continue">
+    </div>
+    {% endif %}
+    {% if show_close %}
+    <div>
+        <a href="{% url opts|admin_urlname:'changelist' %}" class="closelink">{% trans 'Close' %}</a>
+    </div>
+    {% endif %}
+    </p>
+</div>
+
+{% endblock %}

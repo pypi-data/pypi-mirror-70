@@ -1,0 +1,12 @@
+crisp_api/__init__.py,sha256=5E1eX4LW50--zNmfpfVAz6QJoOIpWhHm5NiaeNGaPPE,3142
+crisp_api/errors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crisp_api/errors/route.py,sha256=5UYNYrIZYkIHk23pY4lRYhzgpl1B-SXzLNPAcCloGa8,225
+crisp_api/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crisp_api/resources/bucket.py,sha256=yEuaeuXFtx5s0Sk9HpukT5UhmXk2oIpv1nYybOJoPto,385
+crisp_api/resources/website.py,sha256=zwlkVe4qdEX2wLbj-fhemzpWQ-tKm5D8UGQbLkL5gmc,8673
+crisp_api-1.1.3.dist-info/AUTHORS,sha256=-0uXk3_ePxcQ70574pnCMwox3LUe2ZHCpY1OKB0jd90,47
+crisp_api-1.1.3.dist-info/LICENSE,sha256=fc9pe4UwUEITIBN_DymIIhi50hIA6rfrN2vFZP2l_LY,1057
+crisp_api-1.1.3.dist-info/METADATA,sha256=yv1UoT-gqdUF3fRIw74XaTUZzxbNkSFitVug5q4bGas,8843
+crisp_api-1.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+crisp_api-1.1.3.dist-info/top_level.txt,sha256=jx3Pip4LefLw1qR_BBEH4indV6wCFI0S4hJA5I5KSBU,10
+crisp_api-1.1.3.dist-info/RECORD,,

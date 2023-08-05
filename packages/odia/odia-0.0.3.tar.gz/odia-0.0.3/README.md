@@ -1,0 +1,1 @@
+Odia is an Indo-Aryan language spoken in the Indian state of Odisha. It is the official language in Odisha where native speakers make up 82% of the population, also spoken in parts of West Bengal, Jharkhand, Chhattisgarh, and Andhra Pradesh.

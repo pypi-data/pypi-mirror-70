@@ -1,0 +1,8 @@
+microclient/__init__.py,sha256=R0ZbG4GnVxPfgd7UKF9tX6loZMIcuon-7TxuPSo5Jsw,45
+microclient/bases.py,sha256=PCfCCxfzUc8hpK3XBvCf2snVYWDfPDbcBehUd2utonE,13962
+microclient/utils.py,sha256=Ms-8g3hSbHCkh8SttRos9OmfyvT-ghLv9m1BY9vTzoY,252
+microclient-0.3.0.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+microclient-0.3.0.dist-info/METADATA,sha256=oUEVUit_PistA3qdgTreAzSPkC7xtnvBx16RYKvkY58,1431
+microclient-0.3.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+microclient-0.3.0.dist-info/top_level.txt,sha256=-Y-FbqOOHmugDRSVhp0_TjxtRl6V_YCVkw21zaMPTYg,12
+microclient-0.3.0.dist-info/RECORD,,

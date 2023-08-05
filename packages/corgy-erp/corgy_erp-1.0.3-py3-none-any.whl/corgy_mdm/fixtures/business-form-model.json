@@ -1,0 +1,186 @@
+[
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "fdf248cf-71cb-4153-81f9-4eb4ca204db6",
+        "name": "V\u00e1llalat"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "a53cbd8c-663e-477f-8131-f268d99f0ad9",
+        "name": "Sz\u00f6vetkezet"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "d150b69d-571b-4bdc-b43b-b1ca6cb6f908",
+        "name": "K\u00f6zkereseti t\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "f95d67c0-7c3c-464e-adda-386f6c46088f",
+        "name": "Gazdas\u00e1gi munkak\u00f6z\u00f6ss\u00e9g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "1f11a9f6-6468-4a19-a55f-7a174bcfd5f4",
+        "name": "Jogi szem\u00e9ly felel\u0151ss\u00e9gv\u00e1llal\u00e1s\u00e1val m\u0171k\u00f6d\u0151 gazdas\u00e1gi munkak\u00f6z\u00f6ss\u00e9g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "29f84cec-68f3-41ea-af63-a6902343a3e4",
+        "name": "Bet\u00e9ti t\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "8d347db0-2864-47c1-9a79-753be820e468",
+        "name": "Egyes\u00fcl\u00e9s"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "87af018e-e65e-423d-bffb-a49cf396a5d8",
+        "name": "K\u00f6z\u00f6s v\u00e1llalat"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "59beb83d-d988-4bf2-a6b5-c0f87b549189",
+        "name": "Korl\u00e1tolt felel\u0151ss\u00e9g\u0171 t\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 10,
+    "fields": {
+        "prime_number": "cb025ebf-6756-459d-9865-591765d6d903",
+        "name": "R\u00e9szv\u00e9nyt\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 11,
+    "fields": {
+        "prime_number": "b857a545-b235-4f51-9345-4e50060a4593",
+        "name": "Egy\u00e9ni c\u00e9g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 12,
+    "fields": {
+        "prime_number": "55477f5a-c957-4aea-937f-0020507ab778",
+        "name": "K\u00fclf\u00f6ldiek magyarorsz\u00e1gi k\u00f6zvetlen kereskedelmi k\u00e9pviselete"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 13,
+    "fields": {
+        "prime_number": "e4572a8e-dc1f-481d-b1f5-67ba6d0be458",
+        "name": "Oktat\u00f3i munkak\u00f6z\u00f6ss\u00e9g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 14,
+    "fields": {
+        "prime_number": "c6989be2-f863-4d08-873e-0e59805646b5",
+        "name": "K\u00f6zhaszn\u00fa t\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 15,
+    "fields": {
+        "prime_number": "69e7e1b9-2a95-45de-97dc-bb2f3f85857b",
+        "name": "Erd\u0151birtokoss\u00e1gi t\u00e1rsulat"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 16,
+    "fields": {
+        "prime_number": "74fd5561-5d20-44ae-ac73-08845356feba",
+        "name": "V\u00edzgazd\u00e1lkod\u00e1si t\u00e1rsulat"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 17,
+    "fields": {
+        "prime_number": "d735ae8b-ca87-40db-8b70-ba9cb5443f80",
+        "name": "K\u00fclf\u00f6ldi v\u00e1llalkoz\u00e1s magyarorsz\u00e1gi fi\u00f3ktelepe"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 18,
+    "fields": {
+        "prime_number": "73c85eec-4b05-40cd-b996-c9303e86f46c",
+        "name": "V\u00e9grehajt\u00f3i iroda"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 19,
+    "fields": {
+        "prime_number": "3a8c6c4a-7593-4f9e-83ba-121797d6f0dd",
+        "name": "Eur\u00f3pai gazdas\u00e1gi egyes\u00fcl\u00e9s"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 20,
+    "fields": {
+        "prime_number": "286e5180-8211-4c69-8538-2c03a32c5d95",
+        "name": "Eur\u00f3pai r\u00e9szv\u00e9nyt\u00e1rsas\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 21,
+    "fields": {
+        "prime_number": "9b2fe3e2-795d-4665-b1a0-06db85c21ab1",
+        "name": "K\u00f6zjegyz\u0151i iroda"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 22,
+    "fields": {
+        "prime_number": "24a8742b-d6dd-4548-b200-d6449f59c57e",
+        "name": "K\u00fclf\u00f6ldi sz\u00e9khely\u0171 eur\u00f3pai gazdas\u00e1gi egyes\u00fcl\u00e9s magyarorsz\u00e1gi telephelye"
+    }
+},
+{
+    "model": "corgy_mdm.businessformmodel",
+    "pk": 23,
+    "fields": {
+        "prime_number": "24b4260b-339e-4047-8acb-b81804c34b31",
+        "name": "Eur\u00f3pai sz\u00f6vetkezet"
+    }
+}
+]

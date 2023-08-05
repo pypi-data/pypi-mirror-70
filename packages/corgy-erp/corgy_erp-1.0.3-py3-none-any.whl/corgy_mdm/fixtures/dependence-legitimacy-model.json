@@ -1,0 +1,34 @@
+[
+  {
+    "model": "corgy_mdm.dependencelegitimacymodel",
+    "pk": 1,
+    "fields": {
+      "prime_number": "3b8a7379-e3a6-4522-bbd2-143b1a98b823",
+      "name": "V\u00e1rand\u00f3s"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencelegitimacymodel",
+    "pk": 2,
+    "fields": {
+      "prime_number": "e1bba20d-eb62-40a6-b369-c01651761844",
+      "name": "Rokkants\u00e1gi j\u00e1rad\u00e9kban r\u00e9szes\u00fcl"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencelegitimacymodel",
+    "pk": 3,
+    "fields": {
+      "prime_number": "8302dd9a-aa0d-4a76-b25f-b0b00ea130ed",
+      "name": "Csal\u00e1di p\u00f3tl\u00e9kra saj\u00e1t jog\u00e1n jogosult"
+    }
+  },
+  {
+    "model": "corgy_mdm.dependencelegitimacymodel",
+    "pk": 4,
+    "fields": {
+      "prime_number": "4125b76c-3bab-4cf2-a172-b2f8c5373118",
+      "name": "Gyermek ut\u00e1n csal\u00e1di p\u00f3tl\u00e9kra jogosult"
+    }
+  }
+]

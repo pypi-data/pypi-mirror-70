@@ -1,0 +1,11 @@
+CHANGELOG.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+xmlsq.py
+tests/test_xmlsq.py
+xmlsq.egg-info/PKG-INFO
+xmlsq.egg-info/SOURCES.txt
+xmlsq.egg-info/dependency_links.txt
+xmlsq.egg-info/top_level.txt

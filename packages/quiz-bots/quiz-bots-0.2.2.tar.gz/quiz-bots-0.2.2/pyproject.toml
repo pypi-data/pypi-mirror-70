@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "quiz-bots"
+version = "0.2.2"
+description = "Quiz bots for TG and VK"
+license = "MIT"
+
+authors = [
+    "Vitaliy Antonov <vitaliyantonoff@gmail.com>"
+]
+
+readme = "README.md"
+
+repository = "https://github.com/velivir/quiz-bots"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+vk-api = "^11.8.0"
+python-telegram-bot = "^12.7"
+environs = "^8.0.0"
+redis = "^3.5.2"
+
+[tool.poetry.dev-dependencies]
+add-trailing-comma = "^2.0.1"
+autopep8 = "^1.5.2"
+pre-commit = "^2.4.0"
+mypy = "^0.770"
+wemake-python-styleguide = "^0.14.0"
+
+[tool.poetry.scripts]
+quiz-bots = 'quiz_bots.app:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

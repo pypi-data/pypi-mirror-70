@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+ffsuspend.py
+setup.cfg
+setup.py
+ffsuspend.egg-info/PKG-INFO
+ffsuspend.egg-info/SOURCES.txt
+ffsuspend.egg-info/dependency_links.txt
+ffsuspend.egg-info/entry_points.txt
+ffsuspend.egg-info/top_level.txt

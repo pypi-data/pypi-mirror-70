@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyDamp
+Version: 0.0.1
+Summary: Python-based data addition and managment of PSQL
+Home-page: https://github.com/VincenzoFerrero/PyDamp
+Author: Vincenzo Ferrero
+Author-email: ferrerov@oregonstate.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+Requires-Dist: pyyaml
+Requires-Dist: psycopg2
+
+# PyDamp
+(Py)thon based (D)ata (a)ddition and (m)anagement of (P)ostgres
+
+

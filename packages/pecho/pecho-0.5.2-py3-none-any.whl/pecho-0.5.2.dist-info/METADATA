@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pecho
+Version: 0.5.2
+Summary: Easy way to write things like status bars
+Home-page: https://github.com/nihaals/pecho
+License: MIT
+Author: Nihaal Sangha
+Author-email: me@niha.al
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: windows
+Requires-Dist: colorama (>=0.4.3,<0.5.0); extra == "windows"
+Project-URL: Repository, https://github.com/nihaals/pecho
+Description-Content-Type: text/markdown
+
+# pecho
+[![Tests](https://github.com/nihaals/pecho/workflows/Tests/badge.svg)](https://github.com/nihaals/pecho/actions?query=workflow%3ATests)
+[![codecov](https://codecov.io/gh/nihaals/pecho/branch/master/graph/badge.svg)](https://codecov.io/gh/nihaals/pecho)
+[![PyPI](https://img.shields.io/pypi/v/pecho)](https://pypi.org/project/pecho/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pecho)](https://pypi.org/project/pecho/)
+[![PyPI - Wheel](https://img.shields.io/pypi/wheel/pecho)](https://pypi.org/project/pecho/)
+
+Pecho makes it easy to write things like status bars.
+
+## Usage
+```python
+from pecho import echo
+
+echo('1%')  # 1%
+echo('2%')  # Replaces with 2%
+echo('3%', newline=True)  # Replaces with 3% and appends a newline
+echo('4%')  # 3%\n4%
+```
+

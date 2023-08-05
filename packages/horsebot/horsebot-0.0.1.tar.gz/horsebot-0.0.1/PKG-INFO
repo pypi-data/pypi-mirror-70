@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: horsebot
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Koen Woortman
+Author-email: koensw@outlook.com
+License: MIT
+Description: # 🐎 Horsebot
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown

@@ -1,0 +1,6 @@
+README.md
+setup.py
+horsebot.egg-info/PKG-INFO
+horsebot.egg-info/SOURCES.txt
+horsebot.egg-info/dependency_links.txt
+horsebot.egg-info/top_level.txt

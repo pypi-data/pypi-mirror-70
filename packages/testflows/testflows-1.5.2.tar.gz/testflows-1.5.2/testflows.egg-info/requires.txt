@@ -1,0 +1,7 @@
+testflows.core>=1.5.200604.1230636
+testflows.asserts>=5.3.191019.1125113
+testflows.uexpect>=1.2.200426.1182347
+testflows.connect>=1.3.200426.1182816
+testflows.database>=1.3.200604.1222934
+
+[dev]

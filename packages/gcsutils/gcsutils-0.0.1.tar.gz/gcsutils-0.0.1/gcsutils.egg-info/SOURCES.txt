@@ -1,0 +1,6 @@
+setup_gcsutils.py
+gcsutils/gu.py
+gcsutils.egg-info/PKG-INFO
+gcsutils.egg-info/SOURCES.txt
+gcsutils.egg-info/dependency_links.txt
+gcsutils.egg-info/top_level.txt

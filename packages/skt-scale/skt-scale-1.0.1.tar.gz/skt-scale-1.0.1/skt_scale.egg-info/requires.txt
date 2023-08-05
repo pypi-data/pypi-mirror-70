@@ -1,0 +1,12 @@
+fire
+requests
+redis
+
+[:python_version<'3']
+enum34
+
+[test]
+pylint
+pytest
+pytest-mock
+responses

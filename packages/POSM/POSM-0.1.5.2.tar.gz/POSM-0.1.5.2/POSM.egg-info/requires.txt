@@ -1,0 +1,8 @@
+numpy
+Pillow
+PyYAML
+PySide2
+easydict
+lxml
+requests
+gpxpy

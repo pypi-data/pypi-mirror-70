@@ -1,0 +1,5 @@
+include nltkTransformer/*
+include nlp/*
+include nlp/sparkml/metadata/*
+include nlp/sparkml/stages/*/data/*
+include nlp/sparkml/stages/*/metadata/*

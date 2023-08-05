@@ -1,0 +1,20 @@
+configura.py,sha256=9uoft3S35HKMvc2RrZPXUKL5Q3QFoZSX3J1p7omAW6Q,494
+paress.py,sha256=PtW_9PB-gHcU440AMU78kQlgE8FKOzX-9Hk3ySyDhW4,15936
+plataforma.py,sha256=MgBDokizUhxRXDssbXXhLfymkmZ4Ck9vtSq4xlaJrwU,3072
+reconex.py,sha256=X3ZVNeU8ozu3yrZ8ljZxwcnyjex5AAMGS2bOlmgqtw0,741
+paress/__init__.py,sha256=34Mrf23d5KCZAXlYcvA1x9Vz9Xgk-A2_aZXFWEuD6_I,216
+paress/configura.py,sha256=jqEfEQFz2Bq3LZIIBNFhyDO0hRCOwIiGwYjwrMPwq98,416
+paress/paress.py,sha256=e6w_kxUN-KAIM77AthgzWrwk8mRb-i6YnvWanoY2dNM,18307
+paress/plataforma.py,sha256=YDaWSGxmxw_9PnAx4Vlxe1EygcRP31eh4cbRzM1uf9k,694
+paress/reconex.py,sha256=oBb9ytsBXZLG_hzMsHyfgBAEGW4XDUFIR3efkhiNFKw,801
+paress - copia/__init__.py,sha256=4j-2VSaBq44fUU4FI3YiZg9XZQmacGR1qlhAghXc_NI,355
+paress - copia/compatibilidad.py,sha256=Q9Gw8F8RObEjZDGl0cTfqh03RVA7bZWs1vLNqHgtiaU,3775
+paress - copia/configura.py,sha256=Eb3BGNrJc3LCjAeI4pWt-tAR9pQgZpllneev8n6jZXQ,485
+paress - copia/paress.py,sha256=cjlJ7kwYueqbNQwvVUKs6L5ljEg475rLAzyb8rxaea4,19025
+paress - copia/plataforma.py,sha256=OMhsW-pUKd70u5OsHQjl23thSIhHq6A-_yCXaUcugyE,735
+paress - copia/reconex.py,sha256=oBb9ytsBXZLG_hzMsHyfgBAEGW4XDUFIR3efkhiNFKw,801
+paress-0.0.400.dist-info/LICENSE,sha256=R95MaQQSIC5JOo0Wj1J1y1xbQomn0b0jz2pkp27dvfw,1104
+paress-0.0.400.dist-info/METADATA,sha256=9IPvJl29_2XS5z7YJANUT5SRWDvNwRZKrBaWffmhGpI,2896
+paress-0.0.400.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+paress-0.0.400.dist-info/top_level.txt,sha256=eeEfEb8H5dYABCydWg8nBoZlPc210ldoMgnKmObaXS8,22
+paress-0.0.400.dist-info/RECORD,,

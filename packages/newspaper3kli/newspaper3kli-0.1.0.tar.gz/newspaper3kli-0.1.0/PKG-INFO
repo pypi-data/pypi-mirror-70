@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: newspaper3kli
+Version: 0.1.0
+Summary: A tiny layer on top of Newspaper3k with support for Unix-like executions and parallelism (using asyncio) to download bulks of articles faster.
+Home-page: https://macunha.me
+Author: Matheus Cunha
+Author-email: macunha@protonmail.com
+License: UNLICENSE
+Project-URL: Source, https://github.com/macunha1/newspaper3kli
+Description: UNKNOWN
+Keywords: newspaper3k cli
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3, <4

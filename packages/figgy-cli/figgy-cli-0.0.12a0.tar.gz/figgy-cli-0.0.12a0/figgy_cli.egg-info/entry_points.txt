@@ -1,0 +1,3 @@
+[console_scripts]
+figgy = figgy.entrypoint.cli:main
+

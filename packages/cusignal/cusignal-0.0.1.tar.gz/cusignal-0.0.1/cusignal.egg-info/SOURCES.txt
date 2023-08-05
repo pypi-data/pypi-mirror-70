@@ -1,0 +1,5 @@
+setup.py
+cusignal.egg-info/PKG-INFO
+cusignal.egg-info/SOURCES.txt
+cusignal.egg-info/dependency_links.txt
+cusignal.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+hydra_plugins/hydra_colorlog/__init__.py,sha256=nlNcRa8JrCTvjVYxoVH3f-uv5yqSrWv-stlB8MSlTjU,71
+hydra_plugins/hydra_colorlog/colorlog.py,sha256=hY-DNbZnr-pqBvWnAKJlBmz8dfjiIusMK4Z2-aZnfrg,494
+hydra_plugins/hydra_colorlog/conf/__init__.py,sha256=nlNcRa8JrCTvjVYxoVH3f-uv5yqSrWv-stlB8MSlTjU,71
+hydra_plugins/hydra_colorlog/conf/hydra/hydra_logging/colorlog.yaml,sha256=AZfKV8dnlI_NI07-Ts6eEtV5H0j1vPNdXHy5frvnYLA,400
+hydra_plugins/hydra_colorlog/conf/hydra/job_logging/colorlog.yaml,sha256=tStUXRcOM-CG7bw98eB7vvr1pcbspGEZrZObQC8NshM,773
+hydra_colorlog-1.0.0rc2.dist-info/METADATA,sha256=XB0Aki1K0Vs2SHWKCZwzkD4uzlzKh3UBmpBuNIWrLoA,854
+hydra_colorlog-1.0.0rc2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hydra_colorlog-1.0.0rc2.dist-info/top_level.txt,sha256=0-LcYpEmzatUy2K5F7jmqcMfBL2RdB7k9nM_8zGFzhI,14
+hydra_colorlog-1.0.0rc2.dist-info/RECORD,,

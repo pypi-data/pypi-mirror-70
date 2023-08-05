@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: datepickerwidget
+Version: 0.3
+Summary: Datepicker for django 2.1
+Home-page: https://github.com/upwardweb/datetimewidget.git
+Author: Bernardo
+Author-email: b.vieira.rocha@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Django,Python,Bootstrap
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules 

@@ -1,0 +1,60 @@
+Metadata-Version: 2.0
+Name: zettels
+Version: 0.7.0
+Summary: A command line tool implementing Luhmann's system of a "Zettelkasten".
+Home-page: https://github.com/sthesing/Zettels
+Author: Stefan Thesing
+Author-email: software@webdings.de
+License: GPLv3+
+Keywords: notetaking zettelkasten
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Other/Nonlisted Topic
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: PyYAML
+Requires-Dist: pathspec (>=0.5.0)
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Requires-Dist: pypandoc; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Zettels
+Zettels is a command line tool implementing Niklas Luhmann's system of a 
+"Zettelkasten".
+
+# Anouncement: Reimplementation
+
+This implementation of Zettels is no longer actively developed. Instead, I 
+chose to reimplement Zettels from scratch in Rust.
+
+While doing so, I added a lot of features and separated the command line 
+interface from the backend, which is now a library called `libzettels`, 
+sporting an API that can be used to easily build other user interfaces.
+
+# Check the reimplementation out:
+
+## 1. Zettels - Command line tool
+
+- [Repo](https://gitlab.com/sthesing/zettels)
+- [crates.io](https://crates.io/crates/zettels)
+
+## 2. Libzettels - Backend
+
+- [Repo](https://gitlab.com/sthesing/libzettels)
+- [crates.io](https://crates.io/crates/libzettels)
+
+# Where is the old README?
+
+- [OLD-README.md](OLD-README.md)
+
+

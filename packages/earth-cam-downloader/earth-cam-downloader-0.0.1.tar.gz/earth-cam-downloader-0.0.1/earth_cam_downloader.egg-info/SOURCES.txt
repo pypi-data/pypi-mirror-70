@@ -1,0 +1,8 @@
+README.md
+setup.py
+earth_cam_downloader/__init__.py
+earth_cam_downloader/m3u8_downloader.py
+earth_cam_downloader.egg-info/PKG-INFO
+earth_cam_downloader.egg-info/SOURCES.txt
+earth_cam_downloader.egg-info/dependency_links.txt
+earth_cam_downloader.egg-info/top_level.txt

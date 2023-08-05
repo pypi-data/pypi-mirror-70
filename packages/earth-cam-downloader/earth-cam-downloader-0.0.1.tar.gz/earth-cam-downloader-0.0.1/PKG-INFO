@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: earth-cam-downloader
+Version: 0.0.1
+Summary: A downloader for m3u8 files from EarthCam
+Home-page: https://github.com/abelsonlive/earthcam-downloader
+Author: Brian Abelson
+Author-email: brianabelson@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

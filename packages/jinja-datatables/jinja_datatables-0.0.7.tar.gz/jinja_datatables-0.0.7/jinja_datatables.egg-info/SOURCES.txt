@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+jinja_datatables/__init__.py
+jinja_datatables/datatable_classes.py
+jinja_datatables.egg-info/PKG-INFO
+jinja_datatables.egg-info/SOURCES.txt
+jinja_datatables.egg-info/dependency_links.txt
+jinja_datatables.egg-info/requires.txt
+jinja_datatables.egg-info/top_level.txt
+jinja_datatables/jinja_extensions/__init__.py
+jinja_datatables/jinja_extensions/datatableext.py
+jinja_datatables/static_assets/html/from_ajax.html
+jinja_datatables/static_assets/html/from_html.html
+jinja_datatables/static_assets/html/from_js_array.html
+jinja_datatables/static_assets/js/table.js

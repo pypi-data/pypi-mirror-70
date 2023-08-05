@@ -1,0 +1,55 @@
+Metadata-Version: 1.2
+Name: pycut
+Version: 0.1.0
+Summary: PyCut
+Home-page: https://github.com/gmagno/pycut
+Author: Goncalo
+Author-email: goncalo@gmagno.dev
+License: MIT license
+Description: =====
+        PyCut
+        =====
+        
+        
+        .. image:: https://img.shields.io/pypi/v/pycut.svg
+                :target: https://pypi.python.org/pypi/pycut
+        
+        .. image:: https://img.shields.io/travis/gmagno/pycut.svg
+                :target: https://travis-ci.com/gmagno/pycut
+        
+        .. image:: https://readthedocs.org/projects/pycut/badge/?version=latest
+                :target: https://pycut.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        PyCut
+        
+        
+        * Free software: MIT license
+        * Documentation: https://pycut.readthedocs.io.
+        
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2020-06-02)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: pycut
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5

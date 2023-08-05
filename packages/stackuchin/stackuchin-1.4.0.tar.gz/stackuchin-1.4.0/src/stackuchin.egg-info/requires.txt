@@ -1,0 +1,6 @@
+simplejson
+boto3
+botocore
+
+[test]
+coverage

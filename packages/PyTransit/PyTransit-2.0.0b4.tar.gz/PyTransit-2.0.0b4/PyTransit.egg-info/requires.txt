@@ -1,0 +1,11 @@
+numpy
+numba
+scipy
+pandas
+xarray
+tables
+semantic_version
+
+[celerite]
+celerite
+pybind11

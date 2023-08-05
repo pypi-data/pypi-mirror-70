@@ -1,0 +1,9 @@
+ffmpeg
+pyqtgraph==0.11.0rc0
+PyQt5
+PyQt5.sip
+numpy>=1.13.0
+scipy
+matplotlib
+pims
+natsort

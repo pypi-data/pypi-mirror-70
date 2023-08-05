@@ -1,0 +1,10 @@
+pandas
+pvl
+tqdm
+click
+toml
+requests
+importlib_resources
+
+[:python_version == "3.6"]
+dataclasses

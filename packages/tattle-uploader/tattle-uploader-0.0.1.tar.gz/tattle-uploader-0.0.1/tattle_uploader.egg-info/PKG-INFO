@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: tattle-uploader
+Version: 0.0.1
+Summary: Helper functions to assist tattle services in storing data
+Home-page: https://github.com/tattle-made/
+Author: kruttikanadig
+Author-email: kruttika@tattle.co.in
+License: GPL-3
+Description: # tattle-uploader
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

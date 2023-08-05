@@ -1,0 +1,9 @@
+README.md
+setup.py
+tattle_uploader.egg-info/PKG-INFO
+tattle_uploader.egg-info/SOURCES.txt
+tattle_uploader.egg-info/dependency_links.txt
+tattle_uploader.egg-info/entry_points.txt
+tattle_uploader.egg-info/requires.txt
+tattle_uploader.egg-info/top_level.txt
+uploader/s3_mongo_helper.py

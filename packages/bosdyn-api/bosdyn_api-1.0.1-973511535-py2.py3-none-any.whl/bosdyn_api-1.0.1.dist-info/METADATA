@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bosdyn-api
+Version: 1.0.1
+Summary: Boston Dynamics API protobufs
+Home-page: https://dev.bostondynamics.com/
+Author: Boston Dynamics
+Author-email: dev@bostondynamics.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/boston-dynamics/spot-sdk/
+Project-URL: Documentation, https://dev.bostondynamics.com/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: protobuf
+
+These protos are the Boston Dynamics Public API.
+
+

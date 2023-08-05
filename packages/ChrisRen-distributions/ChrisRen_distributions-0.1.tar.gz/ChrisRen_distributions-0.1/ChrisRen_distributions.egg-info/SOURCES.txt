@@ -1,0 +1,10 @@
+setup.py
+ChrisRen_distributions/Binomialdistribution.py
+ChrisRen_distributions/Gaussiandistribution.py
+ChrisRen_distributions/Generaldistribution.py
+ChrisRen_distributions/__init__.py
+ChrisRen_distributions.egg-info/PKG-INFO
+ChrisRen_distributions.egg-info/SOURCES.txt
+ChrisRen_distributions.egg-info/dependency_links.txt
+ChrisRen_distributions.egg-info/not-zip-safe
+ChrisRen_distributions.egg-info/top_level.txt

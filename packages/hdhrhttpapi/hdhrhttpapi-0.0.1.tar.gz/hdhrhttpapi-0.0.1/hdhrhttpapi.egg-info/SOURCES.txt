@@ -1,0 +1,7 @@
+README.md
+setup.py
+hdhrhttpapi/__init__.py
+hdhrhttpapi.egg-info/PKG-INFO
+hdhrhttpapi.egg-info/SOURCES.txt
+hdhrhttpapi.egg-info/dependency_links.txt
+hdhrhttpapi.egg-info/top_level.txt

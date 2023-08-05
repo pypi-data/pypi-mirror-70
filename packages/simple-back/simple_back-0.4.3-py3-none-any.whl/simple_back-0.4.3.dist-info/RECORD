@@ -1,0 +1,9 @@
+simple_back/__init__.py,sha256=4AIbjOvc8Kb1mysC5YQXPKf1eiL3l2JDCE8p0OvCP-k,218
+simple_back/backtester.py,sha256=ub6Xg-kMa9XVdY7EfVscx6x7sCAAlafGB8QQdAHsf1U,24633
+simple_back/fees.py,sha256=HCECxWhp3e77Pqd2CxARgEZXCvtY_Ed76KNqRMHa4p0,551
+simple_back/metrics.py,sha256=SpmZlfBLYIRnJZM6mZFyb6JcdmchUryIaxHf0W-6too,6160
+simple_back/price_providers.py,sha256=YgyexDJT1no8ZSNTeE1iO06s3itp1zO5N11ZHluTQ7Q,9490
+simple_back/strategy.py,sha256=cqO9cGT3zyXbuSGrALhdrp3sjEWzZmt0mv7uCL8c2CU,947
+simple_back-0.4.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+simple_back-0.4.3.dist-info/METADATA,sha256=NqQ0qprR9pM6N4s03WaaCZvSEw11ggGmJT9s7q1rt00,620
+simple_back-0.4.3.dist-info/RECORD,,

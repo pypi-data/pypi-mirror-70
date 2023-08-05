@@ -1,0 +1,15 @@
+nltk>=3.0
+regex
+scipy>=1.0.0
+
+[all]
+fairseq
+fastbpe
+sacremoses
+torch
+
+[backtranslate]
+fairseq
+fastbpe
+sacremoses
+torch

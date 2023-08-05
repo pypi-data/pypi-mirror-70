@@ -1,0 +1,4 @@
+Flask
+requests
+opencencus>=0.7.7
+opencensus-ext-stackdriver>=0.7.2

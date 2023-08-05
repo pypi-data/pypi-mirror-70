@@ -1,0 +1,13 @@
+getBitMEXData/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+getBitMEXData/auth.py,sha256=G0zyIRBQMNuREaDNLLb2e4JIp1_7wHiUUjJ7xPavmqg,3567
+getBitMEXData/getBitMEXData.py,sha256=W21QKKVIHoBD-pafwWgQaSr6rogiK_WOxyh4ll5eSoc,10533
+getBitMEXData/getBitMEXtypes.py,sha256=1yt_gz2uiW56kMh9Y6qlRXwc97G9n5P1hlokqGnS-vs,239
+getBitMEXData/settings.py,sha256=yZnh_t0kMISFpPHGLtFPr586d2TfYUvM9fOHcB-Ss1Y,366
+getBitMEXData/update_data.py,sha256=OZsodpQTtxCQ-vMlMUzy7gc1AZ3ZuBcVtt3E7DZiw5Y,6671
+getBitMEXData/utils.py,sha256=qwtD1SN1ilEsEoN67n55dFCcGbwmhXN6GbWOSuX2tn4,13516
+getBitMEXData-0.0.2.dist-info/LICENSE.txt,sha256=PyGt0WKETNRyDC4_MQtCjO9PyuB0ZAVmSNLpcNTl7C4,35877
+getBitMEXData-0.0.2.dist-info/METADATA,sha256=Y2vIw3L4LAF19c58b9orQn7deW442hnL6GoGnJsAJ2A,3773
+getBitMEXData-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+getBitMEXData-0.0.2.dist-info/entry_points.txt,sha256=mBWx4hPpl4wFQrZfFlozkFMeYQTtjY728CJ6vQuW85E,72
+getBitMEXData-0.0.2.dist-info/top_level.txt,sha256=G9SfJX0A2oeKc3N3fUm5HnDOmdWfJsmVbQb1NbvrjrM,14
+getBitMEXData-0.0.2.dist-info/RECORD,,

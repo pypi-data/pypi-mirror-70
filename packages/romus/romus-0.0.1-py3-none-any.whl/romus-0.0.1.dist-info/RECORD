@@ -1,0 +1,14 @@
+romus/__init__.py,sha256=AuRiE_qXzrMN6s5sETU-u5hwTwzbjugEmGxDy2UiRP8,214
+romus/_blueprint.py,sha256=CuC_3P32kw5omRWPVtSzpCBg4KucR6HyitIFjL9su50,895
+romus/_utils.py,sha256=Edbfy6B-4zEBit3orq6jVi-RTcRnBemPDhSmvHEN_oI,1255
+romus/_version.py,sha256=A2xGSaK26Z-pDMQ8Qij-o_qmLqrce_p0NFlBsTj7D7E,18447
+romus/continuous_likelihood.py,sha256=y9lr9Te19p1EjW5E7TCWIZy3eUDyD6qZ1sG2xfOJdME,54615
+romus/discrete_likelihood.py,sha256=8qsXGUjDpRiZy_ndnbQ-BYfRDB_SYbKGUJ57xTp0Dys,39491
+romus/gibbs_samplers/__init__.py,sha256=F8soeHpmX3y25HyOE_jBZVeOX0jtg6cf--BjxrZQlFk,73
+romus/mixtures/__init__.py,sha256=F8soeHpmX3y25HyOE_jBZVeOX0jtg6cf--BjxrZQlFk,73
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+romus-0.0.1.dist-info/LICENSE.md,sha256=8PJ6hvcXfP74_GGljDhpYxib_-gHnFPpt3CMDJMi8RM,1073
+romus-0.0.1.dist-info/METADATA,sha256=JMl7T0qmzJaKN-e6BEJHufRwzjspjJSBQ_wQsSFCN1s,5902
+romus-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+romus-0.0.1.dist-info/top_level.txt,sha256=Pcqd1Zq4cwVgo4fSi3z1LMoIMCH515NiZKXcvY-7OQ4,12
+romus-0.0.1.dist-info/RECORD,,

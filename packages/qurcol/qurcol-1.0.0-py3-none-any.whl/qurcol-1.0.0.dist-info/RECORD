@@ -1,0 +1,11 @@
+qurcol/__init__.py,sha256=Q8L0GhnCzPS3cHY0TxlYjC_U9WKtwRlhzHT0oeHHsRU,100
+qurcol/cli.py,sha256=vG5n6LTcj9iJph-8J9murxponRJqxGWcZL0No1UcLl8,4143
+qurcol/format.py,sha256=S5cLMiIwXqpLkpacvOJh6ET2bYMAkpculH-w9xscm9k,708
+qurcol/read.py,sha256=R1eo3CvAUX-2TiJ5kfetv3ZKGCL9U7K9VbHquDua_vs,775
+qurcol/sql.py,sha256=vv2OiwNujTzCnwzfqb5kRzNl9ZXIpq5r-7yHa9sOG_Y,2218
+qurcol/table.py,sha256=OCVnvNSro0gll57tnppX35DP1m3-opJk7oYsZVqg1ps,1712
+qurcol-1.0.0.dist-info/entry_points.txt,sha256=n_DyURP1UNFly3TeczJpjx9nHtxt-AErL89TXksavgs,42
+qurcol-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+qurcol-1.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+qurcol-1.0.0.dist-info/METADATA,sha256=INUENo64gnFAs2SvUpQuMQLhchrKa1hUTvRp7Tgh4nk,6996
+qurcol-1.0.0.dist-info/RECORD,,

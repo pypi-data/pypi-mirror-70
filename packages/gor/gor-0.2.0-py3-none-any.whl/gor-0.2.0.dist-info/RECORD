@@ -1,0 +1,9 @@
+gor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gor/base.py,sha256=maGHl0h9h3fNCyqO3VWWYzjHYw6T3czSxXS0t-C56jA,6606
+gor/middleware.py,sha256=2AePZWlYIzmAZhYmHF4UIxCrzSD4fT_lWx7e4Q52pOo,1285
+gor/version.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+gor-0.2.0.dist-info/LICENSE,sha256=Ur6HG3Zf7ab7DTJuJteWuOrYPFeGyKcVTP8aOYvj7z4,1066
+gor-0.2.0.dist-info/METADATA,sha256=KIiZrsr09g-JHW4bHGDveG95QhBdV4t1XtOhF4JPrQk,3228
+gor-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gor-0.2.0.dist-info/top_level.txt,sha256=BuTHycuOb8SE8nrAEhJ7wGo21htZFXMLgRlYzCFbHsE,4
+gor-0.2.0.dist-info/RECORD,,

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tnflux
+Version: 0.9.1
+Summary: Caculating the T-N Wave Activity Flux derived by Takaya and Nakamura (JAS,2001).
+Home-page: https://github.com/jokervTv/T-N_Wave-Activity-Flux
+Author: Lai Sheng, Yongpeng Zhang
+Author-email: laish12@lzu.edu.cn, zhangyp6603@outlook.com
+Maintainer: Yongpeng Zhang
+Maintainer-email: zhangyp6603@outlook.com
+License: MIT License
+Description: file:README.md
+Keywords: tn wave activity flux
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

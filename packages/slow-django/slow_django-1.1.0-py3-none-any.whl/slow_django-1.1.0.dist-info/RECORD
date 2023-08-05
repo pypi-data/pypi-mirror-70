@@ -1,0 +1,5 @@
+slow_django/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+slow_django/middleware.py,sha256=EYFR1P-H9M_nsILuByCa6oQEb82MQ4rtr1j5ROOdDKY,728
+slow_django-1.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+slow_django-1.1.0.dist-info/METADATA,sha256=gf8s00C2DQvPBl8nYNFPNcD0tCpaJwRlX7E0Rucu6C0,1184
+slow_django-1.1.0.dist-info/RECORD,,

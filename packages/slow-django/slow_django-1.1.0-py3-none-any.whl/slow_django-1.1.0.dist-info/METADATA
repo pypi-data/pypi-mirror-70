@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: slow-django
+Version: 1.1.0
+Summary: Django, but slower
+Home-page: https://github.com/pbexe/slow-django
+Author: pbexe
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: django (>=3.0.7,<4.0.0)
+Project-URL: Repository, https://github.com/pbexe/slow-django
+Description-Content-Type: text/markdown
+
+# Slow Django
+
+> Django, but slower
+
+Ever thought that your project was too fast?
+
+## Install
+```
+pip install slow_django
+```
+
+```python
+# settings.py
+
+import slow_django
+
+SLOW_MIN = 2 # Minimum page load in seconds
+SLOW_MAX = 10 # Maximum-ish page load in seconds
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'slow_django.middleware.slowdown'
+]
+```

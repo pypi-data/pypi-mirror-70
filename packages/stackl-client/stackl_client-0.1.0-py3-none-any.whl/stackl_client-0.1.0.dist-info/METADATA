@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: stackl-client
+Version: 0.1.0
+Summary: STACKL
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,STACKL
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+stackl  # noqa: E501
+
+

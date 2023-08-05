@@ -1,0 +1,5 @@
+requests==2.23.0
+python-dateutil==2.8.1
+
+[legacy]
+maya==0.6.0

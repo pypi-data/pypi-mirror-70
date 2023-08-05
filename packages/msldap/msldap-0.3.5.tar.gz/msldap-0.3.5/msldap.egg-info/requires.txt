@@ -1,0 +1,11 @@
+aiocmd
+asciitree
+asn1crypto
+asysocks
+minikerberos>=0.2.1
+prompt-toolkit<3.0.0
+tqdm
+winacl>=0.0.2
+
+[:platform_system == "Windows"]
+winsspi>=0.0.9

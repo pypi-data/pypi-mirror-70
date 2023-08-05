@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: kbase-jsonrpcbase
+Version: 0.3.0a1
+Summary: Simple JSON-RPC service without transport layer
+Home-page: https://github.com/kbaseIncubator/jsonrpcbase
+License: MIT
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Requires-Dist: pytest-cov (>=2.9.0,<3.0.0)

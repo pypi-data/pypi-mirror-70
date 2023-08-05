@@ -1,0 +1,5 @@
+setup.py
+custreamz.egg-info/PKG-INFO
+custreamz.egg-info/SOURCES.txt
+custreamz.egg-info/dependency_links.txt
+custreamz.egg-info/top_level.txt

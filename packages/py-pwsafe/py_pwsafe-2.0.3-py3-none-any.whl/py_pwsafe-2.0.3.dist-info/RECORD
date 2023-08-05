@@ -1,0 +1,10 @@
+pypwsafe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypwsafe/password_manager.py,sha256=a2BT-DkdMFnyQIQYwRDC2HPEKjbaThJcuVel9v2bjSE,7787
+pypwsafe/password_safe.py,sha256=oasa-L-EeVsBOZWzH3wc3npPF191K8ssMgLfBxyWe1Q,6949
+pypwsafe/text_wrappers.py,sha256=yr_0ARvelHJoG7ZBYIgubex57ULmrfXbkOWyNK1Tqww,751
+py_pwsafe-2.0.3.dist-info/LICENSE,sha256=IKVvG1NcXJdNn4Due9muORssxIfMmyx_Ga62TVzrUYY,1053
+py_pwsafe-2.0.3.dist-info/METADATA,sha256=XcqyrDo7ix50EHLZcbxcEbrXgo10LXIx9lblEk3J9Aw,1823
+py_pwsafe-2.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+py_pwsafe-2.0.3.dist-info/entry_points.txt,sha256=HTbxF_TQHh5t8j4_I6ZD8xT--H09Cl1SGxKtun36puA,61
+py_pwsafe-2.0.3.dist-info/top_level.txt,sha256=FUgSc6QsjThU4O8mYm7A_5SCBGO_AFgpYwW7b09WBrs,9
+py_pwsafe-2.0.3.dist-info/RECORD,,

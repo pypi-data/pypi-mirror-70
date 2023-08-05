@@ -1,0 +1,28 @@
+.DS_Store
+.gitattributes
+.gitignore
+LICENSE
+README.md
+pyplatform_dev.yml
+requirements.txt
+setup.py
+pyplatform/__init__.py
+pyplatform/compute.py
+pyplatform/database.py
+pyplatform/datalake.py
+pyplatform/udf.py
+pyplatform.egg-info/PKG-INFO
+pyplatform.egg-info/SOURCES.txt
+pyplatform.egg-info/dependency_links.txt
+pyplatform.egg-info/not-zip-safe
+pyplatform.egg-info/requires.txt
+pyplatform.egg-info/top_level.txt
+samples/.DS_Store
+samples/Getting Started.ipynb
+samples/pyenv setup.ipynb
+samples/pyplatform_image/event_driven.png
+samples/pyplatform_image/http_sources.png
+samples/pyplatform_image/logic_apps_integration.png
+samples/pyplatform_image/on-prem_sources.png
+samples/pyplatform_image/pyplatform.png
+samples/pyplatform_image/streaming.png

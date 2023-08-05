@@ -1,0 +1,13 @@
+farasa/__base.py,sha256=G-_NrdJFupWn6pHUEfTjy9XHpjkBaRuTFTuOCLPEOEM,7588
+farasa/__init__.py,sha256=R5Fpk82CesEMYouU41KA4NH9IVKFnqsdwFfkEVh6C6o,204
+farasa/__obselete.py,sha256=Pls6LAOJQqJw3IPWz5tOYpWdRkCrRrT6j5ZFpiQillk,3738
+farasa/diacratizer.py,sha256=aZEccQiJLN80x4Rbtv1I40bgGAcR6WfC4BI6xozXgHs,167
+farasa/ner.py,sha256=oAk3CUwJiS-6UinLFAOmk_G8uTajFcemJBF9ieAoRp0,169
+farasa/pos.py,sha256=bSK9XifdIuQ3sSscKNmgFxlqTCUJXb038ZQINgl8VZc,151
+farasa/segmenter.py,sha256=KHQDSk3mZDd-7EMM_2_fnjn3UdxOWWSAX5jTDQkmUH0,159
+farasa/stemmer.py,sha256=5o5wnNzxde58iapybhRHj-k11-LuFUKpzx48z7pnmow,151
+farasapy-0.0.4.dist-info/LICENSE,sha256=vuQnjoBqFhWJw9V1rDIE1NJUGFjiEzStW9RA0i9cSPE,1067
+farasapy-0.0.4.dist-info/METADATA,sha256=WNCvOfOQb_jXW3gxBEqKzCC16dPSjb_kyNciD3NKOcg,8683
+farasapy-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+farasapy-0.0.4.dist-info/top_level.txt,sha256=zIIy5BbeXD9Nu_gd8jmE67H0tzxYCT3aFliZ_K0n290,7
+farasapy-0.0.4.dist-info/RECORD,,

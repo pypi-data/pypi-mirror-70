@@ -1,0 +1,7 @@
+bosdyn/__init__.py,sha256=xk_szg1zSHRKizwQZxXIuULh7TjYXatq7mcFsQLPiUo,330
+bosdyn/geometry.py,sha256=gcCAbaXH1PhsdVEdkjeJeEBtmHJNglskyf5z3u2q-8s,2384
+bosdyn/util.py,sha256=wpknZys6rxLkL2mrjKkey4gXnEHHGw1d9xJabX0K3Y8,7257
+bosdyn_core-1.1.2.dist-info/METADATA,sha256=bayr3nNnejwaE8kgTZKTCH_OSK4iyhDahvAjy8WMiEQ,927
+bosdyn_core-1.1.2.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+bosdyn_core-1.1.2.dist-info/top_level.txt,sha256=an2OWgx1ej2jFjmBjPWNQ68ZglvUfKhmXWW-WhTtDmA,7
+bosdyn_core-1.1.2.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+README.md
+setup.py
+paress/__init__.py
+paress/paress.py
+paress/plataforma.py
+paress/reconex.py
+paress - copia/__init__.py
+paress - copia/compatibilidad.py
+paress - copia/configura.py
+paress - copia/paress.py
+paress - copia/plataforma.py
+paress - copia/reconex.py
+paress.egg-info/PKG-INFO
+paress.egg-info/SOURCES.txt
+paress.egg-info/dependency_links.txt
+paress.egg-info/requires.txt
+paress.egg-info/top_level.txt

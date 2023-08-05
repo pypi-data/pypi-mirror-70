@@ -1,0 +1,182 @@
+[
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "7a24bfa2-4d33-44fa-8dff-16fcfdc39ccb",
+        "code": "11",
+        "name": "t\u00e1pp\u00e9nz"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "c015002c-fe15-4796-b6fd-5778b55f934c",
+        "code": "12",
+        "name": "baleseti t\u00e1pp\u00e9nz"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "ba6de5f9-0eea-49fb-a4f5-1f91caa271d5",
+        "code": "21",
+        "name": "csecsem\u0151gondoz\u00e1si d\u00edj"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "bcb20554-0f0b-466c-b811-9ddc4061dc22",
+        "code": "22",
+        "name": "gyermekgondoz\u00e1si d\u00edj"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "14d692bb-d4cc-4f76-bb9a-2230ff4a8374",
+        "code": "23",
+        "name": "gyermekgondol\u00e1st seg\u00edt\u0151 ell\u00e1t\u00e1s,gyermekgondoz\u00e1si seg\u00e9ly"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "d5cee513-37cc-42c6-8c1e-cabd77d837bb",
+        "code": "41",
+        "name": "(el\u0151zetes) letartoztat\u00e1s"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "87f5aff5-cb5f-421e-89fc-e5f15826b872",
+        "code": "42",
+        "name": "szabads\u00e1gveszt\u00e9s"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "c3c8588f-b300-4199-aaf0-9cf30cdd5d73",
+        "code": "73",
+        "name": "igazolatlan t\u00e1voll\u00e9t"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "33c3d280-63dd-45dd-9cf0-27196b18a5f2",
+        "code": "30",
+        "name": "katonai szolg\u00e1latot teljes\u00edt\u0151 \u00f6nk\u00e9ntes tartal\u00e9kos katona"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 10,
+    "fields": {
+        "prime_number": "69cb79b9-d024-4b56-9915-08a10b1db188",
+        "code": "84",
+        "name": "munkav\u00e9gz\u00e9si (szolg.telj) k\u00f6telezetts\u00e9g al\u00f3li mentes\u00edt\u00e9s, (munkab\u00e9r, illetm\u00e9ny,t\u00e1pp\u00e9nz ill.t\u00e1voll\u00e9ti"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 11,
+    "fields": {
+        "prime_number": "55df92fd-e976-4bb4-a3a9-a7c7f4032e28",
+        "code": "51",
+        "name": "\u00fcgyv\u00e9d tev\u00e9kenys\u00e9ge, szabadalmi \u00fcgyviv\u0151,k\u00f6zjegyz\u0151 kamara tags\u00e1ga,szoci\u00e1lis sz\u00f6v.tags\u00e1ga sz\u00fcnetel"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 12,
+    "fields": {
+        "prime_number": "53c791b9-bc76-435f-a8b9-05e00751e6d6",
+        "code": "52",
+        "name": "\u00e1llat- eg\u00e9szs\u00e9g\u00fcgyi szolg\u00e1ltat\u00f3 tev\u00e9kenys\u00e9get v\u00e9gz\u0151 \u00e1llatorvos tev\u00e9kenys\u00e9ge sz\u00fcnetel"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 13,
+    "fields": {
+        "prime_number": "0132febb-25e4-4281-8e59-4ad0c4d2d179",
+        "code": "53",
+        "name": "tanul\u00f3szerz\u0151d\u00e9s sz\u00fcneteltet\u00e9se"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 14,
+    "fields": {
+        "prime_number": "b6de6d15-eec0-438a-81e3-51a119da73f7",
+        "code": "71",
+        "name": "fizet\u00e9sn\u00e9lk\u00fcli szabads\u00e1g"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 15,
+    "fields": {
+        "prime_number": "4c76d33f-28d4-4ba0-a3b5-e7a1f0226f54",
+        "code": "24",
+        "name": "gyermeknevel\u00e9si t\u00e1mogat\u00e1s"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 16,
+    "fields": {
+        "prime_number": "de792290-41cd-41e1-9d78-28b96f3cbc98",
+        "code": "25",
+        "name": "\u00e1pol\u00e1si d\u00edj"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 17,
+    "fields": {
+        "prime_number": "9ea1c35e-6d6a-41ac-99c1-6569b684cc21",
+        "code": "72",
+        "name": "igazolt t\u00e1voll\u00e9t"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 18,
+    "fields": {
+        "prime_number": "bec6f160-4289-4316-b96b-21e08c80f7aa",
+        "code": "75",
+        "name": "jogszer\u0171 sztr\u00e1jk id\u0151tartama"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 19,
+    "fields": {
+        "prime_number": "52cf4ed5-d631-4e8c-a91e-370a3baacb60",
+        "code": "76",
+        "name": "gyermekek otthongondoz\u00e1si d\u00edja"
+    }
+},
+{
+    "model": "corgy_mdm.insurancesuspensionmodel",
+    "pk": 20,
+    "fields": {
+        "prime_number": "8313cb94-583a-4ad3-9775-f5ba0054b6cc",
+        "code": "77",
+        "name": "\u00f6r\u00f6kbefogad\u00f3i d\u00edj"
+    }
+}
+]

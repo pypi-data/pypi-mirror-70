@@ -1,0 +1,14 @@
+bytecode==0.10.0
+astor
+logzero==1.5.0
+
+[dev]
+twine
+wheel
+sphinx
+autopep8
+pep8
+sphinx-rtd-theme
+
+[test]
+coverage

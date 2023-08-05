@@ -1,0 +1,6 @@
+nose
+nose-printlog
+pyyaml
+PyMySQL
+Flask
+flask-restful

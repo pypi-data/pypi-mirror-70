@@ -1,0 +1,3 @@
+[console_scripts]
+kerbrute = kerbrute:main
+

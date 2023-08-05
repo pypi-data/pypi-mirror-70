@@ -1,0 +1,10 @@
+README.md
+setup.py
+kerbrute/__init__.py
+kerbrute/main.py
+kerbrute.egg-info/PKG-INFO
+kerbrute.egg-info/SOURCES.txt
+kerbrute.egg-info/dependency_links.txt
+kerbrute.egg-info/entry_points.txt
+kerbrute.egg-info/requires.txt
+kerbrute.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+setup.py
+mirs_distribution_package/Binomialdistribution.py
+mirs_distribution_package/Gaussiandistribution.py
+mirs_distribution_package/Generaldistribution.py
+mirs_distribution_package/__init__.py
+mirs_distribution_package.egg-info/PKG-INFO
+mirs_distribution_package.egg-info/SOURCES.txt
+mirs_distribution_package.egg-info/dependency_links.txt
+mirs_distribution_package.egg-info/not-zip-safe
+mirs_distribution_package.egg-info/top_level.txt

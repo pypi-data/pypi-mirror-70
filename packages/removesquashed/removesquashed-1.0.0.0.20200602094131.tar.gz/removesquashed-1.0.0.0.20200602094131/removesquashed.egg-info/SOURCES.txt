@@ -1,0 +1,16 @@
+.flake8
+.pre-commit-config.yaml
+AUTHORS
+ChangeLog
+README.md
+removesquashed.py
+requirements.txt
+setup.cfg
+setup.py
+removesquashed.egg-info/PKG-INFO
+removesquashed.egg-info/SOURCES.txt
+removesquashed.egg-info/dependency_links.txt
+removesquashed.egg-info/not-zip-safe
+removesquashed.egg-info/pbr.json
+removesquashed.egg-info/requires.txt
+removesquashed.egg-info/top_level.txt

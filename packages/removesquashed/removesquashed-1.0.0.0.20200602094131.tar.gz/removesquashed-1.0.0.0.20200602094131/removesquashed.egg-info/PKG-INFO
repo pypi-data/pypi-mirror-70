@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: removesquashed
+Version: 1.0.0.0.20200602094131
+Summary: Utility for removing squashed branches on GitHub PR
+Home-page: https://github.com/iranzo/removesquashed
+Author: Pablo Iranzo Gómez
+Author-email: Pablo.Iranzo@gmail.com
+License: UNKNOWN
+Description: # removesquashed
+        
+        Code to create package from https://stackoverflow.com/questions/27260574/checking-if-a-git-branch-has-been-merged-into-master-when-squashed as pypi package.
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities

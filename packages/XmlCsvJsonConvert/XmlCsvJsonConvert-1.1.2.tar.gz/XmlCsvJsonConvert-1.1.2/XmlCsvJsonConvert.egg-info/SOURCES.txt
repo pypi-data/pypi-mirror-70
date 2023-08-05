@@ -1,0 +1,8 @@
+README.md
+setup.py
+XmlCsvJsonConvert.egg-info/PKG-INFO
+XmlCsvJsonConvert.egg-info/SOURCES.txt
+XmlCsvJsonConvert.egg-info/dependency_links.txt
+XmlCsvJsonConvert.egg-info/entry_points.txt
+XmlCsvJsonConvert.egg-info/requires.txt
+XmlCsvJsonConvert.egg-info/top_level.txt

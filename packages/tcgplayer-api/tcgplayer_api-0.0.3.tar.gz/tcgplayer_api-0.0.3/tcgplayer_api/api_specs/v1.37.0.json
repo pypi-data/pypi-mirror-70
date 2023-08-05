@@ -1,0 +1,471 @@
+[
+	{
+		"name": "List All Categories",
+		"uri": "/catalog/categories",
+		"http_method": "GET",
+		"description": "This endpoint returns a paged list of all categories supported by TCGplayer."
+	},
+	{
+		"name": "Get Category Details",
+		"uri": "/catalog/categories/{category_ids}",
+		"http_method": "GET",
+		"description": "This endpoint returns an array of categories whose Ids were specified in the categoryIds parameter.\nCategories that could be found are returned in the results array in the response.\nCategories that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "Get Category Search Manifest",
+		"uri": "/catalog/categories/{category_id}/search/manifest",
+		"http_method": "GET",
+		"description": "This endpoint returns a search manifest for the specified category.\nThe search manifest describes all of the sorting options and filters that are available for this category.\nIts contents should be used to build requests to the POST /catalog/categories/{categoryId}/search endpoint."
+	},
+	{
+		"name": "Search Category Products",
+		"uri": "/catalog/categories/{category_id}/search",
+		"http_method": "POST",
+		"description": "This endpoint returns an array of product Ids that match the provided search critera.\nUse the search manifest from the GET /catalog/categories/{categoryId}/search/manifest endpoint to build requests to this endpoint.\nIf an invalid filter name is specified in the request, it will be ignored.\nUse the GET /catalog/products/{productIds} endpoint to get the details about the returned product Ids."
+	},
+	{
+		"name": "List All Category Groups",
+		"uri": "/catalog/categories/{category_id}/groups",
+		"http_method": "GET",
+		"description": "This endpoint returns a paged list of all the groups associated with the specified category."
+	},
+	{
+		"name": "List All Category Rarities",
+		"uri": "/catalog/categories/{category_id}/rarities",
+		"http_method": "GET",
+		"description": "This endpoint returns all available rarities associated with the specified category."
+	},
+	{
+		"name": "List All Category Printings",
+		"uri": "/catalog/categories/{category_id}/printings",
+		"http_method": "GET",
+		"description": "This endpoint returns all available printings associated with the specified category."
+	},
+	{
+		"name": "List All Category Conditions",
+		"uri": "/catalog/categories/{category_id}/conditions",
+		"http_method": "GET",
+		"description": "This endpoint returns all available conditions associated with the specified category."
+	},
+	{
+		"name": "List All Category Languages",
+		"uri": "/catalog/categories/{category_id}/languages",
+		"http_method": "GET",
+		"description": "This endpoint returns all available languages associated with the specified category."
+	},
+	{
+		"name": "List All Category Media",
+		"uri": "/catalog/categories/{category_id}/media",
+		"http_method": "GET",
+		"description": "This endpoint returns all available media (e.g. images) associated with the specified category."
+	},
+	{
+		"name": "List All Groups Details",
+		"uri": "/catalog/groups",
+		"http_method": "GET",
+		"description": "This endpoint returns all groups that match the specified criteria."
+	},
+	{
+		"name": "Get Group Details",
+		"uri": "/catalog/groups/{group_ids}",
+		"http_method": "GET",
+		"description": "This endpoint returns an array of groups whose Ids were specified in the groupIds parameter.\nGroups that could be found are returned in the results array in the response.\nGroups that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "List All Group Media",
+		"uri": "/catalog/groups/{group_id}/media",
+		"http_method": "GET",
+		"description": "This endpoint returns all available media (e.g. images) associated with the specified group."
+	},
+	{
+		"name": "List All Products",
+		"uri": "/catalog/products",
+		"http_method": "GET",
+		"description": "This endpoint returns all products that match the specified criteria."
+	},
+	{
+		"name": "Get Product Details",
+		"uri": "/catalog/products/{product_ids}",
+		"http_method": "GET",
+		"description": "This endpoint returns an array of products whose Ids were specified in the productIds parameter.\nProducts that could be found are returned in the results array in the response.\nProducts that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "Get Product Details By GTIN",
+		"uri": "/catalog/products/gtin/{gtin}",
+		"http_method": "GET",
+		"description": "This endpoint returns a Product's details using a code from the GTIN family of product codes. NOTE: Not all products will have a GTIN."
+	},
+	{
+		"name": "List Product SKUs",
+		"uri": "/catalog/products/{product_id}/skus",
+		"http_method": "GET",
+		"description": "This endpoint returns all of the available SKUs for the specified product."
+	},
+	{
+		"name": "List Related Products",
+		"uri": "/catalog/products/{product_id}/productsalsopurchased",
+		"http_method": "GET",
+		"description": "Returns other products that are commonly found in the same orders as the specified anchor product."
+	},
+	{
+		"name": "List All Product Media Types",
+		"uri": "/catalog/products/{product_id}/media",
+		"http_method": "GET",
+		"description": "Returns all available media (e.g. images) associated with the specified product."
+	},
+	{
+		"name": "Get SKU details",
+		"uri": "/catalog/skus/{sku_ids}",
+		"http_method": "GET",
+		"description": "This endpoint returns an array of SKUs whose Ids were specified in the skuIds parameter.\nSKUs that could be found are returned in the results array in the response.\nSKUs that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "List Conditions",
+		"uri": "/catalog/conditions",
+		"http_method": "GET",
+		"description": "This endpoint returns an array contain all of the normalized conditions supported by TCGplayer, e.g. Near Mint, Lightly Played."
+	},
+	{
+		"name": "Get ProductList By Id",
+		"uri": "/inventory/productlists/{product_list_id}",
+		"http_method": "GET",
+		"description": "Returns the ProductList specified by using the ProductListId."
+	},
+	{
+		"name": "Get ProductList By Key",
+		"uri": "/inventory/productlists/{product_list_key}",
+		"http_method": "GET",
+		"description": "Returns the ProductList specified by using the ProductListKey."
+	},
+	{
+		"name": "List All ProductLists",
+		"uri": "/inventory/productLists",
+		"http_method": "GET",
+		"description": "This lists all the accessible ProductLists to the user identified in the bearer token making the API call."
+	},
+	{
+		"name": "Create ProductList",
+		"uri": "/inventory/productLists",
+		"http_method": "POST",
+		"description": "Create a new list of products similar to how the Quicklist application creates a new list. From there the product list can be used to list new products through the Seller Portal interface on a Pro account."
+	},
+	{
+		"name": "Get Market Price by SKU",
+		"uri": "/pricing/marketprices/{product_condition_id}",
+		"http_method": "GET",
+		"description": "Gets the current Market Price for the specified SKU."
+	},
+	{
+		"name": "List Product Prices by Group",
+		"uri": "/pricing/group/{group_id}",
+		"http_method": "GET",
+		"description": "Returns all product prices associated with the specified Group."
+	},
+	{
+		"name": "List Product Market Prices",
+		"uri": "/pricing/product/{product_ids}",
+		"http_method": "GET",
+		"description": "Returns all product market prices for the Ids specified.\nMarket prices that could be found are returned in the results array in the response.\nMarket prices that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "List SKU Market Prices",
+		"uri": "/pricing/sku/{sku_ids}",
+		"http_method": "GET",
+		"description": "Returns all SKU market prices for the Ids specified.\nMarket prices that could be found are returned in the results array in the response.\nMarket prices that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "List Product Buylist Prices",
+		"uri": "/pricing/buy/product/{product_ids}",
+		"http_method": "GET",
+		"description": "Returns all product buylist prices for the Ids specified.\nBuylist prices that could be found are returned in the results array in the response.\nBuylist prices that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "List SKU Buylist Prices",
+		"uri": "/pricing/buy/sku/{sku_ids}",
+		"http_method": "GET",
+		"description": "Returns all SKU buylist prices for the Ids specified.\nBuylist prices that could be found are returned in the results array in the response.\nBuylist prices that could not be found are indicated in the errors array."
+	},
+	{
+		"name": "Batch Update Store Buylist Prices",
+		"uri": "/stores/{store_key}/buylist/skus/batch",
+		"http_method": "POST",
+		"description": "Perform multiple buylist updates asynchronously in a batch.\nThe response will contain a single GUID to identify the batch.\nAll buylist updates are applied to the buylist of the seller indicated by the bearer token used to make this request.\nWhen the batch has been processed, a message will be sent to your application's web hook containing the GUID from this response."
+	},
+	{
+		"name": "Create SKU Buylist",
+		"uri": "/stores/{store_key}/buylist/skus/{sku_id}",
+		"http_method": "PUT",
+		"description": "Creates a new Buylist price for a SKU that doesn't have an existing Buylist price.\nBecause all Buylists take from actual money that has been set aside on TCGplayer, use this endpoint with extreme caution!"
+	},
+	{
+		"name": "Update SKU Buylist Price",
+		"uri": "/stores/{store_key}/buylist/skus/{sku_id}/price",
+		"http_method": "PUT",
+		"description": "Updates a Buylist pricing that has already been set in the system,\neither through 'Create SKU Buylist' or through the TCGplayer interface.\nAccepts price in the body of a request."
+	},
+	{
+		"name": "Update SKU Buylist Quantity",
+		"uri": "/stores/{store_key}/buylist/skus/{sku_id}/quantity",
+		"http_method": "PUT",
+		"description": "Updates a Buylist quantity that has already been set in the system,\neither through 'Create SKU Buylist' or through the TCGplayer interface."
+	},
+	{
+		"name": "Get Buylist Categories",
+		"uri": "/stores/{store_key}/buylist/categories",
+		"http_method": "GET",
+		"description": ""
+	},
+	{
+		"name": "Get Buylist Groups",
+		"uri": "/stores/{store_key}/buylist/groups",
+		"http_method": "GET",
+		"description": ""
+	},
+	{
+		"name": "Get Store Buylist Settings",
+		"uri": "/stores/{store_key}/buylist/settings",
+		"http_method": "GET",
+		"description": ""
+	},
+	{
+		"name": "Get a Stores Buylist Products for Kiosk use",
+		"uri": "/stores/{store_key}/buylist/products",
+		"http_method": "GET",
+		"description": ""
+	},
+	{
+		"name": "Get the Product Conditions for a Product on a Stores Buylist",
+		"uri": "/stores/{store_key}/buylist/{product_id}",
+		"http_method": "GET",
+		"description": ""
+	},
+	{
+		"name": "Search Stores",
+		"uri": "/stores",
+		"http_method": "GET",
+		"description": "Returns a collection of storeKey values based on the search parameters."
+	},
+	{
+		"name": "Get Free Shipping Option",
+		"uri": "/stores/{store_key}/freeshipping/settings",
+		"http_method": "GET",
+		"description": "Gets the current Store's Free Shipping option (if exists) whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "Get Store Address",
+		"uri": "/stores/{store_key}/address",
+		"http_method": "GET",
+		"description": "Return address information about the Store specified by the storeKey."
+	},
+	{
+		"name": "Get Store Feedback",
+		"uri": "/stores/{store_key}/feedback",
+		"http_method": "GET",
+		"description": "Return feedback information about the Store specified by the storeKey."
+	},
+	{
+		"name": "Set Store Status",
+		"uri": "/stores/{store_key}/status/{status}",
+		"http_method": "PUT",
+		"description": "If a store's status is either Live or Hold - User Request then this action may be called to flip the store between the two.\nWhen the store is Live, it's inventory is visible in the marketplace.\nWhen the store is not Live, it's inventory is hidden from the marketplace.\nStores may voluntarily hide their inventory by switching their status to Hold - User Request.\nThere are other statuses that TCGplayer can put the store in that wil cause it's inventory to be hidden from the marketplace.\nStores cannot put themselves in or take themselves out of these statuses.\nOnly a TCGplayer admin or customer service rep can interact with stores with these statuses."
+	},
+	{
+		"name": "Get Customer Summary",
+		"uri": "/stores/{store_key}/customers/{token}",
+		"http_method": "GET",
+		"description": "Returns the total number of orders and total product dollar amount for all orders a customer has place with the seller.\nThe token represents the unique seller and customer combination."
+	},
+	{
+		"name": "Search Store Customers",
+		"uri": "/stores/{store_key}/customers",
+		"http_method": "GET",
+		"description": "Search Store Customers."
+	},
+	{
+		"name": "Get Customer Addresses",
+		"uri": "/stores/{store_key}/customers/{token}/addresses",
+		"http_method": "GET",
+		"description": "Returns the shipping addresses associated with the orders a customer has placed with the seller.\nThe token represents the unique seller and customer combination."
+	},
+	{
+		"name": "Get Customer Orders",
+		"uri": "/stores/{store_key}/customers/{token}/orders",
+		"http_method": "GET",
+		"description": "Returns a list of orders containing the total product quantity and total product dollar amount for each order a customer has placed with the seller.\nThe token represents the unique seller and customer combination."
+	},
+	{
+		"name": "Get Store Info",
+		"uri": "stores/{store_keys}",
+		"http_method": "GET",
+		"description": "Return general information about the stores specified by the store keys.\n`store_keys` can also be self to get information about the current Store associated with the current bearer token"
+	},
+	{
+		"name": "Get Product Inventory Quantities",
+		"uri": "/stores/{store_key}/inventory/products/{product_id}/quantity",
+		"http_method": "GET",
+		"description": "Get Product Inventory Quantities."
+	},
+	{
+		"name": "List Product Summary",
+		"uri": "/stores/{store_key}/inventory/products",
+		"http_method": "GET",
+		"description": "List Product Summary."
+	},
+	{
+		"name": "List Store Product SKUs",
+		"uri": "/stores/{store_key}/inventory/products/{product_id}/skus",
+		"http_method": "GET",
+		"description": "Return all of the SKUs the store currently has listed for a specific product."
+	},
+	{
+		"name": "List Store Related Products",
+		"uri": "/stores/{store_key}/inventory/products/{product_id}/relatedproducts",
+		"http_method": "GET",
+		"description": "Related Products are other Products that are often purchased along with the specified Product."
+	},
+	{
+		"name": "List Shipping Options",
+		"uri": "/stores/{store_key}/inventory/products/{product_id}/shippingoptions",
+		"http_method": "GET",
+		"description": "Return a list of all of the store's available shipping options for a specific product."
+	},
+	{
+		"name": "Get SKU Quantity",
+		"uri": "/stores/{store_key}/inventory/skus/{sku_id}/quantity",
+		"http_method": "GET",
+		"description": "Get SKU Quantity."
+	},
+	{
+		"name": "Increment SKU Inventory Quantity",
+		"uri": "/stores/{store_key}/inventory/skus/{sku_id}/quantity",
+		"http_method": "POST",
+		"description": "Increments the current store's inventory of this SKU from the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "Update SKU inventory",
+		"uri": "/stores/{store_key}/inventory/skus/{sku_id}",
+		"http_method": "PUT",
+		"description": "Adds or updates a SKU to the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "Batch Update Store Sku Prices",
+		"uri": "/stores/{store_key}/inventory/skus/batch",
+		"http_method": "POST",
+		"description": "Perform multiple price updates asynchronously in a batch.\nThe response will contain a single GUID to identify the batch.\nAll price updates are applied to the inventory of the seller indicated by the bearer token used to make this request.\nWhen the batch has been processed, a message will be sent to your application's web hook containing the GUID from this response."
+	},
+	{
+		"name": "Update SKU Inventory Price",
+		"uri": "/stores/{store_key}/inventory/skus/{sku_id}/price",
+		"http_method": "PUT",
+		"description": "Updates the current store's pricing of this SKU from the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "List SKU List Price",
+		"uri": "/stores/{store_key}/inventory/skuprices",
+		"http_method": "GET",
+		"description": "This listing comes from the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "Get SKU List Price",
+		"uri": "/stores/{store_key}/inventory/skuprices/{sku_list_price_id}",
+		"http_method": "GET",
+		"description": "Get SKU List Price."
+	},
+	{
+		"name": "List All Groups",
+		"uri": "/stores/{store_key}/inventory/groups",
+		"http_method": "GET",
+		"description": "This listing comes from the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "List All Store Categories",
+		"uri": "/stores/{store_key}/inventory/categories",
+		"http_method": "GET",
+		"description": "List all categories for a specific store."
+	},
+	{
+		"name": "List Product Summary By Category",
+		"uri": "/stores/{store_key}/inventory/categories/{category_id}/search",
+		"http_method": "POST",
+		"description": "List all products based on criteria."
+	},
+	{
+		"name": "List Store Channels",
+		"uri": "/stores/{store_key}/inventory/channels",
+		"http_method": "GET",
+		"description": "List All Channels for a Store."
+	},
+	{
+		"name": "List Top Sold Products",
+		"uri": "/stores/{store_key}/inventory/topsales",
+		"http_method": "GET",
+		"description": "This listing comes from the current Store's inventory whose Seller is associated with the user's bearer token making this API call."
+	},
+	{
+		"name": "Search Top Sold Products",
+		"uri": "/stores/{store_key}/inventory/topsalessearch",
+		"http_method": "POST",
+		"description": "This listing comes from the current Store's inventory whose Seller is associated with the user's bearer token making this API call.\nSimilar to the other Top Sales Search except that you can specify search criteria in the sellerTssc parameter."
+	},
+	{
+		"name": "List Catalog Objects",
+		"uri": "/stores/{store_key}/inventory/search",
+		"http_method": "GET",
+		"description": "SearchResults returned can include Product, Groups, and Categories."
+	},
+	{
+		"name": "Search Custom Listings",
+		"uri": "/stores/{store_key}/inventory/customListings",
+		"http_method": "GET",
+		"description": "Retrieves the custom listing by the criteria passed in the querystring."
+	},
+	{
+		"name": "Get Order Manifest",
+		"uri": "/stores/{store_key}/orders/manifest",
+		"http_method": "GET",
+		"description": "Get Order Manifest."
+	},
+	{
+		"name": "Get Order Details",
+		"uri": "/stores/{store_key}/orders/{order_numbers}",
+		"http_method": "GET",
+		"description": "Get Order Details."
+	},
+	{
+		"name": "Get Order Feedback",
+		"uri": "/stores/{store_key}/orders/{order_number}/feedback",
+		"http_method": "GET",
+		"description": "Get Order Feedback."
+	},
+	{
+		"name": "Search Orders",
+		"uri": "/stores/{store_key}/orders",
+		"http_method": "GET",
+		"description": "Search Orders."
+	},
+	{
+		"name": "Get Order Items",
+		"uri": "/stores/{store_key}/orders/{order_number}/items",
+		"http_method": "GET",
+		"description": "Get Order Items."
+	},
+	{
+		"name": "Get Order Tracking Numbers",
+		"uri": "/stores/{store_key}/orders/{order_number}/tracking",
+		"http_method": "GET",
+		"description": "Get Order Tracking Numbers."
+	},
+	{
+		"name": "Add Order Tracking Number",
+		"uri": "/stores/{store_key}/orders/{order_number}/tracking",
+		"http_method": "POST",
+		"description": "Add Order Tracking Number."
+	},
+	{
+		"name": "Refund Order",
+		"uri": "/stores/{store_key}/orders/{order_number}/refund",
+		"http_method": "POST",
+		"description": "Issue a refund for an order. New in v1.36.0."
+	}
+
+]

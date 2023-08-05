@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: openglass-instructions
+Version: 0.2.5
+Summary: Information about OpenGlass VM bytecode opcodes
+Home-page: https://github.com/openglass-project/
+Author: Sam Sloniker
+Author-email: scoopgracie@gmail.com
+License: MIT
+Description: #openglass-instructions
+        Currently undocumented; used internally by OpenGlass
+        
+Keywords: openglass
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

@@ -1,0 +1,14 @@
+ShapKa/__init__.py,sha256=qtkia1g03PAveiX0a4AievIzx3mLh83MeXIp9xM6K3I,168
+ShapKa/cooperativegame.py,sha256=2ypYPYOcxe49En9QvRDJaTuonfKJMwiFvF0H8a8ol0c,5895
+ShapKa/kanomodel.py,sha256=g-GwnRL32rh61Zd5erfnSfvIuC5BMjZjUmu6yhgmp48,11813
+ShapKa/payoff.py,sha256=pCzr6QG8xJqz6Q1leVeg0C1d99MJLgxgTuVPR1qLUy0,5758
+tests/__init__.py,sha256=qUXDmcWNpL_VHWBD-1oLHxO-C_nFN8MvyuB0Zne4cR4,61
+tests/test_ShapKa.py,sha256=7rpEX89EL92hVDCFSey5zw3lxf1ZyBHJVpv-vJkG7dY,417
+tests/.ipynb_checkpoints/__init__-checkpoint.py,sha256=qUXDmcWNpL_VHWBD-1oLHxO-C_nFN8MvyuB0Zne4cR4,61
+tests/.ipynb_checkpoints/test_ShapKa-checkpoint.py,sha256=7rpEX89EL92hVDCFSey5zw3lxf1ZyBHJVpv-vJkG7dY,417
+ShapKa-1.1.1.dist-info/AUTHORS.rst,sha256=4kP9elPv84qHZtU999wmHJ4o-HPak571JwH2TdwkMrQ,160
+ShapKa-1.1.1.dist-info/LICENSE,sha256=Ke_osi5ucpiB47V4GPphQww5lzk8jQs3prBouil1kJw,1071
+ShapKa-1.1.1.dist-info/METADATA,sha256=VHS8iGeSkSqV-wMkcxzWO3iBRoy1rP5cFbo9MwOZgCo,3997
+ShapKa-1.1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+ShapKa-1.1.1.dist-info/top_level.txt,sha256=Tkk0vfGmWKSHVQ0tKbFpA2aOZona5Phd_Jg60NJO7jA,13
+ShapKa-1.1.1.dist-info/RECORD,,

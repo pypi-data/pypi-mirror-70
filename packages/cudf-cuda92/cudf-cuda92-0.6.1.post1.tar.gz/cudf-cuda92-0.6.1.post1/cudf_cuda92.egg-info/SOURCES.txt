@@ -1,0 +1,5 @@
+setup.py
+cudf_cuda92.egg-info/PKG-INFO
+cudf_cuda92.egg-info/SOURCES.txt
+cudf_cuda92.egg-info/dependency_links.txt
+cudf_cuda92.egg-info/top_level.txt

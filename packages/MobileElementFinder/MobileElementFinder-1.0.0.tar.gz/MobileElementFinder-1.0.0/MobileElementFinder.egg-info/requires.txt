@@ -1,0 +1,15 @@
+Click
+MGEdb
+PyYAML
+attrs
+bcbio-gff
+biopython
+cattrs
+mypy
+tabulate
+
+[test]
+ipdb
+pytest
+pytest-runner
+pytest-cov

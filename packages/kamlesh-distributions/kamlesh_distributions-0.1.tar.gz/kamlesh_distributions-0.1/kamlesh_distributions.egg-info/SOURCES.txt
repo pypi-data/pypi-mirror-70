@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+kamlesh_distributions/Binomialdistribution.py
+kamlesh_distributions/Gaussiandistribution.py
+kamlesh_distributions/Generaldistribution.py
+kamlesh_distributions/__init__.py
+kamlesh_distributions.egg-info/PKG-INFO
+kamlesh_distributions.egg-info/SOURCES.txt
+kamlesh_distributions.egg-info/dependency_links.txt
+kamlesh_distributions.egg-info/not-zip-safe
+kamlesh_distributions.egg-info/top_level.txt

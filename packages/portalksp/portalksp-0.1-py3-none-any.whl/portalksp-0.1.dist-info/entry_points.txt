@@ -1,0 +1,3 @@
+[console_scripts]
+portalksp = portalksp.main:welcome
+

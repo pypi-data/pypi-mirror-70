@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ncvx
+Version: 0.1.9
+Summary: A CVXPY extension for problems with convex objective and decision variables from a nonconvex set.
+Home-page: http://github.com/cvxgrp/ncvx/
+Author: Steven Diamond, Reza Takapoui, Stephen Boyd
+Author-email: diamond@cs.stanford.edu, takapoui@stanford.edu, boyd@stanford.edu
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: cvxpy (>=1.0.0)
+Requires-Dist: lap
+Requires-Dist: scsprox
+
+UNKNOWN
+
+

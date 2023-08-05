@@ -1,0 +1,5 @@
+setup.py
+rapids_xgboost.egg-info/PKG-INFO
+rapids_xgboost.egg-info/SOURCES.txt
+rapids_xgboost.egg-info/dependency_links.txt
+rapids_xgboost.egg-info/top_level.txt

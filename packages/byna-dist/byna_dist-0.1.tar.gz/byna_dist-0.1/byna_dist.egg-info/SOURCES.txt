@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+byna_dist/Binomialdistribution.py
+byna_dist/Gaussiandistribution.py
+byna_dist/Generaldistribution.py
+byna_dist/__init__.py
+byna_dist.egg-info/PKG-INFO
+byna_dist.egg-info/SOURCES.txt
+byna_dist.egg-info/dependency_links.txt
+byna_dist.egg-info/not-zip-safe
+byna_dist.egg-info/top_level.txt

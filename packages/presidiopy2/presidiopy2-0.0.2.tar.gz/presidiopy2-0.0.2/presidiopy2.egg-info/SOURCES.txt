@@ -1,0 +1,8 @@
+README.md
+setup.py
+presidiopy/__init__.py
+presidiopy2.egg-info/PKG-INFO
+presidiopy2.egg-info/SOURCES.txt
+presidiopy2.egg-info/dependency_links.txt
+presidiopy2.egg-info/requires.txt
+presidiopy2.egg-info/top_level.txt

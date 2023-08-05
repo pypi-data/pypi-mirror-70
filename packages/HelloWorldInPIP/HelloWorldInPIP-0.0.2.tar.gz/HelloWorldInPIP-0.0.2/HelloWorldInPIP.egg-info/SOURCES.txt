@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+HelloWorldInPIP/HelloWorldInPIP.py
+HelloWorldInPIP/__init__.py
+HelloWorldInPIP.egg-info/PKG-INFO
+HelloWorldInPIP.egg-info/SOURCES.txt
+HelloWorldInPIP.egg-info/dependency_links.txt
+HelloWorldInPIP.egg-info/top_level.txt

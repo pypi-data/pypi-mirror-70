@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: HelloWorldInPIP
+Version: 0.0.2
+Summary: A simple example of Python code Package
+Home-page: https://gitee.com/leviathan-litan/HelloWorld-In-PIP
+Author: AdamHuan
+Author-email: leviathan_litan@163.com
+License: UNKNOWN
+Description: # Hello world  @PIP
+        
+        这是一个【样例】项目，用于演示如何将本地的Python项目打包，并发布到PyPI上。
+        
+        以便于其他的人可以通过如下的方式获取你的代码：
+        ```
+        pip install xxx
+        ```
+        ---
+        时间线：
+        1. 更新时间：2020年6月3日13:07:43
+        
+        ---
+        
+        
+Keywords: HelloWorld Package Python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown

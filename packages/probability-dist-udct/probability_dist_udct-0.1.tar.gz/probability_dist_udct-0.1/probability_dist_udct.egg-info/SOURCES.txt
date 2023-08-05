@@ -1,0 +1,10 @@
+setup.py
+probability_dist_udct/Binomialdistribution.py
+probability_dist_udct/Gaussiandistribution.py
+probability_dist_udct/Generaldistribution.py
+probability_dist_udct/__init__.py
+probability_dist_udct.egg-info/PKG-INFO
+probability_dist_udct.egg-info/SOURCES.txt
+probability_dist_udct.egg-info/dependency_links.txt
+probability_dist_udct.egg-info/not-zip-safe
+probability_dist_udct.egg-info/top_level.txt

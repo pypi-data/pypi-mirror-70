@@ -1,0 +1,5 @@
+boto3
+click
+pytest
+pytest-runner
+moto

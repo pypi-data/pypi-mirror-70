@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: demo-python-aws-click
+Version: 0.0.1.dev3
+Summary: Demo app for python aws click
+Home-page: https://github.com/tomarv2/demo-python-aws-click
+Author: Varun Tomar
+Author-email: varuntomar2019@gmail.com
+License: UNKNOWN
+Description: # Demo app
+        
+        Python demo app using Click and Mocking AWS for pytest
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

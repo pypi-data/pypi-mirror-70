@@ -1,0 +1,6 @@
+README.md
+setup.py
+instapvapi.egg-info/PKG-INFO
+instapvapi.egg-info/SOURCES.txt
+instapvapi.egg-info/dependency_links.txt
+instapvapi.egg-info/top_level.txt

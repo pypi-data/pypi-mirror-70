@@ -1,0 +1,3 @@
+[console_scripts]
+pdfparser = pdfparser.__main__:main
+

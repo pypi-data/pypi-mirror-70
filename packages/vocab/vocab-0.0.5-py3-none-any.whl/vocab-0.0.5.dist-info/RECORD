@@ -1,0 +1,11 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_unk_vocab.py,sha256=Jl-ryBE23DjE4laKfpX1sl6MTrQ-BQVhRbbHeMnFkjA,2881
+test/test_vocab.py,sha256=cxpYzs3w3mZKqewYl9Wgo7T2x2tTL_Qm2i9FdLUQAhg,4485
+vocab/__init__.py,sha256=e0bcFTBd_7z4nNRdsd8OFwPwjZ6JIcN_3bFoVTlBzdo,83
+vocab/unk_vocab.py,sha256=-dYb7tH6Xhxtj5IqAIPxyfXfuDy_AIdCyXp8dD371c8,161
+vocab/vocab.py,sha256=qiyF39cYK8DoP94VBoXC0WSNPxFtUWr4jCKn4a0jwIs,9419
+vocab-0.0.5.dist-info/LICENSE,sha256=2Fwa4pfOwbEf6Pq4_mFT0mXSc-Q99v5PbbcBzlzO8CU,1069
+vocab-0.0.5.dist-info/METADATA,sha256=ma_-sMZ5x9RcBiddVURs2wLTd9MFoC5rbvy1xl9Af3Q,1827
+vocab-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vocab-0.0.5.dist-info/top_level.txt,sha256=z0AvV3e-9rIgY4siMWRIEzt5sGTaC5nr_tp3Ooemzso,11
+vocab-0.0.5.dist-info/RECORD,,

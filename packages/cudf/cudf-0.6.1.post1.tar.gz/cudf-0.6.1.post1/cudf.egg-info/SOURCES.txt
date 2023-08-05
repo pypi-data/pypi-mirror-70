@@ -1,0 +1,5 @@
+setup.py
+cudf.egg-info/PKG-INFO
+cudf.egg-info/SOURCES.txt
+cudf.egg-info/dependency_links.txt
+cudf.egg-info/top_level.txt

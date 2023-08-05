@@ -1,0 +1,6 @@
+[console_scripts]
+ffp-analogy = finalfusion.scripts.analogy:main
+ffp-bucket-to-explicit = finalfusion.scripts.bucket_to_explicit:main
+ffp-convert = finalfusion.scripts.convert:main
+ffp-similar = finalfusion.scripts.similar:main
+

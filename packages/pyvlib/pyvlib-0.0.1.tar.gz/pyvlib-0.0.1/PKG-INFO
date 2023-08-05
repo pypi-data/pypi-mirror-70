@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyvlib
+Version: 0.0.1
+Summary: Python vlib
+Home-page: https://github.com/VVingerfly/pyvlib
+Author: Li Wei
+Author-email: wei587me@163.com
+License: UNKNOWN
+Description: 
+        # pyvilb
+        
+        Python library for computer graphics/vision.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: matplotlib
+Provides-Extra: pyrender
+Provides-Extra: open3d
+Provides-Extra: all

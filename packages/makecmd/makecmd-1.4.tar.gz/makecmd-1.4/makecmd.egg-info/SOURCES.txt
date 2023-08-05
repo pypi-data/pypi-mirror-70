@@ -1,0 +1,10 @@
+README.md
+setup.py
+makecmd/__init__.py
+makecmd/makecmd.py
+makecmd.egg-info/PKG-INFO
+makecmd.egg-info/SOURCES.txt
+makecmd.egg-info/dependency_links.txt
+makecmd.egg-info/entry_points.txt
+makecmd.egg-info/requires.txt
+makecmd.egg-info/top_level.txt

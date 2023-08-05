@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pycmdtools
+Version: 0.0.63
+Summary: pycmdtools is set of useful command line tools written in python
+Home-page: https://veltzer.github.io/pycmdtools
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pycmdtools
+Keywords: utils,command line,python,shell,utilities
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pylogconf
+Requires-Dist: pytconf
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: unidecode
+
+pycmdtools is set of useful command line tools written in python
+
+

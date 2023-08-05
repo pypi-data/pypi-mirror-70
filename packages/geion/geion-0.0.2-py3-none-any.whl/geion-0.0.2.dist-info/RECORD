@@ -1,0 +1,12 @@
+geion/__init__.py,sha256=SI-Lv1q7Amn5kqRekNB9CzPPfsw3jlOKsNG7hW0SFCk,39
+geion/genetic/__init__.py,sha256=YV8TG1oW4YTohSL8XonH-ARm46SoGBV-wjOrW-wsi8I,39
+geion/genetic/genome.py,sha256=N-b0lTj7dP-yF3wBiyfJuEFBhMnHW9BuVQgwOw4WAE8,3711
+geion/genetic/individual.py,sha256=5r9OFG3BXAgmN0u3OXyBB6rNcjl9_x3YzngonmD6mEY,3339
+geion/genetic/optimizer.py,sha256=YgHp9nnuGnl0mk3XsIGERDD7jOgtuZ8zeTcCELLlsRY,8641
+geion/multicore/__init__.py,sha256=vseGLcDEo1ao1qtRssU5pXg_n_coRz7imdXDXUti_nY,301
+geion/multicore/backend.py,sha256=K0tQZn7wMZ7fbQiBq3x9Sfn7BMWb1JuuVp3mKosDm_I,3000
+geion-0.0.2.dist-info/LICENSE,sha256=Ke3AkoXY-jcOviT3FtSrA5WsqxjPyL23uTyBdIp6zKo,1071
+geion-0.0.2.dist-info/METADATA,sha256=8QHk-kepwV4ozECfnEqhSfvxpqYJbdel6kdrGx5xnFs,562
+geion-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+geion-0.0.2.dist-info/top_level.txt,sha256=2WBiA8au0ygkj5wcNBUDG640Jn3VU0wS4l05dtm0Hic,6
+geion-0.0.2.dist-info/RECORD,,

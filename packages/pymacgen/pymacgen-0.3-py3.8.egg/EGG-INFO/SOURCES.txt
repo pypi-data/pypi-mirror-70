@@ -1,0 +1,10 @@
+README.rst
+setup.py
+pymacgen/__init__.py
+pymacgen/__main__.py
+pymacgen.egg-info/PKG-INFO
+pymacgen.egg-info/SOURCES.txt
+pymacgen.egg-info/dependency_links.txt
+pymacgen.egg-info/entry_points.txt
+pymacgen.egg-info/requires.txt
+pymacgen.egg-info/top_level.txt

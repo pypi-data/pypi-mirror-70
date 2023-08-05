@@ -1,0 +1,7 @@
+fasttext
+numpy
+ftfy
+langcodes>=2
+
+[train]
+scikit-learn

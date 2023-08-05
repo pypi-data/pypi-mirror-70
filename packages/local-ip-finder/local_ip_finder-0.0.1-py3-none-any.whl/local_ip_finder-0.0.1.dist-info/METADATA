@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: local-ip-finder
+Version: 0.0.1
+Summary: Local IP Finder
+Home-page: https://github.com/48723247842/LocalIPFinder
+Author: 7435171
+Author-email: 48723247842@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: netifaces (==0.10.4)
+Requires-Dist: wheel (==0.34.2)
+
+UNKNOWN
+
+

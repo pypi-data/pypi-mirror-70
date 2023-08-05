@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: search-this
+Version: 0.2
+Summary: Get search results from Google and DuckDuckGo
+Home-page: UNKNOWN
+Author: Artem Kotik
+Author-email: miaow2@ya.ru
+License: GNU General Public License v3.0
+Keywords: otus
+Platform: UNKNOWN
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
+UNKNOWN
+
+

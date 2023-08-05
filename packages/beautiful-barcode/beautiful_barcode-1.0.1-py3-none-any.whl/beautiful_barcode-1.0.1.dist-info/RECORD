@@ -1,0 +1,11 @@
+beautiful_barcode/__init__.py,sha256=NhuBhasd59NITjTJSAjxcCgk1PsY8kr9Ss4jDvoKigY,53
+beautiful_barcode/__main__.py,sha256=o5fvoGGrhLY7LD0x5esbYdzzVYZemi07OFFhjtwLK1o,800
+beautiful_barcode/barcode.py,sha256=IseVMZteHdvYABAJykOYq3MsjydUAsRU2WJeF81aW30,549
+beautiful_barcode/renderers.py,sha256=mNLYG2uOGvEvoGivHIDjIKYP9ZI9C69Gsf9mVQJzcWM,10524
+beautiful_barcode/upc.py,sha256=QOD6v-XnxOBBifBswfKv2v6z33BfO68nzXEFx_jB6hc,2369
+beautiful_barcode/utils.py,sha256=lVgMgQxvq0nwmFRKUok25ONOQuQaj5Fejav_E0W0tKw,435
+beautiful_barcode-1.0.1.dist-info/LICENSE,sha256=vRsxZvGjZGnn9J5Tk6ruWgGy_pZvyRmmfLb0AnX4tgA,1062
+beautiful_barcode-1.0.1.dist-info/METADATA,sha256=Rqp5-mL-cpbWJAO3-ParFgmVJFuhyvtyAY-5GPGLqrQ,258
+beautiful_barcode-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+beautiful_barcode-1.0.1.dist-info/top_level.txt,sha256=jJpyceeHAFc7dCClpKajMQYF_ycYF59OU5ylcb2-qnA,18
+beautiful_barcode-1.0.1.dist-info/RECORD,,

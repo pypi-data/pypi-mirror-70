@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: iacminer
+Version: 0.0.1
+Summary: A module to crawl infrastructure code repositories and scripts from GitHub
+Home-page: https://github.com/stefanodallapalma/iac-miner
+Author: Stefano Dalla Palma
+Author-email: stefano.dallapalma0@gmail.com
+Maintainer: Stefano Dalla Palma
+License: UNKNOWN
+Download-URL: https://github.com/stefanodallapalma/iac-miner/archive/0.0.1.tar.gz
+Description: # iac-miner
+        A mining tool written in Python to mine software repositories for Infrastructure-as-Code
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

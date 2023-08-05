@@ -1,0 +1,3 @@
+[gui_scripts]
+teda_viewer = teda_fits:main
+

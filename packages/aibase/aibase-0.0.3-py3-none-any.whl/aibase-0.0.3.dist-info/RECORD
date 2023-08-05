@@ -1,0 +1,16 @@
+aibase/__init__.py,sha256=hVHydd-gnn9u9Ti9KYLIHMjcrO2QyOtAm9Xh8KPxv2g,99
+aibase/common/__init__.py,sha256=nXSTc8cxmg8p6pjzU92fSxj8ARVeuscpB7VmKfgItJU,639
+aibase/common/base_svc.py,sha256=RzntXus7piOmOlTVUdbF1LszUIPQsH8738bMADauL7g,1950
+aibase/common/comm_define.py,sha256=HQklxnlQeLsQt8W-Td_fFbEGa9h0Xt-1YI4C3GzEYDQ,755
+aibase/common/logger.py,sha256=Ewt52PcqRxFutKiTVvE2n3To1qQPOH2S3N79y2YeAM0,2659
+aibase/common/project_path.py,sha256=Pb-uAKeH2vKYHYJ64VmqJCG8YoxNohWLLsB9TEYE_Ug,1376
+aibase/middleware/__init__.py,sha256=OrWti7ULVhikg9QcIQYRYlSw0njPwhgU0gePh5VigXY,331
+aibase/middleware/kafka_util.py,sha256=Fsk7lKI-p7GdyFZjHsGEqwnpWBcw9uUzYf5GrPrUYms,4589
+aibase/middleware/redis_util.py,sha256=xnTAawZ2y1ITMm5YRsfPcZG6MDzQdrUvb8vxcDWQ1u4,1057
+aibase/utils/__init__.py,sha256=HpORpWlF8PqHP14welk-KMXC7nEPHs42ibRlKjIU7-M,232
+aibase/utils/image.py,sha256=HTO8zMeZ-nqkUwX7CTp1K7eGQEV46DguyfNoqonfcc0,1075
+aibase/utils/time.py,sha256=uEW2fnRlyNR691UKyTeoPYLyNh89vrvVrl_apdIgpbE,957
+aibase-0.0.3.dist-info/METADATA,sha256=SK1nKis2_XUOhP4S9nbmEvBShurSUgDtbtrbCvCrtYY,1019
+aibase-0.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+aibase-0.0.3.dist-info/top_level.txt,sha256=1biL8vk3qSbJGepLOyV5lDdkHhMjRJ01dq0cvLhUi6E,7
+aibase-0.0.3.dist-info/RECORD,,

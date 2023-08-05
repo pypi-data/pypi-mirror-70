@@ -1,0 +1,3 @@
+[console_scripts]
+palapa = palapa.main:welcome
+

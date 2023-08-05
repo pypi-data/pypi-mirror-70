@@ -1,0 +1,15 @@
+include setup.py
+include MANIFEST.in
+include LICENSE.txt
+include README.md
+include *.md
+include *.rst
+include *.ini
+include *.txt
+include LICENSE
+
+graft tests
+graft examples
+graft docs
+graft src
+graft bnbxrate

@@ -1,0 +1,4 @@
+[console_scripts]
+abrowse = pyrise.downloads:get_and_display_browse_product
+pyrise = pyrise.cli:main
+

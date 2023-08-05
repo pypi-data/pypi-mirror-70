@@ -1,0 +1,14 @@
+README.md
+setup.py
+beautiful_barcode/__init__.py
+beautiful_barcode/__main__.py
+beautiful_barcode/barcode.py
+beautiful_barcode/renderers.py
+beautiful_barcode/upc.py
+beautiful_barcode/utils.py
+beautiful_barcode.egg-info/PKG-INFO
+beautiful_barcode.egg-info/SOURCES.txt
+beautiful_barcode.egg-info/dependency_links.txt
+beautiful_barcode.egg-info/top_level.txt
+test/test_upc.py
+test/test_utils.py

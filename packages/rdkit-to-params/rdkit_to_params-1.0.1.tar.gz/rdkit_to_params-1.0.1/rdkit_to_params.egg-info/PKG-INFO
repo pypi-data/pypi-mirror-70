@@ -1,0 +1,855 @@
+Metadata-Version: 2.1
+Name: rdkit-to-params
+Version: 1.0.1
+Summary: Create or modify Rosetta params files (topology files) from scratch, RDKit mols or another params file.
+Home-page: https://github.com/matteoferla/rdkit_to_params
+Author: Matteo Ferla
+Author-email: matteo.ferla@gmail.com
+License: MIT
+Description: # RDKit to params
+        Create or modify Rosetta params files (topology files) from scratch, RDKit mols or another params file.
+        
+        > RDKit is actually an optional module, but most of the useful functionality comes from it!
+        
+        To install from pip type:
+        
+            pip install rdkit-to-params
+            
+        To install the latest version (probably the same) from GitHub
+        
+            git clone https://github.com/matteoferla/rdkit_to_params.git
+            pip install .
+        
+        ## Legal thingamabob
+        The author, Matteo Ferla, is not affiliated with either Rosetta or RDKit and the presence of the latter's
+        name in the package's title is completely coincidental.
+        And yes, I am copying my legal mumbojumbo from South Park.
+        
+        ## Rationale
+        This is a fresh rewrite of ``mol_to_params.py``. For three reasons:
+        
+        * I cannot share my 2to3 port and modded module-version of ``mol_to_params.py`` due to licence.
+        * I want to modify `params` files and more as opposed to use a standalone script.
+        * RDKit does not save ``mol2`` files, yet knows about atom names and Gasteiger-Massilli charges and more...
+        
+        It sounds mad, but did not actually take too long.
+        
+        ## Caveat: I do not know many things!
+        
+        ### Chemical
+        I suspect I am doing stuff weirdly and I am meant to create ligands via ``pyrosetta.rosetta.core.chemical`` and not via params files... If this is so let me know. I don't mind knowing I made a mistake!
+        
+        ### Generic
+        I like this generic atom type business, but I am not sure how to use them in RL.
+        ``from_mol(mol, generic=True)`` will make generic atom types.
+        I made several guesses with the classic atom types and I am sure many things are wrong...
+        
+        ### Rings and cis-trans
+        I don't really understand what `CUT_BOND` does. It has to do with rings, 
+        `ADD_RING` is not implemented in the `from_mol` conversion as I think it's an old command.
+        Does a cis-trans tautomer bond (say `C(=O)-C=O`) gets a `CHI` entry? I am assuming no, but not sure.
+        
+        ## Roundtrip
+        Native amino acid params files can be found in the Rosetta folder
+        `rosetta/main/database/chemical/residue_type_sets/fa_standard/residue_types/l-caa`
+        Let's do a roundtrip changing an atomname:
+        
+            import pyrosetta
+            pyrosetta.init(extra_options='-mute all')
+            from rdkit_to_params import Params
+            
+            p = Params.load('PHE.params')
+            p.IO_STRING[0].name3 = 'PHX'
+            p.IO_STRING[0].name1 = 'Z'
+            p.AA = 'UNK'  #If it's not one of the twenty (plus extras), UNK!
+            del p.ROTAMER_AA[0]
+            p.rename_atom(' CB ', ' CX ')
+            p.dump('fake.params')
+            p.test().dump_pdb('test.pdb')
+        
+        ## From mol object
+        ### Requirements
+        For the sake of sanity, `EmbedMolecule`, `Chem.AddHs(mol)` or any weird hack is assumed to have been done beforehand.
+        And that the user is going to do `Chem.MolToPDBFile(mol)` or `Chem.MolToPDBBlock(mol)` or use the bound methods of `Params`,
+        `dump_pdb` and `dump_pdb_conf` (see below).
+        
+        The molecule should preferably be **not** Kekulised.
+        3letter name of residue is either from the title row (``_Name``) if a 3letter word or from the PDBInfo or 'LIG'.
+        
+        Dummy atom (*/R) is assumed to be a CONNECT —ligand only atm.
+        
+        Here is a conversion:
+        
+            import pyrosetta
+            pyrosetta.init(extra_options='-mute all')
+            # note that pyrosetta needs to be started before rdkit.
+            from rdkit_to_params import Params
+            from rdkit import Chem
+            from rdkit.Chem import AllChem
+            
+            mol = Chem.MolFromSmiles('NC(Cc1ccccc1)C(=O)O')
+            mol = AllChem.AddHs(mol)
+            display(mol)
+            AllChem.EmbedMolecule(mol)
+            AllChem.MMFFOptimizeMolecule(mol)
+            
+            # add names to the mol beforehand
+            Params.add_names(mol, names=['N', 'CA', 'CB', 'CG', 'CD1', 'CE1', 'CZ', 'CE2', 'CD2', 'C', 'O', 'OXT'], name='LIG') 
+            # parameterise
+            p = Params.from_mol(mol, name='XYZ') 
+            p.test().dump_pdb('test.pdb')
+            Chem.MolToPDBFile('ref.pdb')
+            
+        Note that conformer generation is not fully automatic and is not done by default.
+        
+            # make your conformers as you desire
+            AllChem.EmbedMultipleConfs(mol, numConfs=10) # or whatever you choose. This is a somewhat important decision.
+            AllChem.AlignMolConformers(mol) # I do not know if the conformers need to be aligned for Rosetta
+            # params time!
+            p = Params.from_mol(mol, name='LIG') 
+            p.dump_pdb_conf('LIG_conf.pdb')
+            p.PDB_ROTAMERS.append('LIG_conf.pdb')
+            p.dump('my_params.params')
+            
+        Note `dump_pdb` and `dump_pdb_conf` will save the molecule(s) without the dummy atoms, to stop this add `stripped=False`.
+        
+        ## From SMILES string
+        The above is actually a bit convoluted for example purposes as `Params.from_smiles`, accepts a SMILES string.
+        
+        ## From SMILES string and PDB for names    
+        In some cases one has a PDB file with a ligand that needs parameterising.
+        Assuming one has also the smiles of the ligand (PubChem has an super easy search), one can do
+        
+            p = Params.from_smiles_w_pdbfile(pdb_file, smiles, 'XXX') # the name has to match.
+            
+        The smiles does not need to match full. It can contain more atoms or even one`*` (CONNECT).
+        The smiles gets parameterised. So be suse to add correct charges properly —hydrogens are added.
+        It could be used for scaffold hopping, but if position matters so much,
+        you may be interested in [Fragmenstein](https://github.com/matteoferla/Fragmenstein).
+        
+        For more see [autogenerated documentation](sphinx-documentation.md). Sphinx with markdown cannot deal with typehinting,
+        so checking the code might be clearer.
+        
+        ### DIY
+        
+        If you have two mol objects from whatever routes, the basic operation is:
+        
+            p = Params.load_mol(mol, generic=False, name='LIG')
+            p.rename_from_template(template) # or whatever middle step
+            p.convert_mol()
+        
+        Note that `convert_mol` should be called once and is already called in the two `from_XXX` classmethods.
+        
+            p = Params.from_mol(...)
+            p.convert_mol() # No!!!
+            p.mol # is the mol...
+            p2 = Params.load_mol(p.mol)
+            p2.convert_mol() # Yes
+        
+        ## Constraints
+        
+        The selfstanding class `Constraints` is for generating constraint files, which are a must with covalent attachments
+        in order to stop janky topologies.
+        The class is instantiated with a pair of SMILES, each with at least a real atom and with one attachment point,
+        the first is the ligand and the second is its peptide target. The names of the heavy atoms and the Rosetta residue "numbers".
+        
+            from rdkit_to_params import Constraints
+            c = Constraints(smiles=('*C(=N)', '*SC'), names= ['*', 'CX', 'NY', '*', 'SG', 'CB'], ligand_res= '1B', target_res='145A')
+            c.dump('con.con')
+            # individual strings can be accessed
+            c.atom_pair_constraint
+            c.angle_constraint
+            c.dihedral_constaint
+            c.custom_constaint # if you want to add your own before `str`, `.dumps`, `.dump`.
+        
+        Do note that to make covalent links work in Rosetta, NGL and a few other places you need a LINK record, here is a f-string
+        for it:
+        
+            f'LINK        {target_atom: >4} {target_resn: >3} {p_chain[:1]} {target_resi: >3}                '+\
+            f'{ligand_atom: >4} {ligand_resn: >3} {ligand_chain[:1]} {ligand_resi: >3}     1555   1555  1.8\n'
+        
+        This is not to be confused with CCP4 REFMAC's `LINKR`, which are however easy to covert.
+        Alternatively, you can add it after importing the pose, _cf._ `pose.residue(lig_pos).connect_map`.
+        
+        ## Bond order
+        It is worth mentioning that the bond order specified in the topology file in the `BOND_ORDER` lines is mostly ignored 
+        and the bond order is derived from the rosetta types that get assigned. 
+        To extract and correct a ligand, consider the following
+        
+            
+            # pose to string
+            buffer = pyrosetta.rosetta.std.stringbuf()
+            pose.dump_pdb(pyrosetta.rosetta.std.ostream(buffer))
+            pdbblock = buffer.str()
+            # get the residue
+            mol = Chem.MolFromPDBBlock(pdbblock, proximityBonding=False, removeHs=False)
+            ligand = Chem.SplitMolByPDBResidues(mol, whiteList=[params.NAME])[params.NAME]
+            # fix bond order
+            template = AllChem.DeleteSubstructs(params.mol, Chem.MolFromSmiles('*'))
+            AllChem.AssignBondOrdersFromTemplate(template, ligand)
+        
+        ## To Do
+        I have not coded yet, because I forgot:
+        * ~~an auto-assignment of `NBR_ATOM` and `NBR_RADIUS` for `from_mol`.~~
+        * add rotamer line in `from_mol`
+        * change option to override starting atom.
+        * tweak the logic of `NAME` after some thinking.
+        * ~~output constrain file for the CONNECT atom.~~
+        * make a webpage to do the conversion from mol/sdf/pdb/SMILES —suggestions for free JS molecule editor?
+        
+        ## Workshop
+        
+        The `from_mol` class method actually has code that recognises `*[NH]CC(~O)*` and assigns it as a backbone properly.
+        However, `Chem.MolFromSmiles('*[NH]CC(~O)*')` cannot be embedded, so is a bit of a horrible one for users to use.
+        Maybe the `CC(=O)NCC(=O)NC` option may be a better choice after all.# rdkit_to_params package
+        
+        ## Submodules
+        
+        ## rdkit_to_params.constraint module
+        
+        This contains `make_constraint` which is creates a constraint file.
+        It is completely independent and different in style because it was different.
+        It is not integral to the conversion, it’s just a utility.
+        
+        
+        ### class rdkit_to_params.constraint.Constraints(smiles, names, ligand_res, target_res)
+        Bases: `object`
+        
+        
+        #### \__init__(smiles, names, ligand_res, target_res)
+        Give smiles of the two sides (with `\*`) and the names, residue numbers convert.
+        It requires 2 atoms on each side in addition to the attachment point.
+        Note that the atom names are stored in a non-standard way out of laziness. in the Atom prop ‘_AtomName’.
+        The instance has the following attributes
+        
+        
+        * `smiles`: stored input smiles string
+        
+        
+        * `names`: stored input list of names
+        
+        
+        * `ligand_res`: stored input liagnd residue
+        
+        
+        * `target_res`: stored input protein residue
+        
+        
+        * `cov_template`: Chem.Mol from first smiles.
+        
+        
+        * `target_template`: Chem.Mol from first smiles
+        
+        
+        * `combo`: combined templates
+        
+        
+        * `atom_pair_constraint`: AtomPair
+        
+        
+        * `angle_constraint`: Angle . NB. this is two lines.
+        
+        
+        * `dihedral_constaint`: dihedral
+        
+        Class methods:
+        \* `assign_names(mol, list)` classmethods that assigns names to a mol in place.
+        \* `join_by_dummy(molA, molB)` classmethods that returns a joined molecule
+        
+        
+        * **Parameters**
+        
+            
+            * **smiles** (`Tuple`[`str`, `str`]) – a tuple/list of two string. The first is the ligand, the second is the peptide.
+        
+        
+            * **names** (`List`[`str`]) – a list of atom names. The ‘\*’ will need a name -but will be ignored-, but not the H.
+        
+        
+            * **ligand_res** (`Union`[`str`, `int`]) – ligand residue in pose or PDB format (12 vs. 12A)
+        
+        
+            * **target_res** (`Union`[`str`, `int`]) – peptide residue in pose or PDB format (12 vs. 12A)
+        
+        
+        
+        #### classmethod assign_names(mol, names)
+        Stores names of atoms as given in the list.
+        totally non-standard way. PDBInfo is correct way. But too much effort.
+        
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### get_atom(mol, name)
+        
+        * **Return type**
+        
+            `Atom`
+        
+        
+        
+        #### classmethod get_conn(mol)
+        Get connecting atom of mol.
+        
+        
+        * **Return type**
+        
+            `Atom`
+        
+        
+        
+        #### classmethod join_by_dummy(a, b)
+        
+        * **Return type**
+        
+            `Mol`
+        
+        
+        ## rdkit_to_params.entries module
+        
+        The main class here is Entries\`, which is a fancy list. It gets called for each uppercase attribute 
+        in the initialisation of `Params` (which happens in `_ParamsInitMixin` __e.g.__ `Entries.from_name('IO_STRING')`).
+        
+        
+        ### class rdkit_to_params.entries.AAEntry(body='UNK')
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body='UNK')
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.ACT_COORD_ATOMSEntry(\*args)
+        Bases: `rdkit_to_params.entries.GenericListEntry`
+        
+        
+        #### \__init__(\*args)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.ADD_RINGEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.ATOMEntry(name: str, rtype: str, mtype: str = 'X', partial: float = 0)
+        Bases: `object`
+        
+        
+        #### \__init__(name: str, rtype: str, mtype: str = 'X', partial: float = 0)
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### classmethod from_str(text)
+        
+        #### mtype(: str = 'X')
+        
+        #### name(: str = None)
+        
+        #### partial(: float = 0)
+        
+        #### rtype(: str = None)
+        
+        ### class rdkit_to_params.entries.ATOM_ALIASEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.BONDEntry(first: str, second: str, order: int = 1)
+        Bases: `object`
+        
+        dataclass class for both BOND and BOND_ENTRY. The `__str__` method will know based on `.order`.
+        The hash is the two atom names sorted. So BOND records with the same names will be equal.
+        
+        
+        #### \__init__(first: str, second: str, order: int = 1)
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### first(: str = None)
+        
+        #### classmethod from_str(text)
+        
+        #### order(: int = 1)
+        
+        #### second(: str = None)
+        
+        ### class rdkit_to_params.entries.CHIEntry(index: int, first: str, second: str, third: str, fourth: str)
+        Bases: `object`
+        
+        
+        #### \__init__(index: int, first: str, second: str, third: str, fourth: str)
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### first(: str = None)
+        
+        #### fourth(: str = None)
+        
+        #### classmethod from_str(text)
+        
+        #### index(: int = None)
+        
+        #### second(: str = None)
+        
+        #### third(: str = None)
+        
+        ### class rdkit_to_params.entries.CONNECTEntry(atom_name: str, index: int = 1, connect_type: str = '', connect_name: str = '')
+        Bases: `object`
+        
+        This is a mess, but it guesses what you mean.
+        Deals with UPPER, LOWER and CONNECT.
+        
+        
+        #### \__init__(atom_name: str, index: int = 1, connect_type: str = '', connect_name: str = '')
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### atom_name(: str = None)
+        
+        #### connect_name(: str = '')
+        
+        #### connect_type(: str = '')
+        
+        #### classmethod from_str(text)
+        
+        #### index(: int = 1)
+        
+        ### class rdkit_to_params.entries.CUT_BONDEntry(first: str, second: str)
+        Bases: `object`
+        
+        No idea what CUT_BOND is for.
+        
+        
+        #### \__init__(first: str, second: str)
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### first(: str = None)
+        
+        #### classmethod from_str(text)
+        
+        #### second(: str = None)
+        
+        ### class rdkit_to_params.entries.CommentEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.Entries(entry_cls, singleton=True)
+        Bases: `collections.abc.MutableSequence`
+        
+        A fancy default list, where the elements are instances of whatver is in `entry_cls`.
+        It can be initialised via the class method `from_name` which accepst a string that has to be present in the class attribute `.choices`.
+        The `.append` method can work with str, list, dict or instance of the actual class it wants.
+        Note that the string for the string way must be without the header to the line.
+        The entry classes requires a `from_str` classmethod that returns an instance for this.
+        They also require __str__ method as this is how the entries are converted into string.
+        
+        `Entries.from_name('BOND')`
+        
+        
+        #### \__init__(entry_cls, singleton=True)
+        The entries class is a fancy constrained list. The data is actually stored in `.data`.
+        
+        
+        * **Parameters**
+        
+            
+            * **entry_cls** – what is the allowed class of the entries
+        
+        
+            * **singleton** (`bool`) – is only one entry allowed?
+        
+        
+        
+        #### choices( = {'#': (<class 'rdkit_to_params.entries.CommentEntry'>, False), 'AA': (<class 'rdkit_to_params.entries.AAEntry'>, True), 'ACT_COORD_ATOMS': (<class 'rdkit_to_params.entries.ACT_COORD_ATOMSEntry'>, True), 'ADD_RING': (<class 'rdkit_to_params.entries.ADD_RINGEntry'>, False), 'ATOM': (<class 'rdkit_to_params.entries.ATOMEntry'>, False), 'ATOM_ALIAS': (<class 'rdkit_to_params.entries.ATOM_ALIASEntry'>, False), 'BOND': (<class 'rdkit_to_params.entries.BONDEntry'>, False), 'CHI': (<class 'rdkit_to_params.entries.CHIEntry'>, False), 'CONNECT': (<class 'rdkit_to_params.entries.CONNECTEntry'>, False), 'CUT_BOND': (<class 'rdkit_to_params.entries.CUT_BONDEntry'>, False), 'FIRST_SIDECHAIN_ATOM': (<class 'rdkit_to_params.entries.FIRST_SIDECHAIN_ATOMEntry'>, True), 'ICOOR_INTERNAL': (<class 'rdkit_to_params.entries.ICOOR_INTERNALEntry'>, False), 'IO_STRING': (<class 'rdkit_to_params.entries.IO_STRINGEntry'>, True), 'METAL_BINDING_ATOMS': (<class 'rdkit_to_params.entries.METAL_BINDING_ATOMSEntry'>, True), 'NBR_ATOM': (<class 'rdkit_to_params.entries.NBR_ATOMEntry'>, True), 'NBR_RADIUS': (<class 'rdkit_to_params.entries.NBR_RADIUSEntry'>, True), 'PDB_ROTAMERS': (<class 'rdkit_to_params.entries.PDB_ROTAMERSEntry'>, True), 'PROPERTIES': (<class 'rdkit_to_params.entries.PROPERTIESEntry'>, False), 'RAMA_PREPRO_FILENAME': (<class 'rdkit_to_params.entries.RAMA_PREPRO_FILENAMEEntry'>, True), 'ROTAMER_AA': (<class 'rdkit_to_params.entries.ROTAMER_AAEntry'>, True), 'TYPE': (<class 'rdkit_to_params.entries.TYPEEntry'>, True), 'comment': (<class 'rdkit_to_params.entries.CommentEntry'>, False)})
+        
+        #### classmethod from_name(name)
+        
+        #### insert(index, value)
+        S.insert(index, value) – insert value before index
+        
+        
+        ### class rdkit_to_params.entries.FIRST_SIDECHAIN_ATOMEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.GenericEntry(header, body)
+        Bases: `object`
+        
+        This is meant to be inherited. `header` is the entry type. body is a string.
+        
+        
+        #### \__init__(header, body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        #### classmethod from_str(text)
+        
+        ### class rdkit_to_params.entries.GenericListEntry(header, \*args)
+        Bases: `object`
+        
+        This is meant to be inherited. `header` is the entry type. `values` is a list of strings.
+        
+        
+        #### \__init__(header, \*args)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        #### classmethod from_str(text)
+        
+        ### class rdkit_to_params.entries.ICOOR_INTERNALEntry(child: str, phi: float, theta: float, distance: float, parent: str, second_parent: str, third_parent: str)
+        Bases: `object`
+        
+        Lines stolen from Rosetta documentation
+        >                     Child  Phi Angle    Theta        Distance   Parent  Angle  Torsion
+        >   ICOOR_INTERNAL    C14  167.536810   59.880644    1.473042   N2    C11   C12
+        
+        
+        * Child atom (A4)
+        
+        
+        * phi angle (torsion angle between A1, A2, A3, A4)
+        
+        
+        * theta angle (improper angle = (180 - (angle between A4, A3, A2)))
+        
+        
+        * distance (between A4 and A3)
+        
+        
+        * parent atom (A3)
+        
+        
+        * angle atom (A2)
+        
+        
+        * torsion atom (A4)
+        
+        
+        #### \__init__(child: str, phi: float, theta: float, distance: float, parent: str, second_parent: str, third_parent: str)
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### child(: str = None)
+        
+        #### distance(: float = None)
+        
+        #### classmethod from_str(text)
+        
+        #### parent(: str = None)
+        
+        #### phi(: float = None)
+        
+        #### second_parent(: str = None)
+        
+        #### theta(: float = None)
+        
+        #### third_parent(: str = None)
+        
+        ### class rdkit_to_params.entries.IO_STRINGEntry(name3: str = 'LIG', name1: str = 'Z')
+        Bases: `object`
+        
+        
+        * `.name3` is three letter name. `Params().NAME` is actually a dynamic attribute that uses this.
+        
+        
+        * `.name1` is a one letter name.
+        
+        These get checked for length.
+        
+        
+        #### \__init__(name3: str = 'LIG', name1: str = 'Z')
+        
+        * **Return type**
+        
+            `None`
+        
+        
+        
+        #### \__post_init__()
+        
+        #### classmethod from_str(text)
+        
+        #### name1(: str = 'Z')
+        
+        #### name3(: str = 'LIG')
+        
+        ### class rdkit_to_params.entries.METAL_BINDING_ATOMSEntry(\*args)
+        Bases: `rdkit_to_params.entries.GenericListEntry`
+        
+        
+        #### \__init__(\*args)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.NBR_ATOMEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.NBR_RADIUSEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.PDB_ROTAMERSEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        This does zero checks for fine existance.
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.PROPERTIESEntry(\*args)
+        Bases: `rdkit_to_params.entries.GenericListEntry`
+        
+        
+        #### \__init__(\*args)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.RAMA_PREPRO_FILENAMEEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.ROTAMER_AAEntry(body)
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        
+        #### \__init__(body)
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        
+        ### class rdkit_to_params.entries.TYPEEntry(body='LIGAND')
+        Bases: `rdkit_to_params.entries.GenericEntry`
+        
+        LIGAND or POLYMER. No exceptions.
+        
+        
+        #### \__init__(body='LIGAND')
+        Initialize self.  See help(type(self)) for accurate signature.
+        
+        ## Module contents
+        
+        The main class here is `Params`. All underscore base classes are not meant to be used standalone.
+        `Entries` is the class for an list of entries of the same kind.
+        
+        
+        ### class rdkit_to_params.Params()
+        Bases: `rdkit_to_params._io_mixin._ParamsIoMixin`, `rdkit_to_params._rdkit_convert._RDKitCovertMixin`, `rdkit_to_params._pyrosetta_mixin._PoserMixin`
+        
+        `Params` creates and manipulates params files. It can handles several types of params operations,
+        such as “atom name surgery” and `rdkit.Chem.Mol` to a params file.
+        
+        ## Key methods
+        
+        
+        * `Params.load(filename)` will instantiate from file.
+        
+        
+        * `Params.from_mol(mol)` will instantiate from `Chem.Mol`
+        
+        
+        * `p.dump(filename)` will save a file.
+        
+        
+        * `loads` and 
+        
+        ```
+        ``
+        ```
+        
+        dumps\`\`for strings.
+        
+        
+        * `p.fields` will return all header fields.
+        
+        
+        * `p.test` tests the params file in PyRosetta.
+        
+        
+        * `p.rename_atom(old, new)` changes an atom name
+        
+        ## Attributes
+        
+        The attributes are generally the uppercase line headers, with a few exceptions.
+        
+        
+        * .comments is for # lines
+        
+        
+        * “BOND_TYPE” and “BOND” are merged into `.BOND`.
+        
+        
+        * “UPPER”, “LOWER” and “CONNECT” are merged into `.CONNECT`
+        
+        With the exception of `.NAME` which depends on `.IO_STRING` basically
+        all the header type attributes are actually instances of the class Entries, which holds a sequence of specific entries.
+        see entry.py for the properties of each.
+        These can be a singleton, such as .IO_STRING which when a new line is added it gets overwritten instead, or not like say .ATOM.
+        That is to say that `.ATOM[0]` will give the first atom as expected, but this has to be done for `.IO_STRING[0]` too.
+        
+        Atomnames…
+        
+        
+        * `p.get_correct_atomname` will return the 4 letter name of the atom with nice spacing.
+        
+        
+        * `p.rename_atom` will change one atomname to a new one across all entries.
+        
+        
+        * `BOND`, `CHI`, `CUT_BOND` entries store 4 char atomnames as `.first`, `.second`, `.third`, `.fourth`.
+        
+        
+        * `ICOOR_INTERNAL` entries store 5 char atomnames as `.child`,\`\`.parent\`\`,\`\`.second_parent\`\`,\`\`.third_parent\`\`.
+        
+        
+        * `ATOM_ALIAS`, `NBR_ATOM`, `FIRST_SIDECHAIN_ATOM`, `ADD_RING` are just `entries.GenericEntries` instances, where `.body` is a string which will contain the atomname.
+        
+        
+        * `METAL_BINDING_ATOMS`, `ACT_COORD_ATOMS` are `entries.GenericListEntries` instances where `.values` is a list of string with maybe atomnames.
+        
+        ## Inheritance
+        
+        It inherits several class,
+        which are not not mean to be used standalone, except for testing.
+        
+        The pyrosetta and rdkit functionality are dependent on these being installed.
+        
+        
+        * `_ParamsIoMixin` adds read write, and inherits
+        
+        
+        * `_ParamsInitMixin` which adds the basics.
+        
+        
+        * `_PoserMixin` is a base that adds pyrosetta functionality if avaliable.
+        
+        
+        * `_RDKitCovertMixin`, which adds rdkit `from_mol` conversion functionality, the class is split in two, the other part being
+        
+        
+        * `_RDKitParamsPrepMixin`, which prepares the molecule for _RDKitCovertMixin.from_mol\`.
+        
+        
+        #### property NAME()
+        
+        #### rename_atom(oldname, newname)
+        Change the atom name from `oldname` to `newname` and returns the 4 char `newname`.
+        
+        
+        * **Parameters**
+        
+            
+            * **oldname** (`str`) – atom name, preferably 4 char long.
+        
+        
+            * **newname** (`str`) – atom name, preferably 4 char long.
+        
+        
+        
+        * **Return type**
+        
+            `str`
+        
+        
+        
+        * **Returns**
+        
+            4 char newname
+        
+        
+        
+        #### get_correct_atomname(name)
+        Given a name, gets the correctly spaced out one.
+        This has nothing to do with `._get_PDBInfo_atomname` which just returns the atom name from a `Chem.Atom`.
+        
+        
+        * **Parameters**
+        
+            **name** (`str`) – dirty name
+        
+        
+        
+        * **Return type**
+        
+            `str`
+        
+        
+        
+        * **Returns**
+        
+            correct name
+        
+        
+        
+        #### validate()
+        
+Platform: UNKNOWN
+Requires-Python: >3.6
+Description-Content-Type: text/markdown

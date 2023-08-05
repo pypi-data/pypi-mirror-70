@@ -1,0 +1,11 @@
+tqdm
+requests
+Pillow
+tensorflow
+torch
+transformers
+colorama==0.4.3
+termcolor==1.1.0
+yaspin==0.16.0
+names==0.3.0
+click==7.1

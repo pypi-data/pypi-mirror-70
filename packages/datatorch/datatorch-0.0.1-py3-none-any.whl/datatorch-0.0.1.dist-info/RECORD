@@ -1,0 +1,8 @@
+datatorch/__init__.py,sha256=gScPRJMZfJTGcRjfPwJHXQhf3TodO8-QSpqNYWmDVLo,61
+datatorch/hardware.py,sha256=3Xj5rNiU810eSvmwmdMF5ol5HGLgD88U8uVoqUCEG1s,439
+datatorch/util.py,sha256=rsMcI0Adh07XfxOnATjX_vOY914-cKf0a7J1BygTMIo,416
+datatorch-0.0.1.dist-info/METADATA,sha256=hSRAjq1RxTAHoW5jC7UpWIzZpThcY5QiA3S7t_LrG9Q,599
+datatorch-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+datatorch-0.0.1.dist-info/entry_points.txt,sha256=vgHrREmRye-GT6uAPpjrOl194E7vsQNNmffBol0GJE8,74
+datatorch-0.0.1.dist-info/top_level.txt,sha256=3bXRO5TsGNBwfRetxOLnx2yFJU9cDSASF0ZIxatYgy0,10
+datatorch-0.0.1.dist-info/RECORD,,

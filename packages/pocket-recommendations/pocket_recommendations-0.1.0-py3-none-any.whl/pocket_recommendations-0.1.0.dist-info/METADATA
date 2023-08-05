@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pocket-recommendations
+Version: 0.1.0
+Summary: Unofficial library to get a feed of one's Pocket recommendations
+Author: Honza Javorek
+Author-email: mail@honzajavorek.cz
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cssselect (>=1.1.0,<2.0.0)
+Requires-Dist: lxml (>=4.5.1,<5.0.0)

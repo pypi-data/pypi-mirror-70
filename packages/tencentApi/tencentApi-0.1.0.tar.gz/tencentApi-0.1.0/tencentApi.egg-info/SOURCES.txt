@@ -1,0 +1,15 @@
+README.md
+setup.py
+tencentApi/__init__.py
+tencentApi/api.py
+tencentApi.egg-info/PKG-INFO
+tencentApi.egg-info/SOURCES.txt
+tencentApi.egg-info/dependency_links.txt
+tencentApi.egg-info/entry_points.txt
+tencentApi.egg-info/requires.txt
+tencentApi.egg-info/top_level.txt
+tencentApi/cli/__init__.py
+tencentApi/cli/app.py
+tencentApi/cns/__init__.py
+tencentApi/cns/cns.py
+tencentApi/cns/ddns.py

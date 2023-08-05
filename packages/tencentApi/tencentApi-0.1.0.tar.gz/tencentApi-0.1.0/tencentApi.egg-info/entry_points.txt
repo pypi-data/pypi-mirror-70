@@ -1,0 +1,3 @@
+[console_scripts]
+cns = tencentApi.cli.app:main
+

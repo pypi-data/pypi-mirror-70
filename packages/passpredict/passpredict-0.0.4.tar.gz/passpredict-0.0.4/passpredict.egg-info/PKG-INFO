@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: passpredict
+Version: 0.0.4
+Summary: Predict upcoming satellite overpasses
+Home-page: https://www.github.com/samtx/pass-predictor
+Author: Sam Friedman
+Author-email: samtx@outlook.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: iss predict orbit sgp4
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Python: >=3.7

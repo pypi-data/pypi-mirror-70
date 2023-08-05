@@ -1,0 +1,10 @@
+setup.py
+distributions_test_quandt/Binomialdistribution.py
+distributions_test_quandt/Gaussiandistribution.py
+distributions_test_quandt/Generaldistribution.py
+distributions_test_quandt/__init__.py
+distributions_test_quandt.egg-info/PKG-INFO
+distributions_test_quandt.egg-info/SOURCES.txt
+distributions_test_quandt.egg-info/dependency_links.txt
+distributions_test_quandt.egg-info/not-zip-safe
+distributions_test_quandt.egg-info/top_level.txt

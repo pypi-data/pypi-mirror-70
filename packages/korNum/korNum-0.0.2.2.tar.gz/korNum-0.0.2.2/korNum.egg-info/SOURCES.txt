@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+korNum/__init__.py
+korNum/chgFormat.py
+korNum/chgList.py
+korNum.egg-info/PKG-INFO
+korNum.egg-info/SOURCES.txt
+korNum.egg-info/dependency_links.txt
+korNum.egg-info/top_level.txt

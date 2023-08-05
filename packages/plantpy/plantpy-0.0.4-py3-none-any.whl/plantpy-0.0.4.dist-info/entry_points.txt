@@ -1,0 +1,3 @@
+[console_scripts]
+plantpy = plantpy.plantpy:main
+

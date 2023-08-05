@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: pyweblight
+Version: 0.0.2
+Summary: pyweblight is a small configurable web server for developers
+Home-page: https://veltzer.github.io/pyweblight
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pyweblight
+Description: pyweblight is a small configurable web server for developers
+Keywords: http,https,apache,python,python3,server,web
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5

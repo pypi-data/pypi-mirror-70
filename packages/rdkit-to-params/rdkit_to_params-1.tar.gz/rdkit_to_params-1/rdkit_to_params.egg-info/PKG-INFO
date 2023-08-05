@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: rdkit-to-params
+Version: 1
+Summary: Create or modify Rosetta params files (topology files) from scratch, RDKit mols or another params file.
+Home-page: https://github.com/matteoferla/rdkit_to_params
+Author: Matteo Ferla
+Author-email: matteo.ferla@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.6

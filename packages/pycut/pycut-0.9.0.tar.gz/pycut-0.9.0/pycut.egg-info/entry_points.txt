@@ -1,0 +1,3 @@
+[console_scripts]
+pycut = pycut.cli:main
+

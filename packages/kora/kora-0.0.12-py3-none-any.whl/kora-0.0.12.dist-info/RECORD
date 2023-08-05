@@ -1,0 +1,14 @@
+kora/__init__.py,sha256=zHocofiEHhcbM7LTY0rGj_nAxTYAJdWRini7hmic0XA,90
+kora/conda.py,sha256=iuajTOZPJpnxFKH-Gvn4rVNeSEYTYt0ZIgM9riR_Xnc,920
+kora/data_table.py,sha256=0cxTXgYEjYimWHxFGtN100ZoC2QygXTj3OLpRigmYlk,2074
+kora/ffmpeg.py,sha256=wt2hF2lnY0k8Os-A8AweiBd--Bat7rIx3v2BYMEBqeE,1037
+kora/json.py,sha256=q5Tyq-OfzppRIZW4n8QibgCAwzaiHUNsSiWSp9uNJgE,547
+kora/mpl.py,sha256=5fKmmaHl9I35OsS9koMxbULS2BNvdGg5RwPY3jHfhK0,650
+kora/os.py,sha256=R6ocHQGrzX0-99Ii2DjhBk-Himlof4VJkwD0JUczaxI,658
+kora/output.py,sha256=s1SXEnx-5jmAQFDXnqXsWJUTuAZAJqanYWi8nVoUmwA,491
+kora/selenium.py,sha256=OBVLk-K3s9zjROoAZHwcfAq1NqENDNHslKzk64Lz-Uw,453
+kora-0.0.12.dist-info/LICENSE,sha256=2R8oNslR6loqcXtI44BQiHqoWCR68_3aSFlmpCc-mcA,1076
+kora-0.0.12.dist-info/METADATA,sha256=1U42M2-gcUsMs25Zt5SWORcmvQDYzOQtIZdtooqH20w,554
+kora-0.0.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kora-0.0.12.dist-info/top_level.txt,sha256=6ce2HiMBAqXR9oVFQg2DdRVGDHWahWin31Nrxwj7yjE,5
+kora-0.0.12.dist-info/RECORD,,

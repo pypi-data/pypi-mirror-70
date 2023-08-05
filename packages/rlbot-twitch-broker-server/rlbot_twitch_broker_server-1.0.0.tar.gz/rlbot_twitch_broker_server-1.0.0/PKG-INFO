@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: rlbot_twitch_broker_server
+Version: 1.0.0
+Summary: RLBot Twitch Broker
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: rlbotofficial@gmail.com
+License: UNKNOWN
+Description:     Allows custom Rocket League bots to register themselves with a central broker.
+            
+Keywords: Swagger,RLBot Twitch Broker
+Platform: UNKNOWN

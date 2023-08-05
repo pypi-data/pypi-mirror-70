@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ha-philipsjs-rik
+Version: 0.0.91
+Summary: jointSPACE API for Home-Assistant
+Home-page: https://github.com/rikbruggink/ha-philipsjs
+Author: Rik Bruggink
+Author-email: mail@rikbruggink.nl
+License: MIT License
+Download-URL: https://github.com/rikbruggink/ha-philipsjs/tarball/0.0.91
+Description: UNKNOWN
+Keywords: jointSPACE
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Provides-Extra: tests

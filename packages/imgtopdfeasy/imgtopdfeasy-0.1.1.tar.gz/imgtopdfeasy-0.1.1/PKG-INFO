@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: imgtopdfeasy
+Version: 0.1.1
+Summary: This is command line utility to convert images in a directory to  PDF file.
+Home-page: https://github.com/naveen521kk/img2pdf
+License: MIT
+Author: Naveen
+Author-email: naveen@syrusdark.website
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Pillow (>=7.1.2,<8.0.0)
+Project-URL: Repository, https://github.com/naveen521kk/img2pdf
+Description-Content-Type: text/markdown
+
+# Img2pdf [![GitHub license](https://img.shields.io/github/license/naveen521kk/img2pdf)](https://github.com/naveen521kk/img2pdf/blob/master/LICENSE)  [![GitHub stars](https://img.shields.io/github/stars/naveen521kk/img2pdf)](https://github.com/naveen521kk/img2pdf/stargazers)
+This is command line utility to convert images in a directory to  PDF file.
+
+This is very simple CLI to convert images in a directory to a PDF file. This use Pillow( PIL ), to achieve this.
+
+To use this go to the directory where you have images. Then type the commands below.
+
+```sh
+git clone https://github.com/naveen521kk/img2pdf.git
+```
+
+This create a folder called `img2pdf`. Then go into the folder by
+
+```sh
+cd img2pdf
+```
+
+After that typing 
+
+```sh
+pip install -r requirements.txt
+```
+would install necessary Requirements for it to run.
+
+After that typing 
+```sh
+python img2pdf.py -h
+```
+in your terminal would run the program and show the necessary arguments required like below.
+```ssh
+usage: img2pdf.py [-h] -i INPUT -o OUTPUT -ext EXTENSION
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input file folder full path. Realti
+  -o OUTPUT, --output OUTPUT
+                        Output file name,No pdf required
+  -ext EXTENSION, --extension EXTENSION
+                        File extension of image to add.
+```
+
+Each of it are self explanatory.
+
+Crafted with 💓 by Naveen.
+

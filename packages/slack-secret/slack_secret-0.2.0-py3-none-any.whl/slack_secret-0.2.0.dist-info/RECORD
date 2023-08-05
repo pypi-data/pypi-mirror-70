@@ -1,0 +1,10 @@
+slack_secret/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+slack_secret/channels.py,sha256=Z0f5cN6YHiAytj53Fuxrtig4ywetlv369pkCDMOAGIQ,3231
+slack_secret/lib.py,sha256=YXkemsIztKznp8BCR1hFcircJqkSm38sA3sJsTXHYvI,1890
+slack_secret/main.py,sha256=1iuGzPohGClNlxxn6UNR9mzYA64EpZeHifcXH4A0Ddo,1634
+slack_secret/users.py,sha256=11FLebALy8PXiI_pPmmkUKEil6mmmLQwEkVDcDXRZss,777
+slack_secret-0.2.0.dist-info/entry_points.txt,sha256=7QTJsH-GgiMN8IdCuJbMpNvr18CGOL5aYdkqGoHXTm4,54
+slack_secret-0.2.0.dist-info/LICENSE,sha256=UNmL-nE0KD6axdDDAARgmuqj2XXGBNatHA5kYsuZQGE,1058
+slack_secret-0.2.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+slack_secret-0.2.0.dist-info/METADATA,sha256=I6gACKQe4aqRUkA0D5fIfV7gDfiNxY6kuyafMYhW-dY,329
+slack_secret-0.2.0.dist-info/RECORD,,

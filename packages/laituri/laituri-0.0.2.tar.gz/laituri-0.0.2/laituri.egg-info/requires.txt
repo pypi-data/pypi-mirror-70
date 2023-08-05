@@ -1,0 +1,8 @@
+
+[dev]
+flake8
+isort
+pydocstyle
+pytest
+pytest-cov
+pytest-mock

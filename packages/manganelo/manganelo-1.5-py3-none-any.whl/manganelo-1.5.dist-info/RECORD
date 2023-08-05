@@ -1,0 +1,12 @@
+manganelo/__init__.py,sha256=dqWeiTVrWP2z1YIUudJw2z92yV6RM2-wU-RvYmsfpfs,734
+manganelo/api/__init__.py,sha256=bghS1UQ4ojkdfxKhuH02G2rE8bRQZnnw51VSqWUmFYw,257
+manganelo/api/apibase.py,sha256=lQOftAVAvL7WwFltq5CJmmmnlm89dDbUqrouoKfp9BE,1166
+manganelo/api/chapterinfo.py,sha256=fdVjt4dO39hRPfQuaAX2xCLitHNK6jab1JSc4QZFyXI,1599
+manganelo/api/downloadchapter.py,sha256=o0Be29JCMEo1ISsZG3oWiLQd6KkRNLo9E4Tkgiak-JM,3843
+manganelo/api/mangainfo.py,sha256=X1KCD_iIZe2BkAAms_zJsoM7jqUEpa_f_MoTZsV75XY,5327
+manganelo/api/searchmanga.py,sha256=iO3qG7lQch0o7YjX3j1AVi5cWOHjFpUjIZ11zIGcaLE,2372
+manganelo-1.5.dist-info/LICENSE.txt,sha256=z6pLz9GNVAooBO7HvAPH_4VDDBCbHJdU3Zr2o39XW4g,1077
+manganelo-1.5.dist-info/METADATA,sha256=URaPG_wiVyLXmliFhnaGSEUPud6-CeAQWbPmJmdcdVY,3877
+manganelo-1.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+manganelo-1.5.dist-info/top_level.txt,sha256=MDLAO5yI4SFPc8enpIJvbH33cBDV6qyOlKz2eTEM9lY,10
+manganelo-1.5.dist-info/RECORD,,

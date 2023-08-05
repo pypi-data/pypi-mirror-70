@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bookmark/__init__.py
+bookmark/sql_bookmarker.py
+bookmarker.egg-info/PKG-INFO
+bookmarker.egg-info/SOURCES.txt
+bookmarker.egg-info/dependency_links.txt
+bookmarker.egg-info/requires.txt
+bookmarker.egg-info/top_level.txt
+tests/__init__.py
+tests/test_sqlalchemy_bookmarker.py

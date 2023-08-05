@@ -1,0 +1,5 @@
+setup.py
+clx.egg-info/PKG-INFO
+clx.egg-info/SOURCES.txt
+clx.egg-info/dependency_links.txt
+clx.egg-info/top_level.txt

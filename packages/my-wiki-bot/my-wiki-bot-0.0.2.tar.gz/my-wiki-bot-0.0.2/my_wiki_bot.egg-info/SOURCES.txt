@@ -1,0 +1,9 @@
+README.md
+setup.py
+my_wiki_bot.egg-info/PKG-INFO
+my_wiki_bot.egg-info/SOURCES.txt
+my_wiki_bot.egg-info/dependency_links.txt
+my_wiki_bot.egg-info/requires.txt
+my_wiki_bot.egg-info/top_level.txt
+wikibot/__init__.py
+wikibot/wikibot.py

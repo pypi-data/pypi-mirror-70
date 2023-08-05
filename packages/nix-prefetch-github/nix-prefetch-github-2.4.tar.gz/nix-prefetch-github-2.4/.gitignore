@@ -1,0 +1,12 @@
+*~
+/.pytest_cache
+__pycache__
+/.coverage
+/coverage
+/dist
+/MANIFEST
+/testenv
+*.egg-info
+/result
+/test.nix
+/.mypy_cache

@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+set -x
+
+
+flake8 src tests
+mypy src tests
+pytest

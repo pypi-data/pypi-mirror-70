@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+set -x
+
+./clean
+
+nix-shell --command 'exec ./.test-prefetch'
+nix build -f default.nix
+result/bin/nix-prefetch-github seppeljordan nix-prefetch-github --nix > test.nix
+nix build -f test.nix

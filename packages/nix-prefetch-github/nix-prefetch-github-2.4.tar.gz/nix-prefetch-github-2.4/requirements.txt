@@ -1,0 +1,13 @@
+attrs
+black
+click
+effect
+flake8
+jinja2
+mypy
+pytest
+pytest-black
+pytest-cov
+pytest-isort
+readme_renderer
+twine

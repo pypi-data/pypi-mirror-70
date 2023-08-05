@@ -1,0 +1,9 @@
+README.md
+setup.py
+jsonsecrets/__init__.py
+jsonsecrets/secret.py
+jsonsecrets.egg-info/PKG-INFO
+jsonsecrets.egg-info/SOURCES.txt
+jsonsecrets.egg-info/dependency_links.txt
+jsonsecrets.egg-info/requires.txt
+jsonsecrets.egg-info/top_level.txt

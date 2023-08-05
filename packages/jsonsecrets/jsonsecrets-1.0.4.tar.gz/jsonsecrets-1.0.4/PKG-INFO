@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: jsonsecrets
+Version: 1.0.4
+Summary: Load your secrets (API keys etc.) from a JSON file.
+Home-page: https://github.com/glowingkitty/JSON-Secrets
+Author: Marco
+License: UNKNOWN
+Description: ![JSON-Secrets](https://raw.githubusercontent.com/marcoEDU/JSON-Secrets/master/images/headerimage.jpg "JSON-Secrets")
+        
+        Load your secrets (API keys etc.) from a JSON file.
+        
+        Want to support the development and stay updated?
+        
+        <a href="https://www.patreon.com/bePatron?u=24983231"><img alt="Become a Patreon" src="https://raw.githubusercontent.com/marcoEDU/JSON-Secrets/master/images/patreon_button.svg"></a> <a href="https://liberapay.com/glowingkitty/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+        
+        ## Installation
+        ```
+        pip install jsonsecrets
+        ```
+        
+        ## Usage
+        ```
+        from jsonsecrets import Secret
+        
+        password = Secret(target='example_api.user.password',file_path='mysecrets.json').value
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

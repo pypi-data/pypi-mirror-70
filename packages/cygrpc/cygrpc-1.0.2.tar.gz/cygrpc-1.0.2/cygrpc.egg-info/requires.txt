@@ -1,0 +1,6 @@
+Paste
+bottle
+grpcio-tools>=1.23.0
+grpcio>=1.23.0
+twine
+wheel

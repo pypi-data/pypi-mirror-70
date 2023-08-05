@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rhasspy-snips-nlu-hermes
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-snips-nlu-hermes
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy Snips NLU Hermes
+        
+        MQTT service for Rhasspy that uses Snips NLU.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

@@ -1,0 +1,3 @@
+[console_scripts]
+pgedl=pgedl.pgedl:run
+

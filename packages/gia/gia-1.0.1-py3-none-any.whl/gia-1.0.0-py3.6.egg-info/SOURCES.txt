@@ -1,0 +1,11 @@
+README.md
+setup.py
+gia/__init__.py
+gia/aggregator.py
+gia/cli.py
+gia.egg-info/PKG-INFO
+gia.egg-info/SOURCES.txt
+gia.egg-info/dependency_links.txt
+gia.egg-info/entry_points.txt
+gia.egg-info/requires.txt
+gia.egg-info/top_level.txt

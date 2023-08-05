@@ -1,0 +1,16 @@
+README.md
+setup.py
+echoes/__init__.py
+echoes/datasets.py
+echoes/utils.py
+echoes.egg-info/PKG-INFO
+echoes.egg-info/SOURCES.txt
+echoes.egg-info/dependency_links.txt
+echoes.egg-info/top_level.txt
+echoes/esn/__init__.py
+echoes/esn/_base.py
+echoes/esn/_generator.py
+echoes/esn/_regressor.py
+echoes/plotting/__init__.py
+echoes/plotting/_core.py
+echoes/plotting/_memory_capacity.py

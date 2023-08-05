@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: thrift-json3
+Version: 0.0.1
+Summary: tools for dict, thrift and json converting in python3
+Home-page: https://github.com/zlzz-rec/thrift_json3
+Author: Clifford
+Author-email: 290416118@qq.com
+License: MIT Licence
+Description: tools for dict, thrift and json converting
+Keywords: pip,pathtool,timetool,magetool,mage
+Platform: any

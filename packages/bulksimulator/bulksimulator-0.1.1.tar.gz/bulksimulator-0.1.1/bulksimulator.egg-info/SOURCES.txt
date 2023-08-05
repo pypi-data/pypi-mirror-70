@@ -1,0 +1,6 @@
+README.md
+setup.py
+bulksimulator.egg-info/PKG-INFO
+bulksimulator.egg-info/SOURCES.txt
+bulksimulator.egg-info/dependency_links.txt
+bulksimulator.egg-info/top_level.txt

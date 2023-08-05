@@ -1,0 +1,4 @@
+bin
+cliquor
+commands
+tests

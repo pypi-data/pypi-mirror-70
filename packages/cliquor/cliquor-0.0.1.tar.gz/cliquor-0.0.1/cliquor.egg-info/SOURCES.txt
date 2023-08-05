@@ -1,0 +1,15 @@
+README.md
+setup.py
+bin/__init__.py
+bin/cliquor.py
+cliquor/__init__.py
+cliquor/app.py
+cliquor/command.py
+cliquor.egg-info/PKG-INFO
+cliquor.egg-info/SOURCES.txt
+cliquor.egg-info/dependency_links.txt
+cliquor.egg-info/entry_points.txt
+cliquor.egg-info/top_level.txt
+commands/__init__.py
+commands/init_command.py
+tests/__init__.py

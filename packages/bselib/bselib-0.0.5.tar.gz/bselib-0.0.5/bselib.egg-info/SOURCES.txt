@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+bselib/__init__.py
+bselib/analysis.py
+bselib/bse.py
+bselib/gainers.py
+bselib/getId.py
+bselib/quote.py
+bselib/script.py
+bselib/statements.py
+bselib.egg-info/PKG-INFO
+bselib.egg-info/SOURCES.txt
+bselib.egg-info/dependency_links.txt
+bselib.egg-info/requires.txt
+bselib.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+#!python
+
+import sys
+
+from PyQt5 import QtWidgets
+
+from md_dihedrals.gui.main_window import MainWindow
+
+if __name__ == "__main__":
+
+    app = QtWidgets.QApplication(sys.argv)
+
+    window = MainWindow()
+
+    sys.exit(app.exec_())

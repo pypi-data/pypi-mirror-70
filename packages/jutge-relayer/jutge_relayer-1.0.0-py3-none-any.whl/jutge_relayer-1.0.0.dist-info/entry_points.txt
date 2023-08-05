@@ -1,0 +1,3 @@
+[console_scripts]
+jutge-relayer = jutge.relayer:relayer.main
+

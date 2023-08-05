@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pytconf
+Version: 0.0.35
+Summary: pytconf handles configuration, config files and command line parsing
+Home-page: https://veltzer.github.io/pytconf
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pytconf
+Keywords: click,argparse,optparse,command-line-parser,configuration
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
+Requires-Dist: termcolor
+Requires-Dist: yattag
+
+pytconf handles configuration, config files and command line parsing
+
+

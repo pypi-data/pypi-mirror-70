@@ -1,0 +1,3 @@
+[console_scripts]
+gia = gia.cli:main
+

@@ -1,0 +1,17 @@
+medspacy_io/__init__.py,sha256=8zLGg-DfQhnDl2Ky0n-zXpN-8e-g7iR0AcaI4l4Vvpk,32
+medspacy_io/version.py,sha256=Xgpf9VWAF9cXi9llQJnDlFQDUxydqvzjPa6kYQP73Ao,78
+medspacy_io/consumer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+medspacy_io/consumer/demo_consumer.py,sha256=TT2foJWu2_bAzUfqBmvAO-tqJ5yhR-yqSfQdWEQnM3Q,2407
+medspacy_io/consumer/doc_consumer.py,sha256=Mx54WrlzgyZ60q7xSI1aUeuoDpwF44EVyOIQnoA-BjM,2791
+medspacy_io/reader/__init__.py,sha256=IUnYYXKuRVpYpbJZmg1t9RNn7u_zLAscpUwKoMzBH9g,260
+medspacy_io/reader/base_reader.py,sha256=WZLxQR7s24SxMPRYtLUo6h97f9AG1bRxesHTSKUiDjc,9070
+medspacy_io/reader/ehost_reader.py,sha256=ZXOD3Yh_NEyz0_MlDoCX2_JGz81K5ps4qBVAtFfu1Ec,10959
+medspacy_io/vectorizer/Vectorizer.py,sha256=bSUYSuMA2QDGvKWaHhG-MEpAwRTmb3rE-gXEfLm_zGc,9664
+medspacy_io/vectorizer/__init__.py,sha256=n_D4GZq_-uPsr20TEuxoiRlI0KXFNdT0CXOUnQbMMfQ,92
+medspacy_io/writer/__init__.py,sha256=f9tTNFPlrSianLjaKr6_XsnfqA9zc-KaSiIoCyq0fBk,37
+medspacy_io/writer/ehost_writer.py,sha256=Uf1qMPziGG-PuC6PZWOxQHFomfj2HgJ1cdoDpE56Y5A,12112
+medspacy_io-0.1.0.dev24.dist-info/LICENSE,sha256=gLEpA1m5NSZui9NDsu0u78DRmW7ZJ4EbwJcqMidsmlY,1065
+medspacy_io-0.1.0.dev24.dist-info/METADATA,sha256=fanYo4Rmmy1B9qFx4hhdB4GKOg7scU5HMS28OH09NKI,1371
+medspacy_io-0.1.0.dev24.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+medspacy_io-0.1.0.dev24.dist-info/top_level.txt,sha256=IU6HapOnqUyTPAMN6GpxfkWVk5lFagU6UcALc8MUSOg,12
+medspacy_io-0.1.0.dev24.dist-info/RECORD,,

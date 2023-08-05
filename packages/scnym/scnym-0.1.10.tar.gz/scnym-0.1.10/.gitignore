@@ -1,0 +1,13 @@
+*.pyc
+*.egg-info
+build/
+dist/
+*.ipynb_checkpoints*
+scnym/*__pycache__*
+configs/tm*
+*.sh
+*.out
+config_eval_tm_10x.ipynb
+dev.ipynb
+mixmatch.ipynb
+downloads/

@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scNym/trainer Module &mdash; scNym 0.2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="scNym/interpret Module" href="interpret.html" />
+    <link rel="prev" title="scNym/api Module" href="pythonapi.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> scNym
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Interactive API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#model-specification">Model Specification</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#model-trainer">Model Trainer</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">scNym/trainer Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#model-interpretation">Model Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#data-loaders">Data Loaders</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">scNym</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Interactive API</a> &raquo;</li>
+        
+      <li>scNym/trainer Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/fullapi/trainer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scnym.trainer">
+<span id="scnym-trainer-module"></span><h1>scNym/trainer Module<a class="headerlink" href="#module-scnym.trainer" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="scnym.trainer.Trainer">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">Trainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">criterion</span></em>, <em class="sig-param"><span class="n">optimizer</span></em>, <em class="sig-param"><span class="n">dataloaders</span></em>, <em class="sig-param"><span class="n">out_path</span></em>, <em class="sig-param"><span class="n">batch_transformers</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">n_epochs</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">min_epochs</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">exp_name</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">reg_criterion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">use_gpu</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">save_freq</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">scheduler</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tb_writer</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.Trainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Trains a PyTorch model.</p>
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#scnym.trainer.Trainer.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>model with required <cite>.forward(…)</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>nn.Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.criterion">
+<code class="sig-name descname">criterion</code><a class="headerlink" href="#scnym.trainer.Trainer.criterion" title="Permalink to this definition">¶</a></dt>
+<dd><p>loss criterion to optimize.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.optimizer">
+<code class="sig-name descname">optimizer</code><a class="headerlink" href="#scnym.trainer.Trainer.optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>optimizer for the model parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>torch.optim.Optimizer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.dataloaders">
+<code class="sig-name descname">dataloaders</code><a class="headerlink" href="#scnym.trainer.Trainer.dataloaders" title="Permalink to this definition">¶</a></dt>
+<dd><p>keyed by [‘train’, ‘val’] with values corresponding
+to <cite>torch.utils.data.DataLoader</cite> for training
+and validation sets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.out_path">
+<code class="sig-name descname">out_path</code><a class="headerlink" href="#scnym.trainer.Trainer.out_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>output path for best model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.n_epochs">
+<code class="sig-name descname">n_epochs</code><a class="headerlink" href="#scnym.trainer.Trainer.n_epochs" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of epochs for training.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.reg_criterion">
+<code class="sig-name descname">reg_criterion</code><a class="headerlink" href="#scnym.trainer.Trainer.reg_criterion" title="Permalink to this definition">¶</a></dt>
+<dd><p>criterion to penalize layer weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Callable</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.use_gpu">
+<code class="sig-name descname">use_gpu</code><a class="headerlink" href="#scnym.trainer.Trainer.use_gpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>use CUDA acceleration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.verbose">
+<code class="sig-name descname">verbose</code><a class="headerlink" href="#scnym.trainer.Trainer.verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>write all batch losses to stdout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.save_freq">
+<code class="sig-name descname">save_freq</code><a class="headerlink" href="#scnym.trainer.Trainer.save_freq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of epochs between model checkpoints. Default = 10.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.Trainer.scheduler">
+<code class="sig-name descname">scheduler</code><a class="headerlink" href="#scnym.trainer.Trainer.scheduler" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>learning rate scheduler.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.trainer.Trainer.train_epoch">
+<code class="sig-name descname">train_epoch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.Trainer.train_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform training across one full iteration through
+the data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.trainer.Trainer.val_epoch">
+<code class="sig-name descname">val_epoch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.Trainer.val_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a pass through the validation data.
+Do not record gradients to speed things up.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.trainer.Trainer.train">
+<code class="sig-name descname">train</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.Trainer.train" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.trainer.SemiSupervisedTrainer">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">SemiSupervisedTrainer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unsup_criterion</span></em>, <em class="sig-param"><span class="n">unsup_dataloader</span></em>, <em class="sig-param"><span class="n">unsup_weight</span></em>, <em class="sig-param"><span class="n">dan_criterion</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dan_weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.SemiSupervisedTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scnym.trainer.Trainer" title="scnym.trainer.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">scnym.trainer.Trainer</span></code></a></p>
+<dl class="py method">
+<dt id="scnym.trainer.SemiSupervisedTrainer.train_epoch">
+<code class="sig-name descname">train_epoch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.SemiSupervisedTrainer.train_epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform training using both a supervised and semi-supervised loss.</p>
+<p class="rubric">Notes</p>
+<ol class="arabic simple">
+<li><p>Sample labeled examples, compute the standard supervised loss.</p></li>
+<li><p>Sample unlabeled examples, compute unsupervised loss.</p></li>
+<li><p>Perform backward pass and update parameters.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.trainer.get_class_weight">
+<code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">get_class_weight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.get_class_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate relative class weights based on the representation
+of classes in a label vector <cite>y</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>y</strong> (<em>np.ndarray</em>) – [N,] vector of class labels.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>class_weight</strong> – [Classes,] vector of loss weight coefficients.
+if classes are <cite>str</cite>, returns weights in lexographically
+sorted order.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.trainer.cross_entropy">
+<code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">cross_entropy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pred_</span></em>, <em class="sig-param"><span class="n">label</span></em>, <em class="sig-param"><span class="n">class_weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sample_weight</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reduction</span><span class="o">=</span><span class="default_value">'mean'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.cross_entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute cross entropy loss for prediction outputs
+and potentially non-binary targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pred_</strong> (<em>torch.FloatTensor</em>) – [Batch, C] model outputs.</p></li>
+<li><p><strong>label</strong> (<em>torch.FloatTensor</em>) – [Batch, C] labels. may not necessarily be one-hot,
+but must satisfy simplex criterion.</p></li>
+<li><p><strong>class_weight</strong> (<em>torch.FloatTensor</em>) – [C,] relative weights for each of the output classes.
+useful for increasing attention to underrepresented
+classes.</p></li>
+<li><p><strong>reduction</strong> (<em>str</em>) – reduction method across the batch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>loss</strong> – mean cross-entropy loss across the batch indices.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Crossentropy is defined as:</p>
+<div class="math notranslate nohighlight">
+\[H(P, Q) = -\Sum_{k \in K} P(k) log(Q(k))\]</div>
+<p>where P, Q are discrete probability distributions defined
+with a common support K.</p>
+<p class="rubric">References</p>
+<p>See for class weight computation:
+<a class="reference external" href="https://pytorch.org/docs/stable/nn.html#crossentropyloss">https://pytorch.org/docs/stable/nn.html#crossentropyloss</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.trainer.InterpolationConsistencyLoss">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">InterpolationConsistencyLoss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">unsup_criterion</span></em>, <em class="sig-param"><span class="n">sup_criterion</span></em>, <em class="sig-param"><span class="n">decay_coef</span><span class="o">=</span><span class="default_value">0.9997</span></em>, <em class="sig-param"><span class="n">mean_teacher</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">augment</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">teacher_eval</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">teacher_bn_running_stats</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.InterpolationConsistencyLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.trainer.sharpen_labels">
+<code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">sharpen_labels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q</span></em>, <em class="sig-param"><span class="n">T</span><span class="o">=</span><span class="default_value">0.5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.sharpen_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduce the entropy of a categorical label using a
+temperature adjustment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> (<em>torch.FloatTensor</em>) – [N, C] pseudolabel.</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – temperature parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_s</strong> – [C,] sharpened pseudolabel.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[S(q, T) = q_i^{1/T} / \sum_j^L q_j^{1/T}\]</div>
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.trainer.MixMatchLoss">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">MixMatchLoss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_augmentations</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">T</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">augment_pseudolabels</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">pseudolabel_min_confidence</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.MixMatchLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scnym.trainer.InterpolationConsistencyLoss" title="scnym.trainer.InterpolationConsistencyLoss"><code class="xref py py-class docutils literal notranslate"><span class="pre">scnym.trainer.InterpolationConsistencyLoss</span></code></a></p>
+<p>Compute the MixMatch Loss given a batch of labeled
+and unlabeled examples.</p>
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.n_augmentations">
+<code class="sig-name descname">n_augmentations</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.n_augmentations" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of augmentated samples to average across when
+computing pseudolabels.
+default = 2 from MixMatch paper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.T">
+<code class="sig-name descname">T</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.T" title="Permalink to this definition">¶</a></dt>
+<dd><p>temperature parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.augment_pseudolabels">
+<code class="sig-name descname">augment_pseudolabels</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.augment_pseudolabels" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform augmentations during pseudolabel generation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.pseudolabel_min_confidence">
+<code class="sig-name descname">pseudolabel_min_confidence</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.pseudolabel_min_confidence" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum confidence to compute a loss for a given pseudolabeled
+example. examples below this confidence threshold will be given
+<cite>0</cite> loss. see the <cite>FixMatch</cite> paper for discussion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.teacher">
+<code class="sig-name descname">teacher</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.teacher" title="Permalink to this definition">¶</a></dt>
+<dd><p>teacher model for pseudolabeling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>nn.Module</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.running_confidence_scores">
+<code class="sig-name descname">running_confidence_scores</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.running_confidence_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>[n_batches_to_store,] (torch.Tensor, torch.Tensor,) of unlabeled
+example (Confident_Bool, BestConfidenceScore) tuples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.trainer.MixMatchLoss.n_batches_to_store">
+<code class="sig-name descname">n_batches_to_store</code><a class="headerlink" href="#scnym.trainer.MixMatchLoss.n_batches_to_store" title="Permalink to this definition">¶</a></dt>
+<dd><p>determines how many batches to keep in <cite>running_confidence_scores</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.trainer.DANLoss">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">DANLoss</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dan_criterion</span></em>, <em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">use_conf_pseudolabels</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">scale_loss_pseudoconf</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.DANLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Compute a domain adaptation network (DAN) loss.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.trainer.ICLWeight">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.trainer.</code><code class="sig-name descname">ICLWeight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ramp_epochs</span></em>, <em class="sig-param"><span class="n">burn_in_epochs</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">max_unsup_weight</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">sigmoid</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.trainer.ICLWeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interpret.html" class="btn btn-neutral float-right" title="scNym/interpret Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pythonapi.html" class="btn btn-neutral float-left" title="scNym/api Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jacob C. Kimmel, David R. Kelley
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

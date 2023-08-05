@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scNym/api Module &mdash; scNym 0.2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> scNym
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Module Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">scNym</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>scNym/api Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/fullapi/pythonapi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scnym.api">
+<span id="scnym-api-module"></span><h1>scNym/api Module<a class="headerlink" href="#module-scnym.api" title="Permalink to this headline">¶</a></h1>
+<p>Classify cell identities using scNym</p>
+<p>scnym_api() is the main API endpoint for users.
+This function allows for training and prediction using scnym_train()
+and scnym_predict(). Both of these functions will be infrequently
+accessed by users.</p>
+<p>get_pretrained_weights() is a wrapper function that downloads pretrained
+weights from our cloud storage bucket.
+atlas2target() downloads preprocessed reference datasets and concatenates
+them onto a user supplied target dataset.</p>
+<dl class="py function">
+<dt id="scnym.api.scnym_api">
+<code class="sig-prename descclassname">scnym.api.</code><code class="sig-name descname">scnym_api</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">adata</span></em>, <em class="sig-param"><span class="n">task</span><span class="o">=</span><span class="default_value">'train'</span></em>, <em class="sig-param"><span class="n">groupby</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">out_path</span><span class="o">=</span><span class="default_value">'./scnym_outputs'</span></em>, <em class="sig-param"><span class="n">trained_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">'new_identity_discovery'</span></em>, <em class="sig-param"><span class="n">key_added</span><span class="o">=</span><span class="default_value">'scNym'</span></em>, <em class="sig-param"><span class="n">copy</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.api.scnym_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>scNym: Semi-supervised adversarial neural networks for
+single cell classification <span id="id1">[Kimmel2020]</span>.</p>
+<p>scNym is a cell identity classifier that transfers annotations from one
+single cell experiment to another. The model is implemented as a neural
+network that employs MixMatch semi-supervision and a domain adversary to
+take advantage of unlabeled data during training. scNym offers superior
+performance to many baseline single cell identity classification methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>adata</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AnnData</span></code>) – Annotated data matrix used for training or prediction.</p></li>
+<li><p><strong>task</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Task to perform, either “train” or “predict”.
+If “train”, uses <cite>adata</cite> as labeled training data.
+If “predict”, uses <cite>trained_model</cite> to infer cell identities for
+observations in <cite>adata</cite>.</p></li>
+<li><p><strong>groupby</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Column in <cite>adata.obs</cite> that contains cell identity annotations.
+Values of <cite>“Unlabeled”</cite> indicate that a given cell should be used
+only as unlabeled data during training.</p></li>
+<li><p><strong>out_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Path to a directory for saving scNym model weights and training logs.</p></li>
+<li><p><strong>trained_model</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – Used when <cite>task==”predict”’.
+Path to the output directory of an scNym training run
+or a string specifying a pretrained model.
+Pretrained model strings are f”pretrained_{species}” where
+species is one of `{“human”, “mouse”, “rat”}</cite>.
+Providing a pretrained model string will download pre-trained weights
+and predict directly on the target data, without additional training.</p></li>
+<li><p><strong>config</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – <p>Configuration name or dictionary of configuration of parameters.
+Pre-defined configurations:</p>
+<blockquote>
+<div><p>”new_identity_discovery” - Default. Employs pseudolabel thresholding to
+allow for discovery of new cell identities in the target dataset using
+scNym confidence scores.
+“no_new_identity” - Assumes all cells in the target data belong to one
+of the classes in the training data. Recommended to improve performance
+when this assumption is valid.</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>key_added</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Key added to <cite>adata.obs</cite> with scNym predictions if <cite>task==”predict”</cite>.</p></li>
+<li><p><strong>copy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – copy the AnnData object before predicting cell types.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">AnnData</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>Depending on <cite>copy</cite>, returns or updates <cite>adata</cite> with the following fields.</p></li>
+<li><p><strong>`X_scnym`</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, (<code class="xref py py-attr docutils literal notranslate"><span class="pre">obsm</span></code>, shape=(n_samples, n_hidden), dtype <cite>float</cite>)) – scNym embedding coordinates of data.</p></li>
+<li><p><strong>`scNym`</strong> ((<cite>adata.obs</cite>, dtype <cite>str</cite>)) – scNym cell identity predictions for each observation.</p></li>
+<li><p><strong>`scNym_train_results`</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>, (<code class="xref py py-attr docutils literal notranslate"><span class="pre">uns</span></code>)) – results of scNym model training.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">scanpy</span> <span class="k">as</span> <span class="nn">sc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scnym.api</span> <span class="kn">import</span> <span class="n">scnym_api</span><span class="p">,</span> <span class="n">atlas2target</span>
+</pre></div>
+</div>
+<p><strong>Loading Data and preparing labels</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">adata</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">kang17</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">target_bidx</span> <span class="o">=</span> <span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;stim&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;stim&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;cell&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="p">[</span><span class="s1">&#39;cell&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">adata</span><span class="o">.</span><span class="n">obs</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">target_bidx</span><span class="p">,</span> <span class="s1">&#39;cell&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Unlabeled&#39;</span>
+</pre></div>
+</div>
+<p><strong>Train an scNym model</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scnym_api</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">task</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;clusters&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">out_path</span><span class="o">=</span><span class="s1">&#39;./scnym_outputs&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">config</span><span class="o">=</span><span class="s1">&#39;no_new_identity&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Predict cell identities with the trained scNym model</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path_to_model</span> <span class="o">=</span> <span class="s1">&#39;./scnym_outputs/&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scnym_api</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">task</span><span class="o">=</span><span class="s1">&#39;predict&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;scNym&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">trained_model</span><span class="o">=</span><span class="n">path_to_model</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">config</span><span class="o">=</span><span class="s1">&#39;no_new_identity&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Predict cell identities with a pretrained scNym model</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scnym_api</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">task</span><span class="o">=</span><span class="s1">&#39;predict&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;scNym&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">trained_model</span><span class="o">=</span><span class="s1">&#39;pretrained_human&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">config</span><span class="o">=</span><span class="s1">&#39;no_new_identity&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Perform semi-supervised training with an atlas</strong></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">joint_adata</span> <span class="o">=</span> <span class="n">atlas2target</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">species</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">key_added</span><span class="o">=</span><span class="s1">&#39;annotations&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scnym_api</span><span class="p">(</span>
+<span class="gp">... </span>  <span class="n">adata</span><span class="o">=</span><span class="n">joint_adata</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">task</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">groupby</span><span class="o">=</span><span class="s1">&#39;annotations&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">out_path</span><span class="o">=</span><span class="s1">&#39;./scnym_outputs&#39;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="n">config</span><span class="o">=</span><span class="s1">&#39;no_new_identity&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.api.scnym_train">
+<code class="sig-prename descclassname">scnym.api.</code><code class="sig-name descname">scnym_train</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">adata</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.api.scnym_train" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train an scNym model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>adata</strong> (<em>AnnData</em>) – [Cells, Genes] experiment containing annotated
+cells to train on.</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – configuration options.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>None.</em></p></li>
+<li><p>Saves model outputs to <cite>config[“out_path”]</cite> and adds model results</p></li>
+<li><p>to <cite>adata.uns[“scnym_train_results”]</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method should only be directly called by advanced users.
+Most users should use <cite>scnym_api</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#scnym.api.scnym_api" title="scnym.api.scnym_api"><code class="xref py py-func docutils literal notranslate"><span class="pre">scnym_api()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.api.scnym_predict">
+<code class="sig-prename descclassname">scnym.api.</code><code class="sig-name descname">scnym_predict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">adata</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.api.scnym_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predict cell identities using an scNym model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>adata</strong> (<em>AnnData</em>) – [Cells, Genes] experiment containing annotated
+cells to train on.</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – configuration options.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None. Adds <cite>adata.obs[config[“key_added”]]</cite> and <cite>adata.obsm[“X_scnym”]</cite>.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method should only be directly called by advanced users.
+Most users should use <cite>scnym_api</cite>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#scnym.api.scnym_api" title="scnym.api.scnym_api"><code class="xref py py-func docutils literal notranslate"><span class="pre">scnym_api()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.api.get_pretrained_weights">
+<code class="sig-prename descclassname">scnym.api.</code><code class="sig-name descname">get_pretrained_weights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trained_model</span></em>, <em class="sig-param"><span class="n">out_path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.api.get_pretrained_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the name of a set of pretrained model weights,
+fetch weights from GCS and return the model state dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trained_model</strong> (<em>str</em>) – the name of a pretrained model to use, formatted as
+“pretrained_{species}”.
+species should be one of {“human”, “mouse”, “rat”}.</p></li>
+<li><p><strong>out_path</strong> (<em>str</em>) – path for saving model weights and outputs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>species</strong> (<em>str</em>) – species parsed from the trained model name.</p></li>
+<li><p><em>Saves “{out_path}/00_best_model_weights.pkl” and</em></p></li>
+<li><p><em>”{out_path}/scnym_train_results.pkl”.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Requires an internet connection to download pre-trained weights.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="scnym.api.atlas2target">
+<code class="sig-prename descclassname">scnym.api.</code><code class="sig-name descname">atlas2target</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">adata</span></em>, <em class="sig-param"><span class="n">species</span></em>, <em class="sig-param"><span class="n">key_added</span><span class="o">=</span><span class="default_value">'annotations'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.api.atlas2target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download a preprocessed cell atlas dataset and
+append your new dataset as a target to allow for
+semi-supervised scNym training.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>adata</strong> (<em>anndata.AnnData</em>) – [Cells, Features] experiment to use as a target
+dataset.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>joint_adata</strong> – [Cells, Features] experiment concatenated with a
+preprocessed cell atlas reference dataset.
+Annotations from the atlas are copied to <cite>.obs[key_added]</cite>
+and all cells in the target dataset <cite>adata</cite> are labeled
+with the special “Unlabeled” token.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>anndata.AnnData</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">adata</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">pbmc3k</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">joint_adata</span> <span class="o">=</span> <span class="n">scnym</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">atlas2target</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">adata</span><span class="o">=</span><span class="n">adata</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">species</span><span class="o">=</span><span class="s1">&#39;human&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">key_added</span><span class="o">=</span><span class="s1">&#39;annotations&#39;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>Requires an internet connection to download reference datasets.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jacob C. Kimmel, David R. Kelley
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scNym/model Module &mdash; scNym 0.2.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> scNym
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Interactive API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#model-specification">Model Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#model-trainer">Model Trainer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#model-interpretation">Model Interpretation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#data-loaders">Data Loaders</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">scNym</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>scNym/model Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/fullapi/model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-scnym.model">
+<span id="scnym-model-module"></span><h1>scNym/model Module<a class="headerlink" href="#module-scnym.model" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="scnym.model.ResBlock">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.model.</code><code class="sig-name descname">ResBlock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_inputs</span></em>, <em class="sig-param"><span class="n">n_hidden</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.ResBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Residual block.</p>
+<p class="rubric">References</p>
+<p>Deep Residual Learning for Image Recognition
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+arXiv:1512.03385</p>
+<dl class="py method">
+<dt id="scnym.model.ResBlock.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.ResBlock.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Residual block forward pass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.FloatTensor</em>) – [Batch, self.n_inputs]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>o</strong> – [Batch, self.n_hidden]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.model.CellTypeCLF">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.model.</code><code class="sig-name descname">CellTypeCLF</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_genes</span></em>, <em class="sig-param"><span class="n">n_cell_types</span></em>, <em class="sig-param"><span class="n">n_hidden</span><span class="o">=</span><span class="default_value">256</span></em>, <em class="sig-param"><span class="n">n_layers</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">init_dropout</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">residual</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">batch_norm</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">track_running_stats</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.CellTypeCLF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Cell type classifier from expression data.</p>
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.n_genes">
+<code class="sig-name descname">n_genes</code><a class="headerlink" href="#scnym.model.CellTypeCLF.n_genes" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of input genes in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.n_cell_types">
+<code class="sig-name descname">n_cell_types</code><a class="headerlink" href="#scnym.model.CellTypeCLF.n_cell_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of output classes in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.n_hidden">
+<code class="sig-name descname">n_hidden</code><a class="headerlink" href="#scnym.model.CellTypeCLF.n_hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of hidden units in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.n_layers">
+<code class="sig-name descname">n_layers</code><a class="headerlink" href="#scnym.model.CellTypeCLF.n_layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of hidden layers in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.init_dropout">
+<code class="sig-name descname">init_dropout</code><a class="headerlink" href="#scnym.model.CellTypeCLF.init_dropout" title="Permalink to this definition">¶</a></dt>
+<dd><p>dropout proportion prior to the first layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLF.residual">
+<code class="sig-name descname">residual</code><a class="headerlink" href="#scnym.model.CellTypeCLF.residual" title="Permalink to this definition">¶</a></dt>
+<dd><p>use residual connections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.model.CellTypeCLF.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.CellTypeCLF.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a forward pass through the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.FloatTensor</em>) – [Batch, self.n_genes]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pred</strong> – [Batch, self.n_cell_types]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.model.GradReverse">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.model.</code><code class="sig-name descname">GradReverse</code><a class="headerlink" href="#scnym.model.GradReverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.function.Function</span></code></p>
+<p>Layer that reverses and scales gradients before
+passing them up to earlier ops in the computation graph
+during backpropogation.</p>
+<dl class="py method">
+<dt id="scnym.model.GradReverse.forward">
+<em class="property">static </em><code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">weight</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.GradReverse.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a no-op forward pass that stores a weight for later
+gradient scaling during backprop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>torch.FloatTensor</em>) – [Batch, Features]</p></li>
+<li><p><strong>weight</strong> (<em>float</em>) – weight for scaling gradients during backpropogation.
+stored in the “context” ctx variable.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>We subclass <cite>Function</cite> and use only &#64;staticmethod as specified
+in the newstyle pytorch autograd functions.
+<a class="reference external" href="https://pytorch.org/docs/stable/autograd.html#torch.autograd.Function">https://pytorch.org/docs/stable/autograd.html#torch.autograd.Function</a></p>
+<p>We define a “context” ctx of the class that will hold any values
+passed during forward for use in the backward pass.</p>
+<p><cite>x.view_as(x)</cite> and <cite>*1</cite> are necessary so that <cite>GradReverse</cite>
+is actually called
+<cite>torch.autograd</cite> tries to optimize backprop and
+excludes no-ops, so we have to trick it :)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.model.GradReverse.backward">
+<em class="property">static </em><code class="sig-name descname">backward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ctx</span></em>, <em class="sig-param"><span class="n">grad_output</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.GradReverse.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return gradients</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>rev_grad</strong> (<em>torch.FloatTensor</em>) – reversed gradients scaled by <cite>weight</cite> passed in <cite>.forward()</cite></p></li>
+<li><p><strong>None</strong> (<em>None</em>) – a dummy “gradient” required since we passed a weight float
+in <cite>.forward()</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.model.DANN">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.model.</code><code class="sig-name descname">DANN</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">n_domains</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">weight</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">n_layers</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.DANN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Build a domain adaptation neural network</p>
+<dl class="py method">
+<dt id="scnym.model.DANN.set_rev_grad_weight">
+<code class="sig-name descname">set_rev_grad_weight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weight</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.DANN.set_rev_grad_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the weight term used after reversing gradients</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.model.DANN.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.DANN.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a forward pass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.FloatTensor</em>) – [Batch, Features] input.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(&lt;class ‘torch.FloatTensor’&gt;, &lt;class ‘torch.FloatTensor’&gt;)</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>domain_pred</strong> (<em>torch.FloatTensor</em>) – [Batch, n_domains] logits.</p></li>
+<li><p><strong>x_embed</strong> (<em>torch.FloatTensor</em>) – [Batch, n_hidden]</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="scnym.model.CellTypeCLFConditional">
+<em class="property">class </em><code class="sig-prename descclassname">scnym.model.</code><code class="sig-name descname">CellTypeCLFConditional</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_genes</span></em>, <em class="sig-param"><span class="n">n_tissues</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.CellTypeCLFConditional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scnym.model.CellTypeCLF" title="scnym.model.CellTypeCLF"><code class="xref py py-class docutils literal notranslate"><span class="pre">scnym.model.CellTypeCLF</span></code></a></p>
+<p>Conditional vartiaton of the <cite>CellTypeCLF</cite></p>
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLFConditional.n_genes">
+<code class="sig-name descname">n_genes</code><a class="headerlink" href="#scnym.model.CellTypeCLFConditional.n_genes" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of the input features corresponding to genes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="scnym.model.CellTypeCLFConditional.n_tissues">
+<code class="sig-name descname">n_tissues</code><a class="headerlink" href="#scnym.model.CellTypeCLFConditional.n_tissues" title="Permalink to this definition">¶</a></dt>
+<dd><p>length of the one-hot <cite>upper_group</cite> vector appended
+to inputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="scnym.model.CellTypeCLFConditional.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#scnym.model.CellTypeCLFConditional.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a forward pass through the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>torch.FloatTensor</em>) – [Batch, self.n_genes + self.n_tissues]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pred</strong> – [Batch, self.n_cell_types]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.FloatTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Jacob C. Kimmel, David R. Kelley
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

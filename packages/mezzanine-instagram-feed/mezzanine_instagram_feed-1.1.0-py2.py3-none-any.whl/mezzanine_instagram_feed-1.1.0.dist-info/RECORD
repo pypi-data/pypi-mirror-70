@@ -1,0 +1,12 @@
+instagramfeed/__init__.py,sha256=TCLvpQ12syuKwgfVBVl7D6qBeJwnta_g47uCEtgzd5Q,71
+instagramfeed/admin.py,sha256=12iWf2ot0TWvzbQU9bqqXdofAgjDFuE2vVU38e-3SAc,81
+instagramfeed/apps.py,sha256=RdG9lFXpsJL2LBKNuIjc97Ci8KP2yMKKhQ6xM8YVwCM,189
+instagramfeed/models.py,sha256=12iWf2ot0TWvzbQU9bqqXdofAgjDFuE2vVU38e-3SAc,81
+instagramfeed/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+instagramfeed/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+instagramfeed/templatetags/instagramfeed_tags.py,sha256=B1_d4OPUpjdnPl4DiTsRq6kMbwLwBSKgJaW-bngPOcs,2423
+mezzanine_instagram_feed-1.1.0.dist-info/LICENSE,sha256=BREIG78g7BxoW6IyoWnLN3jteTr45tCmiytlkPjRsps,1074
+mezzanine_instagram_feed-1.1.0.dist-info/METADATA,sha256=TR26icGXfKoltEVl2BjIKbXQwO68zjXjghx0zTObQe8,2467
+mezzanine_instagram_feed-1.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+mezzanine_instagram_feed-1.1.0.dist-info/top_level.txt,sha256=LjQlFILKH25vWDB5UvddAlzeK64kSZCMQpeSSMlnv3s,14
+mezzanine_instagram_feed-1.1.0.dist-info/RECORD,,

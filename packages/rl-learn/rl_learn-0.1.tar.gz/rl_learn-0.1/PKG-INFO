@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: rl_learn
+Version: 0.1
+Summary: A package to accompany the book "Reinforcement Learning: A Python Introduction"
+Home-page: https://github.com/gahogg/rl_learn.git
+Author: Gregory Hogg
+Author-email: gahogg@uwaterloo.ca
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

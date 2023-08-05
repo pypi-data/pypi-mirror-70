@@ -1,0 +1,11 @@
+README.md
+setup.py
+StringCalculator/Calculator.py
+StringCalculator/MathOperators.py
+StringCalculator/MathSegmentClass.py
+StringCalculator/MathTerm.py
+StringCalculator/__init__.py
+StringCalculator.egg-info/PKG-INFO
+StringCalculator.egg-info/SOURCES.txt
+StringCalculator.egg-info/dependency_links.txt
+StringCalculator.egg-info/top_level.txt

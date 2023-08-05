@@ -1,0 +1,12 @@
+radioactivedecay/__init__.py,sha256=2Cwa33VFeo6GwbR3GNlf-BXUrzGv1BVBJe6Dtb06HlU,72
+radioactivedecay/decaydata.py,sha256=7zkhYAaU96bZZTAn0BqMsApDWWhgpZB_pqg8Tr9siv8,1509
+radioactivedecay/decayfunctions.py,sha256=7E6_DZs_-4r72DwW2pwO6_eA87NnanOYx3plYXfKb88,4920
+radioactivedecay/icrp107/__init__.py,sha256=CyLa44eSrt1FsbCKYCX4GrQjX-SkBzik2NUUurl-QuI,23
+radioactivedecay/icrp107/c.npz,sha256=HDv7A4rJPIresAizlKdKWV0P4wdTWFk2gqc3lxSaxmA,35795
+radioactivedecay/icrp107/cinverse.npz,sha256=Ob1gI9BqjkIA05llAs3AvTv3RmZU9i3kvjrEXm8Hz0U,33149
+radioactivedecay/icrp107/radionuclide_key.csv,sha256=5Cal5WyunA1bNnlttC_qncaIcbP02xL7ioOBvuWbpS4,42504
+radioactivedecay-0.0.1.dist-info/LICENSE,sha256=A7QTwaB4cRwdcZby5xHYwFXbJ3RDGBI5Xbv_sL9wFmU,2703
+radioactivedecay-0.0.1.dist-info/METADATA,sha256=WuijJdL4HXN68bETIMZhNdCMpX10_MGlyIpuT5aHHyA,3437
+radioactivedecay-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+radioactivedecay-0.0.1.dist-info/top_level.txt,sha256=lwQrduM_mhB8yZk6J-NoxE5c5QvACbj5q1EVrB8mcrM,17
+radioactivedecay-0.0.1.dist-info/RECORD,,

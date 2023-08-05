@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wrapml
+Version: 0.0.12
+Summary: Simplifying ML.
+Home-page: https://github.com/bugo99iot/wrapml
+Author: Ugo Bee
+Author-email: ugo.bertello@gmail.com
+License: MIT
+Description: # WrapML
+        
+        Everything You Always Wanted to Know About Machine Learning* (*But Were Afraid to Ask)
+        
+Keywords: machine learning,deep learning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

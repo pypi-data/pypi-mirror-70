@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+django_material_icon_widget.egg-info/PKG-INFO
+django_material_icon_widget.egg-info/SOURCES.txt
+django_material_icon_widget.egg-info/dependency_links.txt
+django_material_icon_widget.egg-info/top_level.txt
+icon_picker_widget/__init__.py
+icon_picker_widget/apps.py
+icon_picker_widget/widgets.py
+icon_picker_widget/static/icon_picker_widget/css/style.css
+icon_picker_widget/static/icon_picker_widget/js/npick.js

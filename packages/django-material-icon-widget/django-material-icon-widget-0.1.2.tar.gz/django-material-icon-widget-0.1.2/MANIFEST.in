@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include icon_picker_widget/static/icon_picker_widget/css/style.css
+include icon_picker_widget/static/icon_picker_widget/js/npick.js

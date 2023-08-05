@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/akashjeez.egg-info/PKG-INFO
+src/akashjeez.egg-info/SOURCES.txt
+src/akashjeez.egg-info/dependency_links.txt
+src/akashjeez.egg-info/requires.txt
+src/akashjeez.egg-info/top_level.txt

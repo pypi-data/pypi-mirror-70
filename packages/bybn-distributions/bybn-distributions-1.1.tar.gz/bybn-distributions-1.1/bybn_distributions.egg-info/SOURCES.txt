@@ -1,0 +1,10 @@
+setup.py
+bybn-distributions/Binomialdistribution.py
+bybn-distributions/Gaussiandistribution.py
+bybn-distributions/Generaldistribution.py
+bybn-distributions/__init__.py
+bybn_distributions.egg-info/PKG-INFO
+bybn_distributions.egg-info/SOURCES.txt
+bybn_distributions.egg-info/dependency_links.txt
+bybn_distributions.egg-info/not-zip-safe
+bybn_distributions.egg-info/top_level.txt

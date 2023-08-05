@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: typing-game
+Version: 0.3.0
+Summary: Typing Game
+Home-page: https://github.com/CarsonSlovoka/typing-game/tree/master
+Author: Carson
+Author-email: jackparadise520a@gmail.com
+License: MIT
+Download-URL: https://github.com/CarsonSlovoka/typing-game/tree/master/tarball/v0.3.0
+Keywords: typing,game,pygame,pygame-menu
+Platform: UNKNOWN
+Classifier: Topic :: Education
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6.2,
+Description-Content-Type: text/x-rst
+Requires-Dist: pygame
+Requires-Dist: pygame-menu
+
+==================
+Typing Game
+==================
+
+This is a set of typing-game.
+
+Install
+============
+
+``pip install typing-game``
+
+USAGE
+------
+
+open the command line:
+
+    ``typing-game config.py``
+
+.. note::
+
+    **conf.py** is defined by yourself. About the contents of ``config.py``, please see `here <https://github.com/CarsonSlovoka/typing-game/blob/master/typing_drop_down/config.py>`_.
+
+an example of conf.py:
+
+.. code-block:: python
+
+    from pathlib import Path
+
+    __this_dir__ = Path(str(Path('.').parent.absolute()))  # do not use the __file__
+
+    # TypingDropDown
+    DROPDOWN_TXT = __this_dir__ / Path('words.txt')  # r"C:\\...\words.txt"
+
+    # TypingArticle
+    ARTICLE_DIR = __this_dir__ / Path('article')  # The files in which is you want to type.
+
+    WIDTH, HEIGHT = (1600, 600)
+
+
+.. note::
+
+    Each file on the articles, which name should start with a number and use the dot to split the name.
+
+    The file extension can be in any format, not limited to text files.
+
+
+DEMO
+==========
+
+.. image:: https://raw.githubusercontent.com/CarsonSlovoka/typing-game/master/typing_drop_down/_static/demo/home.png
+.. image:: https://raw.githubusercontent.com/CarsonSlovoka/typing-game/master/typing_drop_down/_static/demo/dropdown.png
+.. image:: https://raw.githubusercontent.com/CarsonSlovoka/typing-game/master/typing_drop_down/_static/demo/stage.png
+.. image:: https://raw.githubusercontent.com/CarsonSlovoka/typing-game/master/typing_drop_down/_static/demo/article.png
+
+
+Contributing
+===============
+
+If you want to contribute, please use **release**\'s branch as the main branch,
+The **master** branch is just purely used to create a GitHub page.
+
+Be sure to **write tests** for new features. If you have any difficulties, you can ask me or discuss with me. I am glad if you want to join us.
+
+By the way, I'm very friendly!
+
+
+More
+===========
+
+See the `documentation <https://carsonslovoka.github.io/typing-game/>`_
+
+

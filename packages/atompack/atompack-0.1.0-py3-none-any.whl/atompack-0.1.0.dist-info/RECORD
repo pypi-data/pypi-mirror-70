@@ -1,0 +1,13 @@
+atompack/__init__.py,sha256=l0K7wSet52JCbvYSzr5f2DrzVfqsbVCjDB3mtx7lOkE,182
+atompack/atom.py,sha256=Izr5aoArPQek3xrcX8TxgLiFh0y7p_U1ZH1Oro6Gixk,5680
+atompack/atom_test.py,sha256=220pE6b3x23-H-yHeyiX7pR3GYur1_jpQ6D10qPxh2Q,2041
+atompack/crystal.py,sha256=g2ORXxsmOEO59bZSslXPAnoKf8JhTVCG0XihqYxgFK8,11086
+atompack/crystal_test.py,sha256=k-Si2uUxlgmBS4Zp2KZXHt3WvCdbJDa-AL1_hsPP45g,3716
+atompack/error.py,sha256=mI6YylGnQp_ydpjtwQCdKpG_RgrOLfd1wuXMCkL2rQA,3862
+atompack/internal.py,sha256=7UBmnq-XahklQ33Q5kRI5rQYvtnKMu1h9t9ZvxccEPc,2467
+atompack/internal_test.py,sha256=a6LIt2YsKRsfAmLWjPUMIQ71_PZSbPB14pc-ofbySlI,1300
+atompack-0.1.0.dist-info/LICENSE,sha256=g1qie3CZ85tDGAPMjsOzEjDw-urw-hS9mKAl4UDyLY8,1071
+atompack-0.1.0.dist-info/METADATA,sha256=6-rwyjiAQgbzKs8B5a6wyb4nohWAuI9HUQ_bwOnhxRU,421
+atompack-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+atompack-0.1.0.dist-info/top_level.txt,sha256=N-YcQP9FXeqlecobFPdTjQ2bIZ4VFYHGcD62Wb02ki4,9
+atompack-0.1.0.dist-info/RECORD,,

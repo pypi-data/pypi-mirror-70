@@ -1,0 +1,14 @@
+updator/__init__.py,sha256=qHOA-XI4L2seK2cyLD6JTxmoJFsTZfbzmPzKsgtAwMo,127
+updator/__main__.py,sha256=EvWe994BiapNXt-SnHPGQ_DyEAD1JsBY18cws8eF9ZQ,26
+updator/astConverter.py,sha256=Bpp8sTLYisM0Ci_kHrqcUWdPZPawr3Jmpj7jaAc3Zok,3951
+updator/astPatternBuilder.py,sha256=mxh6s8LCELDzgZON1qguHAq_SZhpIlg1mguFQ19yues,3137
+updator/astcompare.py,sha256=KtDKLJmrv_rdyiM0v-vPOX-lLnArbQh5e3gymuKkzQM,3859
+updator/dbInterface.py,sha256=IZz30GhQ7LbXPLxLvpS5YKE6Z8lxvNEgYw9LC1MIX7o,1096
+updator/fsInterface.py,sha256=KpbSMOq9br34S0wl40qtK2lLMZ7bqK39f4NZzq4TAqQ,281
+updator/pasudoCode.py,sha256=7l7RysVsiXLZImsOWXFAtrahE1r4e_ek3LwbRoZQ-TA,1890
+updator/updator.py,sha256=5SUuIP9Z_xW1iw7BBKXX0-VVdOotcg7CzI2a4sFl314,6925
+updator-0.1.5.dist-info/entry_points.txt,sha256=m-BOCZ9k0z8P2tKNVFt9P1w9wDDgwTqVdVKhwpGjqH4,40
+updator-0.1.5.dist-info/LICENSE,sha256=BvY6CiWudsWcJmBmOJNQp2-A9w5OT1RYx-PUowWbc0Y,1075
+updator-0.1.5.dist-info/WHEEL,sha256=GLESb-AiO9TFjbXrEA7UrNl4dwWlkXoKZg6N6Vg0OJg,81
+updator-0.1.5.dist-info/METADATA,sha256=NPoPWf3cH3zale3jKCG5Mj1g-xVgAXxWUJKB36vJ-CQ,1205
+updator-0.1.5.dist-info/RECORD,,

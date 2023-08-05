@@ -1,0 +1,3 @@
+[console_scripts]
+tiepy = tiepy.cli:main
+

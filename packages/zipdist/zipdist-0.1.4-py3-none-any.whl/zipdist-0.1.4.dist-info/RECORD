@@ -1,0 +1,16 @@
+zipdist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zipdist/conversions.py,sha256=x-BD_3KmIg-Cl_XV8f8PSs9RjC_MAnfvxFHlO_6KAdo,1857
+zipdist/extraction.py,sha256=cYgfMCb6cFT2IKsttuPgMWkrq0G7G5MbuW2tJu6kilY,2433
+zipdist/zip.py,sha256=WxHwazPo1mU_ZyevOfbkeL3EALprR05M6jPVHsms-zM,16199
+zipdist/zip2.py,sha256=dBAM61JIbWBbbCWCvURfZIz5Hdn1970B0iZd3OeLsKU,17964
+zipdist/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zipdist/tests/test_conversions.py,sha256=Ouj8axephOZjvGSQnz2CZVyFTmcd8_xIr7JaK6lwxCU,1320
+zipdist/tests/test_extraction.py,sha256=j7Cqp0Q6ZdDpeloO-Yvre_mTurfUkudtegX0t9bDOaM,3679
+zipdist/tests/test_tar.py,sha256=_Ao-pJD3TaJYvWGe-SicFRlcU9ISkx-NTLymNWo-xbc,1182
+zipdist/tests/test_zip.py,sha256=QeQ9cqqHzl_POSuxJJz-t94CdqJcVXp7EJUxr1a8Opk,8394
+zipdist/tests/test_zip2.py,sha256=bzldfPo7ojmOBBELm6faHQm08KzuGXivKX4cbo23Sv4,3557
+zipdist-0.1.4.dist-info/LICENSE,sha256=g4nyZ9li7qFT8f6u0mlwH7ahZsofIzt3O_rJ02AiitU,1080
+zipdist-0.1.4.dist-info/METADATA,sha256=w_YEIS4h3uv_EvdnEYMzw_z6yoGbj5lYOYcoEPRZ61k,3766
+zipdist-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+zipdist-0.1.4.dist-info/top_level.txt,sha256=S_yAlGwxLjanS70LgAv7AR0d2Gjk_HUWUjWcThLVqno,8
+zipdist-0.1.4.dist-info/RECORD,,

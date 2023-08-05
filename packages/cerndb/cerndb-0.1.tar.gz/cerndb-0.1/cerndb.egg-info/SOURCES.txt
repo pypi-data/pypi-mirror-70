@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+bin/cerndb_example
+cerndb/__init__.py
+cerndb/config.py
+cerndb/log.py
+cerndb.egg-info/PKG-INFO
+cerndb.egg-info/SOURCES.txt
+cerndb.egg-info/dependency_links.txt
+cerndb.egg-info/requires.txt
+cerndb.egg-info/top_level.txt
+cerndb/cerndb/config.yaml

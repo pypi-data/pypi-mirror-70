@@ -1,0 +1,7 @@
+# Default configuraiton values
+log:
+  level: "INFO"
+  file: "/var/log/cerndb.log"
+  fmt: '[%(levelname)s %(asctime)s %(module)s:%(lineno)d] %(message)s'
+  datefmt: '%d/%b/%Y:%H:%M:%S %z'
+

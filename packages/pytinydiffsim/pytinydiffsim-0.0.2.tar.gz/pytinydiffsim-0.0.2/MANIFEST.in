@@ -1,0 +1,7 @@
+include MANIFEST.in *.txt
+include . *.h
+recursive-include data *
+recursive-include python *.py
+recursive-include third_party *.h
+recursive-include third_party *.hpp
+recursive-include third_party *.cpp

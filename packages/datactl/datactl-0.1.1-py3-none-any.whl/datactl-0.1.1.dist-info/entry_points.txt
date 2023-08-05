@@ -1,0 +1,3 @@
+[console_scripts]
+datactl=datactl.datactl:main
+

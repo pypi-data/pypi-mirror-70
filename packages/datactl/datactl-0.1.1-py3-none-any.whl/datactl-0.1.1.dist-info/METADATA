@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: datactl
+Version: 0.1.1
+Summary: 
+Author: Mohamed Cherkaoui
+Author-email: chermed@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: celery (>=4.4.2,<5.0.0)
+Requires-Dist: fire (>=0.3.1,<0.4.0)
+Requires-Dist: pendulum (>=2.1.0,<3.0.0)
+Requires-Dist: pika (>=1.1.0,<2.0.0)
+Requires-Dist: pymongo (>=3.10.1,<4.0.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Requires-Dist: redis (>=3.5.2,<4.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Requires-Dist: termcolor (>=1.1.0,<2.0.0)
+Requires-Dist: terminaltables (>=3.1.0,<4.0.0)
+Requires-Dist: toml (>=0.10.1,<0.11.0)

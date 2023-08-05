@@ -1,0 +1,13 @@
+README.rst
+setup.py
+tagword/__init__.py
+tagword/crawler/__init__.py
+tagword/crawler/crawler.py
+tagword/crawler/spiders/__init__.py
+tagword/crawler/spiders/spider.py
+tagword/crawler/spiders/ua.py
+tagword_crawler.egg-info/PKG-INFO
+tagword_crawler.egg-info/SOURCES.txt
+tagword_crawler.egg-info/dependency_links.txt
+tagword_crawler.egg-info/requires.txt
+tagword_crawler.egg-info/top_level.txt

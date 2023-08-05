@@ -1,0 +1,8 @@
+README.txt
+check_cloudwatch.py
+setup.py
+nagios_cloudwatch_plugin.egg-info/PKG-INFO
+nagios_cloudwatch_plugin.egg-info/SOURCES.txt
+nagios_cloudwatch_plugin.egg-info/dependency_links.txt
+nagios_cloudwatch_plugin.egg-info/requires.txt
+nagios_cloudwatch_plugin.egg-info/top_level.txt

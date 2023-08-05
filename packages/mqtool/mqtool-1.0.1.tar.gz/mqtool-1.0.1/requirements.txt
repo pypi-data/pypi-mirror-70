@@ -1,0 +1,13 @@
+#apscheduler
+#numpy
+#tensorflow==1.4
+requests
+opencv-python==3.4.1.15
+keras==2.1.2
+numba
+scikit-image==0.15.0
+filterpy
+h5py
+kafka-python
+py3Fdfs
+sklearn

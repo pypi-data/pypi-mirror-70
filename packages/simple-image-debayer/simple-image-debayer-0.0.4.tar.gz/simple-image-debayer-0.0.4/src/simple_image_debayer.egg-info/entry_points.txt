@@ -1,0 +1,3 @@
+[console_scripts]
+sid-debayer = sid.debayer:sys_main
+

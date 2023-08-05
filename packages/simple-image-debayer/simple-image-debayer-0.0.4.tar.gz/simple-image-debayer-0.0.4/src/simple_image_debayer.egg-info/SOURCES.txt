@@ -1,0 +1,13 @@
+CHANGES.rst
+DESCRIPTION.rst
+MANIFEST.in
+README.md
+setup.py
+src/sid/__init__.py
+src/sid/debayer.py
+src/simple_image_debayer.egg-info/PKG-INFO
+src/simple_image_debayer.egg-info/SOURCES.txt
+src/simple_image_debayer.egg-info/dependency_links.txt
+src/simple_image_debayer.egg-info/entry_points.txt
+src/simple_image_debayer.egg-info/requires.txt
+src/simple_image_debayer.egg-info/top_level.txt

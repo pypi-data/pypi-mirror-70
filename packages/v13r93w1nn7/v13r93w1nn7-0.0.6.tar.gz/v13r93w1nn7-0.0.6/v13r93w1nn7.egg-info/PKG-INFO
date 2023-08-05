@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: v13r93w1nn7
+Version: 0.0.6
+Summary: extended version of the board game «Vier gewinnt»
+Home-page: https://github.com/patrickbucher/v13r93w1nn7
+Author: Patrick Bucher
+Author-email: patrick.bucher@mailbox.org
+License: UNKNOWN
+Description: # v13r93w1nn7
+        
+        Extended version of the board game «Vier gewinnt» (four in a row).
+        
+        Run the default version:
+        
+            ./v13r93w1nn7/game.py
+        
+        Run an extended version with additional neutral stones being placed at random positions:
+        
+            ./v13r93w1nn7/game.py --neutral
+        
+        Run an extended version that allows the field to be rotated by 90°:
+        
+            ./v13r93w1nn7/game.py --rotate
+        
+        Run an extended version that adds both features:
+        
+            ./v13r93w1nn7/game.py --neutral --rotate
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

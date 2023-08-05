@@ -1,0 +1,7 @@
+setup.py
+lykmmcv.egg-info/PKG-INFO
+lykmmcv.egg-info/SOURCES.txt
+lykmmcv.egg-info/dependency_links.txt
+lykmmcv.egg-info/top_level.txt
+mmCV/__init__.py
+mmCV/version.py

@@ -1,0 +1,10 @@
+setup.py
+baresipy/__init__.py
+baresipy/contacts.py
+baresipy.egg-info/PKG-INFO
+baresipy.egg-info/SOURCES.txt
+baresipy.egg-info/dependency_links.txt
+baresipy.egg-info/requires.txt
+baresipy.egg-info/top_level.txt
+baresipy/utils/__init__.py
+baresipy/utils/log.py

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nexsciTAP
+Version: 1.1.1
+Summary: NExScI VO Table Access Protocol (TAP) web service
+Home-page: https://github.com/Caltech-IPAC/TAP
+Author: Mihseh Kong
+Author-email: mihseh@ipac.caltech.edu
+License: LICENSE.txt
+Keywords: astronomy,database,web-service
+Platform: UNKNOWN
+Requires-Dist: ADQL
+Requires-Dist: spatial-index
+
+UNKNOWN
+
+

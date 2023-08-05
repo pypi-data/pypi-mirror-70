@@ -1,0 +1,6 @@
+pandas
+numpy
+pickle-mixin
+tensorflow
+pyemd
+google_drive_downloader

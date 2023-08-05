@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: retinaface
+Version: 0.0.3
+Summary: face detector
+Home-page: https://github.com/heewinkim/retinaface
+Author: HEESEUNG KIM
+Author-email: heewin.kim@gmail.com
+License: MIT
+Download-URL: https://github.com/heewinkim/retinaface/archive/master.zip
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Requires-Dist: tensorflow (==2.1.0)
+Requires-Dist: utilpack
+
+# [RetinaFace](https://github.com/heewinkim/retinaface)
+
+ tensorflow 2 - PyPI implement
+
+ reference : https://github.com/peteryuX/retinaface-tf2 
+
+----
+
+### INSTALL
+    $pip3 install refinaface
+
+### USEAGE
+
+
+

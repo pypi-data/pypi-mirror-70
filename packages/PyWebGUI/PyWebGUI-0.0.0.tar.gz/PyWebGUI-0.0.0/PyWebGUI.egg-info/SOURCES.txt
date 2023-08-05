@@ -1,0 +1,5 @@
+setup.py
+PyWebGUI.egg-info/PKG-INFO
+PyWebGUI.egg-info/SOURCES.txt
+PyWebGUI.egg-info/dependency_links.txt
+PyWebGUI.egg-info/top_level.txt

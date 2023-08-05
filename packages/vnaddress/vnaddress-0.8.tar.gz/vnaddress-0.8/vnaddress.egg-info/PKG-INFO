@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vnaddress
+Version: 0.8
+Summary: A package for parsing Vietnamese address
+Home-page: https://github.com/vantrong291/vn_address_standardizer
+Author: vantrong291
+Author-email: vantrong291@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

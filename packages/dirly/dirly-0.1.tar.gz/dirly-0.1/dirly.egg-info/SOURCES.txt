@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+dirly/__init__.py
+dirly/dirly.py
+dirly.egg-info/PKG-INFO
+dirly.egg-info/SOURCES.txt
+dirly.egg-info/dependency_links.txt
+dirly.egg-info/requires.txt
+dirly.egg-info/top_level.txt

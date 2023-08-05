@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: knotter
+Version: 0.3.1
+Summary: Implementation of Mapper algorithm for Topological Data Analysis
+Home-page: UNKNOWN
+Author: Kim Seonghyeon
+Author-email: kim.seonghyeon@outlook.com
+License: MIT
+Keywords: Topological Data Analysis,Visualization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: aiohttp (>=0.16.5)
+Requires-Dist: pandas (>=0.16.2)
+Requires-Dist: numpy (>=1.9.2)
+Requires-Dist: scipy (>=0.15.1)
+Requires-Dist: Jinja2 (>=2.8)
+
+Radical Topologist
+===
+Implementation of Mapper algorithm for Topological Data Analysis
+
+

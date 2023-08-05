@@ -1,0 +1,4 @@
+
+      [rasterio.rio_commands]
+      colormap=colormap.scripts.cli:colormap
+      

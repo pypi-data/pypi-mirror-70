@@ -1,0 +1,10 @@
+privy-filter/__init__.py,sha256=1rGPRQBtKs8SQPBjmNEFGsBeiz7Ku3pfhJBFVGcMIS0,202
+privy-filter/privy.py,sha256=jMJ_6jbs-ZcMBSDynThWWa7oZLpB3rnoTcY74QzqSOg,2824
+privyfilter/__init__.py,sha256=PIlSnPsK5jSU38V8lCSJrtz_F4YTf2rxwqjzgclZQO8,201
+privyfilter/privyfilter.py,sha256=GU5Zs8jvxbpq3C4i-Kmi-5MSQ1j4IYekY-fT9A5vU0c,2803
+privyfilter/Configs/haarcascade_frontalface_default.xml,sha256=pxyD6dD_1ToA_bPx_ZGQUUnY0AHhB26rwy8u25RfjvM,963441
+privyfilter-0.1.13.dist-info/LICENSE,sha256=D7AR4d5cYzZjJ1dAn1_oh0py7Wj2iK0D90WhvRZxKWM,1091
+privyfilter-0.1.13.dist-info/METADATA,sha256=F7j9-esZEGugPgozzivKxX8PfGVTS-kTb5wC0qzAauQ,479
+privyfilter-0.1.13.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+privyfilter-0.1.13.dist-info/top_level.txt,sha256=Q653f4IWqElmXHxIK653Q3I3hxMAgDNDoqvjOZnYJkI,12
+privyfilter-0.1.13.dist-info/RECORD,,

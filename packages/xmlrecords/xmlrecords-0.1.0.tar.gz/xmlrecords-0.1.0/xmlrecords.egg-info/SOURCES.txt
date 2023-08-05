@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+xmlrecords/__init__.py
+xmlrecords.egg-info/PKG-INFO
+xmlrecords.egg-info/SOURCES.txt
+xmlrecords.egg-info/dependency_links.txt
+xmlrecords.egg-info/top_level.txt
+xmlrecords/src/__init__.py
+xmlrecords/src/xmlrecords.py

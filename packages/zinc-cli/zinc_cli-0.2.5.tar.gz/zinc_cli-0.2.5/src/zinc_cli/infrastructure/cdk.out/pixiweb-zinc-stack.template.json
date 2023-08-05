@@ -1,0 +1,2463 @@
+{
+  "Resources": {
+    "PublicCrudTableE4703535": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "pk",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "sk",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "pk",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "sk",
+            "AttributeType": "S"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "TableName": "public_crud"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudTable/Resource"
+      }
+    },
+    "UserPoolsmsRole4EA729DD": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Condition": {
+                "StringEquals": {
+                  "sts:ExternalId": "pixiwebzincstackUserPoolBF3115C7"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cognito-idp.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "sns:Publish",
+                  "Effect": "Allow",
+                  "Resource": "*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "sns-publish"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/UserPool/smsRole/Resource"
+      }
+    },
+    "UserPool6BA7E5F2": {
+      "Type": "AWS::Cognito::UserPool",
+      "Properties": {
+        "AdminCreateUserConfig": {
+          "AllowAdminCreateUserOnly": true
+        },
+        "AutoVerifiedAttributes": [
+          "email"
+        ],
+        "EmailVerificationMessage": "Hello {username}, Your verification code is {####}",
+        "EmailVerificationSubject": "Verify your new account",
+        "LambdaConfig": {},
+        "SmsConfiguration": {
+          "ExternalId": "pixiwebzincstackUserPoolBF3115C7",
+          "SnsCallerArn": {
+            "Fn::GetAtt": [
+              "UserPoolsmsRole4EA729DD",
+              "Arn"
+            ]
+          }
+        },
+        "SmsVerificationMessage": "The verification code to your new account is {####}",
+        "VerificationMessageTemplate": {
+          "DefaultEmailOption": "CONFIRM_WITH_CODE",
+          "EmailMessage": "Hello {username}, Your verification code is {####}",
+          "EmailSubject": "Verify your new account",
+          "SmsMessage": "The verification code to your new account is {####}"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/UserPool/Resource"
+      }
+    },
+    "AuthClientWebC43C90E3": {
+      "Type": "AWS::Cognito::UserPoolClient",
+      "Properties": {
+        "UserPoolId": {
+          "Ref": "UserPool6BA7E5F2"
+        },
+        "GenerateSecret": false
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AuthClientWeb/Resource"
+      }
+    },
+    "SiteBucket397A1860": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "static.pixiweb.net",
+        "WebsiteConfiguration": {
+          "ErrorDocument": "index.html",
+          "IndexDocument": "index.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/SiteBucket/Resource"
+      }
+    },
+    "SiteBucketPolicy3AC1D0F8": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "SiteBucket397A1860"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "SiteBucket397A1860",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/SiteBucket/Policy/Resource"
+      }
+    },
+    "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole/Resource"
+      }
+    },
+    "ValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy0FD9D55B": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "acm:RequestCertificate",
+                "acm:DescribeCertificate",
+                "acm:DeleteCertificate"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:GetChange",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:changeResourceRecordSets",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy0FD9D55B",
+        "Roles": [
+          {
+            "Ref": "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ValidatedCertCertificateRequestorFunctionD1EDCB78": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.certificateRequestHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "ValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy0FD9D55B",
+        "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ValidatedCert/CertificateRequestorFunction/Resource",
+        "aws:asset:path": "asset.01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ValidatedCertCertificateRequestorResourceD7F05BB5": {
+      "Type": "AWS::CloudFormation::CustomResource",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "ValidatedCertCertificateRequestorFunctionD1EDCB78",
+            "Arn"
+          ]
+        },
+        "DomainName": "pixiweb.net",
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ValidatedCert/CertificateRequestorResource/Default"
+      }
+    },
+    "SiteDistributionCFDistribution209CF7F5": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [
+            "pixiweb.net"
+          ],
+          "CustomErrorResponses": [
+            {
+              "ErrorCode": 403,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            },
+            {
+              "ErrorCode": 404,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "Compress": true,
+            "ForwardedValues": {
+              "Cookies": {
+                "Forward": "none"
+              },
+              "QueryString": false
+            },
+            "TargetOriginId": "origin1",
+            "ViewerProtocolPolicy": "redirect-to-https"
+          },
+          "DefaultRootObject": "index.html",
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "SiteBucket397A1860",
+                  "RegionalDomainName"
+                ]
+              },
+              "Id": "origin1",
+              "S3OriginConfig": {}
+            }
+          ],
+          "PriceClass": "PriceClass_100",
+          "ViewerCertificate": {
+            "AcmCertificateArn": {
+              "Fn::GetAtt": [
+                "ValidatedCertCertificateRequestorResourceD7F05BB5",
+                "Arn"
+              ]
+            },
+            "MinimumProtocolVersion": "TLSv1.1_2016",
+            "SslSupportMethod": "sni-only"
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/SiteDistribution/CFDistribution"
+      }
+    },
+    "SiteAliasRecord3C0AF5BF": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "pixiweb.net.",
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": {
+            "Fn::GetAtt": [
+              "SiteDistributionCFDistribution209CF7F5",
+              "DomainName"
+            ]
+          },
+          "HostedZoneId": "Z2FDTNDATAQYW2"
+        },
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/SiteAliasRecord/Resource"
+      }
+    },
+    "AdminSiteBucket6BE9C9FA": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "admin.static.pixiweb.net",
+        "WebsiteConfiguration": {
+          "ErrorDocument": "index.html",
+          "IndexDocument": "index.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminSiteBucket/Resource"
+      }
+    },
+    "AdminSiteBucketPolicy1C9AECFE": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "AdminSiteBucket6BE9C9FA"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "AdminSiteBucket6BE9C9FA",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminSiteBucket/Policy/Resource"
+      }
+    },
+    "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole/Resource"
+      }
+    },
+    "AdminValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy9A34AEE2": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "acm:RequestCertificate",
+                "acm:DescribeCertificate",
+                "acm:DeleteCertificate"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:GetChange",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:changeResourceRecordSets",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "AdminValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy9A34AEE2",
+        "Roles": [
+          {
+            "Ref": "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "AdminValidatedCertCertificateRequestorFunction88F8AA0C": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.certificateRequestHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "AdminValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy9A34AEE2",
+        "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminValidatedCert/CertificateRequestorFunction/Resource",
+        "aws:asset:path": "asset.01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247",
+        "aws:asset:property": "Code"
+      }
+    },
+    "AdminValidatedCertCertificateRequestorResourceBF1D6680": {
+      "Type": "AWS::CloudFormation::CustomResource",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "AdminValidatedCertCertificateRequestorFunction88F8AA0C",
+            "Arn"
+          ]
+        },
+        "DomainName": "admin.pixiweb.net",
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminValidatedCert/CertificateRequestorResource/Default"
+      }
+    },
+    "AdminSiteDistributionCFDistributionE172F4F9": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [
+            "admin.pixiweb.net"
+          ],
+          "CustomErrorResponses": [
+            {
+              "ErrorCode": 403,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            },
+            {
+              "ErrorCode": 404,
+              "ResponseCode": 200,
+              "ResponsePagePath": "/index.html"
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "Compress": true,
+            "ForwardedValues": {
+              "Cookies": {
+                "Forward": "none"
+              },
+              "QueryString": false
+            },
+            "TargetOriginId": "origin1",
+            "ViewerProtocolPolicy": "redirect-to-https"
+          },
+          "DefaultRootObject": "index.html",
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "AdminSiteBucket6BE9C9FA",
+                  "RegionalDomainName"
+                ]
+              },
+              "Id": "origin1",
+              "S3OriginConfig": {}
+            }
+          ],
+          "PriceClass": "PriceClass_100",
+          "ViewerCertificate": {
+            "AcmCertificateArn": {
+              "Fn::GetAtt": [
+                "AdminValidatedCertCertificateRequestorResourceBF1D6680",
+                "Arn"
+              ]
+            },
+            "MinimumProtocolVersion": "TLSv1.1_2016",
+            "SslSupportMethod": "sni-only"
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminSiteDistribution/CFDistribution"
+      }
+    },
+    "AdminSiteAliasRecordCA3A31F4": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "admin.pixiweb.net.",
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": {
+            "Fn::GetAtt": [
+              "AdminSiteDistributionCFDistributionE172F4F9",
+              "DomainName"
+            ]
+          },
+          "HostedZoneId": "Z2FDTNDATAQYW2"
+        },
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AdminSiteAliasRecord/Resource"
+      }
+    },
+    "ContactFormLambdaServiceRole020D5737": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ContactFormLambda/ServiceRole/Resource"
+      }
+    },
+    "ContactFormLambdaServiceRoleDefaultPolicy99B96C03": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ContactFormLambdaServiceRoleDefaultPolicy99B96C03",
+        "Roles": [
+          {
+            "Ref": "ContactFormLambdaServiceRole020D5737"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ContactFormLambda/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ContactFormLambdaBE8DD0D4": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44S3Bucket39461006"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44S3VersionKey29A53B50"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44S3VersionKey29A53B50"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ContactFormLambdaServiceRole020D5737",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.7",
+        "Environment": {
+          "Variables": {
+            "TARGET_EMAIL": "juangbhanich.k@gmail.com",
+            "SENDER_EMAIL": "contact@pixiweb.net",
+            "SENDER_NAME": "Pixiweb",
+            "SENDER": "Pixiweb Contact Form <contact@pixiweb.net>"
+          }
+        }
+      },
+      "DependsOn": [
+        "ContactFormLambdaServiceRoleDefaultPolicy99B96C03",
+        "ContactFormLambdaServiceRole020D5737"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ContactFormLambda/Resource",
+        "aws:asset:path": "asset.30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44",
+        "aws:asset:property": "Code"
+      }
+    },
+    "VerifyDomainIdentityA4F38560": {
+      "Type": "Custom::AWS",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+            "Arn"
+          ]
+        },
+        "Create": {
+          "action": "verifyDomainIdentity",
+          "service": "SES",
+          "parameters": {
+            "Domain": "pixiweb.net"
+          },
+          "physicalResourceId": {
+            "responsePath": "VerificationToken"
+          }
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/VerifyDomainIdentity/Resource/Default"
+      }
+    },
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource"
+      }
+    },
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleDefaultPolicyD28E1A5E": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "ses:VerifyDomainIdentity",
+              "Effect": "Allow",
+              "Resource": "*"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleDefaultPolicyD28E1A5E",
+        "Roles": [
+          {
+            "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3BucketEB60060D"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3VersionKeyF4A4F8C1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3VersionKeyF4A4F8C1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x",
+        "Timeout": 120
+      },
+      "DependsOn": [
+        "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleDefaultPolicyD28E1A5E",
+        "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+        "aws:asset:path": "asset.bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea",
+        "aws:asset:property": "Code"
+      }
+    },
+    "SESVerificationRecord8B86296A": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "_amazonses.pixiweb.net.",
+        "Type": "TXT",
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G",
+        "ResourceRecords": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "\"",
+                {
+                  "Fn::GetAtt": [
+                    "VerifyDomainIdentityA4F38560",
+                    "VerificationToken"
+                  ]
+                },
+                "\""
+              ]
+            ]
+          }
+        ],
+        "TTL": "1800"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/SESVerificationRecord/Resource"
+      }
+    },
+    "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole/Resource"
+      }
+    },
+    "ApiCertificateCertificateRequestorFunctionServiceRoleDefaultPolicy37D02D57": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "acm:RequestCertificate",
+                "acm:DescribeCertificate",
+                "acm:DeleteCertificate"
+              ],
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:GetChange",
+              "Effect": "Allow",
+              "Resource": "*"
+            },
+            {
+              "Action": "route53:changeResourceRecordSets",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ApiCertificateCertificateRequestorFunctionServiceRoleDefaultPolicy37D02D57",
+        "Roles": [
+          {
+            "Ref": "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ApiCertificateCertificateRequestorFunction35B7F4E7": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "index.certificateRequestHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs10.x",
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "ApiCertificateCertificateRequestorFunctionServiceRoleDefaultPolicy37D02D57",
+        "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ApiCertificate/CertificateRequestorFunction/Resource",
+        "aws:asset:path": "asset.01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247",
+        "aws:asset:property": "Code"
+      }
+    },
+    "ApiCertificateCertificateRequestorResource57CB3F69": {
+      "Type": "AWS::CloudFormation::CustomResource",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "ApiCertificateCertificateRequestorFunction35B7F4E7",
+            "Arn"
+          ]
+        },
+        "DomainName": "apix.pixiweb.net",
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/ApiCertificate/CertificateRequestorResource/Default"
+      }
+    },
+    "PublicCrudApiCD1F71C1": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "PublicCrudApi"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Resource"
+      }
+    },
+    "PublicCrudApiDeployment932BEDF3af73e0a05c81d504927fd0384e99fc39": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "PublicCrudApicontactOPTIONS59F52C9D",
+        "PublicCrudApicontactPOST1F51D9C5",
+        "PublicCrudApicontact368CDA57",
+        "PublicCrudApiitemproxyGET74D4CA5C",
+        "PublicCrudApiitemproxyOPTIONS11FBEA71",
+        "PublicCrudApiitemproxyPOST03D60B20",
+        "PublicCrudApiitemproxy6DEF23DA",
+        "PublicCrudApiitemGETA00C092E",
+        "PublicCrudApiitemOPTIONSF2D5CA10",
+        "PublicCrudApiitemPOSTE08573DA",
+        "PublicCrudApiitemBD642BBE"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Deployment/Resource"
+      }
+    },
+    "PublicCrudApiDeploymentStageprod7193F3A0": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "DeploymentId": {
+          "Ref": "PublicCrudApiDeployment932BEDF3af73e0a05c81d504927fd0384e99fc39"
+        },
+        "MethodSettings": [
+          {
+            "HttpMethod": "*",
+            "ResourcePath": "/*",
+            "ThrottlingBurstLimit": 100,
+            "ThrottlingRateLimit": 10
+          }
+        ],
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/DeploymentStage.prod/Resource"
+      }
+    },
+    "PublicCrudApiCloudWatchRole25231D61": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/CloudWatchRole/Resource"
+      }
+    },
+    "PublicCrudApiAccount51A11433": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "PublicCrudApiCloudWatchRole25231D61",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "PublicCrudApiCD1F71C1"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Account"
+      }
+    },
+    "PublicCrudApicontact368CDA57": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "PublicCrudApiCD1F71C1",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "contact",
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/contact/Resource"
+      }
+    },
+    "PublicCrudApicontactPOSTApiPermissionpixiwebzincstackPublicCrudApi1CB3A833POSTcontact746A11B6": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ContactFormLambdaBE8DD0D4",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/",
+              {
+                "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+              },
+              "/POST/contact"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/contact/POST/ApiPermission.pixiwebzincstackPublicCrudApi1CB3A833.POST..contact"
+      }
+    },
+    "PublicCrudApicontactPOSTApiPermissionTestpixiwebzincstackPublicCrudApi1CB3A833POSTcontact235FDE4D": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "ContactFormLambdaBE8DD0D4",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/test-invoke-stage/POST/contact"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/contact/POST/ApiPermission.Test.pixiwebzincstackPublicCrudApi1CB3A833.POST..contact"
+      }
+    },
+    "PublicCrudApicontactPOST1F51D9C5": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "PublicCrudApicontact368CDA57"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "ContactFormLambdaBE8DD0D4",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/contact/POST/Resource"
+      }
+    },
+    "PublicCrudApicontactOPTIONS59F52C9D": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "OPTIONS",
+        "ResourceId": {
+          "Ref": "PublicCrudApicontact368CDA57"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "WHEN_NO_MATCH",
+          "RequestTemplates": {
+            "application/json": "{\"statusCode\":200}"
+          },
+          "Type": "MOCK"
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/contact/OPTIONS/Resource"
+      }
+    },
+    "PublicCrudApiitemBD642BBE": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "PublicCrudApiCD1F71C1",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "item",
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/Resource"
+      }
+    },
+    "PublicCrudApiitemOPTIONSF2D5CA10": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "OPTIONS",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemBD642BBE"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "WHEN_NO_MATCH",
+          "RequestTemplates": {
+            "application/json": "{\"statusCode\":200}"
+          },
+          "Type": "MOCK"
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/OPTIONS/Resource"
+      }
+    },
+    "PublicCrudApiitemGETApiPermissionpixiwebzincstackPublicCrudApi1CB3A833GETitem38E287EF": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/",
+              {
+                "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+              },
+              "/GET/item"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/GET/ApiPermission.pixiwebzincstackPublicCrudApi1CB3A833.GET..item"
+      }
+    },
+    "PublicCrudApiitemGETApiPermissionTestpixiwebzincstackPublicCrudApi1CB3A833GETitem4C61C4C0": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/test-invoke-stage/GET/item"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/GET/ApiPermission.Test.pixiwebzincstackPublicCrudApi1CB3A833.GET..item"
+      }
+    },
+    "PublicCrudApiitemGETA00C092E": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemBD642BBE"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "RequestTemplates": {
+            "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+          },
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "itemFunction676EFA6D",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/GET/Resource"
+      }
+    },
+    "PublicCrudApiitemPOSTApiPermissionpixiwebzincstackPublicCrudApi1CB3A833POSTitemB932345E": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/",
+              {
+                "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+              },
+              "/POST/item"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/POST/ApiPermission.pixiwebzincstackPublicCrudApi1CB3A833.POST..item"
+      }
+    },
+    "PublicCrudApiitemPOSTApiPermissionTestpixiwebzincstackPublicCrudApi1CB3A833POSTitem05A6DA9F": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/test-invoke-stage/POST/item"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/POST/ApiPermission.Test.pixiwebzincstackPublicCrudApi1CB3A833.POST..item"
+      }
+    },
+    "PublicCrudApiitemPOSTE08573DA": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemBD642BBE"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "COGNITO_USER_POOLS",
+        "AuthorizerId": {
+          "Ref": "MasterStackApiAuth"
+        },
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "RequestTemplates": {
+            "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+          },
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "itemFunction676EFA6D",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/POST/Resource"
+      }
+    },
+    "PublicCrudApiitemproxy6DEF23DA": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Ref": "PublicCrudApiitemBD642BBE"
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/Resource"
+      }
+    },
+    "PublicCrudApiitemproxyOPTIONS11FBEA71": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "OPTIONS",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemproxy6DEF23DA"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "PassthroughBehavior": "WHEN_NO_MATCH",
+          "RequestTemplates": {
+            "application/json": "{\"statusCode\":200}"
+          },
+          "Type": "MOCK"
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true,
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/OPTIONS/Resource"
+      }
+    },
+    "PublicCrudApiitemproxyGETApiPermissionpixiwebzincstackPublicCrudApi1CB3A833GETitemproxyDEBDE7BE": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/",
+              {
+                "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+              },
+              "/GET/item/{proxy+}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/GET/ApiPermission.pixiwebzincstackPublicCrudApi1CB3A833.GET..item.{proxy+}"
+      }
+    },
+    "PublicCrudApiitemproxyGETApiPermissionTestpixiwebzincstackPublicCrudApi1CB3A833GETitemproxy1358A564": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/test-invoke-stage/GET/item/{proxy+}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/GET/ApiPermission.Test.pixiwebzincstackPublicCrudApi1CB3A833.GET..item.{proxy+}"
+      }
+    },
+    "PublicCrudApiitemproxyGET74D4CA5C": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "GET",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemproxy6DEF23DA"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "RequestTemplates": {
+            "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+          },
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "itemFunction676EFA6D",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/GET/Resource"
+      }
+    },
+    "PublicCrudApiitemproxyPOSTApiPermissionpixiwebzincstackPublicCrudApi1CB3A833POSTitemproxy93009A25": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/",
+              {
+                "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+              },
+              "/POST/item/{proxy+}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/POST/ApiPermission.pixiwebzincstackPublicCrudApi1CB3A833.POST..item.{proxy+}"
+      }
+    },
+    "PublicCrudApiitemproxyPOSTApiPermissionTestpixiwebzincstackPublicCrudApi1CB3A833POSTitemproxy7E2ABA23": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "itemFunction676EFA6D",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:us-east-1:535707483867:",
+              {
+                "Ref": "PublicCrudApiCD1F71C1"
+              },
+              "/test-invoke-stage/POST/item/{proxy+}"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/POST/ApiPermission.Test.pixiwebzincstackPublicCrudApi1CB3A833.POST..item.{proxy+}"
+      }
+    },
+    "PublicCrudApiitemproxyPOST03D60B20": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "POST",
+        "ResourceId": {
+          "Ref": "PublicCrudApiitemproxy6DEF23DA"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "AuthorizationType": "COGNITO_USER_POOLS",
+        "AuthorizerId": {
+          "Ref": "MasterStackApiAuth"
+        },
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'"
+              },
+              "StatusCode": "200"
+            }
+          ],
+          "RequestTemplates": {
+            "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+          },
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "itemFunction676EFA6D",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true
+            },
+            "StatusCode": "200"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/Default/item/{proxy+}/POST/Resource"
+      }
+    },
+    "PublicCrudApiCustomDomain9F9BD4C3": {
+      "Type": "AWS::ApiGateway::DomainName",
+      "Properties": {
+        "DomainName": "apix.pixiweb.net",
+        "EndpointConfiguration": {
+          "Types": [
+            "REGIONAL"
+          ]
+        },
+        "RegionalCertificateArn": {
+          "Fn::GetAtt": [
+            "ApiCertificateCertificateRequestorResource57CB3F69",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/CustomDomain/Resource"
+      }
+    },
+    "PublicCrudApiCustomDomainMappixiwebzincstackPublicCrudApi1CB3A83354CDD380": {
+      "Type": "AWS::ApiGateway::BasePathMapping",
+      "Properties": {
+        "DomainName": {
+          "Ref": "PublicCrudApiCustomDomain9F9BD4C3"
+        },
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "Stage": {
+          "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApi/CustomDomain/Map:--=>pixiwebzincstackPublicCrudApi1CB3A833/Resource"
+      }
+    },
+    "PublicCrudApiAliasRecord66F1AD9D": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "apix.pixiweb.net.",
+        "Type": "A",
+        "AliasTarget": {
+          "DNSName": {
+            "Fn::GetAtt": [
+              "PublicCrudApiCustomDomain9F9BD4C3",
+              "RegionalDomainName"
+            ]
+          },
+          "HostedZoneId": {
+            "Fn::GetAtt": [
+              "PublicCrudApiCustomDomain9F9BD4C3",
+              "RegionalHostedZoneId"
+            ]
+          }
+        },
+        "HostedZoneId": "Z0565560ONKFB6CU7U6G"
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/PublicCrudApiAliasRecord/Resource"
+      }
+    },
+    "MasterStackApiAuth": {
+      "Type": "AWS::ApiGateway::Authorizer",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "PublicCrudApiCD1F71C1"
+        },
+        "Type": "COGNITO_USER_POOLS",
+        "IdentitySource": "method.request.header.Authorization",
+        "Name": "MasterStackApiAuth",
+        "ProviderARNs": [
+          {
+            "Fn::GetAtt": [
+              "UserPool6BA7E5F2",
+              "Arn"
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/MasterStackApiAuth"
+      }
+    },
+    "itemFunctionServiceRole597FE625": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/itemFunction/ServiceRole/Resource"
+      }
+    },
+    "itemFunctionServiceRoleDefaultPolicy870E23D6": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "dynamodb:*",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "PublicCrudTableE4703535",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Ref": "AWS::NoValue"
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "itemFunctionServiceRoleDefaultPolicy870E23D6",
+        "Roles": [
+          {
+            "Ref": "itemFunctionServiceRole597FE625"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/itemFunction/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "itemFunction676EFA6D": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518S3Bucket85172DB5"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518S3VersionKey99DE9D51"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518S3VersionKey99DE9D51"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Handler": "lambda_handler.handle_crud_request",
+        "Role": {
+          "Fn::GetAtt": [
+            "itemFunctionServiceRole597FE625",
+            "Arn"
+          ]
+        },
+        "Runtime": "python3.7",
+        "Environment": {
+          "Variables": {
+            "TABLE_NAME": {
+              "Ref": "PublicCrudTableE4703535"
+            }
+          }
+        },
+        "Timeout": 30
+      },
+      "DependsOn": [
+        "itemFunctionServiceRoleDefaultPolicy870E23D6",
+        "itemFunctionServiceRole597FE625"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "pixiweb-zinc-stack/itemFunction/Resource",
+        "aws:asset:path": "asset.59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518",
+        "aws:asset:property": "Code"
+      }
+    }
+  },
+  "Outputs": {
+    "Site": {
+      "Value": "https://pixiweb.net"
+    },
+    "BucketArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "SiteBucket397A1860",
+          "Arn"
+        ]
+      }
+    },
+    "CertificateArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ValidatedCertCertificateRequestorResourceD7F05BB5",
+          "Arn"
+        ]
+      }
+    },
+    "DistributionId": {
+      "Value": {
+        "Ref": "SiteDistributionCFDistribution209CF7F5"
+      }
+    },
+    "AdminSite": {
+      "Value": "https://admin.pixiweb.net"
+    },
+    "AdminBucketArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AdminSiteBucket6BE9C9FA",
+          "Arn"
+        ]
+      }
+    },
+    "AdminCertificateArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "AdminValidatedCertCertificateRequestorResourceBF1D6680",
+          "Arn"
+        ]
+      }
+    },
+    "AdminDistributionId": {
+      "Value": {
+        "Ref": "AdminSiteDistributionCFDistributionE172F4F9"
+      }
+    },
+    "ApiCertificateArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ApiCertificateCertificateRequestorResource57CB3F69",
+          "Arn"
+        ]
+      }
+    },
+    "PublicCrudApiEndpoint175A7ED6": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "PublicCrudApiCD1F71C1"
+            },
+            ".execute-api.us-east-1.",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247\""
+    },
+    "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247\""
+    },
+    "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247ArtifactHashFB4438F1": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247\""
+    },
+    "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44S3Bucket39461006": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44\""
+    },
+    "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44S3VersionKey29A53B50": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44\""
+    },
+    "AssetParameters30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44ArtifactHash86D6E4E6": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"30526533a950c8b0e5777fe6a5298d65f79aed4f0631333930c5e9bb23019e44\""
+    },
+    "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3BucketEB60060D": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea\""
+    },
+    "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3VersionKeyF4A4F8C1": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea\""
+    },
+    "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaArtifactHash1C65A6D0": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea\""
+    },
+    "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518S3Bucket85172DB5": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518\""
+    },
+    "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518S3VersionKey99DE9D51": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518\""
+    },
+    "AssetParameters59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518ArtifactHashE07F5B54": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"59a3a5114e4a59759d8e9406d9a9f2e0ecede98a286177fbf532151b08080518\""
+    }
+  }
+}

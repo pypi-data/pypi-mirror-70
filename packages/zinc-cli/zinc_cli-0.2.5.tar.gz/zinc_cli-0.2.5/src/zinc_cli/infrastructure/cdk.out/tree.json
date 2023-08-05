@@ -1,0 +1,2866 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "pixiweb-pxw-stack": {
+        "id": "pixiweb-pxw-stack",
+        "path": "pixiweb-pxw-stack",
+        "children": {
+          "HostedZone": {
+            "id": "HostedZone",
+            "path": "pixiweb-pxw-stack/HostedZone"
+          },
+          "PublicCrudTable": {
+            "id": "PublicCrudTable",
+            "path": "pixiweb-pxw-stack/PublicCrudTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/PublicCrudTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "pk",
+                        "keyType": "HASH"
+                      },
+                      {
+                        "attributeName": "sk",
+                        "keyType": "RANGE"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "pk",
+                        "attributeType": "S"
+                      },
+                      {
+                        "attributeName": "sk",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST",
+                    "tableName": "public_crud"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "pixiweb-pxw-stack/PublicCrudTable/ScalingRole"
+              }
+            }
+          },
+          "UserPoolX": {
+            "id": "UserPoolX",
+            "path": "pixiweb-pxw-stack/UserPoolX",
+            "children": {
+              "smsRole": {
+                "id": "smsRole",
+                "path": "pixiweb-pxw-stack/UserPoolX/smsRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/UserPoolX/smsRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Condition": {
+                                "StringEquals": {
+                                  "sts:ExternalId": "pixiwebpxwstackUserPoolXD134B5A9"
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "cognito-idp.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policies": [
+                          {
+                            "policyName": "sns-publish",
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sns:Publish",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/UserPoolX/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Cognito::UserPool",
+                  "aws:cdk:cloudformation:props": {
+                    "adminCreateUserConfig": {
+                      "allowAdminCreateUserOnly": false
+                    },
+                    "autoVerifiedAttributes": [
+                      "email"
+                    ],
+                    "lambdaConfig": {},
+                    "schema": [
+                      {
+                        "name": "email",
+                        "required": true
+                      }
+                    ],
+                    "smsConfiguration": {
+                      "externalId": "pixiwebpxwstackUserPoolXD134B5A9",
+                      "snsCallerArn": {
+                        "Fn::GetAtt": [
+                          "UserPoolXsmsRoleD4CFA5F7",
+                          "Arn"
+                        ]
+                      }
+                    },
+                    "smsVerificationMessage": "The verification code to your new account is {####}",
+                    "usernameAttributes": [
+                      "email"
+                    ],
+                    "verificationMessageTemplate": {
+                      "defaultEmailOption": "CONFIRM_WITH_LINK",
+                      "emailMessageByLink": "Hello {username}, Verify your account by clicking on {##Verify Email##}",
+                      "emailSubjectByLink": "Verify your new account",
+                      "smsMessage": "The verification code to your new account is {####}"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "AuthClientWeb": {
+            "id": "AuthClientWeb",
+            "path": "pixiweb-pxw-stack/AuthClientWeb",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/AuthClientWeb/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Cognito::UserPoolClient",
+                  "aws:cdk:cloudformation:props": {
+                    "userPoolId": {
+                      "Ref": "UserPoolX86720F9A"
+                    },
+                    "generateSecret": false
+                  }
+                }
+              }
+            }
+          },
+          "Site": {
+            "id": "Site",
+            "path": "pixiweb-pxw-stack/Site"
+          },
+          "SiteBucket": {
+            "id": "SiteBucket",
+            "path": "pixiweb-pxw-stack/SiteBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/SiteBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketName": "static.pixiweb.net",
+                    "websiteConfiguration": {
+                      "indexDocument": "index.html",
+                      "errorDocument": "index.html"
+                    }
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "pixiweb-pxw-stack/SiteBucket/Notifications"
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "pixiweb-pxw-stack/SiteBucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/SiteBucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": {
+                          "Ref": "SiteBucket397A1860"
+                        },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Principal": "*",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "SiteBucket397A1860",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "BucketArn": {
+            "id": "BucketArn",
+            "path": "pixiweb-pxw-stack/BucketArn"
+          },
+          "ValidatedCert": {
+            "id": "ValidatedCert",
+            "path": "pixiweb-pxw-stack/ValidatedCert",
+            "children": {
+              "CertificateRequestorFunction": {
+                "id": "CertificateRequestorFunction",
+                "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "acm:RequestCertificate",
+                                        "acm:DescribeCertificate",
+                                        "acm:DeleteCertificate"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:GetChange",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:changeResourceRecordSets",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                                          ]
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy0FD9D55B",
+                                "roles": [
+                                  {
+                                    "Ref": "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorFunction/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.certificateRequestHandler",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "ValidatedCertCertificateRequestorFunctionServiceRoleC7E5DFF1",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs10.x",
+                        "timeout": 900
+                      }
+                    }
+                  }
+                }
+              },
+              "CertificateRequestorResource": {
+                "id": "CertificateRequestorResource",
+                "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "pixiweb-pxw-stack/ValidatedCert/CertificateRequestorResource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "pixiweb-pxw-stack/AssetParameters",
+            "children": {
+              "01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247": {
+                "id": "01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247",
+                "path": "pixiweb-pxw-stack/AssetParameters/01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "pixiweb-pxw-stack/AssetParameters/01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "pixiweb-pxw-stack/AssetParameters/01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "pixiweb-pxw-stack/AssetParameters/01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247/ArtifactHash"
+                  }
+                }
+              },
+              "c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c": {
+                "id": "c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c",
+                "path": "pixiweb-pxw-stack/AssetParameters/c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "pixiweb-pxw-stack/AssetParameters/c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "pixiweb-pxw-stack/AssetParameters/c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "pixiweb-pxw-stack/AssetParameters/c2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90c/ArtifactHash"
+                  }
+                }
+              },
+              "bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea": {
+                "id": "bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea",
+                "path": "pixiweb-pxw-stack/AssetParameters/bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "pixiweb-pxw-stack/AssetParameters/bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "pixiweb-pxw-stack/AssetParameters/bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "pixiweb-pxw-stack/AssetParameters/bcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7dea/ArtifactHash"
+                  }
+                }
+              },
+              "50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b": {
+                "id": "50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b",
+                "path": "pixiweb-pxw-stack/AssetParameters/50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "pixiweb-pxw-stack/AssetParameters/50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "pixiweb-pxw-stack/AssetParameters/50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "pixiweb-pxw-stack/AssetParameters/50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22b/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "CertificateArn": {
+            "id": "CertificateArn",
+            "path": "pixiweb-pxw-stack/CertificateArn"
+          },
+          "SiteDistribution": {
+            "id": "SiteDistribution",
+            "path": "pixiweb-pxw-stack/SiteDistribution",
+            "children": {
+              "AliasConfigurationCert": {
+                "id": "AliasConfigurationCert",
+                "path": "pixiweb-pxw-stack/SiteDistribution/AliasConfigurationCert"
+              },
+              "CFDistribution": {
+                "id": "CFDistribution",
+                "path": "pixiweb-pxw-stack/SiteDistribution/CFDistribution",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                  "aws:cdk:cloudformation:props": {
+                    "distributionConfig": {
+                      "enabled": true,
+                      "defaultRootObject": "index.html",
+                      "httpVersion": "http2",
+                      "priceClass": "PriceClass_100",
+                      "ipv6Enabled": true,
+                      "customErrorResponses": [
+                        {
+                          "errorCode": 403,
+                          "responseCode": 200,
+                          "responsePagePath": "/index.html"
+                        },
+                        {
+                          "errorCode": 404,
+                          "responseCode": 200,
+                          "responsePagePath": "/index.html"
+                        }
+                      ],
+                      "origins": [
+                        {
+                          "id": "origin1",
+                          "domainName": {
+                            "Fn::GetAtt": [
+                              "SiteBucket397A1860",
+                              "RegionalDomainName"
+                            ]
+                          },
+                          "s3OriginConfig": {}
+                        }
+                      ],
+                      "defaultCacheBehavior": {
+                        "allowedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "cachedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "compress": true,
+                        "forwardedValues": {
+                          "queryString": false,
+                          "cookies": {
+                            "forward": "none"
+                          }
+                        },
+                        "targetOriginId": "origin1",
+                        "viewerProtocolPolicy": "redirect-to-https"
+                      },
+                      "aliases": [
+                        "pixiweb.net"
+                      ],
+                      "viewerCertificate": {
+                        "acmCertificateArn": {
+                          "Fn::GetAtt": [
+                            "ValidatedCertCertificateRequestorResourceD7F05BB5",
+                            "Arn"
+                          ]
+                        },
+                        "sslSupportMethod": "sni-only",
+                        "minimumProtocolVersion": "TLSv1.1_2016"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "DistributionId": {
+            "id": "DistributionId",
+            "path": "pixiweb-pxw-stack/DistributionId"
+          },
+          "SiteAliasRecord": {
+            "id": "SiteAliasRecord",
+            "path": "pixiweb-pxw-stack/SiteAliasRecord",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/SiteAliasRecord/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "pixiweb.net.",
+                    "type": "A",
+                    "aliasTarget": {
+                      "hostedZoneId": "Z2FDTNDATAQYW2",
+                      "dnsName": {
+                        "Fn::GetAtt": [
+                          "SiteDistributionCFDistribution209CF7F5",
+                          "DomainName"
+                        ]
+                      }
+                    },
+                    "hostedZoneId": "Z0565560ONKFB6CU7U6G"
+                  }
+                }
+              }
+            }
+          },
+          "AdminSite": {
+            "id": "AdminSite",
+            "path": "pixiweb-pxw-stack/AdminSite"
+          },
+          "AdminSiteBucket": {
+            "id": "AdminSiteBucket",
+            "path": "pixiweb-pxw-stack/AdminSiteBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/AdminSiteBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketName": "admin.static.pixiweb.net",
+                    "websiteConfiguration": {
+                      "indexDocument": "index.html",
+                      "errorDocument": "index.html"
+                    }
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "pixiweb-pxw-stack/AdminSiteBucket/Notifications"
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "pixiweb-pxw-stack/AdminSiteBucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/AdminSiteBucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": {
+                          "Ref": "AdminSiteBucket6BE9C9FA"
+                        },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Principal": "*",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "AdminSiteBucket6BE9C9FA",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "AdminBucketArn": {
+            "id": "AdminBucketArn",
+            "path": "pixiweb-pxw-stack/AdminBucketArn"
+          },
+          "AdminValidatedCert": {
+            "id": "AdminValidatedCert",
+            "path": "pixiweb-pxw-stack/AdminValidatedCert",
+            "children": {
+              "CertificateRequestorFunction": {
+                "id": "CertificateRequestorFunction",
+                "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "acm:RequestCertificate",
+                                        "acm:DescribeCertificate",
+                                        "acm:DeleteCertificate"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:GetChange",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:changeResourceRecordSets",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                                          ]
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "AdminValidatedCertCertificateRequestorFunctionServiceRoleDefaultPolicy9A34AEE2",
+                                "roles": [
+                                  {
+                                    "Ref": "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorFunction/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.certificateRequestHandler",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "AdminValidatedCertCertificateRequestorFunctionServiceRole5E618391",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs10.x",
+                        "timeout": 900
+                      }
+                    }
+                  }
+                }
+              },
+              "CertificateRequestorResource": {
+                "id": "CertificateRequestorResource",
+                "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "pixiweb-pxw-stack/AdminValidatedCert/CertificateRequestorResource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "AdminCertificateArn": {
+            "id": "AdminCertificateArn",
+            "path": "pixiweb-pxw-stack/AdminCertificateArn"
+          },
+          "AdminSiteDistribution": {
+            "id": "AdminSiteDistribution",
+            "path": "pixiweb-pxw-stack/AdminSiteDistribution",
+            "children": {
+              "AliasConfigurationCert": {
+                "id": "AliasConfigurationCert",
+                "path": "pixiweb-pxw-stack/AdminSiteDistribution/AliasConfigurationCert"
+              },
+              "CFDistribution": {
+                "id": "CFDistribution",
+                "path": "pixiweb-pxw-stack/AdminSiteDistribution/CFDistribution",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                  "aws:cdk:cloudformation:props": {
+                    "distributionConfig": {
+                      "enabled": true,
+                      "defaultRootObject": "index.html",
+                      "httpVersion": "http2",
+                      "priceClass": "PriceClass_100",
+                      "ipv6Enabled": true,
+                      "customErrorResponses": [
+                        {
+                          "errorCode": 403,
+                          "responseCode": 200,
+                          "responsePagePath": "/index.html"
+                        },
+                        {
+                          "errorCode": 404,
+                          "responseCode": 200,
+                          "responsePagePath": "/index.html"
+                        }
+                      ],
+                      "origins": [
+                        {
+                          "id": "origin1",
+                          "domainName": {
+                            "Fn::GetAtt": [
+                              "AdminSiteBucket6BE9C9FA",
+                              "RegionalDomainName"
+                            ]
+                          },
+                          "s3OriginConfig": {}
+                        }
+                      ],
+                      "defaultCacheBehavior": {
+                        "allowedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "cachedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "compress": true,
+                        "forwardedValues": {
+                          "queryString": false,
+                          "cookies": {
+                            "forward": "none"
+                          }
+                        },
+                        "targetOriginId": "origin1",
+                        "viewerProtocolPolicy": "redirect-to-https"
+                      },
+                      "aliases": [
+                        "admin.pixiweb.net"
+                      ],
+                      "viewerCertificate": {
+                        "acmCertificateArn": {
+                          "Fn::GetAtt": [
+                            "AdminValidatedCertCertificateRequestorResourceBF1D6680",
+                            "Arn"
+                          ]
+                        },
+                        "sslSupportMethod": "sni-only",
+                        "minimumProtocolVersion": "TLSv1.1_2016"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "AdminDistributionId": {
+            "id": "AdminDistributionId",
+            "path": "pixiweb-pxw-stack/AdminDistributionId"
+          },
+          "AdminSiteAliasRecord": {
+            "id": "AdminSiteAliasRecord",
+            "path": "pixiweb-pxw-stack/AdminSiteAliasRecord",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/AdminSiteAliasRecord/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "admin.pixiweb.net.",
+                    "type": "A",
+                    "aliasTarget": {
+                      "hostedZoneId": "Z2FDTNDATAQYW2",
+                      "dnsName": {
+                        "Fn::GetAtt": [
+                          "AdminSiteDistributionCFDistributionE172F4F9",
+                          "DomainName"
+                        ]
+                      }
+                    },
+                    "hostedZoneId": "Z0565560ONKFB6CU7U6G"
+                  }
+                }
+              }
+            }
+          },
+          "ContactFormLambda": {
+            "id": "ContactFormLambda",
+            "path": "pixiweb-pxw-stack/ContactFormLambda",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "pixiweb-pxw-stack/ContactFormLambda/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/ContactFormLambda/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "pixiweb-pxw-stack/ContactFormLambda/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/ContactFormLambda/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "ses:SendEmail",
+                                    "ses:SendRawEmail"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "ContactFormLambdaServiceRoleDefaultPolicy99B96C03",
+                            "roles": [
+                              {
+                                "Ref": "ContactFormLambdaServiceRole020D5737"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "pixiweb-pxw-stack/ContactFormLambda/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "pixiweb-pxw-stack/ContactFormLambda/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "pixiweb-pxw-stack/ContactFormLambda/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/ContactFormLambda/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersc2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90cS3Bucket130A5B15"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersc2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90cS3VersionKey69977A55"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersc2ff3e7801d0a41e76feb4ac78bca75baa22e11cb12140862deb89418544c90cS3VersionKey69977A55"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_handler.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "ContactFormLambdaServiceRole020D5737",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.7",
+                    "environment": {
+                      "variables": {
+                        "TARGET_EMAIL": "juangbhanich.k@gmail.com",
+                        "SENDER_EMAIL": "contact@pixiweb.net",
+                        "SENDER_NAME": "Pixiweb",
+                        "SENDER": "Pixiweb Contact Form <contact@pixiweb.net>"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "VerifyDomainIdentity": {
+            "id": "VerifyDomainIdentity",
+            "path": "pixiweb-pxw-stack/VerifyDomainIdentity",
+            "children": {
+              "Provider": {
+                "id": "Provider",
+                "path": "pixiweb-pxw-stack/VerifyDomainIdentity/Provider"
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/VerifyDomainIdentity/Resource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "pixiweb-pxw-stack/VerifyDomainIdentity/Resource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "AWS679f53fac002430cb0da5b7982bd2287": {
+            "id": "AWS679f53fac002430cb0da5b7982bd2287",
+            "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "ses:VerifyDomainIdentity",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleDefaultPolicyD28E1A5E",
+                            "roles": [
+                              {
+                                "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3BucketEB60060D"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3VersionKeyF4A4F8C1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbcb525d5159edab5ce6897ea61932b01d4b6995ceeb33c7804ad4912b4dc7deaS3VersionKeyF4A4F8C1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "index.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs12.x",
+                    "timeout": 120
+                  }
+                }
+              }
+            }
+          },
+          "SESVerificationRecord": {
+            "id": "SESVerificationRecord",
+            "path": "pixiweb-pxw-stack/SESVerificationRecord",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/SESVerificationRecord/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "_amazonses.pixiweb.net.",
+                    "type": "TXT",
+                    "hostedZoneId": "Z0565560ONKFB6CU7U6G",
+                    "resourceRecords": [
+                      {
+                        "Fn::Join": [
+                          "",
+                          [
+                            "\"",
+                            {
+                              "Fn::GetAtt": [
+                                "VerifyDomainIdentityA4F38560",
+                                "VerificationToken"
+                              ]
+                            },
+                            "\""
+                          ]
+                        ]
+                      }
+                    ],
+                    "ttl": "1800"
+                  }
+                }
+              }
+            }
+          },
+          "ApiCertificate": {
+            "id": "ApiCertificate",
+            "path": "pixiweb-pxw-stack/ApiCertificate",
+            "children": {
+              "CertificateRequestorFunction": {
+                "id": "CertificateRequestorFunction",
+                "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": [
+                                        "acm:RequestCertificate",
+                                        "acm:DescribeCertificate",
+                                        "acm:DeleteCertificate"
+                                      ],
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:GetChange",
+                                      "Effect": "Allow",
+                                      "Resource": "*"
+                                    },
+                                    {
+                                      "Action": "route53:changeResourceRecordSets",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":route53:::hostedzone/Z0565560ONKFB6CU7U6G"
+                                          ]
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ApiCertificateCertificateRequestorFunctionServiceRoleDefaultPolicy37D02D57",
+                                "roles": [
+                                  {
+                                    "Ref": "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorFunction/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3Bucket3747EA0C"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters01b2187f99280c53b7d58040d494b5d051e1e253601fc32dee62ba56712db247S3VersionKey13E25E1F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "index.certificateRequestHandler",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "ApiCertificateCertificateRequestorFunctionServiceRole86B3A678",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs10.x",
+                        "timeout": 900
+                      }
+                    }
+                  }
+                }
+              },
+              "CertificateRequestorResource": {
+                "id": "CertificateRequestorResource",
+                "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "pixiweb-pxw-stack/ApiCertificate/CertificateRequestorResource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "ApiCertificateArn": {
+            "id": "ApiCertificateArn",
+            "path": "pixiweb-pxw-stack/ApiCertificateArn"
+          },
+          "PublicCrudApi": {
+            "id": "PublicCrudApi",
+            "path": "pixiweb-pxw-stack/PublicCrudApi",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "PublicCrudApi"
+                  }
+                }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "PublicCrudApiCD1F71C1"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    }
+                  }
+                }
+              },
+              "DeploymentStage.prod": {
+                "id": "DeploymentStage.prod",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/DeploymentStage.prod",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/DeploymentStage.prod/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "PublicCrudApiCD1F71C1"
+                        },
+                        "deploymentId": {
+                          "Ref": "PublicCrudApiDeployment932BEDF3af73e0a05c81d504927fd0384e99fc39"
+                        },
+                        "methodSettings": [
+                          {
+                            "httpMethod": "*",
+                            "resourcePath": "/*",
+                            "throttlingBurstLimit": 100,
+                            "throttlingRateLimit": 10
+                          }
+                        ],
+                        "stageName": "prod"
+                      }
+                    }
+                  }
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/Endpoint"
+              },
+              "CloudWatchRole": {
+                "id": "CloudWatchRole",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/CloudWatchRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/CloudWatchRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "apigateway.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "Account": {
+                "id": "Account",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/Account",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Account",
+                  "aws:cdk:cloudformation:props": {
+                    "cloudWatchRoleArn": {
+                      "Fn::GetAtt": [
+                        "PublicCrudApiCloudWatchRole25231D61",
+                        "Arn"
+                      ]
+                    }
+                  }
+                }
+              },
+              "Default": {
+                "id": "Default",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/Default",
+                "children": {
+                  "contact": {
+                    "id": "contact",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "PublicCrudApiCD1F71C1",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "contact",
+                            "restApiId": {
+                              "Ref": "PublicCrudApiCD1F71C1"
+                            }
+                          }
+                        }
+                      },
+                      "POST": {
+                        "id": "POST",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/POST",
+                        "children": {
+                          "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact": {
+                            "id": "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/POST/ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "ContactFormLambdaBE8DD0D4",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/",
+                                      {
+                                        "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                                      },
+                                      "/POST/contact"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact": {
+                            "id": "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/POST/ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..contact",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "ContactFormLambdaBE8DD0D4",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/test-invoke-stage/POST/contact"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/POST/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "POST",
+                                "resourceId": {
+                                  "Ref": "PublicCrudApicontact368CDA57"
+                                },
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                },
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "AWS",
+                                  "uri": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                        {
+                                          "Fn::GetAtt": [
+                                            "ContactFormLambdaBE8DD0D4",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/invocations"
+                                      ]
+                                    ]
+                                  },
+                                  "integrationHttpMethod": "POST",
+                                  "integrationResponses": [
+                                    {
+                                      "statusCode": "200",
+                                      "responseParameters": {
+                                        "method.response.header.Access-Control-Allow-Origin": "'*'"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "methodResponses": [
+                                  {
+                                    "statusCode": "200",
+                                    "responseParameters": {
+                                      "method.response.header.Access-Control-Allow-Origin": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "OPTIONS": {
+                        "id": "OPTIONS",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/OPTIONS",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/contact/OPTIONS/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "OPTIONS",
+                                "resourceId": {
+                                  "Ref": "PublicCrudApicontact368CDA57"
+                                },
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                },
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "MOCK",
+                                  "requestTemplates": {
+                                    "application/json": "{\"statusCode\":200}"
+                                  },
+                                  "passthroughBehavior": "WHEN_NO_MATCH",
+                                  "integrationResponses": [
+                                    {
+                                      "statusCode": "200",
+                                      "responseParameters": {
+                                        "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                                        "method.response.header.Access-Control-Allow-Origin": "'*'",
+                                        "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "methodResponses": [
+                                  {
+                                    "statusCode": "200",
+                                    "responseParameters": {
+                                      "method.response.header.Access-Control-Allow-Headers": true,
+                                      "method.response.header.Access-Control-Allow-Methods": true,
+                                      "method.response.header.Access-Control-Allow-Origin": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "item": {
+                    "id": "item",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "PublicCrudApiCD1F71C1",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "item",
+                            "restApiId": {
+                              "Ref": "PublicCrudApiCD1F71C1"
+                            }
+                          }
+                        }
+                      },
+                      "OPTIONS": {
+                        "id": "OPTIONS",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/OPTIONS",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/OPTIONS/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "OPTIONS",
+                                "resourceId": {
+                                  "Ref": "PublicCrudApiitemBD642BBE"
+                                },
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                },
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "MOCK",
+                                  "requestTemplates": {
+                                    "application/json": "{\"statusCode\":200}"
+                                  },
+                                  "passthroughBehavior": "WHEN_NO_MATCH",
+                                  "integrationResponses": [
+                                    {
+                                      "statusCode": "200",
+                                      "responseParameters": {
+                                        "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                                        "method.response.header.Access-Control-Allow-Origin": "'*'",
+                                        "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "methodResponses": [
+                                  {
+                                    "statusCode": "200",
+                                    "responseParameters": {
+                                      "method.response.header.Access-Control-Allow-Headers": true,
+                                      "method.response.header.Access-Control-Allow-Methods": true,
+                                      "method.response.header.Access-Control-Allow-Origin": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "GET": {
+                        "id": "GET",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/GET",
+                        "children": {
+                          "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item": {
+                            "id": "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/GET/ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "itemFunction676EFA6D",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/",
+                                      {
+                                        "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                                      },
+                                      "/GET/item"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item": {
+                            "id": "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/GET/ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "itemFunction676EFA6D",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/test-invoke-stage/GET/item"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/GET/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "GET",
+                                "resourceId": {
+                                  "Ref": "PublicCrudApiitemBD642BBE"
+                                },
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                },
+                                "authorizationType": "NONE",
+                                "integration": {
+                                  "type": "AWS",
+                                  "uri": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                        {
+                                          "Fn::GetAtt": [
+                                            "itemFunction676EFA6D",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/invocations"
+                                      ]
+                                    ]
+                                  },
+                                  "integrationHttpMethod": "POST",
+                                  "requestTemplates": {
+                                    "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+                                  },
+                                  "integrationResponses": [
+                                    {
+                                      "statusCode": "200",
+                                      "responseParameters": {
+                                        "method.response.header.Access-Control-Allow-Origin": "'*'"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "methodResponses": [
+                                  {
+                                    "statusCode": "200",
+                                    "responseParameters": {
+                                      "method.response.header.Access-Control-Allow-Origin": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "POST": {
+                        "id": "POST",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/POST",
+                        "children": {
+                          "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item": {
+                            "id": "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/POST/ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "itemFunction676EFA6D",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/",
+                                      {
+                                        "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                                      },
+                                      "/POST/item"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item": {
+                            "id": "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/POST/ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                              "aws:cdk:cloudformation:props": {
+                                "action": "lambda:InvokeFunction",
+                                "functionName": {
+                                  "Fn::GetAtt": [
+                                    "itemFunction676EFA6D",
+                                    "Arn"
+                                  ]
+                                },
+                                "principal": "apigateway.amazonaws.com",
+                                "sourceArn": {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      "arn:",
+                                      {
+                                        "Ref": "AWS::Partition"
+                                      },
+                                      ":execute-api:us-east-1:535707483867:",
+                                      {
+                                        "Ref": "PublicCrudApiCD1F71C1"
+                                      },
+                                      "/test-invoke-stage/POST/item"
+                                    ]
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/POST/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                              "aws:cdk:cloudformation:props": {
+                                "httpMethod": "POST",
+                                "resourceId": {
+                                  "Ref": "PublicCrudApiitemBD642BBE"
+                                },
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                },
+                                "authorizationType": "COGNITO_USER_POOLS",
+                                "integration": {
+                                  "type": "AWS",
+                                  "uri": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                        {
+                                          "Fn::GetAtt": [
+                                            "itemFunction676EFA6D",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/invocations"
+                                      ]
+                                    ]
+                                  },
+                                  "integrationHttpMethod": "POST",
+                                  "requestTemplates": {
+                                    "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+                                  },
+                                  "integrationResponses": [
+                                    {
+                                      "statusCode": "200",
+                                      "responseParameters": {
+                                        "method.response.header.Access-Control-Allow-Origin": "'*'"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "methodResponses": [
+                                  {
+                                    "statusCode": "200",
+                                    "responseParameters": {
+                                      "method.response.header.Access-Control-Allow-Origin": true
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "{proxy+}": {
+                        "id": "{proxy+}",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                              "aws:cdk:cloudformation:props": {
+                                "parentId": {
+                                  "Ref": "PublicCrudApiitemBD642BBE"
+                                },
+                                "pathPart": "{proxy+}",
+                                "restApiId": {
+                                  "Ref": "PublicCrudApiCD1F71C1"
+                                }
+                              }
+                            }
+                          },
+                          "OPTIONS": {
+                            "id": "OPTIONS",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/OPTIONS",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/OPTIONS/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                                  "aws:cdk:cloudformation:props": {
+                                    "httpMethod": "OPTIONS",
+                                    "resourceId": {
+                                      "Ref": "PublicCrudApiitemproxy6DEF23DA"
+                                    },
+                                    "restApiId": {
+                                      "Ref": "PublicCrudApiCD1F71C1"
+                                    },
+                                    "authorizationType": "NONE",
+                                    "integration": {
+                                      "type": "MOCK",
+                                      "requestTemplates": {
+                                        "application/json": "{\"statusCode\":200}"
+                                      },
+                                      "passthroughBehavior": "WHEN_NO_MATCH",
+                                      "integrationResponses": [
+                                        {
+                                          "statusCode": "200",
+                                          "responseParameters": {
+                                            "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'",
+                                            "method.response.header.Access-Control-Allow-Origin": "'*'",
+                                            "method.response.header.Access-Control-Allow-Methods": "'GET,OPTIONS'"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "methodResponses": [
+                                      {
+                                        "statusCode": "200",
+                                        "responseParameters": {
+                                          "method.response.header.Access-Control-Allow-Headers": true,
+                                          "method.response.header.Access-Control-Allow-Methods": true,
+                                          "method.response.header.Access-Control-Allow-Origin": true
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "GET": {
+                            "id": "GET",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/GET",
+                            "children": {
+                              "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}": {
+                                "id": "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/GET/ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "itemFunction676EFA6D",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":execute-api:us-east-1:535707483867:",
+                                          {
+                                            "Ref": "PublicCrudApiCD1F71C1"
+                                          },
+                                          "/",
+                                          {
+                                            "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                                          },
+                                          "/GET/item/{proxy+}"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}": {
+                                "id": "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/GET/ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.GET..item.{proxy+}",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "itemFunction676EFA6D",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":execute-api:us-east-1:535707483867:",
+                                          {
+                                            "Ref": "PublicCrudApiCD1F71C1"
+                                          },
+                                          "/test-invoke-stage/GET/item/{proxy+}"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/GET/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                                  "aws:cdk:cloudformation:props": {
+                                    "httpMethod": "GET",
+                                    "resourceId": {
+                                      "Ref": "PublicCrudApiitemproxy6DEF23DA"
+                                    },
+                                    "restApiId": {
+                                      "Ref": "PublicCrudApiCD1F71C1"
+                                    },
+                                    "authorizationType": "NONE",
+                                    "integration": {
+                                      "type": "AWS",
+                                      "uri": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                            {
+                                              "Fn::GetAtt": [
+                                                "itemFunction676EFA6D",
+                                                "Arn"
+                                              ]
+                                            },
+                                            "/invocations"
+                                          ]
+                                        ]
+                                      },
+                                      "integrationHttpMethod": "POST",
+                                      "requestTemplates": {
+                                        "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+                                      },
+                                      "integrationResponses": [
+                                        {
+                                          "statusCode": "200",
+                                          "responseParameters": {
+                                            "method.response.header.Access-Control-Allow-Origin": "'*'"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "methodResponses": [
+                                      {
+                                        "statusCode": "200",
+                                        "responseParameters": {
+                                          "method.response.header.Access-Control-Allow-Origin": true
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "POST": {
+                            "id": "POST",
+                            "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/POST",
+                            "children": {
+                              "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}": {
+                                "id": "ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/POST/ApiPermission.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "itemFunction676EFA6D",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":execute-api:us-east-1:535707483867:",
+                                          {
+                                            "Ref": "PublicCrudApiCD1F71C1"
+                                          },
+                                          "/",
+                                          {
+                                            "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                                          },
+                                          "/POST/item/{proxy+}"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}": {
+                                "id": "ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/POST/ApiPermission.Test.pixiwebpxwstackPublicCrudApiB3B763CE.POST..item.{proxy+}",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "itemFunction676EFA6D",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":execute-api:us-east-1:535707483867:",
+                                          {
+                                            "Ref": "PublicCrudApiCD1F71C1"
+                                          },
+                                          "/test-invoke-stage/POST/item/{proxy+}"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "pixiweb-pxw-stack/PublicCrudApi/Default/item/{proxy+}/POST/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                                  "aws:cdk:cloudformation:props": {
+                                    "httpMethod": "POST",
+                                    "resourceId": {
+                                      "Ref": "PublicCrudApiitemproxy6DEF23DA"
+                                    },
+                                    "restApiId": {
+                                      "Ref": "PublicCrudApiCD1F71C1"
+                                    },
+                                    "authorizationType": "COGNITO_USER_POOLS",
+                                    "integration": {
+                                      "type": "AWS",
+                                      "uri": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:",
+                                            {
+                                              "Ref": "AWS::Partition"
+                                            },
+                                            ":apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                            {
+                                              "Fn::GetAtt": [
+                                                "itemFunction676EFA6D",
+                                                "Arn"
+                                              ]
+                                            },
+                                            "/invocations"
+                                          ]
+                                        ]
+                                      },
+                                      "integrationHttpMethod": "POST",
+                                      "requestTemplates": {
+                                        "application/json": "{\"auth_sub\": \"$context.authorizer.claims.sub\",\n\"method\": \"$context.httpMethod\",\n\"body\" : $input.json('$'),\n\"queryParams\": {\n#foreach($param in $input.params().querystring.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().querystring.get($param))\" #if($foreach.hasNext),#end\n#end\n},\n\"pathParams\": {\n#foreach($param in $input.params().path.keySet())\n\"$param\": \"$util.escapeJavaScript($input.params().path.get($param))\" #if($foreach.hasNext),#end\n#end\n}\n}\n"
+                                      },
+                                      "integrationResponses": [
+                                        {
+                                          "statusCode": "200",
+                                          "responseParameters": {
+                                            "method.response.header.Access-Control-Allow-Origin": "'*'"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "methodResponses": [
+                                      {
+                                        "statusCode": "200",
+                                        "responseParameters": {
+                                          "method.response.header.Access-Control-Allow-Origin": true
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "CustomDomain": {
+                "id": "CustomDomain",
+                "path": "pixiweb-pxw-stack/PublicCrudApi/CustomDomain",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/CustomDomain/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::DomainName",
+                      "aws:cdk:cloudformation:props": {
+                        "domainName": "apix.pixiweb.net",
+                        "endpointConfiguration": {
+                          "types": [
+                            "REGIONAL"
+                          ]
+                        },
+                        "regionalCertificateArn": {
+                          "Fn::GetAtt": [
+                            "ApiCertificateCertificateRequestorResource57CB3F69",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "Map:--=>pixiwebpxwstackPublicCrudApiB3B763CE": {
+                    "id": "Map:--=>pixiwebpxwstackPublicCrudApiB3B763CE",
+                    "path": "pixiweb-pxw-stack/PublicCrudApi/CustomDomain/Map:--=>pixiwebpxwstackPublicCrudApiB3B763CE",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/PublicCrudApi/CustomDomain/Map:--=>pixiwebpxwstackPublicCrudApiB3B763CE/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::BasePathMapping",
+                          "aws:cdk:cloudformation:props": {
+                            "domainName": {
+                              "Ref": "PublicCrudApiCustomDomain9F9BD4C3"
+                            },
+                            "restApiId": {
+                              "Ref": "PublicCrudApiCD1F71C1"
+                            },
+                            "stage": {
+                              "Ref": "PublicCrudApiDeploymentStageprod7193F3A0"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "PublicCrudApiAliasRecord": {
+            "id": "PublicCrudApiAliasRecord",
+            "path": "pixiweb-pxw-stack/PublicCrudApiAliasRecord",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/PublicCrudApiAliasRecord/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "apix.pixiweb.net.",
+                    "type": "A",
+                    "aliasTarget": {
+                      "dnsName": {
+                        "Fn::GetAtt": [
+                          "PublicCrudApiCustomDomain9F9BD4C3",
+                          "RegionalDomainName"
+                        ]
+                      },
+                      "hostedZoneId": {
+                        "Fn::GetAtt": [
+                          "PublicCrudApiCustomDomain9F9BD4C3",
+                          "RegionalHostedZoneId"
+                        ]
+                      }
+                    },
+                    "hostedZoneId": "Z0565560ONKFB6CU7U6G"
+                  }
+                }
+              }
+            }
+          },
+          "MasterStackApiAuth": {
+            "id": "MasterStackApiAuth",
+            "path": "pixiweb-pxw-stack/MasterStackApiAuth",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Authorizer",
+              "aws:cdk:cloudformation:props": {
+                "restApiId": {
+                  "Ref": "PublicCrudApiCD1F71C1"
+                },
+                "type": "COGNITO_USER_POOLS",
+                "identitySource": "method.request.header.Authorization",
+                "name": "MasterStackApiAuth",
+                "providerArns": [
+                  {
+                    "Fn::GetAtt": [
+                      "UserPoolX86720F9A",
+                      "Arn"
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "itemFunction": {
+            "id": "itemFunction",
+            "path": "pixiweb-pxw-stack/itemFunction",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "pixiweb-pxw-stack/itemFunction/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "pixiweb-pxw-stack/itemFunction/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "pixiweb-pxw-stack/itemFunction/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "pixiweb-pxw-stack/itemFunction/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "dynamodb:*",
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "PublicCrudTableE4703535",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "itemFunctionServiceRoleDefaultPolicy870E23D6",
+                            "roles": [
+                              {
+                                "Ref": "itemFunctionServiceRole597FE625"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "pixiweb-pxw-stack/itemFunction/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "pixiweb-pxw-stack/itemFunction/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "pixiweb-pxw-stack/itemFunction/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "pixiweb-pxw-stack/itemFunction/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22bS3BucketEF9AF4C1"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22bS3VersionKey6ADA5660"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters50a794641d7a84dfc6fa0c099297dd1643693ff20e5edf0bbb1a657bcabcb22bS3VersionKey6ADA5660"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "lambda_handler.handle_crud_request",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "itemFunctionServiceRole597FE625",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.7",
+                    "environment": {
+                      "variables": {
+                        "TABLE_NAME": {
+                          "Ref": "PublicCrudTableE4703535"
+                        }
+                      }
+                    },
+                    "timeout": 30
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

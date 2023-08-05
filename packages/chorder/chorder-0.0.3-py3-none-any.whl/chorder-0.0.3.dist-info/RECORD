@@ -1,0 +1,10 @@
+chorder/__init__.py,sha256=CViCfsaHIHYc7E_2MpDChEpQyNglowHryAzgPtmpuo4,141
+chorder/acchorder.py,sha256=ZiQhauY1iUu0fM0S7CPaF7hUYaiy4OgBrjBUBOwQnq4,4581
+chorder/chord.py,sha256=MFckBQ26ap3q4D9Zkf3VU75rDX3B-OsJ9G-B_5CYggU,3891
+chorder/dechorder.py,sha256=WTbEIseh5KkZT9wCc5l_AyUSOmuukEPt4pmD5yulTeA,7388
+chorder/timepoints.py,sha256=3Zj8nkmjikdLqHBtAkoNIzsW1MR3-J58Qkp8DW0egj0,1892
+chorder-0.0.3.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+chorder-0.0.3.dist-info/METADATA,sha256=9KlW_FXWe2AGyIhxGoFD3w3VtQGh3gH3CPjqsLMpWmU,456
+chorder-0.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+chorder-0.0.3.dist-info/top_level.txt,sha256=KQzWFLIXywwtbsSnsL58hqR_1AFo9g1WQsemkicdQ_I,8
+chorder-0.0.3.dist-info/RECORD,,

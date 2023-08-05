@@ -1,0 +1,42 @@
+Metadata-Version: 1.2
+Name: arklog
+Version: 0.0.1
+Summary: A python logging module with colors.
+Home-page: UNKNOWN
+Author: Arkadiusz Michał Ryś
+Author-email: Arkadiusz.Michal.Rys@gmail.com
+License: MIT license
+Description: ======
+        arklog
+        ======
+        
+        .. image:: https://img.shields.io/pypi/v/arklog.svg
+                :target: https://pypi.python.org/pypi/arklog
+        
+        A python logging module with colors.
+        
+        Example
+        -------
+        
+        .. code-block:: python3
+        
+           import arklog
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.1 (2020-06-03)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: logging colors
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8, <4

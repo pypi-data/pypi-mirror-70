@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: makecmd
+Version: 1.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+
+makecmd is a package that converts Python files into command-line utilities that can be used on Unix and Linux-based operating systems. 
+## Installation
+```python
+pip3 install makecmd
+
+```
+
+## Usage
+```python 
+makecmd <command> filename
+```
+
+
+

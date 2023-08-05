@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "blue-dot-sessions_svg-tools"
+version = "0.4.0"
+description = "SVG tools for Blue Dot Sessions"
+authors = ["Dean Shaff <dean.shaff@gmail.com>"]
+license = "MIT"
+packages = [
+  { include = "svg_tools" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+numpy = "^1.18.4"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.770"
+matplotlib = "^3.2.1"
+numpy = "^1.18.4"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

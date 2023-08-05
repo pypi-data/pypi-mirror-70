@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: apkdownload
+Version: 0.0.4
+Summary: You can easily download apk files using this api
+Home-page: https://Github.com/DevcodeOfficial/ApkDownload
+Author: Ayan Ansari
+Author-email: TechnoAyan1234@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+## This api is under devlopment so plz try now 
+
+# ApkDownloader
+
+You Can Easily Download Apk Files Using This Api
+
+## installing
+
+```sh
+$ pip install apkdownload
+```
+
+## How To Use
+
+```python
+import apkdownload as apk
+
+apk.dl("App Name")
+```
+
+## This api is under devlopment so plz try now 
+

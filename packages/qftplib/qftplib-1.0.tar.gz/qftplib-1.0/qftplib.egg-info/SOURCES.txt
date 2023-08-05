@@ -1,0 +1,12 @@
+README.md
+setup.py
+qftplib/__init__.py
+qftplib/client.py
+qftplib/exceptions.py
+qftplib.egg-info/PKG-INFO
+qftplib.egg-info/SOURCES.txt
+qftplib.egg-info/dependency_links.txt
+qftplib.egg-info/top_level.txt
+tests/__init__.py
+tests/test_ftp.py
+tests/test_sftp.py

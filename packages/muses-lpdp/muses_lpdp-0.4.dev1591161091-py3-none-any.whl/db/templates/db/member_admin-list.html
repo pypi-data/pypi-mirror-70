@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for member in member_list %}
+            <div class="muses-list-item">
+                <div onclick="location.href='{% url "muses_admin_member_detail" member.id %}'">
+                    {{ member.username }}
+                </div>
+                <div onclick="location.href='{% url "muses_admin_member_detail" member.id %}'">
+                    {{ member.email }}
+                </div>
+                <div onclick="location.href='{% url "muses_admin_member_detail" member.id %}'">
+                    {{ member.date_of_birth }}
+                </div>
+                <div class="muses-flex-row">
+                    <div><input type="button" value="{% trans "Send a message" %}"
+                                onclick=""></div>
+                    <div><input type="button" value="{% trans "Update" %}..."
+                                onclick="location.href='{% url "muses_admin_member_update" member.id %}'"></div>
+                    <div><input type="button" value="{% trans "Remove" %}"
+                                onclick="location.href='{% url "muses_admin_member_delete" member.id %}'"></div>
+                </div>
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+{% endblock %}

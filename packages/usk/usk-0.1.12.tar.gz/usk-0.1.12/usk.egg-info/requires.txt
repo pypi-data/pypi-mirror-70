@@ -1,0 +1,6 @@
+setuptools
+pigpio
+bme680
+smbus
+adafruit-circuitpython-bno055
+SI1145

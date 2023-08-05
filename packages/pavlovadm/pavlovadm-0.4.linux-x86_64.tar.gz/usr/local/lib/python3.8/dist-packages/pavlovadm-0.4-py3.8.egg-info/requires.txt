@@ -1,0 +1,4 @@
+requests
+inquirer
+cmd
+PyYAML

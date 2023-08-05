@@ -1,0 +1,8 @@
+README
+__init__.py
+cloudeos.py
+setup.py
+cloudeos.egg-info/PKG-INFO
+cloudeos.egg-info/SOURCES.txt
+cloudeos.egg-info/dependency_links.txt
+cloudeos.egg-info/top_level.txt

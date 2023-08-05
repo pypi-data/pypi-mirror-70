@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: cloudeos
+Version: 0.1.1
+Summary: https://cloudeos.com api sdk
+Home-page: https://github.com/hknyldz/CloudeosApi
+Author: Cloudeos
+Author-email: team@cloudeos.com
+License: UNKNOWN
+Description: # CloudeosApi
+        
+        Cloudeos.com için python api kullanımı örnegidir, api dökümanlarından bakarak bu örneği genişletebilirsiniz.
+        
+        ### Mevcut istek örnekleri:
+        - Get Account Detail
+        - Get Current Balance
+        - Create Server
+        - Get Server Lists
+        - Destroy Server
+        - Create SSH Key
+        - Get SSH Keys
+        - Destroy SSH Keys
+        - Get Regions
+        - Get Packages
+        
+        
+        
+        ### Example
+        
+        #### Get Account Detail:
+        ```
+        from cloudeos import API
+        
+        
+        cloudeos = API("username", "password")
+        
+        account_detail = cloudeos.get_accountDetail()
+        
+        print(account_detail)
+        ```
+        
+        
+        #### Create Server:
+        ```
+        from cloudeos import API
+        
+        
+        cloudeos = API("username", "password")
+        
+        name	 = "MyServer"
+        region	 = "ist2"
+        package  = "1c-1r-25d"
+        image	 = "ubuntu-16-04-x64"
+        ssh_keys = "MySSHKey fingerprint degeri" #key olusturulmussa veya istege bagli
+        
+        create   = cloudeos.create_server(name, region, package, image, ssh_keys=ssh_keys)
+        
+        print(create)
+        ```
+        
+        
+        Diğer örnekleri Examples klasöründe bulabilir ve genişletebilirsiniz.
+        
+Keywords: cloud,cloudeos
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

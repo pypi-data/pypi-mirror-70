@@ -1,0 +1,13 @@
+setup.py
+bert4tf/__init__.py
+bert4tf/bertTasks.py
+bert4tf/config.py
+bert4tf/data.py
+bert4tf/modeling.py
+bert4tf/optimization.py
+bert4tf/tokenization.py
+bertTasks4tf.egg-info/PKG-INFO
+bertTasks4tf.egg-info/SOURCES.txt
+bertTasks4tf.egg-info/dependency_links.txt
+bertTasks4tf.egg-info/requires.txt
+bertTasks4tf.egg-info/top_level.txt

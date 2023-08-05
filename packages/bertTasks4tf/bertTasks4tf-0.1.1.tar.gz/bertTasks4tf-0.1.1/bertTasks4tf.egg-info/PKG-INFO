@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: bertTasks4tf
+Version: 0.1.1
+Summary: bert tasks 4 tf 1.12+ 
+Home-page: https://github.com/YC-wind/bert4tf
+Author: YC-wind
+Author-email: congyu93@foxmail.com
+License: Apache License 2.0
+Description: bert4tf: https://github.com/YC-wind/bert4tf
+Platform: UNKNOWN
+Provides-Extra: gpu
+Provides-Extra: cpu

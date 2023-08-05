@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        aws-secrets=aws_secrets.cli:main
+    

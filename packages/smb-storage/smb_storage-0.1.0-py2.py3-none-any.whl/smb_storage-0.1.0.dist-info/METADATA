@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: smb-storage
+Version: 0.1.0
+Summary: 
+Author: pat-rapidai
+Author-email: sheehan@rapid.ai
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: pysmb (>=1.2.1,<2.0.0)

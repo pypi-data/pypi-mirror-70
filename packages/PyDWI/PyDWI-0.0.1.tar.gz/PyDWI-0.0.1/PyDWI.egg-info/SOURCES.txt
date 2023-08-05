@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+PyDWI/__init__.py
+PyDWI/_nbdev.py
+PyDWI/core.py
+PyDWI.egg-info/PKG-INFO
+PyDWI.egg-info/SOURCES.txt
+PyDWI.egg-info/dependency_links.txt
+PyDWI.egg-info/entry_points.txt
+PyDWI.egg-info/not-zip-safe
+PyDWI.egg-info/requires.txt
+PyDWI.egg-info/top_level.txt

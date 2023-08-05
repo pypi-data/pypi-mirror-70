@@ -1,0 +1,17 @@
+LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+apologiesserver/__init__.py,sha256=MbcfcbWrGZXnfu4CSXP2C3Bl3oH2-5oGDMoqRtfcwss,29
+apologiesserver/cli.py,sha256=Ff6rWW_u2Erwl7DenmNJF4qe-uHanf_3gU6nIA82zVo,3820
+apologiesserver/config.py,sha256=VawtA__6d90cb5GX8jhu0XLVrr1RPMyhVA0dWR8Pdp4,12791
+apologiesserver/demo.py,sha256=jMokVY4Unp9zQDxS0dIvJKRsd238d0H7B8DzLh5HBOQ,7781
+apologiesserver/event.py,sha256=3yxWLJjm9WdCuaVcoSHgEpUTgHeprmvz-X5qUMq8j3A,35221
+apologiesserver/interface.py,sha256=iV4fDiUfZo1jUikIeVy5weLADGB82do0czSDI0JGuNU,25887
+apologiesserver/manager.py,sha256=H-bzHdC3XjzJknXhwfiqyciQ929N5d4n-EC8-0ugQuQ,31897
+apologiesserver/py.typed,sha256=vMFkeFDpYRjlHDyStjBmRDyiOyvp4l7mV_Oj2FgOBbE,75
+apologiesserver/scheduled.py,sha256=HuK6YcXzCXYijxZWEVPUgr7ecd4PcfbE52864WfGcaU,3576
+apologiesserver/server.py,sha256=f19SdEPLhMlk48pPycFb_wEvRrQv-ARnMD9IdDiMMvo,9642
+apologiesserver/util.py,sha256=hmCsZDYcbgXrh58RW5r7UB_moKRBq8DaJ2x8O9l6DzQ,3136
+apologiesserver/validator.py,sha256=KnJZriqPtMLMTFzmYvPSHprxsnTfzXVCMUhT9eTTHW4,3454
+apologiesserver-0.1.4.dist-info/LICENSE,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+apologiesserver-0.1.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+apologiesserver-0.1.4.dist-info/METADATA,sha256=kedv1ebpLpZixjiiwfndPLu6Qfez1ygAwAu-YyzTgkY,2367
+apologiesserver-0.1.4.dist-info/RECORD,,

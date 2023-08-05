@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: femtools
+Version: 0.0.2
+Summary: Forecast-elicitation-Mechanism
+Home-page: https://github.com/Hermera/Forecast-elicitation-Mechanism
+Author: thaddywu
+Author-email: thaddywu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Forecast-elicitation-Mechanism
+
+Implement 4 papers:
+
+- Water from Two Rocks: Maximizing the Mutual Information (wftr)
+- Dominantly Truthful Multi-task Peer Prediction with a Constant Number of Tasks (dmi)
+- A Bayesian truth serum for subjective data (BTS)
+- Informed Truthfulness in Multi-Task Peer Prediction (CA)
+
+

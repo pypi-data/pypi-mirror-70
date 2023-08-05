@@ -1,0 +1,8 @@
+djangodeployer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangodeployer/cmd_listener.py,sha256=yl5qZeRAL-O-s0QVLAhPVRTA5Qv_ZCpr9wEp0DvyNEU,251
+djangodeployer/installer.py,sha256=QLdWDuwk-1LNvoPnLwv6lPmyq7R2J8PrKbEetD3j2DI,17229
+djangodeployer-0.1.0.dist-info/METADATA,sha256=NeOGVGiJUvnX27hjuB-jmIViK7GKXtWhUJz17vK9f6A,1311
+djangodeployer-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+djangodeployer-0.1.0.dist-info/entry_points.txt,sha256=TqLF2dsRvn1oFSl4oJZX066bT01Qq1KTP_ZfDqOlAbY,69
+djangodeployer-0.1.0.dist-info/top_level.txt,sha256=DfYqm0txTLXd2vWQog7lLqvc3HDC1yXoOg5k5LMbN3I,15
+djangodeployer-0.1.0.dist-info/RECORD,,

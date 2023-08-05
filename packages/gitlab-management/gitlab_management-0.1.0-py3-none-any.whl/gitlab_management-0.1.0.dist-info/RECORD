@@ -1,0 +1,9 @@
+gitlab-management/__init__.py,sha256=UPWjQioSScArvgqsei6mqD47dc6c75B5RXYQfgsu7AE,136
+gitlab-management/__main__.py,sha256=SQ7FVxQ36SerQjVfaPEjbivUcil47cWLS4HnvrKk55Y,83
+gitlab-management/base.py,sha256=khfGfDF0ZG3yFlAZ47Jb8iCx8iHkbSR6MnMNMMfe-Yc,10064
+gitlab-management/cli.py,sha256=KUEEDdiEAfIfbfw98aKis5OSLyxh6D2wWnvKXjYMYY0,2606
+gitlab_management-0.1.0.dist-info/LICENSE,sha256=Cu0ELqc90c2cajtnwZx60tuevd-6pl0I7IUUOi3mqZ4,16146
+gitlab_management-0.1.0.dist-info/METADATA,sha256=5KGYlZdJ7s55UITGiy3It9MytV2lHexFPeJpzx1sxZE,3959
+gitlab_management-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gitlab_management-0.1.0.dist-info/top_level.txt,sha256=RflyL4LcttLTywCtQu5evzvKIr56WZJ5gzjCmRg-NU8,18
+gitlab_management-0.1.0.dist-info/RECORD,,

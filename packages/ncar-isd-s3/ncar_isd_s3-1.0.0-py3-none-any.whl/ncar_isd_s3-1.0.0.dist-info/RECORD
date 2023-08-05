@@ -1,0 +1,11 @@
+isd_s3/__init__.py,sha256=lTm7My1fOYzDlCjvUJ-bSIDH2JQ4_5Q5Eiz5XxGh9AY,424
+isd_s3/__main__.py,sha256=lt6gjrp5C-58wGncPvGRuGwXlk8DOTmtlS2ykl2Ltck,20120
+isd_s3/config.py,sha256=kfnllZSkhX9mMuabSqpgHTW4BD3K3fjmJBduZTRnqbY,2909
+isd_s3/isd_s3.py,sha256=dyA2qUC2NfLjs4dZcyHA1am6mnXVtm1NPTofPjr0bRg,18516
+isd_s3/isd_s3_config.py,sha256=SFFdifHqyll_w4NssymzkoPMpip-XoHPgu0Uvi73PBo,414
+ncar_isd_s3-1.0.0.dist-info/LICENSE,sha256=uB-AJwvcu_9aGCOS4nE0_v9nSRb1kIpvGrXMq7n8Mn8,1104
+ncar_isd_s3-1.0.0.dist-info/METADATA,sha256=2qXdDaFWlFKF4GKSCumxGIsAfMqmm6ovxt8FpRLnWt4,1401
+ncar_isd_s3-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ncar_isd_s3-1.0.0.dist-info/entry_points.txt,sha256=QznpGvlEXUbrUqb7n8CqHKysxLV-Hu0no9h-KtRJByw,49
+ncar_isd_s3-1.0.0.dist-info/top_level.txt,sha256=sLbrJOSGKrwf7qZ-x2XuvyJg3btXeMGRbTbSV-GdvpA,7
+ncar_isd_s3-1.0.0.dist-info/RECORD,,

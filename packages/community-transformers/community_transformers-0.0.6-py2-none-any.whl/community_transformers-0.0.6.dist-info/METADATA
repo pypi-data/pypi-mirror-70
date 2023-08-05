@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: community-transformers
+Version: 0.0.6
+Summary: A package of custom pyspark.ml transformers
+Home-page: https://github.com/mike-dobbles/community-tranformers
+Author: Mike Dobbles
+Author-email: mdobbles@yahoo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# community-transformers
+
+This package contains a variety of customer pyspark.ml transformers 
+
+

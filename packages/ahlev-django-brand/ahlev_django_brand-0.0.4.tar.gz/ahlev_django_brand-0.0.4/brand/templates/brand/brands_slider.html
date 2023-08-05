@@ -1,0 +1,34 @@
+<div class="uk-section uk-section-default uk-section-small">
+    <div class="uk-container">
+        <h2 class="uk-text-center">Popular Brands</h2>
+        <div class="uk-margin-medium-top" uk-slider="autoplay: true; autoplay-interval: 1000;">
+            <div class="uk-position-relative">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-visible@m">
+                        <a href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    </div>
+                    <div class="uk-width-expand uk-slider-container">
+                        <ul class="uk-slider-items uk-child-width-1-6@s " uk-grid>
+                            {% for brand in brands %}
+                            <li>
+                                <div class="tm-ratio tm-ratio-16-9">
+                                    <a href="#" class="uk-link-muted tm-media-box tm-grayscale"
+                                       title="{{ brand.name }}"/>
+                                    <figure class="tm-media-box-wrap">
+                                        <img src="/medias/{{ brand.logo }}" alt="{{brand.name}}"/>
+                                    </figure>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="uk-visible@m">
+                        <a href="#" uk-slider-item="next" uk-slidenav-next></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-medium-top uk-hidden@m">
+            </ul>
+        </div>
+    </div>
+</div>

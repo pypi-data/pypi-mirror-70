@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qmasm
+Version: 4.0
+Summary: Quantum Macro Assembler
+Home-page: https://github.com/lanl/qmasm
+Author: Scott Pakin
+Author-email: pakin@lanl.gov
+License: BSD
+Keywords: quantum assembler d-wave
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Compilers
+Requires-Python: >= 3.8
+
+UNKNOWN
+
+

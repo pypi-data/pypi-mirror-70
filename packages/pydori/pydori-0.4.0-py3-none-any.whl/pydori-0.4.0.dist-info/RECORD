@@ -1,0 +1,13 @@
+pydori/BandoriApi.py,sha256=pEN3iT23KsiQPwZn-qCYlMsKJLT2eLmMWzwWexXrAIc,6044
+pydori/__init__.py,sha256=Dba2rUe7egknoBQmlw1SbYkD5nKglQufVRp45wAjHq8,34
+pydori/bandori_loader.py,sha256=oA6tzq03-MqxGEl7athz2kXUEW1LT9Mk8FH5PF4U3SY,4294
+pydori/base_objects.py,sha256=Xim1SQb-v3i0YZdqFqpUnd8N23fIogyLM5_Nj8YaShI,16363
+pydori/__pycache__/BandoriApi.cpython-38.pyc,sha256=Po5waJPkoX4tP1Z0cQgprRvwvSd_2vlZ-2xPbWVDdS4,6771
+pydori/__pycache__/__init__.cpython-38.pyc,sha256=jJrbI9fu2VBq3WtxoO8QjuBtOTkiit0dMugSH_fFvZU,176
+pydori/__pycache__/bandori_loader.cpython-38.pyc,sha256=_ROMdH7_iia6C8dKvbZyJELuzOgPHi5xlKzePwpgoco,3041
+pydori/__pycache__/base_objects.cpython-38.pyc,sha256=fvaKIHvAKWnKzLUBJ2H9vUvQa6vWi4U33nuOR0AYs8E,13611
+pydori-0.4.0.dist-info/LICENSE,sha256=MS7JkZPr31NzuwfcwqXAbrXwTUrRGfinnILhdFCJWlM,1082
+pydori-0.4.0.dist-info/METADATA,sha256=-mtT1YqW2KWKIdvvnBh9ioTwkQ-YKCg5_bXtjKg_AoI,12025
+pydori-0.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pydori-0.4.0.dist-info/top_level.txt,sha256=_5aMRN5hbn999IkJlaWn8MWBdMao6I8CjsSXkG_eg-Q,7
+pydori-0.4.0.dist-info/RECORD,,

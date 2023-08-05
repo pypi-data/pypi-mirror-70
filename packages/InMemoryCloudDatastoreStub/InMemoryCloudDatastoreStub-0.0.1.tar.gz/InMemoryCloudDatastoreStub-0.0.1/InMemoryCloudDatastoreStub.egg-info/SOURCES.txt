@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+InMemoryCloudDatastoreStub/__init__.py
+InMemoryCloudDatastoreStub/datastore_stub.py
+InMemoryCloudDatastoreStub/futures.py
+InMemoryCloudDatastoreStub.egg-info/PKG-INFO
+InMemoryCloudDatastoreStub.egg-info/SOURCES.txt
+InMemoryCloudDatastoreStub.egg-info/dependency_links.txt
+InMemoryCloudDatastoreStub.egg-info/requires.txt
+InMemoryCloudDatastoreStub.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
+tests/models.py
+tests/query_test.py

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bs-processors
+Version: 0.0.1rc3
+Summary: html/xml processors for using with BeautifulSoup
+Home-page:  https://github.com/RaduW/bs-processors.git
+Author: RaduW
+License: MIT
+Description: # bs-processors
+        
+        Library with utilities for easy html & xml processing using 
+        [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) parsed objects.
+        
+         
+        
+Keywords: BeautifulSoup
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

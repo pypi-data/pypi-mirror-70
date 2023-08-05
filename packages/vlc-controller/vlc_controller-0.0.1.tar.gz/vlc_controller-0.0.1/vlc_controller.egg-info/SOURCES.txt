@@ -1,0 +1,7 @@
+README.md
+setup.py
+vlc_controller/__init__.py
+vlc_controller.egg-info/PKG-INFO
+vlc_controller.egg-info/SOURCES.txt
+vlc_controller.egg-info/dependency_links.txt
+vlc_controller.egg-info/top_level.txt

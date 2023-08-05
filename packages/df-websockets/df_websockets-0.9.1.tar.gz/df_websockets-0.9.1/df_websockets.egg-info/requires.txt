@@ -1,0 +1,6 @@
+asgiref
+celery
+channels
+channels_redis
+django
+redis

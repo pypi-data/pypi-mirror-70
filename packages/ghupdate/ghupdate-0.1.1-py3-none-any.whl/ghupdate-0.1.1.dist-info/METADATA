@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ghupdate
+Version: 0.1.1
+Summary: 
+Author: Dimitrios Strantsalis
+Author-email: dstrants@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cement (>=3.0.4,<4.0.0)
+Requires-Dist: colorlog (>=4.1.0,<5.0.0)
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: pygithub (>=1.51,<2.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Requires-Dist: rich (>=1.2.3,<2.0.0)

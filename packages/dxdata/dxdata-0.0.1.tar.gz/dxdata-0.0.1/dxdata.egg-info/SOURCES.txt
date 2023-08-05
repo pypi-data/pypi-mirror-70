@@ -1,0 +1,7 @@
+README.md
+setup.py
+dxdata/__init__.py
+dxdata.egg-info/PKG-INFO
+dxdata.egg-info/SOURCES.txt
+dxdata.egg-info/dependency_links.txt
+dxdata.egg-info/top_level.txt

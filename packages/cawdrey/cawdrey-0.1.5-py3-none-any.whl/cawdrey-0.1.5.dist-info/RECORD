@@ -1,0 +1,15 @@
+cawdrey/__init__.py,sha256=bzICUJ0WqPSYiHs1JHOXi7wzAARAownrVyu6Q4WAeD4,1686
+cawdrey/alphadict.py,sha256=jP-r1nQFsOkrbUTOVbbtSjH0vtvLdwZKxwuZ5Z-tqcM,1899
+cawdrey/base.py,sha256=X2A0xnaB_jVfro-y61SE9psMGCddRw5CSErmA-lzlfY,3026
+cawdrey/bdict.py,sha256=lk_bLgrMrVBOqy1Ox2ViZwKg3X3pPy2CEw4ASeUz75A,4242
+cawdrey/bdict.pyi,sha256=rgBx4z9ZhtHpVLel7th86hm7cQ_Ooq7kkV6vPG-3QFw,102
+cawdrey/frozendict.py,sha256=GUrC_1cgVO-i5F8PMMW6GYmRUCKDQscbFmubwCMnzfk,5814
+cawdrey/frozenordereddict.py,sha256=x7Cx2WiNYrQQEDGA5aFVleS_Yhm_pot_xmF8IqdVi4I,1841
+cawdrey/nonelessdict.py,sha256=yCnNJNNpyZuiX62Q3oQoiL1OwMEwVlPw-XI-RWDTi18,2807
+cawdrey/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cawdrey-0.1.5.dist-info/LICENSE.txt,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+cawdrey-0.1.5.dist-info/METADATA,sha256=LwReRx-ixL535WmEZEMFkRbVSOEGRc9hZzA163JjyDw,6778
+cawdrey-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cawdrey-0.1.5.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+cawdrey-0.1.5.dist-info/top_level.txt,sha256=z2vEWC9BOgTYQ-lalC9G3WCVx2uSypGAfVJzk_Vv1oY,8
+cawdrey-0.1.5.dist-info/RECORD,,

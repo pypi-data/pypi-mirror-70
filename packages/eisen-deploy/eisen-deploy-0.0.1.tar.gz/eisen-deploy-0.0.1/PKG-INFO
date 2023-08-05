@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: eisen-deploy
+Version: 0.0.1
+Summary: Eisen deploy provides model deployment and serving functionality
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

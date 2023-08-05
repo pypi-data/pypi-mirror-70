@@ -1,0 +1,20 @@
+################################################################################
+#                              py-hopscotch-dict                               #
+#    Full-featured `dict` replacement with guaranteed constant-time lookups    #
+#                       (C) 2017, 2019-2020 Jeremy Brown                       #
+#       Released under version 3.0 of the Non-Profit Open Source License       #
+################################################################################
+
+[build-system]
+build-backend = "setuptools.build_meta"
+
+requires = [
+	"setuptools >= 43.0.0",
+	"setuptools_scm[toml] >= 3.4",
+	"wheel",
+	]
+
+[tool.setuptools_scm]
+local_scheme = "no-local-version"
+write_to = "src/py_hopscotch_dict/VERSION"
+write_to_template = "{version}"

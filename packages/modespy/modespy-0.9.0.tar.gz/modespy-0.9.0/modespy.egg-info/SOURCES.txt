@@ -1,0 +1,14 @@
+README.md
+setup.py
+modespy/__init__.py
+modespy/filters.py
+modespy/methods.py
+modespy/modes.py
+modespy/std_problems.py
+modespy/tk_examples.py
+modespy/util.py
+modespy.egg-info/PKG-INFO
+modespy.egg-info/SOURCES.txt
+modespy.egg-info/dependency_links.txt
+modespy.egg-info/requires.txt
+modespy.egg-info/top_level.txt

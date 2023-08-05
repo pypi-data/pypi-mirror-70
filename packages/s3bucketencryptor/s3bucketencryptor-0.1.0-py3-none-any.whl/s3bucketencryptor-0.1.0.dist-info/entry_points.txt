@@ -1,0 +1,3 @@
+[console_scripts]
+s3enc=s3bucketencryptor:encrypt_bucket
+

@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: s3bucketencryptor
+Version: 0.1.0
+Summary: It set Server Side Encryption as AES256 for Objects in a S3 Bucket.
+Author: oi73ooh
+Author-email: cindian@amazingbutuseless.net
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: boto3 (>=1.13.21,<2.0.0)

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ilabs.brs
+Version: 1.0.0
+Summary: Innodata BRS schema and utilities
+Home-page: http://innodata.com
+Author: Mike Kroutikov
+Author-email: mkroutikov@innodata.com
+License: MIT
+Keywords: inline tagging xml schema
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: lxml
+Requires-Dist: lxmlx
+
+See http://innodata.com
+
+

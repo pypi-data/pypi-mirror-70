@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cron-processor
+Version: 0.0.1
+Summary: Library to setup cron_processor
+Home-page: https://github.com/shuttl-tech/shuttl_workflows
+Author: Shuttl
+Author-email: swarnima.gupta@shuttl.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pyshuttlis
+Requires-Dist: bookmarker
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-runner ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-pep8 ; extra == 'test'
+
+UNKNOWN
+
+

@@ -1,0 +1,196 @@
+Metadata-Version: 2.1
+Name: datup
+Version: 0.0.2
+Summary: The version of this library and document is V 0.0.2
+Home-page: https://datup.ai
+Author: Cristhian Plazas Ortega
+Author-email: cristhianpo@datup.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# datup                                                   
+
+
+The version of this library and document is V 0.0.2
+This library has 3 methods and 1 Class
+
+## How is it work?
+    import datup as dt
+
+## To Instance the Class
+    job = dt.DataIO("aws_acces_key_id","aws_secret_access_key","datalake")
+
+## Can I test my updates?
+Yes, there is a file called _testing.ipynb where you can test your changes. The variables, 
+must be initialized always for modularity.
+
+## Class DataIO:
+    A group of methods for I/O data from a AWS S3 Datalake
+
+    Parameters
+    ----------
+    aws_acces_key_id : str
+        The class must be intialized with aws_acces_key_id
+    aws_secret_access_key : str
+        The class must be intialized with aws_secret_access_key
+    datalake : str
+        The class must be intialized with the name of the datalake
+    prefix_s3 : str, default "s3://"
+        The s3 prefix used to denote a s3 address
+    local_path : str, default "/tmp/"
+        The local path used by boto3 for upload from Temp folder to S3 bucket.
+
+
+    Methdos
+    -------
+    download_csv(self,stage=None,filename=None,datecols=False,sep=",",encoding="ISO-8859-1",infer_datetime_format=True,low_memory=False,indexcol=None,ts_csv=False,freq=None)
+
+            Return a dataframe downloaded from a specified datalake
+
+            This function takes the aws credentials from DataIO class and use it for download 
+            the required data.
+
+            Parameters
+            ----------
+            stage : str, default None
+                It is the set of folders after the datalake to the file that is required to download 
+            filename : str, default None
+                Is the name of the filename to download without csv suffix
+            datecols: bool or list of int or names or list of lists or dict, default False
+                Took it from Pandas read_csv parse_dates description
+                The behavior is as follows:
+                    * boolean. If True -> try parsing the index.
+                    * list of int or names. e.g. If [1, 2, 3] -> try parsing columns 1, 2, 3 each as a separate date column.
+                    * list of lists. e.g. If [[1, 3]] -> combine columns 1 and 3 and parse as a single date column.
+                    * dict, e.g. {‘foo’ : [1, 3]} -> parse columns 1, 3 as date and call result ‘foo’
+                    If a column or index cannot be represented as an array of datetimes, say because of an unparseable value
+                    or a mixture of timezones, the column or index will be returned unaltered as an object data type. For
+                    non-standard datetime parsing, use pd.to_datetime after pd.read_csv. To parse an index or column with
+                    a mixture of timezones, specify date_parser to be a partially-applied pandas.to_datetime() with
+                    utc=True. See Parsing a CSV with mixed timezones for more.
+                    Note: A fast-path exists for iso8601-formatted dates.
+            sep: str, default ‘,’
+                Took it from Pandas read_csv sep description
+                Delimiter to use. If sep is None, the C engine cannot automatically detect the separator, but the Python
+                parsing engine can, meaning the latter will be used and automatically detect the separator by Python’s
+                builtin sniffer tool, csv.Sniffer. In addition, separators longer than 1 character and different from '\s+'
+                will be interpreted as regular expressions and will also force the use of the Python parsing engine. Note
+                that regex delimiters are prone to ignoring quoted data. Regex example: '\r\t'.
+            encoding: str, default ‘ISO-8859-1’
+                Took it from Pandas read_csv encoding description
+                Encoding to use for UTF when reading/writing (ex. ‘utf-8’).
+            infer_datetime_format: bool, default True
+                Took it from Pandas read_csv infer_datetime_format description
+                If True and parse_dates is enabled, pandas will attempt to infer the format of the datetime strings in the
+                columns, and if it can be inferred, switch to a faster method of parsing them. In some cases this can
+                increase the parsing speed by 5-10x.
+            low_memory: bool, default True
+                Took it from Pandas read_csv low_memory description
+                Internally process the file in chunks, resulting in lower memory use while parsing, but possibly mixed
+                type inference. To ensure no mixed types either set False, or specify the type with the dtype parameter.
+                Note that the entire file is read into a single DataFrame regardless, use the chunksize or iterator
+                parameter to return the data in chunks. (Only valid with C parser).
+            indexcol : int, str, sequence of int / str, or False, default None
+                Took it from Pandas read_csv index_col description
+                Column(s) to use as the row labels of the DataFrame, either given as string name or column index. If a
+                sequence of int / str is given, a MultiIndex is used. 
+                Note: index_col=False can be used to force pandas to not use the first column as the index, e.g. when
+                you have a malformed file with delimiters at the end of each line.
+            ts_csv : bool, default False
+                If ts_csv is True then activates the ts_csv downloaded. If True, indexcol and freq, both must
+                be different to None
+            freq : str, default W-MON
+                Is the frequency of getting data
+
+            Returns
+            -------
+            DataFrame
+                A DataFrame is return as two-dimensional data structure
+
+            Examples
+            --------
+            >>> object.download_csv(stage='stage',filename='filename')  # doctest: +SKIP
+
+    download_csvm(self,uris)
+
+        Return a set of dataframes downloaded from a specified datalake in a list
+
+        This function takes the aws credentials from DataIO class and use it for download 
+        the required data through download_csv method.
+
+        Parameters
+        ----------
+        uris : dict
+            Is the dictionary with all parameters necessary for the download_csv method
+
+        Returns
+        -------
+        List of DataFrames
+            A list of DataFrames are returned
+        List of DataFrames Names
+            A list of DataFrames Names are return in string type
+
+        Examples
+        --------
+        >>> uris = {
+                "uri_1":{
+                    "stage":"stage",
+                    "filename":"filename",
+                    "datecols":False,
+                    "sep":";",
+                    "encoding":"ISO-8859-1"
+                },
+                "uri_2":{
+                    "stage":"stage",
+                    "filename":"filename",
+                    "datecols":False,
+                    "sep":";",
+                    "encoding":"ISO-8859-1"
+                }
+            }
+        >>> df, df_names =object.download_csvm(uris=uris)  # doctest: +SKIP
+
+    upload_csv(self,df,stage=None,filename=None,index=False,header=True,date_format="%Y-%m-%d",ts_csv=False)
+
+        Return a uri where the dataframes was uploaded in csv format 
+
+        This function takes the aws credentials from DataIO class and use it for upload
+        the required data.
+
+        Parameters
+        ----------
+        df : DataFrame
+            Is the DataFrame for uploading to S3 datalake
+        stage : str, default None
+            It is the set of folders after the datalake to the file that is required to upload 
+        filename : str, default None
+            Is the name of the filename to upload without csv suffix
+        index : bool, default False
+            Took it from Pandas to_csv index description
+            Write row names (index).
+        header : bool or list of str, default True
+            Took it from Pandas to_csv index description
+            Write out the column names. If a list of strings is given it is assumed to be aliases for
+            the column names.
+        date_format : str, default %Y-%m-%d
+            Took it from Pandas to_csv index description
+            Format string for datetime objects.
+        ts_csv : bool, default False
+            If ts_csv is True then activates the ts_csv upload. If True, index must be different to False
+
+        Returns
+        -------
+        Str
+            The uri where DataFrame was uploaded into S3
+
+        Examples
+        --------
+        >>> object.upload_csv(df,stage="stage",filename="filename")  # doctest: +SKIP
+
+
+

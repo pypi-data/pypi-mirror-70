@@ -1,0 +1,12 @@
+numpy
+scipy
+trimesh
+pvlib
+pandas
+matplotlib
+mpld3
+shapely
+jinja2
+netCDF4
+siphon
+tables

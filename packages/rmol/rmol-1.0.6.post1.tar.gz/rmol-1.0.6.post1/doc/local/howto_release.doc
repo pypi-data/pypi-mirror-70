@@ -1,0 +1,183 @@
+/*!
+\page howto_release Make a new release
+
+\section description Introduction
+
+This document describes briefly the recommended procedure of releasing
+a new version of RMOL using a Linux development machine and the
+GitHub project site.
+
+The following steps are required to make a release of the distribution package.
+
+- \ref initialisation
+- \ref branch_update
+- \ref branch_publish
+- \ref create_packages
+- \ref upload_doc
+- \ref generate_rpm_packages
+- \ref update_changelog
+- \ref create_bin_packages
+- \ref upload_files
+- \ref post_news
+- \ref send_announce
+
+
+\section initialisation Initialisation
+
+Clone locally the full
+<a href="http://github.com/airsim/rmol">Git project</a>:
+\verbatim 
+$ mkdir -p ~/dev/sim
+$ cd ~/dev/sim
+$ git clone git@github.com:airsim/rmol.git rmolgit # If SSH is allowed
+$ git clone https://github.com/airsim/rmol.git rmolgit # If the firewall does not allow SSH
+$ cd rmolgit
+$ git checkout trunk
+\endverbatim 
+
+
+\section branch_update Release branch maintenance
+
+Switch to the release branch, on your local clone, and merge the latest updates
+from the trunk. Decide about the new version to be released.
+\verbatim
+cd ~/dev/sim/rmolgit
+git checkout releases
+git merge trunk
+\endverbatim
+Update the version in the various build system files, replacing the old version
+numbers by the correct ones:
+\verbatim
+vi CMakeLists.txt
+vi autogen.sh
+vi README
+\endverbatim
+
+Update the version, add some news in the \c NEWS file, add a change-log
+in the \c ChangeLog file and in the RPM specification files:
+\verbatim
+vi NEWS
+vi ChangeLog
+vi rmol.spec
+\endverbatim
+
+\section branch_publish Commit and publish the release branch
+
+Commit the new release:
+\verbatim
+cd ~/dev/sim/rmolgit
+git add -A
+git commit -m "[Release 1.00.3] Release of the 1.00.3 version of RMOL."
+git push
+\endverbatim
+
+\section create_packages Create source packages (tar-balls)
+
+Create the distribution packages using the following command:<br>
+\verbatim 
+cd ~/dev/sim/rmolgit
+git checkout releases
+rm -rf build && mkdir -p build
+cd build
+export INSTALL_BASEDIR=~/dev/deliveries
+export RMOL_VER=99.99.99
+export LIBSUFFIX_4_CMAKE="-DLIB_SUFFIX=64"
+cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_BASEDIR}/rmol-$RMOL_VER \
+ -DWITH_STDAIR_PREFIX=${INSTALL_BASEDIR}/stdair-stable \
+ -DWITH_AIRRAC_PREFIX=${INSTALL_BASEDIR}/airsched-stable \
+ -DWITH_AIRRAC_PREFIX=${INSTALL_BASEDIR}/airrac-stable \
+ -DWITH_RMOL_PREFIX=${INSTALL_BASEDIR}/rmol-stable \
+ -DWITH_RMOL_PREFIX=${INSTALL_BASEDIR}/airinv-stable \
+ -DWITH_RMOL_PREFIX=${INSTALL_BASEDIR}/simfqt-stable \
+ -DCMAKE_BUILD_TYPE:STRING=Debug -DINSTALL_DOC:BOOL=ON \
+ ${LIBSUFFIX_4_CMAKE} ..
+make check && make dist
+make install
+\endverbatim 
+
+This will configure, compile and check the package. The output packages
+will be named, for instance, <tt>rmol-$RMOL_VER.tar.gz</tt> and
+<tt>rmol-$RMOL_VER.tar.bz2</tt>.
+
+
+\section generate_rpm_packages Generate the RPM packages
+
+Optionally, generate the RPM package (for instance, for 
+<a href="http://fedoraproject.org">Fedora</a>/<a href="http://www.redhat.com">RedHat</a>):
+\verbatim 
+cd ~/dev/sim/rmolgit/build
+git checkout releases
+make dist
+\endverbatim 
+
+To perform this step, rpm-build, rpmlint and rpmdevtools have to be available
+on the system.
+\verbatim 
+cp ../rmol.spec ~/dev/packages/SPECS \
+  && cp rmol-$RMOL_VER.tar.bz2 ~/dev/packages/SOURCES
+cd ~/dev/packages/SPECS
+rpmbuild -ba rmol.spec
+cd ~/dev/packages
+rpmlint -i SPECS/rmol.spec SRPMS/rmol-$RMOL_VER-1.f22.src.rpm \
+  RPMS/noarch/rmol-* RPMS/i686/rmol-*
+\endverbatim 
+
+
+\section update_changelog Update distributed change log
+
+Update the \c NEWS and \c ChangeLog files with appropriate
+information, including what has changed since the previous release. Then
+commit and push the changes into the 
+<a href="http://github.com/airsim/rmol">RMOL's Git repository</a>.
+
+
+\section create_bin_packages Create the binary package, including the documentation
+
+Create the binary package, which includes HTML and PDF documentation,
+using the following command:
+\verbatim 
+cd ~/dev/sim/rmolgit/build
+git checkout releases
+make package
+\endverbatim 
+
+The output binary package will be named, for instance,
+<tt>rmol-$RMOL_VER-Linux.tar.bz2</tt>. That package contains both the HTML
+and PDF documentation. The binary package contains also the executables
+and shared libraries, as well as C++ header files, but all of those do not
+interest us for now.
+
+\section upload_files Files on GitHub
+
+GitHub allows to archive/generate <a
+href="http://github.com/airsim/rmol/releases">packages (tar-balls)</a>
+corresponding to Git tags.
+
+
+\section upload_doc Upload the documentation to GitHub
+
+In order to update the Web site files:
+\verbatim
+$ export RMOL_VER=99.99.99
+$ cd ~/dev/sim/rmolgit
+$ git checkout $RMOL_VER
+$ cd build
+$ export INSTALL_BASEDIR=~/dev/deliveries
+$ if [ -d /usr/lib64 ]; then LIBSUFFIX=64; fi
+$ export LIBSUFFIX_4_CMAKE="-DLIB_SUFFIX=$LIBSUFFIX"
+$ rm -rf build && mkdir build && cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_BASEDIR}/rmol-$RMOL_VER \
+	-DCMAKE_BUILD_TYPE:STRING=Debug -DENABLE_TEST:BOOL=ON \
+	-DINSTALL_DOC:BOOL=ON -DRUN_GCOV:BOOL=OFF ${LIBSUFFIX_4_CMAKE} ..
+$ make check && make install
+$ cd ..
+$ git checkout gh-pages
+$ rsync -av --del --exclude=.git $INSTALL_BASEDIR/share/doc/rmol/html/ ./
+$ git checkout -- .gitignore README.md CNAME
+$ git add .
+$ git commit -m "[Doc] Updated the documentation for $RMOL_VER"
+$ git push
+$ git branch -d gh-pages
+\endverbatim 
+
+*/

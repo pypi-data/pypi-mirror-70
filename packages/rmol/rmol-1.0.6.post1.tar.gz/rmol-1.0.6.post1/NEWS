@@ -1,0 +1,65 @@
+* 2020-05-31:
+- Version 1.00.6
+- There is now a CMake Python-related dependency support file
+
+* 2020-05-30:
+- Version 1.00.5
+- Removed dependency on Python
+
+2019-11-04:
+- Version 1.00.4
+- CMake helper file now differentiates normal and Python libraries
+
+2019-07-11:
+- Version 1.00.3
+- CMake support files updated for Python 3.8
+
+2019-01-15:
+- Version 1.00.2
+- CMake nows finds out automatically the right Boost.Python library version
+- Python 3.4 is the new minimum required version
+
+2015-06-14:
+- Version 1.00.1
+- The CMake helper files are now aligned with those of StdAir.
+
+2012-12-11
+- Version 1.00.0
+- Open source release
+- [Dev] Added revenue management algorithms dedicated to Fare Families.
+- [Build] Test coverage option with gcov.
+
+2011-12-05:
+- Version 0.25.3
+- [Build] Improved the CMake build framework.
+- [Build] Suppressed any support to the GNU Autotools. Those are no longer
+  maintained.
+
+2011-11-02:
+- Version 0.25.2
+- Re-instantiated the dummy inventory.
+
+2011-10-27:
+- Version 0.25.1
+- Updated the code for StdAir-0.43.3.
+
+2011-10-23:
+- Version 0.25.0
+- Updated the code for StdAir-0.43.2.
+
+2011-08-30:
+- Version 0.24.0
+- First released version working with StdAir (and AirRAC).
+
+2009-09-09:
+- Version 0.23.0
+- First version of the Q-Forecasting algorithm.
+
+2009-06-05:
+- Version 0.22.0
+- Implementation of the iterative DAVN algorithm.
+
+2009-03-07:
+- Version 0.18.0
+- Release of RPMs for Fedora 10.
+

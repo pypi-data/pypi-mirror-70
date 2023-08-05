@@ -1,0 +1,47 @@
+* Sun May 31 2020 Denis Arnaud <denis.arnaud_fedora at m4x.org> - 1.00.6
+- There is now a CMake Python-related dependency support file
+
+* Sat May 30 2020 Denis Arnaud <denis.arnaud_fedora at m4x.org> - 1.00.5
+- Removed dependency on Python
+
+* Tue Nov 04 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.4
+- CMake helper file now differentiates normal and Python libraries
+
+* Thu Jul 11 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.3
+- CMake support files updated for Python 3.8
+
+* Tue Jan 15 2019 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> - 1.00.2
+- CMake nows finds out automatically the right Boost.Python library version
+- Python 3.4 is the new minimum required version
+
+* Sun Jun 14 2015 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 1.00.1
+- The CMake helper files are now aligned with those of StdAir.
+
+* Tue Dec 11 2012 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 1.00.0
+- Open source release
+- [Dev] Added revenue management algorithms dedicated to Fare Families.
+- [Build] Test coverage option with gcov.
+
+* Mon Dec 05 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.25.3
+- [Build] Improved the CMake build framework.
+- [Build] Suppressed any support to the GNU Autotools. Those are no longer
+maintained.
+
+* Wed Nov 02 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.25.2
+- Re-instantiated the dummy inventory.
+
+* Thu Oct 27 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.25.1
+- Updated the code for StdAir-0.43.3.
+
+* Sun Oct 23 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.25.0
+- Updated the code for StdAir-0.43.2.
+
+* Tue Aug 30 2011 Denis Arnaud <denis_arnaud at users dot sourceforge dot net> 0.24.0
+- First released version working with StdAir (and AirRAC).
+
+* Tue Sep 15 2009 Dongkyoung Choe <dkchoe at users dot sourceforge dot net> 0.23.0
+- First implementation of the Q-Forecasting.
+
+* Fri Jun  5 2009 Anh Quan Nguyen <quannaus at users dot sourceforge dot net> 0.22.0
+- Iterative DAVN implementation.
+

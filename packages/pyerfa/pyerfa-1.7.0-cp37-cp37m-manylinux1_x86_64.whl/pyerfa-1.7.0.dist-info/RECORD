@@ -1,0 +1,13 @@
+pyerfa-1.7.0.dist-info/RECORD,,
+pyerfa-1.7.0.dist-info/WHEEL,sha256=x_vzcI4ZEGB3mgPWPKzGiYMKKJ7Ixf6JpcM2LwQveJI,109
+pyerfa-1.7.0.dist-info/top_level.txt,sha256=wnTiyTCLqR48fpveqOfiBO2xK6xj1Y5BC1ajQWLzWzY,5
+pyerfa-1.7.0.dist-info/METADATA,sha256=QB2Sa9V3ND3Fw3WZZF_4dyaefhYc570VrHD6XsuXpP0,4453
+pyerfa-1.7.0.dist-info/LICENSE.rst,sha256=A3EvQ_7eUwFVty49RJe-3PasHE2Bufbk2V4Idv7JEto,1496
+erfa/ufunc.cpython-37m-x86_64-linux-gnu.so,sha256=94XNA_eO8OSvZ545f7GgdLMOAWK8Z-_Uj57qqnDRR4o,2122376
+erfa/helpers.py,sha256=obTcwf02ggDLu9qR9xYA8-t7OuI5MMdp657zav4zpTI,13143
+erfa/__init__.py,sha256=rC-o6m7-cPCdLew7wypq8BYX30siEvymtol8X4BL13s,334
+erfa/core.py,sha256=q5yG4T_qd1Fqtgnp61XlTu9V_tFvzylOi0B9pT-WRjU,711374
+erfa/version.py,sha256=WNrlOYadDGY5YQg6xToePSoVXmPSbKYIbZrW88kSV2o,788
+erfa/tests/test_erfa.py,sha256=tKxlvmAy0rwuofEvG24l5ykHnDaomB_jga5Kvl-7ntY,16719
+erfa/tests/__init__.py,sha256=ykqVHge2EmIDTMOd96h2DyGHaM_gpp_wKz3K1MlZZic,64
+erfa/tests/helper.py,sha256=TUekvwpT0tO4Ni09q_6Ur6vE9fhsX3eHWE6EnA2sOUM,4322

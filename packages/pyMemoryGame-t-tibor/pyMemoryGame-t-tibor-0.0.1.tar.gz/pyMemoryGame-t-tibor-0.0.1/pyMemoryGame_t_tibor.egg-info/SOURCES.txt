@@ -1,0 +1,6 @@
+README.md
+setup.py
+pyMemoryGame_t_tibor.egg-info/PKG-INFO
+pyMemoryGame_t_tibor.egg-info/SOURCES.txt
+pyMemoryGame_t_tibor.egg-info/dependency_links.txt
+pyMemoryGame_t_tibor.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+apc-ipmi-monitor = apcIpmiMonitor.__main__:cli
+

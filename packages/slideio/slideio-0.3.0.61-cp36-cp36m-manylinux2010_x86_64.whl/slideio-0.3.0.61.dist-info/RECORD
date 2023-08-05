@@ -1,0 +1,8 @@
+libslide_io.so,sha256=kRJQi2iXOmhaGvdQ69VOR_CLh302p94GqBtOjs29Jj0,41072840
+slideio.cpython-35m-x86_64-linux-gnu.so,sha256=XGvbISEFVporjyZUdB5jVWIVq_y7nUcxhxK2C05vufk,233248
+slideio.cpython-36m-x86_64-linux-gnu.so,sha256=Rb_07sW11OZUn4WCaZ_kyCxpXgrsTp2WE_vpYvK5GOc,233248
+slideio-0.3.0.61.data/data/requirements-dev.txt,sha256=88hd6JBxfTwnj69wkk9kE6O8Apk7ybLAtvAwsF8wyS4,28
+slideio-0.3.0.61.dist-info/RECORD,,
+slideio-0.3.0.61.dist-info/WHEEL,sha256=kRpTOiUzoWO2GDfCevceK0ME-mjr5hdBNCWO78h60mA,112
+slideio-0.3.0.61.dist-info/METADATA,sha256=G5XNAAvjD3rbznYhir4MUM5OYB_2TG82T1N3HaBJraI,1066
+slideio-0.3.0.61.dist-info/top_level.txt,sha256=GjKvFJIq0ND8NFcAt3GozneEwtsW0rX09rDW1CrPGcI,8

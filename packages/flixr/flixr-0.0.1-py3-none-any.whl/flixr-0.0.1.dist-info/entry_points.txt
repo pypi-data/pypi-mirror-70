@@ -1,0 +1,3 @@
+[console_scripts]
+flixr = flixr.__main__:main
+

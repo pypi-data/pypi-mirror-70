@@ -1,0 +1,11 @@
+flixr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flixr/__main__.py,sha256=JMzxYdjRJf8u1kxq75UZGiNP74iN8YLABN-BgpiKRrM,215
+flixr/api.py,sha256=kgeclLm6bm0Zf1jpchstDfNdHp3fSkTvpkFsd8ow-IQ,2584
+flixr/display.py,sha256=tBEX55KzK4oDq0xu2SzgY-OS2SasBe5hERiL7cBzbC8,2979
+flixr/interface.py,sha256=vmdEA10f9A4dUZSp8oDk0VjwDLDX_VMdF_DHY1tLzWw,459
+flixr-0.0.1.dist-info/LICENSE,sha256=cTFN7tTTAQ1lobBsrgBy4Q71n7pLgqmkK2uw26Vi7tY,1071
+flixr-0.0.1.dist-info/METADATA,sha256=Io5pp8SChkq30nqBqstzHNnGJLIDCuluU0qivwC90tU,2400
+flixr-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flixr-0.0.1.dist-info/entry_points.txt,sha256=ppL8LdipHyEuhuJEc1uIqjapBGIpyhuRDBhlQ5rjhnQ,47
+flixr-0.0.1.dist-info/top_level.txt,sha256=_eVhgiSpw-EHEGFudm0-Gi_sv_y7LYchtrPDzV9nzG8,6
+flixr-0.0.1.dist-info/RECORD,,

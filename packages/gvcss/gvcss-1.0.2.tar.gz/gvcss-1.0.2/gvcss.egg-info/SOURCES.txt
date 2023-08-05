@@ -1,0 +1,13 @@
+gvcss_cli.py
+setup.py
+gvcss/__init__.py
+gvcss/gvc_variant_pipeline.py
+gvcss/pipeline.py
+gvcss/ssinfo_interface.py
+gvcss.egg-info/PKG-INFO
+gvcss.egg-info/SOURCES.txt
+gvcss.egg-info/dependency_links.txt
+gvcss.egg-info/requires.txt
+gvcss.egg-info/top_level.txt
+gvcss/test/__init__.py
+gvcss/test/test.py

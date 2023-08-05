@@ -1,0 +1,4 @@
+toil==3.19.0
+gvc4fastq
+docker==2.5.1
+toil-runner

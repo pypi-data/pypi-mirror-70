@@ -1,0 +1,13 @@
+pyEMLearn/__init__.py,sha256=S8VDUot2aj3ybRLzQq-9o7MOdmplPm1Y08XRSXIE0Pk,128
+pyEMLearn/layers.py,sha256=HpVkIVksxohpGQE5xww-4tHDiPcp2fU7zR1SP7m969o,14294
+pyEMLearn/materials.py,sha256=fsHNXSxEAFsYK__-KV8HL9gn4WWiacMpRpNg2gRwwJY,15180
+pyEMLearn/utils.py,sha256=7WKnFZvPQxcjG-lwwPjRrowY0rh8GXw0Wh5vqeJEdzE,11846
+pyEMLearn/catalog/__init__.py,sha256=xXY0EO3d2-VwLfyBGK-5lYl3-tm6O_T-eS9FuKmA5WA,155
+pyEMLearn/catalog/dielectrics.py,sha256=mhR35yMPolK7tX0v4rn0DQfC5dA3RFuFfWr8tTDnwQ8,7396
+pyEMLearn/catalog/metals.py,sha256=KnYD4gYQ6yWti5DDDdbZ6BV1_sUU6lmUO2pgNIwtd8k,13180
+pyEMLearn/catalog/special.py,sha256=1gI5KoOS7-x_shCWqopDRk090_RetYiTVbC6VYQxbZk,90
+pyEMLearn-0.1.0.dist-info/LICENSE,sha256=8d09keSifvz5yzwTF_T24QXqvP0IoO8wWeZbE2GimgE,1081
+pyEMLearn-0.1.0.dist-info/METADATA,sha256=4DRncGDGEYw3t0LGYf3mhHqiJmE4zhjnsgC16rLGv1c,3558
+pyEMLearn-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyEMLearn-0.1.0.dist-info/top_level.txt,sha256=gKR9wAYRv3dipud3ZKzHz-GD8m5IZRhHluti4BSfPkE,10
+pyEMLearn-0.1.0.dist-info/RECORD,,

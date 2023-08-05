@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+neuro_airflow_plugin/__init__.py
+neuro_airflow_plugin/asyncio_tools.py
+neuro_airflow_plugin/hook.py
+neuro_airflow_plugin/neuro_plugin.py
+neuro_airflow_plugin/operator.py
+neuro_airflow_plugin/sensor.py
+neuro_airflow_plugin.egg-info/PKG-INFO
+neuro_airflow_plugin.egg-info/SOURCES.txt
+neuro_airflow_plugin.egg-info/dependency_links.txt
+neuro_airflow_plugin.egg-info/entry_points.txt
+neuro_airflow_plugin.egg-info/requires.txt
+neuro_airflow_plugin.egg-info/top_level.txt

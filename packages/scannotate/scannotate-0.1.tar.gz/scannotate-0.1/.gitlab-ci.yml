@@ -1,0 +1,18 @@
+image: "python:3.7"
+
+stages:
+  - build
+  
+docs:
+  stage: build
+  only:
+  - master
+
+  script:
+  - pip3 install sphinx_rtd_theme
+  - cd scannotate/doc/
+  - make html
+  - if [ -d /var/www/html/docs/scannotate ]; then rm -r /var/www/html/docs/scannotate; fi
+  - mkdir -p /var/www/html/docs/scannotate
+  - mv build/html/* /var/www/html/docs/scannotate
+  

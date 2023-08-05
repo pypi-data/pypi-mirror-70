@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: scannotate
+Version: 0.1
+Summary: Semi-supervised cell-type annotation in single cell RNASeq data
+Home-page: http://github.com/celsiustx/scannotate/
+Author: Tommy Boucher, Noah Spies, Mukund Varma
+Author-email: tboucher@celsiustx.com, npsies@celsiustx.com, mvarma@celsiustx.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux

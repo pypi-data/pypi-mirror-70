@@ -1,0 +1,5 @@
+setup.py
+nvstrings_cuda92.egg-info/PKG-INFO
+nvstrings_cuda92.egg-info/SOURCES.txt
+nvstrings_cuda92.egg-info/dependency_links.txt
+nvstrings_cuda92.egg-info/top_level.txt

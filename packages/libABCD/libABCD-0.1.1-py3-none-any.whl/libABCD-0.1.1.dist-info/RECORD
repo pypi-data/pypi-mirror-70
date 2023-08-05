@@ -1,0 +1,12 @@
+libABCD/__init__.py,sha256=QnL8RmYKnqI47PfX99Fov-7754n-Waw2TWkC7s8GNSA,854
+libABCD/handling.py,sha256=HGAw3JOwRDW2nNx3WsX3NVJwxbjJwO3AUc1dR52TQ3I,82
+libABCD/init.py,sha256=3Pby8MayiBxxDMbMf4nAsecah7lqeRdfKyUYzqByWmI,295
+libABCD/logging.py,sha256=s-j4ViS6bTWnGCBHYdbBBJg4nP4rDjak8z3SI39Kw6M,1161
+libABCD/network.py,sha256=Sv576LuOcMYIO2az8mwm5SEJINzaviEupq1LINEuAE8,4473
+libABCD/parse.py,sha256=l30WtqUCUxg9AHBynS4V6plwao1ke-TTqgHftVFj2uY,1130
+libABCD/watchdog.py,sha256=OQ11GFdH4jqaEHNP6snzyW4wD_umG7kaKRmZt7VOIQw,2517
+libABCD-0.1.1.dist-info/LICENSE,sha256=Tytd-PEIB_2REFwWRfU4nvszewZjNkLPGKVI6GXOiVY,1155
+libABCD-0.1.1.dist-info/METADATA,sha256=WjL6C6__l7AbEZqm-XSpVd0ILnlfy5gWoQV2VoCtCGo,1973
+libABCD-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+libABCD-0.1.1.dist-info/top_level.txt,sha256=4IMYqdAu1l8g-wpzs4wouKWbWykXk0TdqN7dtGSXzvI,8
+libABCD-0.1.1.dist-info/RECORD,,

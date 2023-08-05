@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: spacetornado
+Version: 0.1
+Summary: A minimal Tornado API for Spacy text analytics.
+Home-page: https://github.com/w-bonelli/spacetornado
+Author: Wes Bonelli
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: tornado
+Requires-Dist: spacy
+
+UNKNOWN
+
+

@@ -1,0 +1,3 @@
+[console_scripts]
+spacetornado = spacetornado.spacetornado:space_tornado
+

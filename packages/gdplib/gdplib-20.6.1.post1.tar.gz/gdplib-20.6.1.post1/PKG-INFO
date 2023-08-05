@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: gdplib
+Version: 20.6.1.post1
+Summary: GDPlib open source model library for Generalized Disjunctive Programming
+Home-page: https://github.com/grossmann-group/gdplib
+Author: Qi Chen
+Author-email: qichen@andrew.cmu.edu
+Maintainer: Qi Chen
+License: BSD 3-clause
+Description: 
+        GDPlib open source model library for Generalized Disjunctive Programming
+        
+Keywords: pyomo,generalized disjunctive programming
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

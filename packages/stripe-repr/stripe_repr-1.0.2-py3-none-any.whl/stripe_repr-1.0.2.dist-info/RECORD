@@ -1,0 +1,5 @@
+stripe_repr/__init__.py,sha256=VG1-vaicalS5Co3GRBjMEzlDWCRaAJ8KVOJT-VKUrvA,213
+stripe_repr/repr.py,sha256=dKTuC1crjJ0vCvzbl7IiQD4d-2sCPJt1-KvDpCnaK0k,3024
+stripe_repr-1.0.2.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+stripe_repr-1.0.2.dist-info/METADATA,sha256=GNhj69RDVwDeRHn7LLg1APmN-G3VB8DfwglssCSS-FE,1923
+stripe_repr-1.0.2.dist-info/RECORD,,

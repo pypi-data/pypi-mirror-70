@@ -1,0 +1,10 @@
+mongocat/__init__.py,sha256=FsF8qFUYSgM4R1hPlJDKXI3rhV1a4vObzEEE-3Jcz6g,176
+mongocat/cli.py,sha256=X3csgQvK5Pi033Vadxj1z5kmP3nP7OcRlRwagmR07-Q,1525
+mongocat/mongocat.py,sha256=YWm5YTku-sSnZrKNT2q9KIVk7fsZ_FhiQDz2s1aNQHQ,1971
+mongocat-0.2.1.dist-info/AUTHORS.rst,sha256=bJSKiVUKkVPr1I_V1ntnooSeT3_wO86CIpM4-oKYfuo,154
+mongocat-0.2.1.dist-info/LICENSE,sha256=IAwq1vAnkBIPXEIY8aNNBmfpwsyk4R2ICtb6FKR9Hjo,1071
+mongocat-0.2.1.dist-info/METADATA,sha256=5dgPoF9dPuFYdHoqzuDL-nboAHMjEmvFtUNHPEOYgxE,4959
+mongocat-0.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+mongocat-0.2.1.dist-info/entry_points.txt,sha256=hJwbMxUMPy-o_-CMguFSvMkXfN9-X4-U1oEFb-Ho5_s,48
+mongocat-0.2.1.dist-info/top_level.txt,sha256=k19HN8MG_3s9Scy5CgnhZXBbjbFWZM24hk-MKPlRN_k,9
+mongocat-0.2.1.dist-info/RECORD,,

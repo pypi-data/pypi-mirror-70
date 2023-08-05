@@ -1,0 +1,9 @@
+README.md
+setup.py
+wojtezpdf/__init__.py
+wojtezpdf/pdf2image.py
+wojtezpdf/pdf2text.py
+wojtezpdf.egg-info/PKG-INFO
+wojtezpdf.egg-info/SOURCES.txt
+wojtezpdf.egg-info/dependency_links.txt
+wojtezpdf.egg-info/top_level.txt

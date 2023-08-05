@@ -1,0 +1,13 @@
+spectron/__init__.py,sha256=pJ7zFgZf-nIcslcbZzyMFhucmzX-qSQDpLmT54tkAdQ,66
+spectron/cli.py,sha256=otUiIRbi94nDXDAugUJUVVgBV4XwUskDYHjCv_WlIfo,4519
+spectron/data_types.py,sha256=cDgOxReUb3GYXtzkrXBJLbMh74FQbcPX1rHmx0fTbLc,1573
+spectron/ddl.py,sha256=Ndt_oNRbKXADLqMEiYECEI8_istUjsUx7vsJQ9YuCq8,12212
+spectron/parse_date.py,sha256=nxTzTX0LjMWKtBrzquWeIXx5Xb1DjRACpex2KfDT9u0,665
+spectron/reserved.py,sha256=7mnWTgHOrTfIp-VNr2KMPGNmXKchlyY5kla0b49JcJ8,26588
+spectron/write_ddl.py,sha256=kWBy4cqJ7K84E1_1HFB-7sJ6CVXXJ2d8KW9AYedRfLI,4382
+spectron-0.3.1.dist-info/LICENSE,sha256=_j9awzOi_N_cSdFukyQ8ciTpDkY_UZhjUk09glZPQYo,1070
+spectron-0.3.1.dist-info/METADATA,sha256=R2u9qG-BUSLRm1PrP9IOrOc8soviQMUah1yvOfvv2VU,3623
+spectron-0.3.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+spectron-0.3.1.dist-info/entry_points.txt,sha256=O6omv96UP7K0MiA2z5fGVJsCavC81oZD3renTcVCjAw,66
+spectron-0.3.1.dist-info/top_level.txt,sha256=_gC2jmC5SmggtlVKyKLbDqH9muWQ7m06XHU9EvfC8XE,9
+spectron-0.3.1.dist-info/RECORD,,

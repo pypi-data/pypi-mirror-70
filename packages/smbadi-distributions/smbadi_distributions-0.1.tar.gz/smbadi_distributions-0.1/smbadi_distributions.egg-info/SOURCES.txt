@@ -1,0 +1,10 @@
+setup.py
+smbadi_distributions/Binomialdistribution.py
+smbadi_distributions/Gaussiandistribution.py
+smbadi_distributions/Generaldistribution.py
+smbadi_distributions/__init__.py
+smbadi_distributions.egg-info/PKG-INFO
+smbadi_distributions.egg-info/SOURCES.txt
+smbadi_distributions.egg-info/dependency_links.txt
+smbadi_distributions.egg-info/not-zip-safe
+smbadi_distributions.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cwaddressformatter/__init__.py
+cwaddressformatter/main.py
+cwaddressformatter/version.py
+cwaddressformatter.egg-info/PKG-INFO
+cwaddressformatter.egg-info/SOURCES.txt
+cwaddressformatter.egg-info/dependency_links.txt
+cwaddressformatter.egg-info/entry_points.txt
+cwaddressformatter.egg-info/top_level.txt

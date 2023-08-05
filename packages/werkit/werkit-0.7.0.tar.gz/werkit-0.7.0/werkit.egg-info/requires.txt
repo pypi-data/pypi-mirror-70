@@ -1,0 +1,4 @@
+
+[client]
+aioboto3==8.0.3
+harrison<3.0,>=2.0

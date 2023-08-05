@@ -1,0 +1,1432 @@
+.. meta::
+   :description: gnuplot plotting backend for python.
+   :keywords: gnuplot, py-gnuplot, pandas, python, plot
+
+
+`Gnuplot`_ is a portable command-line driven graphing utility for many
+platforms. To leverage the powful gnuplot and plot beautiful image in python,
+we port gnuplot to python. An example:
+
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    gnuplot.plot('[-10:10] sin(x)',
+            'atan(x)',
+            'cos(atan(x))',
+            terminal = 'pngcairo font "arial,10" fontscale 1.0 size 600, 400',
+            output = '"simple.1.png"',
+            key = 'fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid',
+            style = 'increment default',
+            samples = '50, 50',
+            title = '"Simple Plots" font ",20" norotate')
+
+From the example we can see, we plot the function by one plot command, with
+all the options as the function parameters. It's easy to understand and comply
+with both gnuplot and python's grammer. The generated plot is as below:
+
+.. figure:: http://gnuplot.sourceforge.net/demo/simple.1.png 
+
+   figure 1. pygnuplot demo 1: simple function
+
+Let's see the detail in the below:
+
+.. _Gnuplot: http://www.gnuplot.info/
+.. contents:: [Contents]
+   :depth: 3
+
+1. Introduction and examples list
+===================================
+
+As we know Gnuplot is a portable and powerful command-line driven graphing
+utility for many platforms. To leverage the power of Gnuplot, many wrapper are
+developed but it's hard to use. We develop the py-gnuplot in an easy way and
+it's streightforward: If you are familar with Gnuplot, you could seamlessly
+turn to py-python. If you are not very familar with Gnuplot, you can also
+write the gnuplot script in pure python easily.
+
+**py-python only support python3** since the function dictionary paramaters in
+python2 is not in order.
+
+This package has an object-oriented design as well as direct function call to
+allows the user flexibility to set plot options and to run multiple gnuplot
+sessions simultaneously.
+
+We will introduce it in detail in the following chapter and here list the
+exaples used in this article as below:
+
+.. _Table1:
+
+.. list-table:: Table1 : A demostration of pygnuplot.gnuplot script
+   :widths: 15, 20, 20, 70
+   :header-rows: 1
+
+   * - gnuplot demo script
+     - object-oriented interface script
+     - direct function call script
+     - All the script produce the same image
+   * - `simple.dem`_
+     - simple2.py_
+     - simple3.py_
+     - |simple.1.png|
+   * - `surface2.dem`_
+     - surface2.py_
+     - surface2.py_
+     - |surface2.9.png|
+   * - `iterate.dem`_
+     - whale1.py_
+     - whale2.py_
+     - |whale.png|
+
+.. _Table2:
+
+.. list-table:: Table 2: A demostration of pygnuplot.pyplot script
+   :widths: 15, 20, 20, 70
+   :header-rows: 1
+
+   * - gnuplot demo script
+     - object-oriented interface script
+     - direct function call script
+     - All the script produce the same image
+   * - `histo.1.gnu`_
+     - histo.1.py_
+     - histo.2.py_
+     - |histograms.1.png|
+   * - `finance.dem`_
+     - finance1.py_
+     - finance2.py_
+     - |finance.13.png|
+
+.. list-table:: Table 3: Examples porting from Matplotlib
+   :widths: 35, 35, 35, 35
+   :header-rows: 0
+
+   * - `8.1 Stacked bar chart`_ |sphx_glr_bar_stacked_001.png|
+     - `8.2 Grouped bar chart with labels`_ |sphx_glr_barchart_001.png|
+     - `8.3 Multiplot Axes Demo`_ |sphx_glr_axes_demo_001.png|
+     - `8.4 Basic pie chart`_ |sphx_glr_pie_features_0011.png|
+
+.. _simple.dem: http://gnuplot.sourceforge.net/demo/simple.1.gnu
+.. _surface2.dem: http://gnuplot.sourceforge.net/demo/surface2.9.gnu
+.. _histo.1.gnu: http://gnuplot.sourceforge.net/demo/histograms.1.gnu
+.. _iterate.dem: http://gnuplot.sourceforge.net/demo/iterate.2.gnu
+.. _finance.dem: http://gnuplot.sourceforge.net/demo/finance.13.gnu
+.. |simple.1.png| image:: http://gnuplot.sourceforge.net/demo/simple.1.png
+   :width: 180
+.. |surface2.9.png| image:: http://gnuplot.sourceforge.net/demo/surface2.9.png
+   :width: 180
+.. |finance.13.png| image:: http://gnuplot.sourceforge.net/demo/finance.13.png
+   :width: 180
+.. |iterate.2.png| image:: http://gnuplot.sourceforge.net/demo/iterate.2.png
+   :width: 180
+.. |whale.png| image:: http://ayapin-film.sakura.ne.jp/Gnuplot/Pm3d/Part1/whale.png
+   :width: 180
+.. |histograms.1.png| image:: http://gnuplot.sourceforge.net/demo/histograms.1.png
+   :width: 180
+.. |sphx_glr_bar_stacked_001.png| image:: https://matplotlib.org/_images/sphx_glr_bar_stacked_001.png
+   :width: 180
+.. |sphx_glr_barchart_001.png| image:: https://matplotlib.org/_images/sphx_glr_barchart_001.png
+   :width: 180
+.. |sphx_glr_axes_demo_001.png| image:: https://matplotlib.org/_images/sphx_glr_axes_demo_001.png
+   :width: 180
+.. |sphx_glr_pie_features_0011.png| image:: https://matplotlib.org/_images/sphx_glr_pie_features_0011.png
+   :width: 180
+
+2. Four kinds of plot patterns
+==============================
+
+Gnuplot use 'plot/splot' commands to plot data, use all kinds of 'set/unset'
+commands to change the plotting style or options for subsequent plot/splot
+command. If we implement the plot()/splot() functions with all those kinds of
+options, is it possible for us to call Gnuplot in python script? The answer is
+yes. There are several ways to plot the data in py-python:
+
+It's easy to port the orginal gnuplot to python and we use the submodule:
+pygnuplot.gnuplot to implement it. Ploting the python self-generated data is a
+little tricky, we implement it in the submodule: pygnuplot.pyplot.
+
+We take the Gnuplot demo `simple.dem`_ (click to see the original Gnuplot
+script) as a example and let's see how to plot it in pyton way. We have 3 ways
+to plot the simple function in pyton, they are(plotting function/datafile and
+plotting pythong generated data should use different sub module, so there are
+4 examples):
+
+    - line by line: simple1.1.py_, simple1.1.py_
+    - Wrapper as object-oriented interface: simple2.py_
+    - global class-less function call
+        * plot function/datafile: simple3.py_
+        * plot python generated data, it's in pandas.DataFrame or string
+          format: simple4.py_
+
+All the script including the original gnuplot script generate the same
+output: Let's have a deep check how to plot it:
+
+2.1 plot data line by line
+----------------------------
+
+We implemented the function cmd() and pass the command to call Gnuplot to plot
+the data, Thus we could do everything with the only one simple function. It's
+the easiest way to call Gnuplot and it's hard to pass the python generated
+data to gnuplot:
+
+.. _simple1.1.py:
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # Illustration of object-oriented interface, you can see we only wrap the
+    # gnuplot script by g.cmd('...') and it's simple and straitfoward if you
+    # are familar with Gnuplot.
+    g = gnuplot.Gnuplot()
+    g.cmd('set terminal pngcairo font "arial,10" fontscale 1.0 size 600, 400')
+    g.cmd('set output "simple.1.png"')
+    g.cmd('set key fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid')
+    g.cmd('set style increment default')
+    g.cmd('set samples 50, 50')
+    g.cmd('set title "Simple Plots" ')
+    g.cmd('set title  font ",20" norotate')
+    g.cmd('plot [-10:10] sin(x),atan(x),cos(atan(x))')
+
+Or you can even pass the Gnuplot command as a string list or a text paragraph:
+
+.. _simple1.2.py:
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # Illustration of object-oriented interface, you can see we only wrap the
+    # gnuplot script by g.cmd('...') and it's simple and straitfoward if you
+    # are familar with Gnuplot.
+    g = gnuplot.Gnuplot()
+
+    # Take all the Gnuplot command as a list of command:
+    g.cmd('set terminal pngcairo font "arial,10" fontscale 1.0 size 600, 400',
+    'set output "simple.1.png"',
+    'set key fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid',
+    'set style increment default',
+    'set samples 50, 50',
+    'set title "Simple Plots" ',
+    'set title  font ",20" norotate',
+    'plot [-10:10] sin(x),atan(x),cos(atan(x))')
+
+    # Take all the Gnuplot command as a script paragraph:
+    plot_cmd = '''
+    set terminal pngcairo font "arial,10" fontscale 1.0 size 600, 400
+    set output "simple.1.png"
+    set key fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid
+    set style increment default
+    set samples 50, 50
+    set title "Simple Plots
+    set title  font ",20" norotate
+    plot [-10:10] sin(x),atan(x),cos(atan(x))'''
+    g.cmd(plot_cmd)
+
+By this way we can do everything that Gnuplot can do and cannot do what
+Gnuplot itself can't do. It's the exact way that the Gnuplot do it. and we
+don't get any benifit besides we can call Gnuplot in python.
+
+2.2 Wrapper as object-oriented interface
+----------------------------------------
+
+As we know Gnuplot use 'plot/splot' commands to plot data, use all kinds of 'set/unset'
+commands to change the plotting style or options for subsequent plot/splot
+command. So we implement the plot()/splot()/set() and so on functions to draw
+the data in python way:
+
+.. _simple2.py:
+
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    g = gnuplot.Gnuplot()
+    g.set(terminal = 'pngcairo font "arial,10" fontscale 1.0 size 600, 400',
+            output = '"simple.1.png"',
+            key = 'fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid',
+            style = 'increment default',
+            samples = '50, 50',
+            title = '"Simple Plots" font ",20" norotate')
+    g.plot('[-10:10] sin(x),atan(x),cos(atan(x))')
+
+We set the options before plot and then call plot to render the image. It's
+equivalent to method 1 but seems muck like a python script.
+
+2.3 global class-less function call
+-----------------------------------
+
+In above way we need to allocate a Gnuplot object and will use it whenever we
+call Gnuplot function. It's convenient but sometimes we only need one the plot
+command and don't want to hande the Gnuplot instance, this is a new way to
+draw the same image:
+
+.. _simple3.py:
+
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    gnuplot.plot('[-10:10] sin(x),atan(x),cos(atan(x))',
+            terminal = 'pngcairo font "arial,10" fontscale 1.0 size 600, 400',
+            output = '"simple.1.png"',
+            key = 'fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid',
+            style = 'increment default',
+            samples = '50, 50',
+            title = '"Simple Plots" font ",20" norotate')
+
+This generates exact the same output but is more simple and seems muck like a
+python script.
+
+2.4 Plot python generated data
+-------------------------------
+
+It's powerful for the above plot function. But they only can plot the
+functions and data in file. How about plotting the python generated data?
+We've developed another submodule pyplot and you use this summodule with the
+same function, there only 2 differeces:
+
+- Use the different submodule name: pyplot.
+- plot()/splot() parameter has some differences, we always need pass the
+  content of data as the first paramater of plot()/splot(): it could be either
+  pandas.Dataframe format or pure string format, indeed if it's
+  pandas.Dataframe format, we convert it using df.to_csv(sep = ' ') to convert
+  it to the string.
+
+.. _simple4.py:
+
+..
+    cmd2img:: python3
+    :image: simple.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    import numpy as np
+    import pandas as pd
+    from pygnuplot import gnuplot, pyplot
+
+    # Illusration of submodule: pyplot, Note that we use the pyplot.plot()
+    # insteading of gnuplot.plot() in the following line and the parameters
+    # are a little difference. See detail in the following section.
+    df = pd.DataFrame(np.random.randn(8,3))
+    pyplot.plot(
+            df.to_csv(sep = ' '), # You can call df directly,
+            'using 1:2',
+            'using 1:3',
+            'using 1:4',
+            terminal = 'pngcairo font "arial,10" fontscale 1.0 size 600, 400',
+            output = '"simple.1.png"',
+            key = 'fixed left top vertical Right noreverse enhanced autotitle box lt black linewidth 1.000 dashtype solid',
+            style = 'increment default',
+            samples = '50, 50',
+            title = '"Simple Plots" font ",20" norotate')
+
+3. Sub moduels: gnuplot and pyplot
+==================================
+
+We develop two submodule for different use cases:
+
+    * gnuplot: To plot the functions and file data as in gnuplot. 
+    * pyplot: To plot the data generated in python itself, normally it's in
+      `pandas dataframe`_ format.
+
+.. _pandas dataframe: https://pandas.pydata.org/
+
+For each submodule, we both have an object-oriented interface (via class
+Gnuplot) and a few global class-less functions (plot(), splotlot3d(),
+multiplot()).
+
+Let's see what's the difference with more examples(Click the script name to
+see the whole script) in section3:
+
+4. object-oriented interface and global class-less function call
+=================================================================
+
+As we see in section 1, we have several types of script to plot the data, but
+they could be classified as two types:
+
+    * object-oriented interface: It's simple wrapper for gnuplot, every
+      gnuplot instance is a Gnuplot object and every Gnuplot command is a
+      line of python directive. It plot the data in sequence as in gnuplot:
+      1) we set the option at first; 2) plot the subplot; 3) multiplot the
+      whole plot;
+
+    * global class-less function call: It refer to the syntax of matplotlib
+      and mplfinance, only a few single function could plot what you want.
+      We add two extra function: make_plot()/make_splot() to prepare the
+      subplot and then call the multiplot() at the end. It seems much alike
+      the matplotlib does.
+
+The same functions could be achieved by both kinds of call way,
+object-oriented interface call is object-oriented and global class-less
+function call is simple, it's your up to decide which way to use.
+
+See the difference with the following examples(Both produce the same
+output). From the following two example for object-oriented interface call
+and global class-less function call, we can see:
+
+finance example with object-oriented interface call:
+
+.. _finance1.py:
+
+..
+    cmd2img:: python3
+    :image: finance.13.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import pandas as pd
+
+    # A demostration to generate pandas data frame data in python.
+    df = pd.read_csv('finance.dat', sep='\t', index_col = 0, parse_dates = True,
+            names = ['date', 'open','high','low','close', 'volume','volume_m50',
+                'intensity','close_ma20','upper','lower '])
+
+    # make subplot at first, now there is still no real plot.
+    g = pyplot.Gnuplot(output = '"finance.13.png"',
+            term = 'pngcairo font "arial,10" fontscale 1.0 size 900, 600',
+            multiplot = "")
+
+    g.plot(df,
+            'using 0:2:3:4:5 notitle with candlesticks lt 8',
+            'using 0:9 notitle with lines lt 3',
+            'using 0:10 notitle with lines lt 1',
+            'using 0:11 notitle with lines lt 2',
+            'using 0:8 axes x1y2 notitle with lines lt 4',
+            logscale = 'y',
+            yrange = '[75:105]',
+            ytics = '(105, 100, 95, 90, 85, 80)',
+            xrange = '[50:253]',
+            grid = 'xtics ytics',
+            lmargin = '9',
+            rmargin = '2',
+            format = 'x ""',
+            xtics = '(66, 87, 109, 130, 151, 174, 193, 215, 235)',
+            title = '"Change to candlesticks"',
+            size = ' 1, 0.7',
+            origin = '0, 0.3',
+            bmargin = '0',
+            ylabel = '"price" offset 1',
+            label = ['1 "Acme Widgets" at graph 0.5, graph 0.9 center front',
+                '2 "Courtesy of Bollinger Capital" at graph 0.01, 0.07',
+                '3 "  www.BollingerBands.com" at graph 0.01, 0.03']
+            )
+
+    g.plot(df.to_csv(sep = ' '),
+            'using 0:($6/10000) notitle with impulses lt 3',
+            'using 0:($7/10000) notitle with lines lt 1',
+            bmargin = '',
+            size = '1.0, 0.3',
+            origin = '0.0, 0.0',
+            tmargin = '0',
+            nologscale = 'y',
+            autoscale = 'y',
+            format = ['x', 'y "%1.0f"'],
+            ytics = '500',
+            xtics = '("6/03" 66, "7/03" 87, "8/03" 109, "9/03" 130, "10/03" 151, "11/03" 174, "12/03" 193, "1/04" 215, "2/04" 235)',
+            ylabel = '"volume (0000)" offset 1')
+
+finance with global class-less function call:
+
+.. _finance2.py:
+
+..
+    cmd2img:: python3
+    :image: finance.13.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import pandas as pd
+
+    # A demostration to generate pandas data frame data in python.
+    df = pd.read_csv('examples/finance.dat', sep='\t', index_col = 0, parse_dates = True,
+            names = ['date', 'open','high','low','close', 'volume','volume_m50',
+                'intensity','close_ma20','upper','lower '])
+
+    # make subplot at first, now there is still no real plot.
+    sub1 = pyplot.make_plot(df.to_csv(sep = ' '),
+            'using 0:2:3:4:5 notitle with candlesticks lt 8',
+            'using 0:9 notitle with lines lt 3',
+            'using 0:10 notitle with lines lt 1',
+            'using 0:11 notitle with lines lt 2',
+            'using 0:8 axes x1y2 notitle with lines lt 4',
+            logscale = 'y',
+            yrange = '[75:105]',
+            ytics = '(105, 100, 95, 90, 85, 80)',
+            xrange = '[50:253]',
+            grid = 'xtics ytics',
+            lmargin = '9',
+            rmargin = '2',
+            format = 'x ""',
+            xtics = '(66, 87, 109, 130, 151, 174, 193, 215, 235)',
+            title = '"Change to candlesticks"',
+            size = ' 1, 0.7',
+            origin = '0, 0.3',
+            bmargin = '0',
+            ylabel = '"price" offset 1',
+            label = ['1 "Acme Widgets" at graph 0.5, graph 0.9 center front',
+                '2 "Courtesy of Bollinger Capital" at graph 0.01, 0.07',
+                '3 "  www.BollingerBands.com" at graph 0.01, 0.03']
+            )
+
+    sub2 = pyplot.make_plot(df.to_csv(sep = ' '),
+            'using 0:($6/10000) notitle with impulses lt 3',
+            'using 0:($7/10000) notitle with lines lt 1',
+            bmargin = '',
+            size = '1.0, 0.3',
+            origin = '0.0, 0.0',
+            tmargin = '0',
+            nologscale = 'y',
+            autoscale = 'y',
+            format = ['x', 'y "%1.0f"'],
+            ytics = '500',
+            xtics = '("6/03" 66, "7/03" 87, "8/03" 109, "9/03" 130, "10/03" 151, "11/03" 174, "12/03" 193, "1/04" 215, "2/04" 235)',
+            ylabel = '"volume (0000)" offset 1')
+
+    # plot at one time.
+    pyplot.multiplot(sub1, sub2,
+            output = '"finance.13.png"',
+            term = 'pngcairo font "arial,10" fontscale 1.0 size 900, 600')
+
+Both script generated the same output:
+
+.. image:: http://gnuplot.sourceforge.net/demo/finance.13.png
+
+Let's see what's the difference with more examples(Click the script name to
+see the whole script) in Table1_ and Table2_:
+
+5. Gnuplot command and py-gnuplot functions
+============================================
+
+The principle is if you can write Gnuplot script, you can write py-gnuplot.
+There is 1-1 mapping between almost all Gnuplot command and python function;
+
+Gnuplot commands are mapped to py-python function. Gnuplot has many Commands
+but there is only a few ones which are related plot. We will portting more and
+more commands and now the following commands are available.
+
+5.1 plot()
+-----------
+
+plot is the primary command for drawing plots with gnuplot::
+
+    plot {<ranges>} <plot-element> {, <plot-element>, <plot-element>}
+
+    # Examples:
+    plot sin(x)
+    plot sin(x), cos(x)
+    plot "datafile.1" with lines, "datafile.2" with points
+
+We port it as a function in py-python and the plot-element is passed as
+variable parameters, please be noted that the plot-element should be in the
+single quotation marks:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # gnuplot.plot() is definied as:
+    # def plot(*args, **kwargs)
+
+    # usage examples, please note that we didn't give the
+    # output so # could only see the image flash on the
+    # screen. Will introduce how to output the image to
+    # files.
+    gnuplot.plot('sin(x)')
+    gnuplot.plot('sin(x)', 'cos(x)')
+    gnuplot.plot('"datafile.1" with lines',
+                '"datafile.2" with points')
+
+Note: Submodule gnuplot and submodule pyplot have only one difference in
+plot():
+
+    - gnuplot.plot() support functions and file name as input data
+    - while pyplot.plot() support string or pandas dataframe data type,
+      Further more it must be the first parameter.
+
+If we generate the data in the python insteading using the exist funtions and
+datafile, we should use pyplot to plot the data, for example:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # pyplot.plot() is definied as:
+    # def plot(df.to_csv(), *args, **kwargs)
+
+    # usage examples, please note that we didn't give the output so could only
+    # see the image flash on the screen. Will introduce how to output the
+    # image to files.
+    df = pd.DataFrame(data = {'col1': [1, 2],
+                              'col2': [3, 4],
+                              'col3': [5, 6]})
+    gnuplot.plot(df, 'using 1:2 with lines', 'using 1:3 with points')
+
+
+5.2 splot()
+------------
+
+splot is the command for drawing 3D plots::
+
+    splot {<ranges>}
+    {<iteration>}
+    <function> | {{<file name> | <datablock name>} {datafile-modifiers}}
+
+    # Examples:
+    splot sin(sqrt(x**2+y**2))/sqrt(x**2+y**2)
+    splot ’<file_name>’
+
+We port it as a function splot() in py-python and the plot-element is passed
+as variable parameters, please be noted that the plot-element should be in the
+single quotation marks:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # gnuplot.splot() is definied as:
+    # def splot(*args, **kwargs)
+
+    # usage examples, please note that we didn't give the output so
+    # could only see the image flash on the screen. Will introduce
+    # how to output the image to files.
+    gnuplot.splot('sin(sqrt(x**2+y**2))/sqrt(x**2+y**2)')
+    gnuplot.splot('"<file_name>"')
+
+5.3 set()
+----------
+
+The set command can be used to set lots of options in gnuplot. for example::
+
+    set xtics offset 0,graph 0.05
+    set label "y=x" at 1,2
+    set label 2 "S" at graph 0.5,0.5 center font "Symbol,24"
+    set label 3 "y=x^2" at 2,3,4 right
+
+In py-gnuplot we use dictionary parameter to pass them to plot() function, We
+use each option name as the key, the option value as the dictionary value.
+If some option contain an iteration clause, we use list as the dictionary value,
+then the above set command could be writen as::
+
+    xtics = 'offset 0,graph 0.05'
+    labes = ['"y=x" at 1,2',
+             '2 "S" at graph 0.5,0.5 center font "Symbol,24"',
+             '3 "y=x^2" at 2,3,4 right']
+
+For example the following Gnuplot script::
+
+    set boxwidth 0.9 relative
+    set style fill solid 1.0
+    set label "y=x" at 1,2
+    set label 2 "S" at graph 0.5,0.5 center font "Symbol,24"
+    set label 3 "y=x^2" at 2,3,4 right
+    plot ’file.dat’ with boxes
+
+could be implemented as the following:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # style is passed as function dictionary parameter
+    gnuplot.plot('"file.dat’with boxes',
+                boxwidth = '0.9 relative',
+                style = 'fill solid 1.0',
+                labes = ['"y=x" at 1,2',
+                '2 "S" at graph 0.5,0.5 center font "Symbol,24"',
+                '3 "y=x^2" at 2,3,4 right'])
+
+By default, Gnuplot display the output to the standard output. The set term
+and output command redirects the display to the specified file or device::
+
+    set terminal pngcairo font "arial,10" fontscale 1.0 size 600, 400
+    set output "test.png"
+
+Then if we want to redirect the image to a file, we could do that by giving
+the term and output parameters:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    # style is passed as function dictionary parameter
+    gnuplot.plot('"file.dat’with boxes',
+                boxwidth = '0.9 relative',
+                style = 'fill solid 1.0',
+                labes = ['"y=x" at 1,2',
+                '2 "S" at graph 0.5,0.5 center font "Symbol,24"',
+                '3 "y=x^2" at 2,3,4 right'],
+                output = '"finance.13.png"',
+                term = 'pngcairo font "arial,10" fontscale 1.0 size 900, 600')
+
+
+5.4 multiplot()
+----------------
+
+In Gnuplot, multiplot is not a command but a option to enable multiplot mode.
+But we use it as a seperate function multiplot() to plot several data next to
+each other on the same page or screen window::
+
+    def multiplot(\*args, \*\*kwargs):
+        @args: the subplot object list;
+        @kwargs: the setting options that need to be set before call plot;
+
+    def make_plot(\*args, \*\*kwargs)
+        The parameter definition is the same as plot(), but it doesn't plot
+        the data really, it only return the plot dictionary for later
+        multiplot() use.
+
+    def make_splot(\*args, \*\*kwargs)
+        The parameter definition is the same as splot(), but it doesn't plot
+        the data really, it only return the plot dictionary for later
+        multiplot() use.
+
+Before call multiplot() we must generate the subplot object by calling
+make_plot()/make_splot(), It is much like mplfinance.make_addplot(), it only
+add the subplot command for further call:
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    sub1 = gnuplot.make_plot('sin(x)', ylabel = 'ylabel')
+    sub2 = gnuplot.make_plot('cos(x)', xlabel = 'xlabel')
+    sub3 = gnuplot.make_plot('sin(2*x)', noxlabel = '', ylabel = '')
+    sub4 = gnuplot.make_plot('cos(2*x)', xlabel = 'xlabel')
+    gnuplot.multiplot(sub1, sub2, sub3, sub4,
+                      output = '"sample.multiplot.png"',
+                      term = 'pngcairo size 900,600 font ",11"',
+                      multiplot  = 'layout 2,2 columnsfirst margins 0.1,0.9,0.1,0.9 spacing 0.1')
+
+6. Plot methods detail
+======================
+
+6.1 methods in gnuplot
+-----------------------
+
+6.2 methods in pyplot
+-----------------------
+
+pyplot is easy to use and it only has a few functions, all the configuration
+are passed as function parameter.
+
+pyplot take pandas dataframe or string as first parameter.
+
+plot(data, \*args, \*\*kwargs)
++++++++++++++++++++++++++++++++
+
+@ data: The data that need to plot, it should be string or pandas.Dataframe
+format. The plot() in Another submodule doesn't have the parameter, this is
+the only difference between the two sub modules. If it's pandas.Dataframe
+format we convert it to string by calling df.to_csv(sep = ' ') in the module::
+
+    df = pd.read_csv('examples/immigration.dat', index_col = 0,
+                    sep='\t', comment='#')
+    pyplot.plot(df, ...)
+    pyplot.plot(df.to_csv(sep = ' '), ...)
+
+@ args: The plot command we need to plot. Gnuplot plot data like that::
+
+    plot 'finance.dat' using 0:2:3:4:5 notitle with financebars lt 8, \
+         'finance.dat' using 0:9 notitle with lines lt 3, \
+         'finance.dat' using 0:10 notitle with lines lt 1, \
+         'finance.dat' using 0:11 notitle with lines lt 2
+
+Now we omit the command "plot" and data "finance.dat" since we have already
+pass them in the function name and the first parameter "data", we pass the
+command as a list of command as following::
+
+    pyplot.plot(df.to_csv(sep = ' '),
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                'using 0:9 notitle with lines lt 3',
+                'using 0:10 notitle with lines lt 1',
+                'using 0:11 notitle with lines lt 2',
+                ...)
+    # Or we can only pass the df as the first paramerter:
+    pyplot.plot(df,
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                'using 0:9 notitle with lines lt 3',
+                'using 0:10 notitle with lines lt 1',
+                'using 0:11 notitle with lines lt 2',
+                ...)
+
+
+@ kwargs: As we know The set command is used to set lots of options before
+plot, splot, or replot command is given. We skip the 'set' keyword and use the
+options name as the key, the following part is used the attribute value, for
+example we use the following line to set the xtics in gnuplot::
+
+    set xtics border in scale 1,0.5 nomirror rotate by -45 autojustify norangelimit
+
+Then in the function, we will use::
+
+    xtics = 'border in scale 1,0.5 nomirror rotate by -45 autojustify norangelimit'
+
+as a parameters. Some options order sensitive, so we need the python
+version > 3.7, which seems to pass the function parameter in order. Or there will
+some issue and cause exception::
+
+    pyplot.plot(df.to_csv(sep = ' '),
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                ...,
+                xtics = 'border in scale 1,0.5 nomirror rotate by -45 autojustify norangelimit',
+                ...)
+
+There are some cases we need pay attention:
+
+1) We need always put the parameter in the single quotation marks('') since we
+   would pass the integrated string to gnuplot by PIPE::
+
+    pyplot.plot(df,
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                ...,
+                )
+
+2) If it's flag parameter, for example::
+
+    set grid
+    set hidden3d
+
+we can pass it as a empty value::
+
+    pyplot.plot(df.to_csv(sep = ' '),
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                ...,
+                grid = '',
+                hidden3d = '',
+                ...)
+
+3) We have two means to pass "unset" command, one is the no-xxx option and
+the other is xxx = None, for examples we'd like to unset the grid and
+xrange::
+
+    unset grid
+    unset xrange
+
+We can do that in py-gnuplot by::
+
+    pyplot.plot(df,
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                ...,
+                nogrid = '',
+                xlabel = None,
+                ...)
+
+4) If there is multiple lines for one options, for exampe in gnuplot it is::
+
+    set arrow from 5,-5,-1.2 to 5,5,-1.2 lt -1
+    set arrow from 5,6,-1 to 5,5,-1 lt -1
+    set arrow from 5,6,sinc(5,5) to 5,5,sinc(5,5) lt -1
+
+We pass them by a list of options::
+
+    pyplot.plot(df.to_csv(sep = ' '),
+                'using 0:2:3:4:5 notitle with financebars lt 8',
+                ...,
+                arrow = ['from 5,-5,-1.2 to 5,5,-1.2 lt -1',
+                         'from 5,6,-1 to 5,5,-1 lt -1',
+                         'from 5,6,sinc(5,5) to 5,5,sinc(5,5) lt -1'],
+                ...,
+                ...)
+
+
+splot(data, \*args, \*\*kwargs)
+++++++++++++++++++++++++++++++++
+
+The parameter are same as plot(), the only difference is it use "splot" to
+plot insteading of "plot".
+
+make_plot(data, \*args, \*\*kwargs)
++++++++++++++++++++++++++++++++++++++++
+
+The parameter definition is the same as plot()/splot, but it doesn't plot the
+df really, it only return the plot dictionary for later multiplot() use.
+
+It is much like mplfinance.add_plot(), it only add the subplot command for
+further call::
+
+    sub1 = pyplot.make_plot(df.to_csv(sep = ' '),
+            'using 0:2:3:4:5 notitle with candlesticks lt 8',
+            'using 0:9 notitle with lines lt 3',
+            logscale = 'y',
+            yrange = '[75:105]',
+            ytics = '(105, 100, 95, 90, 85, 80)',
+            xrange = '[50:253]',
+            grid = 'xtics ytics',
+            lmargin = '9',
+            rmargin = '2',
+            format = 'x ""',
+            xtics = '(66, 87, 109, 130, 151, 174, 193, 215, 235)',
+            title = '"Change to candlesticks"',
+            size = ' 1, 0.7',
+            origin = '0, 0.3',
+            bmargin = '0',
+            ylabel = '"price" offset 1',
+            label = ['1 "Acme Widgets" at graph 0.5, graph 0.9 center front',
+                '2 "Courtesy of Bollinger Capital" at graph 0.01, 0.07',
+                '3 "  www.BollingerBands.com" at graph 0.01, 0.03']
+            )
+
+make_splot(data, \*args, \*\*kwargs)
++++++++++++++++++++++++++++++++++++++++
+
+The parameter definition is the same as plot()/splot, but it doesn't plot the
+df really, it only return the plot dictionary for later multiplot() use.
+
+It is much like mplfinance.add_plot(), it only add the subplot command for
+further call::
+
+    sub1 = pyplot.make_splot('cos(u)*cos(v), sin(u)*cos(v), 0 w pm3d',
+            logscale = 'y',
+            yrange = '[75:105]',
+            ytics = '(105, 100, 95, 90, 85, 80)',
+            xrange = '[50:253]',
+            grid = 'xtics ytics',
+            lmargin = '9',
+            rmargin = '2',
+            format = 'x ""',
+            xtics = '(66, 87, 109, 130, 151, 174, 193, 215, 235)',
+            title = '"Change to candlesticks"',
+            size = ' 1, 0.7',
+            origin = '0, 0.3',
+            bmargin = '0',
+            ylabel = '"price" offset 1',
+            label = ['1 "Acme Widgets" at graph 0.5, graph 0.9 center front',
+                '2 "Courtesy of Bollinger Capital" at graph 0.01, 0.07',
+                '3 "  www.BollingerBands.com" at graph 0.01, 0.03']
+            )
+
+multiplot(\*args, \*\*kwargs)
+++++++++++++++++++++++++++++++++++
+
+The multiplot set the setting in kwargs at first, and then call the
+subplot in args to multiplot.
+
+@args: It is the list of subplot generated by make_plot() or make_splot(), it
+would be called one by one.
+
+@kwargs: The global setting for multiplot;
+
+For example::
+
+    pyplot.multiplot(sub1, sub2,
+            output = '"history.%s.png"' %(code),
+            term = 'pngcairo size 1920,1080 font ",11"')
+
+7. More examples
+================
+
+7.1 histogram
+-------------
+
+.. _histo.1.py:
+
+..
+    cmd2img:: python3
+    :image: histograms.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import pandas as pd
+
+    df = pd.read_csv('examples/immigration.dat', index_col = 0, sep='\t', comment='#')
+    g = gnuplot.Gnuplot()
+    g.set(terminal = 'pngcairo transparent enhanced font "arial,10" fontscale 1.0 size 600, 400 ',
+            output = '"histograms.1.png"',
+            key = 'fixed right top vertical Right noreverse noenhanced autotitle nobox',
+            style = 'data linespoints',
+            datafile = ' missing "-"',
+            xtics = 'border in scale 1,0.5 nomirror rotate by -45 autojustify norangelimit',
+            title = '"US immigration from Europe by decade"')
+    pyplot.plot(df, 'using 2:xtic(1), for [i=3:22] "" using i ')
+
+.. _histo.2.py:
+
+..
+    cmd2img:: python3
+    :image: histograms.1.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import pandas as pd
+
+    df = pd.read_csv('examples/immigration.dat', index_col = 0, sep='\t', comment='#')
+    pyplot.plot(df.to_csv(sep = ' '),
+            'using 2:xtic(1), for [i=3:22] "" using i ',
+            terminal = 'pngcairo transparent enhanced font "arial,10" fontscale 1.0 size 600, 400 ',
+            output = '"histograms.1.png"',
+            key = 'fixed right top vertical Right noreverse noenhanced autotitle nobox',
+            style = 'data linespoints',
+            datafile = ' missing "-"',
+            xtics = 'border in scale 1,0.5 nomirror rotate by -45 autojustify norangelimit',
+            title = '"US immigration from Europe by decade"')
+
+And the generated output is as following:
+
+.. image:: http://gnuplot.sourceforge.net/demo/histograms.1.png
+
+
+7.2 splot
+---------
+
+.. _surface2.py:
+
+..
+    cmd2img:: python3
+    :image: surface2.9.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    gnuplot.splot('cos(u)+.5*cos(u)*cos(v),sin(u)+.5*sin(u)*cos(v),.5*sin(v) with lines',
+            '1+cos(u)+.5*cos(u)*cos(v),.5*sin(v),sin(u)+.5*sin(u)*cos(v) with lines',
+            terminal = 'pngcairo enhanced font "arial,10" fontscale 1.0 size 600, 400 ',
+            output = '"surface2.9.png"',
+            dummy = 'u, v',
+            key = 'bmargin center horizontal Right noreverse enhanced autotitle nobox',
+            style = ['increment default','data lines'],
+            parametric = '',
+            view = '50, 30, 1, 1',
+            isosamples = '50, 20',
+            hidden3d = 'back offset 1 trianglepattern 3 undefined 1 altdiagonal bentover',
+            xyplane = 'relative 0',
+            title = '"Interlocking Tori" ',
+            urange = '[ -3.14159 : 3.14159 ] noreverse nowriteback',
+            vrange = '[ -3.14159 : 3.14159 ] noreverse nowriteback')
+
+And the generated output is as following:
+
+.. image:: http://gnuplot.sourceforge.net/demo/surface2.9.png
+
+7.3 pm3d
+---------
+
+iterate.dem
+
+.. _whale1.py:
+
+..
+    cmd2img:: python3
+    :image: whale.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+
+    #http://ayapin-film.sakura.ne.jp/Gnuplot/Pm3d/Part1/whale.html
+    g = gnuplot.Gnuplot()
+    #g.set(terminal = 'pngcairo  transparent enhanced font "arial,10" fontscale 1.0 size 600, 400 ',
+    #        output = '"iterate.2.png"',
+    #        noborder = '',
+    #        key = ['title "splot for [scan=1:*] \'whale.dat\' index scan" center',
+    #              'bmargin center horizontal Right noreverse enhanced autotitle nobox',
+    #              'noinvert samplen 0.6 spacing 1 width 0 height 0 ',
+    #              'maxcolumns 0 maxrows 6'],
+    #        style = 'increment default',
+    #        view = '38, 341, 1, 1',
+    #        xtics = '',
+    #        ytics = '',
+    #        ztics = '',
+    #        title = '"Iteration over all available data in a file" ',
+    #        lmargin = 'at screen 0.09',
+    #        rmargin = 'at screen 0.9')
+    #g.splot('for [i=1:*] "examples/whale.dat" index i title sprintf("scan %d",i) with lines')
+
+    # Black and white version
+    g.splot('"examples/whale.dat" w pm3d',
+            term = 'pngcairo size 480,480',
+            out = '"whale.png"',
+            style = 'line 100 lw 0.1 lc "black"',
+            pm3d = 'depth hidden3d ls 100',
+            cbrange = '[-0.5:0.5]',
+            palette = 'rgb -3,-3,-3',
+            colorbox = None,
+            border = None,
+            key = None,
+            zrange = '[-2:2]',
+            tics = None,
+            view = '60,185,1.5')
+
+
+.. _whale2.py:
+
+..
+    cmd2img:: python3
+    :image: whale.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import pandas as pd
+
+    #gnuplot.splot('for [i=1:*] "examples/whale.dat" index i title sprintf("scan %d",i) with lines',
+    #        terminal = 'pngcairo  transparent enhanced font "arial,10" fontscale 1.0 size 600, 400 ',
+    #        output = '"iterate.2.png"',
+    #        border = '',
+    #        key = ['title "splot for [scan=1:*] \'whale.dat\' index scan" center',
+    #              'bmargin center horizontal Right noreverse enhanced autotitle nobox',
+    #              'noinvert samplen 0.6 spacing 1 width 0 height 0 ',
+    #              'maxcolumns 0 maxrows 6'],
+    #        style = 'increment default',
+    #        view = '38, 341, 1, 1',
+    #        xtics = '',
+    #        ytics = '',
+    #        ztics = '',
+    #        title = '"Iteration over all available data in a file" ',
+    #        lmargin = 'at screen 0.09',
+    #        rmargin = 'at screen 0.9')
+
+    # Black and white version
+    gnuplot.splot('"examples/whale.dat" w pm3d',
+            term = 'pngcairo size 480,480',
+            out = '"whale.png"',
+            style = 'line 100 lw 0.1 lc "black"',
+            pm3d = 'depth hidden3d ls 100',
+            cbrange = '[-0.5:0.5]',
+            palette = 'rgb -3,-3,-3',
+            colorbox = None,
+            border = None,
+            key = None,
+            zrange = '[-2:2]',
+            tics = None,
+            view = '60,185,1.5')
+
+And the generated output is as following:
+
+.. http://ayapin-film.sakura.ne.jp/Gnuplot/Pm3d/Part1/whale.html
+.. image http://gnuplot.sourceforge.net/demo/iterate.2.png
+.. image:: http://ayapin-film.sakura.ne.jp/Gnuplot/Pm3d/Part1/whale.png
+
+8 Examples in matplotlib
+========================
+
+Just for fun, I translate some examples in matplotlib to py-gnuplot:
+
+8.1 Stacked bar chart
+----------------------
+
+..
+    .. cmd2img:: python3
+        :image: sphx_glr_bar_stacked_001.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    import pandas as pd
+    from pygnuplot import gnuplot, pyplot
+
+    # data is from https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html#sphx-glr-gallery-lines-bars-and-markers-bar-stacked-py
+    #https://matplotlib.org/_downloads/2ac62a2edbb00a99e8a853b17387ef14/bar_stacked.py
+    labels = ['G1', 'G2', 'G3', 'G4', 'G5']
+    men_means = [20, 35, 30, 35, 27]
+    women_means = [25, 32, 34, 20, 25]
+    men_std = [2, 3, 4, 1, 2]
+    women_std = [3, 5, 2, 3, 3]
+    width = 0.35       # the width of the bars: can also be len(x) sequence
+
+    # Plot programme:
+    df = pd.DataFrame({'men_means': men_means,
+        'women_means': women_means,
+        'men_std': men_std,
+        'women_std': women_std}, index = labels)
+    #print(df)
+    pyplot.plot(df,
+            'using :($2 + $3):5:xtic(1) with boxerror title "women" lc "dark-orange"',
+            'using :2:4 with boxerror title "men" lc "royalblue"',
+            style = ['data boxplot', 'fill solid 0.5 border -1'],
+            boxwidth = '%s' %(width),
+            xrange = '[0.5:5.5]',
+            ylabel = '"Scores"',
+            title = '"Scores by group and gender"',
+            output = '"sphx_glr_bar_stacked_001.png"',
+            terminal = 'pngcairo size 640, 480')
+
+Refer to the original script: `Stacked bar chart`_ and the original image:
+
+.. _Stacked bar chart: https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html#sphx-glr-gallery-lines-bars-and-markers-bar-stacked-py
+.. image:: https://matplotlib.org/_images/sphx_glr_bar_stacked_001.png
+   :height: 300
+
+8.2 Grouped bar chart with labels
+---------------------------------
+
+..
+    cmd2img:: python3
+            :image: sphx_glr_barchart_001.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    import pandas as pd
+    from pygnuplot import gnuplot, pyplot
+
+    # data is from https://matplotlib.org/gallery/lines_bars_and_markers/barchart.html#sphx-glr-gallery-lines-bars-and-markers-barchart-py
+    labels = ['G1', 'G2', 'G3', 'G4', 'G5']
+    men_means = [20, 34, 30, 35, 27]
+    women_means = [25, 32, 34, 20, 25]
+    width = 0.35  # the width of the bars
+
+    # Plot programme:
+    df = pd.DataFrame({'men': men_means, 'women': women_means},
+            index = labels)
+    df.index.name = 'label'
+    #print(df)
+    pyplot.plot(df,
+            'using 2:xticlabels(1) title columnheader(2) lc "web-blue"',
+            'using 3:xticlabels(1) title columnheader(3) lc "orange"',
+            'using ($0-0.2):($2+1):2 with labels notitle column',
+            'using ($0+0.2):($3+1):3 with labels notitle column',
+            title = '"Scores by group and gender"',
+            xrange = '[-0.5:4.5]',
+            yrange = '[0:38]',
+            ylabel = '"Scores"',
+            style = ['data histogram',
+                     'histogram cluster gap 1',
+                     'fill solid border -1',
+                     'textbox transparent'],
+            output = '"sphx_glr_barchart_001.png"',
+            terminal = 'pngcairo size 640, 480')
+
+
+Refer to the original script: `Grouped bar chart with labels`_ and the original image:
+
+.. _Grouped bar chart with labels: https://matplotlib.org/gallery/lines_bars_and_markers/barchart.html#sphx-glr-gallery-lines-bars-and-markers-barchart-py
+.. image:: https://matplotlib.org/_images/sphx_glr_barchart_001.png
+   :height: 300
+
+8.3 Multiplot Axes Demo
+-----------------------
+
+..
+    cmd2img:: python3
+            :image: sphx_glr_axes_demo_001.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    from pygnuplot import gnuplot, pyplot
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    import numpy as np
+
+    #https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axes-demo-py
+    #http://gnuplot.sourceforge.net/demo_5.2/bins.html
+
+    # 1) create some data to use for the plot
+    np.random.seed(19680801) # Fixing random state for reproducibility
+    dt = 0.001
+    t = np.arange(0.0, 10.0, dt)
+    r = np.exp(-t / 0.05)  # impulse response
+    x = np.random.randn(len(t))
+    s = np.convolve(x, r)[:len(x)] * dt  # colored noise
+    df = pd.DataFrame({'r': r, 'x': x, 's': s}, index = t)
+    df.index.name = 't'
+    #print(df.tail().to_csv())
+
+    # 2) Plot the data
+    main = pyplot.make_plot(df.iloc[:1000],
+            'using 1:4 with line lw 2 lc "web-blue"',
+            title = '"Gaussian colored noise"',
+            xlabel = '"time (s)"',
+            ylabel = '"current (nA)"',
+            xrange = '[0:1]',
+            yrange = '[-0.015:0.03]',
+            size = ' 1, 1',
+            origin = '0, 0')
+    right = pyplot.make_plot(df,
+            'using 4 bins=400 with boxes title "20 bins" lw 2 lc "web-blue"',
+            title = '"Probability"',
+            xlabel = None,
+            ylabel = None,
+            xrange = None,
+            yrange = None,
+            origin = '0.65, 0.56',
+            size = '0.24, 0.32')
+    left = pyplot.make_plot(df,
+            'using 1:2 with line lw 2 lc "web-blue"',
+            title = '"Impulse response"',
+            xrange = '[0:0.2]',
+            origin = '0.15, 0.56',
+            size = '0.24, 0.32',
+            object = 'rectangle from graph 0,0 to graph 1,1 behind fc "black" fillstyle solid 1.0')
+
+    pyplot.multiplot(main, right, left,
+            output = '"sphx_glr_axes_demo_001.png"',
+            term = 'pngcairo font "arial,10" fontscale 1.0 size 640, 480',
+            key = '')
+
+Refer to the original script: `Multiplot Axes Demo`_ and the original image:
+
+.. _Multiplot Axes Demo: https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html#sphx-glr-gallery-subplots-axes-and-figures-axes-demo-py
+.. image:: https://matplotlib.org/_images/sphx_glr_axes_demo_001.png
+   :height: 300
+
+8.4 Basic pie chart
+--------------------
+
+..
+    cmd2img:: python3
+    :image: sphx_glr_pie_features_0011.png
+
+.. code-block:: python
+
+    #!/usr/bin/env python3
+    #coding=utf8
+    import pandas as pd
+    import math
+    from pygnuplot import gnuplot, pyplot
+
+    #http://www.phyast.pitt.edu/~zov1/gnuplot/html/pie.html
+    #https://matplotlib.org/gallery/pie_and_polar_charts/pie_features.html#sphx-glr-gallery-pie-and-polar-charts-pie-features-py
+    # Pie chart, where the slices will be ordered and plotted counter-clockwise:
+    labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
+    sizes = [15, 30, 45, 10]
+    explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
+    startangle = math.pi/2
+
+    # Prepare the data: caculate the percentage
+    df = pd.DataFrame({'labels': labels, 'sizes': sizes, 'explode': explode})
+    df.index.name = 'index'
+    df['percentage'] = df['sizes'] / df['sizes'].sum()
+    df['end'] = df['percentage'].cumsum()*2*math.pi + startangle
+    #df['start'] = df['end'].shift(axis=0, fill_value = 0)
+    df['start'] = df['end'].shift(axis=0)
+    df = df.fillna(startangle)
+    #print(df)
+
+    #缩进部分的阴影
+    pie_shade = []
+    pie_graph = []
+
+    shade_offset = 0.03
+    for k, v in df.iterrows():
+        #print(k,v)
+        cos = math.cos((v['start']+v['end'])/2)
+        sin = math.sin((v['start']+v['end'])/2)
+
+        # If we'd like explode the piece, ad the dx/dy to move the origi point.
+        dx = v['explode'] * cos
+        dy = v['explode'] * sin
+
+        # make the shade for each piece
+        piece = gnuplot.make_plot('cos(t)+%f, sin(t)+%f with filledcurves xy=%f,%f lc "grey80"'
+                    %(dx-shade_offset, dy-shade_offset, dx-shade_offset, dy-shade_offset),
+                trange = '[%f:%f]' %(v['start'], v['end']),
+                xrange = '[-1.5:1.5]',
+                yrange = '[-1.5:1.5]')
+        pie_shade.append(piece)
+
+        # make the pie and label
+        piece = gnuplot.make_plot('cos(t)+%f, sin(t)+%f with filledcurve xy=%f,%f  lt %d'
+                    %(dx, dy, dx, dy, k+3),
+                trange = '[%f:%f]' %(v['start'], v['end']),
+                xrange = '[-1.5:1.5]',
+                yrange = '[-1.5:1.5]',
+                label = ['1 "%s" at %f, %f center front' %(v['labels'], 1.2*cos+dx, 1.2*sin+dy),
+                    '2 "%.1f%%" at %f, %f center front' %(v['percentage']*100, 0.6*cos, 0.6*sin)])
+        pie_graph.append(piece)
+
+    gnuplot.multiplot(*pie_shade, *pie_graph,
+            output = '"sphx_glr_pie_features_0011.png"',
+            terminal = 'pngcairo size 640, 480',
+            parametric = '',
+            border = '',
+            tics = '',
+            key = '',
+            multiplot = '')
+
+Refer to the original script: `Basic pie chart`_ and the original image:
+
+.. _Basic pie chart: https://matplotlib.org/gallery/pie_and_polar_charts/pie_features.html#sphx-glr-gallery-pie-and-polar-charts-pie-features-py
+.. image:: https://matplotlib.org/_images/sphx_glr_pie_features_0011.png
+   :height: 300
+
+9. Q/A
+=======
+
+10. CHANGLOG
+=============
+
+1.0 Initial upload;
+
+1.0.3 Now Gnuplot().plot()/splot() supplot set options as parameters.
+
+1.0.7 The pyplot.plot() now can accept both string and pandas.Dataframe as the
+first parameter, Further more we need pandas installed at first.
+
+1.0.11 Fix the bug: gnuplot.multiplot() doesn't work.
+
+1.0.14 Enhancement: multiplot will automatically unset the following options
+for easy use in the following subplot, you needn't unset them if not use:
+
+    label, title, xtics,  x2tics, ytics, y2tics, ztics, cbtics, xlabel,
+    x2label, ylabel, y2label, zlabel, cblabel, xrange, x2range, yrange,
+    y2range, zrange, cbrange, rrange, trange, urange, vrange)
+
+1.0.15 1) Add an example of comparing the object-oriented interface call and
+global class-less function call in multiplot() in multiplot() in
+multiplot() in multiplot(). 2) remove some duplicate setting line.

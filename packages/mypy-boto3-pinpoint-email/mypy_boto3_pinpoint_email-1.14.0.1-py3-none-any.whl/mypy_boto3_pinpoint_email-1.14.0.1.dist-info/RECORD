@@ -1,0 +1,11 @@
+mypy_boto3_pinpoint_email/__init__.py,sha256=OohVPuyZOmWRzaqr6TBzqSzg7Rh2o6xxSLoFXvLlxGM,1741
+mypy_boto3_pinpoint_email/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_pinpoint_email/client.py,sha256=MquSFzmpM8yy2fCDarEYK0irrmP8rHLxUiMbAfsfZgc,21353
+mypy_boto3_pinpoint_email/paginator.py,sha256=laT2ecoAOrf9f0NXmPSgiMp6B6-4aTvIUQRgM0iChrI,4963
+mypy_boto3_pinpoint_email/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_pinpoint_email/type_defs.py,sha256=HnwFCd26RB2RQlezQoJSisL6QkubJbQBZNwq7kCMt0Q,16963
+mypy_boto3_pinpoint_email/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_pinpoint_email-1.14.0.1.dist-info/METADATA,sha256=togsvQheixMZ6hdl_ZUYT0SWqadJ1j2Nb5bCTE5J840,5612
+mypy_boto3_pinpoint_email-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_pinpoint_email-1.14.0.1.dist-info/top_level.txt,sha256=IcQ5qCKaCamaelQGoL48I5imuQlNrlqLelbsIRhZgdc,26
+mypy_boto3_pinpoint_email-1.14.0.1.dist-info/RECORD,,

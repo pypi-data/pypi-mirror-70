@@ -1,0 +1,10 @@
+x16cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+x16cli/actions.py,sha256=kG5v7DMhcBmDB5JkY2WFk22XadofKBNR-3rOjkMucWY,5672
+x16cli/checks.py,sha256=PC8VHa7Lg0R_zn4GgzU5e6z0QAobj5LgqWipj7oLrHY,690
+x16cli/config.py,sha256=QtSlve_LZLDLGq_-xfBXeFBsG5pVENuezSx-bhWShPA,1049
+x16cli-0.1.1.data/scripts/x16,sha256=nqL-zexVMo02t0u02XShbtApdWVCV93Jt7cvKziycuY,1909
+x16cli-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+x16cli-0.1.1.dist-info/METADATA,sha256=qhUoYtckyubQ8BcJmjZrf9bBx1a7nBCIhTsnn9QLs6E,2149
+x16cli-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+x16cli-0.1.1.dist-info/top_level.txt,sha256=GD6zmh-qzPRXM7KNufREdWKrreqhF6y2rE42A-22x0U,7
+x16cli-0.1.1.dist-info/RECORD,,

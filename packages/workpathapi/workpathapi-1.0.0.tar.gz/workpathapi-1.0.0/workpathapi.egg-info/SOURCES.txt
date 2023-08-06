@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+tests/__init__.py
+tests/test_helpers.py
+workpathapi/__init__.py
+workpathapi/client.py
+workpathapi/helpers.py
+workpathapi.egg-info/PKG-INFO
+workpathapi.egg-info/SOURCES.txt
+workpathapi.egg-info/dependency_links.txt
+workpathapi.egg-info/top_level.txt

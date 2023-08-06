@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: arkhn-arx
+Version: 0.0.1
+Summary:  arkhn_arx is a tool to pseudonymize or anonymize datasets while evaluating reidentification risk metrics
+Home-page: https://github.com/arkhn/pyarxaas
+Author: Celine Thiriez
+Author-email: contact@arkhn.com
+License: MIT License
+Download-URL: https://github.com/arkhn/pyarxaas/archive/0.0.1.tar.gz
+Description: UNKNOWN
+Keywords: arkhn,dataset anonymization,dataset pseudonymization,reidentification risk evaluation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

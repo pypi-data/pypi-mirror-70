@@ -1,0 +1,60 @@
+stages:
+  - testing
+  - packaging
+  - release
+
+before_script:
+  - pip install -U pip wheel
+
+  - pip install -U -r setup-requirements.txt
+  - pip install -U -r test-requirements.txt
+
+  - pip install --editable .
+
+  - pip install -U codecov coverage
+
+testing-3-6-linux:
+  image: python:3.6
+  stage: testing
+
+  script:
+    - mypy --python-version 3.6 --strict --show-traceback --ignore-missing-imports --show-error-context --implicit-reexport --pretty -p magicdict
+    - flake8 .
+    - python -m coverage run --source=magicdict setup.py test
+
+    - codecov --token=$CODECOV_TOKEN --branch=$CI_BUILD_REF_NAME
+
+packaging-3-6-linux:
+  image: python:3.6
+  stage: packaging
+
+  script:
+    - python setup.py sdist bdist_wheel
+
+  artifacts:
+    paths:
+      - dist/
+
+testpypi-3-6-linux:
+  image: python:3.6
+  stage: release
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $TESTPYPI_TOKEN
+  script:
+    - pip install -U twine
+    - twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+  except:
+    - tags
+
+pypi-3-6-linux:
+  image: python:3.6
+  stage: release
+  variables:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: $PYPI_TOKEN
+  script:
+    - pip install -U twine
+    - twine upload dist/*
+  only:
+    - tags

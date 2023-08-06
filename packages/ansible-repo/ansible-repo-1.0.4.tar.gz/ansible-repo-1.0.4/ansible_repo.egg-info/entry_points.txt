@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-repo = ansible_repo:ansible_repo.main
+

@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ansible-repo
+Version: 1.0.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: di-dip-unistra
+Author-email: di-dip@unistra.fr
+Maintainer: di-dip-unistra
+Maintainer-email: di-dip@unistra.fr
+License: PSF
+Description: # ANSIBLE-REPO
+        
+        usage:
+        ```
+        ansible-repo is a command which allowed ansible to download a git repository and run it as a playbook
+        
+        Usage:
+          ansible-repo <repo> <tag> [-e <env_vars>] [-vvv]
+          ansible-repo <repo> <tag> -i <inventory> [-e <env_vars>] [-vvv]
+        
+        Option:
+          -v	verbose
+          -i    inventory
+          -e    Ansible environment variables
+        ```
+Keywords: ansible,git,unistra,Université de Strasbourg
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

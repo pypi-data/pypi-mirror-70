@@ -1,0 +1,10 @@
+README.md
+setup.py
+ansible_repo/__init__.py
+ansible_repo/ansible_repo.py
+ansible_repo.egg-info/PKG-INFO
+ansible_repo.egg-info/SOURCES.txt
+ansible_repo.egg-info/dependency_links.txt
+ansible_repo.egg-info/entry_points.txt
+ansible_repo.egg-info/requires.txt
+ansible_repo.egg-info/top_level.txt

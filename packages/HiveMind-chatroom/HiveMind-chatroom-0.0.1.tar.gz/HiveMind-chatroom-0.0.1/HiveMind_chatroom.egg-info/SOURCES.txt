@@ -1,0 +1,9 @@
+setup.py
+HiveMind_chatroom.egg-info/PKG-INFO
+HiveMind_chatroom.egg-info/SOURCES.txt
+HiveMind_chatroom.egg-info/dependency_links.txt
+HiveMind_chatroom.egg-info/entry_points.txt
+HiveMind_chatroom.egg-info/requires.txt
+HiveMind_chatroom.egg-info/top_level.txt
+hivemind_chatroom/__init__.py
+hivemind_chatroom/__main__.py

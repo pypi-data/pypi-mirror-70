@@ -1,0 +1,3 @@
+[console_scripts]
+HiveMind-chatroom = hivemind_chatroom.__main__:main
+

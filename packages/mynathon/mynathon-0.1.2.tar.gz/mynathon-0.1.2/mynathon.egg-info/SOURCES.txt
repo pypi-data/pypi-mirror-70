@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bin/mynathon
+mynathon/__init__.py
+mynathon/__main__.py
+mynathon/mynathon.py
+mynathon.egg-info/PKG-INFO
+mynathon.egg-info/SOURCES.txt
+mynathon.egg-info/dependency_links.txt
+mynathon.egg-info/entry_points.txt
+mynathon.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+morphops/__init__.py,sha256=26oX44ApTOAfW5mYtPdEFCok2g0qNApQdb-y8ga2VaM,940
+morphops/_version.py,sha256=tBCH3ZD-pfslFfVea0QjavTfZ3g6w-hR8XU5Vll5HMg,22
+morphops/io.py,sha256=CqnpLs-AVzPMaIoP9FgTlvNcENhQMspYErMdCpTa8gE,5062
+morphops/lmk_util.py,sha256=gb0uFnJIqBi9nVVppEZ5ZxowVxLwibjDd-CTl9P7b0U,3282
+morphops/procrustes.py,sha256=xziXL8_6YeCsNDRuqwQiw_4zjOLY6WLIlvkJ6FFfztM,24780
+morphops/tps.py,sha256=h86h4negXxKOJC19zQTsb1K6wNMOUMtNwxyMddPexGc,6539
+morphops-0.1.11.dist-info/LICENSE,sha256=ZxQ-Hax9QVaVNFNTwVNDqmJjWtqpwX1MzaNwb2KdJvs,1074
+morphops-0.1.11.dist-info/METADATA,sha256=We9fsegnYae50FL2-ngHJAtAnT0FVVSb1Q3FOqVtZys,4677
+morphops-0.1.11.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+morphops-0.1.11.dist-info/top_level.txt,sha256=ODSyih2-oaaheTwq8YnV6zzioxssA6pzx2apVihWb0w,9
+morphops-0.1.11.dist-info/RECORD,,

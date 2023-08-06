@@ -1,0 +1,7 @@
+README.md
+setup.py
+funny/__init__.py
+jitp.egg-info/PKG-INFO
+jitp.egg-info/SOURCES.txt
+jitp.egg-info/dependency_links.txt
+jitp.egg-info/top_level.txt

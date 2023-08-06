@@ -1,0 +1,14 @@
+py_sexpr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_sexpr/terms.py,sha256=mQRLTMXu2Vaq8ecj5b11idntMqOvg-5mz7N_f5L7CVU,6455
+py_sexpr/stack_vm/__init__.py,sha256=t-wlVU-GuaDOayhQKD8B214nNRb00Vf5bnPGTblhrGA,124
+py_sexpr/stack_vm/blockaddr.py,sha256=Hnu0clS_iJhY_qjO5OkxwyPZoqY-mfXn7a4ZWBYd8yc,1307
+py_sexpr/stack_vm/emit.py,sha256=yJNxz4Vy1fEXSu0BFDPM5kl_x0jOt0ZWu4H3hTkonDY,17804
+py_sexpr/stack_vm/instr_names.py,sha256=Vz7jtRL6_OEjHViiX4ive0Dcl_ACAosh4UJcpE_8Mo4,3804
+py_sexpr/stack_vm/instructions.py,sha256=lPSm_1ElT9UrJ7kjKYICzwshSOo6SsB0wsrsfQDQ-gU,3796
+py_sexpr/stack_vm/patch.py,sha256=iby8LgU7LILmNIqD4GBMfT9TV5y_M3uLXZKNl_9MPLY,2003
+pysexpr-0.6.dist-info/LICENSE,sha256=Vjw6-M7Z_TRMqI2lixWMJjB9JdoQhU6qGCWleFgJspo,1098
+pysexpr-0.6.dist-info/METADATA,sha256=gVDkrBGh3qsGpZ4Tv37sZE5687ejiji_dWXGHbylWEU,3231
+pysexpr-0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pysexpr-0.6.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+pysexpr-0.6.dist-info/top_level.txt,sha256=vEwtJjuNWaCE_CmDvWcMJz1YWsgdjSwcyZ_QTGBYN6g,9
+pysexpr-0.6.dist-info/RECORD,,

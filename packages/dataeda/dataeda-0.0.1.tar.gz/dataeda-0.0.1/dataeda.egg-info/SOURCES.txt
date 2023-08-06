@@ -1,0 +1,7 @@
+README.md
+setup.py
+dataeda.egg-info/PKG-INFO
+dataeda.egg-info/SOURCES.txt
+dataeda.egg-info/dependency_links.txt
+dataeda.egg-info/requires.txt
+dataeda.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+simple_socket/__init__.py,sha256=kDexT6wFXazXrlNx4hIgnDXChmGDDLIetgTCc3P6ExU,144
+simple_socket/tcp_client.py,sha256=BwyAz8Kb4QeJ0-M6fUnKoKkB42SnEpq5tOc9Q4v4LBI,6347
+simple_socket/tcp_server.py,sha256=gXWGtQupcz6TDHB0UcNnWW6OLOvoALhbv_EqXiWiLts,8365
+simple_socket/udp_client.py,sha256=bkEpqnuyER7bKgQA37Hs6eqJ2GoGcVbWVD88pR_u6Fw,3182
+simple_socket-0.0.1.dist-info/METADATA,sha256=EHBFiyjEgzP-HhFd322cDiBFNGZCS4cm4p4L2c3af-A,254
+simple_socket-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+simple_socket-0.0.1.dist-info/top_level.txt,sha256=NZs0NDzlqfZZfQq9iLRD2HuN8vfX8TWa4bXVjPw6S5E,14
+simple_socket-0.0.1.dist-info/RECORD,,

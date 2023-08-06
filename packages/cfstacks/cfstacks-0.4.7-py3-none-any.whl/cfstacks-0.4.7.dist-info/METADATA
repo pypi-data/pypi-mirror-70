@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cfstacks
+Version: 0.4.7
+Summary: Manage CloudFormation sanely with templates written in YAML
+Home-page: https://github.com/cfstacks/stacks
+Maintainer: Vaidas Jablonskis
+Maintainer-email: jablonskis@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/cfstacks/stacks
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: configargparse (>=0.9.3)
+Requires-Dist: PyYAML (>=4.2b1)
+Requires-Dist: Jinja2 (>=2.7.3)
+Requires-Dist: boto (>=2.40.0)
+Requires-Dist: tabulate (>=0.7.5)
+Requires-Dist: setuptools
+Requires-Dist: pytz
+Requires-Dist: tzlocal
+
+UNKNOWN
+
+

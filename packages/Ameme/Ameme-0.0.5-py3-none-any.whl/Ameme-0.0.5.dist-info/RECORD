@@ -1,0 +1,13 @@
+Ameme/Trainer.py,sha256=8qyCPEPOX06RIc3L-2lKDuTf_SuP6FuC5pQo_1Q6d90,2600
+Ameme/TrainerConfig.py,sha256=Zru-jOfTEWdqlw_e_7gR24rWG91O0_mP_IVPtAAI2hA,103
+Ameme/__init__.py,sha256=pQuDBX4mYeOcUbed8-85fEsVAoZ6IaG1A8_RYkBXnqg,14
+Ameme/losses/LabelSmoothing.py,sha256=4fPQLhr2sfWPnCBdBW1TWlEuPgXJOvRtpP11Dufb5aU,767
+Ameme/losses/__init__.py,sha256=Y7tdjEbBCqPVLGed3EpGE1zbWPPAtuc0CGfXulpQ790,15
+Ameme/metrics/AverageMeter.py,sha256=Ha5PqPQbuyvneGFMcYHu1NYJjRBth2YXl3yd4AkyME8,498
+Ameme/metrics/RocAucMeter.py,sha256=BdJ4-k9DzdTQwXCe9fqv_ejC8sF-F_TJxWEM-BgJq7s,2023
+Ameme/metrics/__init__.py,sha256=UeBv8v6MbBfL5p8x5tTuTB40N6BfaX25xkehpgsoSBU,16
+Ameme-0.0.5.dist-info/LICENSE,sha256=CdUywsVdPT9Adhk2Lymmesvy9f2bnImqyys-Be5vP5M,1089
+Ameme-0.0.5.dist-info/METADATA,sha256=3a5Zfj2uzf1hlp2EChVMIBSYo59ZBqtjvYkFWFEpKOk,397
+Ameme-0.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Ameme-0.0.5.dist-info/top_level.txt,sha256=qn83QAxu5h7sR8YlaaisUtRuGc-tkeDXvsf9fA1l_tM,6
+Ameme-0.0.5.dist-info/RECORD,,

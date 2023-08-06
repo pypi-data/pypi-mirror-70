@@ -1,0 +1,4 @@
+pandas
+numpy
+tqdm
+mlxtend>=0.17.2

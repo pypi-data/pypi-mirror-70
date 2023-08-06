@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+erexplain/__init__.py
+erexplain/pattern_discovery.py
+erexplain/triangles_method.py
+erexplain.egg-info/PKG-INFO
+erexplain.egg-info/SOURCES.txt
+erexplain.egg-info/dependency_links.txt
+erexplain.egg-info/requires.txt
+erexplain.egg-info/top_level.txt

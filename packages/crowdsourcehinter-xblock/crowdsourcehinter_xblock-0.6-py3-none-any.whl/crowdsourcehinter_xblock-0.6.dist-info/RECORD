@@ -1,0 +1,15 @@
+crowdsourcehinter/__init__.py,sha256=rBcEE5a2ZHllkMlOGd2SNn1epSfD881eC7tDrRVslz0,49
+crowdsourcehinter/crowdsourcehinter.py,sha256=J6Ps2G4e61SO0o2R5ykI4x249pcQ2dNg6wv3R3ZUw3c,20198
+crowdsourcehinter/public/3rdParty/mustache.js,sha256=r6h7u3CFpksm_eOz4ldenHrHph_f0Lf0WzyWh6eeTHk,16562
+crowdsourcehinter/static/README.txt,sha256=1G9SSyfa-dfESEcW5l_npi_rL9i-SIuywyWA0eJw30g,766
+crowdsourcehinter/static/css/crowdsourcehinter.css,sha256=vIFr9usmtyusUnuYh_j1LkG9Bp7rKAeeEwbACS9ldbg,2484
+crowdsourcehinter/static/html/crowdsourcehinter.html,sha256=s2D7ecWtYYvrgodx8PgK3L8smzUhTOOMh2Vd9BTTDQw,3946
+crowdsourcehinter/static/html/crowdsourcehinterstudio.html,sha256=PnUXHSvWKQc72j91CIQk-235NTdbHIgFaZa6PpQ359o,1058
+crowdsourcehinter/static/js/src/crowdsourcehinter.js,sha256=F6L3cAs6FLBFh3n6EXJf_prxL3qQ6MzgoITgVDJR1o0,16097
+crowdsourcehinter/static/js/src/crowdsourcehinter_studio.js,sha256=cC5nRY3ZIihgFOWTxcDbln-y1l7f_7cjufG_3pEdTBc,1579
+crowdsourcehinter_xblock-0.6.dist-info/LICENSE,sha256=4S14VpdCb50-mprHwxk4fLGBV611UfrV4kWMIUggnhY,35136
+crowdsourcehinter_xblock-0.6.dist-info/METADATA,sha256=6y3eJQ12zzYiBhm6dWMqx-OGWUJV-fmlCYuqlK2Dwy4,2958
+crowdsourcehinter_xblock-0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+crowdsourcehinter_xblock-0.6.dist-info/entry_points.txt,sha256=Kibfdn3lee8Aj2onCMuZZ4-mzttdPQ_Yd1kehbyTxuQ,69
+crowdsourcehinter_xblock-0.6.dist-info/top_level.txt,sha256=hMx-f4SFnex0RUZ6YJXAaw7-7pZIxPLfTgy4Dn0XYho,18
+crowdsourcehinter_xblock-0.6.dist-info/RECORD,,

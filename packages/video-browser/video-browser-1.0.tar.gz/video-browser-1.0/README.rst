@@ -1,0 +1,82 @@
+Video Browser
+=============
+
+This application can be used to browse the frames of video files and
+apply basic transformations on them.
+
+
+Installation
+------------
+
+.. code-block:: text
+
+   pip install video-browser
+
+The application requires OpenCV and in case you have already installed it,
+please make sure you have a compatible version
+(`see here <https://pypi.org/project/opencv-python/>`_ for more information).
+
+
+Usage
+-----
+
+The application can be started from the command-line by providing the
+path to the directory containing the relevant video files:
+
+.. code-block:: text
+
+   python -m video_browser <video-dir>
+
+It contains various control elements at the top, from left to right:
+
+* Bash-style globbing filter -- specify a globbing pattern to filter the
+  videos in the video-dir, e.g. ``favorite_*.ts``.
+* Drop-down list containing all available video file names (optionally filtered)
+  -- change the selection to load a new video.
+* Three elements for frame selection:
+
+  - ``<`` button selects the previous frame,
+  - Frame counter spin box indicates the current frame and selects a new one
+    when changed,
+  - ``>`` button selects the next frame.
+* Four elements for transforming the current frame; these transformations are
+  temporary in a sense that if the same frame number is loaded again
+  (e.g. by pressing ``<`` followed by ``>``) then the original frame without
+  previous transformations is displayed. That is the transformations only
+  change how a frame is displayed, not how it is stored.
+
+  - ``Median Filter (3)`` -- apply a median filter with kernel size 3,
+  - ``Median Filter (5)`` -- apply a median filter with kernel size 5,
+  - ``Denoising`` -- apply non-local means denoising,
+  - ``Grayscale`` -- change from color to grayscale; if already in grayscale, do nothing.
+* One button for displaying the current Region Of Interest (the axes boundaries of
+  the image canvas).
+
+In addition to these control elements, the canvas' toolbar at the top of it can be
+used to zoom or otherwise modify the displayed image (this is the standard matplotlib
+Qt-style toolbar).
+
+
+Customization
+~~~~~~~~~~~~~
+
+The application can be customized via command line arguments, for example changing
+the figure size:
+
+.. code-block:: text
+
+   python -m video_browser <video-dir> --canvas-figsize-inches 8 6
+
+A complete overview of all available parameters can be obtained by using ``--help``:
+
+.. code-block:: text
+
+   python -m video_browser --help
+
+
+Example Screenshot
+------------------
+
+The UI window:
+
+.. image:: https://gitlab.com/Dominik1123/video-browser/-/raw/master/screenshot.png?inline=false

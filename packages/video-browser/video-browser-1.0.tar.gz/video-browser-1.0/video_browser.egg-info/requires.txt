@@ -1,0 +1,5 @@
+arguable
+matplotlib
+numpy
+opencv-python
+PyQt5

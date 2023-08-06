@@ -1,0 +1,10 @@
+README.rst
+setup.py
+video_browser/__init__.py
+video_browser/__main__.py
+video_browser/gui.py
+video_browser.egg-info/PKG-INFO
+video_browser.egg-info/SOURCES.txt
+video_browser.egg-info/dependency_links.txt
+video_browser.egg-info/requires.txt
+video_browser.egg-info/top_level.txt

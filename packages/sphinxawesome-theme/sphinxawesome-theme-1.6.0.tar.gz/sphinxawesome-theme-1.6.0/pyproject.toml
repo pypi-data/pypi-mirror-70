@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "sphinxawesome-theme"
+version = "1.6.0"
+description = "A simple theme for a Sphinx documentation"
+readme = "README.rst"
+authors = ["Kai Welke <kai687@pm.me>"]
+repository = "https://github.com/kai687/sphinxawesome-theme"
+license = "MIT"
+classifiers = [
+  'Programming Language :: Python',
+  'Framework :: Sphinx',
+  'Framework :: Sphinx :: Theme',
+  'Topic :: Documentation',
+  'Topic :: Documentation :: Sphinx',
+  'Topic :: Software Development :: Documentation'
+]
+packages = [
+  { include = "sphinxawesome_theme" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+sphinx = ">3"
+sphinxawesome-sampdirective = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."sphinx.html_themes"]
+"sphinxawesome_theme" = "sphinxawesome_theme"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

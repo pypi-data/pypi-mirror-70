@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: deploy-it
+Version: 0.3.2
+Summary: Deploy Django projects to virtual private server in a single command.
+Home-page: https://github.com/meticulousCraftman/deploy_it
+Author: Apoorva Singh
+Author-email: apoorva.singh157@gmail.com
+License: MIT
+Description: Deploy django application to virtual private server just by running one single command.Deploy it automatically generates configuration files for Nginx and Gunicorn so you don't have to worry about it. :)
+Keywords: python devops django gunicorn nginx
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

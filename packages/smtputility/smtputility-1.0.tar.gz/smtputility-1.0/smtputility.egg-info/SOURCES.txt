@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+smtputility/__init__.py
+smtputility/email_with_attachments.py
+smtputility/email_without_attachment.py
+smtputility/notify_error.py
+smtputility.egg-info/PKG-INFO
+smtputility.egg-info/SOURCES.txt
+smtputility.egg-info/dependency_links.txt
+smtputility.egg-info/top_level.txt

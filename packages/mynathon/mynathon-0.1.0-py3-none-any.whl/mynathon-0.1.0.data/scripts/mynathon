@@ -1,0 +1,4 @@
+#!python
+
+from mynathon import __main__
+__main__.entry_point()

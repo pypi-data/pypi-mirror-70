@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+rx7/__init__.py
+rx7/file.py
+rx7/rx7.py
+rx7/rxobj.py
+rx7/tuple.py
+rx7.egg-info/PKG-INFO
+rx7.egg-info/SOURCES.txt
+rx7.egg-info/dependency_links.txt
+rx7.egg-info/requires.txt
+rx7.egg-info/top_level.txt

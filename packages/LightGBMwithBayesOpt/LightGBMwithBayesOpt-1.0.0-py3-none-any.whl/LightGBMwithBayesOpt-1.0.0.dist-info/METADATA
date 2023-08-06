@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: LightGBMwithBayesOpt
+Version: 1.0.0
+Summary: A Python toolkit of light gbm with bayesian optimizer.
+Home-page: https://github.com/gowun/LightGBMwithBayesOpt.git
+Author: Gowun Jeong
+Author-email: gowun.jeong@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: thrift-sasl (==0.3.0)
+Requires-Dist: hvac (>=0.9.6)
+Requires-Dist: pyhive[hive]
+Requires-Dist: pyarrow (>=0.16.0)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: slackclient (>=2.5.0)
+Requires-Dist: google-cloud-bigquery (>=1.24.0)
+Requires-Dist: httplib2 (>=0.18.0)
+Requires-Dist: click
+Requires-Dist: PyGithub
+Requires-Dist: pycryptodome
+Requires-Dist: joblib (==0.14.1)
+Requires-Dist: tabulate (>=0.8.7)
+Provides-Extra: air
+Requires-Dist: bayesian-optimization (==1.1.0) ; extra == 'air'
+Requires-Dist: shap (==0.35.0) ; extra == 'air'
+Requires-Dist: gensim (==3.8.1) ; extra == 'air'
+Requires-Dist: torch (==1.4.0) ; extra == 'air'
+Requires-Dist: torchvision (==0.5.0) ; extra == 'air'
+Requires-Dist: seaborn (==0.10.0) ; extra == 'air'
+Requires-Dist: scikit-learn (==0.22.2.post1) ; extra == 'air'
+Requires-Dist: scipy (==1.4.1) ; extra == 'air'
+Requires-Dist: lifelines (==0.24.2) ; extra == 'air'
+Requires-Dist: lightgbm (==2.3.1) ; extra == 'air'
+Requires-Dist: implicit (==0.4.2) ; extra == 'air'
+Requires-Dist: tqdm (==4.43.0) ; extra == 'air'
+Requires-Dist: matplotlib (==3.2.1) ; extra == 'air'
+
+UNKNOWN
+
+

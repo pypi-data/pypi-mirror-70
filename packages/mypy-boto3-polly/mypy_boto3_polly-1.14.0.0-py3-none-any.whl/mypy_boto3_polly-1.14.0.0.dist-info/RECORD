@@ -1,0 +1,11 @@
+mypy_boto3_polly/__init__.py,sha256=l2K9LSLrVY5h-YIpeZcfZV55FmaqUTbCYRnp2Abydwg,1093
+mypy_boto3_polly/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_polly/client.py,sha256=wlZxdtMxIlIT7MbEw11xcX6izW2UkeSUZttv0GVSPyg,12297
+mypy_boto3_polly/paginator.py,sha256=OBFefzTSjPXinw4uaanTPwkMvQD7Amd0_x3a9Lvl2_k,3833
+mypy_boto3_polly/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_polly/type_defs.py,sha256=n5oq8LJeeMGex2V9RkT2M4D-fk1ujX3h-XO4Eph80CM,9048
+mypy_boto3_polly/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_polly-1.14.0.0.dist-info/METADATA,sha256=AbcQNnrVkWu-9-aO_uVSbuu_aOpfpOOf4yFwmsZhfp8,4386
+mypy_boto3_polly-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_polly-1.14.0.0.dist-info/top_level.txt,sha256=0kSC_52R4HHyLJ7JlVHE5XAOgDLpgiiL-i7pgknM3Z4,17
+mypy_boto3_polly-1.14.0.0.dist-info/RECORD,,

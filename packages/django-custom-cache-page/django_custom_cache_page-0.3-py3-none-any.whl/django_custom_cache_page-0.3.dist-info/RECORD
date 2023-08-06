@@ -1,0 +1,11 @@
+custom_cache_page/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+custom_cache_page/cache.py,sha256=ZgVkSpaYbPmmFZ4sHa3rvb38LmhorNFICNLXvmmK2kY,1848
+custom_cache_page/utils.py,sha256=Upa2EhvNXeq6z3F0K1bbDZzPAy9ajY2q5qoNcLOWcTA,1141
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cache.py,sha256=TyN5S-LRdaBAoCFdYCVDxd0YOgcCIOYMOztyeU5v_tk,510
+tests/test_utils.py,sha256=498DXVeXzRKwZHk31mWumsytqh-JhkQTczMRgZHFEr8,1045
+django_custom_cache_page-0.3.dist-info/LICENSE,sha256=b4PPcoWRBH0uABEhBpylsg9oZxarnRQh1GZoT81SW-A,1073
+django_custom_cache_page-0.3.dist-info/METADATA,sha256=OBxp1wjzlaqinZrnZJ8c8kOQKu1MnSmh_ip4jFN50Ws,4274
+django_custom_cache_page-0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_custom_cache_page-0.3.dist-info/top_level.txt,sha256=pqUmIrJDhbQz5gCiDlYwhFFGepNkifKBEPurWI14Q7c,24
+django_custom_cache_page-0.3.dist-info/RECORD,,

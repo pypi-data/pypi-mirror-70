@@ -1,0 +1,2 @@
+include chatchecker/data/*
+include chatchecker/fast_hangle_levenshtein/*

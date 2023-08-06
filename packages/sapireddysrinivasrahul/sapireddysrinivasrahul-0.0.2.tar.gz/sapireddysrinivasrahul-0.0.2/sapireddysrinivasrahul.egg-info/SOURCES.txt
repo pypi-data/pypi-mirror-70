@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+sapireddysrinivasrahul.egg-info/PKG-INFO
+sapireddysrinivasrahul.egg-info/SOURCES.txt
+sapireddysrinivasrahul.egg-info/dependency_links.txt
+sapireddysrinivasrahul.egg-info/top_level.txt
+srinivasbasiccalculator/__init__.py

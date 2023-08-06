@@ -1,0 +1,8 @@
+README.md
+setup.py
+nihao/__init__.py
+nihao/api.py
+nihao.egg-info/PKG-INFO
+nihao.egg-info/SOURCES.txt
+nihao.egg-info/dependency_links.txt
+nihao.egg-info/top_level.txt

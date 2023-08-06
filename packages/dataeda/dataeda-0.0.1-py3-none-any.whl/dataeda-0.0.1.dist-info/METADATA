@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dataeda
+Version: 0.0.1
+Summary: A package to that does Exploratry Data Analysis for you
+Home-page: https://github.com/edatoall/dataeda
+Author: Karthik Mudlapur
+Author-email: karthikm.39546.km@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.0.4)
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: matplotlib (>=3.2.1)
+Requires-Dist: seaborn (>=0.10.1)
+
+# dataeda
+Exploratory Data Analysis 
+
+

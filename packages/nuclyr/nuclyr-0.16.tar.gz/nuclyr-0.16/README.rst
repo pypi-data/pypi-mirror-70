@@ -1,0 +1,260 @@
+Try pandoc!
+pandoc --from markdown --to rst
+   from 
+Markdown (pandoc)
+  Generate standalone document (?)
+# nuclyr - an utility package for nuclear physics
+1. [Build](#build)
+2. [Config](#config)
+3. [Submodules](#submodules)
+    1. [exfor](#exfor)
+    2. [mass](#mass)
+---
+## Build
+
+The package **nuclyr** is available via `pip`. See [https://pypi.org/project/nuclyr/](https://pypi.org/project/nuclyr/).
+
+Just run:
+
+```
+pip install nuclyr
+```
+
+Or just clone the repository and build it from there using `setup.py`.
+
+For the webscraping part of the package a driver for your favorite browser is needed, e.g. `chromedriver`  or `msedgedriver`. You can find them via the following links:
+
+* [Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
+* [Edgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+
+Please make sure, you're downloading the right version for your browser.
+
+## Config
+
+At start nuclyr will create a configuration file in your home directory called `.nuclyr` which is in JSON format. You can easily edit all the package configurations with your prefered text editor, e.g. the location of the webdriver. 
+
+The configurations can also be added within a python script via:
+``` python
+import nuclyr.config as cf
+
+#Setting driver_loc to "path/to/driver"
+cf.Set("driver_loc", "path/to/driver") 
+
+#Getting the current options for the driver location
+cf.Get("driver_loc") 
+
+#print the whole configuration file
+cf.Show() 
+```
+## Submodules
+
+### exfor
+
+This submodule is for mineing up-to-date reaction data from the [EXFOR](https://www-nds.iaea.org/exfor/exfor.htm) data base.
+
+A simple example to mine the cross section data for `63Cu(p,n)` would look like:
+
+```python
+#import nuclyr modules
+import nuclyr.config as cf
+from nuclyr import exfor
+
+#import pyplot for plotting the data
+import matplotlib.pyplot as plt
+
+#definition of target and reaction of interest
+target="63Cu"
+reaction="p,n"
+
+#setting the driver location
+cf.Set("driver_loc","path/to/driver")
+
+#obtaining the data via exfor.getSig()
+data, legend = exfor.getSIG(target,reaction)
+
+#plotting the dataframes
+plt.figure(1, figsize=(8,5))
+
+plt.xlim(xmin=0, xmax=40)
+plt.ylim(ymin=0, ymax=1000)
+plt.xlabel("proton energy [MeV]", size=25)
+plt.ylabel("cross section [mb]", size=25)
+plt.text(20, 400, r"$^{63}$Cu(p,n)", size=25)
+plt.gca().tick_params(labelsize=20)
+
+for df in data:
+    plt.scatter(df[('EN','MEV')], df[('DATA','MB')])
+
+plt.tight_layout()
+plt.show()
+```
+
+The result would look like:
+
+![](./doc/img/63Cu_p_n.png).
+
+### mass
+
+You want to use recommended values for nuclear masses in your python code? You can get them via this submodule.
+Here is a small example of getting the mass excesses of thin isotopes.
+
+```python
+from nuclyr import mass
+import matplotlib.pyplot as plt
+import numpy as np
+
+masses = np.arange(99,138)
+excess = np.zeros(len(masses))
+errors = np.zeros(len(masses))
+
+for i in range(len(masses)):
+    number[i], errors[i] =mass.massExcess(50,masses[i])
+
+
+plt.figure(1, figsize=(8,5))
+plt.ylabel(r"mass excess [MeV]", size=25)
+plt.xlabel(r"mass number", size=25)
+plt.
+to 
+reStructuredText
+
+nuclyr - an utility package for nuclear physics
+===============================================
+
+1. `Build`_
+2. `Config`_
+3. `Submodules`_
+
+   1. `exfor`_
+
+   2. .. rubric:: `mass`_
+         :name: mass
+
+      .. rubric:: Build
+         :name: build
+
+The package **nuclyr** is available via ``pip``. See
+https://pypi.org/project/nuclyr/.
+
+Just run:
+
+::
+
+   pip install nuclyr
+
+Or just clone the repository and build it from there using ``setup.py``.
+
+For the webscraping part of the package a driver for your favorite
+browser is needed, e.g. ``chromedriver`` or ``msedgedriver``. You can
+find them via the following links:
+
+-  `Chromedriver`_
+-  `Edgedriver`_
+
+Please make sure, you’re downloading the right version for your browser.
+
+Config
+------
+
+At start nuclyr will create a configuration file in your home directory
+called ``.nuclyr`` which is in JSON format. You can easily edit all the
+package configurations with your prefered text editor, e.g. the location
+of the webdriver.
+
+The configurations can also be added within a python script via:
+
+.. code:: python
+
+   import nuclyr.config as cf
+
+   #Setting driver_loc to "path/to/driver"
+   cf.Set("driver_loc", "path/to/driver") 
+
+   #Getting the current options for the driver location
+   cf.Get("driver_loc") 
+
+   #print the whole configuration file
+   cf.Show() 
+
+Submodules
+----------
+
+exfor
+~~~~~
+
+This submodule is for mineing up-to-date reaction data from the `EXFOR`_
+data base.
+
+A simple example to mine the cross section data for ``63Cu(p,n)`` would
+look like:
+
+.. code:: python
+
+   #import nuclyr modules
+   import nuclyr.config as cf
+   from nuclyr import exfor
+
+   #import pyplot for plotting the data
+   import matplotlib.pyplot as plt
+
+   #definition of target and reaction of interest
+   target="63Cu"
+   reaction="p,n"
+
+   #setting the driver location
+   cf.Set("driver_loc","path/to/driver")
+
+   #obtaining the data via exfor.getSig()
+   data, legend = exfor.getSIG(target,reaction)
+
+   #plotting the dataframes
+   plt.figure(1, figsize=(8,5))
+
+   plt.xlim(xmin=0, xmax=40)
+   plt.ylim(ymin=0, ymax=1000)
+   plt.xlabel("proton energy [MeV]", size=25)
+   plt.ylabel("cross section [mb]", size=25)
+   plt.text(20, 400, r"$^{63}$Cu(p,n)", size=25)
+   plt.gca().tick_params(labelsize=20)
+
+   for df in data:
+       plt.scatter(df[('EN','MEV')], df[('DATA','MB')])
+
+   plt.tight_layout()
+   plt.show()
+
+The result would look like:
+
+|image0|.
+
+.. _mass-1:
+
+mass
+~~~~
+
+You want to use recommended values for nuclear masses in your python
+code? You can get them via this submodule. Here is a small example of
+getting the mass excesses of thin isotopes.
+
+\```python from nuclyr import mass import matplotlib.pyplot as plt
+import numpy as np
+
+masses = np.arange(99,138) excess = np.zeros(len(masses)) errors =
+np.zeros(len(masses))
+
+for i in range(len(masses)): number[i], errors[i]
+=mass.massExcess(50,masses[i])
+
+plt.figure(1, figsize=(8,5)) plt.ylabel(r“mass excess [MeV]”, size=25)
+plt.xlabel(r“mass number”, size=25) plt.
+
+.. _Build: #build
+.. _Config: #config
+.. _Submodules: #submodules
+.. _exfor: #exfor
+.. _mass: #mass
+.. _Chromedriver: https://sites.google.com/a/chromium.org/chromedriver/
+.. _Edgedriver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+.. _EXFOR: https://www-nds.iaea.org/exfor/exfor.htm
+
+.. |image0| image:: ./doc/img/63Cu_p_n.png

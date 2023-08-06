@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+README.rst
+setup.py
+nuclyr/EXFOR.py
+nuclyr/config.py
+nuclyr/exfor.py
+nuclyr/mass.py
+nuclyr.egg-info/PKG-INFO
+nuclyr.egg-info/SOURCES.txt
+nuclyr.egg-info/dependency_links.txt
+nuclyr.egg-info/not-zip-safe
+nuclyr.egg-info/requires.txt
+nuclyr.egg-info/top_level.txt
+nuclyr/data/amdc/mass16.dat
+nuclyr/data/ripl/abundance.dat
+nuclyr/data/ripl/mass-frdm95.dat

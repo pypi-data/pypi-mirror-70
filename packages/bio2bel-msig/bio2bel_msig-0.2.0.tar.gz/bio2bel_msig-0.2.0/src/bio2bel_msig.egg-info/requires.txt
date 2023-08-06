@@ -1,0 +1,14 @@
+pybel<0.15.0,>=0.14.9
+click
+bio2bel[web]<0.4.0,>=0.3.8
+pyobo>=0.2.2
+tqdm
+sqlalchemy
+requests
+pandas
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-click
+sphinx-autodoc-typehints

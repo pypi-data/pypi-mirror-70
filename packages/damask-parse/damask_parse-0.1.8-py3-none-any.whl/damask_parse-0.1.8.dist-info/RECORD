@@ -1,0 +1,10 @@
+damask_parse/__init__.py,sha256=VehBlcSzVc1-YI9low8GHojNDUDIlUVfdi6NLHyevVg,150
+damask_parse/_version.py,sha256=rq5OMW-khxQo_5FAvSrPaAS1lRfG9aG2hSuo-KK2Yfk,22
+damask_parse/readers.py,sha256=dpwx3IbIpKDzpejeRJznnR6JXWGYY5K24Sy40YyYBN4,15895
+damask_parse/utils.py,sha256=xENkNGJXFv_iRwurO2DhvTkOp08BbWshLOzUdCm0mjs,5714
+damask_parse/writers.py,sha256=su0dOzjLVOYPkCP4dNwGqp31GSsNI7I-HY-9Mhihcls,11315
+damask_parse-0.1.8.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+damask_parse-0.1.8.dist-info/METADATA,sha256=MYM7OMXms_CK2x_5hAtyDErDPYQTAZzewfTW5d5OGpI,1777
+damask_parse-0.1.8.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+damask_parse-0.1.8.dist-info/top_level.txt,sha256=9XGoGdYv5pADdolBF_c7L_AqWqOC-KONEyUYn382zW4,13
+damask_parse-0.1.8.dist-info/RECORD,,

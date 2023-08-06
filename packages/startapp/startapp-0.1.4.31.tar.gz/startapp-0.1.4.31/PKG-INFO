@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: startapp
+Version: 0.1.4.31
+Summary: Simple startapp for fastapi flask  and django
+Home-page: https://github.com/marlin-dev/startapp
+Author: 
+Author-email: 
+License: MIT
+Description: 
+        
+        
+        
+        
+        # StartApp 
+        
+        simple boilerplate ready for development 
+        
+        ## Notes
+        - Currently supported for  frameworks:  FastAPi, Flask, Django
+        
+        
+        ### Installation ###
+        
+        ```sh
+         $ sudo pip3 install startapp
+        ```
+        
+        
+        ### Guide
+        
+        ```bash
+        startapp 
+        
+        ```
+        
+        
+        # Contributing
+        Fell free to open issue and send pull request.
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: prompt_toolkit

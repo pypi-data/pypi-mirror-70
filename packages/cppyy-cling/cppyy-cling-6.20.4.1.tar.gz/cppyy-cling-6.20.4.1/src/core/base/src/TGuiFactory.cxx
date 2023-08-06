@@ -1,0 +1,120 @@
+// @(#)root/base:$Id$
+// Author: Fons Rademakers   15/11/95
+
+/*************************************************************************
+ * Copyright (C) 1995-2000, Rene Brun and Fons Rademakers.               *
+ * All rights reserved.                                                  *
+ *                                                                       *
+ * For the licensing terms see $ROOTSYS/LICENSE.                         *
+ * For the list of contributors see $ROOTSYS/README/CREDITS.             *
+ *************************************************************************/
+
+/** \class TGuiFactory
+\ingroup Base
+
+This ABC is a factory for GUI components. Depending on which
+factory is active one gets either ROOT native (X11 based with Win95
+look and feel), Win32 or Mac components.
+
+In case there is no platform dependent implementation on can run in
+batch mode directly using an instance of this base class.
+*/
+
+#include "TGuiFactory.h"
+#include "TApplicationImp.h"
+//#include "TCanvasImp.h"
+//#include "TBrowserImp.h"
+//#include "TContextMenuImp.h"
+//#include "TControlBarImp.h"
+//#include "TInspectorImp.h"
+#include "TROOT.h"
+
+TGuiFactory *gGuiFactory = 0;
+TGuiFactory *gBatchGuiFactory = 0;
+
+ClassImp(TGuiFactory);
+
+////////////////////////////////////////////////////////////////////////////////
+/// TGuiFactory ctor only called by derived classes.
+
+TGuiFactory::TGuiFactory(const char *name, const char *title)
+    : TNamed(name, title)
+{
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TApplicationImp.
+
+TApplicationImp *TGuiFactory::CreateApplicationImp(const char *classname, int *argc, char **argv)
+{
+   return new TApplicationImp(classname, argc, argv);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TCanvasImp.
+
+TCanvasImp *TGuiFactory::CreateCanvasImp(TCanvas *, const char *, UInt_t, UInt_t)
+{
+   return nullptr; //new TCanvasImp(c, title, width, height);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TCanvasImp.
+
+TCanvasImp *TGuiFactory::CreateCanvasImp(TCanvas *, const char *, Int_t, Int_t, UInt_t, UInt_t)
+{
+   return nullptr; //new TCanvasImp(c, title, x, y, width, height);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TBrowserImp.
+
+TBrowserImp *TGuiFactory::CreateBrowserImp(TBrowser *, const char *, UInt_t, UInt_t, Option_t *)
+{
+   return nullptr; //new TBrowserImp(b, title, width, height);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TBrowserImp.
+
+TBrowserImp *TGuiFactory::CreateBrowserImp(TBrowser *, const char *, Int_t, Int_t, UInt_t, UInt_t, Option_t *)
+{
+   return nullptr;//new TBrowserImp(b, title, x, y, width, height);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TContextMenuImp.
+
+TContextMenuImp *TGuiFactory::CreateContextMenuImp(TContextMenu *, const char *, const char *)
+{
+   return nullptr;//new TContextMenuImp(c);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TControlBarImp.
+
+TControlBarImp *TGuiFactory::CreateControlBarImp(TControlBar *, const char *)
+{
+   return nullptr;//new TControlBarImp(c, title);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TControlBarImp.
+
+TControlBarImp *TGuiFactory::CreateControlBarImp(TControlBar *, const char *, Int_t, Int_t)
+{
+   return nullptr;//new TControlBarImp(c, title, x, y);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+/// Create a batch version of TInspectorImp.
+
+TInspectorImp *TGuiFactory::CreateInspectorImp(const TObject *obj, UInt_t, UInt_t)
+{
+   if (gROOT->IsBatch()) {
+      return nullptr; //new TInspectorImp(obj, width, height);
+   }
+
+   gROOT->ProcessLine(Form("TInspectCanvas::Inspector((TObject*)0x%lx);", (uintptr_t)obj));
+   return 0;
+}

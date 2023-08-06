@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: kobra
+Version: 0.1.0
+Summary: Wrapper for twine & python setup.py
+Home-page: https://github.com/jDan735/kobra
+Author: Daniel Zakharov
+Author-email: daniel734@bk.ru
+License: MIT
+Description: # kobra
+        Wrapper for twine &amp; python setup.py
+        
+Keywords: kobra tool
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown

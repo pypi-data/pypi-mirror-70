@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: TechnoAyanWallpaperdl
+Version: 0.0.4
+Summary: Only For Me
+Home-page: https://Github.com/DevcodeOfficial/ApkDownload
+Author: Ayan Ansari
+Author-email: TechnoAyan1234@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/DevCodeOfficial/apkdownload/releases/latest
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: google
+
+# Only For My Personal Use
+
+

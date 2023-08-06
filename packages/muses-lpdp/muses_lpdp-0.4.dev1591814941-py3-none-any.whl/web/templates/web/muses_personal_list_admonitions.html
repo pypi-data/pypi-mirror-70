@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-admonitions-list">
+        {% include "_partials/pagination.html" %}
+        {% for admonition in admonition_list %}
+            <div class="muses-admonition-item">{{ admonition.id }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

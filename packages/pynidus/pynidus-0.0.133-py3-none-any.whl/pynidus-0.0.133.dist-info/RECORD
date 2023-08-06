@@ -1,0 +1,10 @@
+pynidus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynidus/ab.py,sha256=NIbYym0aWtYzTz08raYCVAAmBR-xAexpca_F26rkCsE,1834
+pynidus/base.py,sha256=vr-UaJ66UqK0VehAuWZGkHjInMrS2ipJUnpp_kMT654,860
+pynidus/clients.py,sha256=GeET6WmSQnXjd9FOumG0PIO7SVlNfmATATEouHlwL0s,2917
+pynidus/errors.py,sha256=LyoYwCT2z5txiNsWb2HgSB07jqLX-ZYLGHo9K7P5iqI,688
+pynidus-0.0.133.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pynidus-0.0.133.dist-info/METADATA,sha256=DEmdpl7cJ9hqGEQdcNSxix26lW8TfzeAxsSnNYVp7ns,2399
+pynidus-0.0.133.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pynidus-0.0.133.dist-info/top_level.txt,sha256=3UZKB25cceBe4e14G3v26nsDc7zmqcULLFMsjpIkq1s,8
+pynidus-0.0.133.dist-info/RECORD,,

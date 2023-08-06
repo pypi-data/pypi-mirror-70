@@ -1,0 +1,5 @@
+numpy
+networkx
+importlib_resources
+scipy
+pyahocorasick

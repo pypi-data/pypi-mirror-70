@@ -1,0 +1,8 @@
+README.md
+setup.py
+zamac/__init__.py
+zamac/file.py
+zamac.egg-info/PKG-INFO
+zamac.egg-info/SOURCES.txt
+zamac.egg-info/dependency_links.txt
+zamac.egg-info/top_level.txt

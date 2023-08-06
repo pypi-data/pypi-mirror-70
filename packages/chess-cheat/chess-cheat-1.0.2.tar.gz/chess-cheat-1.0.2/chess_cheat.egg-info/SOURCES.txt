@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+chess-cheat.py
+setup.py
+chess_cheat.egg-info/PKG-INFO
+chess_cheat.egg-info/SOURCES.txt
+chess_cheat.egg-info/dependency_links.txt
+chess_cheat.egg-info/requires.txt
+chess_cheat.egg-info/top_level.txt
+chess_cheat_utils/__init__.py
+chess_cheat_utils/board.py
+chess_cheat_utils/finder.py
+chess_cheat_utils/model.pb
+chess_cheat_utils/utils.py

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: chobo
+Version: 0.99.0
+Summary: A Python package for graphical displays
+Home-page: https://github.com/choongsoo/chobo
+Author: Choong-Soo Lee
+Author-email: clee@stlawu.edu
+License: GNU
+Description: The chobo module is a forked version of the intrographics module developed by Dr. Lisa Torrey.
+        It allows you to create graphical displays in your Python 3 programs. The name chobo (초보) is a Korean word that means a beginner/novice, and the name is to inspire beginners at programming to give it a try.
+        It is written in Python 3, and uses the pygame module as the back-end
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

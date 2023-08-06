@@ -1,0 +1,9 @@
+README.md
+setup.py
+amarpdf/__init__.py
+amarpdf/pdf2image.py
+amarpdf/pdf2text.py
+amarpdf.egg-info/PKG-INFO
+amarpdf.egg-info/SOURCES.txt
+amarpdf.egg-info/dependency_links.txt
+amarpdf.egg-info/top_level.txt

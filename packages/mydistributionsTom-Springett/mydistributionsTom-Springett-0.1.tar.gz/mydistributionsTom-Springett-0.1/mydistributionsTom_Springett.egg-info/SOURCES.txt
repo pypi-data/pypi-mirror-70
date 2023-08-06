@@ -1,0 +1,11 @@
+README.md
+setup.py
+mydistributions/Binomialdistribution.py
+mydistributions/Gaussiandistribution.py
+mydistributions/Generaldistribution.py
+mydistributions/__init__.py
+mydistributionsTom_Springett.egg-info/PKG-INFO
+mydistributionsTom_Springett.egg-info/SOURCES.txt
+mydistributionsTom_Springett.egg-info/dependency_links.txt
+mydistributionsTom_Springett.egg-info/not-zip-safe
+mydistributionsTom_Springett.egg-info/top_level.txt

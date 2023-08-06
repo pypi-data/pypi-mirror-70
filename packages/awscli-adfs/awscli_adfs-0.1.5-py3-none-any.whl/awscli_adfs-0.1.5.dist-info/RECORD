@@ -1,0 +1,12 @@
+aws_cli_adfs/__init__.py,sha256=w0qoAHN6rOASZ5bXd_Gv9p4cqQeDrQDSTSb7qmMs-3E,2494
+aws_cli_adfs/cli.py,sha256=872tkdbLXNFZMv_RI5egKOYkybXGjRif5TlAUeC-2YM,13878
+aws_cli_adfs/constants.py,sha256=oM1SjN3MgTNK540M65tyqfHY-RtRC2MlF9t5RHYQhao,389
+aws_cli_adfs/exceptions.py,sha256=9y9r4-OhAct08Azli7fVH_9lGppS217PnSmYnxs6kGo,1154
+aws_cli_adfs/log.py,sha256=FY10CEuOlGGfLpIrL6gZCDAH-CPjLWlbzDiVil0Jciw,212
+aws_cli_adfs/login.py,sha256=BFtTVYPb_fBG9c5lYactKzasSnO9hHuaVRQZXNXoPr0,12937
+aws_cli_adfs/utils.py,sha256=Cc4MzDtrXjNtEK_UjXrqjoF-btIE12vyKdo69wPd82E,1291
+awscli_adfs-0.1.5.dist-info/METADATA,sha256=UVjBFzQrSjmMPlqosgoT-VFgqck6KX9lQByqsQbOSaM,467
+awscli_adfs-0.1.5.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+awscli_adfs-0.1.5.dist-info/entry_points.txt,sha256=RnT6q3xK1sKBK9leT-FhVD5ZXyPI8sc7gyaVgGCheMM,71
+awscli_adfs-0.1.5.dist-info/top_level.txt,sha256=A0E0BDjn2vpKf2iKQtNs7E_ng6U7D78GCYVB9vscacc,13
+awscli_adfs-0.1.5.dist-info/RECORD,,

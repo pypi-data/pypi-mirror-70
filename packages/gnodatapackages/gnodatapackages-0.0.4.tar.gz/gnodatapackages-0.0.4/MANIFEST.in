@@ -1,0 +1,5 @@
+include README.rst
+include docs/*.csv
+include gnodatapackages/stopwords_gno.csv
+include gnodatapackages/*.csv
+

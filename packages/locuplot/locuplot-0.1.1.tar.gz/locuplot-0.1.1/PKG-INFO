@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: locuplot
+Version: 0.1.1
+Summary: Python application for generating plot from locust statistics csv
+Author: pawndev
+Author-email: coquelet.c@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: logzero (>=1.5.0,<2.0.0)
+Requires-Dist: matplotlib (>=3.2.1,<4.0.0)
+Requires-Dist: mpld3 (>=0.3,<0.4)
+Requires-Dist: numpy (>=1.18.5,<2.0.0)
+Requires-Dist: pandas (>=1.0.4,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/pawndev/locuplot/issues
+Project-URL: issues, https://github.com/pawndev/locuplot/issues

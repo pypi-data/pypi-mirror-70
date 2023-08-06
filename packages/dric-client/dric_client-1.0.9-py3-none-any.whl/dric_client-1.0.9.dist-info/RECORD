@@ -1,0 +1,13 @@
+dric/__init__.py,sha256=Q3O1sOKSU5v3ZS2f8NoPV1K_sK9jGs3eGkZ9tdiDHBI,108
+dric/client.py,sha256=GozsXyYAvYRSMyPYQyYR52zMPJD693i3WjdiuYph_DA,1887
+dric/dric_client.py,sha256=PO9r7Hqpy_k9qFqHn6O2qEt_Ls37K83kMUKqD041uX8,689
+dric/dric_pb2.py,sha256=IHeurpxMdoVe1qbNUKoU8wGWkrh40KdXqQZrL4BSXSU,36930
+dric/dric_pb2_grpc.py,sha256=4F9pG63kqm47_mPwJDMhE7Zr-z9lVofFuGhDYu-vF7Y,14621
+dric/run_codegen.py,sha256=UxFs-sRqPZM_X7KyU_lc_L_cUpSfo_RuuU3VZMrA5Rc,246
+dric/topics.py,sha256=0YyCCL-V84pm8hhkNpcrcmNdDMrCIPVTupLtXkIZGZg,876
+dric/types.py,sha256=08yC1GwMIxfanRkSZ6m9MEVLZ14pPgz6u3OHOOkB4oY,3222
+dric/utils.py,sha256=tDYDal6xFhTGHu7ntDr7IDaE-lUajOQAQw73ZhzVoug,168
+dric_client-1.0.9.dist-info/METADATA,sha256=ARxRYKVf96jhhZHOsjF-Dd8o_syujJo6PF4kI3_IemM,377
+dric_client-1.0.9.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+dric_client-1.0.9.dist-info/top_level.txt,sha256=S62m7e5jUxvcrlEEyri8x28tHQDZ8SOyFSxpLihECo0,5
+dric_client-1.0.9.dist-info/RECORD,,

@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: yplate
+Version: 0.0.1
+Summary: Plate Detection using YOLO v3 powered by OpenCV >=3.x 
+Home-page: https://github.com/deepraj1729/yplate
+Author: Deepraj Baidya
+Author-email: bdeeprajrkm1@gmail.com
+License: MIT
+Keywords: Detect car/vehicle number plates with ease
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python (>=3.4)
+Requires-Dist: numpy (>=1.17.4)
+
+[![yplate](https://img.shields.io/badge/yplate-v0.0.1-blue)](https://github.com/deepraj1729/yplate/blob/master/)  [![license](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/deepraj1729/yplate/blob/master/LICENSE) [![dependencies](https://img.shields.io/badge/dependencies-packages-orange)](https://github.com/deepraj1729/yplate/blob/master/requirements.txt)
+![python](https://img.shields.io/badge/python-3.5%3E-red)
+# Yplate
+
+## Detect Vehicle Number plates with YOLOv3 powered by OpenCV 3.x
+
+## This is a dev package and doesn't contain any utilities other than showing version and model configurataion
+
+### Check `yplate` version:
+
+    yplate -v
+
+### Model Configuration:
+
+    yplate --config
+

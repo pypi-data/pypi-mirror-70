@@ -1,0 +1,3 @@
+[console_scripts]
+prettyetc-qt = prettyetc_qt:uilaunch
+

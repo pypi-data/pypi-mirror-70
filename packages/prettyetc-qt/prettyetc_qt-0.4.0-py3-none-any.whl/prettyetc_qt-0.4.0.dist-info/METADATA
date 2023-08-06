@@ -1,0 +1,292 @@
+Metadata-Version: 2.1
+Name: prettyetc-qt
+Version: 0.4.0
+Summary: See your configuration files using a pretty and universal interface.
+Home-page: https://gitlab.com/prettyetc/prettyetc
+Author: trollodel
+License: UNKNOWN
+Project-URL: Bug Reports, https://gitlab.com/prettyetc/prettyetc/issues
+Project-URL: Documentation, https://prettyetc.gitlab.io/prettyetc/
+Project-URL: Source, https://gitlab.com/prettyetc/prettyetc
+Keywords: config json ini etc xml qt
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/x-rst
+Requires-Dist: PySide2
+Requires-Dist: prettyetc[all] (>=0.4.0rc2)
+
+PrettyEtc
+=========
+
+The project is divided in 2 packages:
+
+- prettyetc-qt (a qt-based graphical interface for prettyetc)
+- prettyetc (the core with the APIs)
+
+prettyetc-qt
+************
+Browse your configuration files in a visual way with a pretty and universal interface.
+
+Prettyetc allows you to edit your configs in a multitabbed window,
+each config is displayed as a foldable tree that has no ugly brackets,
+quotes or anything else which might be language specific.
+
+For example you can read a JSON and an INI file using the same view and structure.
+
+The official GUI is powered by the Qt framework, using the official Python bindings.
+
+prettyetc
+*********
+Edit configuration files with an advanced tree-based data structure and convert them to other languages.
+
+
+Installation
+************
+
+**NOTE**:
+If you have both Python 2 and 3 installed in your system,
+you probably need use pip3 instead of pip.
+
+Full installation with the UI: :code:`pip install prettyetc-qt` .
+
+Or, if you want only the core: :code:`pip install prettyetc[all]`.
+
+The UI can be launched by executing the :code:`prettyetc-qt` command in a terminal.
+The prettyetc-qt executable must be in PATH or you need to find it to launch the UI.
+
+More informations about the installation process at:
+`<https://prettyetc.gitlab.io/prettyetc/developing/userguide/installation.html>`_
+
+An example (using the core APIs)
+********************************
+
+Let's see what prettyetc can do.
+
+.. code-block:: python
+
+    from prettyetc.etccore import ConfigFileFactory, DictField
+
+    # create the factory
+    factory = ConfigFileFactory(enable_logger=True)
+
+    # create the file, this can be used to read and write the file
+    file = factory.create_file("colors.json")
+
+    # read the file and save it in a RootField
+    root = file.read()
+
+    # add a new color
+    color = {
+        "color": "aqua",
+        "code": {
+            "rgba": [0, 255, 255, 1],
+            "hex": "#0FF"
+        },
+        "web_safe": True,
+    }
+    root["colors"].add(DictField.from_primitives(color))
+
+    # change red color name
+    red_color = root["colors"][2]
+    red_color["color"].data = "light-red"
+
+    # change red color codes
+    red_color["code"]["rgba"][0].data = 204
+    red_color["code"]["hex"].data = "#c00"
+
+    # change red color web_safe field
+    red_color["web_safe"].data = False
+
+    # write the RootField to file (beautified json)
+    file.write(root, language="json", beautify=True)
+
+See
+`getting started <https://prettyetc.gitlab.io/prettyetc/developing/userguide/getting started.html>`_
+for a quick start on how to use prettyetc.
+
+
+Supported languages
+*******************
+
+Due to languages nature or the used backend,
+the parsers/serializers do not implement all field specifications,
+but a subset of those.
+
+
+- JSON (`json <https://docs.python.org/3/library/json.html>`_)
+- INI (`configparser <https://docs.python.org/3/library/configparser.html>`_)
+- XML (`XML ElementTree <https://docs.python.org/3/library/xml.etree.elementtree.html>`_)
+- YAML (* `ruamel.yaml <https://yaml.readthedocs.io/en/latest/>`_)
+- A self-defined language called etc,
+  see `below <#an-explanation-of-the-etc-language>`_
+  (Embedded code + * `lark-parser <https://lark-parser.readthedocs.io/>`_)
+
+
+
+
+.. list-table:: Here is a detailed table explaining what feature are supported by language.
+   :stub-columns: 1
+   :align: center
+
+   * - | Language
+       | - Type
+     - | JSON
+       | Parser
+     - | JSON
+       | Serializer
+     - | INI
+       | Parser
+     - | INI
+       | Serializer
+     - | XML
+       | Parser
+     - | XML
+       | Serializer
+     - | YAML
+       | Parser
+     - | YAML
+       | Serializer
+     - | Etc :sup:`1`
+       | Parser
+     - | Etc :sup:`1`
+       | Serializer
+
+   * - | Field
+       | name
+     - V :sup:`2`
+     - V :sup:`2`
+     - V
+     - V
+     - V
+     - V
+     - V :sup:`2`
+     - V :sup:`2`
+     - V
+     - V
+   * - | Field
+       | description
+       | (comment)
+     - I
+     - I
+     -
+     -
+     -
+     -
+     -
+     -
+     - V
+     - V
+   * - | Field
+       | readonly
+     - I
+     - I
+     -
+     -
+     -
+     -
+     -
+     -
+     - V
+     - V
+   * - | Field
+       | attributes
+     - I
+     - I
+     -
+     -
+     - V
+     - V
+     -
+     -
+     -
+     -
+   * - | Indexable
+       | fields
+     - V
+     - V
+     - V :sup:`3`
+     - V :sup:`3`
+     - V
+     - V
+     - V
+     - V
+     -
+     -
+   * - | Typed
+       | field
+     - V
+     - V
+     - E :sup:`4`
+     - E :sup:`4`
+     - P
+     - P
+     - V
+     - V
+     - V
+     - V
+
+\* backend require external libraries
+
+**Legend**:
+
+| empty space: not supported yet
+| I: impossible due to language specification
+| E: enforced support
+| P: partially supported
+| V: fully  supported
+
+|
+
+| :sup:`1`: the etc language is divided into some sublanguages,
+  so some feature can be unavailable in a specific sublanguage.
+| :sup:`2`: For arrays, the name can be setted to None or to an integer index.
+| :sup:`3`: limited to one level.
+| :sup:`4`: The INI specification does not support typing,
+  so any key and value is a string.
+
+Docs
+****
+
+For a detailed explanation of core features, Prettyetc's Field meaning,
+API reference and other, we suggest to go to the documentation of Prettyetc.
+
+API Documentation:
+`<https://prettyetc.gitlab.io/prettyetc/index.html>`_
+
+
+An explanation of the etc language
+**********************************
+
+The etc configuration language is a collection of micro-languages,
+all of them are structured similar to INI files (without sections).
+
+The origin of this name is the \*nix /etc folder that contain the system
+or default configuration for lots of programs and also kernel settings.
+
+Except for files specifically formatted in INI or JSON,
+the files in this folder has an undefined and a simple syntax;
+made by spaces, the ":" character or the "=" character (somewhere)
+and the "#" character as comment start, that remember the sh/bash syntax.
+
+Examples of these files are:
+:code:`/etc/resolv.conf /etc/sysctl.conf /etc/modules`.
+
+Our parser aim to handle most of it, representing it using fields
+in a universal view.
+
+

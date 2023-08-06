@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyauxm
+Version: 1.5.0
+Summary: Collection of helpers and useful things for Python: library-specific pieces
+Home-page: https://gitlab.com/hoverhell/pyauxm
+Author: HoverHell
+Author-email: hoverhell@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/hoverhell/pyauxm/-/archive/1.5.0/pyauxm-1.5.0.tar.bz2
+Description: 
+        pyauxm
+        ======
+        
+        ...
+        
+Platform: UNKNOWN
+Provides-Extra: known
+Provides-Extra: jsonbrowse

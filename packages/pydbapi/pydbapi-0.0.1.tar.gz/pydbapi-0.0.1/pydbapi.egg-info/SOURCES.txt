@@ -1,0 +1,16 @@
+README.md
+setup.py
+dbapi/__init__.py
+dbapi/db/__init__.py
+dbapi/db/base.py
+dbapi/db/fileexec.py
+dbapi/exec/__init__.py
+dbapi/exec/redshift.py
+dbapi/exec/sqlite.py
+dbapi/sql/__init__.py
+dbapi/sql/compile.py
+dbapi/sql/parse.py
+pydbapi.egg-info/PKG-INFO
+pydbapi.egg-info/SOURCES.txt
+pydbapi.egg-info/dependency_links.txt
+pydbapi.egg-info/top_level.txt

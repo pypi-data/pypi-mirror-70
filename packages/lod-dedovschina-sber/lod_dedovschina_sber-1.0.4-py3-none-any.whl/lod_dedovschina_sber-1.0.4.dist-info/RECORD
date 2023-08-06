@@ -1,0 +1,14 @@
+models/Address.py,sha256=VfIfgQ4ycCQJNk2K_G8gvNEfowrhwUla-nBRA6bqPZM,8443
+models/AddressCSV.py,sha256=H4-kYnf3v-HWhFuML0c9aQzZf7_Nor-P97f22FM3Gfg,635
+models/RomanInteger.py,sha256=WWWOcioOM_DoDdsP4oB9AF2FPnSzWUfu8W1ldszU20Q,784
+models/__init__.py,sha256=iVD4oqojYE_4-96jskN01ZBBKvbvwB0hbBbJM7pzQTU,96
+presets/__init__.py,sha256=-atzQVTIVjn4zSBDFnqarZfJtQ-8-Sut1WAaBeZF4Hk,71
+presets/clear_characters.py,sha256=uVjrdr1qh5O9VJ09vZwWe3GOaxjYJVpfMjF-JaHW2po,85
+presets/fias_types.py,sha256=-cXxD0ouBHXf4yNBgH63in3F_NhSNiSDT-bqQLBzpmA,24752
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_address.py,sha256=NyKTy6bBYKY5_vHtFcweJ1tawN2WeEwl173gY2fFi_U,3477
+tests/test_roman_integer.py,sha256=geGV4k236-OV6BnnQyHBT8a9zaMo_P2ed48wMBawXmI,287
+lod_dedovschina_sber-1.0.4.dist-info/METADATA,sha256=3DkEJ3hDn57RO7ALHt8khAF6eRCxEX6lGRngiEnIzFQ,304
+lod_dedovschina_sber-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+lod_dedovschina_sber-1.0.4.dist-info/top_level.txt,sha256=Qno2U1TFvM2AJ5nQT0PdkEYfBYOGzHCYfFq28w2lwTE,21
+lod_dedovschina_sber-1.0.4.dist-info/RECORD,,

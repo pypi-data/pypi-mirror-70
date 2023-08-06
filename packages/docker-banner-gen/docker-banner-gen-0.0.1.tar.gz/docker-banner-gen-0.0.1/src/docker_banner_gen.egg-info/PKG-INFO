@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: docker-banner-gen
+Version: 0.0.1
+Summary: Command-line tool for generating bash.bashrc templates for docker with a custom banner.
+Home-page: https://github.com/waikato-datamining/docker-banner-gen
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: Apache 2.0
+Description: The **docker-banner-gen** command-line tool allows you to generate
+        `bash.bashrc` files to be used within Docker containers. 
+        It is based on TensorFlow's `bash.bashrc` and uses pyfiglet to
+        generate the banner.
+        
+        Changelog
+        =========
+        
+        0.0.1 (2020-06-07)
+        ------------------
+        
+        - initial release
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: System :: Shells
+Classifier: Programming Language :: Python :: 3

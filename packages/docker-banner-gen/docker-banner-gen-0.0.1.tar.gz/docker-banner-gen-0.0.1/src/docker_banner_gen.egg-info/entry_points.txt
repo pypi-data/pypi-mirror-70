@@ -1,0 +1,3 @@
+[console_scripts]
+docker-banner-gen = dgb.generate:sys_main
+

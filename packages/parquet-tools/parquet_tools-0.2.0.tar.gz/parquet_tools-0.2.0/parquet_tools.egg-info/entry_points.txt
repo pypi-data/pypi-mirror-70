@@ -1,0 +1,4 @@
+
+  [console_scripts]
+  parquet-tools = parquet_tools.cli:main
+  

@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+SmileValidation.egg-info/PKG-INFO
+SmileValidation.egg-info/SOURCES.txt
+SmileValidation.egg-info/dependency_links.txt
+SmileValidation.egg-info/top_level.txt

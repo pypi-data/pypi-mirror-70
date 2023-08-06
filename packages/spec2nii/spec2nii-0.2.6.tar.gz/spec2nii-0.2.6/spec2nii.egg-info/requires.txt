@@ -1,0 +1,6 @@
+numpy
+nibabel
+pydicom
+argparse
+pyMapVBVD
+scipy

@@ -1,0 +1,9 @@
+vcg/__init__.py,sha256=mg2yVsvew1HkXuCdN2gdqXSjYbg7QjGToCVvXhgr3D4,97
+vcg/_version.py,sha256=LGVQyDsWifdACo7qztwb8RWWHds1E7uQ-ZqD8SAjyw4,22
+vcg/notifier.py,sha256=ii5Gt9UbRKOWBHo3sZ5qWK8MbP5AuGMyNZHVd3S7zMY,3506
+vcg/tools.py,sha256=R2Q7aQ8qtRUpCIHF2C1hbUQJ9EtPehcO5tPU8XG1-Do,1401
+vcg-1.1.0.dist-info/LICENSE,sha256=KisdR_gzmk4rW4dmVPQD6MtRIZ3aIumnCKpi09mDGBI,1085
+vcg-1.1.0.dist-info/METADATA,sha256=WuX-XfU5UQm19oOF36mg9eGqE3DKXe5RDSmo-o2KAq4,799
+vcg-1.1.0.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+vcg-1.1.0.dist-info/top_level.txt,sha256=t6csaqK6e6ieJt0V9oj2iy_mn-A4diTQnpgp7YelQUU,4
+vcg-1.1.0.dist-info/RECORD,,

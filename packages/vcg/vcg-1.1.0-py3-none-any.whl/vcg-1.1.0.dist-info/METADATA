@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: vcg
+Version: 1.1.0
+Summary: Shared toolkit for VCG@XMU
+Home-page: UNKNOWN
+Author: VCG@XMU
+Author-email: zhengyinglin@stu.xmu.edu.cn
+License: MIT
+Keywords: VCG@XMU
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: zmail
+
+UNKNOWN
+
+

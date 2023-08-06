@@ -1,0 +1,9 @@
+
+<script>
+    $(window).on('load', function() {
+        $('.pgwSlideshow').pgwSlideshow();
+        $('.pgwSlideshow .ps-current a')
+            .attr('data-fancybox', '{{ group_name }}')
+            .fancybox();
+    });
+</script>

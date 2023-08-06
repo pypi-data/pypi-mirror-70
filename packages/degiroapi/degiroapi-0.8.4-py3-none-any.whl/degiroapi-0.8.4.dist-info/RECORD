@@ -1,0 +1,11 @@
+degiroapi/__init__.py,sha256=DuSjFy5ywS03JIxfXHiZW_u4AM5GYuTsTkJJtEsy_sk,11196
+degiroapi/client_info.py,sha256=2svgVMQpA_DYVZvIuOJIUu2k9nqjgaXKjtH6n6jQ33E,693
+degiroapi/datatypes.py,sha256=2AqZoIUqwDBnIkCkG6Zw23FbVF0fIPGoETWBoo3dRYQ,91
+degiroapi/order.py,sha256=KYQUZJ6o_6IqPx2jkpFaQFfn29Nk8XE2TcS6rAjITNs,109
+degiroapi/product.py,sha256=A5hN8WHx0av4pLi8nYCOnRb6M3v3HcFpE9MWSIzqRnE,1156
+degiroapi/utils.py,sha256=DN1E0swqkS0KTkY9Kyyk9wkVWE81p4QB9m14pJfFKLI,91
+degiroapi-0.8.4.dist-info/LICENSE,sha256=EL6yLIdSPtj3-nzYeXdyw9-Q38AdrlYmI4ZjoTjTiDc,1063
+degiroapi-0.8.4.dist-info/METADATA,sha256=OZTbGjIYzy5B8nDti-hkJeth9czwqi5x35O1B816MGQ,4464
+degiroapi-0.8.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+degiroapi-0.8.4.dist-info/top_level.txt,sha256=VGQoTgssBLWuppyP4yoI9840tofM7eHlxlQUSS6M-SI,10
+degiroapi-0.8.4.dist-info/RECORD,,

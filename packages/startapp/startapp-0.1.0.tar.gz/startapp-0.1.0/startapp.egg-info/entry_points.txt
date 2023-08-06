@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        order=takeaway.script.order:cli
+    

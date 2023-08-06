@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: mdict-py
+Version: 0.1a3
+Summary: Python API for mdict IO (MDX and MDD).
+Home-page: https://github.com/oxdc/mdict.py
+Author: oxdc
+Author-email: projaias@outlook.com
+License: MIT License
+Description: UNKNOWN
+Keywords: mdict,mdd,mdx
+Platform: UNKNOWN

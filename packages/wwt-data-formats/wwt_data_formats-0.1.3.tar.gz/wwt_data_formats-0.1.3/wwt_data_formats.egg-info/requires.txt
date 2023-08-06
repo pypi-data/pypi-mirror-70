@@ -1,0 +1,12 @@
+traitlets
+
+[docs]
+astropy-sphinx-theme
+numpydoc
+sphinx
+sphinx-automodapi
+
+[test]
+coveralls
+mock
+pytest-cov

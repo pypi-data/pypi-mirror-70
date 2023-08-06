@@ -1,0 +1,10 @@
+openpyxl
+Pillow
+docopt
+tqdm
+
+[dev]
+check-manifest
+
+[test]
+coverage

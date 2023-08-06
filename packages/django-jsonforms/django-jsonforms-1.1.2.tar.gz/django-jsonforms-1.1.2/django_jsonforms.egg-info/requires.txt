@@ -1,0 +1,2 @@
+jsonschema
+django>=2.0

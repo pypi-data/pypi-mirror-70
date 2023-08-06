@@ -1,0 +1,9 @@
+Cython
+numpy
+scipy
+annoy
+umap-learn
+scikit-learn
+
+[faiss]
+faiss

@@ -1,0 +1,3 @@
+aiohttp>=3.6
+argh>=0.26tqdm>=4.46
+funcy>=1.14

@@ -1,0 +1,3 @@
+[console_scripts]
+ppDownloader = ppdownloader.cli:main
+

@@ -1,0 +1,185 @@
+Metadata-Version: 2.1
+Name: wagascianpy
+Version: 0.2.8
+Summary: WAGASCI ANPAN for Python
+Home-page: https://git.t2k.org/wagasci_babymind/WagasciAnpy
+Author: Pintaudi Giorgio
+Author-email: giorgio-pintaudi-kx@ynu.jp
+License: GPLv3
+Keywords: WAGASCI ANPAN for Python
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=44.1.1)
+Requires-Dist: bitarray (>=1.2.1)
+Requires-Dist: six (>=1.14.0)
+Requires-Dist: paramiko (>=2.7.1)
+Requires-Dist: scp (>=0.13.2)
+Requires-Dist: pytz (>=2020.1)
+Requires-Dist: tinydb (>=3.15.2)
+Requires-Dist: recordclass (>=0.13.2)
+Requires-Dist: pyfakefs (>=3.7.2)
+Requires-Dist: numpy (>=1.16.6)
+Requires-Dist: undecorated (>=0.3.0)
+Requires-Dist: dependency-injector (>=3.15.6)
+
+# WAGASCI ANPAN for Python v0.2.8
+
+This collective package contains all the Python module used by the ANPAN
+ framework of the WAGASCI/T2K experiment.
+
+## T2K experiment
+
+T2K (Tokai-to-Kamioka) is a long-baseline off-axis neutrino oscillation
+experiment that focuses on measuring muon (anti)-neutrinos oscillating into
+electron (anti)-neutrinos. A very pure muon neutrino beam is produced at J-PARC
+accelerator complex and detected 295 km away at the Super-Kamiokande (SK) far
+detector. T2K uses a set of near detectors in order to reduce the large
+uncertainties on the oscillation parameters that come from the neutrino fluxes
+and interaction models.
+
+## WAGASCI experiment
+
+WAGASCI (WAter-Grid-SCIintilator-Detector) is proposed to
+
+- reduce the T2K systematic error
+- measurement of the charge current cross-section ratio between water and
+  scintillator targets with 3% accuracy
+- measurement of different charged current neutrino interaction channels with
+  high precision and large acceptance.
+
+## ANPAN
+
+ANPAN (Acquisition Network Program for Accelerated Neutrinos) is a collective
+ name to identify all the software used to acquire data and analyze it for
+  the WAGASCI experiment. It is composed of many packages:
+  - [Pyrame](http://llr.in2p3.fr/sites/pyrame/) (C/Python2)
+  - [Calicoes](http://llr.in2p3.fr/sites/pyrame/calicoes/) (C/Python2)
+  - [WagasciCalibration](https://git.t2k.org/wagasci_babymind/WagasciCalibration) (C++11)
+  - [WagasciRunControl](https://git.t2k.org/wagasci_babymind/WagasciRunControl) (Python2)
+  - [WagasciDatabaseViewer](https://git.t2k.org/wagasci_babymind/wagasci-db) (Python3)
+  - [WagasciAnpy (this package)](https://git.t2k.org/wagasci_babymind/WagasciAnpy) (Python2/3)
+
+ ## Dependencies
+
+ - **Python2.7 or Python3.4+**
+ - **pip**
+
+ This package is compatible with both Python2.7 and Python3.4+. It is tested
+ usually with Python 3.8 and sporadically with other Python versions.
+ Therefore, it may happen that the compatibility with Python2.7 is not
+ perfect.
+
+ To install Python, please google _"Install Python \<Your favourite OS\>"_.
+ All the other Python dependencies can be installed using Pip. 
+
+ ### Optional dependencies
+
+To use the raw data decoder and spill number fixer, you have to install ROOT
+and the WagasciCalibration package. Please refer to the links for an in-depth
+explanation about the installation process.
+  - [ROOT 6](https://root.cern.ch/)
+  - [WagasciCalibration](https://git.t2k.org/wagasci_babymind/WagasciCalibration)
+
+  To update the WAGASCI run database you need
+  - [BorgBackup](https://borgbackup.readthedocs.io/en/stable/installation.html)
+
+If you do not plan to use those features you can avoid installing these
+dependencies.
+
+## Installation
+
+### Python 2.7
+Open a terminal and issue
+```shell script
+python2 -m pip install --upgrade --user wagascianpy
+```
+
+### Python 3.4+
+Open a terminal and issue
+```shell script
+python3 -m pip install --upgrade --user wagascianpy
+```
+
+
+## Usage
+
+Python modules
+
+- `wagascianpy.analysis`
+
+  Contains modules for analysing the WAGASCI raw data, decoded data and slow
+   data. 
+  - `wagascianpy.analysis.analysis` : Ctypes wrappers around
+   WagasciCalibration libraries. 
+  - `wagascianpy.analysis.analyzer` : Takes the Ctypes wrappers and organize
+   them in a abstract factory design patter.
+  - `wagascianpy.analysis.beam_summary_data` : module to integrate the BSD
+   information inside the decoded WAGASCI data. It can be used as a
+    standalone program or as a analyzer of `wagascianpy.analysis.analyzer`.
+  - `wagascianpy.analysis.mhistory2sqlite` : module to convert many mhistory
+   files containing slow devices data into a SQLite database.
+  - `wagascianpy.analysis.spill` : factory design patter to generate
+   various spill objects. A spill object contains information about the spill
+   number. It is useful when fixing the spill number bugs or when
+   integrating the BSD information.
+
+- `wagascianpy.database`
+
+    Modules to manage the WAGASCI run database and the BSD database.
+
+  - `wagascianpy.database.bsddb` : BSD database creation and access.
+  - `wagascianpy.database.db_record` : Virtual database record that is
+   inherited by the WAGASCI run record and BSD record.
+  - `wagascianpy.database.my_tinydb` : Virtual database build upon the
+   `tinydb` external module. It is inherited by the WAGASCI run database and
+    BSD database.
+  - `wagascianpy.database.wagascidb` : WAGASCI run database creation and access.
+
+- `wagascianpy.plotting`
+
+    Modules to generate history plots (plots where the X axis is time).
+
+  - `wagascianpy.plotting.colors` : manage plot colors
+  - `wagascianpy.plotting.detector` : class to store the read TTrees for each
+   subdetector and to iterate over them.
+  - `wagascianpy.plotting.graph` : class to build a generic graph
+  - `wagascianpy.plotting.harvest` : class to harvest the needed data from the
+   TTrees. It returns the X points and Y points. It is implemented using the
+    strategy design pattern.
+  - `wagascianpy.plotting.marker` : class to plot time markers as the
+   maintenance days, WAGASCI runs start and stop time, electronics troubles
+   , etc...
+  - `wagascianpy.plotting.plotter` : class to plot the actual TMultiGraph
+  - `wagascianpy.plotting.topology` : class to specify which subdetectors to
+   plot and which not
+
+- `wagascianpy.program`
+
+    Modules to generate a runnable program using the analyzers of
+    `wagascianpy.analysis.analyzer`. Implemented using the builder design
+     pattern.
+
+  - `wagascianpy.program.director` : director of the builder design pattern.
+  - `wagascianpy.program.program` : final program that is builded.
+  - `wagascianpy.program.program_builder` : builder that builds the program.
+
+- `wagascianpy.utils`
+
+    Utilities.
+
+  - `wagascianpy.utils.change_bitstream` : module to change the configuration of
+   the SPIROC chip for all the chips in one go.
+  - `wagascianpy.utils.environment` : module to read the WAGASCI
+   environmental variables from a file or from the shell environment.
+  - `wagascianpy.utils.utils` : all other utilities are gathered here.
+

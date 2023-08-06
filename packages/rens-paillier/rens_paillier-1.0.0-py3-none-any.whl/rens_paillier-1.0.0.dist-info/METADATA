@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: rens-paillier
+Version: 1.0.0
+Summary: Paillier encryption
+Home-page: https://gitlab.com/RensOliemans/paillier
+Author: Rens Oliemans
+Author-email: rens.oliemans@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+
+===================
+Paillier encryption
+===================
+
+``python3.8`` package for the `Paillier encryption <https://en.wikipedia.org/wiki/Paillier_cryptosystem>`_
+
+Example usage
+-------------
+
+Setup
+_____
+
+.. code-block::
+
+    from paillier.keygen import generate_keys
+    from paillier.crypto import encrypt, decrypt
+
+    pk, sk = generate_keys()
+
+Basic encryption and decryption
+_______________________________
+
+.. code-block::
+
+    m1 = 45336
+    ciphertext = encrypt(pk, m1)
+    assert m1 == decrypt(pk, sk, ciphertext)
+
+Homomorphic things
+__________________
+
+.. code-block::
+
+    from paillier.crypto import secure_addition, scalar_multiplication, secure_subtraction
+
+    n, _ = pk
+    m2 = 30381
+
+    # Secure addition
+    e1 = encrypt(pk, m1)
+    e2 = encrypt(pk, m2)
+    addition = secure_addition(e1, e2, n)
+    assert m1 + m2 == decrypt(pk, sk, addition)
+
+    # Scalar multiplication
+    k = 23  # some scalar
+    e1 = encrypt(pk, m1)
+    multiplied = scalar_multiplication(e1, k, n)
+    assert (m1 * k) % n == decrypt(pk, sk, multiplied)
+
+    # Secure subtraction
+    assert m1 > m2, "m2 should be bigger than m1 in order to subtract m2 from m1"
+    e1 = encrypt(pk, m1)
+    e2 = encrypt(pk, m2)
+    subtracted = secure_subtraction(e1, e2, n)
+    assert m1 - m2 == decrypt(pk, sk, subtracted)
+

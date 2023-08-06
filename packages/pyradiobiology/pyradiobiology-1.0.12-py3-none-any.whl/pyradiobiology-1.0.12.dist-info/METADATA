@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyradiobiology
+Version: 1.0.12
+Summary: Radiobiology library. LQ, NTCP, TCP models
+Home-page: https://www.sachpazidis.com/pyRadioBiology/
+Author: Ilias Sachpazidis
+Author-email: ilias.sachpazidis@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://www.sachpazidis.com/pyRadioBiology/bugs
+Project-URL: Documentation, https://www.sachpazidis.com/pyRadioBiology/docs
+Project-URL: Source Code, https://github.com/isachpaz/pyRadioBiology/
+Keywords: radiation,oncology,radiobiology,linear quadratic,LQ,TCP,NTCP,LKB,relative seriality
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: numpy (>=1.18)
+
+UNKNOWN
+
+

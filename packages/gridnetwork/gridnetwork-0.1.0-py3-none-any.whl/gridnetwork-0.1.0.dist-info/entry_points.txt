@@ -1,0 +1,3 @@
+[console_scripts]
+raise_grid = gridnetwork:raise_grid
+

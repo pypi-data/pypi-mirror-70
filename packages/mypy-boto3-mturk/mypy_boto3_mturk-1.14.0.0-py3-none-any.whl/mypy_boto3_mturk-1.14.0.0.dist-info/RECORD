@@ -1,0 +1,11 @@
+mypy_boto3_mturk/__init__.py,sha256=UG23JilYgyzaO-R8IDYBmPE9UULnsBTeD8unpNMPqBo,2573
+mypy_boto3_mturk/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_mturk/client.py,sha256=IlUknJvbL7ftBgkMNQ2ipdHEwk7hutsHPR9ynxQ2uek,21995
+mypy_boto3_mturk/paginator.py,sha256=lYvG3FTqpaFyAS8TMPFg7xHhzuH1qb8m097oUMGtD70,8732
+mypy_boto3_mturk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_mturk/type_defs.py,sha256=HN1GWCrzaFkruXFHWrKi51LW-oVTWz-OjSg2M0hUves,12696
+mypy_boto3_mturk/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_mturk-1.14.0.0.dist-info/METADATA,sha256=jzQqQCkUm-zkLFLCsf1EGhBZQPvoCg67QAFCI4LK7Mg,5227
+mypy_boto3_mturk-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_mturk-1.14.0.0.dist-info/top_level.txt,sha256=YhftTCzruiVbysH07u2hgmqS9_2VmJuC62S36ZnvxUc,17
+mypy_boto3_mturk-1.14.0.0.dist-info/RECORD,,

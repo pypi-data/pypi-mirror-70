@@ -1,0 +1,10 @@
+font_installer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+font_installer/download.py,sha256=lUn9blQHqz84eypudO7PUwhNY-l6LpjwToeH1p8XwHU,2096
+font_installer/posix.py,sha256=7ewJJlRXNJdTxvEZTOI3jjFsGQF3LA7dvuVOTZ4N9zw,247
+font_installer/windows.py,sha256=JosWUgrmN2dgT5KwgVWufm-hBA0dtM7Fzpsfzt8crl4,3669
+font_installer-0.1.2.dist-info/LICENSE,sha256=mN_EU7weWtMz0PCz2gWxk8tvUqFeaDFcfkgbtRv-rWw,35768
+font_installer-0.1.2.dist-info/METADATA,sha256=f_PGhEoHUy2SHGySCM7XHB7P8Z5bHPswFgmmSVsnocM,1547
+font_installer-0.1.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+font_installer-0.1.2.dist-info/entry_points.txt,sha256=HCr930hDY-qlCmvTKo1t31ltNe5fJZ3vOZ2BSPY8HJ8,65
+font_installer-0.1.2.dist-info/top_level.txt,sha256=h86Az5tT-MbcVchNDb8ua8CBKbisk1MQFR0FzgUwCE8,15
+font_installer-0.1.2.dist-info/RECORD,,

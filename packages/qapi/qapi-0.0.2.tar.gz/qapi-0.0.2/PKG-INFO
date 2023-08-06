@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: qapi
+Version: 0.0.2
+Summary: QAPI - API query language
+Home-page: https://github.com/Zeon-Code/qapi
+Author: Diego Peres
+Author-email: speres.diego@gmail.com
+License: UNKNOWN
+Description: # QAPI [![Build Status](https://travis-ci.com/Zeon-Code/qapi.svg?branch=master)](https://travis-ci.com/Zeon-Code/qapi)
+        A API query language.
+        
+Keywords: qapi,API,Query Language
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test

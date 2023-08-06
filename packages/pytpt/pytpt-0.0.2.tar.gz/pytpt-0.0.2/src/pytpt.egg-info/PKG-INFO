@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytpt
+Version: 0.0.2
+Summary: Implementation of Transition Path Theory for stationary, periodically varying, and finite-time Markov chains.
+Home-page: https://github.com/LuzieH/pytpt
+Author: Luzie Helfmann and Enric Ribera Borrell
+Author-email: luzie.helfmann@fu-berlin.de
+License: UNKNOWN
+Description: ï»¿# PyTPT
+        
+        Implementation of Transition Path Theory for:
+        - stationary Markov chains (pytpt/stationary.py),
+        - for periodically varying Markov chains (pytpt/periodic.py),
+        - for time-inhomogenous Markov chains over finite time intervals (pytpt/finite.py).
+        
+        Based on: 
+        Helfmann, L., Ribera Borrell, E., SchÃ¼tte, C., & Koltai, P. (2020). Extending Transition Path Theory: Periodically-Driven and Finite-Time Dynamics. [arXiv preprint arXiv:2002.07474.](https://arxiv.org/pdf/2002.07474.pdf)  
+        
+        ## PyTPT Package Installation
+        Install the package using `pip install pytpt`. 
+         
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,12 @@
+README.md
+setup.py
+aliyunstoreplugin/__init__.py
+aliyunstoreplugin.egg-info/PKG-INFO
+aliyunstoreplugin.egg-info/SOURCES.txt
+aliyunstoreplugin.egg-info/dependency_links.txt
+aliyunstoreplugin.egg-info/entry_points.txt
+aliyunstoreplugin.egg-info/requires.txt
+aliyunstoreplugin.egg-info/top_level.txt
+aliyunstoreplugin/store/__init__.py
+aliyunstoreplugin/store/artifact/__init__.py
+aliyunstoreplugin/store/artifact/aliyun_oss_artifact_repo.py

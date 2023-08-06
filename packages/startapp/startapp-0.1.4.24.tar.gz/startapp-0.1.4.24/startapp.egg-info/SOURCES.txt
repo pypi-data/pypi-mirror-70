@@ -1,0 +1,17 @@
+README.md
+setup.py
+startapp.egg-info/PKG-INFO
+startapp.egg-info/SOURCES.txt
+startapp.egg-info/dependency_links.txt
+startapp.egg-info/entry_points.txt
+startapp.egg-info/requires.txt
+startapp.egg-info/top_level.txt
+takeaway/controllers/__init__.py
+takeaway/controllers/app.py
+takeaway/controllers/commands.py
+takeaway/controllers/management.py
+takeaway/core/__init__.py
+takeaway/core/utils/__init__.py
+takeaway/core/utils/version.py
+takeaway/script/__init__.py
+takeaway/script/order.py

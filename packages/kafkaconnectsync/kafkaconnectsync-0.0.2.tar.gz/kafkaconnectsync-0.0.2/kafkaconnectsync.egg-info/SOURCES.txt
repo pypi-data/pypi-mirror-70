@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+kafkaconnectsync/__init__.py
+kafkaconnectsync/client.py
+kafkaconnectsync/utils.py
+kafkaconnectsync.egg-info/PKG-INFO
+kafkaconnectsync.egg-info/SOURCES.txt
+kafkaconnectsync.egg-info/dependency_links.txt
+kafkaconnectsync.egg-info/requires.txt
+kafkaconnectsync.egg-info/top_level.txt

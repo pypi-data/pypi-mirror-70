@@ -1,0 +1,11 @@
+setup.py
+huawei_api_sdk/ASYHWSClient.py
+huawei_api_sdk/HWSClient.py
+huawei_api_sdk/__init__.py
+huawei_api_sdk.egg-info/PKG-INFO
+huawei_api_sdk.egg-info/SOURCES.txt
+huawei_api_sdk.egg-info/dependency_links.txt
+huawei_api_sdk.egg-info/requires.txt
+huawei_api_sdk.egg-info/top_level.txt
+huawei_api_sdk/signature/__init__.py
+huawei_api_sdk/signature/signer.py

@@ -1,0 +1,7 @@
+setup.py
+ldscripts/__init__.py
+ldscripts.egg-info/PKG-INFO
+ldscripts.egg-info/SOURCES.txt
+ldscripts.egg-info/dependency_links.txt
+ldscripts.egg-info/not-zip-safe
+ldscripts.egg-info/top_level.txt

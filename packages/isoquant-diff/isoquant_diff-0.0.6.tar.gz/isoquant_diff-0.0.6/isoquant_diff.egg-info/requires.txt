@@ -1,0 +1,4 @@
+configparser
+pandas
+xlrd
+openpyxl

@@ -1,0 +1,16 @@
+LICENSE.md
+MANIFEST.in
+README.md
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+factordb/__init__.py
+factordb/cli.py
+factordb/factordb.py
+factordb_python.egg-info/PKG-INFO
+factordb_python.egg-info/SOURCES.txt
+factordb_python.egg-info/dependency_links.txt
+factordb_python.egg-info/entry_points.txt
+factordb_python.egg-info/requires.txt
+factordb_python.egg-info/top_level.txt

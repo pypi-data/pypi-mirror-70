@@ -1,0 +1,22 @@
+dist: xenial
+language: python
+python:
+- '3.7'
+os:
+- linux
+script:
+- pip3 install -r requirements-dev.txt
+- pip3 install coverage codacy-coverage
+- pip3 install .
+- python3 setup.py test
+deploy:
+  provider: pypi
+  user: mrava87
+  distributions: bdist_wheel
+  skip_existing: true
+  skip_upload_docs: true
+  skip_cleanup: true
+  on:
+    tags: true
+  password:
+    secure: jodHKQNsz5te21LhUNtf633qX0v+ni/nWU25vLnq5P1F2S5dfYLDibmtiFGfTY7Ac12OuU2/Fhm01ghcXVWCvvsDoFW2JfClQcbm0gPWKDJHb8QMLkBlgSPxCi+OiMZMlG0OZ0tDeZUftZaRkLq2hK44r1jzfCwMGr0/wB6y7FhNQvEr4oZwhTFfA4Nrs2eyJuXajht2YxGwwvF07IlWQKfnr1OkXU1PWtUsuubb6mrnq2FY0f2pXBZ+BqpqwCF5CMScYK8ucLCMPDHe7k+3Ef+DEJqKRrT1qwK0G+H4gdRfD4ysE8VePqWqJHlexAamKdSsQx/wrxXWdn3QnpkUQ6A037qJTDlPJGzpPJco3N8DSr9nTHZcHfW9gDafQwMnfl06+QIsgXk9RGpe2eOYO7/vLC/5GbDHruJaOdNT+YVvH1mfOK9z0tLL/zc9Pi3htrc40NzeRqohNJy6NOu4AKcS03wkDtvdODtJxN3mYyIfjARzWHWm6SIm9+ASUatlhu2MzBxzJQPxGVSLjVx72+fIkySiWJJcqYhsRzHnwhokDHA6oNTz5NEm5w48Ads1n0K0os3w0nqZNL9Xbcxh84Xf+LyY47UAjqaExJdTSk3bF4Vx2nmJxWfVkXDZZwkJhNgt/SGETtorp46VpXRpakmND05ZIs8IY1XVTGoj7l8=

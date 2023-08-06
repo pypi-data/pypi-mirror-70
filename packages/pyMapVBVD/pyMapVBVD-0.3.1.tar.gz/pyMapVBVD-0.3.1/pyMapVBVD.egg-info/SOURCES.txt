@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+mapVBVD/__init__.py
+mapVBVD/_version.py
+mapVBVD/mapVBVD.py
+mapVBVD/read_twix_hdr.py
+mapVBVD/twix_map_obj.py
+pyMapVBVD.egg-info/PKG-INFO
+pyMapVBVD.egg-info/SOURCES.txt
+pyMapVBVD.egg-info/dependency_links.txt
+pyMapVBVD.egg-info/requires.txt
+pyMapVBVD.egg-info/top_level.txt

@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: genutility
+Version: 0.0.38
+Summary: A collection of various Python utilities
+Home-page: https://github.com/Dobatymo/genutility
+Author: Dobatymo
+License: UNKNOWN
+Description: # genutility
+        
+        A collection of various Python utilities.
+        
+        Most functionally is supported on Python 2.7+ / Python 3.5+. However some things might only be working on Python 3.6+.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Provides-Extra: math
+Provides-Extra: nlp
+Provides-Extra: encoder
+Provides-Extra: pdf
+Provides-Extra: iter
+Provides-Extra: pillow
+Provides-Extra: text
+Provides-Extra: constants_physics
+Provides-Extra: mp4
+Provides-Extra: lda
+Provides-Extra: pickle
+Provides-Extra: file
+Provides-Extra: factorial
+Provides-Extra: gensim
+Provides-Extra: time
+Provides-Extra: tensorflow
+Provides-Extra: regression
+Provides-Extra: algorithms
+Provides-Extra: scene_change_detection
+Provides-Extra: numpy
+Provides-Extra: concurrency
+Provides-Extra: html
+Provides-Extra: string
+Provides-Extra: typing
+Provides-Extra: error
+Provides-Extra: signal
+Provides-Extra: all
+Provides-Extra: search
+Provides-Extra: image
+Provides-Extra: constants_video
+Provides-Extra: geometry
+Provides-Extra: av
+Provides-Extra: func
+Provides-Extra: http2
+Provides-Extra: mongo
+Provides-Extra: tls
+Provides-Extra: indexing
+Provides-Extra: config
+Provides-Extra: cholesky
+Provides-Extra: toml
+Provides-Extra: resizing
+Provides-Extra: aria
+Provides-Extra: imdb
+Provides-Extra: torrent
+Provides-Extra: sqlite
+Provides-Extra: dict
+Provides-Extra: test
+Provides-Extra: networkx
+Provides-Extra: binary
+Provides-Extra: rand
+Provides-Extra: multihash
+Provides-Extra: datetime
+Provides-Extra: statistics
+Provides-Extra: scipy
+Provides-Extra: flask
+Provides-Extra: twisted
+Provides-Extra: object
+Provides-Extra: numba
+Provides-Extra: ops
+Provides-Extra: win32
+Provides-Extra: nltk
+Provides-Extra: pandas
+Provides-Extra: sequence
+Provides-Extra: sudoku
+Provides-Extra: mediainfo
+Provides-Extra: debug
+Provides-Extra: net
+Provides-Extra: twitch
+Provides-Extra: videofile
+Provides-Extra: torch
+Provides-Extra: filesystem
+Provides-Extra: powerpoint
+Provides-Extra: downloadmanager
+Provides-Extra: xsl
+Provides-Extra: atomic
+Provides-Extra: msgpack
+Provides-Extra: metrics
+Provides-Extra: salesforce
+Provides-Extra: args
+Provides-Extra: hash
+Provides-Extra: ringlist
+Provides-Extra: csv
+Provides-Extra: profile
+Provides-Extra: set
+Provides-Extra: cv
+Provides-Extra: latex
+Provides-Extra: stdio
+Provides-Extra: url
+Provides-Extra: http
+Provides-Extra: widgets
+Provides-Extra: datastructures
+Provides-Extra: sql
+Provides-Extra: exceptions
+Provides-Extra: json
+Provides-Extra: os
+Provides-Extra: sort

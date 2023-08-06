@@ -1,0 +1,195 @@
+<!-- <p align="center">
+  <a href="http://suite-api.superb-ai.com/" target="blank"><img src="logo/cool-tree.png" width="200" height="200" alt="Cool-Tree Logo" /></a>
+</p> -->
+
+# Suite CLI
+
+![Unit Test](https://github.com/Superb-AI-Suite/cool-tree/workflows/Unit%20Test/badge.svg)
+![CLI Integration Test](https://github.com/Superb-AI-Suite/cool-tree/workflows/CLI%20Integration%20Test/badge.svg)
+![Build](https://github.com/Superb-AI-Suite/cool-tree/workflows/Build/badge.svg)
+
+Official Suite SDK for managing [Superb AI Suite Platform](https://suite.superb-ai.com)
+
+Suite SDK can both be used from the [command line interface](#usage-as-a-command-line-interface-cli) and as a [Python library](#usage-as-a-python-library).
+
+- Installation
+- Getting Started
+- Listing Projects
+- Uploading Dataset
+- Downloading Data & Labels
+
+## Installation
+
+```shell
+$ pip install spb-cli
+$ spb --version
+0.0.26
+```
+Once installed, you can type `spb` command in the terminal to access the command line interface.
+
+<!---
+<img src="./install-spb-cli.gif" width="600">
+-->
+
+# Usage as a command line interface (CLI)
+
+## Getting Started
+
+### Authentication
+You need an *Access Key* for authentication. The *Access Key* can be generated on the [Superb AI Suite web](https://suite.superb-ai.com/) (Suite > My Account > Advanced).
+
+You can then configure your profile by entering your *Suite Account Name* and the generated *Access Key*. 
+
+:warning: ***Suite Account Name* does <ins>NOT</ins> refer to your personal account. It refers to the organization name that your personal account belongs to.**
+
+```shell
+$ spb configure
+Suite Account Name: foo
+Access Key: bar
+```
+
+Once configured, you can check the currently configured profile by using the `--list` option.
+
+
+```
+$ spb configure --list
+[default]
+access_key = foo
+account_name = bar
+```
+
+## Listing Projects
+You can list all projects that belong to the currently configured profile by using the following command:
+```shell
+$ spb describe projects
+NAME          LABELS    PROGRESS
+my-project    5837       14.3%
+...
+Press any button to continue to the next page (1/10). Otherwise press ‘Q’ to quit.
+```
+
+<!---
+<img src="./list-project.gif" width="600">
+-->
+
+## Uploading Dataset
+
+You can upload data and create labels for your project with this command line interface. 
+
+Move to the dataset directory that has image files (with extension of `.jpg`, `.png`, `.gif`) and upload images in the directory by using the following CLI command:
+
+```shell
+$ cd datasets/sample-dataset
+$ spb upload dataset
+Dataset Name: sample-dataset
+Project Name: my-project
+Uploading 3 data and 0 labels to dataset 'sample-dataset' under project 'my-project'. Proceed? [y/N] y
+Uploading data:
+100%|████████████████████████| 3/3 [00:03<00:00,  1.27it/s]
+```
+
+If you wish to upload the pre-label files along with the dataset, you can enable the `--include-label` option:
+
+```shell
+$ cd datasets/sample-dataset
+$ spb upload dataset --include-label
+Dataset Name: sample-dataset
+Project Name: my-project
+Uploading 3 data and 3 labels to dataset 'sample-dataset' under project 'my-project'. Proceed? [y/N] y
+Uploading data:
+100%|████████████████████████| 3/3 [00:03<00:00,  1.27it/s]
+Uploading labels:
+100%|████████████████████████| 3/3 [00:03<00:00,  1.34it/s]
+```
+
+Or if you wish to only upload the pre-label files:
+
+```shell
+$ spb upload labels
+Project Name: my-project
+```
+
+To understand how to construct a pre-label JSON file according to the Superb AI format, please refer to the Superb AI Suite Manual.
+
+
+<!---
+<img src="./image-upload.gif" width="600">
+-->
+
+## Downloading Data & Labels
+You can download images and labels for a project by using the following command:
+```shell
+$ cd projects/my-project
+$ spb download
+Project Name: my-project
+Downloading 3 data and 3 labels from project 'my-project' to 'projects/my-project'. Proceed? [y/N] y
+100%|████████████████████████| 1/1 [100:03<00:00,  1.27it/s]
+```
+
+The result is saved to the designated directory in the same structure as the pre-label upload section.
+
+```
+└─ {Current Working Directory}
+   └─ sample-dataset
+      ├─ 1.jpg
+      ├─ 1.jpg.json
+      ├─ 2.jpg
+      ├─ 2.jpg.json
+      ...
+```
+
+
+<!--
+
+# Usage as a python library
+### Client Authntication
+
+To perform remote operations on Suite you first need to authenticate.
+This requires a [Account-specific API-key].
+
+To start the authentication process:
+
+```
+$ vim ~/.spb/config
+[YOUR_PROFILE_NAME(Default : default)]
+access_key=YOUT_ACCESS_KEY
+account_name = YOUR_ACCOUNT_NAME
+```
+You can also directly use Access key and Account name to SDK. (Check, how to use)
+
+
+### How to use
+
+First. you need to authenticate and get client from SDK
+```
+# Use default profile in credentials
+spb.client()
+
+# Use other profile in credentials
+spb.client(profile='OTHER_PROFILE_NAME')
+
+# and also you can directly use account_name and access_key
+spb.client(account_name='YOUR_ACCOUNT_NAME', access_key='YOUR_ACCESS_KEY')
+```
+
+Now, you can use Suite SDK in your project
+
+#### Example #1 - Describe Project
+```
+import spb
+from spb.command import Command
+from spb.models import Project
+
+def describe_project():
+    spb.client()
+    command = Command(type='describe_project')
+    projects = spb.run(command=command)
+
+if __name__ == "__main__":
+    describe_project()
+
+```
+In this case, you can be seen Project list in your account
+
+
+-->

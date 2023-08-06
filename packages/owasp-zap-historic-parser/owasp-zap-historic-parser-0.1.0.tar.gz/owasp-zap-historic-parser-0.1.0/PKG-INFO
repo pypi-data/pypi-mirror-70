@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: owasp-zap-historic-parser
+Version: 0.1.0
+Summary: Parser to push OWASP ZAP report data to MySQL
+Home-page: https://github.com/Accruent/owasp-zap-historic-parser
+Author: Neil Howell
+Author-email: neiljhowell@gmail.com
+License: GPL-3.0
+Description: UNKNOWN
+Keywords: owasp zap historical report parser
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing

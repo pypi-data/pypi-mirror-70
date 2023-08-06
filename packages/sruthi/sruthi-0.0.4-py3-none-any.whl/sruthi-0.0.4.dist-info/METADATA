@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sruthi
+Version: 0.0.4
+Summary: SRU client for Python
+Home-page: https://github.com/metaodi/sruthi
+Author: Stefan Oderbolz
+Author-email: odi@metaodi.ch
+Maintainer: Stefan Oderbolz
+Maintainer-email: odi@metaodi.ch
+License: MIT
+Download-URL: https://github.com/metaodi/sruthi/archive/v0.0.4.zip
+Keywords: sru,search,retrieve,archive,library
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: defusedxml
+
+SRU client for Python
+
+

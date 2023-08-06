@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: d2lbook
+Version: 0.1.16
+Summary: Create an online book with Jupyter Notebooks and Sphinx
+Home-page: https://book.d2l.ai
+Author: D2L Developers
+Author-email: d2l.devs@gmail.com
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: jupyter
+Requires-Dist: regex
+Requires-Dist: sphinx (>=2.2.1)
+Requires-Dist: recommonmark
+Requires-Dist: nbformat
+Requires-Dist: nbconvert (<=5.6.1)
+Requires-Dist: sphinxcontrib-bibtex (>=1.0.0)
+Requires-Dist: pybtex-apa-style
+Requires-Dist: mu-notedown
+Requires-Dist: mxtheme (>=0.3.11)
+Requires-Dist: sphinxcontrib-svg2pdfconverter
+Requires-Dist: numpydoc
+Requires-Dist: awscli
+
+UNKNOWN
+
+

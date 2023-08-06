@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: alphamini
+Version: 0.0.8
+Summary: python sdk for ubtenic alphamini robot
+Home-page: UNKNOWN
+Author: logic.peng
+License: UNKNOWN
+Description: # AlphaMini Robot Python Sdk
+        This is the must-choose alphamini robot python sdk, can write programs through this sdk to control the robot to do some tasks.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

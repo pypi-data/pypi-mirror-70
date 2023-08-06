@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mwthesaurus"
+version = "0.1.2"
+description = "API Wrapper for the Merriam-Webster Collegiate Thesaurus API."
+readme="README.md"
+authors = ["Peder Hovdan Andresen"]
+license = "MIT"
+repository = "https://github.com/PederHA/mwthesaurus"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+httpx = "^0.13.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

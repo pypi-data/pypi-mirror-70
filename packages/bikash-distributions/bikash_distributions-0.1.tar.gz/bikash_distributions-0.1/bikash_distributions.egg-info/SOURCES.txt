@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bikash_distributions/Binomialdistribution.py
+bikash_distributions/Gaussiandistribution.py
+bikash_distributions/Generaldistribution.py
+bikash_distributions/__init__.py
+bikash_distributions.egg-info/PKG-INFO
+bikash_distributions.egg-info/SOURCES.txt
+bikash_distributions.egg-info/dependency_links.txt
+bikash_distributions.egg-info/not-zip-safe
+bikash_distributions.egg-info/top_level.txt

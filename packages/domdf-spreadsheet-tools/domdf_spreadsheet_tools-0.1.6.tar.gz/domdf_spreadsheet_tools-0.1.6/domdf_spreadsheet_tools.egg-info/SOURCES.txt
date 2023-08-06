@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+domdf_spreadsheet_tools.py
+requirements.txt
+setup.py
+domdf_spreadsheet_tools.egg-info/PKG-INFO
+domdf_spreadsheet_tools.egg-info/SOURCES.txt
+domdf_spreadsheet_tools.egg-info/dependency_links.txt
+domdf_spreadsheet_tools.egg-info/entry_points.txt
+domdf_spreadsheet_tools.egg-info/not-zip-safe
+domdf_spreadsheet_tools.egg-info/requires.txt
+domdf_spreadsheet_tools.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+openpyxl>=2.6.0
+domdf_python_tools>=0.3.5
+
+[all]

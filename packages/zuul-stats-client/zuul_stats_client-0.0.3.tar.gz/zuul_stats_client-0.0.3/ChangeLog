@@ -1,0 +1,21 @@
+CHANGES
+=======
+
+0.0.3
+-----
+
+* utils: add a generic get\_change\_age function
+* utils: prevent issue when missing trailing '/'
+
+0.0.2
+-----
+
+* utils: add function to list tenants
+* Fix setup.cfg for proper pypi upload
+
+0.0.1
+-----
+
+* Initial project import
+* ManageSF commit
+* Initial empty repository

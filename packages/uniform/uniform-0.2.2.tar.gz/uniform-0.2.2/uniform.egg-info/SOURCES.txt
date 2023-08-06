@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+uniform/__init__.py
+uniform/__version__.py
+uniform.egg-info/PKG-INFO
+uniform.egg-info/SOURCES.txt
+uniform.egg-info/dependency_links.txt
+uniform.egg-info/requires.txt
+uniform.egg-info/top_level.txt

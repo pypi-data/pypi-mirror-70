@@ -1,0 +1,15 @@
+fitsgeo/__init__.py,sha256=DPwlC-TDo_KTWH3MLVReB5IoERAdV59PMO0QH4F6r08,268
+fitsgeo/const.py,sha256=gwp2EyAK4r9Y4FdptomQf9PjI-Lys3rWAoLKEXknz3o,3347
+fitsgeo/export.py,sha256=E7hrJp1xPnO4f10UfOcyIRpyAxvXu4cjPQ7uhmA1E7Q,2296
+fitsgeo/material.py,sha256=_t1rGkdT15323y1kUQANbvHxIv4Mx0fKaVOjeXgzxac,6162
+fitsgeo/surface.py,sha256=WRUR80n7RZ3uLTYyj9_z66HLvVnMPF4QM4E8Ga9PmOs,69201
+fitsgeo/transform.py,sha256=f6k19iTKBdPFJwAlHfRdAsP4Ik14Sd-_4WH_FN--2fY,30
+fitsgeo/data/GDATABASE.dat,sha256=Tx-zEYwV_SrmMnh8KF1_4-jV0cwI1wGjw8FgX6Ngoz4,15712
+fitsgeo/data/PTABLE.dat,sha256=nzOttUEghRB8rkT450may7erE4jA33GRQ_ZtLo7r6Ag,39072
+fitsgeo/data/PTDATABASE.dat,sha256=rBo_0uWfA-rCgOVRFWY5Pd5jJNL2EwGvlE_Tvqq1k-g,2417
+fitsgeo/data/SDATABASE.dat,sha256=_f81sHThJDAJPjdYULVe_PUYydALPjmKyCe2eSplWmM,16641
+FitsGeo-0.3.3.dist-info/LICENSE.txt,sha256=AsvxkBI3rpaO56qjk1kbqxv_CYb1ju7U-W5uR58AqXQ,1076
+FitsGeo-0.3.3.dist-info/METADATA,sha256=IVU8IQ9U1804QBfUlOwuGIee42poxfcYdHu7gYI4tbw,2379
+FitsGeo-0.3.3.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+FitsGeo-0.3.3.dist-info/top_level.txt,sha256=FdK-T0nENLSNV07pcSJH7K6Sz02vQ_-R-9z43rsh5hA,8
+FitsGeo-0.3.3.dist-info/RECORD,,

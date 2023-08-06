@@ -1,0 +1,6 @@
+ubermagutil
+matplotlib
+jupyterlab
+seaborn
+h5py
+k3d

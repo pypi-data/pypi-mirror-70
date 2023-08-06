@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: sailshape
+Version: 0.1
+Summary: Simple package to compute the shape of a heavily tensioned sail in a two dimensional uniform flow
+Home-page: https://github.com/Popeyef5/sailshape
+Author: Gaston Maffei
+Author-email: gastonmaffei@gmail.com
+License: MIT
+Download-URL: https://github.com/Popeyef5/sailshape/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Physics,Flow,Sail
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9

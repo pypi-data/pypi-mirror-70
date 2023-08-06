@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+pyspass/__init__.py
+pyspass/pyspass.py
+pyspass.egg-info/PKG-INFO
+pyspass.egg-info/SOURCES.txt
+pyspass.egg-info/dependency_links.txt
+pyspass.egg-info/top_level.txt

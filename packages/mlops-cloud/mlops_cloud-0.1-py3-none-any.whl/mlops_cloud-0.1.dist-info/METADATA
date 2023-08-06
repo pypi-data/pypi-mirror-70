@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: mlops-cloud
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://github.com/mlops-cloud/sdk
+Author: Petter Gustafsson
+Author-email: petter@mlops.cloud
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: gql (==2.0.0)
+Requires-Dist: pandas (==1.0.4)
+Requires-Dist: joblib (==0.15.1)
+Requires-Dist: torch (==1.5.0)
+Requires-Dist: tensorflow (==2.1.0)
+Requires-Dist: scikit-learn (==0.23.1)
+Requires-Dist: pyspark (==2.4.3)
+
+# sdk
+Test
+
+The MLOps SDK
+
+

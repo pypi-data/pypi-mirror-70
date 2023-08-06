@@ -1,0 +1,77 @@
+Metadata-Version: 1.2
+Name: distributions-study
+Version: 1.7
+Summary: Gaussian and Binomial distributions
+Home-page: UNKNOWN
+Author: Shivtej Shete
+Author-email: shivtej.shete@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Description: distributions_study
+        -------------------
+        
+        distributions_study is a Python library for dealing with Gaussian and
+        Binomial Distribution and allows you to perform analysis of both. For
+        extensions, you can read the data from txt file for both the
+        distribution types. Analysis of the data will be easy with the help of
+        different methods this package contains
+        
+        ::
+        
+           1. calculate_mean
+           2. calculate_stdev
+           3. pdf
+           4. plot_bar  #for binomial distribution
+           5. plot_histogram #for Gaussian distribution
+           6. plot_bar_pdf #plotting PDF for Binomial distribution
+           7. plot_histogram_pdf   #plotting PDF for Gaussian distribution
+           8. read_data_file  #for reading the .txt file 
+        
+           Data formats for txt file
+        
+           1. Gaussian : comma separated values
+           2. Binomial : 0,1 list of experiment outcomes 
+        
+        Installation
+        ------------
+        
+        Use the package manager `pip`_ to install distributions_study.
+        
+        .. code:: bash
+        
+           pip install distributions_study
+        
+        Usage
+        -----
+        
+        .. code:: python
+        
+           import distributions_study
+        
+        .. code:: python
+        
+           distributions_study.Gaussian(10,4) # returns Gaussian distribution object with mean 10, standard deviation 4
+        
+        .. code:: python
+        
+           distributions_study.Binomial(0.4,25) # returns Binomial distribution object with success event probability 0.4, size of distribution 25
+        
+        Contributing
+        ------------
+        
+        Pull requests are welcome. For major changes, please open an issue first
+        to discuss what you would like to change.
+        
+        Please make sure to update tests as appropriate.
+        
+        License
+        -------
+        
+        `MIT`_
+        
+        .. _pip: https://pip.pypa.io/en/stable/
+        .. _MIT: https://choosealicense.com/licenses/mit/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6.3

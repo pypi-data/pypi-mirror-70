@@ -1,0 +1,4 @@
+cookiecutter==1.7.2
+jinja2-time==0.2.0docker==4.2.0
+sphinx==3.0.2
+sphinx-rtd-theme==0.4.3

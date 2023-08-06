@@ -1,0 +1,165 @@
+=====
+Scruf
+=====
+
+.. image:: https://gitlab.com/matthewhughes/scruf/badges/master/pipeline.svg
+    :target: https://gitlab.com/group-name/project-name/commits/master
+    :alt: pipeline status
+
+.. image:: https://gitlab.com/matthewhughes/scruf/badges/master/coverage.svg
+   :target: https://gitlab.com/matthewhughes/scruf/-/commits/master)
+   :alt: coverage report
+
+Scruf is a functional testing framework for command line applications. It is
+heavily inspired by cram_. This is currently early in development and while I
+aim to maintain the current interface breaking changes may occur.
+
+.. _cram: https://bitheap.org/cram/
+
+Test Structure
+==============
+
+This is a summary of the structure of tests expected by ``scruf``, these tests
+contain:
+
+* An optional description_
+* A command_ to run
+* An `output specification`_ to compare against the result of running the
+  command.
+
+There are examples, run as part of the test suite, present under ``examples/``
+
+Comments
+--------
+
+Any line beginning with a ``#`` is treated as a comment, as is ignored.
+
+.. _description:
+
+Test Descriptions
+-----------------
+
+Non-comment lines beginning with any non-space character are interpreted as
+descriptions. These are used as descriptions in the test output
+
+For example::
+
+   # This is a comment
+   This would be be a test description
+
+.. _command:
+
+Test Commands
+-------------
+
+Commands are specified by a line indented (by default with 4 spaces, but this
+can be configured with the ``--indent`` option) followed by ``$``. Building on
+our example::
+
+   # This is a comment
+   This would be a test description
+        $ cat my_file
+
+Commands can continued over more than one lines, such continuations are marked
+by an indented line beginning with ``>``, e.g.::
+
+   Concatentate two files
+       $ cat first_file
+       > second_file
+
+This would be equivalent to::
+
+   Concatenate two files
+       $ cat first_file second_file
+
+.. _output specification:
+
+Testing Output
+--------------
+
+Output is defined by a indented line beginning with anything other than ``$``
+or ``>``. The simplest comparison that can be made on output is a direct
+comparison on contents, for example::
+
+   'printf' should format text
+       $ printf "Hello, world!\nThis is a test!\n"
+       Hello, world!
+       This is a test!
+
+Stream Specification
+~~~~~~~~~~~~~~~~~~~~
+
+The output stream, standard out or standard error, can be specified by
+prefixing an output line with ``1:`` or ``2:`` respectively, for example::
+
+   'printf' prints to stdout
+       $ printf "Off I go\n"
+       1: Off I go
+
+   Output can be redirected
+       $ printf "Error!\n" >&2
+       2: Error!
+       
+Regex Comparisons
+~~~~~~~~~~~~~~~~~
+
+Output can be compared against a provided regex using the flag: ``[RE]``, for
+example::
+
+   Printing numbers
+       $ echo '1234'
+       [RE] ^\d+$
+
+To combine this with stream specification simply specify the stream before the
+regex flag::
+
+   Numbers to stderr
+       $ echo '1234' >&2
+       2:[RE] ^\d+$
+
+
+Comparisons Without End-Of-Line Characters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An output line without a line ending can be tested using the No End of Line
+flag: ``[NEoL]``, for example::
+
+   'printf' doesn't add newlines
+       $ printf "Hello, world"
+       [NEoL] Hello, world
+
+
+Exit Code Comparisons
+~~~~~~~~~~~~~~~~~~~~~
+
+Line's which contain only an integer contained in ``[]`` are used to test the
+exit code of a command, for example::
+
+   # Intentionally disregard output
+   'echo' exits with 0 on success
+       $ echo "Everything is ok"
+       [0]
+
+   'exit' sets the exit code
+       $ exit 1
+       [1]
+
+Combining Comparisons
+~~~~~~~~~~~~~~~~~~~~~
+
+Any combination of comparisons can be used within a single test::
+
+   Printf with varied output   
+       $ printf "Lots of interesting output\n12345\nIn this test"
+       1: Lots of interesting output
+       [RE] ^[0-9]+$
+       [NEoL] In this test
+       [0]
+
+Scruf Output
+============
+
+By default ``scruf`` will output results following TAP_ (Test Anything
+Protocol). Other formats, e.g. JUnit should be coming in the future.
+
+.. _TAP: http://testanything.org

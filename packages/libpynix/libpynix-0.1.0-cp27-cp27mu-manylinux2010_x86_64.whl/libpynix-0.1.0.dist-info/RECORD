@@ -1,0 +1,9 @@
+_pynix.so,sha256=nRe1hBt2PKlmtvU0W2jz6JDbH1zbGsQqNqP76ZBS5H4,230928
+libpynix-0.1.0.dist-info/RECORD,,
+libpynix-0.1.0.dist-info/METADATA,sha256=bhUqC6DSkbsP0jbMcHRsPgiD3lWHbsT845PPUZahjuk,2143
+libpynix-0.1.0.dist-info/top_level.txt,sha256=P3Ag7uKQtKwm4Nsd9ZRw8ureD6zZCUlomYX7ell5KjA,13
+libpynix-0.1.0.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+libpynix-0.1.0.dist-info/WHEEL,sha256=pe6t0RNHCRS5q79HOdL_EzfTLBzu8gAplWB_v766cBw,113
+pynix/__main__.py,sha256=-nqXbiL_vCg97UVnXLvqjXZH4AhvLa8AHObvxtiSiA4,282
+pynix/__init__.py,sha256=gZ-fPGz3NIfNH5BzfmwQon-yiOsFQyZUpeIe__7Bm0E,64
+pynix/tests.py,sha256=bV94ZmfOmGMoU1ZFFCq-LoS7ruAWMG4lkLjnDzRbdHU,5898

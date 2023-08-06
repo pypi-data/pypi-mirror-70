@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/antee/c_header_macro_generator/__init__.py
+src/antee/c_header_macro_generator/generator.py
+src/antee_c_header_macro_generator.egg-info/PKG-INFO
+src/antee_c_header_macro_generator.egg-info/SOURCES.txt
+src/antee_c_header_macro_generator.egg-info/dependency_links.txt
+src/antee_c_header_macro_generator.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: antee-c-header-macro-generator
+Version: 1.0.0
+Summary: C header macro name generator
+Home-page: https://github.com/zhangyiant/c_header_macro_generator
+Author: Yi Zhang
+Author-email: zhangyiant@hotmail.com
+License: UNKNOWN
+Description: # c_header_macro_generator
+            Generate name of Macro which is used in C/CPP header file according to header file name.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

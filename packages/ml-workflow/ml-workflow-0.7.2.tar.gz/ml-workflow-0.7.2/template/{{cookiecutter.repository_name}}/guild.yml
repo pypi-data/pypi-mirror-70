@@ -1,0 +1,55 @@
+- package: {{cookiecutter.package_name}}
+  python-requires: ==3.8
+
+- model: {{cookiecutter.model_name}}
+  sourcecode:
+    - '*.py'
+    - guild.yml
+    - exclude:
+        dir:
+          - input
+          - tb
+          - checkpoints
+  operations:
+    prepare:
+      main: prepare
+      flags-import: all
+      output-scalars: off
+    train:
+      main: train
+      flags-import: all
+      output-scalars: off
+      requires:
+        - prepare
+        - train_split
+    retrain:
+      main: train
+      flags-import: all
+      output-scalars: off
+      requires:
+        - model
+        - prepare
+        - train_split
+    evaluate:
+      main: evaluate
+      flags-import: all
+      output-scalars: off
+      requires:
+        - model
+        - prepare
+        - train_split
+  resources:
+    model:
+      name: model
+      path: model
+      sources:
+        - operation: train|retrain
+    prepare:
+      name: prepare
+      path: .
+      sources:
+        - operation: prepare
+    train_split:
+      path: {{cookiecutter.package_name}}/data
+      sources:
+        - {{cookiecutter.package_name}}/data

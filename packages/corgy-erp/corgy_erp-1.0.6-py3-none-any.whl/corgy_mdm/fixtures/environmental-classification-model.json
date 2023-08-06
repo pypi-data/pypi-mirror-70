@@ -1,0 +1,191 @@
+[
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "e8512d82-145b-4aa6-b981-46a75611b4ec",
+        "code": "0",
+        "name": "Kataliz\u00e1tor n\u00e9lk\u00fcli"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "bbaaf5f2-a6d9-4e3c-9624-05f571d096ce",
+        "code": "1",
+        "name": "Kataliz\u00e1toros, nem szab\u00e1lyozott kever\u00e9kk\u00e9pz\u00e9s\u0171, Otto-motoros"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "584486a8-854b-476c-b534-d939110a76c9",
+        "code": "2",
+        "name": "Kataliz\u00e1toros, szab\u00e1lyozott kever\u00e9kk\u00e9pz\u00e9s\u0171, Otto-motoros [kiv\u00e9ve a 4. oszt\u00e1lyba sorolt ENSZ-EGB 83.0"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "c8426918-a663-43a5-8280-efb8c9b3dfbc",
+        "code": "3",
+        "name": "Az ENSZ-EGB 83.01/C, vagy 49.02/A el\u0151\u00edr\u00e1s (Euro 1) szerinti j\u00f3v\u00e1hagy\u00e1si jellel ell\u00e1tott, D\u00edzel-motor"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "8255d8ab-ea7b-4ef7-8a0b-90d7cdf97292",
+        "code": "4",
+        "name": "Az ENSZ-EGB 83.02/B. el\u0151\u00edr\u00e1s (Euro 2) szerinti j\u00f3v\u00e1hagy\u00e1si jellel ell\u00e1tott - kataliz\u00e1toros, szab\u00e1lyo"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "29e0839a-8977-4ce4-a7c2-45ff708dad09",
+        "code": "5",
+        "name": "Tiszta g\u00e1z\u00fczem\u0171- vagy elektromos meghajt\u00e1s\u00fa, illet\u0151leg hibrid (a g\u00e9pj\u00e1rm\u0171vet meghajt\u00f3 elektromos-, v"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "6ca68a43-c807-4c68-b06a-2758e54b0e01",
+        "code": "5E",
+        "name": "Tiszt\u00e1n elektromos g\u00e9pkocsi"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "30c74671-8b63-432a-9445-c86f3849e904",
+        "code": "5N",
+        "name": "N\u00f6velt hat\u00f3t\u00e1vols\u00e1g\u00fa k\u00fcls\u0151 t\u00f6lt\u00e9s\u0171 hibrid elektromos g\u00e9pkocsi"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "3521e0d9-b56e-4b26-bdd1-5e4e88180d0a",
+        "code": "5P",
+        "name": "K\u00fcls\u0151 t\u00f6lt\u00e9s\u0171 hibrid elektromos g\u00e9pkocsi (plug-in hibrid g\u00e9pkocsi)"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 10,
+    "fields": {
+        "prime_number": "b389e8ab-faee-47ad-9b15-a79509b6bd51",
+        "code": "5Z",
+        "name": "Egy\u00e9b nulla emisszi\u00f3s g\u00e9pkocsi"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 11,
+    "fields": {
+        "prime_number": "2435ec70-42f0-4735-b157-31e80bd12030",
+        "code": "6",
+        "name": "Kataliz\u00e1toros, szab\u00e1lyozott kever\u00e9kk\u00e9pz\u00e9s\u0171, az ENSZ-EGB 83.05 el\u0151\u00edr\u00e1s B j\u00f3v\u00e1hagy\u00e1s A. szintje2 szeri"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 12,
+    "fields": {
+        "prime_number": "9793ce8e-53d7-45ff-80ad-6e7fcc079c8c",
+        "code": "7",
+        "name": "Az ENSZ-EGB 83.05 el\u0151\u00edr\u00e1s C \u00e9s D j\u00f3v\u00e1hagy\u00e1s (A)2, illet\u0151leg a 49.03 el\u0151\u00edr\u00e1s I. j\u00f3v\u00e1hagy\u00e1s \u00e9s 51.02 e"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 13,
+    "fields": {
+        "prime_number": "4ad46789-e9c2-4422-89ad-271a6eafaeaa",
+        "code": "8",
+        "name": "Az ENSZ-EGB 83.05 el\u0151\u00edr\u00e1s C \u00e9s D j\u00f3v\u00e1hagy\u00e1s (A), vagy 49.03 el\u0151\u00edr\u00e1s I. j\u00f3v\u00e1hagy\u00e1s \u00e9s 51.02 el\u0151\u00edr\u00e1s s"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 14,
+    "fields": {
+        "prime_number": "2b38826f-184d-491f-a2f1-b7539e71c7fd",
+        "code": "9",
+        "name": "Kataliz\u00e1toros, szab\u00e1lyozott kever\u00e9kk\u00e9pz\u00e9s\u0171, az ENSZ-EGB 83.05 el\u0151\u00edr\u00e1s B j\u00f3v\u00e1hagy\u00e1s B. szintje szerin"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 15,
+    "fields": {
+        "prime_number": "931158a9-f339-4ee1-896a-889e60c80b5d",
+        "code": "10",
+        "name": "Az ENSZ-EGB 83.05 el\u0151\u00edr\u00e1s C j\u00f3v\u00e1hagy\u00e1s (B)4 \u00e9s 51.02 el\u0151\u00edr\u00e1s szerinti j\u00f3v\u00e1hagy\u00e1si jellel, OBD-rendsz"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 16,
+    "fields": {
+        "prime_number": "898f021d-038a-4e5e-a3db-9bd02962305c",
+        "code": "11",
+        "name": "Az ENSZ-EGB 49.03 el\u0151\u00edr\u00e1s II j\u00f3v\u00e1hagy\u00e1s \u00e9s 51.02 el\u0151\u00edr\u00e1s szerinti j\u00f3v\u00e1hagy\u00e1si jellel, OBD-rendszerre"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 17,
+    "fields": {
+        "prime_number": "bca3a0c6-a56e-4dd9-97b8-657ae8dcb2b8",
+        "code": "12",
+        "name": "Az ENSZ-EGB 49.03 el\u0151\u00edr\u00e1s III j\u00f3v\u00e1hagy\u00e1s \u00e9s 51.02 el\u0151\u00edr\u00e1s szerinti j\u00f3v\u00e1hagy\u00e1si jellel, OBD-rendszerr"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 18,
+    "fields": {
+        "prime_number": "769a27bf-2227-4cd7-90e9-a2e6655c96c7",
+        "code": "13",
+        "name": "Az ENSZ-EGB 49.03 el\u0151\u00edr\u00e1s IV j\u00f3v\u00e1hagy\u00e1s \u00e9s 51.02 el\u0151\u00edr\u00e1s szerinti j\u00f3v\u00e1hagy\u00e1si jellel, OBD-rendszerre"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 19,
+    "fields": {
+        "prime_number": "6bd42b81-b3a0-40f6-86fc-27787d8dfcb1",
+        "code": "14",
+        "name": "A 692/2008/EK \u00e9s a 566/2011/EU bizotts\u00e1gi rendelettel m\u00f3dos\u00edtott 715/2007/EK parlamenti \u00e9s tan\u00e1csi r"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 20,
+    "fields": {
+        "prime_number": "a6dcd7c3-3a93-4ceb-b027-d5ace432ad87",
+        "code": "15",
+        "name": "A 692/2008/EK, a 566/2011/EU \u00e9s a 459/2012/EU bizotts\u00e1gi rendelettel m\u00f3dos\u00edtott 715/2007/EK parlamen"
+    }
+},
+{
+    "model": "corgy_mdm.environmentalclassificationmodel",
+    "pk": 21,
+    "fields": {
+        "prime_number": "e0de9a5f-5de3-4f24-93a3-bf9695b7a05a",
+        "code": "16",
+        "name": "Az 582/2011/EU bizotts\u00e1gi rendelettel m\u00f3dos\u00edtott 595/2009/EK eur\u00f3pai parlamenti \u00e9s tan\u00e1csi rendelet"
+    }
+}
+]

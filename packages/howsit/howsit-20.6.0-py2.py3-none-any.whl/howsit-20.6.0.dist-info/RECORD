@@ -1,0 +1,12 @@
+howsit/__init__.py,sha256=vWqtqllYOf6IBKLwucUHJizYSFCtFpe-oqeUJjgRNBA,195
+howsit/__main__.py,sha256=eOyCKRgFQGtKwJh1ePuN3_6QODQ4AiXXSu2LMeaXzog,227
+howsit/_version.py,sha256=X52mWlfYzpkRznUXGG6j_uFegw66LjiOtYxlMDTYue4,257
+howsit/main.py,sha256=nBzPIJ8TRhvFnS1cmyQa7U070m7PGdQ6EQvz06QhURM,244
+howsit/parse.py,sha256=YSnkFQuW6EPx1tOt9cM6b_w9H-0ICzmmRBFFSyBVisY,1168
+howsit/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+howsit/test/self_test.py,sha256=L_lrISkDb_pin-KbAeRj2p58xsAXlGebO2isjwnZqDg,1048
+howsit/test/test_parse.py,sha256=q5zOBQvkwrhAhZxnvfUsNuaeDdqU1K2sj_zY_QFTFUk,2552
+howsit-20.6.0.dist-info/METADATA,sha256=VTsDJwzRM7VxLZKVKZNJmOj0bEg8npL6wdAojeZz2Zo,326
+howsit-20.6.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+howsit-20.6.0.dist-info/top_level.txt,sha256=pW-LiY0j7gsE17x5yiNlVHaSMTlmUe0gEygBtdOfPR8,7
+howsit-20.6.0.dist-info/RECORD,,

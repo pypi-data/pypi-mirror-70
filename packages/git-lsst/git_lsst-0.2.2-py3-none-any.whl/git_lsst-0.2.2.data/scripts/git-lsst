@@ -1,0 +1,474 @@
+#!python
+from __future__ import annotations
+
+from typing import List, Optional
+
+import argparse
+import configparser
+import github
+import giturlparse
+import jira
+import os.path
+import subprocess
+import tempfile
+
+
+def main():
+    parser = argparse.ArgumentParser(prog="git-lsst")
+    parser.add_argument(
+        "-c",
+        "--config",
+        default="~/.config/git-lsst.conf",
+        type=str,
+        help="config file with Jira auth information",
+    )
+    subparsers = parser.add_subparsers(title="subcommands", dest="subcommand")
+
+    create_ticket_cmd = subparsers.add_parser(
+        "create-ticket", help="create a new ticket",
+    )
+    create_ticket_cmd.add_argument(
+        "--summary", help="text summary for the ticket"
+    )
+    create_ticket_cmd.add_argument(
+        "--description", help="full description in the ticket",
+    )
+    create_ticket_cmd.add_argument(
+        "--project",
+        default="DM",
+        help="ID of the project to create a ticket under"
+    )
+    create_ticket_cmd.add_argument(
+        "--component",
+        help="name of a component to reference in the ticket",
+    )
+    create_ticket_cmd.add_argument(
+        "--assignee",
+        help="name of the user to assign (default: assign yourself)",
+    )
+    create_ticket_cmd.add_argument(
+        "--story-points", type=float, help="number of story points for the ticket"
+    )
+
+    start_ticket_cmd = subparsers.add_parser(
+        "start-ticket", help="start work on a ticket"
+    )
+
+    start_ticket_cmd.add_argument(
+        "--ticket",
+        help="Key of the ticket to work on (eg 'DM-24500')",
+        required=True,
+    )
+
+    subparsers.add_parser(
+        "draft-pr", help="write a draft PR in Github without requesting a review",
+    )
+
+    request_review_cmd = subparsers.add_parser(
+        "request-review", help="request a review of the active ticket's state",
+    )
+    request_review_cmd.add_argument(
+        "--github-reviewer",
+        help="Github username of a reviewer for the PR",
+        required=True,
+    )
+    request_review_cmd.add_argument(
+        "--jira-reviewer",
+        help="JIRA username, name, or email of a reviewer for the ticket",
+        required=True,
+    )
+
+    merge_cmd = subparsers.add_parser(
+        "merge", help="merge a PR and mark a ticket as done",
+    )
+    merge_cmd.add_argument(
+        "--merge-pr-only",
+        help="Only merge the PR, don't mark the Jira ticket as done",
+        action="store_true",
+    )
+
+    list_cmd = subparsers.add_parser("list", help="list Jira tickets")
+    list_cmd.add_argument(
+        "-S, --status",
+        action="append",
+        dest="statuses",
+        help="only list issues which match this status. Can be specified "
+        + "multiple times, which will list issues that match any of the "
+        + "specified statuses. By default, everything but Done is listed.",
+    )
+    list_cmd.add_argument(
+        "--to-do",
+        action="append_const",
+        dest="statuses",
+        const="To Do",
+        help="alias for --status 'To Do'",
+    )
+    list_cmd.add_argument(
+        "--in-progress",
+        action="append_const",
+        dest="statuses",
+        const="In Progress",
+        help="alias for --status 'In Progress'",
+    )
+    list_cmd.add_argument(
+        "--in-review",
+        action="append_const",
+        dest="statuses",
+        const="In Review",
+        help="alias for --status 'In Review'",
+    )
+    list_cmd.add_argument(
+        "--reviewed",
+        action="append_const",
+        dest="statuses",
+        const="Reviewed",
+        help="alias for --status 'Reviewed'",
+    )
+    list_cmd.add_argument(
+        "--done",
+        action="append_const",
+        dest="statuses",
+        const="Done",
+        help="alias for --status 'Done'",
+    )
+
+    args = parser.parse_args()
+
+    jira_client = connect_jira(args.config)
+    github_client = connect_github(args.config)
+    if args.subcommand == "create-ticket":
+        run_create_ticket_cmd(jira_client, args.summary, args.description,
+                              args.project, args.assignee,
+                              args.component, args.story_points)
+    elif args.subcommand == "start-ticket":
+        run_start_ticket_cmd(jira_client, args.ticket)
+
+    elif args.subcommand == "draft-pr":
+        run_draft_pr_cmd(jira_client, github_client, draft=True)
+
+    elif args.subcommand == "request-review":
+        run_request_review_cmd(
+            jira_client, github_client, args.github_reviewer, args.jira_reviewer
+        )
+
+    elif args.subcommand == "merge":
+        run_merge_cmd(jira_client, github_client, args.merge_pr_only)
+
+    elif args.subcommand == "list":
+        run_list_cmd(jira_client, args.statuses)
+
+    else:
+        parser.print_help()
+
+
+def connect_jira(config_file: str) -> jira.JIRA:
+    config = configparser.ConfigParser()
+    config.read(os.path.expanduser(config_file))
+    return jira.JIRA(
+        "https://jira.lsstcorp.org/",
+        basic_auth=(config["jira"]["username"], config["jira"]["password"]),
+    )
+
+
+def connect_github(config_file: str) -> github.Github:
+    config = configparser.ConfigParser()
+    config.read(os.path.expanduser(config_file))
+
+    gh_conf = config["github"]
+    if "token" in gh_conf:
+        return github.Github(gh_conf["token"])
+    else:
+        return github.Github(gh_conf["username"], gh_conf["password"])
+
+
+def list_tickets(jira_client: jira.JIRA, statuses: List[str]) -> List[jira.Issue]:
+    query = "assignee=currentUser()"
+    if statuses is not None and len(statuses) > 0:
+        status_filters = " OR ".join([f'status="{s}"' for s in statuses])
+        query += f" AND ({status_filters})"
+    else:
+        query += " AND status!=\"Done\" AND status!=\"Adopted\""
+
+    issues = jira_client.search_issues(query)
+    issues = sorted(issues, key=lambda x: x.fields.status.name + x.key)
+    return issues
+
+
+def get_issue(jira_client: jira.JIRA, ticket_id: str) -> jira.Issue:
+    return jira_client.issue(ticket_id)
+
+
+def run_list_cmd(jira_client: jira.JIRA, statuses: List[str]):
+    issues = list_tickets(jira_client, statuses)
+    for issue in issues:
+        print(f"{issue.key} - {issue.fields.status.name} - {issue.fields.summary}")
+
+
+def run_start_ticket_cmd(jira_client: jira.JIRA, ticket_id: Optional[str] = None):
+    if ticket_id is None:
+        issues = list_tickets(
+            jira_client, ["To Do", "In Progress", "In Review", "Reviewed"]
+        )
+        for i, issue in enumerate(issues):
+            print(
+                f"[{i}]\t{issue.key} - {issue.fields.status.name} - {issue.fields.summary}"
+            )
+        choice = input("Choose an issue to work on: ")
+        chosen = dict(enumerate(issues))[int(choice)]
+        ticket_id = f"{chosen.key}"
+    branch_name = f"tickets/{ticket_id}"
+    git("checkout", "master")
+    git("fetch")
+    git("pull", "origin", "master")
+    git("checkout", "-b", branch_name)
+    git("push", "origin", branch_name)
+    print()
+    print(f"marking ticket {ticket_id} as 'In Progress'")
+    jira_client.transition_issue(ticket_id, "In Progress")
+
+
+def current_branch_name() -> str:
+    return git_output("rev-parse", "--abbrev-ref", "HEAD").strip()
+
+
+def current_repo() -> str:
+    raw_url = git_output("remote", "get-url", "origin")
+    parsed = giturlparse.parse(raw_url)
+    return parsed.owner + "/" + parsed.repo
+
+
+def current_ticket() -> str:
+    prefix, ticket_id = current_branch_name().split("/", 1)
+    assert prefix == "tickets"
+    return ticket_id.strip()
+
+
+def get_jira_user(jira_client: jira.JIRA, name: str) -> jira.User:
+    jira_users = list(jira_client.search_users(name))
+    if len(jira_users) == 0:
+        raise ValueError(f"No users found in Jira that match {name}")
+    if len(jira_users) == 1:
+        return jira_users[0]
+    if len(jira_users) > 1:
+        enumerated = enumerate(sorted(jira_users, key=lambda x: x.key))
+        print("Multiple Jira users match as reviewer, choose one:")
+        for i, u in enumerated:
+            active_str = "Active" if u.active else "Inactive"
+            print(f"[{i}] - {u.displayName} {u.key} {u.email} {active_str}")
+        choice = input("Pick a user by number: ")
+        chosen = dict(enumerated)[int(choice)]
+        return chosen
+
+
+def set_jira_reviewer(
+    jira_client: jira.JIRA, issue: jira.Issue, reviewer: jira.User
+) -> None:
+
+    transitions = jira_client.transitions(issue, expand="transitions.fields")
+    for t in transitions:
+        if t['name'] == 'Ask For Review':
+            ask_for_review_transition = t
+            break
+    else:
+        transition_names = [t['name'] for t in transitions]
+        raise ValueError(f"ticket {issue.id} doesn't have an 'Ask For Review' transition from its current state, it only has {transition_names}")
+
+    for field_id, field in ask_for_review_transition['fields'].items():
+        if field['name'] == 'Reviewers':
+            reviewer_field_id = field_id
+            break
+    else:
+        field_names = [f['name'] for f in ask_for_review_transition['fields']]
+        raise ValueError(f"cannot find 'Reviewers' field when transitioning to 'Ask For Review' state, only found {field_names}")
+
+    jira_client.transition_issue(
+        issue.id,
+        ask_for_review_transition['id'],
+        fields={reviewer_field_id:[{"name": reviewer.name}]},
+    )
+
+
+def run_request_review_cmd(
+    jira_client: jira.JIRA,
+    github_client: github.Github,
+    gh_reviewer: str,
+    jira_reviewer: str,
+):
+    git("push", "origin", current_branch_name())
+
+    ticket_id = current_ticket()
+    issue = get_issue(jira_client, ticket_id)
+    jira_user = get_jira_user(jira_client, jira_reviewer)
+    set_jira_reviewer(jira_client, issue, jira_user)
+
+    repo_name = current_repo()
+    # TODO: Double check that user is a part of LSST
+    repo = github_client.get_repo(repo_name)
+    prs = list(repo.get_pulls(head=current_branch_name()))
+    if len(prs) == 0:
+        pr = send_pr(github_client, issue, reviewer=gh_reviewer, draft=False)
+    elif len(prs) == 1:
+        pr = prs[0]
+    else:
+        raise ValueError("Multiple PRs are open for this ticket")
+
+    print(f"PR created: {pr.html_url}")
+    pr.create_review_request(reviewers=[gh_reviewer])
+    print(f"Assigned {gh_reviewer} to review {pr}")
+
+
+def run_draft_pr_cmd(jira_client: jira.JIRA, github_client: github.Github, draft: bool = True):
+    ticket_id = current_ticket()
+    issue = get_issue(jira_client, ticket_id)
+    git("push", "origin", current_branch_name())
+    pr = send_pr(github_client, issue, draft=draft)
+    print(f"PR created: {pr.html_url}")
+
+
+def run_merge_cmd(
+    jira_client: jira.JIRA, gh_client: github.Github, merge_pr_only: bool = False
+):
+    print("Did you remember to test this in Jenkins, if appropriate?")
+    response = input("y/n")
+    if response != "y" and response != "n":
+        print("Please respond with 'y' or 'n'.")
+        sys.exit(1)
+    if response == "n":
+        print("Go to https://developer.lsst.io/stack/jenkins-stack-os-matrix.html")
+        sys.exit(1)
+
+    # TODO: Check that PR has been approved
+    ticket_branch = current_branch_name()
+    ticket_id = current_ticket()
+    git("checkout", "master")
+    git("merge", "--no-ff", ticket_branch)
+    git("push", "origin", "master")
+
+    if not merge_pr_only:
+        jira_client.transition_issue(ticket_id, "Done")
+
+
+def send_pr(github_client: github.Github, issue: jira.Issue, draft: bool = False) -> github.PullRequest:
+    repo_name = current_repo()
+    repo = github_client.get_repo(repo_name)
+
+    message = editor(pr_message_template(issue)).strip()
+
+    if len(message) == 0:
+        print("got an empty message, aborting")
+        sys.exit(1)
+    split_message = message.splitlines()
+    title = split_message[0]
+    if len(title) == 0:
+        print("got an empty title, aborting")
+        sys.exit(1)
+
+    # Trim out leading empty lines
+    message_start_line = 1
+    for line in split_message[1:]:
+        if line.strip() == "":
+            message_start_line += 1
+        else:
+            break
+    body = "\n".join(split_message[message_start_line:])
+
+    return repo.create_pull(
+        title=title,
+        body=body,
+        head=current_branch_name(),
+        base="master",
+        draft=draft,
+    )
+
+
+def pr_message_template(jira_issue):
+    return f"""{jira_issue.key}: {jira_issue.fields.summary}
+
+#### Ticket:
+[{jira_issue.key}]({jira_issue.permalink()})
+
+{jira_issue.fields.description}
+"""
+
+
+def run_create_ticket_cmd(jira_client: jira.JIRA, summary: str, description: str,
+                          project: str, assignee: str, component: str, story_points: float):
+    if assignee is None:
+        assignee = jira_client.current_user()
+    tpl = new_issue_template(summary, description, project, assignee, story_points, component)
+
+    issue = editor(tpl)
+
+    rawmeta, rawbody = issue.split("---", 1)
+
+    config = configparser.ConfigParser()
+    config.read_string(rawmeta)
+    meta = config["meta"]
+
+    split_body = rawbody.splitlines()
+    print(split_body)
+
+    # Trim out leading empty lines
+    message_start_line = 0
+    for line in split_body:
+        if line.strip() == "":
+            message_start_line += 1
+        else:
+            break
+    split_body = split_body[message_start_line:]
+
+    summary = split_body[0].strip()
+    description = ("\n".join(split_body[1:])).strip()
+
+    fields = {
+        "project": meta["project"],
+        "issuetype": meta["issuetype"],
+        "assignee": {"name": meta["assignee"]},
+        "customfield_10202": float(meta["storypoints"]),
+        "components": [{"name": meta["component"]}],
+        "summary": summary,
+        "description": description,
+    }
+    issue = jira_client.create_issue(fields)
+    print(f"issue created: https://jira.lsstcorp.org/browse/{issue.key}")
+
+
+def new_issue_template(summary: str, description: str, project: str,
+                       assignee: str, points: float, component: str) -> str:
+    return f"""[meta]
+project={project}
+issuetype=Story
+assignee={assignee or ""}
+storypoints={points or ""}
+component={component or ""}
+---
+{summary or "[One-line summary here]"}
+
+{description or "[Full description here]"}
+"""
+
+
+def editor(template: str) -> str:
+    """Open 'template' in EDITOR, and return the edited value."""
+    editor = os.environ.get("EDITOR", "vim")
+    with tempfile.NamedTemporaryFile(suffix=".tmp", mode="w+") as f:
+        f.write(template)
+        f.flush()
+        subprocess.run(editor + " " + f.name, shell=True, check=True)
+        f.seek(0)
+        return f.read()
+
+
+def git(*args):
+    subprocess.run(["git"] + list(args), check=True)
+
+
+def git_output(*args) -> str:
+    done = subprocess.run(
+        ["git"] + list(args), capture_output=True, check=True, text=True
+    )
+    return done.stdout
+
+
+if __name__ == "__main__":
+    main()

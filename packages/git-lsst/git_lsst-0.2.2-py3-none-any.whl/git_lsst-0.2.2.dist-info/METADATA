@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: git-lsst
+Version: 0.2.2
+Summary: "Git plugin for working on LSST"
+Home-page: https://github.com/spenczar/git-lsst
+Author: Spencer Nelson
+Author-email: swnelson@uw.edu
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: PyGithub
+Requires-Dist: giturlparse
+Requires-Dist: jira
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-mypy ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+UNKNOWN
+
+

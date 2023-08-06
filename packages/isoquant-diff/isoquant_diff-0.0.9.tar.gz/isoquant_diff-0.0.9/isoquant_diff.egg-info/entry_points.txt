@@ -1,0 +1,3 @@
+[console_scripts]
+isoquant_diff_csv = isoquant_diff.isoquant_diff:csv
+

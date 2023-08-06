@@ -1,0 +1,14 @@
+pytest_pyramid/__init__.py,sha256=0TM-8nfN4-0eK2DQrvp5YmuhBtO1c1LnwtFHXfJ2vU8,286
+pytest_pyramid/factories.py,sha256=BeMGrsTN-S5Ulm18QW5UC6ZQR74k6MzXS-6tkNuyh6A,2867
+pytest_pyramid/plugin.py,sha256=4zPm8T_mpecr4Kt_Jw_vIs3I-2XflNF_RusgO0CrH0s,826
+tests/__init__.py,sha256=LxGASDu_2c3htQ7WCcfZaBNE3tQUi4JrlH5mfIpYaxg,24
+tests/app.py,sha256=W5MjntSE4v3RgDZKJiRslxg8ao7LLHM80YlT_AVnVSQ,195
+tests/conftest.py,sha256=2gktQuE--iE2zFry1i5_j6PZnsKCpOJhDHyvjaD5KRg,44
+tests/test_fixture.py,sha256=rLht_hoCcwHUQCOBsn1Knl4WLX-O8EXOix4aNfBjWS4,3250
+pytest_pyramid-0.3.3.dist-info/AUTHORS.rst,sha256=Dzd3orkqq_yiHIE1_IhV3CzI9MmYroHQ1kNn0uR14Lo,178
+pytest_pyramid-0.3.3.dist-info/LICENSE,sha256=lGpPtI4QtruNkX18GADLJ5WAMbM__h8ExQyUYjHxVAA,1176
+pytest_pyramid-0.3.3.dist-info/METADATA,sha256=el4YScYoAF9iTzCZUw2Ozp7vlkSTXxH27mIoWU18dzQ,3880
+pytest_pyramid-0.3.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytest_pyramid-0.3.3.dist-info/entry_points.txt,sha256=eSuW_jqvVcQ8nBwxU4MdAJDfKkd4xvM_gRT16y2aMDw,51
+pytest_pyramid-0.3.3.dist-info/top_level.txt,sha256=HtE2aD0se7CU3OYYUTR5AQsN-hfDlwwpwHZT-jWMic4,21
+pytest_pyramid-0.3.3.dist-info/RECORD,,

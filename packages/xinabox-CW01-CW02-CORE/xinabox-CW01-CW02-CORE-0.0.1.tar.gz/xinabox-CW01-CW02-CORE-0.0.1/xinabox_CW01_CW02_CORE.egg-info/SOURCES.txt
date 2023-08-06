@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+CW0x/__init__.py
+CW0x/xCore.py
+xinabox_CW01_CW02_CORE.egg-info/PKG-INFO
+xinabox_CW01_CW02_CORE.egg-info/SOURCES.txt
+xinabox_CW01_CW02_CORE.egg-info/dependency_links.txt
+xinabox_CW01_CW02_CORE.egg-info/top_level.txt

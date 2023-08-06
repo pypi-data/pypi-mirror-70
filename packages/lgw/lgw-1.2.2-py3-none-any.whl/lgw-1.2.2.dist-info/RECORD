@@ -1,0 +1,16 @@
+lgw/__init__.py,sha256=fcNtJssAK0a1VGvtQCTyYJzFzcKa8VdJNa-9PvmWiBw,36
+lgw/api_gateway.py,sha256=nAxrGsiyw6Xb__KGbrFjymCFYzA78dAJU8ntnBmBOKc,5773
+lgw/api_gateway_domain.py,sha256=YsrYdounqrU5BXgg8U9ubpw1biskPQDTU6wWzC9Fv8I,3585
+lgw/lambda_bundle.py,sha256=7_2VtIS8c-B3dIV5zm302GdMm4g7lIil5iKx4dObJb4,5805
+lgw/lambda_util.py,sha256=B9Pnyxf4W3Mx1XIrI5HE0j-ugu0MJdVsp2I385UFwXY,8764
+lgw/main.py,sha256=5uzlFreVzeutu_VV-yDKK2SKKBzc4stqYI0dyYGcNbc,8717
+lgw/route53.py,sha256=CW7XcoGDKULmya9Fx3y_qMTi5kJFtRDuOlofQFuBirs,2283
+lgw/s3.py,sha256=o-HlaijQuICjuhYb-rBXZX7QG0K9syqXfy35a71bJ8s,478
+lgw/settings.py,sha256=5EuqrO9teXNLq06QxGpFo0P7Huvz6cbda3nof1z8U14,1402
+lgw/util.py,sha256=ChYmthYw-3STh4RsJL1Y8qaXSXPA2YZjyZfGG4K3s0Y,284
+lgw/version.py,sha256=TyoJr5e3yETpfn6Cqp5KwpweiqaDNZKKhK7N7U81GVQ,22
+lgw-1.2.2.dist-info/entry_points.txt,sha256=QyDf_G7nECsNUbUtAGXtF5PRQumQYqABOa7CMWeZZpg,37
+lgw-1.2.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lgw-1.2.2.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+lgw-1.2.2.dist-info/METADATA,sha256=TcN9weV1mYwrzDzqvZusprZKTJ1ColVCvGyC1XIWZag,9857
+lgw-1.2.2.dist-info/RECORD,,

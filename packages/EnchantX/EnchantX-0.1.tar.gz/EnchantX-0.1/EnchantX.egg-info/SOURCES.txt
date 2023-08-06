@@ -1,0 +1,8 @@
+README.md
+setup.py
+EnchantX.egg-info/PKG-INFO
+EnchantX.egg-info/SOURCES.txt
+EnchantX.egg-info/dependency_links.txt
+EnchantX.egg-info/top_level.txt
+enchantx/__init__.py
+enchantx/vectorizer/__init__.py

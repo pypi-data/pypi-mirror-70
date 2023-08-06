@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bangladatetime/__init__.py
+bangladatetime/date.py
+bangladatetime.egg-info/PKG-INFO
+bangladatetime.egg-info/SOURCES.txt
+bangladatetime.egg-info/dependency_links.txt
+bangladatetime.egg-info/top_level.txt
+doc/bengalicalender-1426-27.jpg

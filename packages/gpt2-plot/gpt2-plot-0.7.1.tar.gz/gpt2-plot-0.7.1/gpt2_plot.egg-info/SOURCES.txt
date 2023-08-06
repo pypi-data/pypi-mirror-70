@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+gpt2-plot/__init__.py
+gpt2-plot/gpt_2.py
+gpt2-plot/src/__init__.py
+gpt2-plot/src/accumulate.py
+gpt2-plot/src/encoder.py
+gpt2-plot/src/load_dataset.py
+gpt2-plot/src/memory_saving_gradients.py
+gpt2-plot/src/model.py
+gpt2-plot/src/sample.py
+gpt2_plot.egg-info/PKG-INFO
+gpt2_plot.egg-info/SOURCES.txt
+gpt2_plot.egg-info/dependency_links.txt
+gpt2_plot.egg-info/requires.txt
+gpt2_plot.egg-info/top_level.txt

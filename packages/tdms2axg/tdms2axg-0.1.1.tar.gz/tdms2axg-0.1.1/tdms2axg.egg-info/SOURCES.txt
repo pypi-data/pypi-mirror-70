@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+tdms2axg/__init__.py
+tdms2axg/__main__.py
+tdms2axg/scripts.py
+tdms2axg.egg-info/PKG-INFO
+tdms2axg.egg-info/SOURCES.txt
+tdms2axg.egg-info/dependency_links.txt
+tdms2axg.egg-info/entry_points.txt
+tdms2axg.egg-info/requires.txt
+tdms2axg.egg-info/top_level.txt

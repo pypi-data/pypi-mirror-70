@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: platform-metrics
+Version: 0.1.0a1.dev1
+Summary: 
+Author: Edward George
+Author-email: edward.george@maersk.com
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7

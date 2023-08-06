@@ -1,0 +1,10 @@
+README.md
+setup.py
+boyd_bot/__init__.py
+boyd_bot/timetable.py
+boyd_bot_glasgow.egg-info/PKG-INFO
+boyd_bot_glasgow.egg-info/SOURCES.txt
+boyd_bot_glasgow.egg-info/dependency_links.txt
+boyd_bot_glasgow.egg-info/entry_points.txt
+boyd_bot_glasgow.egg-info/requires.txt
+boyd_bot_glasgow.egg-info/top_level.txt

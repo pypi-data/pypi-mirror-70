@@ -1,0 +1,11 @@
+anki-kunren/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anki-kunren/ankiconnect.py,sha256=U22vKALoVHYacLySiKtA73bxYc7iKY2P6R1NsDyJvb4,870
+anki-kunren/kanjivg.py,sha256=bsgRJXpuI18GTGG584z-Zk_GQLeVQZKXpnSrwUCs61I,3043
+anki-kunren/kunren.py,sha256=eIo-6y01RPk2hOALeLlArYbZCCxDQX302WzxtwpBwcg,4549
+anki-kunren/utils.py,sha256=HWeZmZxr1UofaelnD2LuPgiU1zLTWSzILkmx3zD6W4A,760
+anki_kunren-1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+anki_kunren-1.0.dist-info/METADATA,sha256=QDOTCQiqUebJ2zQEyqMS_fBdTghOs4adkHGeJjOQuOg,1725
+anki_kunren-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+anki_kunren-1.0.dist-info/entry_points.txt,sha256=I5FL9mFLBQuLijTJNGpLYpPsOGiEQCeHNZ9u0gMGq6c,40
+anki_kunren-1.0.dist-info/top_level.txt,sha256=ad94DpPjMchyKNjplnP1E6dlGr_k13YX70diFWj_SJ0,12
+anki_kunren-1.0.dist-info/RECORD,,

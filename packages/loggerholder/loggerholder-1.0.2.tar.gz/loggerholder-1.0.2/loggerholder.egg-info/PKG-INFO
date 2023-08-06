@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: loggerholder
+Version: 1.0.2
+Summary: logger holder
+Home-page: https://github.com/wzwjustdoit/loggerholder
+Author: wzwjustdoit
+Author-email: wzwjustdoit@163.com
+Maintainer: wzwjustdoit
+Maintainer-email: wzwjustdoit@163.com
+License: MIT
+Description: 
+        
+        logger holder
+        
+        ```pycon
+        >>> import logging
+        >>> import os
+        >>> SELFDIR = os.path.dirname(os.path.abspath('.'))  # or : SELFDIR = os.path.dirname(os.path.abspath(__file__))
+        >>> PROJECTDIR = os.path.dirname(SELFDIR)
+        >>> 
+        >>> from loggerholder import LoggerHolder
+        >>> logargs = ('logs/app.log', 'h', '%(asctime)s %(process)d %(thread)d %(levelname)s: %(message)s', logging.DEBUG, PROJECTDIR)
+        >>> logger = LoggerHolder.holded(logargs)
+        >>> print(logger)
+        >>> 
+        ```
+        
+        ---------------------------------------------------------------------
+        
+Keywords: loggerholder,logger,holder,log
+Platform: all
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0.0
+Description-Content-Type: text/markdown

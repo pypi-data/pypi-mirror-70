@@ -1,0 +1,3 @@
+[console_scripts]
+game=pytetris.__main__:main
+

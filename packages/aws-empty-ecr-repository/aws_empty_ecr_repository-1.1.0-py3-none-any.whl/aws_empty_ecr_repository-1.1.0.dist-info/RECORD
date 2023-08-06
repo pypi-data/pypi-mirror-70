@@ -1,0 +1,12 @@
+aws_empty_ecr_repository/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_empty_ecr_repository/empty_ecr_repository.py,sha256=4w95wnCVYRilXAUJwtZfCCpxRRl-szUNiipzBo4z7Mw,4245
+aws_empty_ecr_repository/package/__init__.py,sha256=DVfDIsPg6-8PKZE5zrC3NtPQzZjTFfSsnRlyxoXVF-I,68
+aws_empty_ecr_repository/package/action.py,sha256=WYWrBADr-P2k4IK6lVTUWPE-nTf6EjQ-U062AkxGARQ,1332
+aws_empty_ecr_repository/package/cfnresponse.py,sha256=mDArlqavrfdIBvyHajQdawLE-GOQeEG8WZDmSH9BWXs,1585
+aws_empty_ecr_repository/package/index.py,sha256=7I01cv7G89VkrmStMs2BQMhguI7LpJG3VbMK_I2cuuU,2374
+aws_empty_ecr_repository-1.1.0.dist-info/DESCRIPTION.rst,sha256=q06jCuI7TekOiKVwwatDvCc1SJDzmrPaWG5_4DsVOeU,678
+aws_empty_ecr_repository-1.1.0.dist-info/METADATA,sha256=YItH5a3DeZRNezKZn00PBF5UCXgF8LXyZD7YIQKdyJ0,1554
+aws_empty_ecr_repository-1.1.0.dist-info/RECORD,,
+aws_empty_ecr_repository-1.1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+aws_empty_ecr_repository-1.1.0.dist-info/metadata.json,sha256=p-vh3mwcJeKvWJ8Jkipa-9hgk4O7hVUhWUls4AuzwAA,1049
+aws_empty_ecr_repository-1.1.0.dist-info/top_level.txt,sha256=k5rQltQSybFyPxRRssPL1xKjlVv0sy0fAPh4I9SaIto,25

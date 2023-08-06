@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tracepooling-layer
+Version: 0.0.1
+Summary: A package to implement trace pooling layer
+Home-page: https://github.com/spatuvlab/tracepooling-layer/
+Author: Irene Martin
+Author-email: irene.martin@uv.es
+License: UNKNOWN
+Description: # tracepooling-layer
+        Trace pooling layer to perform pooling downsampling using trace information
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown

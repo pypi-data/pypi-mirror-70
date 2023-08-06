@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+psych2face.egg-info/PKG-INFO
+psych2face.egg-info/SOURCES.txt
+psych2face.egg-info/dependency_links.txt
+psych2face.egg-info/top_level.txt

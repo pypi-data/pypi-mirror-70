@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pyconfigstore/__init__.py
+pyconfigstore/utils.py
+pyconfigstore3.egg-info/PKG-INFO
+pyconfigstore3.egg-info/SOURCES.txt
+pyconfigstore3.egg-info/dependency_links.txt
+pyconfigstore3.egg-info/top_level.txt

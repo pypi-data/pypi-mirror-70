@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: b-i
+Version: 1.0.1
+Summary: python library for data project
+Home-page: https://github.com/cppla/b-i
+Author: cppla
+Author-email: i@cpp.la
+License: MIT License
+Description: BI tools for data developer use Python Language.
+Keywords: b-i,hive,mysql,elasticsearch,cppla
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6

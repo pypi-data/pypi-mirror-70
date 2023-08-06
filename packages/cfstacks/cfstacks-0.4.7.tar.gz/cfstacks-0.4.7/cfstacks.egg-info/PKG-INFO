@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: cfstacks
+Version: 0.4.7
+Summary: Manage CloudFormation sanely with templates written in YAML
+Home-page: https://github.com/cfstacks/stacks
+Maintainer: Vaidas Jablonskis
+Maintainer-email: jablonskis@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/cfstacks/stacks
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3

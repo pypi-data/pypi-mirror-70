@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mcanitexgen
+Version: 0.0.9
+Summary: A texture animation generator for Minecraft .mcmeta files
+Home-page: https://github.com/OrangeUtan/mcanitexgen
+Author: OrangeUtan
+Author-email: oran9eutan@gmail.com
+License: UNKNOWN
+Description: mcanitexgen
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: dev

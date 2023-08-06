@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mcanitexgen/Exceptions.py
+mcanitexgen/Parser.py
+mcanitexgen/TextureAnimation.py
+mcanitexgen/Utils.py
+mcanitexgen/__init__.py
+mcanitexgen/__main__.py
+mcanitexgen.egg-info/PKG-INFO
+mcanitexgen.egg-info/SOURCES.txt
+mcanitexgen.egg-info/dependency_links.txt
+mcanitexgen.egg-info/requires.txt
+mcanitexgen.egg-info/top_level.txt
+tests/test_basic_animations.py
+tests/test_expressions.py

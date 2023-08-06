@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tgcurses
+Version: 0.9.3
+Summary: A package for building curses user interfaces.
+Home-page: https://github.com/tgree/tgcurses
+Author: Terry Greeniaus
+Author-email: terrygreeniaus@gmail.com
+License: LGPLv2
+Keywords: curses
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Requires-Python: >=3.0
+Description-Content-Type: text/plain
+
+tgcurses
+========
+
+A package built on curses for laying out panels on a canvas.
+
+

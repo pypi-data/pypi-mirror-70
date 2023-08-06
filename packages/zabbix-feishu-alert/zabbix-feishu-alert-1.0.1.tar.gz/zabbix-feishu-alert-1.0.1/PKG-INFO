@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: zabbix-feishu-alert
+Version: 1.0.1
+Summary: zabbix send alert message and graph to feishu robot
+Home-page: https://github.com/yinhuanyi/zabbix-feishu-alert
+Author: Robby
+Author-email: yinhuanyicn@gmail.com
+License: MIT
+Description: # zabbix-feishu-alert 
+        
+        
+        # 之后需要详细介绍飞书机器人的创建
+Platform: UNKNOWN

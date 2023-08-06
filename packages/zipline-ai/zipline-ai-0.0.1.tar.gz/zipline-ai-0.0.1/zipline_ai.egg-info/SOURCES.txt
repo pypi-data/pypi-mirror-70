@@ -1,0 +1,14 @@
+README.md
+setup.py
+zipline2/__init__.py
+zipline2/group_by.py
+zipline2/join.py
+zipline2/metadata_helper.py
+zipline2/operations.py
+zipline2/utils.py
+zipline2/repo/materialize.py
+zipline_ai.egg-info/PKG-INFO
+zipline_ai.egg-info/SOURCES.txt
+zipline_ai.egg-info/dependency_links.txt
+zipline_ai.egg-info/requires.txt
+zipline_ai.egg-info/top_level.txt

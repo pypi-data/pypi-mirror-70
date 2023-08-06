@@ -1,0 +1,11 @@
+pywaiwera/__init__.py,sha256=DwiI2PO_wicimaIvHtfUuo5kM3hbZnmDDrCs8J1OIuU,176
+pywaiwera/common.py,sha256=3dHcpebNCdhrjCzbmT4Vx-cMOxJ0ba4Oe6ZzXo9x-WU,359
+pywaiwera/docker.py,sha256=pM5d-6bTdPmbkFUX2J6tSWl_GhdCOjf_z-QoE1B7lG8,33697
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_package.py,sha256=e5aFdoiBPfcJfyP4oknFzq-te8BC0lE43yB30iJBXco,1465
+test/test_waiwera_dkr.py,sha256=7-45HYNO0K02zApbzGzLNGAJ9zGiGXfVgcONauupHUI,5459
+pywaiwera-1.2.0.dist-info/METADATA,sha256=Dy_PQ1GkwjmZal5d5u1O-HEINHMezQGt8oVUU6fou5c,2469
+pywaiwera-1.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+pywaiwera-1.2.0.dist-info/entry_points.txt,sha256=h19NvDR5O3JHDlr5aM_ZrpxEOKULG41Q004v4Lh0fYY,55
+pywaiwera-1.2.0.dist-info/top_level.txt,sha256=iUBlVhS4NVEfxL69yDGm3Or0P_3PDzp7JQkYorfElDg,15
+pywaiwera-1.2.0.dist-info/RECORD,,

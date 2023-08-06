@@ -1,0 +1,17 @@
+bitsets~=0.7
+graphviz~=0.7
+
+[dev]
+tox>=3
+flake8
+pep8-naming
+wheel
+twine
+
+[docs]
+sphinx>=1.8
+sphinx-rtd-theme
+
+[test]
+pytest>=4.6
+pytest-cov

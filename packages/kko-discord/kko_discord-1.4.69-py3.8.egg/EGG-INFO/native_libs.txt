@@ -1,0 +1,2 @@
+discord/bin/libopus-0.x64.dll
+discord/bin/libopus-0.x86.dll

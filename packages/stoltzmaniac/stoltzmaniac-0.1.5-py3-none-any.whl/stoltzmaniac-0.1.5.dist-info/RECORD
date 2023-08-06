@@ -1,0 +1,16 @@
+stoltzmaniac/.DS_Store,sha256=4JCoWRHKSrJ31mRh35Ze5BVfjZDh7ysnqLHS1aolh3I,6148
+stoltzmaniac/__init__.py,sha256=Wzf5T3NBDfhQoTnhnRNHSlAsE0XMqbclXG-M81Vas70,22
+stoltzmaniac/data_handler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/data_handler/base.py,sha256=tCEl25mDSmhM-1GMkxa9QkPtEfHEA0tLj2mFSOSbqco,1122
+stoltzmaniac/data_handler/clean_data.py,sha256=Z05KlpriuYnKfBNxUpERoGrX-FbUFlSq7xL5AN26t_g,687
+stoltzmaniac/data_handler/scale_data.py,sha256=3qA3jRMJkxIHUBO1treuB5hHK6XvAqZMW0yZEsz7I4c,2730
+stoltzmaniac/data_handler/test_train_split_data.py,sha256=mezaA4el3j6D859h8TD2c32YDbRXXJk8JG71P7VuxLg,2576
+stoltzmaniac/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/models/supervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/models/supervised/k_nearest_neighbors.py,sha256=I09HiZn5ptLtIR0w58sJDAs-rVcE0FixyHwBxtJdbRg,3195
+stoltzmaniac/models/supervised/linear_regression.py,sha256=w7ATufebz9Hpy7qNZt4ACwWlVZEATt0rJch8ZDuxrYc,2804
+stoltzmaniac/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/utils/distance_functions.py,sha256=d0YJ8t0AUZKTuPm8QomeG3cpUtXHVWBG6NGmV4W_4VQ,693
+stoltzmaniac-0.1.5.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+stoltzmaniac-0.1.5.dist-info/METADATA,sha256=Xf7hOK28Cy-GP39cM3SpRN43u19d4HU0mEaz7HySwmI,1415
+stoltzmaniac-0.1.5.dist-info/RECORD,,

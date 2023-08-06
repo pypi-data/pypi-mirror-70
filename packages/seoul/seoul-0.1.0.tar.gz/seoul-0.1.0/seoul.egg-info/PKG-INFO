@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: seoul
+Version: 0.1.0
+Summary: Seoul public data API client library.
+Home-page: https://github.com/limeburst/seoul-py
+Author: Seo Jihyeok
+Author-email: limeburst@icloud.com
+License: UNKNOWN
+Description: seoul-py
+        ========
+        
+        Python API client library for `Seoul Open Data Plaza (서울 열린데이터 광장)`__.
+        
+        .. __: http://data.seoul.go.kr
+        
+        
+        Example
+        -------
+        
+        .. code-block:: python
+        
+           >>> from seoul import Client
+           >>> seoul = Client()
+           >>> trains = seoul.get_subway_realtime_position('6호선')
+           >>> for train in trains:
+           ...     print(f"{train.subway_name} {train.number}번 열차 @ {train.station_name}")
+           ... 
+           6호선 6265번 열차 @ 화랑대(서울여대입구)
+           6호선 6271번 열차 @ 이태원
+           6호선 6277번 열차 @ 불광
+        
+        
+        Supported APIs
+        --------------
+        
+        - `서울시 지하철 실시간 열차 위치정보`__
+        
+        .. __: http://data.seoul.go.kr/dataList/OA-12601/A/1/datasetView.do
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/x-rst

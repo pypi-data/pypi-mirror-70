@@ -1,0 +1,11 @@
+bsaUtils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bsaUtils/performance_metrics.py,sha256=1s0ZaXcrl99CkQwRf4pBjNFtF7XkmpZFGZf4eLEbRQo,552
+bsaUtils/stats.py,sha256=W2yCbSXJieRdbOFlh4zSczT2ArmWVa1BuTNH8zK-_lE,419
+bsaUtils/bsaScraper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bsaUtils/bsaScraper/scraper.py,sha256=pG1JuuP5prAuVTwy-_TuFF6neTUFiQqoO-2aeN5QAqw,1481
+bsaUtils/bsaScraper/secrets.py,sha256=xUEJZFv77kOAapEDv2N2r4Z_f2_cPni00sxM1KGCGrU,816
+utils_BSA-0.0.1.dist-info/LICENCE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+utils_BSA-0.0.1.dist-info/METADATA,sha256=hYLZOnSP5zXol6uvt1u4T6sa5bsDHRmWQGC4OhXazdU,556
+utils_BSA-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+utils_BSA-0.0.1.dist-info/top_level.txt,sha256=szedM90gv7rzjcu0Q5ceZfrlAsuC7w5pw3awfoaKxT4,9
+utils_BSA-0.0.1.dist-info/RECORD,,

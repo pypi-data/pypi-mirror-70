@@ -1,0 +1,4 @@
+[butterrobot.plugins]
+dev.ping=butterrobot_plugins_contrib.dev:PingPlugin
+fun.loquito=butterrobot_plugins_contrib.fun:LoquitoPlugin
+

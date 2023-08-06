@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: brain-slam
+Version: 0.0.1
+Summary: Surface anaLysis And Modeling
+Home-page: UNKNOWN
+Author: Guillaume Auzias
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: trimesh
+Requires-Dist: matplotlib
+Requires-Dist: nibabel
+Requires-Dist: cython
+Requires-Dist: gdist
+
+UNKNOWN
+
+

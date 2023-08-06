@@ -1,0 +1,4 @@
+[console_scripts]
+kanobu-client = kanobu_server.client:client
+kanobu-server = kanobu_server.server:server
+

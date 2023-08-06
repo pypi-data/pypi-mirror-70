@@ -1,0 +1,11 @@
+README.md
+setup.py
+gravatarcontacts/__init__.py
+gravatarcontacts/__main__.py
+gravatarcontacts/google_contacts.py
+gravatarcontacts/gravatar.py
+gravatarcontacts_cmenon12.egg-info/PKG-INFO
+gravatarcontacts_cmenon12.egg-info/SOURCES.txt
+gravatarcontacts_cmenon12.egg-info/dependency_links.txt
+gravatarcontacts_cmenon12.egg-info/requires.txt
+gravatarcontacts_cmenon12.egg-info/top_level.txt

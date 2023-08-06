@@ -1,0 +1,10 @@
+setup.py
+dstrb_g_b/Binomialdistribution.py
+dstrb_g_b/Gaussiandistribution.py
+dstrb_g_b/Generaldistribution.py
+dstrb_g_b/__init__.py
+dstrb_g_b.egg-info/PKG-INFO
+dstrb_g_b.egg-info/SOURCES.txt
+dstrb_g_b.egg-info/dependency_links.txt
+dstrb_g_b.egg-info/not-zip-safe
+dstrb_g_b.egg-info/top_level.txt

@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: ldapper
+Version: 1.0.3
+Summary: LDAP ORM for Python
+Home-page: https://github.com/UMIACS/ldapper
+Author: Liam Monahan
+Author-email: liam@liammonahan.com
+License: LGPL v2.1
+Platform: UNIX/Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Description-Content-Type: text/markdown
+Requires-Dist: inflection
+Requires-Dist: python-ldap (>=2.4.15)
+
+ldapper
+========
+
+[![Build Status](https://travis-ci.org/UMIACS/ldapper.svg?branch=master)](https://travis-ci.org/UMIACS/ldapper)
+[![Documentation Status](https://readthedocs.org/projects/ldapper/badge/?version=latest)](https://ldapper.readthedocs.io/en/latest/?badge=latest)
+
+ldapper is a hassle-free Python LDAP ORM for getting real work done.
+
+It extends the robust capabilities of python-ldap and augments it with higher-level interfaces to define your schema.  Listing and fetching all your LDAP objects is easy and straightforward.  Modifications and validation can be made with assurance using ldapper.
+
+
+Requirements
+------------
+ldapper requires:
+
+* Python 3.6+
+* inflection
+
+Version 0.9.0 was the last to support Python 2.
+
+Usage
+-----
+
+```python
+from ldapper.connection import BaseConnection
+from ldapper.ldapnode import LDAPNode
+from ldapper import fields
+
+
+# define a connection
+class Connection(BaseConnection):
+    BASE_DN = 'dc=example,dc=com'
+    URI = 'ldaps://ldap.example.com'
+
+
+# define a common LDAPNode that holds the connection class you defined
+class BaseModel(LDAPNode):
+    connection = Connection
+
+
+# define a class to represent people
+class Person(BaseModel):
+    uid = fields.StringField('uid', primary=True)
+    uidnumber = fields.IntegerField('uidNumber')
+    firstname = fields.StringField('givenName')
+    lastname = fields.StringField('sn')
+    email_addresses = fields.ListField('mailLocalAddress')
+    photo = fields.BinaryField('jpegPhoto', optional=True)
+
+    class Meta:
+        objectclasses = ['top', 'inetOrgPerson', 'inetLocalMailRecipient']
+        dn_format = 'uid=%(uid)s,ou=people'
+        primary_dnprefix = 'ou=people'
+        secondary_dnprefix = 'ou=people'
+        identifying_attrs = ['uid']
+        searchable_fields = [
+'uid', 'uidNumber', 'givenName', 'sn', 'mailLocalAddress']
+
+
+# use the Person class
+person = Person.fetch('liam')
+person.displayname = 'Chuck Yeager'
+person.save()
+person.delete()
+
+
+from ldapper.query import Q
+Person.filter(Q(firstname='Foo') | Q(lastname='Bar'))
+```
+
+
+Documentation
+-------------
+Available at https://ldapper.readthedocs.io/
+
+
+Testing
+-------
+Please see the README.md file in the test directory for information on running unit tests.
+
+

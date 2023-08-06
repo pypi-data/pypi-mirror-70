@@ -1,0 +1,8 @@
+README.md
+setup.py
+improved_replace/__init__.py
+improved_replace/core.py
+improved_replace.egg-info/PKG-INFO
+improved_replace.egg-info/SOURCES.txt
+improved_replace.egg-info/dependency_links.txt
+improved_replace.egg-info/top_level.txt

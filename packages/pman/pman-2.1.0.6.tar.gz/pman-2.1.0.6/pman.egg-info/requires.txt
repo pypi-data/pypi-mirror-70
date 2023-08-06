@@ -1,0 +1,12 @@
+docker
+fasteners
+ipaddress
+kubernetes
+openshift
+pfmisc
+psutil
+pudb
+pycurl
+python-keystoneclient
+pyzmq
+webob

@@ -1,0 +1,11 @@
+mypy_boto3_kinesisanalyticsv2/__init__.py,sha256=Uv_07eRqkcbsXsuxGkiMzpsByqAdfBxp1-TLPAtGphI,1094
+mypy_boto3_kinesisanalyticsv2/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_kinesisanalyticsv2/client.py,sha256=swSwUuMf9lT5kkLsMADQhfJDR59Lwu2cGX1j0PjMHXE,15991
+mypy_boto3_kinesisanalyticsv2/paginator.py,sha256=6eLuVEbRJY0An2rHV4iS6ASgMCK-2d0E6_BJblbWKJc,2378
+mypy_boto3_kinesisanalyticsv2/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_kinesisanalyticsv2/type_defs.py,sha256=1okjZIaX761ACBPZ0UDbpU2SX9PurUTNec4-hgtNNic,40541
+mypy_boto3_kinesisanalyticsv2/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_kinesisanalyticsv2-1.14.0.1.dist-info/METADATA,sha256=lo_gqVYUsaAk04QRWPXyxnwgiFizZL8m-5akKlfW0GU,5338
+mypy_boto3_kinesisanalyticsv2-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_kinesisanalyticsv2-1.14.0.1.dist-info/top_level.txt,sha256=wrqC9jknnvbW574gc59yLj0nqlXEcNJOERIExfRadzY,30
+mypy_boto3_kinesisanalyticsv2-1.14.0.1.dist-info/RECORD,,

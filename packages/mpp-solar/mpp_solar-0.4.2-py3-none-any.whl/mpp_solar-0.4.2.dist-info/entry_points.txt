@@ -1,0 +1,5 @@
+[console_scripts]
+mpp-info-pub = mppsolar.mpp_info_pub:main
+mpp-solar = mppsolar:main
+mpp-solar-service = mppsolar.mpp_solar_service:main
+

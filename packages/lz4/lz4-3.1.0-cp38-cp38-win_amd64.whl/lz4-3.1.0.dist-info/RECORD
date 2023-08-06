@@ -1,0 +1,14 @@
+lz4/__init__.py,sha256=etsV-XG9vgCn-EKrFpzWJsGIp-VUtH-tpNrQmMmDECU,627
+lz4/_version.cp38-win_amd64.pyd,sha256=d75NCkuvBINCE5jwtiXe0hT5wXZebKc3jZCr1iWUFC4,11264
+lz4/version.py,sha256=6DOxjHANX57S1DT9cnNYvSoxD4zAGLTp5sCOGcFAchw,120
+lz4/block/__init__.py,sha256=KsSQGgaPpJtVPJ5QfMadVGFduMy0hSetJHWGNmOvpso,70
+lz4/block/_block.cp38-win_amd64.pyd,sha256=IsUgvahfS378rOTXdoavVnQQ2w-LCkbqKs1FlsurmL4,99840
+lz4/frame/__init__.py,sha256=6VnfprVaLn36amVtC0EdUB6b5s26JIRky2yR-9uO6-0,29444
+lz4/frame/_frame.cp38-win_amd64.pyd,sha256=A4qg7TvrTbOpuoZgiMeTJ2A23-CB7xqKEIxLflz47jw,143360
+lz4/stream/__init__.py,sha256=toToz5VZzkYWAi4Qip5lJm9A6Zl2Gw6J72J6qr2rdGw,8832
+lz4/stream/_stream.cp38-win_amd64.pyd,sha256=LD7W73FReKHh3zTveDraDw8F9qNnSjWjsDOWwcJ4hU0,111616
+lz4-3.1.0.dist-info/LICENSE,sha256=4qxD1uuA605SFBgXyBJDfguYGx17LcfMhsfvVSQETG8,1495
+lz4-3.1.0.dist-info/METADATA,sha256=tth3RnItxad-Na7hgo2AsG3rc60V806oSyvnG1UTOmo,3653
+lz4-3.1.0.dist-info/WHEEL,sha256=-ODc2a2AO_YJ5T46NOquHfWjRM7bQvlt-f3zRaLBjL4,105
+lz4-3.1.0.dist-info/top_level.txt,sha256=cX6_gxFUdNSo40TfxrGpTCgu7epGm3yW3m2k7irTDzI,4
+lz4-3.1.0.dist-info/RECORD,,

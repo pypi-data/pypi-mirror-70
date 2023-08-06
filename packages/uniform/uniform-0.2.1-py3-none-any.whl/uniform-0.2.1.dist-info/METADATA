@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: uniform
+Version: 0.2.1
+Summary: Uniform - dress your form processing endpoints📋
+Home-page: https://gitlab.com/not-good-igor/uniform.py
+Author: Igor Nehoroshev
+Author-email: mail@neigor.me
+License: Unlicense
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: typesystem
+Requires-Dist: starlette
+Provides-Extra: lint
+Requires-Dist: mypy ; extra == 'lint'
+Requires-Dist: autoflake ; extra == 'lint'
+Requires-Dist: black ; extra == 'lint'
+Requires-Dist: isort ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: asynctest ; extra == 'test'
+Requires-Dist: httpx ; extra == 'test'
+
+# uniform
+
+Uniform - dress your form processing endpoints📋
+
+[![PyPI: uniform](https://img.shields.io/pypi/v/uniform)](https://pypi.org/project/uniform/)
+[![Code Style: Black](https://img.shields.io/badge/code_style-black-000000.svg)](https://github.com/ambv/black)
+
+Install: `pip install uniform`
+
+## What this package can do:
+- Extract and validate form data against `typesystem.Schema`
+- Return 400 Bad Request with validation problems explained
+
+Example:
+
+```python
+import uvicorn
+
+from starlette.applications import Starlette
+from starlette.requests import Request
+from starlette.responses import PlainTextResponse
+from typesystem import Schema, Boolean
+
+from uniform import Uniform, validate
+
+app = Starlette()
+
+
+class TestSchema(Schema):
+    test = Boolean()
+
+
+@app.route("/")
+@validate(Uniform(TestSchema))
+async def home(request: Request) -> PlainTextResponse:
+    return JSONResponse(
+        content={"ok": True, "description": None, "result": dict(request.state.data)}
+    )
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8080)
+```
+
+Send POST request to `http://127.0.0.1:8080/` with `application/json`
+or `application/x-www-form-urlencoded` data and it will be validated.
+
+

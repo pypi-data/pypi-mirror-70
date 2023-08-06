@@ -1,0 +1,6 @@
+setup.py
+rrrs_distributions_p.egg-info/PKG-INFO
+rrrs_distributions_p.egg-info/SOURCES.txt
+rrrs_distributions_p.egg-info/dependency_links.txt
+rrrs_distributions_p.egg-info/not-zip-safe
+rrrs_distributions_p.egg-info/top_level.txt

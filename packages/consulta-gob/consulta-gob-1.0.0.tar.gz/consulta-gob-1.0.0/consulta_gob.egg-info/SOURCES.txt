@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+consulta_gob.egg-info/PKG-INFO
+consulta_gob.egg-info/SOURCES.txt
+consulta_gob.egg-info/dependency_links.txt
+consulta_gob.egg-info/requires.txt
+consulta_gob.egg-info/top_level.txt
+curp/main.py

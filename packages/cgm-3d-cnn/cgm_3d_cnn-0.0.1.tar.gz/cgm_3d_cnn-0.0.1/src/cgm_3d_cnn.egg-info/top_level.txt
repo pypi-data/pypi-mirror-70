@@ -1,0 +1,3 @@
+cgm_cnn_rotations
+rotations
+small_cgm_cnn

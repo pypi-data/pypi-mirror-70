@@ -1,0 +1,14 @@
+pandas
+requests
+
+[dev]
+black
+flake8
+mypy
+
+[packaging]
+twine
+
+[test]
+hypothesis
+pytest

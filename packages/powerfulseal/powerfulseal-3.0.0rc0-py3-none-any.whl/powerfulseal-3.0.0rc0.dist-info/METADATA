@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: powerfulseal
+Version: 3.0.0rc0
+Summary: PowerfulSeal - a powerful testing tool for Kubernetes clusters
+Home-page: https://github.com/bloomberg/powerfulseal
+Author: Mikolaj Pawlikowski
+Author-email: mikolaj@pawlikowski.pl
+License: Apache 2.0
+Project-URL: Source, https://github.com/bloomberg/powerfulseal
+Project-URL: Tracker, https://github.com/bloomberg/powerfulseal/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: ConfigArgParse (<1,>=0.11.0)
+Requires-Dist: Flask (<2,>=1.0.0)
+Requires-Dist: termcolor (<2,>=1.1.0)
+Requires-Dist: openstacksdk (<1,>=0.10.0)
+Requires-Dist: spur (<1,>=0.3.20)
+Requires-Dist: kubernetes (<12.0.0,>=11.0.0)
+Requires-Dist: PyYAML (<6,>=5.1.2)
+Requires-Dist: jsonschema (<4,>=3.0.2)
+Requires-Dist: boto3 (<2.0.0,>=1.5.15)
+Requires-Dist: azure-common (<2.0.0,>=1.1.23)
+Requires-Dist: azure-mgmt-resource (<3.0.0,>=2.2.0)
+Requires-Dist: azure-mgmt-network (<3.0.0,>=2.7.0)
+Requires-Dist: azure-mgmt-compute (<5.0.0,>=4.6.2)
+Requires-Dist: future (<1,>=0.16.0)
+Requires-Dist: requests (<3,>=2.21.0)
+Requires-Dist: prometheus-client (<0.4.0,>=0.3.0)
+Requires-Dist: flask-cors (<4,>=3.0.6)
+Requires-Dist: coloredlogs (<11.0.0,>=10.0.0)
+Requires-Dist: paramiko (<3,>=2.5.0)
+Requires-Dist: google-api-python-client (>=1.7.8)
+Requires-Dist: google-auth (>=1.6.2)
+Requires-Dist: google-auth-httplib2 (>=0.0.3)
+Requires-Dist: oauth2client (>=4.1.3)
+Requires-Dist: datadog (<1.0.0,>=0.29.0)
+Requires-Dist: python-dateutil (<2.7.0,>=2.5.3)
+Provides-Extra: testing
+Requires-Dist: pytest (<4,>=3.0) ; extra == 'testing'
+Requires-Dist: pytest-cov (<3,>=2.5) ; extra == 'testing'
+Requires-Dist: mock (<5,>=4) ; extra == 'testing'
+
+
+# PowerfulSeal
+
+[![Travis](https://img.shields.io/travis/bloomberg/powerfulseal.svg)](https://travis-ci.com/bloomberg/powerfulseal) [![PyPI](https://img.shields.io/pypi/v/powerfulseal.svg)](https://pypi.python.org/pypi/powerfulseal)
+
+__PowerfulSeal__ adds chaos to your Kubernetes clusters, so that you can detect problems in your systems as early as possible. It kills targeted pods and takes VMs up and down.
+
+
+
+<p align="center">
+  <img src="media/powerful-seal.png" alt="Powerful Seal Logo" width="200"></a>
+  <br>
+  Embrace the inevitable failure. <strong>Embrace The Seal</strong>.
+  <br>
+  <br>
+</p>
+
+It follows the [Principles of Chaos Engineering](http://principlesofchaos.org/), and is inspired by [Chaos Monkey](https://github.com/Netflix/chaosmonkey). [Watch the Seal at KubeCon 2017 Austin](https://youtu.be/00BMn0UjsG4).
+
+## Highlights
+
+- works with `OpenStack`, `AWS`, `Azure`, `GCP` and local machines
+- speaks `Kubernetes` natively
+- interactive and autonomous, policy-driven mode
+- web interface to interact with PowerfulSeal
+- metric collection and exposition to `Prometheus` or `Datadog`
+- minimal setup, easy yaml-based policies
+- easy to extend
+
+## Documentation
+
+[Powerfulseal documentation](https://bloomberg.github.io/powerfulseal) is included in the docs directory. It can be hosted locally with jekyll by running jekyll serve from the docs directory.
+
+## Read about the PowerfulSeal
+
+- https://medium.com/faun/failures-are-inevitable-even-a-strongest-platform-with-concrete-operations-infrastructure-can-7d0c016430c6
+- https://www.techatbloomberg.com/blog/powerfulseal-testing-tool-kubernetes-clusters/
+- https://siliconangle.com/blog/2017/12/17/bloomberg-open-sources-powerfulseal-new-tool-testing-kubernetes-clusters/
+- https://github.com/ramitsurana/awesome-kubernetes#testing
+- https://github.com/ramitsurana/awesome-kubernetes#other-useful-videos
+- https://github.com/dastergon/awesome-chaos-engineering#notable-tools
+- https://www.linux.com/news/powerfulseal-testing-tool-kubernetes-clusters-0
+- https://www.infoq.com/news/2018/01/powerfulseal-chaos-kubernetes
+
+## FAQ
+
+### Where can I learn more about Chaos Engineering ?
+
+We found these two links to be a good start:
+
+- http://principlesofchaos.org/
+- https://github.com/dastergon/awesome-chaos-engineering
+
+### How is it different from Chaos Monkey ?
+
+PowerfulSeal was inspired by Chaos Monkey, but it differs in a couple of important ways.
+
+The Seal does:
+  - speak Kubernetes
+  - offer flexible, easy to write YAML scenarios
+  - provide interactive mode with awesome tab-completion
+
+The Seal doesn't:
+  - need external dependencies (db, Spinnaker), apart from SSH, cloud and Kubernetes API access
+  - need you to setup ```cron```
+
+### Can I contribute to The Seal ?
+
+We would love you to. In particular, it would be great to get help with:
+
+- get more [cloud drivers](https://bloomberg.github.io/powerfulseal/in-depth-topics#custom-cloud-drivers)
+- get more [awesome filters](https://bloomberg.github.io/powerfulseal/in-depth-topics#custom-filters)
+- <del>__get an amazing logo__</del>
+- make the PowerfulSeal more powerful
+
+Check out our [contributing](https://bloomberg.github.io/powerfulseal/contribute) page for more information about how to contribute.
+
+### Why a Seal ?
+
+It might have been inspired by [this comic](https://randowis.com/2015/01/07/the-tower/).
+
+
+## Footnotes
+
+PowerfulSeal logo Copyright 2018 The Linux Foundation, and distributed under the Creative Commons Attribution (CC-BY-4.0) [license](https://creativecommons.org/licenses/by/4.0/legalcode).
+

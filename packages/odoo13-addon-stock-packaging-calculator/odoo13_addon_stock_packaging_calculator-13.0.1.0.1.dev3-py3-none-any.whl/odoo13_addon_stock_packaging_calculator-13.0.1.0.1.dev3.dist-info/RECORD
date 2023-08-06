@@ -1,0 +1,17 @@
+odoo/addons/stock_packaging_calculator/README.rst,sha256=L5Yqu4TA61z4xtZ05YpUR7XvF7FrTfVXg_7JJun9wzI,3667
+odoo/addons/stock_packaging_calculator/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/stock_packaging_calculator/__manifest__.py,sha256=m0e1db6QAai34xpwDp2LzPQBMH7eM4mfWd3zG_v2mPM,542
+odoo/addons/stock_packaging_calculator/i18n/stock_packaging_calculator.pot,sha256=3mMu_9xTJxiT3HjlSSk_4EH1d2ee4Rxct-QwICASe1g,510
+odoo/addons/stock_packaging_calculator/models/__init__.py,sha256=JHlvNFqmnhIqvnWMbl6ViAJXcRNmFo6FCsVhVMefuq4,22
+odoo/addons/stock_packaging_calculator/models/product.py,sha256=mX9D7yOW-yA0924kRBcbVdkKaeyVjzoaQqfMNDH3B1M,1792
+odoo/addons/stock_packaging_calculator/readme/CONTRIBUTORS.rst,sha256=SESuWjMjiClOPiuisPzvdKioBpACIvXe1o8tYGnn6rU,35
+odoo/addons/stock_packaging_calculator/readme/DESCRIPTION.rst,sha256=zcT8z935ggqAeyWZvTjH1rh77qxxepmIZ9Q6XqoEqnM,483
+odoo/addons/stock_packaging_calculator/readme/ROADMAP.rst,sha256=RErwqVy-_w_oYNKWbil3Dcq5ZagUbRJ7hBRG3UUorbY,106
+odoo/addons/stock_packaging_calculator/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/stock_packaging_calculator/static/description/index.html,sha256=JP_8URj36Rufz6Y4w0gpi5bsQyUOZMR3hqBw0PZk5Jc,13293
+odoo/addons/stock_packaging_calculator/tests/__init__.py,sha256=LVUM8kVIme81Nd57hBbdYIFHlKLdfyFIVSDckxPfTp8,34
+odoo/addons/stock_packaging_calculator/tests/test_packaging_calc.py,sha256=uqFDC4axd-kceQko99BxyUpZ_E00c-6wFKLzZgS6Dr8,2334
+odoo13_addon_stock_packaging_calculator-13.0.1.0.1.dev3.dist-info/METADATA,sha256=nLVryu31HQuJsqLQhuhYPi1-IPWa7mmyGVcTBx51e18,4261
+odoo13_addon_stock_packaging_calculator-13.0.1.0.1.dev3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo13_addon_stock_packaging_calculator-13.0.1.0.1.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo13_addon_stock_packaging_calculator-13.0.1.0.1.dev3.dist-info/RECORD,,

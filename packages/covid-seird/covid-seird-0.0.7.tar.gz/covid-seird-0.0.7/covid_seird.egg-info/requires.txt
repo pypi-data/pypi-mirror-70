@@ -1,0 +1,6 @@
+COVID19Py
+lmfit
+requests
+pandas
+scipy
+matplotlib

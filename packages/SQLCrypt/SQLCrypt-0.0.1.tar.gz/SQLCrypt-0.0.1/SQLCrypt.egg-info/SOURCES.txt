@@ -1,0 +1,6 @@
+setup.py
+SQLCrypt.egg-info/PKG-INFO
+SQLCrypt.egg-info/SOURCES.txt
+SQLCrypt.egg-info/dependency_links.txt
+SQLCrypt.egg-info/requires.txt
+SQLCrypt.egg-info/top_level.txt

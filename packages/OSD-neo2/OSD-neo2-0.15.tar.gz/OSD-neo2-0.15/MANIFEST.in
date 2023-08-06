@@ -1,0 +1,6 @@
+include README.rst
+include LICENCE
+include ChangeLog
+recursive-include osd_neo2 *.png *.svg *.po *.mo
+prune website
+prune develop

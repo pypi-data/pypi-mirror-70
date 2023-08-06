@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: OSD-neo2
+Version: 0.15
+Summary: On screen display for learning the keyboard layout Neo2
+Home-page: https://gitlab.com/htgoebel/OSD-Neo2/
+Author: Hartmut Goebel
+Author-email: h.goebel@crazy-compilers.com
+License: GPL 3.0
+Download-URL: https://gitlab.com/htgoebel/OSD-Neo2/tags
+Description: 
+        `OSD Neo2` helps you learning the German ergonomic key mapping
+        `Neo Layout <http://neo-layout.org/>`_ by displaying the mapping
+        on-screen while you type. If you press a qualifier (e.g. shift, M3, M4)
+        it will display the mapping of the layer.
+Keywords: keymap learning neo-layout
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Education
+Description-Content-Type: text/x-rst

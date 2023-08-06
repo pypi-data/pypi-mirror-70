@@ -1,0 +1,160 @@
+# German translations for OSD-neo2.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the OSD-neo2 project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OSD-neo2 0.14.dev0\n"
+"Report-Msgid-Bugs-To: h.goebel@crazy-compilers.com\n"
+"POT-Creation-Date: 2017-08-29 23:14+0200\n"
+"PO-Revision-Date: 2017-08-30 00:58+0200\n"
+"Last-Translator: Hartmut Goebel <h.goebel@crazy-compilers.com>\n"
+"Language: de\n"
+"Language-Team: de <h.goebel@crazy-compilers.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: osd_neo2/app.py:388 osd_neo2/settings_dialog.py:90
+msgid "Display _Main Keyboard"
+msgstr "_Haupttastatur anzeigen"
+
+#: osd_neo2/app.py:389 osd_neo2/settings_dialog.py:91
+msgid "Display _Numeric Keyboard"
+msgstr "_Ziffernblock anzeigen"
+
+#: osd_neo2/app.py:390 osd_neo2/settings_dialog.py:92
+msgid "on all Desktops"
+msgstr "auf allen Arbeitsflächen"
+
+#: osd_neo2/app.py:398
+msgid "Settings …"
+msgstr "Einstellungen …"
+
+#: osd_neo2/app.py:404 osd_neo2/statusicon.py:53
+msgid "Quit"
+msgstr "_Beenden"
+
+#: osd_neo2/app.py:500 osd_neo2/app.py:569 osd_neo2/app.py:629
+#: osd_neo2/app.py:656
+msgid "Error"
+msgstr "Fehler"
+
+#: osd_neo2/app.py:567
+#, python-format
+msgid "Invalid keyboard driver \"%s\" selected."
+msgstr "Ungültiger Tastaturtreiber \"%s\" gewählt."
+
+#: osd_neo2/app.py:627 osd_neo2/app.py:654
+#, python-format
+msgid ""
+"The following image file was not found:\n"
+"\"%s\""
+msgstr ""
+"Die folgende Bilddatei wurde nicht gefunden\n"
+"\"%s\""
+
+#: osd_neo2/settings.py:84
+msgid "On screen display for learning the keyboard layout Neo2"
+msgstr "On-Screen-Display zum Lernen des Neo2-Tastaturlayouts"
+
+#: osd_neo2/settings.py:106
+#, python-format
+msgid ""
+"File \"%s\" not found.\n"
+"Using default settings"
+msgstr ""
+"Datei \"%s\" nicht gefunden,\n"
+"verwende Standard-Einstellungen."
+
+#: osd_neo2/settings.py:109
+#, python-format
+msgid ""
+"Error in file \"%s\".\n"
+"Using default settings"
+msgstr ""
+"Fehler in der Datei \"%s\",\n"
+"verwende Standard-Einstellungen."
+
+#: osd_neo2/settings.py:179
+#, python-format
+msgid ""
+"No write access to file \"%s\".\n"
+"Changed settings cannot be stored."
+msgstr ""
+"Keine Schreibrecht auf die Datei \"%s\",\n"
+"geänderte Einstelungen können nicht gespeichert werden."
+
+#: osd_neo2/settings_dialog.py:68
+msgid "OSD Neo2 Settings"
+msgstr "OSD Neo 2 Einstellungen"
+
+#: osd_neo2/settings_dialog.py:87
+msgid "Display options"
+msgstr "Anzeige"
+
+#: osd_neo2/settings_dialog.py:102
+msgid "Magnification:"
+msgstr "Vergrößerung"
+
+#: osd_neo2/settings_dialog.py:106
+msgid "%"
+msgstr "%"
+
+#: osd_neo2/settings_dialog.py:114
+msgid "Keyboard Type:"
+msgstr "Tastaturtyp:"
+
+#: osd_neo2/settings_dialog.py:122
+msgid "PC 105"
+msgstr "PC 105"
+
+#: osd_neo2/settings_dialog.py:123
+msgid "ErgoDox"
+msgstr "ErgoDox"
+
+#: osd_neo2/settings_dialog.py:136
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: osd_neo2/settings_dialog.py:142
+msgid "Keyboard Driver:"
+msgstr "Tastaturtreiber"
+
+#: osd_neo2/settings_dialog.py:146
+msgid "(changing requires restart)"
+msgstr "(Ändern erfordert Neustart)"
+
+#: osd_neo2/settings_dialog.py:154
+msgid "xkbdmap (recommended)"
+msgstr "xkbdmod (empfohlen)"
+
+#: osd_neo2/settings_dialog.py:155
+msgid "xmodmap"
+msgstr "xmodmap"
+
+#: osd_neo2/settings_dialog.py:170
+msgid "Polling intverval:"
+msgstr "Abfrageinterval"
+
+#: osd_neo2/settings_dialog.py:174
+msgid "ms"
+msgstr "ms"
+
+#: osd_neo2/settings_dialog.py:178
+#, python-format
+msgid "Default: %s ms"
+msgstr "Standard: %s ms"
+
+#: osd_neo2/simple_xkb_wrapper.py:257
+#, python-format
+msgid "\"XkbOpenDisplay\" reported an error (%(error_name)s)."
+msgstr "\"XkbOpenDisplay\" meldete einen Fehler (%(error_name)s)."
+
+#: osd_neo2/statusicon.py:52
+msgid "Show Keymap"
+msgstr "Zeige Tastatur"
+

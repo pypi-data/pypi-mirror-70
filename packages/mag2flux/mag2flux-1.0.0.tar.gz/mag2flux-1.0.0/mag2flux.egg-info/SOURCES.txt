@@ -1,0 +1,8 @@
+README.md
+setup.py
+mag2flux/__init__.py
+mag2flux/mag2flux.py
+mag2flux.egg-info/PKG-INFO
+mag2flux.egg-info/SOURCES.txt
+mag2flux.egg-info/dependency_links.txt
+mag2flux.egg-info/top_level.txt

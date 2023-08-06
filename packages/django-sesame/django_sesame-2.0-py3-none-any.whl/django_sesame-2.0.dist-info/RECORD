@@ -1,0 +1,13 @@
+sesame/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sesame/backends.py,sha256=CY3pWKH4CjBe-wipWJjUiqFZr95f7Ev0Jca2YEb8--M,800
+sesame/middleware.py,sha256=_fDqucwLUY4_z53nfm4wNv_2HrcnmmuznaNyC1TOGMU,3252
+sesame/packers.py,sha256=q2RfYq_buORB_5RPhYN_Qqc7Kul1ASmVn1y4aRtfm8g,4094
+sesame/settings.py,sha256=YLROVnzlkRrdh2534p_-aEW9aDCB6jvCDgXrBwkkXTU,2768
+sesame/tokens.py,sha256=XD7RfsRst_sAFDSKTamyFwFgAMgZqkCXqasvcZfUS1k,710
+sesame/tokens_v1.py,sha256=KBpSDibImIHFUQNWvUVJnpnJPTZPr9dvoKAvbrbblYo,3924
+sesame/tokens_v2.py,sha256=WCq1wWU50MSVd8746rRhPcklw0mMKwDwfHX-4cpU-xI,7261
+sesame/utils.py,sha256=iSwqDduuGmKCRE9jBGsHTBY6mg8B8GII0jnBqzSsf1E,1172
+django_sesame-2.0.dist-info/LICENSE,sha256=l-ky7bDq0RTcrS8LXLfkJG4SpOIjQH4OrRQd8JPCQqU,1540
+django_sesame-2.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+django_sesame-2.0.dist-info/METADATA,sha256=ampI313tUcTEZSUK8vhR_9Tn8F9H3F8SN1mDK9w4XzY,20476
+django_sesame-2.0.dist-info/RECORD,,

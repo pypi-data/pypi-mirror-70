@@ -1,0 +1,10 @@
+easyjson2json/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easyjson2json/helpers.py,sha256=SXCdZGgAq9i6Dkk6t3hVTr9cclKEi3sEMHk_TI2UjVU,723
+easyjson2json/json2json.py,sha256=RyMmldq4aZhqneielDWg65z8wK5SRb2Io4wtDPKpIhE,2779
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/json2json_test.py,sha256=8OyRsoYg6-Q967mCCQi4hfj3fp-dGu5DN1XZMbaq8ws,7501
+easy_json2json-0.0.1.dist-info/LICENSE,sha256=OeNHYk3K-Doq9KSNq4If7ShfQcAvhpctkVNmmk7Re5U,1122
+easy_json2json-0.0.1.dist-info/METADATA,sha256=xacPpNLyU8iuD362r6uz-477Smm4veo2W2M0ORObxRw,2781
+easy_json2json-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+easy_json2json-0.0.1.dist-info/top_level.txt,sha256=nXOaEB11r5P_0UCwWjjyEvbS6JD_M4Wsczh8L_N_IiM,20
+easy_json2json-0.0.1.dist-info/RECORD,,

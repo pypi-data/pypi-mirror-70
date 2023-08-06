@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+sid_dsnd/Binomialdistribution.py
+sid_dsnd/Gaussiandistribution.py
+sid_dsnd/Generaldistribution.py
+sid_dsnd/__init__.py
+sid_dsnd.egg-info/PKG-INFO
+sid_dsnd.egg-info/SOURCES.txt
+sid_dsnd.egg-info/dependency_links.txt
+sid_dsnd.egg-info/not-zip-safe
+sid_dsnd.egg-info/top_level.txt

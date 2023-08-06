@@ -1,0 +1,14 @@
+ddc/__init__.py,sha256=zBuSl_QP_d5_BhQqUgJUPNTXfs8126ljKjyHpYa-57M,127
+ddc/cli.py,sha256=YppgHZj47J6p3V5ApcWqzfHwTc-HxfJmvFumjLHR6yU,3304
+ddc/info.py,sha256=ZCau2W6a8H83o6R1XBWXgWlEyJAuaAV6zzrQL0YjXVQ,938
+ddc/task_black.py,sha256=Iadz-OqUnifEpu4Wc0aieuvesPCMQK4-BsBdjno_r24,471
+ddc/task_lint.py,sha256=2LC8O0ghoQ3vThZYwSvsyFqLnSp8EjyneHR1LG9jtDE,1526
+ddc/task_meta.py,sha256=1XzM-qAI4_eJCEzahAGh56LS8zDh_bOOS4B57d291ig,3130
+ddc/task_test.py,sha256=oETc9q2wYvku2HLtuDVoF6tTUSkHz2HNxdVueBhX5zw,4215
+ddc/utils.py,sha256=KuGy2v9fimDuD8LM059kGZEjpZxgGU6me5hR6HYlVHs,6434
+ddc-0.1.4.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+ddc-0.1.4.dist-info/METADATA,sha256=Guqi-V69dYoSpHzUb4k4DWzya40EBvtJ4eW4Ke3H_pI,607
+ddc-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ddc-0.1.4.dist-info/entry_points.txt,sha256=RbrpwkOyTldnqo-QrSIub7LDiRk1jLdEImzzgKitVfs,38
+ddc-0.1.4.dist-info/top_level.txt,sha256=F51rIQzK72o8OVnICQ8AFj8N3xyUQlf8f_PFnCCD0WI,4
+ddc-0.1.4.dist-info/RECORD,,

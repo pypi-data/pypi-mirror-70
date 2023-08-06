@@ -1,0 +1,3 @@
+[console_scripts]
+cadc_iq_checker = cadc_iq_checker.cli:main
+

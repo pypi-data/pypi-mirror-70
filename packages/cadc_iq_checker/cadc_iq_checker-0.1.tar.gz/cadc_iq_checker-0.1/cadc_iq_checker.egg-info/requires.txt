@@ -1,0 +1,5 @@
+vos
+numpy
+astropy
+sompy
+keras

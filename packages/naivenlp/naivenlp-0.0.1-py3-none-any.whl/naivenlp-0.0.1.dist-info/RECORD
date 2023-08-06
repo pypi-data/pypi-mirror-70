@@ -1,0 +1,14 @@
+naivenlp/__init__.py,sha256=iEmbNLNnu61EdFCPJCMV-TmykG-PKVPVOg1iH3asD18,373
+naivenlp/tokenizers/__init__.py,sha256=daEdpEyAJIa8b2VkCqSKcw8PaExcB6Qro80XNes_sHA,2
+naivenlp/tokenizers/abstract_tokenizer.py,sha256=q7lDZy84CwZ-21xmxu2IVzk-ht2Mi3qrndGM0z9HQ0w,2863
+naivenlp/tokenizers/jieba_tokenizer.py,sha256=JqZbqHhpl2BX4GkglXhIC9mz3EKWkO6YyYjlhUKl_Tk,14369
+naivenlp/tokenizers/jieba_tokenizer_test.py,sha256=s9aRkjKROZJnAiY5WDoC_ZpnaWYFNeHTHx5TkooHYHU,872
+naivenlp/tokenizers/data/dict.txt,sha256=cZfDIR3dmJYrA2zfQDJNHqK_qhK9Ao5o-qcBEaiOEqg,5071852
+naivenlp/tokenizers/data/prob_emit.p,sha256=Hh0dg1sMd9I0rKpq-iOhP_zll6KVvg16Hs5qDUQNzwg,1275441
+naivenlp/tokenizers/data/prob_start.p,sha256=39RZdt1PjyvBJTWmgKF4v5516qOL39y4REaeVEaNYkU,109
+naivenlp/tokenizers/data/prob_trans.p,sha256=6n9QFi_6AdtJc8eoEgs8AjP7xYGfwNYXUTU18fLH_tw,260
+naivenlp-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+naivenlp-0.0.1.dist-info/METADATA,sha256=y0pe9nGRxv8-yOdiX1d5C3ON3T5OZFykRtpEOTXsIII,971
+naivenlp-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+naivenlp-0.0.1.dist-info/top_level.txt,sha256=dPZqyxhxaRgezNhXOcA1Q8dTqDJoRGIQsDPZO_TOTco,9
+naivenlp-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+ssrahulbasiccalculator/__init__.py
+ssrahulbasiccalculator.egg-info/PKG-INFO
+ssrahulbasiccalculator.egg-info/SOURCES.txt
+ssrahulbasiccalculator.egg-info/dependency_links.txt
+ssrahulbasiccalculator.egg-info/top_level.txt

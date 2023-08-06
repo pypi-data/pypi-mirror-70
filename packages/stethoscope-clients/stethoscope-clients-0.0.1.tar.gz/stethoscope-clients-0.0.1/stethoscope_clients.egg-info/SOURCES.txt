@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+bin/lighthouse/start
+bin/lighthouse/stop
+bin/prysm/start
+bin/prysm/stop
+clients/__init__.py
+clients/rumor.py
+clients/runner.py
+clients/types.py
+stethoscope_clients.egg-info/PKG-INFO
+stethoscope_clients.egg-info/SOURCES.txt
+stethoscope_clients.egg-info/dependency_links.txt
+stethoscope_clients.egg-info/requires.txt
+stethoscope_clients.egg-info/top_level.txt

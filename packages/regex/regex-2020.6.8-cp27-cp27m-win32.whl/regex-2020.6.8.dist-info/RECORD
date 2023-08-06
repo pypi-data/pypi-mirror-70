@@ -1,0 +1,9 @@
+regex/__init__.py,sha256=9slNQEb4SCZ9LncNzcQvqmkyxXlcOAF7QwAwigxWjsw,65
+regex/_regex.pyd,sha256=Z9mHqtcUZxMg036ekN4dlyiZhFI1LD7OQuEhIjRQa1M,583680
+regex/_regex_core.py,sha256=uP-mdUGJk54QPHThtVa06ODJ7U7eaVrqNxWGxrCp9K0,140350
+regex/regex.py,sha256=4shnMSYbcUPZ4N3S-oPRvqUXgKsTHOf1_bnFeZWNgt0,31783
+regex/test_regex.py,sha256=4W4kBS03Yld_X9glJaK6umcMzGZQGeb28rcqCMjq-CA,204138
+regex-2020.6.8.dist-info/METADATA,sha256=4phf48OK3rMnjU87o3pjZXQrm9e0u4TM6ulR21AazRM,40142
+regex-2020.6.8.dist-info/WHEEL,sha256=VgnquN2wmS-dr_fBLVW6BVf1-4JY9hxIFDEVNCtWYcA,102
+regex-2020.6.8.dist-info/top_level.txt,sha256=aQmiDMhNTF26cCK4_7D-qaVvhbxClG0wyCTnEhkzYBs,6
+regex-2020.6.8.dist-info/RECORD,,

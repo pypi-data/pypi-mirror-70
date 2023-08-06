@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ifexd/__init__.py
+ifexd/haarcascade_eye.xml
+ifexd/haarcascade_frontalface_default.xml
+ifexd.egg-info/PKG-INFO
+ifexd.egg-info/SOURCES.txt
+ifexd.egg-info/dependency_links.txt
+ifexd.egg-info/requires.txt
+ifexd.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+
+include *.md
+include *.rst
+include LICENSE
+include requirements.txt
+include ifexd/__init__.py
+
+recursive-include ifexd *.py
+recursive-include ifexd *.txt
+recursive-include ifexd *.xml
+
+### Exclude
+recursive-exclude * __pycache__
+recursive-exclude *.yml

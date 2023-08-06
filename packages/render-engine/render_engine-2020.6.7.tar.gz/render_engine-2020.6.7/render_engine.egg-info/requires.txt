@@ -1,0 +1,14 @@
+pendulum
+markdown
+jinja2
+more-itertools
+typer
+click
+
+[dev]
+check-manifest
+
+[test]
+pytest
+pytest-cov
+black

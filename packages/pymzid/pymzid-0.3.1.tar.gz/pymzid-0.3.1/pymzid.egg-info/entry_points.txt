@@ -1,0 +1,3 @@
+[console_scripts]
+pymzid = pymzid.__main__:main
+

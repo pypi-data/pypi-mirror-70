@@ -1,0 +1,10 @@
+libslide_io.so,sha256=kRJQi2iXOmhaGvdQ69VOR_CLh302p94GqBtOjs29Jj0,41072840
+slideio.cpython-35m-x86_64-linux-gnu.so,sha256=XGvbISEFVporjyZUdB5jVWIVq_y7nUcxhxK2C05vufk,233248
+slideio.cpython-37m-x86_64-linux-gnu.so,sha256=SmR2CEq1c9cZcR4vM04IcO3ZmPZgz7mA6hBy5JKfEJ0,233248
+slideio.cpython-38-x86_64-linux-gnu.so,sha256=JA56FTbzAik-xKlcCxhQUyAHmiyTcCcfBLb3dk4YfKQ,225056
+slideio.cpython-36m-x86_64-linux-gnu.so,sha256=Rb_07sW11OZUn4WCaZ_kyCxpXgrsTp2WE_vpYvK5GOc,233248
+slideio-0.3.0.68.dist-info/RECORD,,
+slideio-0.3.0.68.dist-info/WHEEL,sha256=lcFHRL9nxOeSwmwIxlbY5bPkh5a_GtD4XbV-xJYB-ZU,111
+slideio-0.3.0.68.dist-info/METADATA,sha256=6Ya1q9vZHmt6aAl2dJGGRyKG9iom49DKZsxQSOwljfg,1149
+slideio-0.3.0.68.dist-info/top_level.txt,sha256=GjKvFJIq0ND8NFcAt3GozneEwtsW0rX09rDW1CrPGcI,8
+slideio-0.3.0.68.data/data/requirements-dev.txt,sha256=88hd6JBxfTwnj69wkk9kE6O8Apk7ybLAtvAwsF8wyS4,28

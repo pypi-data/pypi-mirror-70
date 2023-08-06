@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: luigi-engine
+Version: 0.1
+Summary: Luigi 2D game engine
+Home-page: https://github.com/Cc618/Luigi
+Author: Cc618
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+Luigi 2D game engine
+
+

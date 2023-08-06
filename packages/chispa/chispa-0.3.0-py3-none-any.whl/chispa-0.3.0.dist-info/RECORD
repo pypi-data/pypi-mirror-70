@@ -1,0 +1,9 @@
+chispa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chispa/bcolors.py,sha256=dMrmOpvimZULI1bfEtPzs-MpfL-jEIlIgpKai_WcDG4,534
+chispa/column_comparer.py,sha256=fchxJsfwjqE7gRDd9f12_pGeeSeB5MHDyCFuvOfa4Ek,2055
+chispa/dataframe_comparer.py,sha256=DZaUxxfRtPX6Mw9xiDPh5LSNG4i3OcP7kiG9Uhgmh0k,2446
+chispa/row_comparer.py,sha256=gpjVXIHweLZ_vELtSQZ2DxUf8wvmxJouzxH_-63mGuo,25
+chispa/spark.py,sha256=GpJe9iGrQUPHIkEbWI8UDA6CtPY6T9D-NiZiKAIE1II,131
+chispa-0.3.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+chispa-0.3.0.dist-info/METADATA,sha256=tLoJ9vNcH6ONJKpu6a13JRaoqMM6oSlbj5VELn53cfQ,457
+chispa-0.3.0.dist-info/RECORD,,

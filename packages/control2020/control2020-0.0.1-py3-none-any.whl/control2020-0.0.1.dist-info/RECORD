@@ -1,0 +1,11 @@
+control2020/__init__.py,sha256=yaOrNRZMImGjczJa6KWZjFDyUvrNYFgZfi-sIjpHGfs,32
+control2020/design.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+control2020/heuristics.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+control2020/core/__init__.py,sha256=zX62NutVjbYtdMYdJ1sHEbiDcYQ1pPNdIpMorYv543U,267
+control2020/core/analysis.py,sha256=eWzzoz5-pMh30j_y1sqJbFAXcmMY-cbjCqIUM4YdWHY,4164
+control2020/core/basics.py,sha256=eYFFoeAP6B55dE46f9P4C-x4vcZPGMdIJCh4guE0T1A,1538
+control2020/core/root_locus.py,sha256=_fteCG5q5rZkf1og-Z5M6vbHoQ8QN5pVigoyvrgkAJw,4582
+control2020-0.0.1.dist-info/METADATA,sha256=eFwonbf09_gsaVzl8HTgYl9YH9hgaNKBUtiyLAygADg,582
+control2020-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+control2020-0.0.1.dist-info/top_level.txt,sha256=LoYGDDn_Hg0nALyVQtTjoQf6NemxWvM3o32MYe08DrM,12
+control2020-0.0.1.dist-info/RECORD,,

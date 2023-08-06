@@ -1,0 +1,5 @@
+====================
+ideabox.stats
+====================
+
+User documentation

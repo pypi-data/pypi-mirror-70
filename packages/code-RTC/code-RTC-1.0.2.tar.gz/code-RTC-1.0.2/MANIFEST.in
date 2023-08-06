@@ -1,0 +1,4 @@
+graft code_rtc/data
+graft code_rtc/static
+graft code_rtc/templates
+global-exclude *.pyc

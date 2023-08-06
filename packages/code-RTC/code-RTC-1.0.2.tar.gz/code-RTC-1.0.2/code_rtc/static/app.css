@@ -1,0 +1,151 @@
+textarea,pre {
+    -moz-tab-size : 2;
+    -o-tab-size : 2;
+    tab-size : 2;
+}
+
+.testcase {
+    height: 23vh;
+    display: block;
+    overflow: auto;
+    border-top: 2px solid black;
+}
+
+.table-container {
+    height: 64vh;
+    overflow: auto;
+    display: block;
+}
+
+.controls {
+    height: 30px;
+    background-color: white;
+    border-top: 2px solid black;
+    overflow-x: hidden;
+    display: flex;
+}
+.controls div{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.controls i{
+    color: rgb(4, 4, 49);
+    padding: 3px;
+}
+
+.ribbon {
+    width: 100%;
+    height: 5vh;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.ribbon select{
+    padding: 4px;
+    border: 2px solid black;
+}
+
+.codepane {
+    width: 100%;
+    height: 90vh;
+}
+
+#code {
+    height: 68vh;
+    border: 1px solid black;
+}
+
+.io {
+    margin-top: -10px;
+    display: flex;
+    padding-top: 11px;
+}
+
+#input{
+    flex: 50%;
+    height: 20vh;
+    border: 1px solid black;
+}
+
+#output{
+    flex: 50%;
+    height: 20vh;
+    border: 1px solid black;
+}
+
+.thead-dark{
+    font-weight: bold;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+ }
+
+.row {
+    border-bottom: 2px solid black;
+}
+
+.padding-right{
+    margin-right: 5px;
+}
+
+.dropdown-menu, .dropdown-menu-sm{
+    margin: 0px;
+    padding: 0px;
+}
+
+.table-drop {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#note {
+    height: 500px;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.files:hover{
+    background-color: rgb(50, 52, 58);
+    color: rgb(230, 225, 225);
+}
+
+.code{
+    font-size: 18px;
+    background-color: rgb(88, 84, 84);
+    color: rgb(247, 242, 242);
+}
+
+.tabs-ul{
+    padding: 2px 0px 2px 0px;
+    margin-left: 0px;
+    margin-bottom: 1px;
+    border-top: 2px solid black;
+    background-color: rgb(235, 235, 235);
+}
+
+.tabs-ul li{
+    background-color: rgb(41, 39, 39);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    list-style: none; 
+    display: inline;
+    border-right: 2px solid white;
+}
+
+.selected{
+    color: rgb(220, 230, 130);
+    font-weight: bold;
+    text-decoration: underline;
+}

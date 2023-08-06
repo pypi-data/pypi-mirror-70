@@ -1,0 +1,272 @@
+
+  <div class="ribbon">
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        File <span class="caret"></span>
+      </button>
+      <table class="dropdown-menu">
+        <tr class="clickable" ng-click="$ctrl.createFile('')">
+          <td><i title="Create File" class="fas fa-file-medical"></i></td>
+          <td>New File</td>
+        </tr>
+        <tr class="clickable" ng-click="$ctrl.createDir()">
+          <td><i title="Create Directory" class="fas fa-folder-plus"></i></td>
+          <td>New Folder</td>
+        </tr>
+        <tr class="clickable" ng-click="$ctrl.saveFile()">
+          <td><i title="Save File" class="fas fa-save"></i></td>
+          <td>Save</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        Testcase <span class="caret"></span>
+      </button>
+      <table class="dropdown-menu">
+        <tr  ng-click="$ctrl.addTestCase()" class="clickable">
+          <td><i title="Add Test Case" class="fas fa-plus-circle"></i></td>
+          <td>Add Testcase</td>
+        </tr>
+        <tr class="clickable"  ng-click="$ctrl.runOnTestCases()">
+          <td><i Title="Run Test Cases" class="fas fa-play-circle"></i></td>
+          <td>Run on Testcases</td>
+        </tr>
+        </table>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        Setting <span class="caret"></span>
+      </button>
+      <table class="dropdown-menu">
+        <tr data-toggle="modal" data-target="#editorSetting" class="clickable">
+          <td><i title="Add Test Case" class="fa fa-cog"></i></td>
+          <td>Editor Setting</td>
+        </tr>
+        </table>
+    </div>
+
+  <i Title="Run Test Cases" ng-click="$ctrl.runOnTestCases()" class="fas fa-play-circle btn btn-outline-success clickable" aria-hidden="true"></i>
+  <i Title="Run Code in editor" ng-click="$ctrl.runcode()" class="fa fa-play btn btn-outline-danger clickable" aria-hidden="true"></i>
+  <i Title="Add Note" ng-if="$ctrl.openfile != ''" type="button" data-toggle="modal" data-target="#myModal" class="fa fa-sticky-note btn btn-outline-success" aria-hidden="true"></i>
+  <select class="btn" id="ext" ng-change="$ctrl.langChange()" ng-model="$ctrl.ext">
+    <option value=".cpp14">C++14</option>
+    <option value=".cpp17">C++17</option>
+    <option value=".cpp11">C++11</option>
+    <option value=".py3">Python3</option>
+    <option value=".c">C</option>
+  </select>
+  <select class="btn" id="theme" ng-change="$ctrl.themeChange()" ng-model="$ctrl.theme">
+    <option value="vs">Bright</option>
+    <option value="vs-dark">Dark</option>
+    <option value="hc-black">Black</option>
+  </select>
+  <select class="btn" ng-if="$ctrl.openfile != ''" id="flag" ng-change="$ctrl.flagChange()" ng-model="$ctrl.flag">
+    <option value="AC">AC</option>
+    <option value="WA">WA</option>
+    <option value="TLE">TLE</option>
+    <option value="RE">RE</option>
+  </select>
+  <i ng-if="$ctrl.openfile != ''" style="border: 1px solid black;padding: 5px;width: 500px;overflow: auto;" class="fas fa-book-open btn"> {{$ctrl.openfile_path}}</i>
+  
+</div>
+<div class="row">
+  
+  <div class="col-lg-2 nopadding">
+    <div id="controls" class="searchbox "><input placeholder="Search" class="form-control" type="Search" ng-model="$ctrl.query"></div>
+    
+    <div class="controls" >
+      
+      <div title="Go Back" class="clickable" style="flex: 10%;" ng-click="$ctrl.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </div>
+      <div style="flex: 70%;">{{$ctrl.parent}}</div>
+      <div title="search file in current Directory" class="clickable" ng-click="$ctrl.search()" style="flex: 10%;"><i class="fa fa-search" aria-hidden="true"></i></div>
+      <div style="flex: 10%;"><i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+    
+    <div class="table-container"  >
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <td>#</td>
+            <td> File / Folder Names</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable files" ng-repeat="child in $ctrl.children | filter:$ctrl.query" id="{{child[1]}}" ng-if="child[2] < 2" ng-click="$ctrl.loadDir(child)" ng-mousedown="$ctrl.contextMenu(child,$event)" oncontextmenu="return false;" ng-model="$ctrl.children">
+            <td ng-if="child[2] == 0"><i class="fas fa-file"></i></td>
+            <td ng-if="child[2] == 1"><i class="fas fa-folder"></i></td>
+            <td ng-if="child[4] == 1" style="color: green;">{{child[1]}}</td>
+            <td ng-if="child[4] > 1" style="color: red;">{{child[1]}}</td>
+            <td ng-if="child[4] == null">{{child[1]}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="height: 100%;" ng-mousedown="$ctrl.contextMenu(null,$event)" oncontextmenu="return false;">
+
+      </div>
+      <div class="dropdown-menu dropdown-menu-sm" id="context-menu">
+        <table class="table-drop">
+          <tr ng-if="$ctrl.contextMenuFlag && $ctrl.fileOrFolder == 0" class="clickable dropdown-item" ng-click="$ctrl.preview()">
+            <td><i class="fas fa-eye"></i></td>
+            <td>Preview</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag" class="clickable dropdown-item " ng-click="$ctrl.deleteFile()">
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            <td>Delete</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag" class="clickable dropdown-item" ng-click="$ctrl.editFile()">
+            <td><i class="fa fa-pencil-square" aria-hidden="true"></i></td>
+            <td>Rename</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag" class="clickable dropdown-item" ng-click="$ctrl.copyFile()">
+            <td><i class="fa fa-scissors" aria-hidden="true"></i></td>
+            <td>Cut</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag && $ctrl.fileOrFolder == 0" class="clickable dropdown-item" ng-click="$ctrl.download()">
+            <td><i class="fa fa-download" aria-hidden="true"></i></td>
+            <td>Download</td>
+          </tr>
+          <tr ng-if="$ctrl.clipboard.data_available" class="clickable dropdown-item" ng-click="$ctrl.copyFile()">
+            <td><i class="fa fa-clipboard" aria-hidden="true"></i></td>
+            <td>Paste</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag == false" class="clickable dropdown-item" ng-click="$ctrl.createFile('')">
+            <td><i title="Create File" class="fas fa-file-medical"></i></td>
+            <td>New File</td>
+          </tr>
+          <tr ng-if="$ctrl.contextMenuFlag == false" class="clickable dropdown-item" ng-click="$ctrl.createDir()">
+            <td><i title="Create Directory" class="fas fa-folder-plus"></i></td>
+            <td>New Folder</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div>
+      <div class="testcase">
+        <ol>
+          <li class="clickable" ng-repeat="test in $ctrl.testcases" ng-click="$ctrl.showTest(test)" ng-mousedown="$ctrl.contextMenuTestCases(test,$event)" oncontextmenu="return false;">
+            <i title="Running" ng-if="test[5] == -1" class="fas fa-clock"></i>
+            <i title="Not Examined" ng-if="test[5] == 0" style="color: blue;" class="fas fa-question-circle"></i>
+            <i title="AC" ng-if="test[5] == 1" style="color: green;" class="fas fa-check-circle"></i>
+            <i title="WA" ng-if="test[5] == 2" style="color: rgb(255, 0, 0);" class="fas fa-times-circle"></i> Test {{$index}} 
+          </li>
+        </ol>
+      </div>
+      <div class="dropdown-menu dropdown-menu-sm" id="context-test">
+        <table class="table-drop">
+          <tr ng-if="$ctrl.contextMenuFlag" class="clickable dropdown-item" ng-click="$ctrl.deleteTest()">
+            <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+            <td>Delete</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-lg-10 nopadding">
+    <div>
+      <ul class="tabs-ul">
+        <li class="clickable" ng-repeat="tab in $ctrl.tabs" title="{{tab.openfile_path}}">
+          <span ng-if="tab.current == 1" class="selected" ng-click="$ctrl.changeTab(tab.openfile_id)">
+            <span ng-if="tab.openfile == ''">Untitled</span>
+            <span ng-if="tab.openfile != ''">{{tab.openfile[1]}}</span>
+          </span>
+          <span ng-if="tab.current != 1" ng-click="$ctrl.changeTab(tab.openfile_id)">
+            <span ng-if="tab.openfile == ''">Untitled</span>
+            <span ng-if="tab.openfile != ''">{{tab.openfile[1]}}</span>
+          </span> 
+          &nbsp;<i ng-click="$ctrl.removeTab(tab.openfile_id)" class="fa fa-times" aria-hidden="true"></i>
+        </li>
+        <li class="clickable" ng-click="$ctrl.addNewTab(-1)"><i class="fa fa-plus" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+    <div id="code"></div>
+    <div class="io">
+      <textarea placeholder="Paste Input Here" name="input" id="input" cols="20" rows="10" ng-model="$ctrl.input">{{$ctrl.input}}</textarea>
+    <textarea placeholder="Output Shows Here" name="output" id="output" cols="20" rows="10" ng-model="$ctrl.output">{{$ctrl.output}}</textarea>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="code">
+          <textarea rows="100" name="note" id="note"></textarea>
+        </div>
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" ng-click="$ctrl.saveNote()" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editorSetting">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" ng-click="$ctrl.editorSetting()" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="previewModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{$ctrl.contextFile[1]}}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body code">
+        <div>
+          <pre class="code"><code >{{$ctrl.previewCode}}</code></pre>
+        </div>
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>

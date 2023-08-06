@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+cities.json
+setup.py
+./geosky/cities.json
+geosky/geo_plug.py
+geosky.egg-info/PKG-INFO
+geosky.egg-info/SOURCES.txt
+geosky.egg-info/dependency_links.txt
+geosky.egg-info/requires.txt
+geosky.egg-info/top_level.txt

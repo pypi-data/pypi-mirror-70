@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: geosky
+Version: 1.0.9
+Summary: A Python package to get all city country and stat names
+Home-page: https://github.com/jyotiprakash-work/geosky
+Author: jyotiprakash panigrahi
+Author-email: jyotiprakash.work@gmail.com
+License: MIT
+Description: # Geo sky
+        
+        A Python package to get all city, stae and country names
+        
+        ## Usage
+        
+        Following methods can be utilized to get info..
+        
+        ```
+        from geosky import geo_plug
+        
+        geo_plug.all_CountryNames()
+        
+        geo_plug.all_Country_StateNames()
+        
+        geo_plug.all_State_CityNames(name)# name == 'all' or stae name
+        geo_plug.all_State_CityNames('Odisha')
+        ```
+        
+        To uninstall execute following..
+        
+        ```
+        pip uninstall geosky
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown

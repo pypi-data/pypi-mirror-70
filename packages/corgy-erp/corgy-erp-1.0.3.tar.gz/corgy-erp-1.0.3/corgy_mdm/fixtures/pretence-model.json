@@ -1,0 +1,372 @@
+[
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "95fc5d84-44e8-4ae8-be60-b9f3b1c3d052",
+        "code": "AL",
+        "name": "\u00c1ll\u00e1sid\u0151",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "2da6f7a9-97e6-41f1-89ea-d1429edbac8f",
+        "code": "LM",
+        "name": "Munkab\u00e9r",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "8334984c-425e-4d62-9dec-1b7135c11c4c",
+        "code": "BS",
+        "name": "Betegszabads\u00e1g",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "e6f3554b-8db0-4cf5-b347-104d38e47597",
+        "code": "FS",
+        "name": "Fizetett szabads\u00e1g",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "47848ab5-1fdb-4132-afe5-96695876c0cf",
+        "code": "FT",
+        "name": "Fizetett igazolt t\u00e1voll\u00e9t",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "81b83c70-d965-44cd-931a-c415e295dc7b",
+        "code": "FU",
+        "name": "Fizetett \u00fcnnep",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "6fa85f7a-71a1-46b1-bd86-eeeda3d28101",
+        "code": "MF",
+        "name": "Munkaid\u0151keret feletti \u00f3ra",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "1b2c6c9a-1ad6-4e3d-8dbe-7c2a26bdf8a9",
+        "code": "MP",
+        "name": "Munkaid\u0151keret feletti p\u00f3tl\u00e9k 50%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "355b2c04-6ab0-416e-ae12-2415e82d0fa6",
+        "code": "P1",
+        "name": "B\u00e9rp\u00f3tl\u00e9k 15%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 10,
+    "fields": {
+        "prime_number": "8d22e241-9482-40fc-b80c-1989e1c96c0c",
+        "code": "P2",
+        "name": "B\u00e9rp\u00f3tl\u00e9k 30%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 11,
+    "fields": {
+        "prime_number": "cb95af14-44d8-44eb-a81a-c1e15f7771ba",
+        "code": "P3",
+        "name": "B\u00e9rp\u00f3tl\u00e9k 50%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 12,
+    "fields": {
+        "prime_number": "e68c037c-001c-4c7b-ac8e-c7b0dbe862cc",
+        "code": "P4",
+        "name": "B\u00e9rp\u00f3tl\u00e9k 100%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 13,
+    "fields": {
+        "prime_number": "dca49856-cd57-4fe5-8b9f-84f3bda17132",
+        "code": "P5",
+        "name": "K\u00e9szenl\u00e9ti p\u00f3tl\u00e9k 20%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 14,
+    "fields": {
+        "prime_number": "8cff660e-1ae6-43c7-bc31-c01c91886181",
+        "code": "P6",
+        "name": "\u00dcgyeleti p\u00f3tl\u00e9k 40%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 15,
+    "fields": {
+        "prime_number": "ee4125ce-b50a-4612-af0b-108056c4cb92",
+        "code": "T1",
+        "name": "Rendkiv\u00fcli m.id\u0151 p\u00f3tl\u00e9k 50%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 16,
+    "fields": {
+        "prime_number": "69c0427a-7d3b-4581-9547-21efc7dfc92f",
+        "code": "T2",
+        "name": "Rendkiv\u00fcli m.id\u0151 p\u00f3tl\u00e9k 100%",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 17,
+    "fields": {
+        "prime_number": "18c92c63-feb6-41c2-8da8-f736c88bfe43",
+        "code": "TA",
+        "name": "Rendkiv\u00fcli munkaid\u0151 d\u00edjaz\u00e1sa",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 18,
+    "fields": {
+        "prime_number": "55904f58-d50b-4790-8dfa-bcec8afb4eb2",
+        "code": "SV",
+        "name": "Szabads\u00e1gmegv\u00e1lt\u00e1s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 19,
+    "fields": {
+        "prime_number": "c11cb432-d7b5-46b1-bdc9-1b6bd441d688",
+        "code": "JU",
+        "name": "Jutalom",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 20,
+    "fields": {
+        "prime_number": "6abbe153-1e72-4cb2-be9a-ff1630383f9b",
+        "code": "PR",
+        "name": "Pr\u00e9mium",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 21,
+    "fields": {
+        "prime_number": "9b02566d-242d-4efd-86d2-96eb1cef9af6",
+        "code": "VK",
+        "name": "V\u00e9gkiel\u00e9g\u00edt\u00e9s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 22,
+    "fields": {
+        "prime_number": "1335aeda-897c-427f-a3ba-922389e56cb2",
+        "code": "IB",
+        "name": "Ingatlan b\u00e9rbead\u00e1s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 23,
+    "fields": {
+        "prime_number": "c0702a6a-eab6-4e40-ac97-1caad71b6cf4",
+        "code": "MD",
+        "name": "Megb\u00edz\u00e1si d\u00edj",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 24,
+    "fields": {
+        "prime_number": "2c977d36-5f7d-46ca-97ae-a7b931acfd74",
+        "code": "TJ",
+        "name": "Tagi j\u00f6vedelem",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 25,
+    "fields": {
+        "prime_number": "acaaf746-e288-4efb-bb94-6a0d1260b489",
+        "code": "TD",
+        "name": "Tiszteletd\u00edj",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 26,
+    "fields": {
+        "prime_number": "f3d29377-4575-4f11-843d-000d35b33211",
+        "code": "EV",
+        "name": "Egy\u00e9ni v\u00e1llalkoz\u00f3i kiv\u00e9t",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 27,
+    "fields": {
+        "prime_number": "c9fc9861-a0c5-4a1f-8d9d-ceea957e6c6d",
+        "code": "HB",
+        "name": "Helyi utaz\u00e1si b\u00e9rlet",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 28,
+    "fields": {
+        "prime_number": "7c81a026-312d-4ec9-8a6e-41db7fbd511d",
+        "code": "ME",
+        "name": "Meleg \u00e9tkez\u00e9si utalv\u00e1ny",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 29,
+    "fields": {
+        "prime_number": "2372ce63-b278-437c-8a5f-a8cd2b5d965a",
+        "code": "UT",
+        "name": "Utaz\u00e1si k\u00f6lts\u00e9g",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 30,
+    "fields": {
+        "prime_number": "c89f8de3-7242-456f-96be-459f5d0bc341",
+        "code": "S1",
+        "name": "Sz\u00e9p k\u00e1rtya vend\u00e9gl\u00e1t\u00e1s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 31,
+    "fields": {
+        "prime_number": "42f43609-417e-4816-8e91-480fb6c72a85",
+        "code": "S2",
+        "name": "Sz\u00e9p k\u00e1rtya sz\u00e1ll\u00e1s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 32,
+    "fields": {
+        "prime_number": "8247b56b-ea9b-4a60-b3d3-10bb0af56ffe",
+        "code": "S3",
+        "name": "Sz\u00e9p k\u00e1rtya szabadid\u0151",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 33,
+    "fields": {
+        "prime_number": "ae1e9a04-ff26-40f4-ba72-2bdd8a8508d3",
+        "code": "S4",
+        "name": "Sz\u00e9p k\u00e1rtya vend\u00e9gl\u00e1t\u00e1s hat\u00e1r felett",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 34,
+    "fields": {
+        "prime_number": "72672767-e727-417c-82e0-7845cd3fb2aa",
+        "code": "S5",
+        "name": "Sz\u00e9p k\u00e1rtya sz\u00e1ll\u00e1s hat\u00e1r felett",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 35,
+    "fields": {
+        "prime_number": "6c247c76-de91-4354-b96d-2be497497554",
+        "code": "S6",
+        "name": "Sz\u00e9p k\u00e1rtya szabadid\u0151 hat\u00e1r felett",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 36,
+    "fields": {
+        "prime_number": "63d2438f-f88e-4040-b92c-aef466d462cc",
+        "code": "BI",
+        "name": "B\u00edr\u00f3s\u00e1gi letilt\u00e1s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.pretencemodel",
+    "pk": 37,
+    "fields": {
+        "prime_number": "e15c4c0a-ff37-4e4c-8bc1-089e61217eaf",
+        "code": "GY",
+        "name": "Gyermektart\u00e1s",
+        "description": null
+    }
+}
+]

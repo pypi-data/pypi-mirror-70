@@ -1,0 +1,148 @@
+Metadata-Version: 2.1
+Name: ItemResponseCalc
+Version: 0.5.0
+Summary: Statistical Analysis of Questionnaire Response Data
+Home-page: UNKNOWN
+Author: Arne Leijon
+Author-email: leijon@kth.se
+License: MIT
+Description: Package **ItemResponseCalc** implements probabilistic Bayesian analysis
+        of responses from a questionnaire designed to measure individual `traits', 
+        i.e., preferences, judgments, or capabilities.
+        
+        The analysis is based on *Item Response Theory (IRT)*.
+        This is a family of probabilistic models designed to handle responses to test instruments for any purpose in social, psychological, or educational research.
+        The analysis model estimates individual parameters numerically on an objective *interval scale*,
+        although the raw input data are *subjective*
+        and indicate only an *ordinal* judgment for each item in the questionnaire.
+        
+        This implementation uses the *Graded Response Model* (Samejima, 1997; Fox, 2010), 
+        applied with a logistic distribution for the latent random variable assumed to determine each response.
+        This model treats subjects' responses
+        as determined by the outcome of a latent individual trait variable,
+        i.e., somewhat similar to the latent internal "sensation"
+        variable assumed to determine responses in psycho-physical experiments.
+        
+        Another model for similar data might be the Partial Credits Model (Masters, 1982; Fox, 2010),
+        which belongs to the Rasch family.
+        
+        ## Data Collection
+        The present package version can only handle discrete *ordinal* response data.
+        The response alternatives must represent a natural order, e.g., 
+        `strongly disagree`, `disagree`, `no opinion`, `agree`, `strongly agree`.
+        
+        This package *does not include* functions to administer the data collection;
+        it can only use existing recorded data.
+        The present version *does not include* functions to validate the statistical properties of the questionnaire itself,
+        and thus cannot help in the design of a questionnaire.
+        It can only analyze recorded response data sets obtained from an existing test instrument.
+        
+        The package can analyze response data with the following features:
+        
+        1. The questionnaire may include several items.
+        
+        1. The items may be designed to measure either 
+        	a single individual trait, or several traits.
+        	The analysis will automatically determine how many traits are needed
+        	to effectively model the complete set of response data.
+            	The analysis results will show estimated values for each trait.
+           	 
+         1. Separate model parameters are estimated for the traits of individual respondents, 
+         	and for the response scale of each item.
+        	The analysis results will show which items are associated with each individual trait.
+        	The results also show how the trait scale corresponds to the ordinal responses for each item.
+         
+        1. The number of response alternatives may differ among questionnaire items.
+        	Each item must have at least two response alternatives,
+        	even if one alternative is not explicitly shown in the questionnaire. 
+        	(For example, if an item requires a Yes/No answer, 
+        	only the Yes alternative might be shown as a tick box, 
+        	and the absence of a tick mark is interpreted as a No answer.) 
+        	
+        1. Data for one or more distinct **Participant Groups** may be included.
+        	The analysis will show predicted differences between the populations
+        	from which the groups are recruited.
+        	The statistical credibility is calculated *jointly* for all population differences,
+        	accounting for the effects of multiple comparisons.	
+            
+        1. The analysis model can use input data stored in various file formats. 
+        	The user can specify different recoding functions for each input source, 
+        	e.g., to handle different codes for missing responses, 
+        	or different wordings for the response alternatives. 
+        	Responses are recoded into an ordinal integer index 1, 2, etc., for each item.
+        
+        1. The analysis can handle missing responses in the input data sets. 	
+        
+        1. The user may specify arbitrary inclusion criteria for respondent records,
+        	separately for each input file.
+        
+        1. The present version does not distinguish *repeated* responses from a single subject. 
+        	All input records are treated as independent, 
+        	assumed to be given by different respondents.
+        
+        The Bayesian model is hierarchical.
+        The package can estimate predictive distributions of results for
+        * a random individual in each population represented by a group of respondents,
+        * the mean in each population represented by a group of respondents,
+        * a random individual in the total population for which all respondent groups are representative.
+        All results are saved in files with figures and tables, with user-selectable formats. 
+        
+        ## Package Documentation
+        General information and version history is given in the package doc-string that may be accessed by command
+        `help(ItemResponseCalc)`.
+        
+        Specific information about the organization and accepted formats of input data files
+        is presented in the doc-string of module item_response_data, accessible via `help(ItemResponseCalc.item_response_data)`.
+        The most flexible file format is an Excel (xlsx) work-sheet, where each row
+        contains all responses from one subject, with one column for each item.
+        
+        After running an analysis, the logging output file briefly explains
+        the analysis results presented in figures and tables.
+        
+        ## Usage
+        1. Install the most recent package version:
+            `python3 -m pip install --upgrade ItemResponseCalc`
+        
+        1. Copy the template script `run_irt.py`, rename it, and
+            edit the copy as suggested in the template, to specify
+            - your questionnaire and response alternatives,
+            - the respondent groups and corresponding input data files,
+            - a directory where all output result files will be stored.
+        
+        1. Run your edited script: `python3 run_my_irt.py`.
+        
+        ## Requirements
+        This package requires Python 3.6 or newer, with Numpy 1.17 or newer, Scipy, and Matplotlib,
+        as well as a support package samppy, and openpyxl for reading xlsx files.
+        The pip installer will check and install these required packages if needed.
+        
+        If the user needs to access data in a MySQL database, 
+        a connection package must be installed manually, e.g., as
+         `python3 -m pip install  mysql-connector-python`
+        
+        If the user needs to analyze SPSS (.sav) data files, 
+        it is recommended to first use SPSS to convert the data to xlsx or csv file format.
+        
+        ## References
+        A. Leijon, H. Dillon, L. Hickson, M. Kinkel, S. E. Kramer, and P. Nordqvist (2020).
+        Analysis of Data from the International Outcome Inventory for Hearing Aids (IOI-HA) using Bayesian Item Response Theory.
+        *Manuscript in preparation*. Contact the package author for more information.
+        
+        J.-P. Fox (2010). *Bayesian Item Response Modeling: Theory and Applications*. Statistics for Social and Behavioral Sciences. Springer.
+        
+        G. N. Masters (1982). A Rasch model for partial credit scoring. *Psychometrika*, 47(2):149–174.
+        
+        F. Samejima (1997). Graded response model. In W. J. v. D. Linden and R. K. Hambleton, eds., *Handbook of Modern Item Response Theory*, p. 85–100. Springer, New York.
+        
+        
+Keywords: questionnaire item-response-theory Bayesian
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Multimedia :: Sound/Audio
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

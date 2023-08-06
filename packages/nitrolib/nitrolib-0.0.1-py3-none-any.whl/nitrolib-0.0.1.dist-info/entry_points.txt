@@ -1,0 +1,3 @@
+[console_scripts]
+loadrom_emulator = nitrolib.__main__:loadrom_emulator
+

@@ -1,0 +1,4 @@
+[console_scripts]
+rtr_client = rtr_client.rtr_client:main
+rtr_show = rtr_client.rtr_show:main
+

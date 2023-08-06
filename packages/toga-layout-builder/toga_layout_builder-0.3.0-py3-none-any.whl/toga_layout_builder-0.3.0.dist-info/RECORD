@@ -1,0 +1,15 @@
+example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example/app.py,sha256=NEIUNrlt8GSxD3T60g4lIDxcEK1xvY3s77EImLG4t8Y,437
+example/events.py,sha256=iEBWZf55M59NuYcM3-XoKa_BHgyvwhqCTg9o1OwsmVc,231
+example/styles.py,sha256=XdJkuw5_lFJSR2gUintWsQ23H4GVrjsSKKKIFpJHYPE,339
+example/simple_app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example/simple_app/app.py,sha256=KLGcB624-O017YR7JuCvEJr8jXn61vFdYY2Lrc_5wxc,392
+example/simple_app/events.py,sha256=Jw1SYjre9YEp_dd0LyhwfERQjc9t5Ui5H0idf7O18yM,275
+example/simple_app/styles.py,sha256=1OcbgyIB6xEzZWRWsmDqc1PrymEOF0-AcWMSTB6gR1s,211
+toga_layout/__init__.py,sha256=ox0Y-Xw9RDsd1mJhJPJDAlKt4dYcR1ln5Npnb2MuDW8,85
+toga_layout/layout.py,sha256=0E14XMkttlPvuqpG2BHsnMSlGbyEL0S5DFnj7dah640,4620
+toga_layout/utils.py,sha256=LtGGls3VAHVhO6X4gunubp0UlSbIxjhXeaWjqJMhxvc,980
+toga_layout_builder-0.3.0.dist-info/METADATA,sha256=9Hzjbl9woHRxarHbfHJkMSh2xmbzUajJu2Jf6j6-Gu0,2716
+toga_layout_builder-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+toga_layout_builder-0.3.0.dist-info/top_level.txt,sha256=pclUG5SgxbsbGzyetHQTFzrD5h22eE27jX8cxIooXLI,20
+toga_layout_builder-0.3.0.dist-info/RECORD,,

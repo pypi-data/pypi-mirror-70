@@ -1,0 +1,10 @@
+README.md
+setup.py
+easybake/__init__.py
+easybake/__main__.py
+easybake/easybake.py
+easybake.egg-info/PKG-INFO
+easybake.egg-info/SOURCES.txt
+easybake.egg-info/dependency_links.txt
+easybake.egg-info/requires.txt
+easybake.egg-info/top_level.txt

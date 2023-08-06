@@ -1,0 +1,8 @@
+README.md
+setup.py
+statictypes/__init__.py
+statictypes/type_check.py
+statictypes.egg-info/PKG-INFO
+statictypes.egg-info/SOURCES.txt
+statictypes.egg-info/dependency_links.txt
+statictypes.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+argcomplete
+beautifultable
+dill
+h5py
+numpy
+pyyaml
+tensorboard
+termcolor
+torch
+tqdm
+Pillow

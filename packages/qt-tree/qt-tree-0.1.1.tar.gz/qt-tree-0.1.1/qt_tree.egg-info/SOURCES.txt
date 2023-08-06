@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+qt_tree/__init__.py
+qt_tree/default_config.json
+qt_tree/node.py
+qt_tree/scene.py
+qt_tree/slot.py
+qt_tree/util.py
+qt_tree/view.py
+qt_tree.egg-info/PKG-INFO
+qt_tree.egg-info/SOURCES.txt
+qt_tree.egg-info/dependency_links.txt
+qt_tree.egg-info/requires.txt
+qt_tree.egg-info/top_level.txt

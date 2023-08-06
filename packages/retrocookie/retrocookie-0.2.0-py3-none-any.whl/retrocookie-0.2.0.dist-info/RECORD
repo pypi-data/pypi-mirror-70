@@ -1,0 +1,12 @@
+retrocookie/__init__.py,sha256=FNaXtqYximyXJgi9EO3yep1_cqiLSOKmildUwsbC7A8,135
+retrocookie/__main__.py,sha256=mgzr9rHJRbH-1tkpgMYU0E9tu3-auEsjYgINtzQFeeo,3555
+retrocookie/core.py,sha256=YJotWdTpqHvn0AgBaCD1soT5FpFd6-mQjk2SrKsr3-A,4996
+retrocookie/filter.py,sha256=-of-xz9mhu2DkbH-tSZpFUPnNYU6IRcuPLj9pyZS9vs,3581
+retrocookie/git.py,sha256=g6KUdp_GgQpO5c30x128S8bfEoWyMc2kfoCXh3lfEhY,4699
+retrocookie/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+retrocookie/utils.py,sha256=ML4TZjTUxqF0XkZHTUiFy1AU8wGVda3Wb0idgXMTLEQ,611
+retrocookie-0.2.0.dist-info/entry_points.txt,sha256=UjCyMz4IdpAnq-FkKkh8nfwQ2N9I7ZedQZnj8PROIHI,57
+retrocookie-0.2.0.dist-info/LICENSE.rst,sha256=_U9HKPtmfNJ-tdmOwX1djEmSdYLV_pzaIqVGZ8P7tt8,1088
+retrocookie-0.2.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+retrocookie-0.2.0.dist-info/METADATA,sha256=HnbTheAgudyNnbc97V5fqaTsyU-57E1ChAyT7wG-Zgw,6200
+retrocookie-0.2.0.dist-info/RECORD,,

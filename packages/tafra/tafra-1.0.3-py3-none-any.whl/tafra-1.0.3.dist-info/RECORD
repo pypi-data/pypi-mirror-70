@@ -1,0 +1,11 @@
+tafra/__init__.py,sha256=WFS5cFCz1RwSBixPecrQNzvSsAOZ2T9ybARalwkBu1c,139
+tafra/base.py,sha256=1F9VsL7gCD1Cv2s4iCKNukCj0HwkmbYjtTFMKN3ijKU,56846
+tafra/formatter.py,sha256=AqRIXYxFEBFFTQgXNFtrlL2MpR919gHShIyJlcQTflQ,2291
+tafra/group.py,sha256=F3pMZ1sLg2fFReWZ1Idvc7f2-MNERFSWGnXCQ28qwaE,22368
+tafra/protocol.py,sha256=sbHxjO_LIqp3eDlenad_21LFIoR6ZaAuEXiMZN12vI4,1443
+tafra/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tafra-1.0.3.dist-info/LICENSE,sha256=DeSfGcpFM6E4QzHWxe8QvHQ8sLM1jj2C2wLmG6G4OfA,1114
+tafra-1.0.3.dist-info/METADATA,sha256=xwZ85_W2dtSjn_--UJzwgoQgX10jiG4iaaOtOTonG4Y,20447
+tafra-1.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+tafra-1.0.3.dist-info/top_level.txt,sha256=W1VECg1QBJlYwExH3lLHqzNz7cgTmytMaRVkBQLgXRI,6
+tafra-1.0.3.dist-info/RECORD,,

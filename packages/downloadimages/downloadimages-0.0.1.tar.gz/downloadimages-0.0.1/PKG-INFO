@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: downloadimages
+Version: 0.0.1
+Summary: Get image url from a few website
+Home-page: https://github.com/diepthuyhan/downloadImages
+Author: diepthuyhan
+Author-email: 
+License: UNKNOWN
+Description: # downloadImages
+        Get image url from common website
+        
+        # Version
+        ## 0.0.1
+        - Download from wallhaven.cc
+        
+        # Install
+        
+        `pip install "git+https://github.com/diepthuyhan/downloadImages#egg=downloadImages"`
+        
+        # Document
+        waiting...
+        
+        # Usage
+        
+        ```
+        from downloadImages import WallhavenImage
+        
+        whdl = WallhavenImage(limit=None, nsfw=True)
+        for img in whdl:
+            print(img)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

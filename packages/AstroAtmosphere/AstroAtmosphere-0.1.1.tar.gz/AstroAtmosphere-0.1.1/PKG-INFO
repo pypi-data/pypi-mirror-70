@@ -1,0 +1,116 @@
+Metadata-Version: 2.1
+Name: AstroAtmosphere
+Version: 0.1.1
+Summary: Collection of equations for refractive index, refraction and dispersion calculations of atmospheric air.
+Home-page: https://gitlab.astro-wise.org/micado/atmosphericmodel
+Author: Joost van den Born
+Author-email: born@astron.nl
+License: GNU General Public License v3
+Download-URL: https://gitlab.astro-wise.org/micado/atmosphericmodel/-/archive/v_011/atmosphericmodel-v_011.tar.gz
+Description: **Note:**
+        A manuscript of this atmospheric code is in preparation and will be submitted to the Monthly Notices of the Royal Astronomical Society (MNRAS) journal before the end of the year (2019). 
+        If you use this code for your project, please acknowledge this by making a reference to this paper in due course. You can contact me, the author, for the submission and review status.
+        
+        
+        Author info: *Joost van den Born*, *born@astron.nl*
+        
+        
+        
+        *Below you can find a set of models describing the atmospheric refraction and dispersion.*
+        
+        **Contents:**
+        - AstroAtmosphere         	    : Python package that can be used to calculate the atmospheric refraction and dispersion, the main content of this repository.
+        - atmospheric refraction example: jupyter notebook example
+        - `setup.py`                      : Install script to install the AstroAtmosphere package locally.
+        
+        
+        **On the contents of the AstroAtmosphere package**
+        The package contains the following files:
+        - `/data/1976USSA.txt` 			: Data file of the 1976 US Standard Atmosphere.
+        - `ciddorModel.py` 				: Contains the `Observatory()` class to calculate the refractive index of atmospheric air, using the Ciddor (1996) model.
+        - `dispersionModels.py` 		: Contains various atmospheric models that can be used to calculate the atmospheric dispersion
+        - `examples.py` 				: Contains several quick functions, e.g. to quickly calculate the refractive index.
+        - `refractionModels.py` 		: Contains various atmospheric models that can be used to calculate the atmospheric refraction
+        - `refractivityModels.py` 		: Contains various functions from literature to calculate the refractive index. Some examples of works included are Ciddor (1996), Barrell & Sears (1939), SLALIB, Owens (1967) and Edlen (1966).
+        
+        
+        **On the dispersion model:**
+        
+        Dispersion model from Ciddor, 1996, calculates the index of refraction of air using the following parameters:
+        - Temperature
+        - Pressure
+        - Relative humidity
+        - CO2 density
+        
+        
+        
+        
+        **On the atmospheric refraction / atmospheric dispersion models:**
+        
+        Available models:
+        - Full integration using the refractive integral (requires detailed information about the atmosphere, e.g. `AstroAtmosphere/data/1976USSA.txt`)
+        - Plane-parallel atmosphere refraction model
+        - Cassini's homogeneous atmosphere refraction model
+        - Oriani's theorem ( Atan(z) + Btan^3(z) )
+        - Oriani's theorem expanded ( Atan(z) + Btan^3(z) + Ctan^5(z)  )
+        - Error function refraction model
+        
+        
+        
+        
+        Input parameters for the spherical atmosphere models (all but the first):
+        - Temperature               [K]
+        - Pressure                  [Pa]
+        - Relative humidity
+        - CO2 density               [ppm]
+        - Latitude                  [deg]
+        - Height above sea level    [m]
+        - Wavelength(s)             [um]
+        - Zenith angle              [deg]
+        
+        
+        **Analytical error propagation**
+        
+        Full analytical error propagation is available for the Ciddor dispersion model (`Observatory.dn_tph()`), for the Cassini refraction model (`refraction.cassiniError()`) and for the Cassini dispersion model (`dispersion.cassiniError()`).
+        The results agree well with a Monte Carlo simulation, suggesting that if additional errors have not been considered, they are of neglible importance.
+        
+        Uncertainties that are considered:
+        
+        Ciddor dispersion model:
+        
+        | Param. | Description | Unit |
+        | ------ | ------ | ------ |
+        | dl | Wavelength | um |
+        | dT | Temperature | K |
+        | dP | Pressure | Pa |
+        | dRH | Relative Humidity |  |
+        | dCO2 | CO2 density | ppm |
+         
+        
+        Cassini refraction model:
+        
+        | Param. | Description | Unit |
+        | ------ | ------ | ------ |
+        | dn | Refractive index |  |
+        | dz | Zenith angle | deg |
+        
+        Cassini dispersion model:
+        
+        
+        | Param. | Description | Unit |
+        | ------ | ------ | ------ |
+        | dl1, dl2 | Wavelength(s) | um |
+        | dT | Temperature | K |
+        | dP | Pressure | Pa |
+        | dRH | Relative Humidity |  |
+        | dCO2 | CO2 density | ppm |
+        | dz | Zenith angle | deg |
+         
+        
+Keywords: REFRACTION,REFRACTIVITY,ATMOSPHERE,DISPERSION,CIDDOR
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Description-Content-Type: text/markdown

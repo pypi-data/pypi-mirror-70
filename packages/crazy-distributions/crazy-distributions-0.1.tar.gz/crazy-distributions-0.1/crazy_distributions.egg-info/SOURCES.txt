@@ -1,0 +1,10 @@
+setup.py
+crazy-distributions/Binomialdistribution.py
+crazy-distributions/Gaussiandistribution.py
+crazy-distributions/Generaldistribution.py
+crazy-distributions/__init__.py
+crazy_distributions.egg-info/PKG-INFO
+crazy_distributions.egg-info/SOURCES.txt
+crazy_distributions.egg-info/dependency_links.txt
+crazy_distributions.egg-info/not-zip-safe
+crazy_distributions.egg-info/top_level.txt

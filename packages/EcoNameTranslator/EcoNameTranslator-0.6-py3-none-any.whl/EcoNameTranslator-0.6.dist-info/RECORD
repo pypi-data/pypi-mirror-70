@@ -1,0 +1,10 @@
+EcoNameTranslator/EcoNameTranslator.py,sha256=0wmtX5E4UIYntmDCCXpC68n1HwBmZ9vjb-Q-AflwDqc,2963
+EcoNameTranslator/__init__.py,sha256=nBx8c4B-TXByXdEJaP1wGA4Mze_1rI5htBXmvz1lzOs,52
+EcoNameTranslator/commonNameAPI.py,sha256=pQ7xCMI8oCl07OUC-YDPJW0PGN26RG-9J0sWfOZLExQ,1614
+EcoNameTranslator/dataCleaning.py,sha256=2ryIuSEVOXq0WPwQ-7DjPgg7KD0-QnStH_krlT1Jt0U,1695
+EcoNameTranslator/higherLevelAPI.py,sha256=WbLFlwbc-BaoJ3QKqAW6dmwLA4LOSpRFN3eKkyAhxEY,1068
+EcoNameTranslator/taxonomyAPI.py,sha256=igT8SFrt01IBXV0j-Hh4UK8ipa1vpHXi2hq_VZg2OLo,3031
+EcoNameTranslator-0.6.dist-info/METADATA,sha256=tJ6ajSeymMeT-9xgzJ8SwjH2tjRMY25pFo8GcTXkqFY,4666
+EcoNameTranslator-0.6.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+EcoNameTranslator-0.6.dist-info/top_level.txt,sha256=HQ-CjAmnM2-FYtlMaG8PMJW9mXhWlRBWwpjwywTWK74,18
+EcoNameTranslator-0.6.dist-info/RECORD,,

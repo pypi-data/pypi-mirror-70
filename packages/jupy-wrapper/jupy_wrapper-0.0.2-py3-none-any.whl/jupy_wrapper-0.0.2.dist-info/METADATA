@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jupy-wrapper
+Version: 0.0.2
+Summary: A package to convert Jupiter Notebooks
+Home-page: https://github.com/AlexKalopsia/jupy-wrapper
+Author: AlexKalopsia
+Author-email: camilleri.alex@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# jupy-wrapper
+
+

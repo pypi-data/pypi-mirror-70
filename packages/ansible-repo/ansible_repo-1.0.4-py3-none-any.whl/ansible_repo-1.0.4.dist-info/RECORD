@@ -1,0 +1,7 @@
+ansible_repo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_repo/ansible_repo.py,sha256=LIvPNcaLwjTDNd_BS41ez04ME15ng7p8qFV__MUNKl4,1809
+ansible_repo-1.0.4.dist-info/METADATA,sha256=TgdKIkOu4rNTcp_9mqV5sWa6kI7sxdWAauV3fCwHAYg,707
+ansible_repo-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ansible_repo-1.0.4.dist-info/entry_points.txt,sha256=F8Kh0WZluFg9eMdeWXIr90mPvlp02aY-XhgQW7DZoDs,65
+ansible_repo-1.0.4.dist-info/top_level.txt,sha256=a7ACdd6Xb8IevUsmPskjt2qJtgY4JTrAQvKutmV_E3c,13
+ansible_repo-1.0.4.dist-info/RECORD,,

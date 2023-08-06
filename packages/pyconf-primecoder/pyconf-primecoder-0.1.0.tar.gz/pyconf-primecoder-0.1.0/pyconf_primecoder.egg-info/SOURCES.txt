@@ -1,0 +1,8 @@
+README.md
+setup.py
+pyconf/__init__.py
+pyconf/pyconf.py
+pyconf_primecoder.egg-info/PKG-INFO
+pyconf_primecoder.egg-info/SOURCES.txt
+pyconf_primecoder.egg-info/dependency_links.txt
+pyconf_primecoder.egg-info/top_level.txt

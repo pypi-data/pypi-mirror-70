@@ -1,0 +1,12 @@
+/build
+/dist
+/cmmnbuild_dep_manager.egg-info
+__pycache__
+*.pyc
+*.jar
+/cmmnbuild_dep_manager/modules
+/cmmnbuild_dep_manager/modules.json
+/cmmnbuild_dep_manager/jars
+/cmmnbuild_dep_manager/lib
+cmmnbuild_dep_manager/_version.py
+*.swp

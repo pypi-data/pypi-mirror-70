@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pic2sketch
+Version: 0.1.0
+Summary: A command line kit to convert a picture to a sketch.
+Home-page: https://github.com/lonsty/pic2sketch
+Author: Allen Shaw
+Author-email: lonsty@sina.com
+License: MIT
+Download-URL: https://github.com/lonsty/pic2sketch/archive/0.1.0.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=0.1.0
+Requires-Dist: click (<8,>=7.0)
+Requires-Dist: numpy (>=1.18.4)
+Requires-Dist: imageio (>=2.8.0)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: matplotlib (>=3.2.1)
+
+pic2sketch
+
+A command line kit to convert a picture to a sketch.
+
+

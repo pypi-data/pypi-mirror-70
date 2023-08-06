@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    p2sk=pic2sketch.cli:main
+    

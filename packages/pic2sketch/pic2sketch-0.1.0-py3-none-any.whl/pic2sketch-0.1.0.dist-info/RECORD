@@ -1,0 +1,10 @@
+pic2sketch/__init__.py,sha256=PnoZwD1Shat2uwSGWd86j2VmMf8gffx9KIeNvUAkGdw,241
+pic2sketch/cli.py,sha256=r26nXvnFRIwYAf0vzts9ok7MF0E81zUM3ap4ibz9OqM,4401
+pic2sketch/picture_to_sketch.py,sha256=xcjvkqTh5_M0PSbCmn5bMcEoImozonb8_VLk2u_SPhg,3244
+pic2sketch/version.py,sha256=sbKwYiPFcl-MJb05SWq_jmMfWcdOOgzVl4tlJZwITUQ,284
+pic2sketch-0.1.0.dist-info/LICENSE,sha256=fMsjJIoCbQiEKVY6fQAkbKtcNEmbGjVj_vzWxfkYe-I,1078
+pic2sketch-0.1.0.dist-info/METADATA,sha256=5FoXYXz8HaPln4nj-uHc7e92xW0MltY_jH6fXgQqVx0,817
+pic2sketch-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pic2sketch-0.1.0.dist-info/entry_points.txt,sha256=O4NzTmF7foyalCJ4-WkggvYRtIesWN6zdjxblTSAip8,56
+pic2sketch-0.1.0.dist-info/top_level.txt,sha256=0oCnGySsVnVnSdnokxbJOviNSdWUpUvASVF4VNZtvi8,11
+pic2sketch-0.1.0.dist-info/RECORD,,

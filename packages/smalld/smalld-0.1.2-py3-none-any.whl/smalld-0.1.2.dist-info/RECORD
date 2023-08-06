@@ -1,0 +1,13 @@
+smalld/__init__.py,sha256=TI4F2sNasgkHaJs1JUCGXoNzyBAtgiDteH1lqt1Okjg,136
+smalld/exceptions.py,sha256=ZSa3CMDfEZZjh5oBpy8lvf6rJ2koK_S9LUse5W5wM1c,475
+smalld/gateway.py,sha256=QI7-_gNRwmVSbLTv7YJFtIQRxysG-aVMuKCVxwjYJus,1485
+smalld/ratelimit.py,sha256=hF_4-BBj3wkxSiWrbmckwr9YE0K6D3aD5c-hbhfRSqc,3615
+smalld/smalld.py,sha256=T_uedjxa7UmdFMWio1u4LJQOnjWhAlIBWaoLkGejJWE,6208
+smalld/standard_listeners.py,sha256=OB8sRfXfF-yQzFvP7q4CTrUMBT-zT12nOvGMhPQNSBY,4008
+smalld/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smalld/resources/ratelimit_buckets,sha256=G1l1pUhV8ooVSd9UD6IaGLuqBfLZMmtxYLnbFUGn0rk,2759
+smalld-0.1.2.dist-info/LICENSE,sha256=AArFRWfnQLTUU9kp_aSBqi9vWGXqtezgCZyryM7sYJs,1070
+smalld-0.1.2.dist-info/METADATA,sha256=iO8wS4zJzjmPyldn_1kvQs8hcJXH6b7Hrd5jbsIDVtA,5864
+smalld-0.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+smalld-0.1.2.dist-info/top_level.txt,sha256=81JmWY206f7VDszegWoLf1omEFKOO9B78TbzVuqrCfs,7
+smalld-0.1.2.dist-info/RECORD,,

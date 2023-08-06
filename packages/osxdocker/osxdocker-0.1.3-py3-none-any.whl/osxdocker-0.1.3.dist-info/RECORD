@@ -1,0 +1,10 @@
+osxdocker/__init__.py,sha256=4mXCuSgwIDYQCoWZsCWXJxSudw1JVmt1vMxhlxymops,173
+osxdocker/docker_logs.py,sha256=x3iAOu97t7XjlBEjllxuqTxnEc0pINelEkbmwVZOZk4,2063
+osxdocker/utils/__init__.py,sha256=Jqlgj4b6ltqiceLQliRLF4Mkry2h3B1wBz2MA405Kr0,59
+osxdocker/utils/docker_base.py,sha256=Gp5iN0EH2mpv6cd0LhaCdhMH_3rsjO_CNJshGs6BbCo,3629
+osxdocker/utils/warn.py,sha256=69dwhKbm8cenEr75War-L0ezuf-xYfcUGGnmTJEM2vk,738
+osxdocker-0.1.3.dist-info/entry_points.txt,sha256=veKMKAq5SmgNqqyJUuJnRqrLlKLb-6Up0BjcrRvfp74,44
+osxdocker-0.1.3.dist-info/LICENSE,sha256=LA9Pck7wkxTgf4z3L7P4hOd7CPdPUpGdD8A0xaTlK_A,1080
+osxdocker-0.1.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+osxdocker-0.1.3.dist-info/METADATA,sha256=mS4W2RbwVVddc3n_Z5t8ecQPHE5QAofn3I2Ip1TMYSM,3087
+osxdocker-0.1.3.dist-info/RECORD,,

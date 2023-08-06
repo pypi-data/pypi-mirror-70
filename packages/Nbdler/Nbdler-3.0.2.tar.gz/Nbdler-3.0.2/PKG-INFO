@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: Nbdler
+Version: 3.0.2
+Summary: Python multi-client Downloader.
+Home-page: https://github.com/ZSAIM/Nbdler
+Author: ZSAIM
+Author-email: zzsaim@163.com
+License: Apache 2.0
+Description: Nbdler
+        ======
+        
+        
+        
+        Installation
+        =============
+        
+        ::
+        
+            $ pip install Nbdler
+        
+        
+        License
+        =======
+        
+        Apache-2.0
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3

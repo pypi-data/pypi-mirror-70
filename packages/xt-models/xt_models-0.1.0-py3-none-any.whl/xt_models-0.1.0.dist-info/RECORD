@@ -1,0 +1,9 @@
+xt_models/models/__init__.py,sha256=A7NYjrSNxOnqmuVH_3s_XpMVaOc3S5jd3qrioo-ONwA,54
+xt_models/models/pspnet.py,sha256=I3jKjvmJf6GfBnx6MhtQSBzKSKSXLESu6sRfhLvk8ZU,2711
+xt_models/models/resnet.py,sha256=MsGzE-8EPcXFDDqeMjEuV3jJzMXX_--85OoyBMDzzqo,14191
+xt_models/models/ses.py,sha256=T1TnnfM15Q9OQmWykIkGsibzBXdPtvwmINT8LMS2YU0,3468
+xt_models/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xt_models-0.1.0.dist-info/METADATA,sha256=VHrZ0phmflCkf7chXQruzwhxOHKg7NmvYpPlczfOtfI,1434
+xt_models-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+xt_models-0.1.0.dist-info/top_level.txt,sha256=5dI0xG97hPdqyG9P3mY2Bx5r0UKEK4kZcXXEZGJm-Dw,10
+xt_models-0.1.0.dist-info/RECORD,,

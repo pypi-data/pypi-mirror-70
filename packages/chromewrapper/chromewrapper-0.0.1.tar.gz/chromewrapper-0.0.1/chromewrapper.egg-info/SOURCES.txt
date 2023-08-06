@@ -1,0 +1,8 @@
+README.md
+setup.py
+chromewrapper/__init__.py
+chromewrapper.egg-info/PKG-INFO
+chromewrapper.egg-info/SOURCES.txt
+chromewrapper.egg-info/dependency_links.txt
+chromewrapper.egg-info/requires.txt
+chromewrapper.egg-info/top_level.txt

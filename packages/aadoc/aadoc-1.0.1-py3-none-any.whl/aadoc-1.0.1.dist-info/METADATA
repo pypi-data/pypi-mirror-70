@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aadoc
+Version: 1.0.1
+Summary: A tool that automatically generates documentation from Automation Anywhere comments
+Home-page: https://dillir07.github.io/aadoc/
+Author: Dilli Babu R
+Author-email: dillir07@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
+

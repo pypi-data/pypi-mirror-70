@@ -1,0 +1,4 @@
+smbus2
+luma.oled
+pigpio
+approxeng.hwsupport

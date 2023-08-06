@@ -1,0 +1,8 @@
+aws_cdk/aws_codecommit/__init__.py,sha256=5vt_6M0oisMvkfUUZcI-NunsKfGQaeF-_aMarhLO-Mg,77145
+aws_cdk/aws_codecommit/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_codecommit/_jsii/__init__.py,sha256=6qO98xvcrB43CaXeZEwxXQUM_skV9-FwEn5Yg9ziNCs,426
+aws_cdk/aws_codecommit/_jsii/aws-codecommit@1.45.0.jsii.tgz,sha256=e2ajefjUJOFMPjHrelsrdvP3kZOJh8cPaAnrtLxNzOA,42941
+aws_cdk.aws_codecommit-1.45.0.dist-info/METADATA,sha256=--gKFC9rEbrzRcI92P0EaiLkoPhEnPEDVGT01MUBNPE,2938
+aws_cdk.aws_codecommit-1.45.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_codecommit-1.45.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_codecommit-1.45.0.dist-info/RECORD,,

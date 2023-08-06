@@ -1,0 +1,9 @@
+cver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cver/__main__.py,sha256=PcdUnIPB4e8ep1srK0qxpoOMblIkeIjct7-fWlWFAH0,1156
+cver/scraper.py,sha256=tnLn5irB86KYHTUj8wNZN3cyXhsoDVauA15x4Ja3gSI,1454
+cver-1.0.0.dist-info/METADATA,sha256=pFmjQkXJftx0qab9WHepcN3v4TO1Ivbdx3H5jEqbf5k,1141
+cver-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cver-1.0.0.dist-info/dependency_links.txt,sha256=5VWke_sQzCnD6MOT5vfTp9ApFgMO3-jWGF3QndxctPQ,41
+cver-1.0.0.dist-info/entry_points.txt,sha256=5zMnS_zIZf-gRpQsH61GCDJ4hJ7uwo2wFbm2LGn7g8A,63
+cver-1.0.0.dist-info/top_level.txt,sha256=RmADa_YmixEZcFAvM3B-V1cI77fqjzZ0isf0li79pew,5
+cver-1.0.0.dist-info/RECORD,,

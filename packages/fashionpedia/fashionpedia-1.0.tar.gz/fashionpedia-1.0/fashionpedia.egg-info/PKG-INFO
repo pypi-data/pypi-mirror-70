@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fashionpedia
+Version: 1.0
+Summary: Python API for Fashionpedia dataset.
+Home-page: https://github.com/KMnP/fashionpedia-api
+Author: Menglin Jia
+Author-email: mj493@cornell.edu
+License: UNKNOWN
+Description: 
+        Fashionpedia is a new dataset which consists of two parts:  (1) an ontology built by fashion experts containing 27 main apparel categories, 19 apparel parts, 294 fine-grained attributes and their relationships; (2) a dataset with 48k everyday and celebrity event fashion images annotated with segmentation masks and their associated per-mask fine-grained attributes, built upon the Fashionpedia ontology. Fashionpedia API enables reading, and visualizing annotations, and evaluating results.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

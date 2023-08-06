@@ -1,0 +1,10 @@
+README.md
+setup.py
+fashionpedia/__init__.py
+fashionpedia/fp.py
+fashionpedia/fp_eval.py
+fashionpedia.egg-info/PKG-INFO
+fashionpedia.egg-info/SOURCES.txt
+fashionpedia.egg-info/dependency_links.txt
+fashionpedia.egg-info/requires.txt
+fashionpedia.egg-info/top_level.txt

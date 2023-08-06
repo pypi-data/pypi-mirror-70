@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiofcopy
+Version: 0.1.0
+Summary: Useful tool to copy object files with progress callbacks.
+Home-page: https://github.com/yanncabral/aiofcopy
+Author: Yann Cabral
+Author-email: iamyanndias@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/aiofcopy/
+Keywords: async,copy,file
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: aiofile
+
+# aiofcopy
+Python3 package to copy binary files inside async loops
+
+

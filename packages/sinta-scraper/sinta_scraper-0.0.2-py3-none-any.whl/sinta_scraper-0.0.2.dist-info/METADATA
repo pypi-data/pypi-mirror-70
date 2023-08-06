@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: sinta-scraper
+Version: 0.0.2
+Summary: Retrieve various information from Sinta (http://sinta.ristekbrin.go.id) via scraping.
+Home-page: https://github.com/rendicahya/sinta-scraper
+Author: Randy Cahya Wihandika
+Author-email: rendicahya@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: requests
+
+# Sinta Scraper
+
+Retrieve various information from Sinta (http://sinta.ristekbrin.go.id) via scraping.
+
+## Installation
+`pip install sinta-scraper`
+
+## Usage
+
+### Import
+`import sinta-scraper as sinta`
+
+### Get author information by Sinta ID
+```
+id = '5975467'
+author = sinta.author(id)
+```
+
+### Output
+The output is of dictionary type.
+
+### Available Functions
+- `author(sinta_id)`: gets an author's information. 
+- `dept_authors(dept_id)`: gets authors associated with a department.
+
+### Todo
+- Various output formats: JSON, XML.
+- `affil(affil_id)` function.
+- `find_affil(keyword)` function.
+- `affil_depts(affil_id)` function.
+- `affil_authors(affil_id)` function.
+- `dept(dept_id)` function.
+- `find_dept(keyword)` function.
+
+

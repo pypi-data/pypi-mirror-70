@@ -1,0 +1,10 @@
+sweetautocomplete/__init__.py,sha256=r0SV87X91qPMs7tyRo1m-yIOWtBhnLIrvvLLUhgQKBw,276
+sweetautocomplete/apps.py,sha256=0JNIOb9F_f1nYMIJSCcPdzGb5T2NqC2oayHaQOkey4o,190
+sweetautocomplete/autocomplete.py,sha256=KK2ovR0gUd4ZLry7T1CD9H7heoRrHKBrVy1_5Qgl7Ak,1504
+sweetautocomplete/settings.py,sha256=WY9Wzp5LqMzPuOxmHc7Vvx1RF7ud945BVYMBYKarj20,151
+sweetautocomplete/urls.py,sha256=wewJRXneibVAhifAInHi3-yjI40dlyY-37fI9I6rZzo,183
+sweetautocomplete/views.py,sha256=KiLQz6boE_HBfYUKBsACxFlPMBBkSg1aXMzSh3sbamU,984
+django_sweet_autocomplete-1.0.1.dist-info/METADATA,sha256=W5SUi-69mjVMTQ7P83FDuahp8_2jTIbfRtrXxLhT_Os,1949
+django_sweet_autocomplete-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_sweet_autocomplete-1.0.1.dist-info/top_level.txt,sha256=RujKDxDXgp0pB2hFTH7FeRXSAYqJXG8dxd5rdJn-pO4,18
+django_sweet_autocomplete-1.0.1.dist-info/RECORD,,

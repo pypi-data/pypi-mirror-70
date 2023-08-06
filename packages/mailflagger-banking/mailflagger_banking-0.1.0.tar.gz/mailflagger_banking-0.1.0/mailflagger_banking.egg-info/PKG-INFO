@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mailflagger-banking
+Version: 0.1.0
+Summary: A banking plugin for Mail Flagger
+Home-page: UNKNOWN
+Author-email: krzysztof.jurewicz@gmail.com
+License: UNKNOWN
+Description: A banking plugin for [Mail Flagger](https://mailflagger.org), with support for MT940 files. See the [main repository](https://github.com/KrzysiekJ/mailflagger) for details.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Email :: Filters
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown

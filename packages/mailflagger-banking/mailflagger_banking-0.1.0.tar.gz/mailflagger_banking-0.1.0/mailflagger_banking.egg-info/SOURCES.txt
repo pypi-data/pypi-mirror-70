@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mailflagger/plugins/mt940.py
+mailflagger_banking.egg-info/PKG-INFO
+mailflagger_banking.egg-info/SOURCES.txt
+mailflagger_banking.egg-info/dependency_links.txt
+mailflagger_banking.egg-info/entry_points.txt
+mailflagger_banking.egg-info/requires.txt
+mailflagger_banking.egg-info/top_level.txt

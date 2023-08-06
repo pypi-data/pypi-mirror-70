@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: glemmazon
+Version: 0.4
+Summary: Simple Python lemmatizer for several languages
+Home-page: http://github.com/gustavoauma/glemmazon
+Author: Gustavo Mendonça
+Author-email: gustavoauma@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

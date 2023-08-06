@@ -1,0 +1,13 @@
+squealy/__init__.py,sha256=-fyxOsT2Jve2w91CRLsO8kVdPiUwT7NZAHK1pqUzr5A,132
+squealy/core.py,sha256=0euozpGpHJwrYy-JzrL1WPNWgNcEDUJrpLTf50lZA5o,15369
+squealy/django.py,sha256=cQY-5w-NhyfDRZWmLfJGAqkyOkRVR3ZWGgOxufuqDRc,2901
+squealy/flask.py,sha256=TQO3lod0sHjB0nxSi3hmFlMB5WonRB_ae0G7hOP3D0E,2755
+squealy/formatters.py,sha256=PjjgTP24AvITGPlNEA_kzG2QCpBT2ig1D6_WOl3QQmo,4266
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_django.py,sha256=dfP8ZckocrGtOmDESYqMxT00a25yvvnGXScovFIsAWA,5150
+tests/test_flask.py,sha256=geq-tFDgpnY3RE5EPQ-5Hgt1weNDKzPzEtanVGAIhM0,1406
+tests/test_squealy.py,sha256=dZUOcedh8C9hoZnLbKYqC9wfU9AEuTS12WSu6io9JtQ,9902
+squealy-0.2.3.dist-info/METADATA,sha256=sKCPx4sl8e0fTzGjKADo1Ntg7ixBYf6C-vyO_12HuVA,534
+squealy-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+squealy-0.2.3.dist-info/top_level.txt,sha256=GPCyu8kIWynUGLma-2ulQekFWyrqUKuXijg_kdeW25w,14
+squealy-0.2.3.dist-info/RECORD,,

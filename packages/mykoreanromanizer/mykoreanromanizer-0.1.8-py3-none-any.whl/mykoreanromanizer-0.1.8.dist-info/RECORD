@@ -1,0 +1,14 @@
+mykoreanromanizer/__init__.py,sha256=AcEj9VCFrM_UwuI3SP1qTIAB6v3CORNhhyNNT9zK5jA,95
+mykoreanromanizer/enhacer.py,sha256=T01_thoV4uaDDMl-Tme49Oihrii7YrSXu8HBVeHFJOw,724
+mykoreanromanizer/hangul_romanization_equivalents.py,sha256=8nzxhC8gzy9xbt--OfXIm9ymcorYTHTQhXn-Mj_r3go,2221
+mykoreanromanizer/romanizer.py,sha256=Rjz8P_O3haRsiN6XLm8WWKRFZivfgcehnfHW6nv4hOo,4271
+mykoreanromanizer/syllable.py,sha256=2zbospPtWWumHs4DyFOQ0_nxCNmh67c4DyljEZagnn0,1603
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_enhacer.py,sha256=xwMYe3kFUXdlRYjeljVcnYlFf-tl7EEJR5i_trRRmnQ,661
+tests/test_romanizer.py,sha256=LbjjlM7rFSVqU1uFZcXKhgdl70AuWdzW5R26RXlAoCY,2555
+tests/test_syllable.py,sha256=PgzNcv3ZAYGGNguzNiRik2IXuVhxPcMGoB8aCdrodv4,858
+mykoreanromanizer-0.1.8.dist-info/LICENSE.txt,sha256=QvqWvSlMyLc_-h92EOhfQCuz7Oz5vCPwTWaVVQWlwNY,1066
+mykoreanromanizer-0.1.8.dist-info/METADATA,sha256=PAbngsXmApTSn4_OO8qK4Q0KRIAX83kydc2ZAgdjbx8,1012
+mykoreanromanizer-0.1.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mykoreanromanizer-0.1.8.dist-info/top_level.txt,sha256=_I5IuczT2sLsWbQxA3ZpHliUKqRLvqjmOcmXScJr09o,24
+mykoreanromanizer-0.1.8.dist-info/RECORD,,

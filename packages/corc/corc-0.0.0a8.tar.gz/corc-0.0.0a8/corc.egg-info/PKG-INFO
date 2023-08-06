@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: corc
+Version: 0.0.0a8
+Summary: A tool for managing cloud resources and scheduling compute tasks
+Home-page: https://github.com/rasmunk/corc
+Author: Rasmus Munk
+Author-email: munk1@live.dk
+License: MIT
+Description: .. image:: https://travis-ci.org/rasmunk/corc.svg?branch=master
+            :target: https://travis-ci.org/rasmunk/corc
+        
+        ====
+        corc
+        ====
+        
+        Cloud Orchestrator
+        
+        In alpha development, not ready for anything
+        
+Keywords: Cloud,Orchstration,Compute
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: test
+Provides-Extra: dev

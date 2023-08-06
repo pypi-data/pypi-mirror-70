@@ -1,0 +1,10 @@
+s3bkt/__init__.py,sha256=CQDhKoMGVCEQy6aAkzKo53ZwwFoJkSJZQozowhMH2BY,12215
+s3bkt/clients.py,sha256=jC9aZAR-i9xn9Do5CPdAnV84f6BQj3QT4LJAWEbG7ig,982
+s3bkt/command.py,sha256=GQXZ6ZMx0A4G4KHDBRv_rO5IPu8QbE53ces3MQSm1p8,1240
+s3bkt/s3util.py,sha256=N1q1Qh_l5kNBOjNlRJ21DNxlabTV-rupBkBW9Hl_ujs,7246
+S3bkt-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+S3bkt-0.1.0.dist-info/METADATA,sha256=7Akgj9pQTUTeXwOvpebcdAkDn4Bzz6nFV5XpktkdUvY,290
+S3bkt-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+S3bkt-0.1.0.dist-info/entry_points.txt,sha256=Tii8dfbYFR_Wq_NYluZNFcoAKmQMde0MRRqitT4gWsg,60
+S3bkt-0.1.0.dist-info/top_level.txt,sha256=Jf7dZQuGopgO76UoEZhFch2vL4pcL2aTrErC2F2PFgM,6
+S3bkt-0.1.0.dist-info/RECORD,,

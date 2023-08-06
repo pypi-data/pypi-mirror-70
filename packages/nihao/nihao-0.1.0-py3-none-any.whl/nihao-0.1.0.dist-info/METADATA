@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: nihao
+Version: 0.1.0
+Summary: 中文识别
+Home-page: https://github.com/czcaiwj/chinese
+Author: 蔡炜桀
+Author-email: justcoding@qq.com
+License: UNKNOWN
+
+# 检测字符串中是否包含中文字符
+
+

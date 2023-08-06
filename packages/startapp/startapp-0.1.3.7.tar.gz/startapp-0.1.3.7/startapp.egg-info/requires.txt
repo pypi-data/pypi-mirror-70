@@ -1,0 +1,4 @@
+click
+
+[prompt_toolkit]
+prompt_toolkit==1.0.14

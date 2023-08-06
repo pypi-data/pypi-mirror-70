@@ -1,0 +1,15 @@
+configobj
+six>=1.9.0
+patiencediff
+fastimport>=0.9.8
+dulwich>=0.19.12
+
+[:python_version < "3.0"]
+dulwich<0.20
+
+[fastimport]
+
+[git]
+
+[launchpad]
+launchpadlib>=1.6.3

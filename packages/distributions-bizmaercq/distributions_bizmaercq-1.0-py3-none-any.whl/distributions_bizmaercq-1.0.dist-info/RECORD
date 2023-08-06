@@ -1,0 +1,8 @@
+distributions_bizmaercq/__init__.py,sha256=0TnqBfevJcV_uvDvooHkaKHC_7hmKO8yPxPXpCnD7tk,62
+distributions_bizmaercq/binomial.py,sha256=Z0pC3iOQk39CMlZGoN92H3Srx5ke0bvQD0Vc4IPlPiI,4873
+distributions_bizmaercq/distribution.py,sha256=IoArmN9HmBx_hphI_6giQngdnc6n7OoRLQf-maefoX4,990
+distributions_bizmaercq/gaussian.py,sha256=-V78c9PJFpLROBkXsRnSVmt-cM5-Q4Pu314TJjFmdVE,5287
+distributions_bizmaercq-1.0.dist-info/METADATA,sha256=s7mnRH4e41U6MYU48qljpqncqy8gFKDX-Imt6EPLJEw,241
+distributions_bizmaercq-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+distributions_bizmaercq-1.0.dist-info/top_level.txt,sha256=UlFXg4GajMYojDxQyrWnlZfTp1dINTUQFZLlRya9Y2k,24
+distributions_bizmaercq-1.0.dist-info/RECORD,,

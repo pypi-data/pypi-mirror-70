@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: imm
+Version: 0.0.2
+Summary: Hidden Markov models
+Home-page: https://github.com/EBI-Metagenomics/imm-py
+Author: Danilo Horta
+Author-email: horta@ebi.ac.uk
+Maintainer: Danilo Horta
+Maintainer-email: horta@ebi.ac.uk
+License: MIT
+Download-URL: https://github.com/EBI-Metagenomics/imm-py
+Keywords: hmm,markov model
+Platform: Windows
+Platform: MacOS
+Platform: Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+Requires-Dist: cffi (>=1.13.1)
+Requires-Dist: pytest (>=5.2.1)
+
+# imm-py
+
+[![Travis](https://travis-ci.com/EBI-Metagenomics/imm-py.svg?branch=master)](https://travis-ci.com/EBI-Metagenomics/imm-py)
+
+## Authors
+
+* [Danilo Horta](https://github.com/horta)
+
+## License
+
+This project is licensed under the [MIT License](https://raw.githubusercontent.com/EBI-Metagenomics/imm-py/master/LICENSE.md).
+
+

@@ -1,0 +1,10 @@
+redbrick/__init__.py,sha256=AoydB0acEGwXMhNfrujHtbNTtj0-LmaciQMkgUsoN4Q,302
+redbrick/api.py,sha256=8PWbJ6B6wdV5qqs21-Nnt_X6280VDfNEm6NMdJLUows,2222
+redbrick/base.py,sha256=SG4v8Fc9PMSwaOedidhKCHJQOMlTI4Dt2BTqC-cBam8,2213
+redbrick/client.py,sha256=zYP_3fVlXeBnZZGvlOCXj5WW7C0uZKXT2FkzU0t_1dE,1129
+redbrick/coco_classes.py,sha256=XTduhNOqGGOA_Lmuk9EHcULuha5BhU0DluhuRgrJpDE,1476
+redbrick_sdk-0.0.4.dist-info/LICENSE,sha256=XgZLpbWfn6SgxqdDymztfdwi4rakq77EKPEy4bg56UI,1068
+redbrick_sdk-0.0.4.dist-info/METADATA,sha256=uLUatMMKQSQnY3dokO5A0E9btphsDBRtH02IzRSnt7I,1935
+redbrick_sdk-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+redbrick_sdk-0.0.4.dist-info/top_level.txt,sha256=vgss4VMgvq-TdBd-zwCDgKG_hTP5VrGBTn3uqaNRj4I,9
+redbrick_sdk-0.0.4.dist-info/RECORD,,

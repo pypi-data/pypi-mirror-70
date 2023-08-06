@@ -1,0 +1,1 @@
+git+ssh://git@git.gwl.bz:7999/gsa/hodgepodge.git@master#egg=hodgepodge

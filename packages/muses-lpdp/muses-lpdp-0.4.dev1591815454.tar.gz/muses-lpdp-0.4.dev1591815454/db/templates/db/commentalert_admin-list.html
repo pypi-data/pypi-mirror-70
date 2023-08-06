@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-post_alerts-list">
+        {% include "_partials/pagination.html" %}
+        {% for post_alert in object_list %}
+            <div class="muses-post_alert-item"
+                 onclick="location.href='{% url "muses_admin_post_alert_detail" post_alert.id %}'">
+                <div>
+                    {{ post_alert.details }}
+                </div>
+                <div>
+                    <a href="{% url "muses_admin_post_alert_delete" post_alert.id %}" class="muses-button">
+                        {% trans "Delete" %}
+                    </a>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

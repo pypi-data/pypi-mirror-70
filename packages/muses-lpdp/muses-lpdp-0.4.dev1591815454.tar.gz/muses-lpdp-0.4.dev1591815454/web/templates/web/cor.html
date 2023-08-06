@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {{ site_title }} - {{ section_title }}
+{% endblock %}
+{% block nav_bar %}
+
+    {% include '_partials/nav_bar_section.html' %}
+
+{% endblock %}
+{% block pageloader %}
+    <div class="pageloader"></div>
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-dashboard">
+        <div class="tile"
+             onclick="location.href='{% url 'muses_cor_list_correction_requests' %}'">
+            <div class="content">
+                <div class="title is-4">{% trans "Correction requests management" %}</div>
+                <div class="subtitle is-4">{% trans "allow to manage correction requests" %}</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

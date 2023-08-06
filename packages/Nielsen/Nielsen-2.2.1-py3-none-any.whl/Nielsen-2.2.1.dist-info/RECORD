@@ -1,0 +1,11 @@
+nielsen/__init__.py,sha256=vYyU9VdmqMcK8pv5-B-sJw8lLAwuy--RHk2soF5mOTk,369
+nielsen/api.py,sha256=BdG4xHpd5PkIxHe6DU-6TVgzXmy_2QX3rZPNSH0J3WE,7326
+nielsen/config.py,sha256=fp3GL0HiXmrzRhV9Moh9ZIigbXB5A8hURK8EBXFpGSQ,1612
+nielsen/files.py,sha256=LXaS2XjjrfEVdnfmu4__zJPF2SzyCn7MBudLGr-dtt8,1932
+nielsen/tv.py,sha256=Q1oL70M8TqaUZLPrO_9J-7IQXKDV4zBPa1x-rlaK9V8,2810
+Nielsen-2.2.1.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+Nielsen-2.2.1.dist-info/METADATA,sha256=mm7WwdqxvxNXNdjdVB3Jj_HG4Jweu_85J-zKY2LXQOw,1100
+Nielsen-2.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Nielsen-2.2.1.dist-info/entry_points.txt,sha256=eTv8PbGPAK3mkZzRHtrFp4cr8nj9BbMjBMcDxuaa7xo,42
+Nielsen-2.2.1.dist-info/top_level.txt,sha256=PftIy0YCiKktZ7i_950RZu8cNIjxlB69_8Ta0gDaaCQ,8
+Nielsen-2.2.1.dist-info/RECORD,,

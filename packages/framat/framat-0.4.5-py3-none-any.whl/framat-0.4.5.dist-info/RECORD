@@ -1,0 +1,16 @@
+framat/__init__.py,sha256=5K2usaO54WoUTGVft_U-2r1qa1_VFDYg4MscWLrwpCg,107
+framat/__version__.py,sha256=xjubW28CepgbtmyM9J0LMOCv6L1NH1-u04yr5o6BVzI,62
+framat/_assembly.py,sha256=TEM-X8H2JjxoNVH1xRgE1gloiFfcGYQ_Hff63ygKT6w,5430
+framat/_element.py,sha256=otgVMxNIwreeO-nioranz9fiCEI0YCANwXBBs_tae3g,12528
+framat/_log.py,sha256=ZPJCFkzLx-o2jdHv7ZCR03qCFtl4VGDBKp-et7icH60,1040
+framat/_meshing.py,sha256=LyToJj3VVcvoaZcOQt1iXDRTMFpPlxp9SojMAgOE6Qo,14990
+framat/_model.py,sha256=BOWiCGJCGkhlFiKtQ8Wlm-tackktlx2b06Hix3HgPvg,13752
+framat/_plot.py,sha256=2hLSV_aqF_ZZ1fdirkNDwicRNILpolRQcTg0y72yEow,8435
+framat/_run.py,sha256=vLoawHHZDM1i53sHrTQt0G1SKrH10f8UaxwZMCJFvkM,1594
+framat/_solve.py,sha256=WnUBnESIbnBE-oRWXbdGPSMW9MRvAeHTLgTT8Li1siw,2429
+framat/_util.py,sha256=T6XtrLep1EqRjI0hnK0KaWDx-P893t6KMYXkZEpriog,1777
+framat-0.4.5.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+framat-0.4.5.dist-info/METADATA,sha256=5oevEhy9eRUNxt9JUBlmHPy11XGiF71Mucpgi9yhRng,4598
+framat-0.4.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+framat-0.4.5.dist-info/top_level.txt,sha256=xnUgw8f9AD0i72aLxDT9BQKIoeOL2cqm3r0ysAe8u4Y,7
+framat-0.4.5.dist-info/RECORD,,

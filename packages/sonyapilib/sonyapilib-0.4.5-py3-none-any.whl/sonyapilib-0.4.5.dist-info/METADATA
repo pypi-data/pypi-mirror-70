@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: sonyapilib
+Version: 0.4.5
+Summary: Lib to control sony devices with their soap api
+Home-page: https://github.com/alexmohr/sonyapilib
+Author: Alexander Mohr
+Author-email: sonyapilib@mohr.io
+License: UNKNOWN
+Download-URL: https://codeload.github.com/alexmohr/sonyapilib/tar.gz/0.4.3
+Keywords: soap,sony,api
+Platform: UNKNOWN
+Requires-Dist: jsonpickle
+Requires-Dist: setuptools
+Requires-Dist: requests
+Requires-Dist: wakeonlan
+
+UNKNOWN
+
+

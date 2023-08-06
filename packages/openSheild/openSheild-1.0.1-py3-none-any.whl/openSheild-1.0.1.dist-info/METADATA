@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: openSheild
+Version: 1.0.1
+Summary: The module of post-processing MCNP output file
+Home-page: https://github.com/pypa/sampleproject
+Author: Dejun E
+Author-email: edj17@lzu.edu.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# The openSheild python module
+This project is aim to process the MCNP output files which can
+help many mcnp users more
+## 1 Install tutorials
+
+
+## 2 Getting started
+
+

@@ -1,0 +1,12 @@
+CHANGES.md
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+recomp/rwlock/__init__.py
+recomp/rwlock/rwlock.py
+recomp_rwlock.egg-info/PKG-INFO
+recomp_rwlock.egg-info/SOURCES.txt
+recomp_rwlock.egg-info/dependency_links.txt
+recomp_rwlock.egg-info/top_level.txt
+recomp_rwlock.egg-info/zip-safe

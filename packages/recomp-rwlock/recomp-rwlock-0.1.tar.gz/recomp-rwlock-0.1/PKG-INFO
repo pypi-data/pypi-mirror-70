@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: recomp-rwlock
+Version: 0.1
+Summary: A simple library to protect reader/writer access to a file.
+Home-page: http://www.recomp.org.uk
+Author: Jacek Cała
+Author-email: Jacek.Cala@ncl.ac.uk
+License: GPLv3
+Description: 
+        ### ReComp RWLock library
+        
+        This module includes a class that offers a readers-writer file lock primitive.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6.0

@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: panoptes-utils
+Version: 0.2.19
+Summary: Astronomical utilities for PANOPTES
+Home-page: https://github.com/panoptes/panoptes-utils
+Author: PANOPTES Team
+Author-email: developers@projectpanoptes.org
+License: mit
+Project-URL: Documentation, https://panoptes-utils.readthedocs.org
+Platform: linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst; charset=UTF-8
+Requires-Dist: astroplan
+Requires-Dist: astropy
+Requires-Dist: Flask
+Requires-Dist: google-cloud-bigquery[pandas,pyarrow]
+Requires-Dist: google-cloud-storage
+Requires-Dist: holoviews
+Requires-Dist: hvplot
+Requires-Dist: loguru
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas (!=1.0.4)
+Requires-Dist: pendulum
+Requires-Dist: photutils
+Requires-Dist: Pillow
+Requires-Dist: pyserial
+Requires-Dist: PyYAML
+Requires-Dist: pyarrow (>=0.17.1)
+Requires-Dist: requests
+Requires-Dist: ruamel.yaml
+Requires-Dist: scalpl
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: tweepy
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: pycodestyle ; extra == 'testing'
+Requires-Dist: mocket ; extra == 'testing'
+Requires-Dist: coverage ; extra == 'testing'
+Requires-Dist: pytest-remotedata (>=0.3.1') ; extra == 'testing'
+
+UNKNOWN
+
+

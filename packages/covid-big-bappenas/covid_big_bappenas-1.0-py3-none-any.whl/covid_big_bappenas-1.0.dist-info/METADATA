@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: covid-big-bappenas
+Version: 1.0
+Summary: An Covid-Big-Bappenas package
+Home-page: https://github.com/emhayusa/covid-big-bappenas
+Author: Muhammad Hasannudin Yusa
+Author-email: emhayusa@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+
+# Covid-Big-Bappenas Package
+A helper pip package for Covid BIG BAPPENAS Project
+
+### Assumptions:
++ Assuming python is installed on your system.
+
+Installation sets up command
+**************************************
+
+Situation before installation::
+
+    $ covid_big_bappenas
+    bash: covid_big_bappenas: command not found
+
+Installation right from the source tree (or via pip from PyPI)::
+
+    $ python setup.py install
+
+    $ pip install covid_big_bappenas
+
+Now, the ``covid_big_bappenas`` command is available::
+
+    $ covid_big_bappenas --help
+Welcome to Covid-Big-Bappenas Package!
+===============================================
+Author: Muhammad Hasannudin Yusa
+Office: Pusat PPIG - Badan Informasi Geospasial
+Email: muhammad.hasannudin@big.go.id
+===============================================
+Usage: covid_big_bappenas [OPTIONS]
+
+  A helper pip package for Covid BIG BAPPENAS Project.
+
+Options:
+  --key TEXT  The key to login.
+  --help      Show this message and exit.
+
+    $ covid_big_bappenas --key d0osm19di1o**************
+Welcome to Covid-Big-Bappenas Package!
+===============================================
+Author: Muhammad Hasannudin Yusa
+Office: Pusat PPIG - Badan Informasi Geospasial
+Email: muhammad.hasannudin@big.go.id
+===============================================
+Harvester is initiated!
+Try to connect to BLC: https://data.covid19.go.id
+Connected!
+Get list all regencies and municipalities
+Done!
+Harvesting is started
+1, ACEH - ACEH BARAT
+2, ACEH - ACEH BARAT DAYA
+3, ACEH - ACEH BESAR
+...
+512, SUMATERA UTARA - TAPANULI TENGAH
+513, SUMATERA UTARA - TAPANULI UTARA
+514, SUMATERA UTARA - TOBA SAMOSIR
+Harvesting is finished
+Data is saved successfully. The file name is 20200611-034614.csv
+
+    $ covid_big_bappenas
+	Welcome to Covid-Big-Bappenas Package!
+===============================================
+Author: Muhammad Hasannudin Yusa
+Office: Pusat PPIG - Badan Informasi Geospasial
+Email: muhammad.hasannudin@big.go.id
+===============================================
+Your key: d0osm19di1o**************
+Harvester is initiated!
+Try to connect to BLC: https://data.covid19.go.id
+Connected!
+Get list all regencies and municipalities
+Done!
+Harvesting is started
+1, ACEH - ACEH BARAT
+2, ACEH - ACEH BARAT DAYA
+3, ACEH - ACEH BESAR
+...
+512, SUMATERA UTARA - TAPANULI TENGAH
+513, SUMATERA UTARA - TAPANULI UTARA
+514, SUMATERA UTARA - TOBA SAMOSIR
+Harvesting is finished
+Data is saved successfully. The file name is 20200611-034614.csv
+

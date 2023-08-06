@@ -1,0 +1,2 @@
+avocado-framework-plugin-vt==80.0
+aexpect

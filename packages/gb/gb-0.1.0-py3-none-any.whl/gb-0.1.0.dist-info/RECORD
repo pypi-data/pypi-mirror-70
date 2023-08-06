@@ -1,0 +1,15 @@
+gb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gb/__main__.py,sha256=N5NVATwXFkPZbXmJTTsgYmkromp1jaAOzHuXiuxaprI,78
+gb/command.py,sha256=S-OLCJyuUt5or-tzDDEPDiwh3NdFDomUqdbt3B4vn-U,2071
+gb/document.py,sha256=Mrtz1HrgiRs7ca7i9ce2NDVLXhkubMB3RyTVWlnmjiI,529
+gb/entry.py,sha256=6SsBFhrnUPuTO-1jPYUbRxG4QyFhiCEyinMKcM5mVL8,1192
+gb/magic.py,sha256=CcvIA5xoeY59Wbs8_8GeSDZvrmBV8b7oHl8rLe4jbEk,322
+gb/mode.py,sha256=oVPIkka8Qvcqnk6Me9tDXKjr77z37_70dbx-zmcs7kE,2105
+gb/protocol.py,sha256=d6beuX5TmwTzFubUgEZunFz_ChByC8GI2O0PKCO20Mg,644
+gb/safe.py,sha256=OZoqlP9DQmOH6uYs1iKtcJO5yMEt74UkSxJTpKocJSU,801
+gb/server.py,sha256=SHZPqwLkHu0rxWO5rc5PWdlWGSXmbSlRIZxC0DH8Ryo,3103
+gb-0.1.0.dist-info/entry_points.txt,sha256=qnRi7VONlOLshwKHoeV5SD0f18HS7ZLoHsLUM-RQvDg,39
+gb-0.1.0.dist-info/LICENSE,sha256=ADrBY0wB_Z1lfx3537fDqIMxOJVqjdYGVvVqkhE6AtI,1075
+gb-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+gb-0.1.0.dist-info/METADATA,sha256=9WnrDS6FiTEWXl1G-2kFJk_PYDsepN9iidrZBOoTyt0,4070
+gb-0.1.0.dist-info/RECORD,,

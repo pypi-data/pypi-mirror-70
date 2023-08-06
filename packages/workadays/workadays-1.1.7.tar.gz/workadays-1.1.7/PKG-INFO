@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: workadays
+Version: 1.1.7
+Summary: Calendário de dias úteis
+Home-page: https://github.com/mfhorita
+Author: Marcelo Horita
+Author-email: mfhorita@gmail.com.br
+License: MIT
+Description: ### Calendário de dias úteis:
+        
+        ```
+        import workadays as wd
+        ```
+        
+        ```
+        import datetime as dt
+        date = dt.date(2018, 2, 14)
+        ```
+        
+        ### Soma 252 dias úteis a data de referência utilizando o calendário Brasil
+        ```
+        print(wd.workdays(date, 252, country='BR', years=range(2018, 2079)))
+        ```
+        
+        ### Soma 252 dias úteis a data de referência utilizando o calendário Brasil e de SP
+        ```
+        print(wd.workdays(date, 252, country='BR', state='SP', years=range(2018, 2079)))
+        ```
+        
+        ### Verifica se é dia útil
+        ```
+        print(wd.is_holiday(date, country='BR', years=range(2018, 2079)))
+        ```
+        
+        
+Keywords: workdays workadays feriados holidays diasuteis uteis
+Platform: UNKNOWN
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown

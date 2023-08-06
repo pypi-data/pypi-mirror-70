@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bms-tree-modules
+Version: 0.1.1
+Summary: The package has been created as part of the BMS20 project at the Institue of Banking & Finance and Institute of Informatics (University of Zurich). It allows to create a tree data structure recursively from a given input json/dict. The package delivers the game building blocks for the various components: Node, Tree, Team, Config, Curves, Module.
+Home-page: https://gitlab.uzh.ch/uzh-bf/sim/banking-game-2020
+Author: Moritz Eck
+Author-email: moritz.eck@gmail.com
+License: MIT
+Project-URL: Documentation, https://gitlab.uzh.ch/uzh-bf/sim/banking-game-2020
+Project-URL: Source Code, https://gitlab.uzh.ch/uzh-bf/sim/banking-game-2020
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Requires-Dist: typing
+Provides-Extra: dev
+Requires-Dist: pylama ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-watch ; extra == 'tests'
+
+UNKNOWN
+
+

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dsflow
+Version: 0.0.1
+Summary: "Data science workflow manager"
+Home-page: UNKNOWN
+Author: "An Truong"
+Author-email: "bian.tquang@gmail.com"
+License: MIT
+Description: UNKNOWN
+Keywords: dsflow
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6.0
+Provides-Extra: lint
+Provides-Extra: dev
+Provides-Extra: doc

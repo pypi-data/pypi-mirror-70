@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+src/dsflow/__init__.py
+src/dsflow/dataset.py
+src/dsflow.egg-info/PKG-INFO
+src/dsflow.egg-info/SOURCES.txt
+src/dsflow.egg-info/dependency_links.txt
+src/dsflow.egg-info/not-zip-safe
+src/dsflow.egg-info/requires.txt
+src/dsflow.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+font-installer = font_installer.download:main
+

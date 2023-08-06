@@ -1,0 +1,12 @@
+README.md
+setup.py
+font_installer/__init__.py
+font_installer/download.py
+font_installer/posix.py
+font_installer/windows.py
+font_installer.egg-info/PKG-INFO
+font_installer.egg-info/SOURCES.txt
+font_installer.egg-info/dependency_links.txt
+font_installer.egg-info/entry_points.txt
+font_installer.egg-info/requires.txt
+font_installer.egg-info/top_level.txt

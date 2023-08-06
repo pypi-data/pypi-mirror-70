@@ -1,0 +1,7 @@
+README.md
+setup.py
+mcvoronoi/__init__.py
+mcvoronoi.egg-info/PKG-INFO
+mcvoronoi.egg-info/SOURCES.txt
+mcvoronoi.egg-info/dependency_links.txt
+mcvoronoi.egg-info/top_level.txt

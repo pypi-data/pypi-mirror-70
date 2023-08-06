@@ -1,0 +1,10 @@
+pavlovadm/__init__.py,sha256=hZ6cKMBpLF2muYBB4TAGFDt_KogYji3eJZbaCmC6N8g,90
+pavlovadm/__main__.py,sha256=Pf386m4i2HJvhfWNxwaEFgt4jK6IToLGdJSqcU86H_E,35
+pavlovadm/__pkginfo__.py,sha256=WS2D_KB9kV90Hw9RwZfiJyXfjL1z2zHXZJYR-7EFUy4,1448
+pavlovadm/colortext.py,sha256=S0kfapKQcRV_e9SXQzQ0pqAkyCRkhRAYsZ6J7KCEvEg,9081
+pavlovadm/pavlovadm.py,sha256=1TyibnGNLoeX1Z0OlXsBE1Z7gr5jBefyzp6auGfE29U,10782
+pavlovadm-1.2.dist-info/METADATA,sha256=eeAc_aOvTZUSqFZfIde_Gq6BebZ6nkaZBkMjuilfhjE,1132
+pavlovadm-1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pavlovadm-1.2.dist-info/entry_points.txt,sha256=vlBNZiF1jZzaC8hGRA6CFuYDcNVMt7NcJLhS5wPylz0,60
+pavlovadm-1.2.dist-info/top_level.txt,sha256=ymMSmOjJ-eT1wHR4At1iVkb8AN6iw_FiJYMFSPn4DIo,10
+pavlovadm-1.2.dist-info/RECORD,,

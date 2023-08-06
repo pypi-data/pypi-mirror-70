@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: toga-layout-builder
+Version: 0.1.0
+Summary: Toga Layout
+Home-page: https://github.com/ignaciocabeza/toga-layout-builder
+Author: Ignacio Cabeza
+Author-email: ignaciocabeza@gmail.com
+License: UNKNOWN
+Description: # Toga Layout Builder
+        
+        The aim of this project is to create user interfaces easily with a yaml document. 
+        This is an unofficial tool for Toga GUI Toolkit.
+        
+        ## How to use
+        
+        Look at https://github.com/ignaciocabeza/toga-layout-builder/tree/master/example to learn how to use it.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

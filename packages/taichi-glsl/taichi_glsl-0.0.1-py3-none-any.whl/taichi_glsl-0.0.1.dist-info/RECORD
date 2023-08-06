@@ -1,0 +1,10 @@
+taichi_glsl/__init__.py,sha256=jrfB1EKhtil51_IuFycot24CBWXXu8i6Jd_zZskiBPc,113
+taichi_glsl/__main__.py,sha256=Fgfu4bgU1FNmcifV4nTdmrgOZAF4weEf-7XpSJJqRl0,846
+taichi_glsl/array.py,sha256=Qeb288JcY4U5_7NGN2lw4uw3pZHxOFRA15ktDmMoLo0,1135
+taichi_glsl/glsl.py,sha256=2dlPWMukGic3Nfgj-QJoDLP3ZedjHz8ZC_TYlS2ilI8,560
+taichi_glsl/linalg.py,sha256=SgctsU_nnqXhAQUcpX7gikApOdYGs8SgqnhfFmIFDew,559
+taichi_glsl/transform.py,sha256=EwDDE0X7SNqwzIxkGMSw0G4yKBDvfwrAWS5ZfnpGh8s,338
+taichi_glsl-0.0.1.dist-info/METADATA,sha256=WgI9y7vpf7Rf2mX0vwiu1Oq9MoLbfNI-9-OOHGSZ154,493
+taichi_glsl-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+taichi_glsl-0.0.1.dist-info/top_level.txt,sha256=27BffqE4CSuuLxDneC5N6QB5dmcn036AqXiTe6kzzjA,12
+taichi_glsl-0.0.1.dist-info/RECORD,,

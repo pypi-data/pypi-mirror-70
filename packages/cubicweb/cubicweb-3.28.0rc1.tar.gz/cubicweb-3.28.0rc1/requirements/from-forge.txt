@@ -1,0 +1,7 @@
+https://forge.extranet.logilab.fr/open-source/logilab-common/-/archive/branch/default/logilab-common-branch-default.zip#egg=logilab-common
+https://forge.extranet.logilab.fr/open-source/logilab-database/-/archive/branch/default/logilab-database-branch-default.zip#egg=logilab-database
+https://forge.extranet.logilab.fr/open-source/logilab-constraint/-/archive/branch/default/logilab-constraint-branch-default.zip#egg=logilab-constraint
+https://forge.extranet.logilab.fr/open-source/logilab-mtconverter/-/archive/branch/default/logilab-mtconverter-branch-default.zip#egg=logilab-mtconverter
+https://forge.extranet.logilab.fr/open-source/yams/-/archive/branch/default/yams-branch-default.zip#egg=yams
+https://forge.extranet.logilab.fr/open-source/CubicWeb/RQL/-/archive/branch/default/RQL-branch-default.zip#egg=rql
+https://github.com/logilab/yapps/tarball/master#egg=yapps

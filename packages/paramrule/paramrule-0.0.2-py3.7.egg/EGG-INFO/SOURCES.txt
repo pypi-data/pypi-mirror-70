@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+paramrule/__init__.py
+paramrule/rule.py
+paramrule/verification.py
+paramrule.egg-info/PKG-INFO
+paramrule.egg-info/SOURCES.txt
+paramrule.egg-info/dependency_links.txt
+paramrule.egg-info/not-zip-safe
+paramrule.egg-info/top_level.txt

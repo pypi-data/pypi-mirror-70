@@ -1,0 +1,8 @@
+xmatrix/__init__.py,sha256=3q_BqPgyH_2EnwVbVKk51rd2wMUHVDxAp7Ng02qnKaw,53
+xmatrix/identity_matrix.py,sha256=Oo9hetj1rOeh95Gag24UEsGNou8I510qY8HPjmjwBY0,378
+xmatrix/matrix.py,sha256=aK8SFdMyRjiLDtosuuZD2LkMp3S8w8RRirEYDV04Qkg,9508
+xmatrix-1.2.1.dist-info/LICENSE,sha256=Wok-TciKTlvhYyeOLuw03T6Ter_s1FRl49x2EDQd4xY,1064
+xmatrix-1.2.1.dist-info/METADATA,sha256=RhhC0fC6DJ4StV-j21dTV6eDEY4j5OPb94EwtO1qlAQ,3751
+xmatrix-1.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+xmatrix-1.2.1.dist-info/top_level.txt,sha256=f1GPDy912bYQ4TXXhn335RHSG5PhW5H8sCckUMJY76M,8
+xmatrix-1.2.1.dist-info/RECORD,,

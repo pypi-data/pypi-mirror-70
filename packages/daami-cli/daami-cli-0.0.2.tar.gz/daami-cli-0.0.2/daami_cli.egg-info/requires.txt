@@ -1,0 +1,7 @@
+Click
+pyaml
+google-api-python-client
+wikipedia
+configparser
+python-frontmatter
+PyInquirer

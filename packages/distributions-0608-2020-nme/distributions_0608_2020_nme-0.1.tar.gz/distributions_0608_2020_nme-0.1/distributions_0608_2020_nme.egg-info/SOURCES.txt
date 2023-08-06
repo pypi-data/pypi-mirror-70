@@ -1,0 +1,10 @@
+setup.py
+distributions_0608_2020_nme/Binomialdistribution.py
+distributions_0608_2020_nme/Gaussiandistribution.py
+distributions_0608_2020_nme/Generaldistribution.py
+distributions_0608_2020_nme/__init__.py
+distributions_0608_2020_nme.egg-info/PKG-INFO
+distributions_0608_2020_nme.egg-info/SOURCES.txt
+distributions_0608_2020_nme.egg-info/dependency_links.txt
+distributions_0608_2020_nme.egg-info/not-zip-safe
+distributions_0608_2020_nme.egg-info/top_level.txt

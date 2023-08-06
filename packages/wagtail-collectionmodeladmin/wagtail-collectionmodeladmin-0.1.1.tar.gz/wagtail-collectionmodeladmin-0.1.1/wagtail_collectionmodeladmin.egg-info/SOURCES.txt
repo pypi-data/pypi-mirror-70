@@ -1,0 +1,13 @@
+README.md
+setup.py
+collectionmodeladmin/__init__.py
+collectionmodeladmin/base.py
+collectionmodeladmin/forms.py
+collectionmodeladmin/permissions.py
+collectionmodeladmin/templatetags/__init__.py
+collectionmodeladmin/templatetags/collectionmodeladmin_tags.py
+wagtail_collectionmodeladmin.egg-info/PKG-INFO
+wagtail_collectionmodeladmin.egg-info/SOURCES.txt
+wagtail_collectionmodeladmin.egg-info/dependency_links.txt
+wagtail_collectionmodeladmin.egg-info/requires.txt
+wagtail_collectionmodeladmin.egg-info/top_level.txt

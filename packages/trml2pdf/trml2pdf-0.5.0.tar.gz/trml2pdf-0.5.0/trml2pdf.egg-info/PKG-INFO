@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: trml2pdf
+Version: 0.5.0
+Summary: Tiny RML2PDF is a tool to easily create PDF document using special HTML-like markup language. It converts a RML, an XML dialect that lets you define the precise appearance of a printed document, to a PDF.
+Home-page: http://github.com/romanlv/trml2pdf/
+Author: Roman Lyashov
+Author-email: romitch@gmail.com
+License: GNU LESSER GENERAL PUBLIC LICENSE
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: pdf reportlab
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

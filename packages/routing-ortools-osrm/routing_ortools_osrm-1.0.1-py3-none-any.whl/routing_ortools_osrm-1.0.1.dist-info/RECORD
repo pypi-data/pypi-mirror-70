@@ -1,0 +1,11 @@
+models/__init__.py,sha256=TTPX3u9EB_0EbxOnU4NWkAfTSX6XMqmZ1E9beiCU4FQ,46
+models/routing_data_matrix.py,sha256=W87yRu8fd9GULbVSQ-KO8lZuzB9yH4Jlkiw3wWH5NE0,2257
+models/vrp_solver.py,sha256=YnXa675-LYkcHGJRX8gFJ50a25LcxgThIBpS5PBRp00,5928
+routingoo/__init__.py,sha256=TTPX3u9EB_0EbxOnU4NWkAfTSX6XMqmZ1E9beiCU4FQ,46
+routingoo/routing_data_matrix.py,sha256=AG4W9TTlhybjJ94CdxXPecdqn8QgOGDP_Z9LB9vlYIg,2411
+routingoo/vrp_solver.py,sha256=YnXa675-LYkcHGJRX8gFJ50a25LcxgThIBpS5PBRp00,5928
+routing_ortools_osrm-1.0.1.dist-info/LICENSE,sha256=X-ygqBiu6Ya1feL0mMWCwyMpDG8UnjHD7wFHgLz6IBY,11335
+routing_ortools_osrm-1.0.1.dist-info/METADATA,sha256=eHIzbSFdrlbjecmsba9y1kTYwIln41MoISbMExJj4b0,3845
+routing_ortools_osrm-1.0.1.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+routing_ortools_osrm-1.0.1.dist-info/top_level.txt,sha256=kWhimT1DNT0U_XeVttI31fgcM58gUOwTcpTtP1epKHc,10
+routing_ortools_osrm-1.0.1.dist-info/RECORD,,

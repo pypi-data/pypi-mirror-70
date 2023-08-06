@@ -1,0 +1,8 @@
+README.md
+setup.py
+gbapi/__init__.py
+gbapi/client.py
+gbapi.egg-info/PKG-INFO
+gbapi.egg-info/SOURCES.txt
+gbapi.egg-info/dependency_links.txt
+gbapi.egg-info/top_level.txt

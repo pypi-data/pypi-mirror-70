@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: wfslib
+Version: 0.1.0
+Summary: Programming module for wave front data processing
+License: MIT
+Author: Zoya
+Requires-Python: ==3.6.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

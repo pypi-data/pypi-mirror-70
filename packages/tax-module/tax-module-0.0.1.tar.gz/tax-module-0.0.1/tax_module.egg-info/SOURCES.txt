@@ -1,0 +1,16 @@
+setup.cfg
+setup.py
+tax_module/__init__.py
+tax_module/base.py
+tax_module/errors.py
+tax_module/indian_tax.py
+tax_module/models.py
+tax_module.egg-info/PKG-INFO
+tax_module.egg-info/SOURCES.txt
+tax_module.egg-info/dependency_links.txt
+tax_module.egg-info/requires.txt
+tax_module.egg-info/top_level.txt
+tests/__init__.py
+tests/factory.py
+tests/tax_module/__init__.py
+tests/tax_module/test_tax_module.py

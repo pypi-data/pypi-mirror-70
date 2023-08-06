@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: redbrick-sdk
+Version: 0.0.1
+Summary: RedBrick platform python SDK!
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # Introduction
+        
+        This is an SDK to make integrating with the RedBrick platform as easy as possible. This includes uploading and downloading data
+        as well as making your datasets easily available for training.
+        
+        
+        Desired behaviors:
+        * Upload:
+            - upload a folder of images to a redbrick dataset
+        
+        * download:
+            - download images from redbrick, save as .jpg/.png or numpy arrays
+            - download labels and save to specific file formats:
+                - Coco format
+                - darknet training format
+        
+        * training:
+            - Data in vectorized format ready to be converted to
+        
+        
+        ## Quickstart
+        
+        After creating an account on app.redbrickai.com
+        
+        ```bash
+        pip install redbrick-sdk
+        ```
+        
+        ```python
+        import redbrick
+        import torchvision
+        
+        # Setup Redbrick Global context
+        client = redbrick.client(org_id="asdasd", api_key="asdasd")
+        
+        # create a prelabeler instance
+        prelabeler = redbrick.prelabeling(project_id="project_id", stage_name="stage_name")
+        
+        # show an example image
+        prelabeler.show_sample()
+        
+        # import a model
+        model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+        model.eval()
+        
+        # run inference and upload predictions to redbrick
+        
+        
+        ```
+        
+        ## Usage
+        
+        ```python
+        redbrick.init()
+        ```
+        
+        
+        
+        ## Developing
+        
+        ```bash
+        pip install -e .[dev]
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: dev

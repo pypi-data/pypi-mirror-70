@@ -1,0 +1,11 @@
+README.md
+setup.py
+HaithamDistribution/Binomialdistribution.py
+HaithamDistribution/Gaussiandistribution.py
+HaithamDistribution/Generaldistribution.py
+HaithamDistribution/__init__.py
+HaithamDistribution.egg-info/PKG-INFO
+HaithamDistribution.egg-info/SOURCES.txt
+HaithamDistribution.egg-info/dependency_links.txt
+HaithamDistribution.egg-info/not-zip-safe
+HaithamDistribution.egg-info/top_level.txt

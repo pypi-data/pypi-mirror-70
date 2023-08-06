@@ -1,0 +1,1 @@
+This program used to calculate Gaussian distrbution and Binomial distrbution

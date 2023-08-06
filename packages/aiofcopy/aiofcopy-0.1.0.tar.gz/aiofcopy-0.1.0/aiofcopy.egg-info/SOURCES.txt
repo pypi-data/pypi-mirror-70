@@ -1,0 +1,7 @@
+README.md
+setup.py
+aiofcopy.egg-info/PKG-INFO
+aiofcopy.egg-info/SOURCES.txt
+aiofcopy.egg-info/dependency_links.txt
+aiofcopy.egg-info/requires.txt
+aiofcopy.egg-info/top_level.txt

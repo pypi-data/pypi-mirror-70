@@ -1,0 +1,5 @@
+matplotlib>=3.2.0
+PyGithub>=1.51
+
+[dev]
+pylint>=2.5.0

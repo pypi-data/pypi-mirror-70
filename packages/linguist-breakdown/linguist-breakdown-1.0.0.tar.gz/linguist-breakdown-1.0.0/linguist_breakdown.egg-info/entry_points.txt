@@ -1,0 +1,3 @@
+[console_scripts]
+linguist = linguist.breakdown:main
+

@@ -1,0 +1,17 @@
+git_pr_branch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_pr_branch/cli.py,sha256=tI4z6poSf1yufyMVvTpk_3CuZLceBy--Z-VvyN45xfk,4658
+git_pr_branch/config.py,sha256=5V858Qv_a2H0LcEDrDhlwc3HVlY__QaaCFlHjgDsN8s,4235
+git_pr_branch/repo.py,sha256=RpH8XbQE4GnBxV5GaE9tnBfidtkorsm2D_8OyQWFGz0,3160
+git_pr_branch/servers/__init__.py,sha256=f09zrFAubybGwbSZqq90TvmrbKLItv55WfjZ0aymMAQ,275
+git_pr_branch/servers/github.py,sha256=SxTpegQm9ZvFZ3h2mRpdYBVXysz8Tein9ZB2TKbARhY,3831
+git_pr_branch/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_pr_branch/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+git_pr_branch/utils/cli.py,sha256=BiaIV8ih3XGYHJylqJKROxbahfZXkV8GFRWCvOjyIGI,1550
+git_pr_branch/utils/cmd.py,sha256=y07ow3AT-Ch8YZMKbS96OBSSus3g1tuRDRdZHmCCer8,291
+git_pr_branch/utils/relationship.py,sha256=gEngxND3yXxzHiPFAXS2YgQGptbf1TzhVrsVJWw-TTs,756
+git_pr_branch/utils/setup.py,sha256=Qi2ew-NvKA7vXmDrdzQ5_7XMck0PIzN_2Bz9rCY8EQs,817
+git_pr_branch-0.0.2.dist-info/entry_points.txt,sha256=9mos0agKRJjC521G-IpTBfvPlshxlNfb8l15OeA3Ba8,55
+git_pr_branch-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+git_pr_branch-0.0.2.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+git_pr_branch-0.0.2.dist-info/METADATA,sha256=45d52_lEp7fC02j2ZNAG7ob-I300sWKlJ5pzhh6Haqo,2840
+git_pr_branch-0.0.2.dist-info/RECORD,,

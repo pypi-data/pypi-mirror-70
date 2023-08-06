@@ -1,0 +1,9 @@
+makebio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makebio/about.py,sha256=bUUmXnc8Q_0Ce8th1g5hUxGFgzeozx0ei7urzhp6_7c,20
+makebio/cli.py,sha256=oy5XwxTnOvfV8It6VTpqsuvrqLxqtJdtZcSo8_AixMg,9151
+makebio/config/gitignore,sha256=C120JjaNlJnIJrC22Yr424Xec4IdRZl1h7R_Ne4utBY,3063
+makebio-0.30.dist-info/entry_points.txt,sha256=zg_uVoFzL4m2SgmE5i5ms62E5IPadsfTiHrl3G9kZVM,43
+makebio-0.30.dist-info/LICENSE,sha256=mldq9I7w0uJ9kgR1miXm19O86-7DXrPb1Lw31YfHqz8,35126
+makebio-0.30.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+makebio-0.30.dist-info/METADATA,sha256=rRyNn_JMwOwV1kgHgl4qRs5dPnWtcx5slIkB4Yagtlk,452
+makebio-0.30.dist-info/RECORD,,

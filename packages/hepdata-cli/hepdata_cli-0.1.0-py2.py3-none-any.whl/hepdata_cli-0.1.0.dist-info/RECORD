@@ -1,0 +1,10 @@
+hepdata_cli/__init__.py,sha256=P0t4cyb1DpxDLmoHuQ9aa2tFLznH6o-tlmVXzYr-tjI,108
+hepdata_cli/api.py,sha256=OukkFG-2oIIp84g9uca3MkL_f--oUaYAhymc2dQKagE,8607
+hepdata_cli/cli.py,sha256=IPYoQuD860pdtwkSof37wyTJGGwvWdt2lW5-sfbt02g,1983
+hepdata_cli/version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+hepdata_cli-0.1.0.dist-info/LICENSE.txt,sha256=N0P3pKtRMvfb64jmgJdlerg3TnS0a2QC776AzPsbZIg,35128
+hepdata_cli-0.1.0.dist-info/METADATA,sha256=uE-HM7bLCAESkBUn_LWKlaMBQsPtpY7MnXxILgVGKnE,7189
+hepdata_cli-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+hepdata_cli-0.1.0.dist-info/entry_points.txt,sha256=NGhisR_aYLcSWF416Lma649xPkKYaSLV-yhuNjxZwPQ,53
+hepdata_cli-0.1.0.dist-info/top_level.txt,sha256=YX84IXjBY5caR-7WN7hKVWvDKiweg2ObpRQlP4CwH5o,12
+hepdata_cli-0.1.0.dist-info/RECORD,,

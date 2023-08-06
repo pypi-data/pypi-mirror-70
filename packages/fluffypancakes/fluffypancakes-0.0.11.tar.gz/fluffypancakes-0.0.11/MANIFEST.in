@@ -1,0 +1,17 @@
+include README.md
+include LICENSE.txt
+
+include src/dataset.csv
+include src/edu_domains.txt
+include src/shortening_services.txt
+include src/ssl_list.txt
+
+include src/test.py
+include src/sample_test.py
+
+include images/progressBar_complete.PNG
+include images/progressBar_inProgress.PNG
+
+include dependencies/linux/chromedriver
+include dependencies/macOS/chromedriver
+include dependencies/windows/chromedriver.exe

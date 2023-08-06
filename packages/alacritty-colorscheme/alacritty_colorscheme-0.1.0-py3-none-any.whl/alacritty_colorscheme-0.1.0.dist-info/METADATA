@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: alacritty-colorscheme
+Version: 0.1.0
+Summary: 
+Author: Safar Ligal
+Author-email: weathermist@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: ruamel.yaml (>=0.16.10,<0.17.0)

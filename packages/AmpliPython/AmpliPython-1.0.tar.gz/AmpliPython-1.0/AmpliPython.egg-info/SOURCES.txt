@@ -1,0 +1,13 @@
+setup.py
+AmpliPython.egg-info/PKG-INFO
+AmpliPython.egg-info/SOURCES.txt
+AmpliPython.egg-info/dependency_links.txt
+AmpliPython.egg-info/namespace_packages.txt
+AmpliPython.egg-info/not-zip-safe
+AmpliPython.egg-info/requires.txt
+AmpliPython.egg-info/top_level.txt
+amplipython/__init__.py
+amplipython/client.py
+amplipython/event.py
+amplipython/exceptions.py
+amplipython/utils.py

@@ -1,0 +1,13 @@
+research/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+research/algorithm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+research/algorithm/research_algorithm.py,sha256=D7_7UiqLLmBRYWaQ2JIwUM-azGIGOYI9-MeBOdrucEo,968
+research/dataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+research/dataset/research_dataset.py,sha256=hwPkimR3ItRAzEnqu5IahZzloDBAzptex7wLn-zr5xw,180
+research/experiment/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+research/experiment/research_experiment.py,sha256=mvmS7skg8m3C7_bZ43hGAQisU9MEXaaCmLNT1h1CwX0,1298
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_estimator.py,sha256=p15UG3oD7g1RNFDrLYIlbd8amN_9fJ9JJ4om_pCi9Po,473
+awesome_research_demo_package-0.0.1a0.dist-info/METADATA,sha256=0EMgbhlj2T5LN2w5ER-JC8wqd4LuwjwbwebzSHJjZbc,490
+awesome_research_demo_package-0.0.1a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+awesome_research_demo_package-0.0.1a0.dist-info/top_level.txt,sha256=EzBimLeQQY2q_NFl01cIyUninvPxAQV8TY7XpZNLkpA,15
+awesome_research_demo_package-0.0.1a0.dist-info/RECORD,,

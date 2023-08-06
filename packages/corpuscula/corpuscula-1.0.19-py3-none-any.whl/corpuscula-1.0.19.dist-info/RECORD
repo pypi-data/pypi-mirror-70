@@ -1,0 +1,13 @@
+corpuscula/__init__.py,sha256=utXWqoKI3XtBEIObyBwW0Iiw0GnJrAs2tCgNoGIv6EM,635
+corpuscula/_version.py,sha256=QDuf9TVKKe0b0p5-nLsFmt_JsaluFW9TuiYja7WlFlk,23
+corpuscula/conllu.py,sha256=BLstb57Jo708L6p10jC0IJe8Mf-xCEzaaiz68VFRZ8k,18603
+corpuscula/corpus_dict.py,sha256=g2FKnW8rYo3PnEBYS7PDvvRjAq7LRpuW3F-M6uVnu1w,37759
+corpuscula/corpus_utils.py,sha256=CPLHbzrtN3y0zlOAmqeymPvl-fpmJ078ru-gNiPGGg0,26099
+corpuscula/items.py,sha256=GofZfZV4m_Ha-_ICCQErFOEK0ezGB_jI0iWV8LjFmG8,3758
+corpuscula/utils.py,sha256=3tFb_d-ZRZbXBn6r61X_WCgtzl_9hvXSaLjax0rsJTU,13190
+corpuscula/wikipedia_utils.py,sha256=TGxTWUo5xBl5b1TRmGJjeiKYOLXGRQXabfaPewopPOY,17485
+corpuscula-1.0.19.dist-info/LICENSE,sha256=JFHcX_bij5qTp6d6H9jC0G6WLJiXnef5_j899T4dT_E,1524
+corpuscula-1.0.19.dist-info/METADATA,sha256=BCZwpsQLhK32Ice7cYk8d1jsd4zS3ceRHs-ci4txm0U,3948
+corpuscula-1.0.19.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+corpuscula-1.0.19.dist-info/top_level.txt,sha256=xzikX8Pwzhmohy-6PqMS4YEGxgG518owxOssJjR5hMQ,11
+corpuscula-1.0.19.dist-info/RECORD,,

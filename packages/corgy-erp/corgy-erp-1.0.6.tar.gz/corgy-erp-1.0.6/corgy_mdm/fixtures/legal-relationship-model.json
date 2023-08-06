@@ -1,0 +1,212 @@
+[
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 1,
+    "fields": {
+      "prime_number": "2aef497c-9697-45e0-a89d-c88d1fb4ed7f",
+      "code": "20",
+      "name": "Norm\u00e1l alkalmazott",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 2,
+    "fields": {
+      "prime_number": "c5da1a97-5b18-4118-bab1-8f21c85e07c0",
+      "code": "20",
+      "name": "Nyugd\u00edjas alkalmazott",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 3,
+    "fields": {
+      "prime_number": "a72a2b56-4187-46e1-8fbc-1468dcce323b",
+      "code": "20",
+      "name": "F\u0151foglalkoz\u00e1s\u00fa t\u00e1rsas v\u00e1llalkoz\u00f3 (munkaviszonyos)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 4,
+    "fields": {
+      "prime_number": "cca46049-9b42-4f0a-a0a1-59c5a114d54c",
+      "code": "30",
+      "name": "F\u0151foglalkoz\u00e1s\u00fa t\u00e1rsas v\u00e1llalkoz\u00f3 (megb\u00edz\u00e1sos)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 5,
+    "fields": {
+      "prime_number": "773fa3f4-d717-4942-bc43-7e0017f2fb02",
+      "code": "34",
+      "name": "T\u00e1rsas v\u00e1llalkoz\u00f3 (t\u00e1rsas v\u00e1llalkoz\u00e1s mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 6,
+    "fields": {
+      "prime_number": "04be0210-1889-4010-bb0e-2e2b01064e86",
+      "code": "35",
+      "name": "T\u00e1rsas v\u00e1llalkoz\u00f3 (munkaviszony mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 7,
+    "fields": {
+      "prime_number": "922b2c51-d689-4ba5-93cd-41eedec8d34b",
+      "code": "37",
+      "name": "T\u00e1rsas v\u00e1llalkoz\u00f3 (nappali tagozatos tanulm\u00e1nyok mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 8,
+    "fields": {
+      "prime_number": "a29e4a73-54a3-4b6e-b997-7661b74222cb",
+      "code": "39",
+      "name": "T\u00e1rsas v\u00e1llalkoz\u00f3 (egy\u00e9ni v\u00e1llalkoz\u00e1s mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 9,
+    "fields": {
+      "prime_number": "5b14767d-baeb-4d5b-9530-5217fdb22f0b",
+      "code": "53",
+      "name": "Nyugd\u00edjas t\u00e1rsas v\u00e1llalkoz\u00f3",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 10,
+    "fields": {
+      "prime_number": "d10362d2-7e03-405c-b565-588f751f57df",
+      "code": null,
+      "name": "V\u00e1lasztott tiszts\u00e9gvisel\u0151",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 11,
+    "fields": {
+      "prime_number": "d5c8518b-80cb-4d7f-bb61-20e71ad882e1",
+      "code": null,
+      "name": "Megb\u00edz\u00e1si d\u00edj",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 12,
+    "fields": {
+      "prime_number": "faf9348a-5baf-4651-a501-68e4dadb4dbf",
+      "code": null,
+      "name": "Ingatlan b\u00e9rbead\u00e1s",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 13,
+    "fields": {
+      "prime_number": "4c23bb11-172b-4418-9ec3-8f7f04c1b640",
+      "code": null,
+      "name": "F\u0151foglalkoz\u00e1si egy\u00e9ni v\u00e1llalkoz\u00f3",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 14,
+    "fields": {
+      "prime_number": "4c482572-9e25-4467-89d3-d802c38774cd",
+      "code": null,
+      "name": "Egy\u00e9ni v\u00e1llalkoz\u00f3 (munkaviszony mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 15,
+    "fields": {
+      "prime_number": "c225bf42-8ad1-40de-a0e6-5a68549aed90",
+      "code": null,
+      "name": "Egy\u00e9ni v\u00e1llalkoz\u00f3 (nappali tagozatos tanulm\u00e1nyok mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 16,
+    "fields": {
+      "prime_number": "36ea4754-87bc-47f2-8af4-5ad3dcf8d626",
+      "code": null,
+      "name": "Egy\u00e9ni v\u00e1llalkoz\u00f3 (t\u00e1rsas v\u00e1llalkoz\u00e1s mellett)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 17,
+    "fields": {
+      "prime_number": "beb6a90e-d96d-4b33-bc41-37c8810675c7",
+      "code": null,
+      "name": "Nyugd\u00edjas egy\u00e9ni v\u00e1llalkoz\u00f3",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 18,
+    "fields": {
+      "prime_number": "519eecb3-9b8d-4c6d-ba59-867039e6ebf3",
+      "code": null,
+      "name": "EKHO-s jogviszony (munkaviszonyos)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 19,
+    "fields": {
+      "prime_number": "8dd0e4ed-88d1-4695-936d-a89b6d8616c7",
+      "code": null,
+      "name": "EKHO-s jogviszony (nyugd\u00edjas)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 20,
+    "fields": {
+      "prime_number": "7e8945d4-d8bf-4550-8860-d611d4d02532",
+      "code": null,
+      "name": "EKHO-s jogviszony (megb\u00edz\u00e1sos)",
+      "description": null
+    }
+  },
+  {
+    "model": "corgy_mdm.legalrelationshipmodel",
+    "pk": 21,
+    "fields": {
+      "prime_number": "39963842-375f-4ad7-af03-91835199ab48",
+      "code": null,
+      "name": "Egyszer\u0171s\u00edtett foglalkoztat\u00e1s",
+      "description": null
+    }
+  }
+]

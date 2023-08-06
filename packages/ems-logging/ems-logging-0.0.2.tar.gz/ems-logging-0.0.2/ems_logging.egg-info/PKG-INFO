@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ems-logging
+Version: 0.0.2
+Summary: Common logging for EMS projects
+Home-page: https://github.com/
+Author: Jesper Halkjær Jensen
+Author-email: gedemagt@gmail.com
+License: MIT
+Description: # EMS logging
+        ## Setup
+        
+        Either import this as a git submodule package (for development) and `import emslogging`, or simply import the [ems-logging](https://pypi.org/project/ems-logging/) library from pypi and use the python get logger:
+        
+        ```Python3
+        import emslogging
+        import logging
+        logger = logging.getLogger("Zipping")
+        ```
+        
+        Log level can be set with env variable `EMS_LOG_LEVEL` using the python logging library levels, e.g. `INFO`, `DEBUG`, etc.
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown

@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: taichi-glsl
+Version: 0.0.1
+Summary: Manipulate Taichi with GLSL-alike functions
+Home-page: UNKNOWN
+Author: 彭于斌
+Author-email: 1931127624@qq.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Games/Entertainment :: Simulation
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

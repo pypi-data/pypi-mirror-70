@@ -1,0 +1,7 @@
+README.md
+setup.py
+taichi_glsl/__init__.py
+taichi_glsl.egg-info/PKG-INFO
+taichi_glsl.egg-info/SOURCES.txt
+taichi_glsl.egg-info/dependency_links.txt
+taichi_glsl.egg-info/top_level.txt

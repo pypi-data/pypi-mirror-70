@@ -1,0 +1,11 @@
+fileutil/__init__.py,sha256=tW4njcolYhZcmKHGWoNmVSbRY1dzlUTcwPxu5p9r1mA,605
+fileutil/common.py,sha256=0zO9RRgNZO53A9Fxv3olOz3yID8-ib5TdqdyzxMAmWs,4828
+fileutil/filesplit.py,sha256=IruSSNjxyBEJXvs70lWALge5i7V7r-OZ_ZMULmrdyzw,7450
+fileutil/filetransform.py,sha256=LzdbJ3sE5tWhIgnlnzDR7W9eYipj4SKuHAxP0TVjDkU,3369
+fileutil/fileunion.py,sha256=ggO8KI80049IVz40Y5Rya6-Lltpmk6X7neuGm683AG4,5538
+fileutil/parser.py,sha256=0TQJObZzkNxogpkZ4SP3ugOw4MUYUGEBEMba1KPBIOA,13344
+fileutil-1.0.4.dist-info/LICENSE.txt,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+fileutil-1.0.4.dist-info/METADATA,sha256=k6F_GT80FqeDUhGFUyGDS8bGVezhj1St9LTPc0wXh8E,562
+fileutil-1.0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+fileutil-1.0.4.dist-info/top_level.txt,sha256=myG4VAjjTI8ig8Znl07rctOE4xH36Rq3rpIDR1z9zaI,9
+fileutil-1.0.4.dist-info/RECORD,,

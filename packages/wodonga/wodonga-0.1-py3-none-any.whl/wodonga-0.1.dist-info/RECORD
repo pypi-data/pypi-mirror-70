@@ -1,0 +1,10 @@
+wodonga/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wodonga/__main__.py,sha256=7jp7bIJyNJA0hZ7H-H1cR3yZMnSqkeDMIg0f3qq8IJM,792
+wodonga/service.py,sha256=EOllxfNMsKOFYJpJnaPsulqFsLXG01-YR2pjjeaG86M,7931
+wodonga/service_loader.py,sha256=rigzyC_7KJe6hhBC9Vw5c3iXHOUBSp28GLA0Sx7z5zA,1646
+wodonga/service_test.py,sha256=w1ev-MWXDFwH5BhV68r8aw5bYJcG-HU91ahxCbgKv0k,352
+wodonga/tcp.py,sha256=rsq83grTUVTPUX_a7lszpMLpcXzavp0girAp5bLBFr8,2658
+wodonga-0.1.dist-info/LICENSE.md,sha256=9Y93iuuG0-qHnW7Ih3l0s_fr41e4lIz_2tui_f_2bYk,3526
+wodonga-0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+wodonga-0.1.dist-info/METADATA,sha256=Slo-bRKiZuZLC47lAcne9tIRZ4YoGlWaf0hnB4JQsbE,524
+wodonga-0.1.dist-info/RECORD,,

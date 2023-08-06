@@ -1,0 +1,10 @@
+setup.py
+distributions_by_chito/Binomialdistribution.py
+distributions_by_chito/Gaussiandistribution.py
+distributions_by_chito/Generaldistribution.py
+distributions_by_chito/__init__.py
+distributions_by_chito.egg-info/PKG-INFO
+distributions_by_chito.egg-info/SOURCES.txt
+distributions_by_chito.egg-info/dependency_links.txt
+distributions_by_chito.egg-info/not-zip-safe
+distributions_by_chito.egg-info/top_level.txt

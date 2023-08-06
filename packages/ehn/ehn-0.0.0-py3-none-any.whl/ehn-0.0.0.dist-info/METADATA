@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ehn
+Version: 0.0.0
+Summary: E-HowNet Utilities
+Home-page: https://pypi.org/project/ehownet/
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: ehownet
+
+Use `ehownet <https://pypi.org/project/ehownet/>`__ instead.
+
+

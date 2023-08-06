@@ -1,0 +1,6 @@
+nibabel
+numpy
+six
+scipy
+nilearn
+sklearn

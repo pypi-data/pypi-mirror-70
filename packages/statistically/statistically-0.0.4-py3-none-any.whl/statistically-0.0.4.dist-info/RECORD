@@ -1,0 +1,12 @@
+statistically/__init__.py,sha256=k0u39z0wq_2X10O8Y1kMWeSNJZbTfGpytL3NNMHRuOc,93
+statistically/statistically.py,sha256=q9yKC3o9fAArPYJVIqjVJiLwNX5dRxBhk0rE0J4IOxw,1151
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_basics.py,sha256=KmFAiFRAmq3a08nHXcQGMTkA1E5ewkRTZidbr1JBfao,86
+test/test_general.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statistically-0.0.4.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+statistically-0.0.4.dist-info/METADATA,sha256=fnS_Bb-X3qXQ9AQ-ahO5RvXydCNrY0Wfye_vBvu9FFU,3820
+statistically-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+statistically-0.0.4.dist-info/entry_points.txt,sha256=hkucvwFtlPvS3ZTzBrsMTIDSjmIZJNva2VmVDlmyMe4,68
+statistically-0.0.4.dist-info/top_level.txt,sha256=54LGEkBTibZfLzDs-KcMyhtiuXs6hFCvyCz8goyfubM,19
+statistically-0.0.4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+statistically-0.0.4.dist-info/RECORD,,

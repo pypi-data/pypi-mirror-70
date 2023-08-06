@@ -1,0 +1,14 @@
+nr/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+nr/databind/__init__.py,sha256=jv2YF__bseklT3OWEzlqJ5qE24c4aWd5F4r0TTjOrWQ,65
+nr/databind/core/__init__.py,sha256=2v-cBUzhd9gOz_nrLGMzpymZjG_P1Jtt0uWr5dK2rUs,19057
+nr/databind/core/collection.py,sha256=OdFNXsS_ZEUf4JrTUwkoybjc6OqI4mYzSV_z4qbfybc,2395
+nr/databind/core/datatypes.py,sha256=0boGxkn-tBuAqevguNTGW2UooW5I95AZVjJEPOX-XhI,15700
+nr/databind/core/decorations.py,sha256=QJSkiXBfBre_-AyWfPA3whZEz4Quj3xAsv7mu_Dc3Lk,8825
+nr/databind/core/struct.py,sha256=GiXAtAiWpBSKPZjMkQHyMQyF084d_w5sj8bBT0c5wjU,24048
+nr/databind/core/union.py,sha256=M73nCEFN8PqovWVTT_wJuvmsYRRW9RHacNuQEDsdopA,13382
+nr.databind.core-0.0.16.dist-info/LICENSE.txt,sha256=28LWAEJssn5iTLwJ2A4_uWa2_ZKCSRw1PBBVm44yKsg,1084
+nr.databind.core-0.0.16.dist-info/METADATA,sha256=1SK-bjvA81IojXLdFuu9lrMVAsDcoVZ3mMY6NSfaEGg,1187
+nr.databind.core-0.0.16.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+nr.databind.core-0.0.16.dist-info/entry_points.txt,sha256=AaH7QmwzUdhNzRx5ZtnaCVVoNORnVhcXcP1nnCjcLRc,105
+nr.databind.core-0.0.16.dist-info/top_level.txt,sha256=8ipe96hphd64fYwhLcJmehxJ5lvqPpqOvSWVv-HcPnI,3
+nr.databind.core-0.0.16.dist-info/RECORD,,

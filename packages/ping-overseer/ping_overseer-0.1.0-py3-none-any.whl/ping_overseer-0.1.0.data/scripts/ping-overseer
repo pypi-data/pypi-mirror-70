@@ -1,0 +1,183 @@
+#!python
+
+# TODO: Test admin/windows warning on Windows.
+
+# TODO: Monitoring phase to ignore IP's that are down during that initial time (60s). 
+# Needs to change main "str" input
+
+import argparse
+import sys
+import os
+import shutil
+import re
+import time
+import ctypes
+from datetime import datetime
+from datetime import timedelta
+
+import nmap
+import jefftadashi_utils as jtu
+
+def main(argv):
+
+    print(jtu.color.end + "")
+    print("   @@#############################@@") 
+    print("   @@    " + jtu.color.bold + "    ping-overseer    " + jtu.color.end + "    @@") 
+    print("   @@   by JeffTadashi  v0.1.0    @@") 
+    print("   @@#############################@@") 
+    print(jtu.color.end + "")
+
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", nargs='+', help="Input simple space-separated IP or CIDR list")
+    parser.add_argument("-f", "--file", help="Input a file with IP's. Can be any text-based format.")
+    parser.add_argument("-d", "--delay", type=float, help="Change delay (in seconds) between nmap ping runs. Default is 8 (seconds)")
+    parser.add_argument("-t", "--time-nmap", dest="time_nmap", type=int, help="Set NMAP timing template. Valid entries are 1 (Slowest) through 5 (Fastest). 3 is default.")
+    args = parser.parse_args()
+
+    if args.file is None and args.input is None:
+        parser.error("At least one of -f or -i is required!")
+
+    print ("(Escape with Ctrl-C or the usual escape keys)")
+    print ("")
+
+    #Warning if not admin/root
+    try:
+        is_admin = os.getuid() == 0 #Linux/MacOS
+    except: 
+        is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0   # Windows
+    if not is_admin:
+        print (jtu.color.yellow + jtu.color.bold + "WARNING!!! Script not running as admin/sudo/root. ICMP pings (nmap) will not work as fully intended." +  jtu.color.end)
+        print("")
+
+
+    # Global variables
+    ping_ip_str = ''
+
+
+    # If -f defined, open file (as a List, per line) and starting parsing for IP addresses
+    if args.file:
+        with open(args.file) as file:
+            file_list = file.readlines()
+
+        for f_line in file_list:
+            find_ip = re.findall(jtu.regex.ip_or_cidr, f_line) #will output a list of tuples (with CIDR extention as second tuple)
+
+            # Convert each tuple to string, then add to ping_ip_str
+            for i in range(len(find_ip)):
+                i_cidr =  ''.join(find_ip[i])
+                ping_ip_str = ping_ip_str + " " + i_cidr
+ 
+        
+    # If -i defined, build string from arg-created list of IP/CIDRS
+    if args.input:
+        for i in args.input:
+            ping_ip_str = ping_ip_str + " " + i
+
+    # down-time-dict - "10.1.1.1":"timedate object"  format
+    down_time_dict = {}
+
+    # Before begin, some info
+    print (jtu.color.underline + "The starting IP/CIDR list is:" + jtu.color.end)
+    print (ping_ip_str)
+    print ("")
+
+    # Determine sleep value
+    if args.delay:
+        p_delay = args.delay
+    else:
+        p_delay = 8 #the default
+
+    # Determine nmap time template value
+    if args.time_nmap and args.time_nmap >= 1 and args.time_nmap <= 5 :
+        nmap_time = str(args.time_nmap)
+    else:
+        nmap_time = 3
+
+    # Loop thru pings, passing down_ip->time dictionary thru and back
+    try:
+        while True:
+            down_time_dict = run_ping(ping_ip_str, down_time_dict, nmap_time)
+            time.sleep(p_delay)
+    except KeyboardInterrupt: #Ctrl+C to end
+        print ("")
+        print ("Ctrl-C pressed, exiting...")
+
+def run_ping(ip_string, down_time_dict, nmap_time):
+    # input: ip_string,  and down-time-dict, and nmap_time (1-5)
+    # output: new down-time-dict
+
+
+    # Get current timestamp before scan
+    now_time = datetime.now()  #really it's datetime.dateime.now if importing just datetime
+    time_st = now_time.strftime('%Y-%m-%d %H:%M:%S')
+
+    nm = nmap.PortScanner()
+    nm.scan(hosts=ip_string, arguments='-n -sn -PE -v -T' + str(nmap_time)) # hosts must be space-delimited string. -T must be next to nmap_time string.
+    # -n to skip reverse DNS lookup
+    # -sn to skip all TCP/port checks
+    # -PE to invoke standard ICMP echo check
+    # -T4 for timing. Set to T5 for faster, etc. T1-T5 as options.
+    # -v needed for ping down
+
+    ip_total_count = 0
+    ip_up_count = 0
+
+    # Iterate thru ping results, and adjust down_dict accordingly
+    for n_ip in nm.all_hosts():
+        ip_total_count = ip_total_count + 1
+        #print (nm[n_ip])
+        #print (n_ip + " is " + nm[n_ip].state())
+        if nm[n_ip].state() == "up":
+            ip_up_count = ip_up_count + 1
+            down_time_dict.pop(n_ip, None) #remove IP entry from down_ip_dict, if it was there
+        else:
+            if n_ip not in down_time_dict: # add initial time entry of first down, only if not existing
+                down_time_dict[n_ip] = now_time
+
+    # Get Percentage
+    try:
+        up_percentage = '{:.1%}'.format(ip_up_count / ip_total_count) 
+    except: 
+        up_percentage = "N/A%"  #Happens if there are no ip inputs...
+
+    # Print overall status line
+    print ("{" + time_st + "}" + jtu.color.purple + " [Up: " + str(ip_up_count) + "/" + str(ip_total_count) + " " + str(up_percentage) + "]" + jtu.color.end)
+    
+
+    #Get terminal width (colums) and MOD divider before next step
+    entry_str_length = 24 # Length of entire entry within the parenthesis plus " "
+    term_size = shutil.get_terminal_size()
+    term_columns = term_size[0]
+    mod_div = term_columns // entry_str_length # "//" is integer division
+
+    #next, iterate down_time_dict and print all down IP's with thier time differences
+    newline = 0 #counter for when to make a newline
+    for d_ip in down_time_dict:
+        if (newline % mod_div) == 0 and newline != 0: # for when to make new line, MOD operation
+            print("")
+        duration = now_time - down_time_dict[d_ip]
+
+        #Set seconds color routine
+        if duration.total_seconds() > 300:
+            scolor = jtu.color.red
+        elif duration.total_seconds() > 60:
+            scolor = jtu.color.yellow
+        elif duration.total_seconds() > 15:
+            scolor = jtu.color.cyan
+        else:
+            scolor = jtu.color.blue
+
+        duration_neat_seconds = str(int(duration.total_seconds()))
+
+        print(scolor + "(" + d_ip.ljust(15) + "-" +  duration_neat_seconds.rjust(4) + "s) " + jtu.color.end, end='')  #LJUST / RJUST to normalise IP string length
+        newline = newline + 1
+
+
+    print ("") #final print for end of line
+    print ("") #space between lines
+    return down_time_dict
+
+if __name__== "__main__":
+    main(sys.argv[1:])
+

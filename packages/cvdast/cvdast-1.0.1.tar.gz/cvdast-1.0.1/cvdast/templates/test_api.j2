@@ -1,0 +1,24 @@
+import requests
+import json
+import pytest
+
+HOST_URL = "{{ host_url }}"
+
+
+def _trigger_requests(req_method, url, header, data, proxies=None):
+    print("\n\nRegenerating traffic from CloudVector events....")
+    return requests.request(method=req_method, url=url, proxies=proxies, headers=header, data=data, verify=False)
+
+
+def test_{{ api_name }}({{ api_info.get("params",[])|join(", ") }}):
+    data = {}
+    {% for param in api_info.get("params",[]) %}data["{{ param }}"] = {{ param }}
+    {% endfor %}
+    response = _trigger_requests("{{ api_info.get("method") }}", "{{ api_info.get("url") }}",
+                      header={{ api_info.get("header") }},
+                      data=json.dumps(data))
+    print(response.status_code)
+    print(response.text)
+    assert response.status_code == 200
+
+

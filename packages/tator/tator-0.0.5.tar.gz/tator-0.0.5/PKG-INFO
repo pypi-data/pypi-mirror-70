@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: tator
+Version: 0.0.5
+Summary: Tator REST API
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description:     Interface to the Tator backend.  # noqa: E501
+            
+Keywords: Swagger,Tator REST API
+Platform: UNKNOWN

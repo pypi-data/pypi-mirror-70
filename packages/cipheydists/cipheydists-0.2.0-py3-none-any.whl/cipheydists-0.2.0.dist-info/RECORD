@@ -1,0 +1,14 @@
+cipheydists/__init__.py,sha256=sz8ORpZ-UKqYUPvmMRoksH4Cx2y-N3m4FP1YTYWrdCs,653
+cipheydists/charset/encodings.json,sha256=PBjb9_YgnUJ1Z3PwdxCqWarY83Qos0AbIImh7FGhpng,128
+cipheydists/charset/english.json,sha256=P-9fbLvrbqPxA9MfelqW8i8WWHQ4LYmPt-vnFkaAcTI,128
+cipheydists/charset/morse.json,sha256=M2EG7cH3E0drdQuOfkMan9SXIaj98vRMICHqTfar4Ww,128
+cipheydists/dist/lcase.json,sha256=4vQY3-Iq6XWIQhk5FWiMU91GYRBpymQ7SsQjn2KoGsU,128
+cipheydists/dist/twist.json,sha256=BBogOZHDMjPy74f_ORHHbwHzINISWI2uIYHYvqywlds,129
+cipheydists/list/english.json,sha256=vQc6_HaQdgMJabjdOAUh9SwkfIruGZ6WQFsiXdWKoG4,132
+cipheydists/list/english1000.json,sha256=2Z9TItARQ_i1Y3aZ6ZpIJBAvq28p95MwntwSmedOjPQ,129
+cipheydists/model/.gitattributes,sha256=5F7o8qfneFoRdCall_D-rL2-SXQR2SndffQuEM-hlgQ,111
+cipheydists/model/cipher_detector.h5,sha256=KF8OdtLStp4xo8XxArQGo_tJogLOkQYCD8KVjDCTvSQ,6438408
+cipheydists/model/english_sentence.h5,sha256=eOthcodh2PjYyEKVlLFxS83ivnqhU_4mE6nK2df65iA,7396860
+cipheydists-0.2.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+cipheydists-0.2.0.dist-info/METADATA,sha256=3jX8C8lHQPPKDklfZYCzHHbLRO5lnAdNDJaWNIUDvRE,473
+cipheydists-0.2.0.dist-info/RECORD,,

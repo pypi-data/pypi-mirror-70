@@ -1,0 +1,8 @@
+ifexd/__init__.py,sha256=3uQy7Lzc_pMosXKEcQFl-_jZFhz5VLGhocMXUAyzza4,73
+ifexd/haarcascade_eye.xml,sha256=ccxk_DBaNV3GAGeID2-71D3RVb1j7jhEZhob2jSy_Yw,341406
+ifexd/haarcascade_frontalface_default.xml,sha256=D31FJ4ROtRTUpJSOgi2pD7sWo0oLu7xq3GSYdHpar7A,930127
+ifexd-0.0.0.dist-info/LICENSE,sha256=ZsZkS2uiNUCfth9PGEwCO706Q9ysHcecQxdCUG60MdY,1073
+ifexd-0.0.0.dist-info/METADATA,sha256=au3Xl93kxELZdXfg34ZItIPqN8VvHpJJGz_f0O6u--E,1311
+ifexd-0.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+ifexd-0.0.0.dist-info/top_level.txt,sha256=UIn0-w4alrDV8YUm0HPM_iVK7cUGeHINlCwHMYdZK64,6
+ifexd-0.0.0.dist-info/RECORD,,

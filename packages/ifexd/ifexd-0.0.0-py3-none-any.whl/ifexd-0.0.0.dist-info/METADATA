@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: ifexd
+Version: 0.0.0
+Summary: IFExD: Indian Facial Expression Dataset
+Home-page: https://github.com/Nikeshbajaj/ifexd
+Author: Nikesh Bajaj
+Author-email: nikkeshbajaj@gmail.com
+License: MIT
+Keywords: Facial-Expression-Dataset Computer-Vision CNN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: spkit
+
+# Indian Facial Expression Dataset
+
+<p align="center">
+  <img src="https://github.com/Nikeshbajaj/ifexd/raw/master/images/S1.jpg" width="900"/>
+</p>
+
+### Links: **[Homepage](https://ifexd.github.io)** | **[Github](https://github.com/Nikeshbajaj/ifexd)**  |  **[PyPi - project](https://pypi.org/project/ifexd/)** |
+
+**Indian Facial Expression Dataset**
+* 12K images including three views - Front, Left, Right
+* Images from 345 Indians
+* 7 Expressions + Natural pose:
+  * A: Natural
+  * B: Happy
+  * C: Surprise
+  * D: Sad
+  * E: Anger
+  * F: Contempt
+  * G: Disgust
+  * H: Fear
+
+
+______________________________________
+
+# Contacts:
+
+* **Nikesh Bajaj**
+* http://nikeshbajaj.in
+### PhD Student: Queen Mary University of London
+______________________________________
+
+

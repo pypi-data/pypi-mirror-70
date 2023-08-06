@@ -1,0 +1,12 @@
+scatterpy/__init__.py,sha256=vysdi7BZ2TTP419KRsm3JA5mwYrxk7UFjyy_fnp4h3Y,161
+scatterpy/diameters.py,sha256=3qF1Yz7GY86E43pzKdTuhBhzDU7FOzVaR0vLTjiR6w8,3285
+scatterpy/matstack.py,sha256=RqlJuJVW_W4Gof06rLbaIYVr3nIh1l6vWml0bjf29Wg,1948
+scatterpy/orientation.py,sha256=Fu4xjUlQQ-La8p22nQdPEz2AFSpnp6y7kpherpG821k,7226
+scatterpy/shapes.py,sha256=m8-ligBnP7DLKyWC68KmBYtl0kcWfgM0ohWLVsEdK90,7522
+scatterpy/special.py,sha256=ujHIM8V6hhRaPB6vIArsJinjXhfp_DtlUFOvJbnHxNk,1854
+scatterpy/tmatrix.py,sha256=nx4rjsriKiolsgDH58FikwZJLsI45s4SDELz-PMjEhE,17554
+scatterpy-0.1.1.dist-info/LICENCE,sha256=UiCnq3ALVoE2_2UYK0HpZY8amAxQ-6NkJfDt6GrGhlI,32472
+scatterpy-0.1.1.dist-info/METADATA,sha256=Gb0hst4BII5FIkM0bNSZCyNiMEzVBlBKdItrvFWZkvg,1233
+scatterpy-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scatterpy-0.1.1.dist-info/top_level.txt,sha256=ua3Q4Snp8r1g1XzAr8OGVFpkmil1j1qE-me-qpWGyRU,10
+scatterpy-0.1.1.dist-info/RECORD,,

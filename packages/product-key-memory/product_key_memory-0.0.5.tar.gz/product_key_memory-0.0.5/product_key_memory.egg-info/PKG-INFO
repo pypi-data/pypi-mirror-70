@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: product-key-memory
+Version: 0.0.5
+Summary: Product Key Memory
+Home-page: https://github.com/lucidrains/product-key-memory
+Author: Phil Wang
+Author-email: lucidrains@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: transformers,artificial intelligence
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6

@@ -1,0 +1,8 @@
+README.md
+setup.py
+discogs_wrapper/__init__.py
+discogs_wrapper/dv.py
+discogs_wrapper_python.egg-info/PKG-INFO
+discogs_wrapper_python.egg-info/SOURCES.txt
+discogs_wrapper_python.egg-info/dependency_links.txt
+discogs_wrapper_python.egg-info/top_level.txt

@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: flask-checkr
+Version: 0.1.1
+Summary: Easily validate Flask requests with JSONSchema.
+Home-page: https://github.com/pavelpascari/flask-checkr
+License: MIT
+Author: Pavel P.
+Author-email: pascaripavel@gmail.com
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: flask (>=1.1.2,<2.0.0)
+Requires-Dist: jsonschema (>=3.2.0,<4.0.0)
+Project-URL: Repository, https://github.com/pavelpascari/flask-checkr
+Description-Content-Type: text/x-rst
+
+.. _Postman: https://www.getpostman.com/
+.. _Flask: http://flask.pocoo.org/
+
+=============
+Flask-Checkr
+=============
+
+A tool that allows for quick and extensible JSON Schema validation for a Flask_ application.
+
+

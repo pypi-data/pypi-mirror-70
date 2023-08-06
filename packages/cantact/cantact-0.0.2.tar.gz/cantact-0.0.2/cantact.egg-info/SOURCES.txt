@@ -1,0 +1,15 @@
+Cargo.toml
+MANIFEST.in
+pyproject.toml
+setup.py
+cantact/__init__.py
+cantact.egg-info/PKG-INFO
+cantact.egg-info/SOURCES.txt
+cantact.egg-info/dependency_links.txt
+cantact.egg-info/not-zip-safe
+cantact.egg-info/top_level.txt
+src/c.rs
+src/lib.rs
+src/python.rs
+src/device/gsusb.rs
+src/device/mod.rs

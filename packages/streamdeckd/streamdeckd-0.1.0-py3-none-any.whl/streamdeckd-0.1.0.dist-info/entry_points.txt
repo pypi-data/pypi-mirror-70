@@ -1,0 +1,3 @@
+[console_scripts]
+streamdeckd = streamdeckd.__main__:main
+

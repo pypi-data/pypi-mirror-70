@@ -1,0 +1,2 @@
+streamdeckd
+streamdeckd_ext

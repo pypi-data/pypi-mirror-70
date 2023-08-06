@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+isoquant_diff/__init__.py
+isoquant_diff/isoquant_diff.py
+isoquant_diff.egg-info/PKG-INFO
+isoquant_diff.egg-info/SOURCES.txt
+isoquant_diff.egg-info/dependency_links.txt
+isoquant_diff.egg-info/entry_points.txt
+isoquant_diff.egg-info/top_level.txt

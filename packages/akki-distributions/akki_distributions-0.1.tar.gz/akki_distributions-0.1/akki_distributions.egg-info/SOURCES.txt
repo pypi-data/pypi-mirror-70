@@ -1,0 +1,11 @@
+README.md
+setup.py
+akki_distributions/Binomialdistribution.py
+akki_distributions/Gaussiandistribution.py
+akki_distributions/Generaldistribution.py
+akki_distributions/__init__.py
+akki_distributions.egg-info/PKG-INFO
+akki_distributions.egg-info/SOURCES.txt
+akki_distributions.egg-info/dependency_links.txt
+akki_distributions.egg-info/not-zip-safe
+akki_distributions.egg-info/top_level.txt

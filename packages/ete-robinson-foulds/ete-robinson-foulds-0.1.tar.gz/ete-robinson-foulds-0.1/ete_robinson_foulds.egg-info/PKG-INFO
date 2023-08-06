@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ete-robinson-foulds
+Version: 0.1
+Summary: implement Robinson Foulds Distance for ete.Tree structure
+Home-page: https://github.com/zhaofeng-shu33/ete-robinson-foulds
+Author: zhaofeng-shu33
+Author-email: 616545598@qq.com
+Maintainer: zhaofeng-shu33
+Maintainer-email: 616545598@qq.com
+License: Apache License Version 2.0
+Description: Robinson Foulds Distance, support non-binary tree
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

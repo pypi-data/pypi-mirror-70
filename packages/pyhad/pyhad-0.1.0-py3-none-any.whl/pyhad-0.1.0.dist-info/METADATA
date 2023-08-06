@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pyhad
+Version: 0.1.0
+Summary: Python Hierarchical Array Database
+Home-page: https://github.com/TCvanLeth/PyHAD
+Author: T.C. van Leth
+Author-email: tommy.vanleth@wur.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: dask
+Requires-Dist: h5py
+
+# PyHAD
+Python Hierarchical Array Datasets
+
+Hierarchical data containers with named dimensions and advanced indexing.
+Structure closely mirrors hdf5 file structure. Can be used for processing of 
+hdf5 datasets larger than memory.
+
+

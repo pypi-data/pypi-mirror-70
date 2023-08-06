@@ -1,0 +1,9 @@
+covid19sweden/__init__.py,sha256=XLPb9zNXjBGoaYyIW1HPkGK5QGiasLboY6idXT9aMXg,475
+covid19sweden/backup.py,sha256=uo1pE8iNIt3kPxh2OLRzBk6uJVR8m18-VrXSgpjMigg,3381
+covid19sweden/main.py,sha256=l16ZdPe2sEeyjFO-S-pFFRT4kiXQlRBhvdpDp4Ud4Iw,2908
+covid19sweden/scb.py,sha256=IfVtjLdkqKNXiu3RE7MdmHY8ilYRfaz9QSiqkCVXhRI,15046
+covid19sweden-0.1.2.dist-info/LICENSE,sha256=bGLaVeGYv0kbEdzrbRRFS0Wsw9EngDp3Y7_h-leZiYw,1090
+covid19sweden-0.1.2.dist-info/METADATA,sha256=JJ1RGvyBV_iwBWYc-Y_5aqogAdjCoWCJTuBirGO0v0c,5275
+covid19sweden-0.1.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+covid19sweden-0.1.2.dist-info/top_level.txt,sha256=dOfJ3KzHCNwG8kqMfU8PVKggE20Z_RYw4ztJH5nPiWU,14
+covid19sweden-0.1.2.dist-info/RECORD,,

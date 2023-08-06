@@ -1,0 +1,1 @@
+mpp-solar@ git+ssh://git@github.com/ccrisan/mpp-solar@0298420de74969c85d470c578df98e359ecb84f0

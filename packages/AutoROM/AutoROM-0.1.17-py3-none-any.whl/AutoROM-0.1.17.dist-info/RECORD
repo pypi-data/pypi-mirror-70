@@ -1,0 +1,14 @@
+AutoROM/AutoROM.py,sha256=a5lbyELBOEnIzGALKlI3yGjr4oWV2o0x086x6QYwc80,9324
+AutoROM/__init__.py,sha256=l6w0k7NPgCSjxgS9NgdpJFFOJrKLnoAvMs9ofN3wxgA,25
+AutoROM/checksums.txt,sha256=fDgOxxNTBVF0IJpDGT0tD3t2N2yr_031RVyuAGWLcEM,5084
+AutoROM/hash_calculator.py,sha256=uZq6Zd-JdCe2WEixH3WZ2lGA7TwQOLslkYOOxgq7uvs,2156
+AutoROM/link_map.txt,sha256=AZS0nnBXH8qwKxfdgWBN_gZcFR1v9GSwCci8oONr0Os,8978
+AutoROM/smoke_test.py,sha256=bDuV9gSseuK15A6wFZp0JNgfNL1a4MACtuSrXpbF92k,834
+AutoROM/test.rar,sha256=rBGg6hddMS_AZ0GdkfHc5nV1S_TOmox6qvPEzF22zK0,396
+AutoROM/test_checks.txt,sha256=46mjhVB2HLSrj_CwBeaAi85tut7RA-IDywAb3c3CjdI,4949
+AutoROM-0.1.17.data/scripts/AutoROM,sha256=yDBPJFM7Q6Nyxy3hO97V23gUEQlx8fae9y3JO36_K-0,172
+AutoROM-0.1.17.dist-info/LICENSE.txt,sha256=mgkIzgXAGzWexEGPZstrdn9weLCsH5AbagypRgPY9xs,1069
+AutoROM-0.1.17.dist-info/METADATA,sha256=wXR-xnK0u56pVuTdg0TlEttNya1cVG-cJEyQC2JyM1M,1301
+AutoROM-0.1.17.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+AutoROM-0.1.17.dist-info/top_level.txt,sha256=oveWeDJkkW42LnpltyE8wB6EpNtFgkbHs0JgXpoTBfA,8
+AutoROM-0.1.17.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[mailflagger.plugins.daemon]
+ercoin = mailflagger.plugins.ercoin
+

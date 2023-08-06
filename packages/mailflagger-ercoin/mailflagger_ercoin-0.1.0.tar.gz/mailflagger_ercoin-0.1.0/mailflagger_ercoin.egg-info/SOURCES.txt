@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+mailflagger/plugins/ercoin.py
+mailflagger_ercoin.egg-info/PKG-INFO
+mailflagger_ercoin.egg-info/SOURCES.txt
+mailflagger_ercoin.egg-info/dependency_links.txt
+mailflagger_ercoin.egg-info/entry_points.txt
+mailflagger_ercoin.egg-info/requires.txt
+mailflagger_ercoin.egg-info/top_level.txt

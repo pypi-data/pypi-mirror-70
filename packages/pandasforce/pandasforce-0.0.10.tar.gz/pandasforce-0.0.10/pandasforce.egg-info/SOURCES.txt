@@ -1,0 +1,8 @@
+README.md
+setup.py
+pandasforce/__init__.py
+pandasforce.egg-info/PKG-INFO
+pandasforce.egg-info/SOURCES.txt
+pandasforce.egg-info/dependency_links.txt
+pandasforce.egg-info/requires.txt
+pandasforce.egg-info/top_level.txt

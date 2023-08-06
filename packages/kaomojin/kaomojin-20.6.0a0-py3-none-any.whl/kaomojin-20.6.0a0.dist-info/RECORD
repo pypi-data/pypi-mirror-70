@@ -1,0 +1,11 @@
+kaomojin/__init__.py,sha256=FH86jAxwkpouvW4YeAYjckofaDanfHdN5VS2hes56o0,119
+kaomojin/dumpers.py,sha256=X6_WKsucM3JM7Chue_2CHlcinAAiaBgoubT7_4_uh6I,3847
+kaomojin/kaomojin.py,sha256=aCsHHHUTHwND5wnpOtS4BWx099CvIWQSQavex2yDx8Q,6246
+kaomojin/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kaomojin/data/kaomoji/all.tsv,sha256=uE4u2jIvtROis7aca04_-OQzik6EsCNCKpdfR1ebIfw,83158
+kaomojin-20.6.0a0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kaomojin-20.6.0a0.dist-info/METADATA,sha256=gZev3xCDjA73MmT3EPqxlbWAz3c1oPGH7m51enWzBbg,1469
+kaomojin-20.6.0a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kaomojin-20.6.0a0.dist-info/entry_points.txt,sha256=TZSYmt51qHOXvRBn2avHTFVBLgHkgfs-RLKklN33IrM,50
+kaomojin-20.6.0a0.dist-info/top_level.txt,sha256=vSJNWpX0YUqOfqayy6Yc1IPVcrfTMtK-9dgWYtoSqCA,9
+kaomojin-20.6.0a0.dist-info/RECORD,,

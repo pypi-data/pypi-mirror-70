@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: kaomojin
+Version: 20.6.0a0
+Summary: A kaomoji extractor for Python
+Home-page: https://github.com/okomestudio/kaomojin
+Author: Taro Sato
+Author-email: okomestudio@gmail.com
+License: Apache-2.0
+Platform: Linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: emoji (==0.5.4)
+Requires-Dist: regex (==2020.5.14)
+Requires-Dist: termcolor (==1.1.0)
+Provides-Extra: dev
+Requires-Dist: black (>=19.10b0) ; extra == 'dev'
+Requires-Dist: flake8 (>=3.7.9) ; extra == 'dev'
+Requires-Dist: isort[pyproject] (>=4.3.21) ; extra == 'dev'
+Requires-Dist: pre-commit (>=2.2.0) ; extra == 'dev'
+Requires-Dist: seed-isort-config (>=2.1.1) ; extra == 'dev'
+Requires-Dist: coverage[toml] (>=5.0.4) ; extra == 'dev'
+Requires-Dist: pytest (>=5.4.1) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.8.1) ; extra == 'dev'
+Provides-Extra: tests
+Requires-Dist: coverage[toml] (>=5.0.4) ; extra == 'tests'
+Requires-Dist: pytest (>=5.4.1) ; extra == 'tests'
+Requires-Dist: pytest-cov (>=2.8.1) ; extra == 'tests'
+
+***********
+Kaomojin
+***********
+
+A kaomoji extractor for Python.
+
+

@@ -1,0 +1,6 @@
+configparser
+pandas
+xlrd
+openpyxl
+argparse
+easygui

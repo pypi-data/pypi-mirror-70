@@ -1,0 +1,9 @@
+pysolace/__init__.py,sha256=Iz5rSrQnuIC1BNnFxmcug_ZJH3ik12dscKRAYi-RNd4,9571
+pysolace/solclient.cpython-38-x86_64-linux-gnu.so,sha256=UII3UD_2SIquB2vJ6GDi4aMFfTvwn-Ng33c-7C62mS8,38207336
+pysolace/solmsg.cpython-38-x86_64-linux-gnu.so,sha256=ni5PvK8-KSkmM6j2HhCE_BdBxDXqVGPzdsaTwYURy4w,20746160
+pysolace/.libs/libsolclient.so.1,sha256=mtyk0EvXeYtwjZRlI9Hab33cHqwBlQhe5liv6TSc92U,4191400
+pysolace/.libs/libsolclient-9adca4d0.so.1,sha256=h0SbxVnvIEm0T6AdVrYKTVJQqU9tYq_wmOo_fYey9wE,4233688
+pysolace-0.9.4.dist-info/top_level.txt,sha256=26mZpQ_sS-DcVAQbqmI7GrvyFUjuLVW7yWzDzERUT9k,9
+pysolace-0.9.4.dist-info/WHEEL,sha256=bMGJzfnzmODnc7070hP_ZkCsY-cmPTWm8nY09-AXKjI,111
+pysolace-0.9.4.dist-info/METADATA,sha256=V2p3GMF9YXZ_lh4Fj_xbhIaCC7f771XiasfaZWB5DAE,561
+pysolace-0.9.4.dist-info/RECORD,,

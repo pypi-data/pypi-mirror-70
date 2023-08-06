@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Endpoints &#8212; django-on-demand 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Models" href="models.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="endpoints">
+<h1>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this headline">¶</a></h1>
+<p>This section assumes you have added the <code class="docutils literal notranslate"><span class="pre">on-demand</span></code> url in <cite>urls.py</cite> as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">path</span><span class="p">(</span><span class="s1">&#39;ondemand/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;on_demand.urls&#39;</span><span class="p">)),</span>
+</pre></div>
+</div>
+<p><cite>on-demand</cite> makes use of <cite>django-rest-framework</cite> to provide the following endpoints, and also to provide serializers for the models.</p>
+<div class="section" id="search-suppliers">
+<h2>/search-suppliers<a class="headerlink" href="#search-suppliers" title="Permalink to this headline">¶</a></h2>
+<p>This is a GET endpoint that expects a <code class="docutils literal notranslate"><span class="pre">search_term</span></code> parameter in free text. This will fire a lookup in the UserDetails model in the following property:</p>
+<ul class="simple">
+<li><p><cite>UserDetails.description</cite></p></li>
+</ul>
+<p>The response will be JSON type with a list of MentorProfiles that matched the lookup.</p>
+</div>
+<div class="section" id="users-id-supplier-profile">
+<h2>/users/&lt;id&gt;/supplier_profile<a class="headerlink" href="#users-id-supplier-profile" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">GET: Retrieves the supplier profile (if exists) for a given user id.</div>
+<div class="line">PUT: Saves/updates the supplier profile (if exists) for a given user id.</div>
+</div>
+</div>
+<div class="section" id="users-id-consumer-profile">
+<h2>/users/&lt;id&gt;/consumer_profile<a class="headerlink" href="#users-id-consumer-profile" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">GET: Retrieves the consumer profile (if exists) for a given user id.</div>
+<div class="line">PUT: Saves/updates the consumer profile (if exists) for a given user id.</div>
+</div>
+</div>
+<div class="section" id="newest-suppliers">
+<h2>/newest-suppliers<a class="headerlink" href="#newest-suppliers" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">This is a GET endpoint that will return the latest five suppliers that have been added to the database.</div>
+<div class="line">The response will be a JSON list of SupplierProfile models.</div>
+</div>
+</div>
+<div class="section" id="connection">
+<h2>/connection<a class="headerlink" href="#connection" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Manage connections between a suppplier and a consumer.</div>
+<div class="line"><br /></div>
+<div class="line"><strong>POST</strong>: Creates a new connection between a given supplier and consumer, the required parameters are:</div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>supplier_id</cite></p></li>
+<li><p><cite>consumer_id</cite></p></li>
+<li><p><cite>objective</cite>: The goal of the connection (optional)</p></li>
+<li><p><cite>consumer_request_comments</cite>: Any comments the consumer added to the connection request (optional)</p></li>
+<li><p><cite>status</cite>: Status of the connection, it’ll be set to STARTED if not sent</p></li>
+</ul>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><strong>PUT</strong>: Updates the connection status. Requires the following fields:</div>
+</div>
+<blockquote>
+<div><ul>
+<li><p><cite>connectionId</cite>: the id of the connection to update</p></li>
+<li><p><cite>status</cite>: the new status for the connection, the accepted statusses can be:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>cancelled</cite></p></li>
+<li><p><cite>finished</cite>: requires a <cite>ranking</cite> param, which is a numeric value given by the consumer.</p></li>
+<li><p><cite>ongoing</cite></p></li>
+<li><p><cite>rejected</cite>: requires a <cite>rejection_reason</cite> which will contain a text value by the supplier explaining why the connection has been rejected</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">django-on-demand</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#search-suppliers">/search-suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#users-id-supplier-profile">/users/&lt;id&gt;/supplier_profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#users-id-consumer-profile">/users/&lt;id&gt;/consumer_profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#newest-suppliers">/newest-suppliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connection">/connection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Admin</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="models.html" title="next chapter">Models</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Pirai Dev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/endpoints.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

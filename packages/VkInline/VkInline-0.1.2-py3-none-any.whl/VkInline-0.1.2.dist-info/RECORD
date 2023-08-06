@@ -1,0 +1,17 @@
+VkInline/Context.py,sha256=oWBxVRge13PQQDcLzBRrgVxqhvzW61DvRqg-lI8cfcY,2909
+VkInline/Native.py,sha256=5oLGMcl_ZFeahyB-FvTtw0edeBja6kq7JFrTw1K6psY,283
+VkInline/PyVkInline.dll,sha256=MlBvaNt_uYt2wi1bOPPobjmuXJnRib7x-XA1I5x8w4c,2316800
+VkInline/SVBuffer.py,sha256=0r3mtgQX3F2E-9536fSQ-cJunCAEEwyEcyMIuTcDJjU,953
+VkInline/SVCombine.py,sha256=N0-eJIzJhSYwDwVrq9sRyxBb-a4XSxF5ikbaOzxJECQ,420
+VkInline/SVObjBuffer.py,sha256=AzmmuD5NhxyEUkeg5Rj_hmwLSCSbId4fMTEklBvxZCA,670
+VkInline/SVObjVector.py,sha256=jtDHdmiTqiTxhxKas6LF1e3THIeieJ_eerOismP58qA,821
+VkInline/SVVector.py,sha256=KiMHKfN-37qCNCe8oiBH2ZToK1n4NsVSOztp7JQKY78,8551
+VkInline/ShaderViewable.py,sha256=IHYa1XJIigS9-Dhi5CPhDdM_HzsBCtxqwV6JA_p9NDg,13113
+VkInline/__init__.py,sha256=Mm7OHnsBT-7UBbh0ZHG-YAdppWvM1anIvuz77x-cpYI,221
+VkInline/cffi.py,sha256=fw8SV4VEGrFemCl0-UYwaLviX7NE5UGgiCRP0r7h07A,6120
+VkInline/libPyVkInline.so,sha256=luBYoxmLf6Zvrt5F9w05g2kEvsdhunJX6nHFraIsV5M,12217960
+VkInline/utils.py,sha256=0EtIbRtOusRjXeArWBFt0Ch6jXL6UvE3DNJnybruvRE,1044
+VkInline-0.1.2.dist-info/METADATA,sha256=OLavbSmUrkyGD59g44Alr7ygy8vU4b83eoGdtwKK4ds,340
+VkInline-0.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+VkInline-0.1.2.dist-info/top_level.txt,sha256=xt7ZjnKAHFS2Rq0CVaSFDztrI_nhXs5dINjl9Rf33dY,9
+VkInline-0.1.2.dist-info/RECORD,,

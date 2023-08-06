@@ -1,0 +1,10 @@
+libplf/__init__.py,sha256=lzyybqYIJ3V1n9P7xFCMCaDQJCXMJNEioLWUG18pQNk,153
+libplf/piece/__init__.py,sha256=Z8ZGYaIS59vzrFw-fBWfd6ALh9gqjRZjZe2jJMh1OQc,392
+libplf/plf/__init__.py,sha256=84azCcvCtUal-Ql7RwRMkA_5ZRkqePsD_6FyuZ7LF6s,952
+libplf/point/__init__.py,sha256=jHUZcclAN-OLMu4ThQd427PAJcFEvRPO5HyCBdE4Rwc,240
+libplf/vector/__init__.py,sha256=m2HEYGT96q5ZNSLSfWhhohaa-o0jn4GmiWb4i37Sj-U,204
+libplf-0.0.3.dist-info/LICENSE,sha256=brvuiXynamLFuX10rzuOVb22sSFyeqzAwXYfXN-et4Y,1063
+libplf-0.0.3.dist-info/METADATA,sha256=hfNRKb6xAbfHeSK5lVJJ4Reo82DSE36uKTzi7o-hK0k,842
+libplf-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+libplf-0.0.3.dist-info/top_level.txt,sha256=mkH1lxTCgD0wsaQryH6ih6URdSdFVLlEjrwqCD5mYCk,7
+libplf-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,1662 @@
+(home) ~/Code/Eelbrain % CONDA_INSTRUMENTATION_ENABLED=1 conda env create --file=env-dev.yml -n eeldev-test -vv | tee conda_debug_output.txt
+DEBUG conda.gateways.logging:set_verbosity(231): verbosity set to 2
+DEBUG conda.core.solve:solve_final_state(223): solving prefix /Users/christian/anaconda3/envs/eeldev-test
+  specs_to_remove: frozenset()
+  specs_to_add: frozenset({MatchSpec("mayavi[version='>=4.6.2']"), MatchSpec("pysurfer[version='>=0.9']"), MatchSpec("sphinx"), MatchSpec("keyring[version='>=5']"), MatchSpec("wxpython[version='>=4.0.3']"), MatchSpec("r-car"), MatchSpec("sphinx-autodoc-typehints"), MatchSpec("pytest"), MatchSpec("nibabel[version='>=2.5']"), MatchSpec("ipython"), MatchSpec("matplotlib-base[version='>=3,<3.1']"), MatchSpec("python==3.7"), MatchSpec("sphinxcontrib-bibtex"), MatchSpec("h5py"), MatchSpec("rpy2"), MatchSpec("numpy"), MatchSpec("sphinx-gallery"), MatchSpec("mne[version='>=0.17']"), MatchSpec("pip"), MatchSpec("tqdm[version='>=4.19']"), MatchSpec("pandas"), MatchSpec("flake8"), MatchSpec("scikit-learn"), MatchSpec("twine"), MatchSpec("joblib"), MatchSpec("scipy[version='>=1.3']"), MatchSpec("libblas[build=*mkl]"), MatchSpec("pillow"), MatchSpec("pydocstyle"), MatchSpec("vtk[version='>=8.1.1']"), MatchSpec("ipdb"), MatchSpec("pytest-faulthandler"), MatchSpec("nilearn"), MatchSpec("cython"), MatchSpec("colormath[version='>=2.1']"), MatchSpec("setuptools[version='>=17']"), MatchSpec("pyarrow"), MatchSpec("pytest-cov"), MatchSpec("psutil")})
+  prune: False
+Collecting package metadata (repodata.json): ...working... DEBUG conda.core.package_cache_data:_check_writable(259): package cache directory '/Users/christian/anaconda3/pkgs' writable: True
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://conda.anaconda.org/conda-forge/osx-64/repodata.json at /Users/christian/anaconda3/pkgs/cache/31ce02e0.json
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://repo.anaconda.com/pkgs/main/noarch/repodata.json at /Users/christian/anaconda3/pkgs/cache/3e39a7aa.json
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://repo.anaconda.com/pkgs/r/osx-64/repodata.json at /Users/christian/anaconda3/pkgs/cache/dd44a73b.json
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://repo.anaconda.com/pkgs/r/noarch/repodata.json at /Users/christian/anaconda3/pkgs/cache/4ea078d6.json
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://repo.anaconda.com/pkgs/main/osx-64/repodata.json at /Users/christian/anaconda3/pkgs/cache/7fb2ce72.json
+DEBUG conda.core.subdir_data:_load(241): Local cache timed out for https://conda.anaconda.org/conda-forge/noarch/repodata.json at /Users/christian/anaconda3/pkgs/cache/09cdf8bf.json
+DEBUG conda.gateways.connection.session:add_binstar_token(127): Adding anaconda token for url <https://conda.anaconda.org/conda-forge/noarch/repodata.json>
+DEBUG conda.gateways.connection.session:add_binstar_token(127): Adding anaconda token for url <https://conda.anaconda.org/conda-forge/osx-64/repodata.json>
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): repo.anaconda.com:443
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): repo.anaconda.com:443
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): repo.anaconda.com:443
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): repo.anaconda.com:443
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): conda.anaconda.org:443
+DEBUG urllib3.connectionpool:_new_conn(959): Starting new HTTPS connection (1): conda.anaconda.org:443
+DEBUG urllib3.connectionpool:_make_request(437): https://repo.anaconda.com:443 "GET /pkgs/r/osx-64/repodata.json HTTP/1.1" 304 0
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /pkgs/r/osx-64/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Wed, 20 May 2020 15:59:46 GMT
+> If-None-Match: W/"d0092bee5fb0a81f2a38fca41b0c21a4"
+
+<<HTTPS 304 Not Modified
+< Age: 19483
+< Cache-Control: public, max-age=30
+< CF-Cache-Status: HIT
+< CF-RAY: 59b5222bbc1f7459-IAD
+< cf-request-id: 030513af4e000074595a179200000001
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: "d0092bee5fb0a81f2a38fca41b0c21a4"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 02:48:28 GMT
+< Last-Modified: Wed, 20 May 2020 15:59:46 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d57d5b258f110ae4f8e4a6eaf6b5c137c1590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.com; HttpOnly; SameSite=Lax; Secure
+< Vary: Accept-Encoding
+< x-amz-id-2: Oj6XE+gTJwyaVRkaUprSdPiyH16nKnq0hM5ouwE7MVkYq9OIadPsJpYIwShP8sBt/c0x7/wQA3w=
+< x-amz-request-id: 2BF13347B4D5B548
+< x-amz-version-id: X78x0gdg8lKkyfzxaqBMKbJeBGD2Q88Q
+< Connection: keep-alive
+< Elapsed: 00:00.151310
+
+
+DEBUG conda.core.subdir_data:_load(260): 304 NOT MODIFIED for 'https://repo.anaconda.com/pkgs/r/osx-64/repodata.json'. Updating mtime and loading from disk
+DEBUG conda.core.subdir_data:_read_pickled(324): found pickle file /Users/christian/anaconda3/pkgs/cache/dd44a73b.q
+DEBUG urllib3.connectionpool:_make_request(437): https://repo.anaconda.com:443 "GET /pkgs/main/osx-64/repodata.json HTTP/1.1" 304 0
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /pkgs/main/osx-64/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Wed, 27 May 2020 17:10:28 GMT
+> If-None-Match: W/"9d4ec7737f71467ed6290af1d665bdd9-3"
+
+<<HTTPS 304 Not Modified
+< Age: 19486
+< Cache-Control: public, max-age=30
+< CF-Cache-Status: HIT
+< CF-RAY: 59b5222bbf940d8a-IAD
+< cf-request-id: 030513af5100000d8a49188200000001
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: "9d4ec7737f71467ed6290af1d665bdd9-3"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 02:48:28 GMT
+< Last-Modified: Wed, 27 May 2020 17:10:28 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d2e4f6bc75922ee11aeaad65fceeef02a1590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.com; HttpOnly; SameSite=Lax; Secure
+< Vary: Accept-Encoding
+< x-amz-id-2: A/9P9a5anPdZnkA5V2iM+67oX52KSubNnQJdq7U3Xn4TPooDDdEEFHMRGqXAGKYuurvbDhH1rUM=
+< x-amz-request-id: 047689AE20D44F86
+< x-amz-version-id: .0fWQ66yF643JqhZkXNzW4Yez1LsDc.8
+< Connection: keep-alive
+< Elapsed: 00:00.157065
+
+
+DEBUG conda.core.subdir_data:_load(260): 304 NOT MODIFIED for 'https://repo.anaconda.com/pkgs/main/osx-64/repodata.json'. Updating mtime and loading from disk
+DEBUG conda.core.subdir_data:_read_pickled(324): found pickle file /Users/christian/anaconda3/pkgs/cache/7fb2ce72.q
+DEBUG urllib3.connectionpool:_make_request(437): https://repo.anaconda.com:443 "GET /pkgs/r/noarch/repodata.json HTTP/1.1" 304 0
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /pkgs/r/noarch/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Wed, 11 Mar 2020 14:35:05 GMT
+> If-None-Match: W/"2262fb4965f18bb13db89d9dee01fcdb"
+
+<<HTTPS 304 Not Modified
+< Age: 19496
+< Cache-Control: public, max-age=30
+< CF-Cache-Status: HIT
+< CF-RAY: 59b5222bbc79cf14-IAD
+< cf-request-id: 030513af550000cf147ab79200000001
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: "2262fb4965f18bb13db89d9dee01fcdb"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 02:48:28 GMT
+< Last-Modified: Wed, 11 Mar 2020 14:35:05 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d4757bf43e7a7044cf6b39353b4d872241590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.com; HttpOnly; SameSite=Lax; Secure
+< Vary: Accept-Encoding
+< x-amz-id-2: /oZacOQY00mvIzIfgbXkLyxN92vi6nvcnShS3GkUH9BKxlmw+qi5K/ESkC2puuKh62BOmzncdZA=
+< x-amz-request-id: 6635187C6E4B2D94
+< x-amz-version-id: VnLLw0qLPbSbRcbquUFrOz0FjFGo6EhF
+< Connection: keep-alive
+< Elapsed: 00:00.171382
+
+
+DEBUG conda.core.subdir_data:_load(260): 304 NOT MODIFIED for 'https://repo.anaconda.com/pkgs/r/noarch/repodata.json'. Updating mtime and loading from disk
+DEBUG urllib3.connectionpool:_make_request(437): https://repo.anaconda.com:443 "GET /pkgs/main/noarch/repodata.json HTTP/1.1" 200 None
+DEBUG urllib3.connectionpool:_make_request(437): https://conda.anaconda.org:443 "GET /t/ch-dd301b69-6ab0-4cb0-8911-2085a647a35d/conda-forge/osx-64/repodata.json HTTP/1.1" 200 None
+DEBUG urllib3.connectionpool:_make_request(437): https://conda.anaconda.org:443 "GET /t/ch-dd301b69-6ab0-4cb0-8911-2085a647a35d/conda-forge/noarch/repodata.json HTTP/1.1" 200 None
+DEBUG conda.core.subdir_data:_read_pickled(324): found pickle file /Users/christian/anaconda3/pkgs/cache/4ea078d6.q
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /pkgs/main/noarch/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Wed, 27 May 2020 16:09:02 GMT
+> If-None-Match: W/"3cd9234d5495ff139190a513bb72d392"
+
+<<HTTPS 200 OK
+< Age: 19496
+< Cache-Control: public, max-age=30
+< CF-Cache-Status: HIT
+< CF-RAY: 59b5222bbdaaf0cd-IAD
+< cf-request-id: 030513af560000f0cddc16b200000001
+< Content-Encoding: gzip
+< Content-Type: application/json
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: W/"a9ddd1794e158fcb360d043a77dbd575"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 02:48:28 GMT
+< Last-Modified: Fri, 29 May 2020 21:20:02 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d86b3694ec139159ffea9b011bbfd9c1a1590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.com; HttpOnly; SameSite=Lax; Secure
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< x-amz-id-2: UrYAujGPdDbs2aApRRDhCNaT3wnYd88YWhTq7tQu6sm4xOwKnjUcyc4lWYR5+UOZTblXS2Ixp0c=
+< x-amz-request-id: 9D280D5C8C9D727F
+< x-amz-version-id: KHyrC2OGmk4xqmHwbtRIo5FDFZNPCQ.1
+< Connection: keep-alive
+< Elapsed: 00:00.176798
+
+{ 'info': {'subdir': 'noarch'},
+  'packages': { 'affine-2.1.0-pyh128a3a6_1.tar.bz2': { 'build': 'pyh128a3a6_1',
+                                                       'build_number': 1,
+                                                       'depends': ['py
+
+
+DEBUG conda.core.subdir_data:_pickle_me(284): Saving pickled state for https://repo.anaconda.com/pkgs/main/noarch/repodata.json at /Users/christian/anaconda3/pkgs/cache/3e39a7aa.json
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /t/ch-dd301b69-6ab0-4cb0-8911-2085a647a35d/conda-forge/noarch/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Fri, 29 May 2020 15:32:39 GMT
+> If-None-Match: W/"d5295b34673e91efbec6e3ee225780c5-3"
+
+<<HTTPS 200 OK
+< Age: 5567
+< Cache-Control: public, max-age=1200
+< CF-Cache-Status: HIT
+< CF-Ray: 59b5222bb93dea2c-IAD
+< cf-request-id: 030513af510000ea2c49803200000001
+< Content-Encoding: gzip
+< Content-Type: application/json
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: W/"270d80570db2e6306a0b0dc99e1c1a91-3"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 03:07:58 GMT
+< Last-Modified: Sat, 30 May 2020 01:11:46 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d550ffd307c4ff97800556b8013e25f331590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.org; HttpOnly; SameSite=Lax
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< x-amz-id-2: HfgP/9MMTdRaUfWYigPHCM+58CX1JJ4s46ozMNRn3XoaEYtsrP+I5CH36Q8rgvQLrCAQ9DjGJsE=
+< x-amz-request-id: 5FBD0F2C44EB763B
+< x-amz-version-id: null
+< Connection: keep-alive
+< Elapsed: 00:00.189175
+
+{ 'info': {'subdir': 'noarch'},
+  'packages': { '_r-mutex-1.0.1-anacondar_1.tar.bz2': { 'build': 'anacondar_1',
+                                                        'build_number': 1,
+                                                        'depends': []
+
+
+DEBUG conda.core.subdir_data:_pickle_me(284): Saving pickled state for https://conda.anaconda.org/conda-forge/noarch/repodata.json at /Users/christian/anaconda3/pkgs/cache/09cdf8bf.json
+DEBUG conda.core.subdir_data:fetch_repodata_remote_request(487): 
+>>GET /t/ch-dd301b69-6ab0-4cb0-8911-2085a647a35d/conda-forge/osx-64/repodata.json HTTPS
+> User-Agent: conda/4.8.3 requests/2.23.0 CPython/3.7.3 Darwin/19.4.0 OSX/10.15.4
+> Accept: */*
+> Accept-Encoding: gzip, deflate, compress, identity
+> Connection: keep-alive
+> Content-Type: application/json
+> If-Modified-Since: Fri, 29 May 2020 15:34:19 GMT
+> If-None-Match: W/"b3f1a6ee48707f972a1512afcec5d386-9"
+
+<<HTTPS 200 OK
+< Age: 4209
+< Cache-Control: public, max-age=1200
+< CF-Cache-Status: HIT
+< CF-Ray: 59b5222bbf53cec0-IAD
+< cf-request-id: 030513af560000cec0daba7200000001
+< Content-Encoding: gzip
+< Content-Type: application/json
+< Date: Sat, 30 May 2020 02:47:58 GMT
+< ETag: W/"ccc07ef9da420c8717cec4b19ebb5315-9"
+< Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+< Expires: Sat, 30 May 2020 03:07:58 GMT
+< Last-Modified: Sat, 30 May 2020 01:33:32 GMT
+< Server: cloudflare
+< Set-Cookie: __cfduid=d376d20cc56ddcf2378ff0769312df7de1590806878; expires=Mon, 29-Jun-20 02:47:58 GMT; path=/; domain=.anaconda.org; HttpOnly; SameSite=Lax
+< Transfer-Encoding: chunked
+< Vary: Accept-Encoding
+< x-amz-id-2: DgyoTGsSCoCPrvBUYkRdeRQudZ0+hpCzYuEBCKwioCAhiJidJ3dJIQ+h+qBbuG5B8lii1BrG398=
+< x-amz-request-id: 9232C74A91E06E17
+< x-amz-version-id: null
+< Connection: keep-alive
+< Elapsed: 00:00.181700
+
+{ 'info': {'subdir': 'osx-64'},
+  'packages': { '2dfatmic-1.0-he991be0_0.tar.bz2': { 'build': 'he991be0_0',
+                                                     'build_number': 0,
+                                                     'depends': [ 'libgfortr
+
+
+DEBUG conda.core.subdir_data:_pickle_me(284): Saving pickled state for https://conda.anaconda.org/conda-forge/osx-64/repodata.json at /Users/christian/anaconda3/pkgs/cache/31ce02e0.json
+DEBUG conda.resolve:__init__(110): restricting to unmanageable packages: __osx
+done
+Solving environment: ...working... DEBUG conda.resolve:get_reduced_index(572): Retrieving packages for: 
+  - colormath[version='>=2.1']
+  - cython
+  - flake8
+  - h5py
+  - ipdb
+  - ipython
+  - joblib
+  - keyring[version='>=5']
+  - libblas[build=*mkl]
+  - matplotlib-base[version='>=3,<3.1']
+  - mayavi[version='>=4.6.2']
+  - mne[version='>=0.17']
+  - nibabel[version='>=2.5']
+  - nilearn
+  - numpy
+  - pandas
+  - pillow
+  - pip
+  - psutil
+  - pyarrow
+  - pydocstyle
+  - pysurfer[version='>=0.9']
+  - pytest
+  - pytest-cov
+  - pytest-faulthandler
+  - python==3.7
+  - r-car
+  - rpy2
+  - scikit-learn
+  - scipy[version='>=1.3']
+  - setuptools[version='>=17']
+  - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx-gallery
+  - sphinxcontrib-bibtex
+  - tqdm[version='>=4.19']
+  - twine
+  - vtk[version='>=8.1.1']
+  - wxpython[version='>=4.0.3']
+DEBUG conda.resolve:filter_group(633): libblas: pruned from 44 -> 12
+DEBUG conda.resolve:filter_group(633): mkl: pruned from 17 -> 11
+DEBUG conda.resolve:filter_group(633): wxpython: pruned from 49 -> 42
+DEBUG conda.resolve:filter_group(633): python: pruned from 216 -> 9
+DEBUG conda.resolve:filter_group(633): libffi: pruned from 13 -> 12
+DEBUG conda.resolve:filter_group(633): openssl: pruned from 56 -> 21
+DEBUG conda.resolve:filter_group(633): pip: pruned from 136 -> 34
+DEBUG conda.resolve:filter_group(633): setuptools: pruned from 407 -> 68
+DEBUG conda.resolve:filter_group(633): certifi: pruned from 142 -> 24
+DEBUG conda.resolve:filter_group(633): wheel: pruned from 111 -> 27
+DEBUG conda.resolve:filter_group(633): readline: pruned from 13 -> 8
+DEBUG conda.resolve:filter_group(633): sqlite: pruned from 49 -> 24
+DEBUG conda.resolve:filter_group(633): tk: pruned from 23 -> 14
+DEBUG conda.resolve:filter_group(633): xz: pruned from 13 -> 7
+DEBUG conda.resolve:filter_group(633): zlib: pruned from 16 -> 13
+DEBUG conda.resolve:filter_group(633): expat: pruned from 19 -> 11
+DEBUG conda.resolve:filter_group(633): gettext: pruned from 9 -> 7
+DEBUG conda.resolve:filter_group(633): jpeg: pruned from 5 -> 4
+DEBUG conda.resolve:filter_group(633): libiconv: pruned from 17 -> 12
+DEBUG conda.resolve:filter_group(633): libpng: pruned from 26 -> 15
+DEBUG conda.resolve:filter_group(633): python.app: pruned from 55 -> 11
+DEBUG conda.resolve:filter_group(633): six: pruned from 52 -> 12
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 107 -> 20
+DEBUG conda.resolve:filter_group(633): freetype: pruned from 24 -> 14
+DEBUG conda.resolve:filter_group(633): hdf5: pruned from 75 -> 37
+DEBUG conda.resolve:filter_group(633): libcxx: pruned from 16 -> 11
+DEBUG conda.resolve:filter_group(633): libgfortran: pruned from 8 -> 5
+DEBUG conda.resolve:filter_group(633): libnetcdf: pruned from 88 -> 37
+DEBUG conda.resolve:filter_group(633): hdf4: pruned from 8 -> 6
+DEBUG conda.resolve:filter_group(633): libpng: pruned from 15 -> 11
+DEBUG conda.resolve:filter_group(633): libtiff: pruned from 29 -> 18
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 32 -> 16
+DEBUG conda.resolve:filter_group(633): lz4-c: pruned from 19 -> 12
+DEBUG conda.resolve:filter_group(633): tbb: pruned from 37 -> 15
+DEBUG conda.resolve:filter_group(633): tqdm: pruned from 168 -> 75
+DEBUG conda.resolve:filter_group(633): scipy: pruned from 265 -> 21
+DEBUG conda.resolve:filter_group(633): numpy: pruned from 671 -> 103
+DEBUG conda.resolve:filter_group(633): pysurfer: pruned from 6 -> 3
+DEBUG conda.resolve:filter_group(633): imageio: pruned from 53 -> 13
+DEBUG conda.resolve:filter_group(633): pillow: pruned from 175 -> 26
+DEBUG conda.resolve:filter_group(633): olefile: pruned from 26 -> 5
+DEBUG conda.resolve:filter_group(633): mayavi: pruned from 36 -> 11
+DEBUG conda.resolve:filter_group(633): apptools: pruned from 18 -> 5
+DEBUG conda.resolve:filter_group(633): configobj: pruned from 7 -> 3
+DEBUG conda.resolve:filter_group(633): pyface: pruned from 19 -> 7
+DEBUG conda.resolve:filter_group(633): pygments: pruned from 34 -> 16
+DEBUG conda.resolve:filter_group(633): traits: pruned from 67 -> 17
+DEBUG conda.resolve:filter_group(633): traitsui: pruned from 20 -> 9
+DEBUG conda.resolve:filter_group(633): envisage: pruned from 23 -> 11
+DEBUG conda.resolve:filter_group(633): pyqt: pruned from 91 -> 17
+DEBUG conda.resolve:filter_group(633): qt: pruned from 20 -> 17
+DEBUG conda.resolve:filter_group(633): icu: pruned from 17 -> 8
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 20 -> 19
+DEBUG conda.resolve:filter_group(633): future: pruned from 51 -> 13
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 16 -> 15
+DEBUG conda.resolve:filter_group(633): nibabel: pruned from 30 -> 6
+DEBUG conda.resolve:filter_group(633): h5py: pruned from 217 -> 28
+DEBUG conda.resolve:filter_group(633): hdf5: pruned from 37 -> 34
+DEBUG conda.resolve:filter_group(633): pydicom: pruned from 14 -> 10
+DEBUG conda.resolve:filter_group(633): mne: pruned from 36 -> 17
+DEBUG conda.resolve:filter_group(633): dipy: pruned from 45 -> 5
+DEBUG conda.resolve:filter_group(633): cvxopt: pruned from 123 -> 23
+DEBUG conda.resolve:filter_group(633): glpk: pruned from 12 -> 7
+DEBUG conda.resolve:filter_group(633): gmp: pruned from 14 -> 13
+DEBUG conda.resolve:filter_group(633): gsl: pruned from 27 -> 23
+DEBUG conda.resolve:filter_group(633): suitesparse: pruned from 27 -> 12
+DEBUG conda.resolve:filter_group(633): pytables: pruned from 172 -> 15
+DEBUG conda.resolve:filter_group(633): numexpr: pruned from 160 -> 23
+DEBUG conda.resolve:filter_group(633): scikit-learn: pruned from 210 -> 39
+DEBUG conda.resolve:filter_group(633): matplotlib-base: pruned from 63 -> 3
+DEBUG conda.resolve:filter_group(633): cycler: pruned from 17 -> 3
+DEBUG conda.resolve:filter_group(633): kiwisolver: pruned from 49 -> 9
+DEBUG conda.resolve:filter_group(633): pyparsing: pruned from 59 -> 25
+DEBUG conda.resolve:filter_group(633): python-dateutil: pruned from 41 -> 12
+DEBUG conda.resolve:filter_group(633): tornado: pruned from 141 -> 28
+DEBUG conda.resolve:filter_group(633): keyring: pruned from 160 -> 38
+DEBUG conda.resolve:filter_group(633): entrypoints: pruned from 44 -> 6
+DEBUG conda.resolve:filter_group(633): colormath: pruned from 7 -> 1
+DEBUG conda.resolve:filter_group(633): networkx: pruned from 38 -> 10
+DEBUG conda.resolve:filter_group(633): decorator: pruned from 40 -> 11
+DEBUG conda.resolve:filter_group(633): twine: pruned from 37 -> 12
+DEBUG conda.resolve:filter_group(633): pkginfo: pruned from 24 -> 5
+DEBUG conda.resolve:filter_group(633): requests-toolbelt: pruned from 23 -> 5
+DEBUG conda.resolve:filter_group(633): requests: pruned from 110 -> 17
+DEBUG conda.resolve:filter_group(633): chardet: pruned from 40 -> 6
+DEBUG conda.resolve:filter_group(633): idna: pruned from 42 -> 10
+DEBUG conda.resolve:filter_group(633): urllib3: pruned from 121 -> 25
+DEBUG conda.resolve:filter_group(633): cryptography: pruned from 121 -> 9
+DEBUG conda.resolve:filter_group(633): asn1crypto: pruned from 59 -> 12
+DEBUG conda.resolve:filter_group(633): cffi: pruned from 97 -> 20
+DEBUG conda.resolve:filter_group(633): pycparser: pruned from 31 -> 9
+DEBUG conda.resolve:filter_group(633): pyopenssl: pruned from 53 -> 5
+DEBUG conda.resolve:filter_group(633): pysocks: pruned from 45 -> 8
+DEBUG conda.resolve:filter_group(633): sphinxcontrib-bibtex: pruned from 13 -> 4
+DEBUG conda.resolve:filter_group(633): oset: pruned from 4 -> 1
+DEBUG conda.resolve:filter_group(633): pybtex-docutils: pruned from 14 -> 3
+DEBUG conda.resolve:filter_group(633): docutils: pruned from 49 -> 11
+DEBUG conda.resolve:filter_group(633): pybtex: pruned from 18 -> 4
+DEBUG conda.resolve:filter_group(633): latexcodec: pruned from 10 -> 4
+DEBUG conda.resolve:filter_group(633): pyyaml: pruned from 90 -> 21
+DEBUG conda.resolve:filter_group(633): yaml: pruned from 14 -> 12
+DEBUG conda.resolve:filter_group(633): sphinx: pruned from 182 -> 47
+DEBUG conda.resolve:filter_group(633): alabaster: pruned from 26 -> 5
+DEBUG conda.resolve:filter_group(633): babel: pruned from 36 -> 6
+DEBUG conda.resolve:filter_group(633): pytz: pruned from 63 -> 19
+DEBUG conda.resolve:filter_group(633): imagesize: pruned from 23 -> 7
+DEBUG conda.resolve:filter_group(633): jinja2: pruned from 39 -> 11
+DEBUG conda.resolve:filter_group(633): markupsafe: pruned from 53 -> 10
+DEBUG conda.resolve:filter_group(633): packaging: pruned from 34 -> 15
+DEBUG conda.resolve:filter_group(633): snowballstemmer: pruned from 15 -> 8
+DEBUG conda.resolve:filter_group(633): sphinx-gallery: pruned from 39 -> 10
+DEBUG conda.resolve:filter_group(633): sphinx-autodoc-typehints: pruned from 14 -> 12
+DEBUG conda.resolve:filter_group(633): rpy2: pruned from 76 -> 13
+DEBUG conda.resolve:filter_group(633): r-base: pruned from 56 -> 14
+DEBUG conda.resolve:filter_group(633): _r-mutex: pruned from 4 -> 3
+DEBUG conda.resolve:filter_group(633): cairo: pruned from 37 -> 14
+DEBUG conda.resolve:filter_group(633): fontconfig: pruned from 30 -> 9
+DEBUG conda.resolve:filter_group(633): glib: pruned from 49 -> 23
+DEBUG conda.resolve:filter_group(633): pixman: pruned from 13 -> 12
+DEBUG conda.resolve:filter_group(633): icu: pruned from 8 -> 6
+DEBUG conda.resolve:filter_group(633): krb5: pruned from 22 -> 8
+DEBUG conda.resolve:filter_group(633): pango: pruned from 35 -> 17
+DEBUG conda.resolve:filter_group(633): fontconfig: pruned from 9 -> 8
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 15 -> 12
+DEBUG conda.resolve:filter_group(633): harfbuzz: pruned from 46 -> 17
+DEBUG conda.resolve:filter_group(633): cairo: pruned from 14 -> 11
+DEBUG conda.resolve:filter_group(633): r-car: pruned from 34 -> 17
+DEBUG conda.resolve:filter_group(633): r-base: pruned from 14 -> 13
+DEBUG conda.resolve:filter_group(633): curl: pruned from 46 -> 39
+DEBUG conda.resolve:filter_group(633): r-mass: pruned from 46 -> 24
+DEBUG conda.resolve:filter_group(633): r-mgcv: pruned from 42 -> 23
+DEBUG conda.resolve:filter_group(633): r-matrix: pruned from 43 -> 24
+DEBUG conda.resolve:filter_group(633): r-lattice: pruned from 36 -> 21
+DEBUG conda.resolve:filter_group(633): r-nlme: pruned from 48 -> 30
+DEBUG conda.resolve:filter_group(633): r-nnet: pruned from 33 -> 16
+DEBUG conda.resolve:filter_group(633): r-pbkrtest: pruned from 21 -> 11
+DEBUG conda.resolve:filter_group(633): r-lme4: pruned from 32 -> 16
+DEBUG conda.resolve:filter_group(633): r-minqa: pruned from 31 -> 18
+DEBUG conda.resolve:filter_group(633): r-rcpp: pruned from 46 -> 27
+DEBUG conda.resolve:filter_group(633): r-nloptr: pruned from 30 -> 16
+DEBUG conda.resolve:filter_group(633): r-rcppeigen: pruned from 34 -> 16
+DEBUG conda.resolve:filter_group(633): r-quantreg: pruned from 50 -> 33
+DEBUG conda.resolve:filter_group(633): r-matrixmodels: pruned from 22 -> 11
+DEBUG conda.resolve:filter_group(633): r-sparsem: pruned from 33 -> 18
+DEBUG conda.resolve:filter_group(633): pytest-faulthandler: pruned from 20 -> 3
+DEBUG conda.resolve:filter_group(633): pytest: pruned from 423 -> 92
+DEBUG conda.resolve:filter_group(633): py: pruned from 48 -> 16
+DEBUG conda.resolve:filter_group(633): pytest-cov: pruned from 39 -> 12
+DEBUG conda.resolve:filter_group(633): coverage: pruned from 122 -> 19
+DEBUG conda.resolve:filter_group(633): pydocstyle: pruned from 30 -> 8
+DEBUG conda.resolve:filter_group(633): pyarrow: pruned from 248 -> 32
+DEBUG conda.resolve:filter_group(633): arrow-cpp: pruned from 423 -> 59
+DEBUG conda.resolve:filter_group(633): thrift-cpp: pruned from 22 -> 8
+DEBUG conda.resolve:filter_group(633): pandas: pruned from 235 -> 31
+DEBUG conda.resolve:filter_group(633): psutil: pruned from 163 -> 27
+DEBUG conda.resolve:filter_group(633): nilearn: pruned from 18 -> 11
+DEBUG conda.resolve:filter_group(633): joblib: pruned from 61 -> 25
+DEBUG conda.resolve:filter_group(633): ipython: pruned from 210 -> 43
+DEBUG conda.resolve:filter_group(633): appnope: pruned from 18 -> 4
+DEBUG conda.resolve:filter_group(633): pexpect: pruned from 72 -> 8
+DEBUG conda.resolve:filter_group(633): ptyprocess: pruned from 24 -> 4
+DEBUG conda.resolve:filter_group(633): pickleshare: pruned from 35 -> 5
+DEBUG conda.resolve:filter_group(633): traitlets: pruned from 37 -> 6
+DEBUG conda.resolve:filter_group(633): ipython_genutils: pruned from 16 -> 2
+DEBUG conda.resolve:filter_group(633): ipdb: pruned from 16 -> 6
+DEBUG conda.resolve:filter_group(633): flake8: pruned from 97 -> 23
+DEBUG conda.resolve:filter_group(633): mccabe: pruned from 18 -> 2
+DEBUG conda.resolve:filter_group(633): pycodestyle: pruned from 32 -> 7
+DEBUG conda.resolve:filter_group(633): pyflakes: pruned from 42 -> 10
+DEBUG conda.resolve:filter_group(633): cython: pruned from 217 -> 45
+DEBUG conda.resolve:filter_group(633): wxpython: pruned from 42 -> 14
+DEBUG conda.resolve:filter_group(633): backports.lzma: pruned from 57 -> 7
+DEBUG conda.resolve:filter_group(633): backports: pruned from 15 -> 3
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 19 -> 6
+DEBUG conda.resolve:filter_group(633): libnetcdf: pruned from 37 -> 10
+DEBUG conda.resolve:filter_group(633): lz4-c: pruned from 12 -> 9
+DEBUG conda.resolve:filter_group(633): qt: pruned from 17 -> 14
+DEBUG conda.resolve:filter_group(633): arrow-cpp: pruned from 59 -> 43
+DEBUG conda.resolve:filter_group(633): pyarrow: pruned from 32 -> 28
+DEBUG conda.core.solve:_add_specs(617): specs_map with targets: OrderedDict()
+DEBUG conda.resolve:bad_installed(1114): Checking if the current environment is consistent
+DEBUG conda.core.solve:_find_inconsistent_packages(484): inconsistent precs: None
+DEBUG conda.resolve:get_reduced_index(572): Retrieving packages for: 
+  - colormath[version='>=2.1']
+  - cython
+  - flake8
+  - h5py
+  - ipdb
+  - ipython
+  - joblib
+  - keyring[version='>=5']
+  - libblas[build=*mkl]
+  - matplotlib-base[version='>=3,<3.1']
+  - mayavi[version='>=4.6.2']
+  - mne[version='>=0.17']
+  - nibabel[version='>=2.5']
+  - nilearn
+  - numpy
+  - pandas
+  - pillow
+  - pip
+  - psutil
+  - pyarrow
+  - pydocstyle
+  - pysurfer[version='>=0.9']
+  - pytest
+  - pytest-cov
+  - pytest-faulthandler
+  - python==3.7
+  - r-car
+  - rpy2
+  - scikit-learn
+  - scipy[version='>=1.3']
+  - setuptools[version='>=17']
+  - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx-gallery
+  - sphinxcontrib-bibtex
+  - tqdm[version='>=4.19']
+  - twine
+  - vtk[version='>=8.1.1']
+  - wxpython[version='>=4.0.3']
+DEBUG conda.resolve:filter_group(633): libblas: pruned from 44 -> 12
+DEBUG conda.resolve:filter_group(633): mkl: pruned from 17 -> 11
+DEBUG conda.resolve:filter_group(633): wxpython: pruned from 49 -> 42
+DEBUG conda.resolve:filter_group(633): python: pruned from 216 -> 9
+DEBUG conda.resolve:filter_group(633): libffi: pruned from 13 -> 12
+DEBUG conda.resolve:filter_group(633): openssl: pruned from 56 -> 21
+DEBUG conda.resolve:filter_group(633): pip: pruned from 136 -> 34
+DEBUG conda.resolve:filter_group(633): setuptools: pruned from 407 -> 68
+DEBUG conda.resolve:filter_group(633): certifi: pruned from 142 -> 24
+DEBUG conda.resolve:filter_group(633): wheel: pruned from 111 -> 27
+DEBUG conda.resolve:filter_group(633): readline: pruned from 13 -> 8
+DEBUG conda.resolve:filter_group(633): sqlite: pruned from 49 -> 24
+DEBUG conda.resolve:filter_group(633): tk: pruned from 23 -> 14
+DEBUG conda.resolve:filter_group(633): xz: pruned from 13 -> 7
+DEBUG conda.resolve:filter_group(633): zlib: pruned from 16 -> 13
+DEBUG conda.resolve:filter_group(633): expat: pruned from 19 -> 11
+DEBUG conda.resolve:filter_group(633): gettext: pruned from 9 -> 7
+DEBUG conda.resolve:filter_group(633): jpeg: pruned from 5 -> 4
+DEBUG conda.resolve:filter_group(633): libiconv: pruned from 17 -> 12
+DEBUG conda.resolve:filter_group(633): libpng: pruned from 26 -> 15
+DEBUG conda.resolve:filter_group(633): python.app: pruned from 55 -> 11
+DEBUG conda.resolve:filter_group(633): six: pruned from 52 -> 12
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 107 -> 20
+DEBUG conda.resolve:filter_group(633): freetype: pruned from 24 -> 14
+DEBUG conda.resolve:filter_group(633): hdf5: pruned from 75 -> 37
+DEBUG conda.resolve:filter_group(633): libcxx: pruned from 16 -> 11
+DEBUG conda.resolve:filter_group(633): libgfortran: pruned from 8 -> 5
+DEBUG conda.resolve:filter_group(633): libnetcdf: pruned from 88 -> 37
+DEBUG conda.resolve:filter_group(633): hdf4: pruned from 8 -> 6
+DEBUG conda.resolve:filter_group(633): libpng: pruned from 15 -> 11
+DEBUG conda.resolve:filter_group(633): libtiff: pruned from 29 -> 18
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 32 -> 16
+DEBUG conda.resolve:filter_group(633): lz4-c: pruned from 19 -> 12
+DEBUG conda.resolve:filter_group(633): tbb: pruned from 37 -> 15
+DEBUG conda.resolve:filter_group(633): tqdm: pruned from 168 -> 75
+DEBUG conda.resolve:filter_group(633): scipy: pruned from 265 -> 21
+DEBUG conda.resolve:filter_group(633): numpy: pruned from 671 -> 103
+DEBUG conda.resolve:filter_group(633): pysurfer: pruned from 6 -> 3
+DEBUG conda.resolve:filter_group(633): imageio: pruned from 53 -> 13
+DEBUG conda.resolve:filter_group(633): pillow: pruned from 175 -> 26
+DEBUG conda.resolve:filter_group(633): olefile: pruned from 26 -> 5
+DEBUG conda.resolve:filter_group(633): mayavi: pruned from 36 -> 11
+DEBUG conda.resolve:filter_group(633): apptools: pruned from 18 -> 5
+DEBUG conda.resolve:filter_group(633): configobj: pruned from 7 -> 3
+DEBUG conda.resolve:filter_group(633): pyface: pruned from 19 -> 7
+DEBUG conda.resolve:filter_group(633): pygments: pruned from 34 -> 16
+DEBUG conda.resolve:filter_group(633): traits: pruned from 67 -> 17
+DEBUG conda.resolve:filter_group(633): traitsui: pruned from 20 -> 9
+DEBUG conda.resolve:filter_group(633): envisage: pruned from 23 -> 11
+DEBUG conda.resolve:filter_group(633): pyqt: pruned from 91 -> 17
+DEBUG conda.resolve:filter_group(633): qt: pruned from 20 -> 17
+DEBUG conda.resolve:filter_group(633): icu: pruned from 17 -> 8
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 20 -> 19
+DEBUG conda.resolve:filter_group(633): future: pruned from 51 -> 13
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 16 -> 15
+DEBUG conda.resolve:filter_group(633): nibabel: pruned from 30 -> 6
+DEBUG conda.resolve:filter_group(633): h5py: pruned from 217 -> 28
+DEBUG conda.resolve:filter_group(633): hdf5: pruned from 37 -> 34
+DEBUG conda.resolve:filter_group(633): pydicom: pruned from 14 -> 10
+DEBUG conda.resolve:filter_group(633): mne: pruned from 36 -> 17
+DEBUG conda.resolve:filter_group(633): dipy: pruned from 45 -> 5
+DEBUG conda.resolve:filter_group(633): cvxopt: pruned from 123 -> 23
+DEBUG conda.resolve:filter_group(633): glpk: pruned from 12 -> 7
+DEBUG conda.resolve:filter_group(633): gmp: pruned from 14 -> 13
+DEBUG conda.resolve:filter_group(633): gsl: pruned from 27 -> 23
+DEBUG conda.resolve:filter_group(633): suitesparse: pruned from 27 -> 12
+DEBUG conda.resolve:filter_group(633): pytables: pruned from 172 -> 15
+DEBUG conda.resolve:filter_group(633): numexpr: pruned from 160 -> 23
+DEBUG conda.resolve:filter_group(633): scikit-learn: pruned from 210 -> 39
+DEBUG conda.resolve:filter_group(633): matplotlib-base: pruned from 63 -> 3
+DEBUG conda.resolve:filter_group(633): cycler: pruned from 17 -> 3
+DEBUG conda.resolve:filter_group(633): kiwisolver: pruned from 49 -> 9
+DEBUG conda.resolve:filter_group(633): pyparsing: pruned from 59 -> 25
+DEBUG conda.resolve:filter_group(633): python-dateutil: pruned from 41 -> 12
+DEBUG conda.resolve:filter_group(633): tornado: pruned from 141 -> 28
+DEBUG conda.resolve:filter_group(633): keyring: pruned from 160 -> 38
+DEBUG conda.resolve:filter_group(633): entrypoints: pruned from 44 -> 6
+DEBUG conda.resolve:filter_group(633): colormath: pruned from 7 -> 1
+DEBUG conda.resolve:filter_group(633): networkx: pruned from 38 -> 10
+DEBUG conda.resolve:filter_group(633): decorator: pruned from 40 -> 11
+DEBUG conda.resolve:filter_group(633): twine: pruned from 37 -> 12
+DEBUG conda.resolve:filter_group(633): pkginfo: pruned from 24 -> 5
+DEBUG conda.resolve:filter_group(633): requests-toolbelt: pruned from 23 -> 5
+DEBUG conda.resolve:filter_group(633): requests: pruned from 110 -> 17
+DEBUG conda.resolve:filter_group(633): chardet: pruned from 40 -> 6
+DEBUG conda.resolve:filter_group(633): idna: pruned from 42 -> 10
+DEBUG conda.resolve:filter_group(633): urllib3: pruned from 121 -> 25
+DEBUG conda.resolve:filter_group(633): cryptography: pruned from 121 -> 9
+DEBUG conda.resolve:filter_group(633): asn1crypto: pruned from 59 -> 12
+DEBUG conda.resolve:filter_group(633): cffi: pruned from 97 -> 20
+DEBUG conda.resolve:filter_group(633): pycparser: pruned from 31 -> 9
+DEBUG conda.resolve:filter_group(633): pyopenssl: pruned from 53 -> 5
+DEBUG conda.resolve:filter_group(633): pysocks: pruned from 45 -> 8
+DEBUG conda.resolve:filter_group(633): sphinxcontrib-bibtex: pruned from 13 -> 4
+DEBUG conda.resolve:filter_group(633): oset: pruned from 4 -> 1
+DEBUG conda.resolve:filter_group(633): pybtex-docutils: pruned from 14 -> 3
+DEBUG conda.resolve:filter_group(633): docutils: pruned from 49 -> 11
+DEBUG conda.resolve:filter_group(633): pybtex: pruned from 18 -> 4
+DEBUG conda.resolve:filter_group(633): latexcodec: pruned from 10 -> 4
+DEBUG conda.resolve:filter_group(633): pyyaml: pruned from 90 -> 21
+DEBUG conda.resolve:filter_group(633): yaml: pruned from 14 -> 12
+DEBUG conda.resolve:filter_group(633): sphinx: pruned from 182 -> 47
+DEBUG conda.resolve:filter_group(633): alabaster: pruned from 26 -> 5
+DEBUG conda.resolve:filter_group(633): babel: pruned from 36 -> 6
+DEBUG conda.resolve:filter_group(633): pytz: pruned from 63 -> 19
+DEBUG conda.resolve:filter_group(633): imagesize: pruned from 23 -> 7
+DEBUG conda.resolve:filter_group(633): jinja2: pruned from 39 -> 11
+DEBUG conda.resolve:filter_group(633): markupsafe: pruned from 53 -> 10
+DEBUG conda.resolve:filter_group(633): packaging: pruned from 34 -> 15
+DEBUG conda.resolve:filter_group(633): snowballstemmer: pruned from 15 -> 8
+DEBUG conda.resolve:filter_group(633): sphinx-gallery: pruned from 39 -> 10
+DEBUG conda.resolve:filter_group(633): sphinx-autodoc-typehints: pruned from 14 -> 12
+DEBUG conda.resolve:filter_group(633): rpy2: pruned from 76 -> 13
+DEBUG conda.resolve:filter_group(633): r-base: pruned from 56 -> 14
+DEBUG conda.resolve:filter_group(633): _r-mutex: pruned from 4 -> 3
+DEBUG conda.resolve:filter_group(633): cairo: pruned from 37 -> 14
+DEBUG conda.resolve:filter_group(633): fontconfig: pruned from 30 -> 9
+DEBUG conda.resolve:filter_group(633): glib: pruned from 49 -> 23
+DEBUG conda.resolve:filter_group(633): pixman: pruned from 13 -> 12
+DEBUG conda.resolve:filter_group(633): icu: pruned from 8 -> 6
+DEBUG conda.resolve:filter_group(633): krb5: pruned from 22 -> 8
+DEBUG conda.resolve:filter_group(633): pango: pruned from 35 -> 17
+DEBUG conda.resolve:filter_group(633): fontconfig: pruned from 9 -> 8
+DEBUG conda.resolve:filter_group(633): libxml2: pruned from 15 -> 12
+DEBUG conda.resolve:filter_group(633): harfbuzz: pruned from 46 -> 17
+DEBUG conda.resolve:filter_group(633): cairo: pruned from 14 -> 11
+DEBUG conda.resolve:filter_group(633): r-car: pruned from 34 -> 17
+DEBUG conda.resolve:filter_group(633): r-base: pruned from 14 -> 13
+DEBUG conda.resolve:filter_group(633): curl: pruned from 46 -> 39
+DEBUG conda.resolve:filter_group(633): r-mass: pruned from 46 -> 24
+DEBUG conda.resolve:filter_group(633): r-mgcv: pruned from 42 -> 23
+DEBUG conda.resolve:filter_group(633): r-matrix: pruned from 43 -> 24
+DEBUG conda.resolve:filter_group(633): r-lattice: pruned from 36 -> 21
+DEBUG conda.resolve:filter_group(633): r-nlme: pruned from 48 -> 30
+DEBUG conda.resolve:filter_group(633): r-nnet: pruned from 33 -> 16
+DEBUG conda.resolve:filter_group(633): r-pbkrtest: pruned from 21 -> 11
+DEBUG conda.resolve:filter_group(633): r-lme4: pruned from 32 -> 16
+DEBUG conda.resolve:filter_group(633): r-minqa: pruned from 31 -> 18
+DEBUG conda.resolve:filter_group(633): r-rcpp: pruned from 46 -> 27
+DEBUG conda.resolve:filter_group(633): r-nloptr: pruned from 30 -> 16
+DEBUG conda.resolve:filter_group(633): r-rcppeigen: pruned from 34 -> 16
+DEBUG conda.resolve:filter_group(633): r-quantreg: pruned from 50 -> 33
+DEBUG conda.resolve:filter_group(633): r-matrixmodels: pruned from 22 -> 11
+DEBUG conda.resolve:filter_group(633): r-sparsem: pruned from 33 -> 18
+DEBUG conda.resolve:filter_group(633): pytest-faulthandler: pruned from 20 -> 3
+DEBUG conda.resolve:filter_group(633): pytest: pruned from 423 -> 92
+DEBUG conda.resolve:filter_group(633): py: pruned from 48 -> 16
+DEBUG conda.resolve:filter_group(633): pytest-cov: pruned from 39 -> 12
+DEBUG conda.resolve:filter_group(633): coverage: pruned from 122 -> 19
+DEBUG conda.resolve:filter_group(633): pydocstyle: pruned from 30 -> 8
+DEBUG conda.resolve:filter_group(633): pyarrow: pruned from 248 -> 32
+DEBUG conda.resolve:filter_group(633): arrow-cpp: pruned from 423 -> 59
+DEBUG conda.resolve:filter_group(633): thrift-cpp: pruned from 22 -> 8
+DEBUG conda.resolve:filter_group(633): pandas: pruned from 235 -> 31
+DEBUG conda.resolve:filter_group(633): psutil: pruned from 163 -> 27
+DEBUG conda.resolve:filter_group(633): nilearn: pruned from 18 -> 11
+DEBUG conda.resolve:filter_group(633): joblib: pruned from 61 -> 25
+DEBUG conda.resolve:filter_group(633): ipython: pruned from 210 -> 43
+DEBUG conda.resolve:filter_group(633): appnope: pruned from 18 -> 4
+DEBUG conda.resolve:filter_group(633): pexpect: pruned from 72 -> 8
+DEBUG conda.resolve:filter_group(633): ptyprocess: pruned from 24 -> 4
+DEBUG conda.resolve:filter_group(633): pickleshare: pruned from 35 -> 5
+DEBUG conda.resolve:filter_group(633): traitlets: pruned from 37 -> 6
+DEBUG conda.resolve:filter_group(633): ipython_genutils: pruned from 16 -> 2
+DEBUG conda.resolve:filter_group(633): ipdb: pruned from 16 -> 6
+DEBUG conda.resolve:filter_group(633): flake8: pruned from 97 -> 23
+DEBUG conda.resolve:filter_group(633): mccabe: pruned from 18 -> 2
+DEBUG conda.resolve:filter_group(633): pycodestyle: pruned from 32 -> 7
+DEBUG conda.resolve:filter_group(633): pyflakes: pruned from 42 -> 10
+DEBUG conda.resolve:filter_group(633): cython: pruned from 217 -> 45
+DEBUG conda.resolve:filter_group(633): wxpython: pruned from 42 -> 14
+DEBUG conda.resolve:filter_group(633): backports.lzma: pruned from 57 -> 7
+DEBUG conda.resolve:filter_group(633): backports: pruned from 15 -> 3
+DEBUG conda.resolve:filter_group(633): vtk: pruned from 19 -> 6
+DEBUG conda.resolve:filter_group(633): libnetcdf: pruned from 37 -> 10
+DEBUG conda.resolve:filter_group(633): lz4-c: pruned from 12 -> 9
+DEBUG conda.resolve:filter_group(633): qt: pruned from 17 -> 14
+DEBUG conda.resolve:filter_group(633): arrow-cpp: pruned from 59 -> 43
+DEBUG conda.resolve:filter_group(633): pyarrow: pruned from 32 -> 28
+DEBUG conda.resolve:__init__(110): restricting to unmanageable packages: __osx
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 2
+DEBUG conda.resolve:_get_sat_solver_cls(60): Using SAT solver interface 'pycosat'.
+DEBUG conda.resolve:gen_clauses(914): gen_clauses returning with clause count: 50720
+DEBUG conda.resolve:generate_spec_constraints(922): generate_spec_constraints returning with clause count: 50720
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 50759
+DEBUG conda.core.solve:_run_sat(801): final specs to add: 
+  - colormath[version='>=2.1']
+  - cython
+  - flake8
+  - h5py
+  - ipdb
+  - ipython
+  - joblib
+  - keyring[version='>=5']
+  - libblas[build=*mkl]
+  - matplotlib-base[version='>=3,<3.1']
+  - mayavi[version='>=4.6.2']
+  - mne[version='>=0.17']
+  - nibabel[version='>=2.5']
+  - nilearn
+  - numpy
+  - pandas
+  - pillow
+  - pip
+  - psutil
+  - pyarrow
+  - pydocstyle
+  - pysurfer[version='>=0.9']
+  - pytest
+  - pytest-cov
+  - pytest-faulthandler
+  - python==3.7
+  - r-car
+  - rpy2
+  - scikit-learn
+  - scipy[version='>=1.3']
+  - setuptools[version='>=17']
+  - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx-gallery
+  - sphinxcontrib-bibtex
+  - tqdm[version='>=4.19']
+  - twine
+  - vtk[version='>=8.1.1']
+  - wxpython[version='>=4.0.3']
+DEBUG conda.resolve:solve(1246): Solving for: 
+  - 0: mayavi[version='>=4.6.2'] target=None optional=False
+  - 1: pysurfer[version='>=0.9'] target=None optional=False
+  - 2: sphinx target=None optional=False
+  - 3: keyring[version='>=5'] target=None optional=False
+  - 4: wxpython[version='>=4.0.3'] target=None optional=False
+  - 5: r-car target=None optional=False
+  - 6: sphinx-autodoc-typehints target=None optional=False
+  - 7: pytest target=None optional=False
+  - 8: nibabel[version='>=2.5'] target=None optional=False
+  - 9: ipython target=None optional=False
+  - 10: matplotlib-base[version='>=3,<3.1'] target=None optional=False
+  - 11: python==3.7 target=None optional=False
+  - 12: sphinxcontrib-bibtex target=None optional=False
+  - 13: h5py target=None optional=False
+  - 14: rpy2 target=None optional=False
+  - 15: numpy target=None optional=False
+  - 16: sphinx-gallery target=None optional=False
+  - 17: mne[version='>=0.17'] target=None optional=False
+  - 18: pip target=None optional=False
+  - 19: tqdm[version='>=4.19'] target=None optional=False
+  - 20: pandas target=None optional=False
+  - 21: flake8 target=None optional=False
+  - 22: scikit-learn target=None optional=False
+  - 23: twine target=None optional=False
+  - 24: joblib target=None optional=False
+  - 25: scipy[version='>=1.3'] target=None optional=False
+  - 26: libblas[build=*mkl] target=None optional=False
+  - 27: pillow target=None optional=False
+  - 28: pydocstyle target=None optional=False
+  - 29: vtk[version='>=8.1.1'] target=None optional=False
+  - 30: ipdb target=None optional=False
+  - 31: pytest-faulthandler target=None optional=False
+  - 32: nilearn target=None optional=False
+  - 33: cython target=None optional=False
+  - 34: colormath[version='>=2.1'] target=None optional=False
+  - 35: setuptools[version='>=17'] target=None optional=False
+  - 36: pyarrow target=None optional=False
+  - 37: pytest-cov target=None optional=False
+  - 38: psutil target=None optional=False
+DEBUG conda.resolve:solve(1256): Solve: Getting reduced index of compliant packages
+DEBUG conda.resolve:solve(1285): Solve: determining satisfiability
+DEBUG conda.resolve:__init__(110): restricting to unmanageable packages: __osx
+DEBUG conda.resolve:gen_clauses(914): gen_clauses returning with clause count: 50720
+DEBUG conda.resolve:generate_spec_constraints(922): generate_spec_constraints returning with clause count: 50720
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 50759
+DEBUG conda.resolve:solve(1336): Requested specs: 
+  - colormath[version='>=2.1']
+  - cython
+  - flake8
+  - h5py
+  - ipdb
+  - ipython
+  - joblib
+  - keyring[version='>=5']
+  - libblas[build=*mkl]
+  - matplotlib-base[version='>=3,<3.1']
+  - mayavi[version='>=4.6.2']
+  - mne[version='>=0.17']
+  - nibabel[version='>=2.5']
+  - nilearn
+  - numpy
+  - pandas
+  - pillow
+  - pip
+  - psutil
+  - pyarrow
+  - pydocstyle
+  - pysurfer[version='>=0.9']
+  - pytest
+  - pytest-cov
+  - pytest-faulthandler
+  - python==3.7
+  - r-car
+  - rpy2
+  - scikit-learn
+  - scipy[version='>=1.3']
+  - setuptools[version='>=17']
+  - sphinx
+  - sphinx-autodoc-typehints
+  - sphinx-gallery
+  - sphinxcontrib-bibtex
+  - tqdm[version='>=4.19']
+  - twine
+  - vtk[version='>=8.1.1']
+  - wxpython[version='>=4.0.3']
+DEBUG conda.resolve:solve(1337): Optional specs: 
+DEBUG conda.resolve:solve(1338): All other specs: 
+  - __osx
+  - _r-mutex
+  - alabaster
+  - appdirs
+  - appnope
+  - apptools
+  - arrow-cpp
+  - arrow-cpp-proc
+  - asn1crypto
+  - atomicwrites
+  - attrs
+  - aws-sdk-cpp
+  - babel
+  - backcall
+  - backports
+  - backports.lzma
+  - blas
+  - bleach
+  - blosc
+  - boost-cpp
+  - brotli
+  - brotlipy
+  - bwidget
+  - bz2file
+  - bzip2
+  - c-ares
+  - ca-certificates
+  - cairo
+  - cctools
+  - certifi
+  - cffi
+  - cftime
+  - chardet
+  - clang
+  - clang-tools
+  - clang_osx-64
+  - clangdev
+  - clangxx
+  - clangxx_osx-64
+  - cmarkgfm
+  - compiler-rt
+  - compiler-rt_osx-64
+  - configobj
+  - configparser
+  - contextlib2
+  - coverage
+  - cryptography
+  - cryptography-vectors
+  - curl
+  - cvxopt
+  - cycler
+  - dbus
+  - decorator
+  - dipy
+  - docutils
+  - double-conversion
+  - dsdp
+  - entrypoints
+  - envisage
+  - expat
+  - fftw
+  - fontconfig
+  - freetype
+  - fribidi
+  - future
+  - gettext
+  - gflags
+  - gfortran_impl_osx-64
+  - gfortran_osx-64
+  - giflib
+  - glib
+  - glog
+  - glpk
+  - gmp
+  - graphite2
+  - grpc-cpp
+  - gsl
+  - harfbuzz
+  - hdf4
+  - hdf5
+  - html5lib
+  - icu
+  - idna
+  - imageio
+  - imagesize
+  - importlib-metadata
+  - importlib_metadata
+  - inflect
+  - intel-openmp
+  - ipython_genutils
+  - isl
+  - jaraco.itertools
+  - jedi
+  - jinja2
+  - jpeg
+  - jsoncpp
+  - kiwisolver
+  - krb5
+  - latexcodec
+  - ld64
+  - libboost
+  - libcblas
+  - libclang
+  - libcurl
+  - libcxx
+  - libcxxabi
+  - libedit
+  - libevent
+  - libffi
+  - libgcc
+  - libgfortran
+  - libgfortran-ng
+  - libiconv
+  - liblapack
+  - liblapacke
+  - libllvm10
+  - libllvm8
+  - libllvm9
+  - libnetcdf
+  - libogg
+  - libopenblas
+  - libpng
+  - libprotobuf
+  - libssh2
+  - libtheora
+  - libtiff
+  - libuuid
+  - libvorbis
+  - libwebp
+  - libwebp-base
+  - libxml2
+  - libxslt
+  - llvm
+  - llvm-lto-tapi
+  - llvm-meta
+  - llvm-openmp
+  - llvm-tools
+  - llvmdev
+  - llvmlite
+  - lxml
+  - lz4
+  - lz4-c
+  - lzo
+  - make
+  - markupsafe
+  - matplotlib
+  - mccabe
+  - meshio
+  - metis
+  - mkl
+  - mkl-service
+  - mkl_fft
+  - mkl_random
+  - mock
+  - more-itertools
+  - mpc
+  - mpfr
+  - mpi
+  - mpi4py
+  - mpich
+  - ncurses
+  - netcdf4
+  - networkx
+  - nlopt
+  - nomkl
+  - numba
+  - numexpr
+  - numpy-base
+  - olefile
+  - openblas
+  - openblas-devel
+  - openmp
+  - openmpi
+  - openssl
+  - oset
+  - packaging
+  - pango
+  - parquet-cpp
+  - parso
+  - pathlib2
+  - patsy
+  - pbr
+  - pcre
+  - pexpect
+  - pickleshare
+  - pixman
+  - pkginfo
+  - pluggy
+  - prompt-toolkit
+  - prompt_toolkit
+  - pthread-stubs
+  - ptyprocess
+  - py
+  - pybtex
+  - pybtex-docutils
+  - pycodestyle
+  - pycparser
+  - pydicom
+  - pyface
+  - pyflakes
+  - pygments
+  - pyopenssl
+  - pyparsing
+  - pypubsub
+  - pyqt
+  - pysocks
+  - pytables
+  - python-dateutil
+  - python-picard
+  - python.app
+  - python_abi
+  - pytz
+  - pyvista
+  - pyyaml
+  - qt
+  - r-abind
+  - r-assertthat
+  - r-backports
+  - r-base
+  - r-bh
+  - r-bindr
+  - r-bindrcpp
+  - r-bit
+  - r-bit64
+  - r-blob
+  - r-boot
+  - r-cardata
+  - r-cellranger
+  - r-cli
+  - r-clipr
+  - r-crayon
+  - r-curl
+  - r-data.table
+  - r-dbi
+  - r-dbplyr
+  - r-digest
+  - r-dplyr
+  - r-ellipsis
+  - r-fansi
+  - r-forcats
+  - r-foreign
+  - r-generics
+  - r-glue
+  - r-haven
+  - r-hms
+  - r-lattice
+  - r-lazyeval
+  - r-lifecycle
+  - r-lme4
+  - r-magrittr
+  - r-maptools
+  - r-mass
+  - r-matrix
+  - r-matrixmodels
+  - r-memoise
+  - r-mgcv
+  - r-minqa
+  - r-nlme
+  - r-nloptr
+  - r-nnet
+  - r-openxlsx
+  - r-pbkrtest
+  - r-pillar
+  - r-pkgconfig
+  - r-plogr
+  - r-prettyunits
+  - r-progress
+  - r-purrr
+  - r-quantreg
+  - r-r6
+  - r-rcpp
+  - r-rcppeigen
+  - r-readr
+  - r-readxl
+  - r-rematch
+  - r-rio
+  - r-rlang
+  - r-rsqlite
+  - r-sp
+  - r-sparsem
+  - r-statmod
+  - r-stringi
+  - r-tibble
+  - r-tidyselect
+  - r-utf8
+  - r-vctrs
+  - r-zeallot
+  - r-zip
+  - re2
+  - readline
+  - readme_renderer
+  - requests
+  - requests-toolbelt
+  - scooby
+  - simplegeneric
+  - sip
+  - six
+  - snappy
+  - snowballstemmer
+  - sphinxcontrib
+  - sphinxcontrib-applehelp
+  - sphinxcontrib-devhelp
+  - sphinxcontrib-htmlhelp
+  - sphinxcontrib-jsmath
+  - sphinxcontrib-qthelp
+  - sphinxcontrib-serializinghtml
+  - sphinxcontrib-websupport
+  - sqlite
+  - statsmodels
+  - suitesparse
+  - tapi
+  - tbb
+  - threadpoolctl
+  - thrift-cpp
+  - tk
+  - tktable
+  - tornado
+  - traitlets
+  - traits
+  - traitsui
+  - tzlocal
+  - uriparser
+  - urllib3
+  - wcwidth
+  - webencodings
+  - wheel
+  - xlrd
+  - xz
+  - yaml
+  - zipp
+  - zlib
+  - zstd
+DEBUG conda.resolve:solve(1339): missing specs: 
+  - __osx
+  - _r-mutex
+  - alabaster
+  - appdirs
+  - appnope
+  - apptools
+  - arrow-cpp
+  - arrow-cpp-proc
+  - asn1crypto
+  - atomicwrites
+  - attrs
+  - aws-sdk-cpp
+  - babel
+  - backcall
+  - backports
+  - backports.lzma
+  - blas
+  - bleach
+  - blosc
+  - boost-cpp
+  - brotli
+  - brotlipy
+  - bwidget
+  - bz2file
+  - bzip2
+  - c-ares
+  - ca-certificates
+  - cairo
+  - cctools
+  - certifi
+  - cffi
+  - cftime
+  - chardet
+  - clang
+  - clang-tools
+  - clang_osx-64
+  - clangdev
+  - clangxx
+  - clangxx_osx-64
+  - cmarkgfm
+  - compiler-rt
+  - compiler-rt_osx-64
+  - configobj
+  - configparser
+  - contextlib2
+  - coverage
+  - cryptography
+  - cryptography-vectors
+  - curl
+  - cvxopt
+  - cycler
+  - dbus
+  - decorator
+  - dipy
+  - docutils
+  - double-conversion
+  - dsdp
+  - entrypoints
+  - envisage
+  - expat
+  - fftw
+  - fontconfig
+  - freetype
+  - fribidi
+  - future
+  - gettext
+  - gflags
+  - gfortran_impl_osx-64
+  - gfortran_osx-64
+  - giflib
+  - glib
+  - glog
+  - glpk
+  - gmp
+  - graphite2
+  - grpc-cpp
+  - gsl
+  - harfbuzz
+  - hdf4
+  - hdf5
+  - html5lib
+  - icu
+  - idna
+  - imageio
+  - imagesize
+  - importlib-metadata
+  - importlib_metadata
+  - inflect
+  - intel-openmp
+  - ipython_genutils
+  - isl
+  - jaraco.itertools
+  - jedi
+  - jinja2
+  - jpeg
+  - jsoncpp
+  - kiwisolver
+  - krb5
+  - latexcodec
+  - ld64
+  - libboost
+  - libcblas
+  - libclang
+  - libcurl
+  - libcxx
+  - libcxxabi
+  - libedit
+  - libevent
+  - libffi
+  - libgcc
+  - libgfortran
+  - libgfortran-ng
+  - libiconv
+  - liblapack
+  - liblapacke
+  - libllvm10
+  - libllvm8
+  - libllvm9
+  - libnetcdf
+  - libogg
+  - libopenblas
+  - libpng
+  - libprotobuf
+  - libssh2
+  - libtheora
+  - libtiff
+  - libuuid
+  - libvorbis
+  - libwebp
+  - libwebp-base
+  - libxml2
+  - libxslt
+  - llvm
+  - llvm-lto-tapi
+  - llvm-meta
+  - llvm-openmp
+  - llvm-tools
+  - llvmdev
+  - llvmlite
+  - lxml
+  - lz4
+  - lz4-c
+  - lzo
+  - make
+  - markupsafe
+  - matplotlib
+  - mccabe
+  - meshio
+  - metis
+  - mkl
+  - mkl-service
+  - mkl_fft
+  - mkl_random
+  - mock
+  - more-itertools
+  - mpc
+  - mpfr
+  - mpi
+  - mpi4py
+  - mpich
+  - ncurses
+  - netcdf4
+  - networkx
+  - nlopt
+  - nomkl
+  - numba
+  - numexpr
+  - numpy-base
+  - olefile
+  - openblas
+  - openblas-devel
+  - openmp
+  - openmpi
+  - openssl
+  - oset
+  - packaging
+  - pango
+  - parquet-cpp
+  - parso
+  - pathlib2
+  - patsy
+  - pbr
+  - pcre
+  - pexpect
+  - pickleshare
+  - pixman
+  - pkginfo
+  - pluggy
+  - prompt-toolkit
+  - prompt_toolkit
+  - pthread-stubs
+  - ptyprocess
+  - py
+  - pybtex
+  - pybtex-docutils
+  - pycodestyle
+  - pycparser
+  - pydicom
+  - pyface
+  - pyflakes
+  - pygments
+  - pyopenssl
+  - pyparsing
+  - pypubsub
+  - pyqt
+  - pysocks
+  - pytables
+  - python-dateutil
+  - python-picard
+  - python.app
+  - python_abi
+  - pytz
+  - pyvista
+  - pyyaml
+  - qt
+  - r-abind
+  - r-assertthat
+  - r-backports
+  - r-base
+  - r-bh
+  - r-bindr
+  - r-bindrcpp
+  - r-bit
+  - r-bit64
+  - r-blob
+  - r-boot
+  - r-cardata
+  - r-cellranger
+  - r-cli
+  - r-clipr
+  - r-crayon
+  - r-curl
+  - r-data.table
+  - r-dbi
+  - r-dbplyr
+  - r-digest
+  - r-dplyr
+  - r-ellipsis
+  - r-fansi
+  - r-forcats
+  - r-foreign
+  - r-generics
+  - r-glue
+  - r-haven
+  - r-hms
+  - r-lattice
+  - r-lazyeval
+  - r-lifecycle
+  - r-lme4
+  - r-magrittr
+  - r-maptools
+  - r-mass
+  - r-matrix
+  - r-matrixmodels
+  - r-memoise
+  - r-mgcv
+  - r-minqa
+  - r-nlme
+  - r-nloptr
+  - r-nnet
+  - r-openxlsx
+  - r-pbkrtest
+  - r-pillar
+  - r-pkgconfig
+  - r-plogr
+  - r-prettyunits
+  - r-progress
+  - r-purrr
+  - r-quantreg
+  - r-r6
+  - r-rcpp
+  - r-rcppeigen
+  - r-readr
+  - r-readxl
+  - r-rematch
+  - r-rio
+  - r-rlang
+  - r-rsqlite
+  - r-sp
+  - r-sparsem
+  - r-statmod
+  - r-stringi
+  - r-tibble
+  - r-tidyselect
+  - r-utf8
+  - r-vctrs
+  - r-zeallot
+  - r-zip
+  - re2
+  - readline
+  - readme_renderer
+  - requests
+  - requests-toolbelt
+  - scooby
+  - simplegeneric
+  - sip
+  - six
+  - snappy
+  - snowballstemmer
+  - sphinxcontrib
+  - sphinxcontrib-applehelp
+  - sphinxcontrib-devhelp
+  - sphinxcontrib-htmlhelp
+  - sphinxcontrib-jsmath
+  - sphinxcontrib-qthelp
+  - sphinxcontrib-serializinghtml
+  - sphinxcontrib-websupport
+  - sqlite
+  - statsmodels
+  - suitesparse
+  - tapi
+  - tbb
+  - threadpoolctl
+  - thrift-cpp
+  - tk
+  - tktable
+  - tornado
+  - traitlets
+  - traits
+  - traitsui
+  - tzlocal
+  - uriparser
+  - urllib3
+  - wcwidth
+  - webencodings
+  - wheel
+  - xlrd
+  - xz
+  - yaml
+  - zipp
+  - zlib
+  - zstd
+DEBUG conda.resolve:solve(1342): Solve: minimize removed packages
+DEBUG conda.resolve:solve(1349): Solve: maximize versions of requested packages
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51105
+DEBUG conda.common._logic:minimize(739): Final sum objective: 0
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51969
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51185
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51391
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51600
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51747
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51640
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 51600
+DEBUG conda.common._logic:minimize(739): Final peak objective: 6
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 178474
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 124992
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 92498
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 73532
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 64164
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 68823
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67020
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 65974
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 66935
+DEBUG conda.common._logic:minimize(739): Final sum objective: 18
+DEBUG conda.common._logic:minimize(752): New peak objective: 6
+DEBUG conda.resolve:solve(1353): Initial package channel/version metric: 0/18
+DEBUG conda.resolve:solve(1356): Solve: minimize track_feature count
+DEBUG conda.resolve:generate_feature_count(930): generate_feature_count returning with clause count: 67004
+DEBUG conda.common._logic:minimize(652): Clauses added, recomputing solution
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67004
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67009
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67022
+DEBUG conda.common._logic:minimize(739): Final sum objective: 1
+DEBUG conda.common._logic:minimize(752): New peak objective: 1
+DEBUG conda.resolve:solve(1359): Track feature count: 1
+DEBUG conda.common._logic:minimize(652): Clauses added, recomputing solution
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67478
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67630
+DEBUG conda.common._logic:minimize(739): Final sum objective: 0
+DEBUG conda.resolve:solve(1370): Package misfeature count: 0
+DEBUG conda.resolve:solve(1373): Solve: maximize build numbers of requested packages
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67821
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67639
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67665
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67681
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 67717
+DEBUG conda.common._logic:minimize(739): Final peak objective: 1
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 71239
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 69691
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 68836
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 69135
+DEBUG conda.common._logic:minimize(739): Final sum objective: 4
+DEBUG conda.common._logic:minimize(752): New peak objective: 1
+DEBUG conda.resolve:solve(1375): Initial package build metric: 4
+DEBUG conda.resolve:solve(1378): Solve: prefer arch over noarch for requested packages
+DEBUG conda.common._logic:minimize(658): Empty objective, trivial solution
+DEBUG conda.resolve:solve(1380): Noarch metric: 0
+DEBUG conda.resolve:solve(1384): Solve: minimize number of optional installations
+DEBUG conda.common._logic:minimize(658): Empty objective, trivial solution
+DEBUG conda.resolve:solve(1387): Optional package install metric: 0
+DEBUG conda.resolve:solve(1390): Solve: minimize number of necessary upgrades
+DEBUG conda.common._logic:minimize(658): Empty objective, trivial solution
+DEBUG conda.resolve:solve(1393): Dependency update count: 0
+DEBUG conda.resolve:solve(1396): Solve: maximize versions and builds of indirect dependencies.  Prefer arch over noarch where equivalent.
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 70308
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 381369
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 226869
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 150762
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 113241
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 88986
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 82002
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78501
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 74993
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78503
+DEBUG conda.common._logic:minimize(739): Final sum objective: 2
+DEBUG conda.common._logic:minimize(752): New peak objective: 1
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 81573
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78654
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78561
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78586
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 78573
+DEBUG conda.common._logic:minimize(739): Final peak objective: 15
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 5364268
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 2878496
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 1556619
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 844632
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 512589
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 679543
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 765446
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 721148
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 703403
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 694479
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 685530
+DEBUG conda.common._logic:minimize(739): Final sum objective: 72
+DEBUG conda.common._logic:minimize(752): New peak objective: 15
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 687248
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 685566
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 685720
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 686015
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 686358
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 686015
+DEBUG conda.common._logic:minimize(739): Final peak objective: 2
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 1262503
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 996334
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 849095
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 929425
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 889034
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 909322
+DEBUG conda.common._logic:_run_sat(601): Invoking SAT with clause count: 899517
+^C^C^C^C^C^C^C^C^C^C^C^CTraceback (most recent call last):
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1079, in __call__
+    return func(*args, **kwargs)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda_env/cli/main.py", line 80, in do_call
+    exit_code = getattr(module, func_name)(args, parser)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda_env/cli/main_create.py", line 111, in execute
+    result[installer_type] = installer.install(prefix, pkg_specs, args, env)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda_env/installers/conda.py", line 32, in install
+    prune=getattr(args, 'prune', False), update_modifier=UpdateModifier.FREEZE_INSTALLED)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/core/solve.py", line 117, in solve_for_transaction
+    should_retry_solve)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/core/solve.py", line 158, in solve_for_diff
+    force_remove, should_retry_solve)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/core/solve.py", line 281, in solve_final_state
+    ssc = self._run_sat(ssc)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/io.py", line 88, in decorated
+    return f(*args, **kwds)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/core/solve.py", line 808, in _run_sat
+    should_retry_solve=ssc.should_retry_solve
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/io.py", line 88, in decorated
+    return f(*args, **kwds)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/resolve.py", line 1401, in solve
+    solution, obj6 = C.minimize(eq_b, solution)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/logic.py", line 255, in minimize
+    return self._clauses.minimize(literals, coeffs, bestsol=bestsol, trymax=trymax)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/_logic.py", line 712, in minimize
+    newsol = self.sat()
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/_logic.py", line 639, in sat
+    solution = self._run_sat(self.m, limit=limit)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/_logic.py", line 602, in _run_sat
+    solution = self._sat_solver.run(m, limit=limit)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/_logic.py", line 156, in run
+    sat_solution = self.invoke(solver)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/common/_logic.py", line 189, in invoke
+    sat_solution = next(iter_sol)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/christian/anaconda3/bin/conda-env", line 7, in <module>
+    sys.exit(main())
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda_env/cli/main.py", line 91, in main
+    return conda_exception_handler(do_call, args, parser)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1371, in conda_exception_handler
+    return_value = exception_handler(func, *args, **kwargs)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1082, in __call__
+    return self.handle_exception(exc_val, exc_tb)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1122, in handle_exception
+    self._print_conda_exception(CondaError("KeyboardInterrupt"), _format_exc())
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1133, in _print_conda_exception
+    print_conda_exception(exc_val, exc_tb)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1047, in print_conda_exception
+    print(_format_exc(exc_val, exc_tb), file=sys.stderr)
+  File "/Users/christian/anaconda3/lib/python3.7/site-packages/conda/exceptions.py", line 1069, in _format_exc
+    formatted_exception = format_exception(exc_type, exc_val, exc_tb)
+  File "/Users/christian/anaconda3/lib/python3.7/traceback.py", line 121, in format_exception
+    type(value), value, tb, limit=limit).format(chain=chain))
+  File "/Users/christian/anaconda3/lib/python3.7/traceback.py", line 508, in __init__
+    capture_locals=capture_locals)
+  File "/Users/christian/anaconda3/lib/python3.7/traceback.py", line 344, in extract
+    for f, lineno in frame_gen:
+  File "/Users/christian/anaconda3/lib/python3.7/traceback.py", line 309, in walk_tb
+    yield tb.tb_frame, tb.tb_lineno
+AttributeError: 'str' object has no attribute 'tb_frame'
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='UTF-8'>
+BrokenPipeError: [Errno 32] Broken pipe

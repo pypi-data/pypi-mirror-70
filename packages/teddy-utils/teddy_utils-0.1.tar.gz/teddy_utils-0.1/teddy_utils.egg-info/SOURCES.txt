@@ -1,0 +1,8 @@
+setup.py
+teddy_utils/__init__.py
+teddy_utils/utils.py
+teddy_utils.egg-info/PKG-INFO
+teddy_utils.egg-info/SOURCES.txt
+teddy_utils.egg-info/dependency_links.txt
+teddy_utils.egg-info/requires.txt
+teddy_utils.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+README.md
+eepyc.py
+setup.py
+eepyc.egg-info/PKG-INFO
+eepyc.egg-info/SOURCES.txt
+eepyc.egg-info/dependency_links.txt
+eepyc.egg-info/entry_points.txt
+eepyc.egg-info/top_level.txt

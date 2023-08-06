@@ -1,0 +1,12 @@
+blacs>=2.7.0
+importlib_metadata
+labscript>=2.6.0
+labscript_utils>=2.13.2
+numpy>=1.15.1
+pillow
+PyDAQmx
+PyNIVision
+pyserial
+qtutils>=2.2.3
+spinapi
+zprocess>=2.18.0

@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+SSG_API_test/SSG_API_test.py
+SSG_API_test.egg-info/PKG-INFO
+SSG_API_test.egg-info/SOURCES.txt
+SSG_API_test.egg-info/dependency_links.txt
+SSG_API_test.egg-info/top_level.txt

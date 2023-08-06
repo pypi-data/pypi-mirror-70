@@ -1,0 +1,12 @@
+setup.py
+first_probability/Binomialdistribution.py
+first_probability/Gaussiandistribution.py
+first_probability/Generaldistribution.py
+first_probability/__init__ copy.py
+first_probability/__init__.py
+first_probability/test.py
+first_probability.egg-info/PKG-INFO
+first_probability.egg-info/SOURCES.txt
+first_probability.egg-info/dependency_links.txt
+first_probability.egg-info/not-zip-safe
+first_probability.egg-info/top_level.txt

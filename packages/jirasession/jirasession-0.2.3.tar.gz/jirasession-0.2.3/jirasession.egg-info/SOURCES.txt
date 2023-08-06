@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+jirasession/__init__.py
+jirasession/session.py
+jirasession/user.py
+jirasession.egg-info/PKG-INFO
+jirasession.egg-info/SOURCES.txt
+jirasession.egg-info/dependency_links.txt
+jirasession.egg-info/requires.txt
+jirasession.egg-info/top_level.txt

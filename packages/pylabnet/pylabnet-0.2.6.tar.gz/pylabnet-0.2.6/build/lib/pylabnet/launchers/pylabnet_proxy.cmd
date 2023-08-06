@@ -1,0 +1,1 @@
+C:\Users\Yogi\test_env\Scripts\activate && start /min "Launch control" python launch_control.py -p

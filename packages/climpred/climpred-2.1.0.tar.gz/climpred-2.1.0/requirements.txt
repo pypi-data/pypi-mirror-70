@@ -1,0 +1,10 @@
+cftime>=1.1.2
+eofs
+matplotlib
+numpy
+pandas
+scipy
+tqdm
+xarray>=0.15.1
+xrft
+xskillscore>=0.0.15

@@ -1,0 +1,3 @@
+[console_scripts]
+stramp = stramp.cli:main
+

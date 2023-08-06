@@ -1,0 +1,3 @@
+[console_scripts]
+epg_downloader = epg_downloader.cli:main
+

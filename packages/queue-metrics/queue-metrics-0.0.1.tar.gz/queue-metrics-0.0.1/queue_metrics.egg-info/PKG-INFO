@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: queue-metrics
+Version: 0.0.1
+Summary: Simple approximate queue model metrics 
+Home-page: UNKNOWN
+Author: jackdotwa
+Author-email: jacques@spatialedge.co.za
+License: UNKNOWN
+Description: # queue-model-approx
+        
+        A repository of metrics that may apply to approximate queue models
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

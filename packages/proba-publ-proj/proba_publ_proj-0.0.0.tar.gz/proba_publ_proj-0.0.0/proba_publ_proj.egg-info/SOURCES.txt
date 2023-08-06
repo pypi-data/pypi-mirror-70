@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+proba_publ_proj.egg-info/PKG-INFO
+proba_publ_proj.egg-info/SOURCES.txt
+proba_publ_proj.egg-info/dependency_links.txt
+proba_publ_proj.egg-info/top_level.txt
+tworz_imion_pac/__init__.py
+tworz_imion_pac/tworz_imion.py

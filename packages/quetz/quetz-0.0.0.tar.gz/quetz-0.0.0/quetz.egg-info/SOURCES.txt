@@ -1,0 +1,7 @@
+README.md
+setup.py
+quetz/__init__.py
+quetz.egg-info/PKG-INFO
+quetz.egg-info/SOURCES.txt
+quetz.egg-info/dependency_links.txt
+quetz.egg-info/top_level.txt

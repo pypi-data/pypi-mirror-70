@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-messages-list">
+        <div class="muses-messages-list-toolbar">
+            <a href="#" class="muses-button">{% trans "New message" %}</a>
+        </div>
+        {% include "_partials/pagination.html" %}
+        {% for message in message_list %}
+            <div class="muses-message-item">{{ message.id }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

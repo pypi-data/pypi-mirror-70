@@ -1,0 +1,13 @@
+README.md
+setup.py
+advanced_quotes/__init__.py
+advanced_quotes/authors.py
+advanced_quotes/misc.py
+advanced_quotes/quotes.py
+advanced_quotes/topics.py
+advanced_quotes.egg-info/PKG-INFO
+advanced_quotes.egg-info/SOURCES.txt
+advanced_quotes.egg-info/dependency_links.txt
+advanced_quotes.egg-info/not-zip-safe
+advanced_quotes.egg-info/requires.txt
+advanced_quotes.egg-info/top_level.txt

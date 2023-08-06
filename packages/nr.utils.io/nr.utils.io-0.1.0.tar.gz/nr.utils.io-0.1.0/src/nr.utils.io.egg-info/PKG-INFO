@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nr.utils.io
+Version: 0.1.0
+Summary: Utils for IO that are not in the standard library.
+Home-page: https://git.niklasrosenstein.com/NiklasRosenstein/nr-python-libs
+Author: Niklas Rosenstein
+Author-email: rosensteinniklas@gmail.com
+License: MIT
+Description: # nr.utils.io
+        
+        Package description.
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

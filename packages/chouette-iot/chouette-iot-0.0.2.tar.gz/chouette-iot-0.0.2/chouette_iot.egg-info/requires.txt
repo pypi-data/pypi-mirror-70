@@ -1,0 +1,8 @@
+redis
+pykka
+requests
+requests-unixsocket
+python-json-logger
+psutil
+pydantic
+chouette-iot-client

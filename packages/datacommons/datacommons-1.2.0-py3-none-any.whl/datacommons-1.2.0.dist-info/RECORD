@@ -1,0 +1,11 @@
+datacommons/__init__.py,sha256=tBb_U6A398XLaDnNjaCj7H5qFDXRkEi8p9tlQVRBMtk,989
+datacommons/core.py,sha256=Qy5a14QRRPnW3CeTle46UcC3k7Rox3jD5asBFGKwsDI,8351
+datacommons/places.py,sha256=I6ioC-DfNuM3gbKJgaYQrvPy11neACVsJIihLNlOuzA,8265
+datacommons/populations.py,sha256=ec9O39Vxomki52OOD2G9yQYMXGROzrkovbjB3DYklnI,16853
+datacommons/query.py,sha256=0Gl2S5dhnwMlqjzr9WsNRoi6iBG5RV1ZhITzJ1eL5mY,4691
+datacommons/utils.py,sha256=rYpOu2Ie9rwC4Sqv_hRuHDc0UVrmMIaUiT8J2gCmuUc,4593
+datacommons-1.2.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+datacommons-1.2.0.dist-info/METADATA,sha256=INot5rnMVlBBSUQoOCrSvE33PCm2BaoVgS4VQ2GLToc,2875
+datacommons-1.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+datacommons-1.2.0.dist-info/top_level.txt,sha256=iSxNhryrpa5BfZIrxL-Fqt6oOGHsPnzTtISd0C3oRlE,12
+datacommons-1.2.0.dist-info/RECORD,,

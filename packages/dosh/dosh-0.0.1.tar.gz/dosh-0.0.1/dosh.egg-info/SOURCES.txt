@@ -1,0 +1,6 @@
+README.md
+setup.py
+dosh.egg-info/PKG-INFO
+dosh.egg-info/SOURCES.txt
+dosh.egg-info/dependency_links.txt
+dosh.egg-info/top_level.txt

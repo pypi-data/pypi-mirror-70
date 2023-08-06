@@ -1,0 +1,6 @@
+pyqt5<6,>=5.9.2
+numpy<2,>=1.16.4
+dvg-debug-functions>=1.1.0
+
+[dev]
+pytest-cov

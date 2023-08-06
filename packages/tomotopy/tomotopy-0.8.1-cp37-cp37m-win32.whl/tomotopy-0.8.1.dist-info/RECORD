@@ -1,0 +1,15 @@
+_tomotopy.cp37-win32.pyd,sha256=G3ofWrYjHRbv073nrrHVqmwipuBpghmjQUXZWRXDSgI,4077056
+_tomotopy_sse2.cp37-win32.pyd,sha256=Cv_xgBs8r2Nbk1aJNmQwoiGEgSa4O5SEgLjwpOxkMNU,4077056
+tomotopy/__init__.py,sha256=aWK5cwddZ8DrZI9SbbxU1DQ5mxpWaZrWErLfrRjxvxo,7458
+tomotopy/auto_labeling_code.rst,sha256=RhKdt3AxKeu8A7Qc3au_xztsw_TFCJeQBi1g4Ma58pY,2301
+tomotopy/auto_labeling_code_with_porter.rst,sha256=undL39F0IMbJSSyvlJc-D1BXfpErA1H0Eaax9vEJejs,2617
+tomotopy/documentation.kr.rst,sha256=knCG_9X6hWNS3cwgH20Nj5R6l3TmWKDR87p6fXX8U_g,22485
+tomotopy/documentation.rst,sha256=CwhEIrEgsfYz4ybVCq92Lv7egbz6yvkNK6nlxUNkTBw,19018
+tomotopy/label.py,sha256=wZm7yGEyJMQLNgo3oTRZDmBThymKVSangwaEHIs_l2c,805
+tomotopy/utils.py,sha256=Y3FNkfJhGeyVokyRQm-0JwAUC_Jjo91MSKhppH94SfM,14125
+tomotopy/version.py,sha256=5XO7lkEdMsj2jozCc7gHVACp2Mq0ZBatI2TiVkQssc4,21
+tomotopy-0.8.1.dist-info/LICENSE,sha256=FWKmOdeuq0-as6Ji4MlsWTspqZtVAx_R7IOU7m3Xdyc,1078
+tomotopy-0.8.1.dist-info/METADATA,sha256=KEslaFNdrBDqaNr4jkhXmu9VGZMY6FdsrRFLThVjgss,299
+tomotopy-0.8.1.dist-info/WHEEL,sha256=W7gQNdCXaaCQL4_mS6kf-ClnoFRCfSnJ5Gcl1436agg,102
+tomotopy-0.8.1.dist-info/top_level.txt,sha256=Qmo-_cMr3Y3mP5GH5qdcgkQG4B7lE2yyUOMdhYvPhbM,34
+tomotopy-0.8.1.dist-info/RECORD,,

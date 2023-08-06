@@ -1,0 +1,3 @@
+[console_scripts]
+kanobu = kanobu.__main__:main
+

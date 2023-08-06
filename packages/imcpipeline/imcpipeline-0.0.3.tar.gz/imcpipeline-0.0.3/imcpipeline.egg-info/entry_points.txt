@@ -1,0 +1,4 @@
+[console_scripts]
+imcpipeline = imcpipeline.pipeline:main
+imcrunner = imcpipeline.runner:main
+

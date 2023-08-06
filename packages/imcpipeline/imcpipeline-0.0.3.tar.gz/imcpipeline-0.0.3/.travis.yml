@@ -1,0 +1,25 @@
+language: python
+os: linux
+dist: focal
+
+python:
+  - "3.7"
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+sudo: required
+
+services:
+  - xvfb
+  - docker
+
+install:
+  - pip install .
+
+before_script:
+  - export DISPLAY=:99.0
+
+script:
+  - imcpipeline --demo --container docker

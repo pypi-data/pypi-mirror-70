@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        wavecar2unk=wavecar2unk:cli
+    

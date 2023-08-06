@@ -1,0 +1,3 @@
+[console_scripts]
+boyd_bot = boyd_bot.timetable:main
+

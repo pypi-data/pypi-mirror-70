@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: soumyasomanpackage
+Version: 1.0.0
+Summary: packt example package
+Home-page: UNKNOWN
+Author: Soumya Somasundaran
+Author-email: soumyas567@gmail.com
+License: UNKNOWN
+Description: This is the longer description and will appear in the web.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent

@@ -1,0 +1,5 @@
+setup.py
+soumyasomanpackage.egg-info/PKG-INFO
+soumyasomanpackage.egg-info/SOURCES.txt
+soumyasomanpackage.egg-info/dependency_links.txt
+soumyasomanpackage.egg-info/top_level.txt

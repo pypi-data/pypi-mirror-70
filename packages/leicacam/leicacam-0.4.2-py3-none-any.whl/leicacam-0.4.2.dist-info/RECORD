@@ -1,0 +1,9 @@
+leicacam/VERSION,sha256=4ve7YI68niQJL_y3lq0KqD8AFa_iNjXwF99SJzFQ8A0,6
+leicacam/__init__.py,sha256=PyB4hpEdpvdJGzDB2fkB24Zkib_04_U-9gRvjxY2dsU,256
+leicacam/async_cam.py,sha256=GWOmTel0SJH1iGCdWPVbqw0Mi4Pe2JmvE2POvlufgDk,3135
+leicacam/cam.py,sha256=m9BOLM7wsPoxZfDT-i-lpKgiIYdTw2MBqoo6EtF0RdI,12488
+leicacam-0.4.2.dist-info/LICENSE,sha256=L4F-9LdyWW4-8TUfBYGqajG21yj-6Rpl0dTJGzC8OQ8,1079
+leicacam-0.4.2.dist-info/METADATA,sha256=QEV8hH1lmpOBFVRxsM4cN9F7PAcLaRaFkAFpF6UI2go,2766
+leicacam-0.4.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+leicacam-0.4.2.dist-info/top_level.txt,sha256=Oly-Dip5tddq-bP_KI3y640zmnyLqIQNAmb5oI6Suoc,9
+leicacam-0.4.2.dist-info/RECORD,,

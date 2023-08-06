@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+dtfilter/__init__.py
+dtfilter.egg-info/PKG-INFO
+dtfilter.egg-info/SOURCES.txt
+dtfilter.egg-info/dependency_links.txt
+dtfilter.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+rpz_manager.py
+setup.cfg
+setup.py
+rpz_manager.egg-info/PKG-INFO
+rpz_manager.egg-info/SOURCES.txt
+rpz_manager.egg-info/dependency_links.txt
+rpz_manager.egg-info/entry_points.txt
+rpz_manager.egg-info/top_level.txt
+rpz_manager.egg-info/zip-safe
+test/test_data.py

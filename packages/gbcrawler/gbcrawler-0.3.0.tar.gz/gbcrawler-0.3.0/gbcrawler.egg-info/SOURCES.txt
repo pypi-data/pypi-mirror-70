@@ -1,0 +1,7 @@
+README.md
+setup.py
+gbcrawler/__init__.py
+gbcrawler.egg-info/PKG-INFO
+gbcrawler.egg-info/SOURCES.txt
+gbcrawler.egg-info/dependency_links.txt
+gbcrawler.egg-info/top_level.txt

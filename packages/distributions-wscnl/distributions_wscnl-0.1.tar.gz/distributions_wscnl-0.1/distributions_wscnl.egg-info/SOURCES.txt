@@ -1,0 +1,10 @@
+setup.py
+distributions_wscnl/Binomialdistribution.py
+distributions_wscnl/Gaussiandistribution.py
+distributions_wscnl/Generaldistribution.py
+distributions_wscnl/__init__.py
+distributions_wscnl.egg-info/PKG-INFO
+distributions_wscnl.egg-info/SOURCES.txt
+distributions_wscnl.egg-info/dependency_links.txt
+distributions_wscnl.egg-info/not-zip-safe
+distributions_wscnl.egg-info/top_level.txt

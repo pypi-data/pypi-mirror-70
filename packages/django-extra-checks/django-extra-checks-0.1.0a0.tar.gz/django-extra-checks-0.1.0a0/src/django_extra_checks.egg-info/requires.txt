@@ -1,0 +1,6 @@
+
+[dev]
+pytest
+pytest-django
+pytest-cov
+Django

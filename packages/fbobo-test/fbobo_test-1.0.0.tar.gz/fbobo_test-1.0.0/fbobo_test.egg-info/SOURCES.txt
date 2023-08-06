@@ -1,0 +1,10 @@
+README.rst
+setup.py
+fbobo_test.egg-info/PKG-INFO
+fbobo_test.egg-info/SOURCES.txt
+fbobo_test.egg-info/dependency_links.txt
+fbobo_test.egg-info/entry_points.txt
+fbobo_test.egg-info/top_level.txt
+fbobo_test.egg-info/zip-safe
+test/__init__.py
+test/test.py

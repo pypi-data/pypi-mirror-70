@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: scopy
+Version: 1.2.4.1
+Summary: A filter tool for HTS and VS
+Home-page: https://github.com/kotori-y/Scopy
+Author: Zhi-Jiang Yang (Kotori)
+Author-email: kotori@cbdd.me
+License: MIT
+Description: Scopy (Screening COmpounds in PYthon), based on RDKit, is an integrated negative design python library designed for screening out undesiable compounds in the early drug discovery.
+Platform: UNKNOWN

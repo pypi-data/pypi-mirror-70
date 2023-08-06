@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+yplate/__init__.py
+yplate/ops.py
+yplate/yplate.py
+yplate.egg-info/PKG-INFO
+yplate.egg-info/SOURCES.txt
+yplate.egg-info/dependency_links.txt
+yplate.egg-info/entry_points.txt
+yplate.egg-info/not-zip-safe
+yplate.egg-info/requires.txt
+yplate.egg-info/top_level.txt

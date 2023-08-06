@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: QEnv
+Version: 0.1
+Summary: Utilities for programming at QEGS Faversham
+Home-page: http://lib-nexus.github.io/site/docs/QEnv
+Author: Quentin 'Q' Thomas A.K.A Shaun Cameron
+Author-email: libnexus.theprogrammer@gmail.com
+License: MIT
+Description: ## Home: http://lib-nexus.github.io/site
+        
+        Create your own command prompt like environment with QEnv, check the documentation for instructions on how to use!
+Keywords: QE,QGESF,FAVERSHAM,QUEENELIZABETHS,QUENTIN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

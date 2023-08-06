@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+QEnv/Commands.py
+QEnv/Environment.py
+QEnv/Variables.py
+QEnv/__init__.py
+QEnv.egg-info/PKG-INFO
+QEnv.egg-info/SOURCES.txt
+QEnv.egg-info/dependency_links.txt
+QEnv.egg-info/top_level.txt

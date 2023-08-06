@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: xpi_blocks
+Version: 0.0.18
+Summary: Package for xPI boards to handle sensors and peripherial devices
+Home-page: UNKNOWN
+Author: Viacheslav Karpizin
+Author-email: karpizin@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5

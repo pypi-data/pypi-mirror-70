@@ -1,0 +1,5 @@
+[console_scripts]
+recogpipe-daemon = recogpipe.daemon:main
+recogpipe-docker = recogpipe.dockersetup:main
+recogpipe-ibus = recogpipe.ibusengine:main
+

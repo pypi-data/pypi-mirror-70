@@ -1,0 +1,10 @@
+README.md
+setup.py
+tab_gan_metrics/__init__.py
+tab_gan_metrics/helpers.py
+tab_gan_metrics/tab_gan_metrics.py
+tab_gan_metrics.egg-info/PKG-INFO
+tab_gan_metrics.egg-info/SOURCES.txt
+tab_gan_metrics.egg-info/dependency_links.txt
+tab_gan_metrics.egg-info/requires.txt
+tab_gan_metrics.egg-info/top_level.txt

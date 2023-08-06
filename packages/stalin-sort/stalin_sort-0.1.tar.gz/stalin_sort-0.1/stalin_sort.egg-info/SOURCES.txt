@@ -1,0 +1,8 @@
+README.md
+setup.py
+stalin_sort/__init__.py
+stalin_sort.egg-info/PKG-INFO
+stalin_sort.egg-info/SOURCES.txt
+stalin_sort.egg-info/dependency_links.txt
+stalin_sort.egg-info/not-zip-safe
+stalin_sort.egg-info/top_level.txt

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        <div class="muses-flex-row">
+            <form class="muses-window" name="logout" id="logout" method="post">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <div class="muses-field">
+                    <label>
+                        {% trans "Could you confirm you want to logout?" %}
+                    </label>
+                </div>
+                <div style="display: flex">
+                    <input type="submit" value="{% trans "Yes" %}">
+                    <input type="button" value="{% trans "No" %}" onclick="window.history.back();">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

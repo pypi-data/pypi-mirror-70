@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for faq in faq_list %}
+            <div class="muses-list-item">
+                <div class="muses-faq-question">{{ faq.question }}</div>
+                <div class="muses-faq-answer">{{ faq.answer }}</div>
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+{% endblock %}

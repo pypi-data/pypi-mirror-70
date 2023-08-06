@@ -1,0 +1,6 @@
+redis
+pykka
+requests
+python-json-logger
+psutil
+pydantic

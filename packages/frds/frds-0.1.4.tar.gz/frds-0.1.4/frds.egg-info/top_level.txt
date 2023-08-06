@@ -1,0 +1,5 @@
+build
+dist
+frds
+images
+tests

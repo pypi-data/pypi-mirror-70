@@ -1,0 +1,14 @@
+cwe/__init__.py,sha256=ls_1F-EKoR9KD-mh87Z4Sb0VexLu3kiPN-EuopuiJmE,98
+cwe/categories.py,sha256=Go73b-9asUEVP5itSq1i24Z9Wd-yc3Xn7DolrdnGxwc,207
+cwe/category_index.json,sha256=kKDra68zzEoTfI3gOPqo_8u1EaUoMfXMqcLF2yWEx9g,14394
+cwe/database.py,sha256=A0r19VHJBm4-eztVlBvSGj2ilJvP2hh_LqL76ES_pdY,5394
+cwe/db.pickle.gz,sha256=KtNaOUeADrwt3nKnhMZ5usnVpTYw-Z5cba3T8254GbI,517002
+cwe/mappings.py,sha256=a4IumnLOQiBN_jXvTMTCVsLthGRMdZzEm0ISvQinkyc,771
+cwe/weakness.py,sha256=eacDLOW5Qs9X03keOZjKc0tz2Wh3ON62cd0JmnyKc3M,6608
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cwe.py,sha256=snwIPBn6IoX9d17g69FQSLtnMMAJW8UqA3CHzaTnrok,2390
+cwe-1.6.dist-info/LICENSE.txt,sha256=gEqvyfdp2mSfJAMhpd45ebWom2Rz_CvC8v6UiZhq_EM,1056
+cwe-1.6.dist-info/METADATA,sha256=FG2cHlAI5k0LlOlQ7PaaLAFP1ArlrPVXe6VCsixCv08,2466
+cwe-1.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cwe-1.6.dist-info/top_level.txt,sha256=zQng4N5U2TCP0v_a-WiDozPbecj2PMB7B4RHgsDjavg,10
+cwe-1.6.dist-info/RECORD,,

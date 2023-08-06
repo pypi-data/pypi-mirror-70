@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: hkb_diamondsquare
+Version: 1.0.2
+Summary: UNKNOWN
+Home-page: https://github.com/buckinha/DiamondSquare
+Author: Hailey K Buckingham
+Author-email: hailey.k.buckingham@gmail.com
+License: The MIT License (MIT)
+Description: Python library for running the Diamond Square terrain generation algorithm
+Platform: UNKNOWN

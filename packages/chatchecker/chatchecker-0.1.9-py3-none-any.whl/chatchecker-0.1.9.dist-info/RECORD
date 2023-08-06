@@ -1,0 +1,17 @@
+chatchecker/ChatChecker.py,sha256=FubHJdVjteVc4AyKnmvdj_kesNY-HvUjLDDyn80JGUo,1518
+chatchecker/CustomModel.py,sha256=j_yEuPQ8epJ5D8F40mIzKEaOEmraVa7hrj_5gJ_4soo,13617
+chatchecker/Jamo.py,sha256=9AqL9WVFlgVqxCPrBucIWzErnH9k18IyQVJnJVbOvAY,8608
+chatchecker/Utils.py,sha256=ONWfNLem5HlwN4DoT-TzCEi6STS2DxMG1WHg4OBVdOM,10454
+chatchecker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatchecker/clean_dataset.csv,sha256=DcIYuMe4b9wdwxJ4NmoiKZHvsU-1JCF6vkh4iPD4e_c,2640145
+chatchecker/dictionary.txt,sha256=U5XXgwI-Ph3aB0ifr_SsPm4KWO1fXD_ilML9ls5_fzM,4364191
+chatchecker/final-model.pt,sha256=QbGaCzt17Pwn3JwpgzybslfZd9DDTcmWrjS7VXTcojw,16205042
+chatchecker/vocab.pt,sha256=Sc5hGCRfrXgxBNob8lmpEujiBJ7MK0peDQpwLELh9To,1622
+chatchecker/fast_hangle_levenshtein/__init__.py,sha256=e5TA7ydcxEoUB3YjhP2Yn2xZYUcmEQXp3zPb_RpGZR0,366
+chatchecker/fast_hangle_levenshtein/_hangle.py,sha256=TRAxvYzQKe3E7_50pU8zeC_IYMJQajECb5N3aHe0lDo,2024
+chatchecker/fast_hangle_levenshtein/_index.py,sha256=X__dFoM1bdYn6j_jxvk6u7aLonjLPyP_h9Hwn3Gl2js,3956
+chatchecker/fast_hangle_levenshtein/_string_distance.py,sha256=VTojSTNQcJABC9NQpiZs1SJKWl89Gs-jn_Xikwed3WE,1998
+chatchecker-0.1.9.dist-info/METADATA,sha256=GslA3kK-WAdVAcAIPFWBmJFLwMJm4eEafmU1QHiPWxA,709
+chatchecker-0.1.9.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+chatchecker-0.1.9.dist-info/top_level.txt,sha256=gSf_PGFRGc5dZF1QgpoiogVDdz8fCW8KoGiqXfiRv2Y,12
+chatchecker-0.1.9.dist-info/RECORD,,

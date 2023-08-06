@@ -1,0 +1,7 @@
+cli/__init__.py,sha256=sAzFB9tQc2qH4OC-WV2IDTaTgrq8jAUo7lrl610Ee6Y,35
+cli/cli.py,sha256=QCUFXjK1a-P7jGHdH82KzytPVpUcbVWniU2bWyJJE4M,6601
+daami_cli-0.0.3.dist-info/METADATA,sha256=N4VEsgn7qTk7PQ7ai8_6UjHcUtqfBv-bo7BUzbFmwco,674
+daami_cli-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+daami_cli-0.0.3.dist-info/entry_points.txt,sha256=DBhfmdV6hxWBIqeKsRXGBcPxYAytxT-YSm-LwURTgkE,57
+daami_cli-0.0.3.dist-info/top_level.txt,sha256=2ImG917oaVHlm0nP9oJE-Qrgs-fq_fGWgba2H1f8fpE,4
+daami_cli-0.0.3.dist-info/RECORD,,

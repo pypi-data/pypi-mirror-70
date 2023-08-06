@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: PdfFieldFiller
+Version: 1.0.0
+Summary: "PDF Form Filling Tool"
+Home-page: UNKNOWN
+Author: Alex Buitron
+Author-email: alex@buitron.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: PyPDF2 (==1.26.0)
+
+
+It's supercalifragilisticexpialidocious
+Even though the sound of it
+Is something quite atrocious
+If you say it loud enough
+You'll always sound precocious
+Supercalifragilisticexpialidocious
+
+

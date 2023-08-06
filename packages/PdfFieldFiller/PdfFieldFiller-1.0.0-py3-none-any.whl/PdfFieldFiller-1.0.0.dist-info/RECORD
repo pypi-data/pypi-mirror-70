@@ -1,0 +1,10 @@
+PdfFieldFiller/__init__.py,sha256=3KDSAnr0WN0nS5lFhW3pg4J9PcN2D_NrCIDUscVTlRo,110
+PdfFieldFiller/_version.py,sha256=dHuoY6voK7np1A7oRzw1xyBy7CK9_KBAc4FCKW29uRQ,21
+PdfFieldFiller/read_form.py,sha256=V8VL9UJ0_i5kCl_x33VODMQ3GZ9Ae956uFk5ZPqVo50,1155
+PdfFieldFiller/utils.py,sha256=K7n-bmBBqUuOH4aQNTwSKOhtR20ylIGioF0o53dKjzo,770
+PdfFieldFiller/write_form.py,sha256=LH2yP9LoEtzm2TONN1tBWgA93mZjVk62uWZjx7mj9vk,2452
+PdfFieldFiller-1.0.0.dist-info/LICENSE,sha256=Lav_4eb2qckpb6XsYii-FpWHSrFawqpQLJL7EImk6jY,1303
+PdfFieldFiller-1.0.0.dist-info/METADATA,sha256=7ylDqy6aiz_HCFoDtQm8AXZ5zE_NY0eTbq0XPW8eZHE,752
+PdfFieldFiller-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+PdfFieldFiller-1.0.0.dist-info/top_level.txt,sha256=u-W6zLcCl-eraF_uxzvsaSuB6GnOqgfClNeUHs-Uxfo,15
+PdfFieldFiller-1.0.0.dist-info/RECORD,,

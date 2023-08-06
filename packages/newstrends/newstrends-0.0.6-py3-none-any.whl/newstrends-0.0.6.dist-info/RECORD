@@ -1,0 +1,12 @@
+newstrends/__init__.py,sha256=S7u1lbuWmM3A3ajykBialmPoJUK6Jg-WmNqM-9OZFdk,22
+newstrends/_nbdev.py,sha256=8HxiZNi3t5PeXPvaEZMDxhMUP7tqwPBRQVvYLViMuVE,688
+newstrends/describe.py,sha256=oecQgSDstaPIXBcgVNaRU2x1q6V2k9-lE3MOcnHfI3M,3323
+newstrends/loader.py,sha256=3iZTXFUySMUoPeE6kxV5XaVu6yQbhMwaIV9KIMmEsBA,5553
+newstrends/predict.py,sha256=nG_bG5tMyRJLkeYFD8jjCCnhZCstJuq1YObYIRt2JKk,5690
+newstrends/visualize.py,sha256=Title0uZ1FkLajkfQZaBzIO3MKh6H18N-dArfROTnyU,8212
+newstrends-0.0.6.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+newstrends-0.0.6.dist-info/METADATA,sha256=0ZP_w1PG23ZQ_ucXsVSIEFHTy7_7WtgYV4nCUOFaWZM,1014
+newstrends-0.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+newstrends-0.0.6.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+newstrends-0.0.6.dist-info/top_level.txt,sha256=hv_bCzjmkhfe9vu4jfQCNgLNAADmU4AfgcEvXEFIAj8,11
+newstrends-0.0.6.dist-info/RECORD,,

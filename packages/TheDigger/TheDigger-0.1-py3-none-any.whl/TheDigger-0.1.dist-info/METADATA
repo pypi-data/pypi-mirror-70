@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: TheDigger
+Version: 0.1
+Summary: Red Team and Offensive Security Scanning and Reconnaisance Tool for Companies and Pentesters. 
+Home-page: https://github.com/Jistrokz/TheDigger
+Author: Kartavya Trivedi
+Author-email: Kartavyatrivedi9@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: click
+Requires-Dist: dnspython
+Requires-Dist: fake-useragent
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: requests[socks]
+Requires-Dist: xmltodict
+
+# TheDigger
+Red Team and Offensive Security Scanning and Reconnaisance Tool for Companies and Pentesters.
+
+

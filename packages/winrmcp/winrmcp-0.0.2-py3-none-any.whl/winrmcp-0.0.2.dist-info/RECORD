@@ -1,0 +1,8 @@
+winrmcp/__init__.py,sha256=MD74QDsXtPtZ9poKYqqKQSJrSQToIvJLi_o7813XGlc,302
+winrmcp/client.py,sha256=VL0IueS9cEkDNfW7i5fMIBerPL-k6_a205hTXz4_7Z4,7014
+winrmcp/copy.py,sha256=pY_Jpfnz1c5bmk0A8kjc53QMX_DeRsP5gurorwHtcGg,2893
+winrmcp-0.0.2.dist-info/LICENSE,sha256=vVFV4B5uvBSfhCSFqy-mQMDTi01IqXJLk8Ya50nghsU,1089
+winrmcp-0.0.2.dist-info/METADATA,sha256=xiaMmzzNT5vV_mC3LtUGkXxiVZixMkF_3vBu6ZJL1rs,3697
+winrmcp-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+winrmcp-0.0.2.dist-info/top_level.txt,sha256=COJeIgBPnDwyjNTCKlpMfsYzeh-hBDIaDQmfa3CgBP0,8
+winrmcp-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,5 @@
+cppyy>=1.7.1
+pathlib
+
+[numpy]
+numpy

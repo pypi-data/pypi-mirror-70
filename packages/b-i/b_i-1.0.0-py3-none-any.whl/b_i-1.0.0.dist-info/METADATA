@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: b-i
+Version: 1.0.0
+Summary: python library for data project
+Home-page: https://github.com/cppla/b-i
+Author: cppla
+Author-email: i@cpp.la
+License: MIT License
+Keywords: b-i,hive,mysql,elasticsearch,cppla
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: sasl
+Requires-Dist: thrift
+Requires-Dist: thrift-sasl
+Requires-Dist: pyhive
+Requires-Dist: requests
+Requires-Dist: sqlalchemy
+Requires-Dist: loguru
+Requires-Dist: python-dateutil
+Requires-Dist: elasticsearch
+
+BI tools for data developer use Python Language.
+
+

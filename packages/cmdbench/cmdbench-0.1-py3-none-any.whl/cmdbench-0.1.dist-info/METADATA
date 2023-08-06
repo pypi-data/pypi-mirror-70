@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: cmdbench
+Version: 0.1
+Summary: Quick and easy benchmarking for any command's CPU, memory, disk usage and runtime.
+Home-page: https://github.com/manzik/cmdbench
+Author: Mohsen Yousefian
+Author-email: contact@manzik.com
+License: MIT
+Download-URL: https://pypi.org/project/cmdbench/
+Keywords: benchmarks,benchmark,benchmarking,profiler,profiling,timeit,time,runtime,performance,monitoring,monitor,cpu,memory,ram,disk
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Benchmark
+Classifier: Topic :: Utilities
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Requires-Dist: numpy
+Requires-Dist: psutil (>=5.7.0)
+Requires-Dist: beeprint (>=2.4.10)
+Requires-Dist: Click
+Requires-Dist: tqdm
+Requires-Dist: colorama
+Provides-Extra: resources_plotting
+Requires-Dist: matplotlib (>=3.2.1) ; extra == 'resources_plotting'
+
+UNKNOWN
+
+

@@ -1,0 +1,6 @@
+cchardet
+pathlib
+pandas
+xlrd
+numpy
+xlsxwriter

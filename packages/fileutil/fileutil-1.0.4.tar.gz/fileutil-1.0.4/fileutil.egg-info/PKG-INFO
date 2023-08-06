@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: fileutil
+Version: 1.0.4
+Summary: 
+        file union,file split by row/size/column,txt file transform to excel or excel file transform to txt and so on
+    
+Home-page: https://github.com/lurkera/fileutil
+Author: Mr linle
+Author-email: linle861021@163.com
+License: MIT
+Description: *fileutil*
+        
+        实现对文本文件和excel文件进行合并、分割、类型转换的功能
+        
+Platform: all
+Requires-Python: >=3

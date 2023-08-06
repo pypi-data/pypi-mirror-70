@@ -1,0 +1,11 @@
+rest_api_lib_creator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rest_api_lib_creator/core.py,sha256=w3FFhjcBcf58UPjN49G9jYngvkzXj18bIclTUADdspk,7723
+rest_api_lib_creator/datastructures.py,sha256=z-QHaooogKP4D1BJtP5NkMEYyNIZZyKoWmrTHAXyg1g,627
+rest_api_lib_creator/mixins.py,sha256=gDZpIqlgc6hHABcGcx4t8R9b0cmEwov53GNoiZqqes4,3956
+rest_api_lib_creator/pagination_classes.py,sha256=wsSxbDAQ6FFlofRHdNmlJLf8sMJqgO1UPxcoFsmbLvw,290
+rest_api_lib_creator/utils.py,sha256=SDugsnEr034JsAQrN2voCMqT1D_dKExWdI48pRbFC6U,516
+rest_api_lib_creator-0.4.0.dist-info/LICENSE,sha256=eSoOVAktlOFI8TSP_UcEExt_4r6v3Hl3G7izcbbl-zI,1081
+rest_api_lib_creator-0.4.0.dist-info/METADATA,sha256=JdQ1jLlho0hZOo--wnVt5HD0wUQkOV7uTw-N7IvuAWY,5471
+rest_api_lib_creator-0.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rest_api_lib_creator-0.4.0.dist-info/top_level.txt,sha256=8Fbgv3B10RcdC-RX-ZzKLtUYhbkmFaxhV0BiVkAjdxk,21
+rest_api_lib_creator-0.4.0.dist-info/RECORD,,

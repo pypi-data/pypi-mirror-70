@@ -1,0 +1,7 @@
+cached_property
+glfw
+gym
+mako
+mujoco-py<1.50.2,>=1.50.1
+numpy
+pytest

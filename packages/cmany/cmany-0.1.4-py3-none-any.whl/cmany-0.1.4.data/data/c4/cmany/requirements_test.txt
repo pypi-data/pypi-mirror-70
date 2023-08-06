@@ -1,0 +1,6 @@
+wheel
+nose
+twine
+coverage
+codecov
+sphinx

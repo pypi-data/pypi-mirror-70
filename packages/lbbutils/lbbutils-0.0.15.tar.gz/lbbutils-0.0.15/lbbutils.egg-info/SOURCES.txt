@@ -1,0 +1,7 @@
+README.md
+setup.py
+lbbutils.egg-info/PKG-INFO
+lbbutils.egg-info/SOURCES.txt
+lbbutils.egg-info/dependency_links.txt
+lbbutils.egg-info/requires.txt
+lbbutils.egg-info/top_level.txt

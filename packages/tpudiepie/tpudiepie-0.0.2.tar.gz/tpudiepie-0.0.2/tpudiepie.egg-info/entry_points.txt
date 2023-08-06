@@ -1,0 +1,4 @@
+[console_scripts]
+die = tpudiepie.program:cli
+tpudiepie = tpudiepie.program:cli
+

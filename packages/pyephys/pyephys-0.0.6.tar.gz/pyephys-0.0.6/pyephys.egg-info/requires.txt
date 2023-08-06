@@ -1,0 +1,6 @@
+numpy
+neo
+matplotlib
+pandas
+pickle
+scipy

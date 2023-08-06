@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: isOdd
+Version: 0.1
+Summary: Simple library to check if a number is odd
+Home-page: https://github.com/juanbenitezdev/isOdd
+Author: Juan Benitez
+Author-email: juanbenitezdev@gmail.com
+License: MIT
+Download-URL: https://github.com/JuanBenitezDev/isOdd/archive/v0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: Odd,Integer,Math
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

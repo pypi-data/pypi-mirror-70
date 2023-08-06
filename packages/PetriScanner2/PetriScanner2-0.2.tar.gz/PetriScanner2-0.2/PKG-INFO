@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: PetriScanner2
+Version: 0.2
+Summary: Free open source digital plate reader
+Home-page: https://github.com/Dfernand1795/PetriScanner2
+Author: Diego Fernandez
+Author-email: deg1795@gmail.com
+License: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Download-URL: https://github.com/Dfernand1795/PetriScanner2/archive/PetriScanner2.zip
+Description: UNKNOWN
+Keywords: Digital,Plate,Reading,Bacteria,Growth,Image,Analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

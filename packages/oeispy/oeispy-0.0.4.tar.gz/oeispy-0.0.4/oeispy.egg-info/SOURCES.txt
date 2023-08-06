@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+oeispy/__init__.py
+oeispy.egg-info/PKG-INFO
+oeispy.egg-info/SOURCES.txt
+oeispy.egg-info/dependency_links.txt
+oeispy.egg-info/requires.txt
+oeispy.egg-info/top_level.txt

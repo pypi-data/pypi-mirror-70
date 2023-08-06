@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bangladatetime
+Version: 0.0.1
+Summary: Python package for Bengali (i.e Bangabdo) date and time
+Home-page: https://github.com/arafat-hasan/bangladatetime/
+Author: Arafat Hasan
+Author-email: opendoor.arafat@gmail.com
+License: MIT
+Keywords: bangla,bangla date,bongabdo,bengali,bengali date,bengali datetime,bangla datetime
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Bengali
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Python package for Bengali (i.e Bangabdo) date and time 
+
+*Will be updated soon.*
+
+

@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.rst
+fbdiff.py
+setup.py
+.github/workflows/pypi_publish.yml
+fbdiff.egg-info/PKG-INFO
+fbdiff.egg-info/SOURCES.txt
+fbdiff.egg-info/dependency_links.txt
+fbdiff.egg-info/entry_points.txt
+fbdiff.egg-info/requires.txt
+fbdiff.egg-info/top_level.txt

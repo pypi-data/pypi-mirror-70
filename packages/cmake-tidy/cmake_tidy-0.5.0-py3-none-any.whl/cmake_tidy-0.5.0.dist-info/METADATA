@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: cmake-tidy
+Version: 0.5.0
+Summary: cmake-tidy is a tool to format/analyze cmake source files.
+Home-page: https://github.com/MaciejPatro/cmake-tidy
+Author: Maciej Patro
+Author-email: maciejpatro@gmail.com
+License: LICENSE
+Keywords: cmake,format,static-analysis,developer,tool
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6.0
+Description-Content-Type: text/plain
+Requires-Dist: approvaltests (~=0.2.6)
+Requires-Dist: iteration-utilities (~=0.10.1)
+Requires-Dist: jsonschema (~=3.2.0)
+Requires-Dist: mock (~=4.0.1)
+Requires-Dist: ply (~=3.11)
+
+For More information visit https://github.com/MaciejPatro/cmake-tidy
+
+

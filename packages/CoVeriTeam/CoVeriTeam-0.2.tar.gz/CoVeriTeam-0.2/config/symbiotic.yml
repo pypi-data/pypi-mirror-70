@@ -1,0 +1,17 @@
+# This file is part of CoVeriTeam, a tool for on-demand composition of cooperative verification systems:
+# https://gitlab.com/sosy-lab/software/coveriteam
+#
+# SPDX-FileCopyrightText: 2020 Dirk Beyer <https://www.sosy-lab.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+actor_name: symbiotic
+toolinfo_module: "symbiotic.py"
+archive:
+  location: "https://gitlab.com/sosy-lab/sv-comp/archives-2020/-/raw/master/2020/symbiotic.zip"
+options: ['--sv-comp', '--witness', 'witness.graphml']
+resourcelimits:
+  memlimit: "15 GB"
+  timelimit: "15 min"
+  cpuCores: "8"
+format_version: '1.1'

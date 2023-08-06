@@ -1,0 +1,45 @@
+// This file is part of CoVeriTeam, a tool for on-demand composition of cooperative verification systems:
+// https://gitlab.com/sosy-lab/software/coveriteam
+//
+// SPDX-FileCopyrightText: 2020 Dirk Beyer <https://www.sosy-lab.org>
+//
+// SPDX-License-Identifier: Apache-2.0
+
+// Verification-Based Validation a la MetaVal
+
+fun meta_validator(){
+    // First stage: instrumentation of witness and program.
+    ins = ActorFactory.create(WitnessInstrumentor, "../config/cpa-witnesses-instrumentor.yml");
+
+    // The following code chooses different verifiers for different kinds of specifications.
+
+    // Choose UltimateAutomizer for termination and overflow analysis.
+    ua = ActorFactory.create(ProgramVerifier, "../config/uautomizer.yml");
+    cond_ua = INSTANCEOF(spec, Termination) OR INSTANCEOF(spec, NoOverflow);
+    ite_ua = ITE(cond_ua, ua, Identity(ua));
+
+    // Choose symbiotic for mem safety.
+    sym = ActorFactory.create(ProgramVerifier, "../config/symbiotic.yml");
+    cond_sym = INSTANCEOF(spec, MemSafety);
+    ite_sym = ITE(cond_sym, sym, ite_ua);
+
+    // Choose cpachecker for reach safety.
+    cpa = ActorFactory.create(ProgramVerifier, "../config/cpa-seq.yml");
+    cond_cpa = INSTANCEOF(spec, ReachSafety);
+    ite_ver = ITE(cond_cpa, cpa, ite_sym);
+
+    // MetaVal is a sequence of an instrumentor and a verifier.
+    m = SEQUENCE(ins, ite_ver);
+    return m;
+}
+
+metaval = meta_validator();
+
+// Prepare inputs.
+witness = ArtifactFactory.create(ReachabilityWitness, witness_path);
+prog = ArtifactFactory.create(CProgram, prog_path);
+spec = ArtifactFactory.create(ReachSafety, spec_path);
+ip = {'program':prog, 'spec':spec, 'witness':witness};
+
+// Execute metaval on the inputs.
+execute(metaval, ip);

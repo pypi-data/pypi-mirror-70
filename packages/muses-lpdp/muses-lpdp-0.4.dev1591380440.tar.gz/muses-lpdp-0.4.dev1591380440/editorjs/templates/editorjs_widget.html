@@ -1,0 +1,67 @@
+<div>
+    <div
+            id="codex-editor-{{ id }}"
+            data-output-id="{{ id }}"
+            class="muses-editor"
+            {% include "editorjs_widget_attrs.html" %}
+
+    >
+    </div>
+    <input type="hidden" id="{{ id }}" name="{{ name }}" value={{ value|safe }}/>
+    <script defer type="application/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const jsonOutputElementId = document.getElementById('codex-editor-{{ id }}')
+                .getAttribute('data-output-id');
+            const jsonOutputElement = document.getElementById(jsonOutputElementId);
+            let initialContent = undefined;
+            try {
+                initialContent = JSON.parse(jsonOutputElement.value);
+            } catch (e) {
+            }
+            const editor = new EditorJS({
+                holder: 'codex-editor-{{ id }}',
+                onChange: () => {
+                    editor.save().then(result => {
+                        jsonOutputElement.value = encodeURI(JSON.stringify(result, null, 0));
+                    });
+                },
+                tools: {
+                    header: Header,
+                    checklist: Checklist,
+                    quote: Quote,
+                    table: {
+                        class: Table,
+                    },
+                    image: {
+                        class: ImageTool,
+                        config: {
+                            endpoints: {
+                                byFile: '{{ media_url }}', // Your backend file uploader endpoint
+                            }
+                        }
+                    },
+                    inlineCode: {
+                        class: InlineCode,
+                        shortcut: 'CMD+SHIFT+M',
+                    },
+                    paragraph: {
+                        class: Paragraph,
+                        inlineToolbar: true,
+                    },
+                    linkTool: {
+                        class: LinkTool,
+                        config: {
+                            endpoint: '{{ media_url }}', // Your backend endpoint for url data fetching
+                        }
+                    },
+                    list: {
+                        class: List,
+                        inlineToolbar: true,
+                    },
+
+                },
+                data: initialContent || {}
+            });
+        }, false);
+    </script>
+</div> 

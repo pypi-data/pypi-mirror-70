@@ -1,0 +1,8 @@
+{% load i18n %}
+<form action="#">
+    <div class="muses-search-field">
+        <input type="hidden" value="{{ search_type }}" id="st" name="st">
+        <input type="search" placeholder="{% trans "Search" %}" id="q" name="q">
+        <button type="submit"><em class="fa fa-search"></em></button>
+    </div>
+</form>

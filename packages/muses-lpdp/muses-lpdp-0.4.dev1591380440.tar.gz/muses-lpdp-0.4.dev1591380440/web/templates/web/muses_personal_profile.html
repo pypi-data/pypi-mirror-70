@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {{ site_title }} - {% trans "Profile" %}
+{% endblock %}
+{% block nav_bar %}
+
+    {% include '_partials/nav_bar_section.html' %}
+
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        <div class="muses-list-title">{% trans "Profile" %}</div>
+        <div class="muses-list-title-2">{% trans "General information" %}</div>
+        <div class="muses-list-section">
+            <form method="post">
+                {% csrf_token %}
+                {{ form_change_general_information.as_div }}
+                <div class="muses-form-submit">
+                    <input type="submit" value="{% trans "Save" %}">
+                    <input type="reset" value="{% trans "Reset" %}">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

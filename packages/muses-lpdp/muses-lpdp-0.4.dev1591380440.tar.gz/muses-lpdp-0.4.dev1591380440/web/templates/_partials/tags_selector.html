@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<div class="muses-selected-tags">
+    <div class="muses-tag">tag1 <em class="fa fa-close"></em></div>
+    <div class="muses-tag">tag2</div>
+</div>
+<input type="hidden" id="selected_tags" value="tag1;tag2;">
+<input class="awesomplete" type="text" placeholder="{% trans "Add new tag and press [enter]" %}"
+           list="tags_suggests">
+    <datalist id="tags_suggests">
+        <option>Tag One</option>
+        <option>Tag Two</option>
+        <option>Tag Three</option>
+        <option>Tag For</option>
+        <option>Tag Five</option>
+        <option>Tag Six</option>
+        <option>Tag Seven</option>
+        <option>Tag Eight</option>
+        <option>Tag Nine</option>
+        <option>Tag Ten</option>
+    </datalist>

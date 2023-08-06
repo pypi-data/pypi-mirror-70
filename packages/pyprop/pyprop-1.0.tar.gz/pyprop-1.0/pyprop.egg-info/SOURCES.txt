@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pyprop/Binomialdistribution.py
+pyprop/Generaldistribution.py
+pyprop/Guassiandistribution.py
+pyprop/__init__.py
+pyprop.egg-info/PKG-INFO
+pyprop.egg-info/SOURCES.txt
+pyprop.egg-info/dependency_links.txt
+pyprop.egg-info/not-zip-safe
+pyprop.egg-info/top_level.txt

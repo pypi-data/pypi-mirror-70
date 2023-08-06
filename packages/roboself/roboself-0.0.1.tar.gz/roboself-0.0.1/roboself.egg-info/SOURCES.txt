@@ -1,0 +1,7 @@
+README.md
+setup.py
+roboself/__init__.py
+roboself.egg-info/PKG-INFO
+roboself.egg-info/SOURCES.txt
+roboself.egg-info/dependency_links.txt
+roboself.egg-info/top_level.txt

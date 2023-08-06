@@ -1,0 +1,9 @@
+dbnd==0.27.10
+pyox
+hdfs
+
+[kerberos]
+requests_kerberos
+hdfs
+
+[tests]

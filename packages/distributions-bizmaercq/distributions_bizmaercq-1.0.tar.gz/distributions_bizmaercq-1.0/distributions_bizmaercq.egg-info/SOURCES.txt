@@ -1,0 +1,10 @@
+setup.py
+distributions_bizmaercq/__init__.py
+distributions_bizmaercq/binomial.py
+distributions_bizmaercq/distribution.py
+distributions_bizmaercq/gaussian.py
+distributions_bizmaercq.egg-info/PKG-INFO
+distributions_bizmaercq.egg-info/SOURCES.txt
+distributions_bizmaercq.egg-info/dependency_links.txt
+distributions_bizmaercq.egg-info/not-zip-safe
+distributions_bizmaercq.egg-info/top_level.txt

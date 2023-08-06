@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: readPos
+Version: 0.1
+Summary: Read plain text file data from csv map
+Home-page: http://github.com/dmoralesl
+Author: David Morales
+Author-email: dmorales@odec.es
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.25.3)
+
+Por el momento esto no va a contener informaciÃ³n relevante. Pero aquÃ­ se pondrÃ¡n las instrucciones de uso del paquete.
+
+

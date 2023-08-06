@@ -1,0 +1,6 @@
+README.md
+setup.py
+numpyprint.egg-info/PKG-INFO
+numpyprint.egg-info/SOURCES.txt
+numpyprint.egg-info/dependency_links.txt
+numpyprint.egg-info/top_level.txt

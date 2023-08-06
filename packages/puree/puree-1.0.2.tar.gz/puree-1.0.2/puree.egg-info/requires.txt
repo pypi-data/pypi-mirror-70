@@ -1,0 +1,4 @@
+pysodium>=0.7.5
+pysodium<1.0.0
+argon2-cffi>=20.1.0
+argon2-cffi<21.0.0

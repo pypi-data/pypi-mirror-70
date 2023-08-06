@@ -1,0 +1,10 @@
+numpy
+uncertainties
+matplotlib
+seaborn
+cycler
+scipy
+lmfit==0.9.14
+emcee==3.0.2
+corner
+tqdm

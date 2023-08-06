@@ -1,0 +1,16 @@
+aiorun
+crossplane
+pillow
+streamdeck
+
+[all]
+aiohttp
+jsonpath-ng
+pulsectl
+
+[http]
+aiohttp
+jsonpath-ng
+
+[pulseaudio]
+pulsectl

@@ -1,0 +1,10 @@
+example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example/app.py,sha256=-TI24cmDXK828wtzP9ZChsENhEJCbxqSgLvB_MJsEsU,465
+example/events.py,sha256=c3FMbr5TOq_IEjwixsvWuq8RKUOUDLFGvMPGpl_fqJQ,103
+example/styles.py,sha256=XdJkuw5_lFJSR2gUintWsQ23H4GVrjsSKKKIFpJHYPE,339
+toga_layout/__init__.py,sha256=mgX68v_0jgu15fbonkGavC0rav4oRR1ompDUToeZP7U,49
+toga_layout/layout.py,sha256=A5UT75qHgc53jX3NilWx0IxasymQSo9FK-6qIwfK8vA,3407
+toga_layout_builder-0.1.0.dist-info/METADATA,sha256=rB9md6VjsAkpgIs7vjxvc9uv9zAPLW1M_ACXKgDIVNs,773
+toga_layout_builder-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+toga_layout_builder-0.1.0.dist-info/top_level.txt,sha256=pclUG5SgxbsbGzyetHQTFzrD5h22eE27jX8cxIooXLI,20
+toga_layout_builder-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: yarabuilder
+Version: 0.0.1
+Summary: A package to build YARA rules using Python
+Home-page: https://github.com/BitsOfBinary/yarabuilder
+Author: BitsOfBinary
+License: UNKNOWN
+Description: # yarabuilder
+        Python 3 library to build YARA rules.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

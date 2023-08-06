@@ -1,0 +1,14 @@
+chatchecker/ChatChecker.py,sha256=3HFFADw9w-sgju3dO325af48ISvbZpQyH53lsYqjPsQ,1491
+chatchecker/CustomModel.py,sha256=9LYtC6ah6cmJTv1FLUaZeL3JYs88TrcSlcYY1xmsGkE,13530
+chatchecker/EditDistance.py,sha256=jdSsou-wRhST5RuR9tvJWoNFLL-OisMN9FCHLibg-Ls,6112
+chatchecker/Jamo.py,sha256=9AqL9WVFlgVqxCPrBucIWzErnH9k18IyQVJnJVbOvAY,8608
+chatchecker/Utils.py,sha256=4Yfja_uSvXRrlADIPW9Nsckzd2R3bj0BdU4PGmybne0,10489
+chatchecker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatchecker/fast_hangle_levenshtein/__init__.py,sha256=e5TA7ydcxEoUB3YjhP2Yn2xZYUcmEQXp3zPb_RpGZR0,366
+chatchecker/fast_hangle_levenshtein/_hangle.py,sha256=TRAxvYzQKe3E7_50pU8zeC_IYMJQajECb5N3aHe0lDo,2024
+chatchecker/fast_hangle_levenshtein/_index.py,sha256=X__dFoM1bdYn6j_jxvk6u7aLonjLPyP_h9Hwn3Gl2js,3956
+chatchecker/fast_hangle_levenshtein/_string_distance.py,sha256=VTojSTNQcJABC9NQpiZs1SJKWl89Gs-jn_Xikwed3WE,1998
+chatchecker-0.1.1.dist-info/METADATA,sha256=9cOTwawG4EMxyjaZe0wB0tcXhBgoLmD8BeRNGEOAVwI,709
+chatchecker-0.1.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+chatchecker-0.1.1.dist-info/top_level.txt,sha256=gSf_PGFRGc5dZF1QgpoiogVDdz8fCW8KoGiqXfiRv2Y,12
+chatchecker-0.1.1.dist-info/RECORD,,

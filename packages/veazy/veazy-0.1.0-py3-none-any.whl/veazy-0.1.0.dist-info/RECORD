@@ -1,0 +1,9 @@
+veazy/__init__.py,sha256=M9-RLp9A6Loam5fOcZIG5oIoicRsfzLpxSY2WikJK8w,24
+veazy/cli.py,sha256=RIO2Q9dNTdNJuAfLsc6u_0kBpe5VIzGfE95Q_ss4szg,4036
+veazy/veazy.py,sha256=PnK-MFU0jn7JMBleT3srG-lRZxNzPd6SUvCLxGzzblA,10171
+veazy-0.1.0.dist-info/LICENCE,sha256=5ioxltYQZ7ktZrhkSYu7tppvptGsWA6deUGNzj3UmVI,1156
+veazy-0.1.0.dist-info/METADATA,sha256=RJEjYMXeFikQKaghXKgJ3a5xIqW41XA9KwBDJ33Iemw,559
+veazy-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+veazy-0.1.0.dist-info/entry_points.txt,sha256=ygIvjdgHJmCpi9c2QS92GYAwMNRMkNRWM7O3pzABFCg,41
+veazy-0.1.0.dist-info/top_level.txt,sha256=KKYU29ZlTUk_ytk8ib0KJmBx1FiZUntl8Rp_Ukv4tBo,6
+veazy-0.1.0.dist-info/RECORD,,

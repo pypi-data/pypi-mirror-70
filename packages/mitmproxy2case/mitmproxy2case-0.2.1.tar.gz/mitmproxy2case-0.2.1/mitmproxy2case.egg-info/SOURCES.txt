@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+mitmproxy2case.egg-info/PKG-INFO
+mitmproxy2case.egg-info/SOURCES.txt
+mitmproxy2case.egg-info/dependency_links.txt
+mitmproxy2case.egg-info/entry_points.txt
+mitmproxy2case.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+diff-files=diff_files.cli:cli
+

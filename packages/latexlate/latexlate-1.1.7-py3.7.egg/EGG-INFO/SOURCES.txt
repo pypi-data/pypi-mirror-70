@@ -1,0 +1,15 @@
+setup.py
+latexlate/CodeBuilder.py
+latexlate/StandartFilters.py
+latexlate/SuperRenderer.py
+latexlate/Template.py
+latexlate/TokenAnalyzer.py
+latexlate/__init__.py
+latexlate.egg-info/PKG-INFO
+latexlate.egg-info/SOURCES.txt
+latexlate.egg-info/dependency_links.txt
+latexlate.egg-info/top_level.txt
+latexlate/Errors/SyntaxError.py
+latexlate/Errors/__init__.py
+latexlate/tests/__init__.py
+latexlate/tests/test_TokenAnalyzer.py

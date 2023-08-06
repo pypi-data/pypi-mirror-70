@@ -1,0 +1,9 @@
+[console_scripts]
+zuul-stats-client = zuul_stats_client.main:main
+
+[zuul_stats.client]
+old-jobs = zuul_stats_client.old:OldJobs
+pipeline-detail = zuul_stats_client.pipeline:PipelineDetail
+pipeline-list = zuul_stats_client.pipeline:PipelineList
+tenant-list = zuul_stats_client.tenants:TenantList
+

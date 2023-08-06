@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: gridnetwork
+Version: 0.1.0
+Summary: A network router used by the PyGrid platform.
+Home-page: https://github.com/OpenMined/GridNetwork
+Author: OpenMined
+Author-email: contact@openmined.org
+Maintainer: Benardi Nunes
+Maintainer-email: benardinunes@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/OpenMined/GridNetwork/issues
+Project-URL: Funding, https://opencollective.com/openmined
+Project-URL: Source, https://github.com/OpenMined/GridNetwork
+Description: # GridNetwork
+        
+        [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
+        
+        A network router used by the PyGrid platform.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown

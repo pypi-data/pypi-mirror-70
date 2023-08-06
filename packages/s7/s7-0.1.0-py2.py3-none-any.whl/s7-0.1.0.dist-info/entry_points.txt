@@ -1,0 +1,3 @@
+[console_scripts]
+s7=s7.cli:main
+

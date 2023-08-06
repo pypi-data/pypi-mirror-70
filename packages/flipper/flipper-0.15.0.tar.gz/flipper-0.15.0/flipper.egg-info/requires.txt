@@ -1,0 +1,6 @@
+decorator
+numpy
+networkx
+pandas
+realalg
+snappy

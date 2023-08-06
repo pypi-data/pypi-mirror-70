@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: passgen-mk
+Version: 1.0.0
+Summary: Generates a password consisting of selected characters and the specified length.
+Home-page: https://gitlab.com/marekkon/passgen
+Author: Marek Konopka
+Author-email: git@marek-konopka.com
+License: ICS
+Keywords: console password-generator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security :: Cryptography
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+
+=======
+passgen
+=======
+
+
+Cli password generator
+----------------------
+Generates a password consisting of selected characters and the specified length.
+
+Usage
+-----
+::
+
+  usage: passgen [-h] [-l] [-u] [-d] [-s] [-a] [-c CUSTOM] [-n LENGTH]
+
+  Generates a password consisting of selected characters and the specified length.
+
+  optional arguments:
+    -h, --help            show this help message and exit
+    -l, --lower           password should contain lowercase letters
+    -u, --upper           password should contain uppercase letters
+    -d, --digits          password should contain digits
+    -s, --special         password should contain special characters
+    -a, --all             password should contain all of the above character groups, i.e. lowercase letters, uppercase letters, digits and
+                          special characters
+    -c CUSTOM, --custom CUSTOM
+                          password should contain only characters passed as argument value, e.g. "abcd"; if the custom option is selected,
+                          other options regarding the password structure are not taken into account
+    -n LENGTH, --length LENGTH
+                          set password length
+
+
+If you want to copy generated password to clipboard use::
+
+  passgen -a | xclip -sel clip
+
+Tests
+-----
+The project is using pytest. Tests are in package directory, named ``[module]_test.py``.
+
+
+Contribiuting
+-------------
+Please report any suggestions, feature requests, bug reports, or annoyances to the GitLab `issue tracker <https://gitlab.com/marekkon/passgen/-/issues>`_.
+
+
+Related projects
+----------------
+- `passgen <https://pypi.org/project/passgen/>`_ - mature project with extensive functionality.
+
+

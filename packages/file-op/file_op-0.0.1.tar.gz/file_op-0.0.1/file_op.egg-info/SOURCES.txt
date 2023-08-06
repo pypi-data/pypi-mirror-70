@@ -1,0 +1,8 @@
+README.md
+setup.py
+file_op/__init__.py
+file_op/find_delimiter.py
+file_op.egg-info/PKG-INFO
+file_op.egg-info/SOURCES.txt
+file_op.egg-info/dependency_links.txt
+file_op.egg-info/top_level.txt

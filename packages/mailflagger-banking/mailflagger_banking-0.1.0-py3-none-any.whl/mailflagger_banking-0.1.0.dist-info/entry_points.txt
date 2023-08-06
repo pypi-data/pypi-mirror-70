@@ -1,0 +1,3 @@
+[mailflagger.plugins.commands]
+mt940 = mailflagger.plugins.mt940
+

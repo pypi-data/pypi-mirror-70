@@ -1,0 +1,10 @@
+setup.py
+mol_distributions/Binomialdistribution.py
+mol_distributions/Gaussiandistribution.py
+mol_distributions/Generaldistribution.py
+mol_distributions/__init__.py
+mol_distributions.egg-info/PKG-INFO
+mol_distributions.egg-info/SOURCES.txt
+mol_distributions.egg-info/dependency_links.txt
+mol_distributions.egg-info/not-zip-safe
+mol_distributions.egg-info/top_level.txt

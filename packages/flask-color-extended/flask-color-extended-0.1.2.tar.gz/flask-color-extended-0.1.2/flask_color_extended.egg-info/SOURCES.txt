@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+flask_color_extended/__init__.py
+flask_color_extended/color.py
+flask_color_extended.egg-info/PKG-INFO
+flask_color_extended.egg-info/SOURCES.txt
+flask_color_extended.egg-info/dependency_links.txt
+flask_color_extended.egg-info/namespace_packages.txt
+flask_color_extended.egg-info/not-zip-safe
+flask_color_extended.egg-info/requires.txt
+flask_color_extended.egg-info/top_level.txt

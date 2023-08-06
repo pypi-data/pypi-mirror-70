@@ -1,0 +1,15 @@
+README.rst
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+distributions_study/Binomialdistribution_challenge.py
+distributions_study/Gaussiandistribution.py
+distributions_study/Generaldistribution.py
+distributions_study/__init__.py
+distributions_study.egg-info/PKG-INFO
+distributions_study.egg-info/SOURCES.txt
+distributions_study.egg-info/dependency_links.txt
+distributions_study.egg-info/not-zip-safe
+distributions_study.egg-info/top_level.txt

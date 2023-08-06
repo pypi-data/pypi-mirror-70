@@ -1,0 +1,7 @@
+README.md
+setup.py
+inforion.egg-info/PKG-INFO
+inforion.egg-info/SOURCES.txt
+inforion.egg-info/dependency_links.txt
+inforion.egg-info/top_level.txt
+inforion_pkg/__init__.py

@@ -1,0 +1,10 @@
+
+[docs]
+sphinx
+sphinx-bootstrap-theme
+ipython
+
+[test]
+pytest
+codecov
+pytest-cov

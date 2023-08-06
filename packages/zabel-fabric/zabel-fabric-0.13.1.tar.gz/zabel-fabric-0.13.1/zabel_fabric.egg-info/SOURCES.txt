@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+zabel/fabric/__init__.py
+zabel/fabric/standalone/__init__.py
+zabel/fabric/standalone/coreapis.yaml
+zabel/fabric/standalone/etcd3.py
+zabel/fabric/standalone/openapi.py
+zabel_fabric.egg-info/PKG-INFO
+zabel_fabric.egg-info/SOURCES.txt
+zabel_fabric.egg-info/dependency_links.txt
+zabel_fabric.egg-info/requires.txt
+zabel_fabric.egg-info/top_level.txt

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: icut
+Version: 0.0.2
+Summary: A fast Thai tokenization library
+Home-page: https://github.com/korakot/icut
+Author: Korakot Chaovavanich
+Author-email: korakot@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# icut
+A fast Thai word tokenization
+
+ICU can do very fast tokenization. We use preprocessing and postprocessing after icu, 
+allowing customization while keeping the speed.
+
+Now only just icu.
+

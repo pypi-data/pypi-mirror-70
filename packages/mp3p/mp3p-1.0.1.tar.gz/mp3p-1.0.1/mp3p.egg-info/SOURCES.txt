@@ -1,0 +1,15 @@
+README.md
+setup.py
+mp3p/__init__.py
+mp3p/__main__.py
+mp3p/command_player.py
+mp3p/controls.py
+mp3p/time_manipulation.py
+mp3p/time_util.py
+mp3p/volume.py
+mp3p.egg-info/PKG-INFO
+mp3p.egg-info/SOURCES.txt
+mp3p.egg-info/dependency_links.txt
+mp3p.egg-info/entry_points.txt
+mp3p.egg-info/requires.txt
+mp3p.egg-info/top_level.txt

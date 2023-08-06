@@ -1,0 +1,3 @@
+[console_scripts]
+mp3p = mp3p.__main__:main
+

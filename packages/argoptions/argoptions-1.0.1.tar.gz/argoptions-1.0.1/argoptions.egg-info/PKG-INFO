@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: argoptions
+Version: 1.0.1
+Summary: see tornado.options
+Home-page: https://github.com/wzwjustdoit/argoptions
+Author: wzwjustdoit
+Author-email: wzwjustdoit@163.com
+Maintainer: wzwjustdoit
+Maintainer-email: wzwjustdoit@163.com
+License: MIT
+Description: 
+        
+        see tornado.options
+        
+        ```pycon
+        >>> from argoptions import options
+        >>> options.define('appname', default='', type=str, help='the app name')
+        >>> options.define('flag', default='', type=str, help='load config file by this specified flag')
+        >>> options.define('port', default=65535, type=int, help='run server on this specified port')
+        >>> options.parse_command_line()
+        >>> 
+        >>> 
+        >>> 
+        >>> from argoptions import options
+        >>> port = options.options.port
+        >>> print(port)
+        ```
+        
+        ---------------------------------------------------------------------
+        
+Keywords: argoptions,parser,opt,options,tornado,argv,sys
+Platform: all
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0.0
+Description-Content-Type: text/markdown

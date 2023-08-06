@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+argoptions/__init__.py
+argoptions/__version__.py
+argoptions/core.py
+argoptions/options.py
+argoptions.egg-info/PKG-INFO
+argoptions.egg-info/SOURCES.txt
+argoptions.egg-info/dependency_links.txt
+argoptions.egg-info/top_level.txt

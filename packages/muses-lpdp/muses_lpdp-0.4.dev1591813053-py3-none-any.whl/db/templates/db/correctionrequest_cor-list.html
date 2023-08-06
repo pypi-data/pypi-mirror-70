@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+
+    {% include '_partials/nav_bar_section.html' %}
+
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for tag in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_cor_correction_request_detail" tag.id %}'">
+                <div>
+                    {{ tag.name }}
+                </div>
+                <div>
+                    <a href="{% url "muses_cor_correction_request_update" tag.id %}" class="muses-button">
+                        {% trans "Update" %}...
+                    </a>
+                </div>
+                <div>
+                    <a href="{% url "muses_cor_correction_request_delete" tag.id %}" class="muses-button">
+                        {% trans "Delete" %}
+                    </a>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

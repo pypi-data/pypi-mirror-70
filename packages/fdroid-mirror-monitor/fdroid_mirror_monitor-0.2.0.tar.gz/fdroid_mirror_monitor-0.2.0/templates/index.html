@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title%}F-Droid Mirror Monitor{% endblock %}
+
+{% block content %}
+<div class="site-wrapper">
+  <header class="site-header">
+    <div class="site-title">
+      <a href="https://f-droid.org">
+        <img src="assets/img/fdroid-logo-text.svg">
+      </a>
+      <h1>Mirror Monitor</h1>
+    </div>
+  </header>
+  <div class="main-content">
+    <div class="article-area">
+      <p>
+        This site reports the status of all known, public, and active F-Droid mirrors. All data on this page reflects
+        the status of the mirrors within the <em>last 7 days</em>
+        The check script runs on a regular basis and polls for the <tt>/repo/index-v1.jar</tt> file.
+      </p>
+      <p>
+        This status data is also available in <a href="status.json">JSON format</a>.
+        And the historical data of the last 7 days is saved <a href="history.json">here</a>
+      </p>
+      <p>
+        The last mirror check ran at {{ last_check }}. Checks have ran X times in the last 24 hours at an average
+        interval of XX:XX (hh:mm).
+      </p>
+
+      <table id="mirrors">
+        <thead>
+          <tr>
+            <th>Mirror URL</th>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Errors</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for mirror in report['mirrors'] %}
+          <tr>
+            {% if 'https://' in mirror['url'] %}
+            <td><a href="{{ mirror['url'] }}">{{ mirror['url'] }}</a></td>
+            {% else %}
+            <td>{{ mirror['url'] }}</td>
+            {% endif %}
+            <td>{{ mirror['name'] }}</td>
+            <td>{% if mirror['duration'] %}
+              {{ '%.02f' % mirror['duration'] }}
+              {% endif %}</td>
+            <td>{% for error in mirror['errors'] %}
+              <b>{{ error }}:</b> {{mirror['errors'][error] }}<br>
+              {% endfor %}</td>
+            <td><a href="{{ mirror['name'] }}.html">details</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+
+      <footer class="site-footer">
+        <div class="wrapper">
+          <div class="site-description">
+            <p>© 2020 F-Droid Limited and Contributors
+              <span class="version">(F-Droid, fdroid-mirror-status {{ ref_name }})</span>
+              <span class="edit-this-page-area"><a href="{{ sourceurl }}" target="_blank">Edit on GitLab</a></span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    {% endblock %}

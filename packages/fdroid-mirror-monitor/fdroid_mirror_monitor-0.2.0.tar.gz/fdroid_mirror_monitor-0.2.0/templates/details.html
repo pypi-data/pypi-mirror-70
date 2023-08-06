@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title%}F-Droid - {{ mirror['name'] }} - Mirror Details{% endblock %}
+
+{% block content %}
+<h2>Mirror Details: {{ mirror['name'] }}</h2>
+<table class="compact">
+    <tbody>
+        <tr>
+            <th>Name:</th>
+            <td>{{ mirror['name'] }}</td>
+        </tr>
+        <tr>
+            <th>Official:</th>
+            <td>Yes/No</td>
+        </tr>
+        <tr>
+            <th>Has archive:</th>
+            <td>Yes/No</td>
+        </tr>
+        <tr>
+            <th>IPv4:</th>
+            <td>{{ 'Yes' if mirror['IPv4'] else 'No'}}{#% for ip in mirror['IPv4'] %}{{ ip }}{{ ', ' if not loop.last }}{% endfor %#}</td>
+        </tr>
+        <tr>
+            <th>IPv6:</th>
+            <td>{{ 'Yes' if mirror['IPv6'] else 'No'}}{#% for ip in mirror['IPv6'] %}{{ ip }}{{ ', ' if not loop.last }}{% endfor %#}</td>
+        </tr>
+        {% if mirror['countries'] %}
+        <tr>
+            <th>Country</th>
+            <td>{% if mirror['countries'] | length > 1 %}
+            Various
+            {% else %}
+            {{ mirror['countries'][0] }} ( {{ mirror['country_codes'][0] }} )
+            {% endif %}</td>
+        </tr>
+        {% endif %}
+
+
+    </tbody>
+</table>
+{{ table }}
+{% endblock %}

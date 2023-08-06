@@ -1,0 +1,12 @@
+typesystem
+starlette
+
+[lint]
+mypy
+autoflake
+black
+isort
+
+[test]
+asynctest
+httpx

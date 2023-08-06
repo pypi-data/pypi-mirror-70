@@ -1,0 +1,2 @@
+pycryptodomex==3.9.7
+bitstring==3.1.6

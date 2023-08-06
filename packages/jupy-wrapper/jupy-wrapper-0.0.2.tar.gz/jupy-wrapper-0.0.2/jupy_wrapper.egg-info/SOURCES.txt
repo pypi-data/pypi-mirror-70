@@ -1,0 +1,8 @@
+README.md
+setup.py
+jupy_wrapper.egg-info/PKG-INFO
+jupy_wrapper.egg-info/SOURCES.txt
+jupy_wrapper.egg-info/dependency_links.txt
+jupy_wrapper.egg-info/top_level.txt
+jupywrapper/__init__.py
+jupywrapper/jupywrapper.py

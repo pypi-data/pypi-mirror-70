@@ -1,0 +1,110 @@
+# Introduction
+
+Documentation can be found [here](https://cifproject.raidtheweb.repl.co/repltalk)
+
+`CIFReplTalk` is a [repl.it](https://repl.it) talk bot framework intended for making high-quality asyncio-based bots, This project was inspired by [IreTheBOT](https://repl.it/@IreTheKID/IreTheBOT), a [repl.it](https://repl.it) talk bot made by [IreTheKID](https://repl.it/@IreTheKID) which now uses the `CIFReplTalk` framework.
+
+# Getting Started
+
+This section is dedicated to getting started with the `CIFReplTalk` bot framework.
+
+## Installation
+
+To install the framework you can either follow the tutorial on the [homepage](https://cifproject.raidtheweb.repl.co) to install the full cif framework or if you would prefer to only install the `CIFReplTalk` framework by itself read on.
+
+### Git 
+
+To install `CIFReplTalk` via the git CLI use the command that follows.
+
+```
+git clone https://github.com/@CIFProject/repltalk
+```
+
+Then `cd` into your new `repltalk` directory and run `pip install -r requirements.txt` to install the necessary dependencies and finally `python setup.py install` to install the `cifrepltalk` package for use in your python projects.
+
+### Repl.it
+
+It is recommended to use the repl located [here](https://repl.it/@RaidTheWeb/CIFRepTalk) to grab your copy of `CIFReplTalk` from the `cifrepltalk` and paste it into a `cifrepltalk` in your own project.
+
+
+## A Simple Bot
+
+Now, let us make a simple [repl.it](https://repl.it) talk bot that responds to a few commands.
+
+```
+import cifrepltalk # import the cifrepltalk package
+from datetime import datetime # for time stuff
+
+client = cifrepltalk.Bot(prefix='$[<your prefix here>]') # create an instance of the 'Bot' class
+
+signer = cifrepltalk.Signer('<your bot account's repl.it username>', '<your bot account password>')
+token = signer.sign('<your repl.it username>') # get the token
+
+async def hello(ctx, *args):
+    return 'hello!'
+
+async def echo(ctx, *args):
+    return ' '.join(list(args))
+
+async def date(ctx, *args):
+    return str(datetime.now())
+
+client.login(token)
+client.handler.assign('hello' hello)
+client.handler.assign('echo', echo)
+client.handler.assign('date', date)
+client.run('<a post id here>')
+```
+
+Let us name this file as `examplebot.py`, don't name it `cifrepltalk` or it will conflict with the library.
+
+Here is what this code does:
+
+*1.*    The first line imports the `cifrepltalk` module for use in the script.
+
+*2.*    The second line imports `datetime` from the python starndard library `datetime` for the `time command`.
+
+*3.*    Next, we create an instance of the `Bot` class with our chosen prefix and store it in a variable called `client`.
+
+*4.*    Then, we need to create an instance of the `Signer` class with our bot's [repl.it](https://repl.it) account username and password and store it in the `signer` variable.
+
+*5.* Now we get the token from our `signer` object by supplying our [repl.it](https://repl.it) username and store it in `token`.
+
+*6.* In these nest few lines we define an `async` function called `hello` with the ***required*** arguments of `ctx` and the positional arguments gatherer `*args`, with a return value of `'hello!'`.
+
+*7.* Next, we make another `async` function called `echo` with the same ***required*** arguments but, this time it returns all of the arguments as a `joint` string.
+
+*8.* For this function we make another `async` function with the same args and a return value of `datetime.now()` to get the current time.
+
+*9.* In this line we login with the token stored in `token`.
+
+*10.* Next we use `client.handler.assign()` to assign `'hello'` to the function `hello`.
+
+*11.* Then we repeat the same step but for `'echo'` and `echo`.
+
+*12.* Again the same step but for `'date'` and `date`.
+
+*13.* Finally, we run the bot on a post by id. ( *Note:* By default CIFReplTalk only runs on a single post, this can be changed. See [Custom Handlers](https://cifproject.raidtheweb.repl.co/repltalk/#FAQ-Custom-Handlers) )
+
+Now we have made the bot we have to *run* it.
+
+cmd:
+
+```
+python3 examplebot.py
+```
+
+powershell
+
+```
+py -3 examplebot.py
+```
+
+bash and others:
+
+```
+python3 examplebot.py
+```
+
+
+Now play around with the bot.

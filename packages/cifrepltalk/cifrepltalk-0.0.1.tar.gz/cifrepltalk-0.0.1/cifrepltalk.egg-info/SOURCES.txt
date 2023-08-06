@@ -1,0 +1,7 @@
+README.md
+setup.py
+cifrepltalk/__init__.py
+cifrepltalk.egg-info/PKG-INFO
+cifrepltalk.egg-info/SOURCES.txt
+cifrepltalk.egg-info/dependency_links.txt
+cifrepltalk.egg-info/top_level.txt

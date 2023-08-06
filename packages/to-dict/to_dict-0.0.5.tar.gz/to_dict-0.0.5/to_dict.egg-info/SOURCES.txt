@@ -1,0 +1,8 @@
+README.md
+setup.py
+to_dict/__init__.py
+to_dict/to_dict.py
+to_dict.egg-info/PKG-INFO
+to_dict.egg-info/SOURCES.txt
+to_dict.egg-info/dependency_links.txt
+to_dict.egg-info/top_level.txt

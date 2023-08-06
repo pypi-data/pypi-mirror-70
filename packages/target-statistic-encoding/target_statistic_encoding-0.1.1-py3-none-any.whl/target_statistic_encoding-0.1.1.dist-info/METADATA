@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: target-statistic-encoding
+Version: 0.1.1
+Summary: A lightweight library for encoding categorical features in your dataset with robust k-fold target statistics in training.
+License: MIT
+Author: CircArgs
+Author-email: quebecname@gmail.com
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pandas (>=0.23.0,<0.24.0)
+Requires-Dist: typing_extensions (>=3.7.4,<4.0.0)

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: fodpy
+Version: 0.0.1
+Summary: fod provides some tools for fiber orientation distribution at the voxel level
+Home-page: https://github.com/vic-dragon/BJS
+Author: Seungyong Hwang
+Author-email: hsy0264@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# FOD 
+
+This package provides the functions for Fiber Orientation Distribution (FOD) estimation. FOD described the local spatial arrangement of axonal fiber bundles at each voxel. FOD estimates is fed into tracking algorithm to reconstruct streamlines. In addition, this package provides peak detection algorithm. And the result from the peak detection algorithm can be used for tracking algorithm (DiST).
+
+

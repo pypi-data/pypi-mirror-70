@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: django-genie
+Version: 0.1.1
+Summary: Generate code from Django for faster development
+Home-page: https://github.com/minelytics/django-genie/
+Author: Minelytics Technologies
+Author-email: dev@minelytics.in
+License: UNKNOWN
+Download-URL: https://github.com/minelytics/django-genie/archive/master.zip
+Description: # django-genie
+        Based on django-genie https://github.com/Minelytics/django-genie
+        
+        A python module which generate the django code. Useful for generating django-rest-framework code. Prints out the code in console for simple copy paste where its required. It uses templates for code generation which can be customized.
+        
+        Command usage:
+        
+        $ docker-compose -f local.yml run --rm django python manage.py code_generator <app_name> <template_name>
+        
+Keywords: django-genie
+Platform: linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Natural Language :: English
+Classifier: Development Status :: 3 - Alpha
+Provides: django_genie

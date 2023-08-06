@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: flask-color-extended
+Version: 0.1
+Summary: flask-color-extended is an extension for Flask that improves the built-in web server with colors when debugging.
+Home-page: https://github.com/Alveona/flask-color-extended
+Author: Alveona
+Author-email: pomavau@yandex.ru
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

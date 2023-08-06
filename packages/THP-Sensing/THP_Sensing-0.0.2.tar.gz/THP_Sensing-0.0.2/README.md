@@ -1,0 +1,22 @@
+Sensing the environment:
+The Sense HAT has a set of environmental sensors for detecting the surrounding conditions; it can measure pressure, temperature, and humidity.
+
+Reading pressure with the Sense HAT
+Detecting temperature with the Sense HAT
+Detecting humidity with the Sense HAT
+Create a scrolling text display which keeps people informed about the current pressure, temperature, and humidity readings. You can use the scrolling text display code you wrote in the ‘Displaying text’ step to help you.
+Solution
+
+According to online documentation, the International Space Station maintains these conditions at the following levels:
+
+Temperature: 18.3-26.7 Celsius
+
+Pressure: 979-1027 millibars
+
+Humidity: around 60%
+
+Define variables for the colours green (0, 255, 0) and red (255, 0, 0).
+
+Use an if statement in your code to check whether the temperature is between 18.3 and 26.7 degrees Celsius.
+
+All Terms & Conditions are auto accepted.

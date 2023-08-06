@@ -1,0 +1,14 @@
+vprint/__init__.py,sha256=DQ8miFuY1tH3NwX6_NaIkFyknswQzoVTyfrKKvr0wPU,1179
+vprint/base256.py,sha256=aH0s_0VlkopvGSfQma-U-bJy9t_Dr88gYyJF1WlBF6A,1411
+vprint/formatting.py,sha256=-9Ca2bdBbw9vFJzx1jzHmZb9p50MGo04-Fkb9TjsGeY,1760
+vprint/loggers.py,sha256=1Mt5OCekinLBrVdS6rGfj3aeFhJ8HH-3ATcNWxzEydE,1596
+vprint/test.py,sha256=vabhsf7tTRJzIyeaz2izzIcnDkCB3YRoNl81YEvRDEU,129
+vprint/version.py,sha256=RRD0ADRcVyDY2lO9M6qp2acyRCweTNRWI9gN-ZwdERY,18
+vprint/vprint_level.py,sha256=a1L_tfe68Mua-w-XItChxHnf9Q5oxAgo4o3r-DORjeA,1231
+vprint/tests/__init__.py,sha256=zOFQ-SMz3DLsCbsBPH_HSnO_H0uDLWMxr3y8kjC1bU0,881
+vprint/tests/really_long_name_for_testing_truncation.py,sha256=tUwgVN7zCZyy2iBuF-oebvpHq_rBcRPSpVwpJiNAtKQ,69
+vprint-0.0.3.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+vprint-0.0.3.dist-info/METADATA,sha256=t8oQmw57CMGust8-y40EUPfrZazsoMpZk1QRp8YmxpE,391
+vprint-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vprint-0.0.3.dist-info/top_level.txt,sha256=owpN1LZ5hPwvb2VWUAbZTyper5wdnQmiW9WKCciRDTc,7
+vprint-0.0.3.dist-info/RECORD,,

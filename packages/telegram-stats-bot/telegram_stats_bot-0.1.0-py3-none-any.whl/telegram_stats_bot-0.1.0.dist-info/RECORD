@@ -1,0 +1,11 @@
+telegram_stats_bot/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+telegram_stats_bot/db.py,sha256=a_AsMFmSlU5l_80hQWdnVvAZH5ZZC9yocm7syNoGiC0,1848
+telegram_stats_bot/json_dump_parser.py,sha256=07L842Egs7R2A09QL_smvxDQIIlbPjjPRfKnu2X6OaY,5411
+telegram_stats_bot/log_storage.py,sha256=LDjEQbwGWZ1k_rCheTYsHOOSCpMgJOJtnF5iRy78niM,3026
+telegram_stats_bot/main.py,sha256=Uc-DSuWmSdOVZ3ZYoVNG3mkKOkhMES4nMSy2X3tYlys,6474
+telegram_stats_bot/parse.py,sha256=MInyx9TZQApUMmxt69bNheuRZq6xXmLOxpj8MLIoEpc,4161
+telegram_stats_bot/stats.py,sha256=CLnks1MXCYotcEdBDCqYiSdfaRpxW8bTHqpy3UM8ySo,26044
+telegram_stats_bot/utils.py,sha256=0BiW-4BwIH1Cmw8NmAaoJ35TXEKVxcOts7BP9_zw9lU,116
+telegram_stats_bot-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+telegram_stats_bot-0.1.0.dist-info/METADATA,sha256=wNFDSirz5R1YZPJRX5RUbgU1d7sefIU_cBHDcK8u9Vk,8064
+telegram_stats_bot-0.1.0.dist-info/RECORD,,

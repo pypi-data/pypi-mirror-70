@@ -1,0 +1,10 @@
+setup.py
+favorite_probability_distributions/Binomialdistribution.py
+favorite_probability_distributions/Gaussiandistribution.py
+favorite_probability_distributions/Generaldistribution.py
+favorite_probability_distributions/__init__.py
+favorite_probability_distributions.egg-info/PKG-INFO
+favorite_probability_distributions.egg-info/SOURCES.txt
+favorite_probability_distributions.egg-info/dependency_links.txt
+favorite_probability_distributions.egg-info/not-zip-safe
+favorite_probability_distributions.egg-info/top_level.txt

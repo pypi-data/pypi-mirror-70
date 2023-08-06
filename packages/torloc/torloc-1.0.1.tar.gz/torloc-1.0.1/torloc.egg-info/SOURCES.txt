@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+torloc/__init__.py
+torloc/torloc.py
+torloc.egg-info/PKG-INFO
+torloc.egg-info/SOURCES.txt
+torloc.egg-info/dependency_links.txt
+torloc.egg-info/not-zip-safe
+torloc.egg-info/requires.txt
+torloc.egg-info/top_level.txt

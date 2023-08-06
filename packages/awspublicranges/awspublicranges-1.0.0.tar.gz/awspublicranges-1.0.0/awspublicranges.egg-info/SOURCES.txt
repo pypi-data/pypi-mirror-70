@@ -1,0 +1,9 @@
+README.md
+setup.py
+awspublicranges/__init__.py
+awspublicranges/ranges.py
+awspublicranges.egg-info/PKG-INFO
+awspublicranges.egg-info/SOURCES.txt
+awspublicranges.egg-info/dependency_links.txt
+awspublicranges.egg-info/requires.txt
+awspublicranges.egg-info/top_level.txt

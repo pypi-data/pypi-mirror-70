@@ -1,0 +1,9 @@
+patabase/__init__.py,sha256=Ii-ZeWRIW7hyZZ_071p0V9vwJTlZHvZ2iNnjTSEttk8,263
+patabase/empty.py,sha256=b65weRd0XO0CtO-NmaapEZEONfnjaJL6Kej7ot9uftI,301
+patabase/mssql.py,sha256=15f_nkZm8PvC_g0wdsLl4cZQVuo48eIu1JGDOrJS3Qs,1984
+patabase/postgres.py,sha256=laXnAqXPsJeLMeNCLr5Qk34Cf4NFG8oU-SF3PmbZom0,1846
+patabase-0.2.1.dist-info/LICENSE,sha256=qACbxw_3A1rjddnvhpxRUZWLk_lbk6uBptUPEVNp3Ok,11336
+patabase-0.2.1.dist-info/METADATA,sha256=e0p9L-UQAhd7UASHjsO_Y_S1NzhD81PF07c-YteBY1Y,2597
+patabase-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+patabase-0.2.1.dist-info/top_level.txt,sha256=JEAyzIdoTOsrDvOnJqZ601FeoFGZFLfR_t-IGGs6YAo,9
+patabase-0.2.1.dist-info/RECORD,,

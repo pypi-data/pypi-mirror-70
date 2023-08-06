@@ -1,0 +1,11 @@
+mypy_boto3_forecast/__init__.py,sha256=CGcVHtuD_CuAhzsAieIPmigyMHX_nLURMOfbk_NKhrg,1789
+mypy_boto3_forecast/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_forecast/client.py,sha256=fcyrkL1RFu3jLA61AFkxhyWt-R0IyXMWF8Cc7Y8BYJs,14817
+mypy_boto3_forecast/paginator.py,sha256=wQyZU1ohO0dtpFNKt_JGWT9MCyL1tXXu0FI0ubu84E8,5596
+mypy_boto3_forecast/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_forecast/type_defs.py,sha256=C_Vsy5g1hgeD9tGA_sjjDrfhRt1CEkjQrAG4rPxNQtQ,16182
+mypy_boto3_forecast/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_forecast-1.14.0.1.dist-info/METADATA,sha256=gfGu6N9ahfwH3G1TM1BoWgyLujgLh7-FaNe1zqk5ygE,5558
+mypy_boto3_forecast-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_forecast-1.14.0.1.dist-info/top_level.txt,sha256=_erk1PNzzxnW8QzAOHK0RT7xxAVgMqPZX70KnX08vPE,20
+mypy_boto3_forecast-1.14.0.1.dist-info/RECORD,,

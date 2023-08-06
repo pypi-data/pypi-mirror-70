@@ -1,0 +1,16 @@
+README.rst
+setup.cfg
+setup.py
+src/howsit/__init__.py
+src/howsit/__main__.py
+src/howsit/_version.py
+src/howsit/main.py
+src/howsit/parse.py
+src/howsit.egg-info/PKG-INFO
+src/howsit.egg-info/SOURCES.txt
+src/howsit.egg-info/dependency_links.txt
+src/howsit.egg-info/requires.txt
+src/howsit.egg-info/top_level.txt
+src/howsit/test/__init__.py
+src/howsit/test/self_test.py
+src/howsit/test/test_parse.py

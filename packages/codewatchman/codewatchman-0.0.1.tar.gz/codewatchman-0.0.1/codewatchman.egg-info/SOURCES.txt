@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+CodeWatchMan/WatchMan.py
+CodeWatchMan/WatchManLog.py
+CodeWatchMan/__init__.py
+codewatchman.egg-info/PKG-INFO
+codewatchman.egg-info/SOURCES.txt
+codewatchman.egg-info/dependency_links.txt
+codewatchman.egg-info/requires.txt
+codewatchman.egg-info/top_level.txt

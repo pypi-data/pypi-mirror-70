@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: SSG-API-test
+Version: 0.0.1
+Summary: A Python package to get SSG APIs.
+Home-page: https://github.com/hojunle/SSG_API_test
+Author: Ho Jun Le
+Author-email: hojunle@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: json
+Requires-Dist: pprint
+Requires-Dist: HTTPBasicAuth
+
+# SSG_API_test
+This package allows for GET requests on SkillsFuture Singapore API. Requires a client ID and client secret from the SSG developer portal to run.
+
+

@@ -1,0 +1,8 @@
+README.md
+setup.py
+puri/__init__.py
+puri/hello.py
+puri.egg-info/PKG-INFO
+puri.egg-info/SOURCES.txt
+puri.egg-info/dependency_links.txt
+puri.egg-info/top_level.txt

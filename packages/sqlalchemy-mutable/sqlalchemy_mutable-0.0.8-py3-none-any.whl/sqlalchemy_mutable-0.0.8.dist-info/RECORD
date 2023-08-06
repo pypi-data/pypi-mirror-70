@@ -1,0 +1,11 @@
+sqlalchemy_mutable/__init__.py,sha256=nyyA8lxO7L3dKyYGfmtEDtOW4wfnt93t5tt9sOHog3c,229
+sqlalchemy_mutable/coerced_types.py,sha256=Emk-AmxrSP5FSs2OI0nbRaxkbONonA3Q5wz0W_BSOjI,2790
+sqlalchemy_mutable/model_shell.py,sha256=a03V8lfwtX_PZjWcx3riRxMh6Sy1i6I3rbP4jcxkBuk,2614
+sqlalchemy_mutable/mutable.py,sha256=m03n_aqSCgiupnQEMTp0j0tf4EAhxSv_zO9EoHX6nSU,14871
+sqlalchemy_mutable/mutable_dict.py,sha256=WQstKQXZo8kygaFaNhOtGa6cq1b8YbTf1t7B9s1FSLM,3704
+sqlalchemy_mutable/mutable_list.py,sha256=nmpoGquqQOpbogjDEWKoy3LKgo8ebQSAPy6etCHwTLY,3872
+sqlalchemy_mutable-0.0.8.dist-info/LICENSE,sha256=mw0TqrBoaimMlCdXjxBnYfPbfSzGU_fj1U3uGLO33Cs,1068
+sqlalchemy_mutable-0.0.8.dist-info/METADATA,sha256=0UyrfnrtQ8s5abt9Kpasy7Dkw1JpLG7Qd1jaLmqOP78,3408
+sqlalchemy_mutable-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sqlalchemy_mutable-0.0.8.dist-info/top_level.txt,sha256=WOK4sWuCthu_UxpgSqt17pjLuHoPIHKhMypZxGZXUKY,19
+sqlalchemy_mutable-0.0.8.dist-info/RECORD,,

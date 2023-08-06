@@ -1,0 +1,9 @@
+README.md
+setup.py
+readPos/__init__.py
+readPos/readPos.py
+readPos.egg-info/PKG-INFO
+readPos.egg-info/SOURCES.txt
+readPos.egg-info/dependency_links.txt
+readPos.egg-info/requires.txt
+readPos.egg-info/top_level.txt

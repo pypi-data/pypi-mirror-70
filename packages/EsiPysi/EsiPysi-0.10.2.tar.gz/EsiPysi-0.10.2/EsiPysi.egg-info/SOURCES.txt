@@ -1,0 +1,16 @@
+setup.py
+EsiPysi.egg-info/PKG-INFO
+EsiPysi.egg-info/SOURCES.txt
+EsiPysi.egg-info/dependency_links.txt
+EsiPysi.egg-info/requires.txt
+EsiPysi.egg-info/top_level.txt
+esipysi/__init__.py
+esipysi/auth.py
+esipysi/esipysi.py
+esipysi/esiresponse.py
+esipysi/esisession.py
+esipysi/op.py
+esipysi/cache/__init__.py
+esipysi/cache/cache.py
+esipysi/cache/dict.py
+esipysi/cache/redis.py

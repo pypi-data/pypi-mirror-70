@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: another-statistic-distributions
+Version: 0.0.1
+Summary: Python modules for Gaussian and Binomial distributions
+Home-page: https://github.com/crowsad/another-statistic-distributions
+Author: Muthahhari A. Padmanagara
+Author-email: muthahharipadmanagara@gmail.com
+License: MIT License
+Description: # another-statistic-distributions
+        Basic python package for statistic distributions
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

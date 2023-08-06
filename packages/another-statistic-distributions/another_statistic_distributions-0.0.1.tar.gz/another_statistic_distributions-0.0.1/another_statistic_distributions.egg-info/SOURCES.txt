@@ -1,0 +1,10 @@
+README.md
+setup.py
+another_statistic_distributions/Binomialdistribution.py
+another_statistic_distributions/Gaussiandistribution.py
+another_statistic_distributions/Generaldistribution.py
+another_statistic_distributions/__init__.py
+another_statistic_distributions.egg-info/PKG-INFO
+another_statistic_distributions.egg-info/SOURCES.txt
+another_statistic_distributions.egg-info/dependency_links.txt
+another_statistic_distributions.egg-info/top_level.txt

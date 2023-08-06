@@ -1,0 +1,12 @@
+mypy_boto3_redshift/__init__.py,sha256=jQRLfhk7OhL-v_GNLWT86wpxLm2daxcknK3HwbADNls,7739
+mypy_boto3_redshift/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_redshift/client.py,sha256=SnOfHwIDoLzq-XMbu1J9QVV1VsQSxyWgCWNIStjGI48,64334
+mypy_boto3_redshift/paginator.py,sha256=oVUNAMgb-Z7VAjQueNA3ahpxNKMExwJAeP59K_0J13w,26353
+mypy_boto3_redshift/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_redshift/type_defs.py,sha256=ixFh0eFbkn0UP3qPVg7mSP8VFQM06GR8rbm3thRY3uQ,36906
+mypy_boto3_redshift/version.py,sha256=VW5RACddn_EHSLbmM4hyurzoi5hejPhoyhSChXFgiws,57
+mypy_boto3_redshift/waiter.py,sha256=4RRdAuylINga77lFxrwvVgvcqANcUjG31Z_X3qEK_fE,4220
+mypy_boto3_redshift-1.13.25.0.dist-info/METADATA,sha256=6BX8_i0GnCRkpLSP0y-pldpWvjmdTHCLDkhgw5Q4CZ4,8541
+mypy_boto3_redshift-1.13.25.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_redshift-1.13.25.0.dist-info/top_level.txt,sha256=EVjsc7ti9CLPnWPM_jV8RAOfxJpimfNo26GMIf1hmWo,20
+mypy_boto3_redshift-1.13.25.0.dist-info/RECORD,,

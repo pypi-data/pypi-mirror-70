@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: clearrepetition
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/bkornpob/clearrepetition
+Author: Kornpob Bhirombhakdi
+Author-email: kbhirombhakdi@stsci.edu
+License: UNKNOWN
+Description: # Clear Repetition
+        
+        clearrepetition is a function to removing any repeating x. Precisely, for (x,y) if n(x) > 1, then remove all (x,y) and replace with one entry of (x, mean(y|x)).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown

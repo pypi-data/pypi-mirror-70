@@ -1,0 +1,8 @@
+openpyxl
+Pillow
+docopt
+tqdm
+
+[dev]
+
+[test]

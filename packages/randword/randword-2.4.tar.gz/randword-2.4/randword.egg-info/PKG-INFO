@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: randword
+Version: 2.4
+Summary: A Python package for generation random English words
+Home-page: UNKNOWN
+Author: Artyom Bezmenov (8nhuman)
+Author-email: artem.bezmenov02@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/8nhuman8/randword/issues
+Project-URL: Source Code, https://github.com/8nhuman8/randword
+Project-URL: Download, https://github.com/8nhuman8/randword/archive/2.4.tar.gz
+Project-URL: Homepage, https://github.com/8nhuman8/randword
+Description: UNKNOWN
+Keywords: python,package,python-package,random,word,words,generator,generation,random-word,random-words,random-word-generator,random-word-generation,english,english-word,english-words
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent

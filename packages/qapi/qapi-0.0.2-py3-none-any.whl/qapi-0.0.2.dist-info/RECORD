@@ -1,0 +1,14 @@
+qapi/__init__.py,sha256=HytHxM64gCEzJnUsLfmmuW25fQ2YN5WfChNnbZU3mxk,91
+qapi/querystring_builder.py,sha256=De7BQY-QbP4TAl9n6SwYM_r3RP8j8oyCwmkMv5d5QlQ,1491
+qapi/action/__init__.py,sha256=t2V7JJB62tvChDC9_V-p21HKPakZm1rYE1WUsPgNTiQ,855
+qapi/action/group.py,sha256=97N7L3_0ksWtsfwyTzpO_Qf-l3yQqGnMlVSl5WSxnvI,983
+qapi/action/order.py,sha256=n5byGsHfURABRho9BsC2It9QnJsdaJQCHnlFafv17GA,508
+qapi/action/where.py,sha256=34_GT9507Qlet9HAWGlyc9feFcwCwLFc2XVCbBcDdIY,1585
+qapi/dialect/__init__.py,sha256=Y_Wrn813TERMOzBXogNDAyvkk3G4LHbWtNeSmu6jEus,100
+qapi/dialect/sqlalchemy.py,sha256=XEQCaSdHaxa390jakXmjoBKm89AxFxOIMK0Ovi3PCQs,3030
+qapi/state_machine/__init__.py,sha256=XMn_CwXy94oRiQxn3L3URh2xMeiv0Rp6cLzpPuPVlPg,493
+qapi/state_machine/querystring.py,sha256=cKNQBN-csVdxyCIXOa6MZrj4THl9JkqphEPfX3mXdeE,3372
+qapi-0.0.2.dist-info/METADATA,sha256=uCDiuuJDm4dE48sjUMgaOm7L7FX78GlPYR808RGDK1Q,596
+qapi-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+qapi-0.0.2.dist-info/top_level.txt,sha256=Z9p0uPmc8VAX-lsOB4H-gJrQizzqOtcMDaR9sfHKnqk,5
+qapi-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,10 @@
+setup.py
+scratch_probability/Binomialdistribution.py
+scratch_probability/Gaussiandistribution.py
+scratch_probability/Generaldistribution.py
+scratch_probability/__init__.py
+scratch_probability.egg-info/PKG-INFO
+scratch_probability.egg-info/SOURCES.txt
+scratch_probability.egg-info/dependency_links.txt
+scratch_probability.egg-info/not-zip-safe
+scratch_probability.egg-info/top_level.txt

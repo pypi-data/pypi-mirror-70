@@ -1,0 +1,286 @@
+#!/usr/bin/env python3
+"""Command-line diff tool, a wrapper of Google's diff-match-patch module.
+"""
+
+import argparse
+import html
+import tempfile
+import webbrowser
+
+from console import fg, bg, fx
+from diff_match_patch import diff_match_patch as dmp
+
+
+class Printer(object):
+    """The base class of diff printers.
+    """
+    def __init__(self, path1, path2, diffs):
+        self.path1, self.short_path1 = path1, self.trim_path(path1)
+        self.path2, self.short_path2 = path2, self.trim_path(path2)
+        self.diffs = diffs
+
+    RET_CHAR = '\n'
+    TRIM_PREFIX = '...'
+    MAX_PATH_LEN = 70
+
+    # The following defines must be overridden by subclasses.
+    PARA_CHAR = None
+    ADD_SPAN_BEGIN = None
+    DEL_SPAN_BEGIN = None
+    SPAN_END = None
+
+    def trim_path(self, path):
+        """Trims a path string to a fixed length.
+        """
+        if len(path) > self.MAX_PATH_LEN:
+            return (self.TRIM_PREFIX +
+                    path[len(self.TRIM_PREFIX) - self.MAX_PATH_LEN:])
+        else:
+            return path
+
+    def get_lines(self, html_escape=False):
+        """Returns pre-formatted strings that show diffs line by line.
+        """
+        sb = []
+        for (op, data) in self.diffs:
+            text = data
+            if html_escape:
+                text = html.escape(text)
+            if op == dmp.DIFF_INSERT:
+                text = text.replace(
+                    self.RET_CHAR,
+                    self.PARA_CHAR + self.SPAN_END +
+                    self.RET_CHAR +
+                    self.ADD_SPAN_BEGIN)
+                sb.append(self.ADD_SPAN_BEGIN + text + self.SPAN_END)
+            elif op == dmp.DIFF_DELETE:
+                text = text.replace(self.RET_CHAR, self.PARA_CHAR)
+                sb.append(self.DEL_SPAN_BEGIN + text + self.SPAN_END)
+            elif op == dmp.DIFF_EQUAL:
+                sb.append(text)
+        lines = ''.join(sb)
+        return lines.splitlines()
+
+
+class ConsolePrinter(Printer):
+    """Formats the diffs info for console output.
+    """
+    def __init__(self, path1, path2, diffs):
+        super().__init__(path1, path2, diffs)
+
+    PARA_CHAR = '\u00B6'
+    ADD_SPAN_BEGIN = fg.green
+    DEL_SPAN_BEGIN = fg.red
+    SPAN_END = fg.default
+
+    def print(self):
+        print(fx.bold(fg.red('<<< ' + self.short_path1)))
+        print(fx.bold(fg.green('>>> ' + self.short_path2)))
+        print()
+        line_no = 0
+        sb = []
+        for line in self.get_lines(html_escape=False):
+            line_no += 1
+            sb.append(fg.yellow + ('%04d: ' % line_no) + fg.default + line)
+        diffs_text = '\n'.join(sb);
+        print(diffs_text)
+
+
+class HtmlPrinter(Printer):
+    """Formats the diffs info for HTML output.
+    """
+    def __init__(self, path1, path2, diffs, view_in_browser):
+        super().__init__(path1, path2, diffs)
+        self.view_in_browser = view_in_browser
+
+    HTML_TMP = '''<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+     body {
+       align-items: center;
+       border: 0;
+       color: #333;
+       display: flex;
+       flex-direction: column;
+       font-family: "Lucida Console", Monaco, "Courier New", Courier,monospace;
+       font-size: 14px;
+       margin: 0;
+       padding: 0;
+     }
+     header {
+       margin: 30px 0 0 0;
+       width: 960px;
+     }
+     header h1 {
+       background-color: #69C;
+       color: #eee;
+       font-size: 14px;
+       line-height: 1.8em;
+       margin: 0;
+       padding: 0 20px 0 20px;
+       text-align: center;
+     }
+     header h1 .notes {
+       font-size: 12px;
+     }
+     header a:link, header a:visited, header a:hover, header a:active {
+       color: #eee;
+     }
+     nav {
+       background-color: #DEF;
+       line-height: 1.8em;
+       overflow: hidden;
+       padding: 0 20px 0 20px;
+     }
+     nav input {
+       margin: 0;
+       padding: 0;
+     }
+     main {
+       border: 1px solid #DEF;
+       display: flex;
+       flex-direction: column;
+       margin: 20px 0 30px 0;
+       width: 960px;
+     }
+     main .line {
+       align-items: stretch;
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+     }
+     main .line-no {
+       background-color: #DEF;
+       color: #69C;
+       flex-grow: 0;
+       line-height: 1.8em;
+       min-width: 60px;
+       overflow: hidden;
+       text-align: center;
+       -moz-user-select: none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+       width: 60px;
+     }
+     main .line-text {
+       flex-grow: 1;
+       line-height: 1.8em;
+       padding: 0 10px 0 10px;
+       white-space: pre-wrap
+     }
+     .red {
+       color: #C00;
+     }
+     .green {
+       color: #090;
+     }
+     .del {
+       color: #C00;
+       background-color: #FDD;
+       text-decoration-line: line-through;
+     }
+     .add {
+       color: #090;
+       background-color: #DFD;
+     }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="https://github.com/wixette/googdiff">GOOGDIFF</a>:
+        <span class="notes">a diff tool based on Google's
+        <a href="https://github.com/google/diff-match-patch">
+        diff-match-patch</a><span>
+      </h1>
+      <nav>
+        <div class="red">&lt;&lt;&lt;&nbsp;%(file1)s</div>
+        <div class="green">&gt;&gt;&gt;&nbsp;%(file2)s</div>
+      </nav>
+    </header>
+    <main>
+%(diffs)s
+    </main>
+  </body>
+</html>
+'''
+
+    LINE_TMP = u'''
+      <div class="line">
+        <div class="line-no">%(line_no)d</div>
+        <div class="line-text">%(line_text)s</div>
+      </div>
+'''
+
+    PARA_CHAR = '&para;'
+    ADD_SPAN_BEGIN = '<span class="add">'
+    DEL_SPAN_BEGIN = '<span class="del">'
+    SPAN_END = '</span>'
+
+    def print(self):
+        googdiff = dmp()
+        line_no = 0
+        sb = []
+        for line in self.get_lines(html_escape=True):
+            line_no += 1
+            sb.append(self.LINE_TMP % dict(line_no=line_no,
+                                           line_text=line))
+        diffs_text = ''.join(sb);
+        diffs_html = self.HTML_TMP % dict(diffs=diffs_text,
+                                          file1=self.short_path1,
+                                          file2=self.short_path2)
+        if self.view_in_browser:
+            with tempfile.NamedTemporaryFile('w',
+                                             encoding='utf-8',
+                                             suffix='.html',
+                                             delete=False) as temp_file:
+                temp_file.write(diffs_html)
+            webbrowser.open('file://%s' % temp_file.name)
+        else:
+            print(diffs_html)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='diff tool using Google\'s diff-match-patch')
+    parser.add_argument('files', metavar='FILE', type=str, nargs=2)
+    parser.add_argument(
+        '-c', '--console',
+        action='store_true',
+        help='show diffs in console mode.')
+    parser.add_argument(
+        '-t', '--html',
+        action='store_true',
+        help='show diffs as HTML text.')
+    parser.add_argument(
+        '-b', '--browser',
+        action='store_true',
+        help='show diffs in HTML format with web browser.')
+    parser.add_argument('--timeout', type=float, default=0)
+
+    args = parser.parse_args()
+    path1, path2 = args.files
+
+    googdiff = dmp()
+    googdiff.Diff_Timeout = args.timeout
+    text1 = open(path1, mode='r', encoding='utf-8').read()
+    text2 = open(path2, mode='r', encoding='utf-8').read()
+    diffs = googdiff.diff_main(text1, text2, False)
+    googdiff.diff_cleanupSemantic(diffs)
+
+    printer = None
+    if args.console:
+        printer = ConsolePrinter(path1, path2, diffs)
+    elif args.html or args.browser:
+        printer = HtmlPrinter(path1, path2, diffs, args.browser)
+    else:
+        printer = ConsolePrinter(path1, path2, diffs)
+    printer.print()
+
+
+if __name__ == '__main__':
+    main()

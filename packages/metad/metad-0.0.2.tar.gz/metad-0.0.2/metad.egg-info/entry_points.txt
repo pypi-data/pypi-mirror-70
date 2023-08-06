@@ -1,0 +1,3 @@
+[console_scripts]
+metad = metad.__main__:main
+

@@ -1,0 +1,10 @@
+QuantLib/QuantLib.py,sha256=VMjGExOtp5U3rbvw_gE0U_rhHY8jBa6n5rxq4h1dWAA,879528
+QuantLib/_QuantLib.cpython-38-darwin.so,sha256=UuymIf977nsGyEHiy1cnEs8-OctUM-u_BBZdXYSUlvI,45580296
+QuantLib/__init__.py,sha256=gIh6Jg0UAwsRGo3gbPUEjCvvtUQAdB66ljItbnmvvUg,3198
+QuantLib/__pycache__/QuantLib.cpython-38.pyc,sha256=ZHcd4n0A6aUkab0Y1AOymc4dnM8yr7ibwvZKeOpV0aI,1335334
+QuantLib/__pycache__/__init__.cpython-38.pyc,sha256=zDAUz4zte843bFix-Zmxvz2MHzalgPxQrCysVeGNldU,3089
+QuantLib-1.18.1.data/data/share/doc/quantlib/LICENSE.TXT,sha256=4AxF901NzH8hcIMbHp1X6m9DbfPVlzk8TCTIFeyGiro,2971
+QuantLib-1.18.1.dist-info/METADATA,sha256=ZslQxqHAdRMaLkqZpZqjYFuXpf2ov2talk9_niA_QMI,1052
+QuantLib-1.18.1.dist-info/WHEEL,sha256=Hic4Br7HyqQlo_WBiWK58UvEogCnWnn00TOHJ0MUqpc,109
+QuantLib-1.18.1.dist-info/top_level.txt,sha256=AChG73GtK4F4999dXr9JBvI3GeBntnOIlMvDe2KbXdk,9
+QuantLib-1.18.1.dist-info/RECORD,,

@@ -1,0 +1,13 @@
+models/Address.py,sha256=nkkSrfN8nW7jMLX77aGa_afT4L2U2dxe4APFhEJR2oY,9076
+models/RomanInteger.py,sha256=WWWOcioOM_DoDdsP4oB9AF2FPnSzWUfu8W1ldszU20Q,784
+models/__init__.py,sha256=F77kKw5oxJW70SqNy7nAzZwhNT7ReggqsZsCeewI4XE,62
+presets/__init__.py,sha256=-atzQVTIVjn4zSBDFnqarZfJtQ-8-Sut1WAaBeZF4Hk,71
+presets/clear_characters.py,sha256=uVjrdr1qh5O9VJ09vZwWe3GOaxjYJVpfMjF-JaHW2po,85
+presets/fias_types.py,sha256=-cXxD0ouBHXf4yNBgH63in3F_NhSNiSDT-bqQLBzpmA,24752
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_address.py,sha256=t4FwgEd0ilMS6ELDlA0EseLbzNCe71zRy0OFSRA8b_o,3477
+tests/test_roman_integer.py,sha256=geGV4k236-OV6BnnQyHBT8a9zaMo_P2ed48wMBawXmI,287
+lod_dedovschina_sber-1.0.0.dist-info/METADATA,sha256=8_YLnEa1_ftCf3SXb1kFw1vaSoD5Ys4XwrFgGtqu0zU,304
+lod_dedovschina_sber-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+lod_dedovschina_sber-1.0.0.dist-info/top_level.txt,sha256=Qno2U1TFvM2AJ5nQT0PdkEYfBYOGzHCYfFq28w2lwTE,21
+lod_dedovschina_sber-1.0.0.dist-info/RECORD,,

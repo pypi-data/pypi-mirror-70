@@ -1,0 +1,6 @@
+padpo==0.7.0
+pogrep==0.1.1
+pomerge==0.1.4
+pospell==1.0.3
+potodo==0.6.0
+powrap==0.3.1

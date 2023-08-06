@@ -1,0 +1,11 @@
+tagup/__init__.py,sha256=kjx98kPH96yKSLtXULQb-raLKRpPOwBQl-uHeLnSrlA,348
+tagup/evaluation.py,sha256=KTPFXSZ9DfGrhXz2nnvp1GS8oXSpdZQdVIu0oQsWayw,3645
+tagup/exceptions.py,sha256=UX9MmSc_2woJ_bur3SNH2N_GrfJoIpCv3jrMGHctaYc,420
+tagup/grammar.lark,sha256=H2BBn2vLLF9_UXLcfoDowhmg0rgskKmhwpq9x9szfKs,1612
+tagup/language.py,sha256=J2VaISuBXaXFceTej-nAHoDLO3x2c01nd5Du5S7F_lE,2611
+tagup/stack.py,sha256=I-rk8QBqGxE2010zOjXA_Pu0MzQm4fd-_kuNFWskZig,1660
+tagup/traversal.py,sha256=L-uc6qgdHKY91NK6rG5X3Y8eiVHlPH47-Gy839b7sfM,2176
+tagup-0.2.2.dist-info/LICENSE,sha256=jpD5vL9DvveTiU42LvtUwbXNRlFHefVEGyDUwjXlln4,1076
+tagup-0.2.2.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+tagup-0.2.2.dist-info/METADATA,sha256=9pHpb4grpDovLKqfNE9b5vJ98hI7mlb_v2Q1xxYAX7o,2065
+tagup-0.2.2.dist-info/RECORD,,

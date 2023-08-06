@@ -1,0 +1,14 @@
+totd/__init__.py,sha256=JiDsodAwk57snMB9ttlGJIiK0CTdURnRNRwV2i9tbIE,44
+totd/admin.py,sha256=paqpT36mszj6jGB4N3LUxmnGybSOeuhCJX-nQxQLzLA,2075
+totd/apps.py,sha256=Dc1K2uOjAat00cMKsdFrmycBjDMCwwF4p1UgTcdPEw0,138
+totd/context_processors.py,sha256=65hCdx5A_R4Vq4l3OzLd6-5SxHOJzqLm72GjwGuCP7o,777
+totd/models.py,sha256=Wj0ufarjVJREKtoNhvTZvsmKpCELc6wiLQnuKahwEd8,902
+totd/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+totd/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+totd/migrations/0001_Initial_models.py,sha256=zwQ6E2184IyFJLCENv3PPRGclHbZDwI4C5Q36iW1GL8,1917
+totd/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_totd-1.0.2.dist-info/LICENSE,sha256=1xZT6EunNqtrIBYIEkc6VnqUmqEbmXmzCi76BqgGCPA,1286
+django_totd-1.0.2.dist-info/METADATA,sha256=ZJQ4JPAZUI8c2VD24NgKaTj2qsslqnFApsp8pQDFEJc,1894
+django_totd-1.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_totd-1.0.2.dist-info/top_level.txt,sha256=QbgkLxvNnAIkLcC8zIXdaKMm4gXmzW6dJYN4bxzNSUc,5
+django_totd-1.0.2.dist-info/RECORD,,

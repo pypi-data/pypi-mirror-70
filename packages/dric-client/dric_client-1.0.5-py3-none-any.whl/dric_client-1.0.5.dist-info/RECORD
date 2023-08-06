@@ -1,0 +1,8 @@
+dric/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dric/client.py,sha256=AIR7rnPY-kZgEfGUA1FTUUZPdqPb6-jSuofNH8IFoS0,1320
+dric/topics.py,sha256=YfUIKYvfqJk3mhNmRWAoLE0rtx-U8Q-I9QuKy_IcRo8,805
+dric/types.py,sha256=Qh32LQIykAuVkRU_xRoJfU9naaqbaLUNLCPOkcTCgSQ,3244
+dric_client-1.0.5.dist-info/METADATA,sha256=q_Qma0vY4p3KkXg-87z9VPeUc15QT6E4j6BzWx22mNo,284
+dric_client-1.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+dric_client-1.0.5.dist-info/top_level.txt,sha256=S62m7e5jUxvcrlEEyri8x28tHQDZ8SOyFSxpLihECo0,5
+dric_client-1.0.5.dist-info/RECORD,,

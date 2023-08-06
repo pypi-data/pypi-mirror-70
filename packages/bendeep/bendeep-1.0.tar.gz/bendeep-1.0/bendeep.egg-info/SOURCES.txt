@@ -1,0 +1,14 @@
+LICENSE
+README.md
+main.py
+setup.py
+bendeep/__init__.py
+bendeep/sentiment.py
+bendeep/utils.py
+bendeep.egg-info/PKG-INFO
+bendeep.egg-info/SOURCES.txt
+bendeep.egg-info/dependency_links.txt
+bendeep.egg-info/requires.txt
+bendeep.egg-info/top_level.txt
+models/senti_trained.pt
+models/vocab.txt

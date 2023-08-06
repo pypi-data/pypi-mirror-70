@@ -1,0 +1,3 @@
+[console_scripts]
+vidgen=vidgen.console:cli
+

@@ -1,0 +1,11 @@
+jsonschema2popo/__init__.py,sha256=z2OMB9r-mpSmCKQZhvSDYb6KcoyKCR8Oo67euTE6Hi0,49
+jsonschema2popo/__main__.py,sha256=EIsAhUvQOzVI3Sfp8LY4w1p3iF-PMpQzoVNuPMKyx8w,322
+jsonschema2popo/js_class.tmpl,sha256=wgyLAAeo-gaFRXZte3dp2byP5BI38hLhrKDSw2A5Rls,9243
+jsonschema2popo/jsonschema2popo.py,sha256=H9oZ45D4Q2xPRP8zC8BWcQE0m7JSek6dks4LK3mapQY,17863
+jsonschema2popo/python_class.tmpl,sha256=Uaf9HWcpqDewWzhVbCi0HsI4CNKhO705cRkhZLVnK6o,6071
+JSONSchema2PoPo2-2.0.23.dist-info/LICENSE.txt,sha256=VyHpPNj0LDButx4yGgnHTCRJWyaqh8xoBEEporxfflM,1162
+JSONSchema2PoPo2-2.0.23.dist-info/METADATA,sha256=BIBUEsIIrlnpjCIIb79C1uEivFk_w0wnWoCQv5kwxus,2977
+JSONSchema2PoPo2-2.0.23.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+JSONSchema2PoPo2-2.0.23.dist-info/entry_points.txt,sha256=XFRlrg3br0wUcI9h2afnaFmnpZkPfqnEGLGe5609i0I,75
+JSONSchema2PoPo2-2.0.23.dist-info/top_level.txt,sha256=q41oezqZYb2EwcNQJyD6XeA6q6ujaW1QJNOU6NZ5v1o,16
+JSONSchema2PoPo2-2.0.23.dist-info/RECORD,,

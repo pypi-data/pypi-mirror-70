@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+jsontools-WhoAmTati/jsontools.py
+jsontoolszz.egg-info/PKG-INFO
+jsontoolszz.egg-info/SOURCES.txt
+jsontoolszz.egg-info/dependency_links.txt
+jsontoolszz.egg-info/top_level.txt

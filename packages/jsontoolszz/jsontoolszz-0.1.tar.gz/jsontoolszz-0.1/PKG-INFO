@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: jsontoolszz
+Version: 0.1
+Summary: JSON data lib
+Home-page: https://github.com/BangiDong/jsontools
+Author: unknown
+Author-email: unknown@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/BangiDong/jsontools/releases/tag/0.1
+Description: UNKNOWN
+Keywords: json
+Platform: UNKNOWN
+Requires-Python: >=3

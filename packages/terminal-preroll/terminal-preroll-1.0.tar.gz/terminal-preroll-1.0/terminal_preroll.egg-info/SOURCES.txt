@@ -1,0 +1,7 @@
+setup.py
+terminal-preroll/__main__.py
+terminal_preroll.egg-info/PKG-INFO
+terminal_preroll.egg-info/SOURCES.txt
+terminal_preroll.egg-info/dependency_links.txt
+terminal_preroll.egg-info/requires.txt
+terminal_preroll.egg-info/top_level.txt

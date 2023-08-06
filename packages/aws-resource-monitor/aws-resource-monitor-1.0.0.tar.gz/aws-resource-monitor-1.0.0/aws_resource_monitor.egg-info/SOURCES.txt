@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+aws_resource_monitor/__init__.py
+aws_resource_monitor/monitor.py
+aws_resource_monitor.egg-info/PKG-INFO
+aws_resource_monitor.egg-info/SOURCES.txt
+aws_resource_monitor.egg-info/dependency_links.txt
+aws_resource_monitor.egg-info/top_level.txt

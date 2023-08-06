@@ -1,0 +1,12 @@
+onomancer/__init__.py,sha256=5yXCYsrwI0A_m5uV9NV7BGB8aefRtSGjvjgYYMz8VXA,29
+onomancer/predict.py,sha256=sP2INIaOpsshTcjofdf755R1EYANCfHD2lYSjUBzxv4,1872
+onomancer/data/gender_lookup.json,sha256=fjyw4-xZwS9WRgLECUuy8awSfN6ksOfoYqqjvQ7icgo,5313794
+onomancer/data/model.bin,sha256=ZM8vk2i4JDoI9-mIMF9HYdoC3iAGe3DbM-YlVGycC6E,4942761
+onomancer/utils/__init__.py,sha256=kCs5e0DGmcutZuBa3v5MER_TfKpVh9cdUUMRQEBjclA,101
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=1erJkYTPqusTk5fWDfgRM8fUUl83Uy6h4y8usbtGy9s,455
+onomancer-0.0.1.dist-info/LICENSE,sha256=b7B8L9-00RlENItmauZiRuX4MqqmAjrxEyq16oxe5_A,1073
+onomancer-0.0.1.dist-info/METADATA,sha256=_BNTjv7MyUSQUkQwr0kAddpDhYoAOXrEoPNVPOtAHXc,1422
+onomancer-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+onomancer-0.0.1.dist-info/top_level.txt,sha256=ES6Sik3rTNJn82EUez-MTRomHWtiI-VR8emR8feB06M,16
+onomancer-0.0.1.dist-info/RECORD,,

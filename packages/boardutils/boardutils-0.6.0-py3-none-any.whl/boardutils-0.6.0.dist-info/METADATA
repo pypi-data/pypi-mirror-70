@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: boardutils
+Version: 0.6.0
+Summary: set of utilities to integrate with Board CPM and BI toolkit
+Home-page: https://www.board.com
+Author: Board International SA
+Author-email: info@board.com
+License: Usage of the Board API and of boardutils package is granted to Board customers with an active API license
+Keywords: board toolkit api utilities
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# BoardUtils
+
+BoardUtils is a set of utilities to integrate custom Python scripts / application with Board toolkit (https://www.board.com)
+
+## Installation
+
+```bash
+pip install boardutils
+```
+
+## Usage
+
+```python
+from boardutils import api
+
+# create a new api client instance
+bclient = api.Client("http://your-endpoint.board.com","client_id","client_secret")
+
+# return a dictionary with layout query results
+layout_data = bclient.query("datamodel", "query-name","query-parameters") 
+
+# return list of cubes for specified datamodel
+entities = bclient.cubes("datamodel")
+
+# return list of entities for specified datamodel
+cubes = bclient.entities("datamodel")
+
+# return list of members of a specific entity
+entity = bclient.entity("datamodel","entity")
+```
+
+## Contributing
+
+## License
+The usage of Board API Query engine is subject to licensing from Board (https://www.board.com)
+Please contact your account manager for more information
+

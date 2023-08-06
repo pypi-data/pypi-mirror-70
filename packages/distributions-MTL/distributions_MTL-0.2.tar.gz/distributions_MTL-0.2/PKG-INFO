@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: distributions_MTL
+Version: 0.2
+Summary: Gaussian distributions
+Home-page: UNKNOWN
+Author: Matt LaDuke
+Author-email: UNKNOWN
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: distributions library from udacity class "AWS Machine Learning Foundations Course"
+Platform: UNKNOWN

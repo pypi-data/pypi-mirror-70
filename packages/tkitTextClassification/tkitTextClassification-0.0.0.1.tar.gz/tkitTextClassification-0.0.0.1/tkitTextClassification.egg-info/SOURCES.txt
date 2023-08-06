@@ -1,0 +1,8 @@
+setup.py
+tkitTextClassification/__init__.py
+tkitTextClassification/classification.py
+tkitTextClassification.egg-info/PKG-INFO
+tkitTextClassification.egg-info/SOURCES.txt
+tkitTextClassification.egg-info/dependency_links.txt
+tkitTextClassification.egg-info/requires.txt
+tkitTextClassification.egg-info/top_level.txt

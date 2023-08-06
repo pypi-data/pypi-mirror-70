@@ -1,0 +1,13 @@
+pypitools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypitools/common.py,sha256=f2LhC_mJlbM8DlAp8waq_fSCtBYUoVaXNVOaUnUpuYg,4419
+pypitools/configs.py,sha256=Tlt0sKuoVitIIWz2uQdpCyKI-hzsVFcN2zYtZWfV9JY,2233
+pypitools/version.py,sha256=n9ddAMwKmehCZigvBba8UMVXNGzqnmLWp4wRFjQ7U20,84
+pypitools/endpoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypitools/endpoints/group_default.py,sha256=AE7xHeCXiaLj3oQ4UNgHUMj7V3JC8dZNcWo-uSGEa4w,5223
+pypitools/endpoints/main.py,sha256=p0w3EHxP4IOqX15ua1DYApL09dikqt8S-5ThYE650wI,551
+pypitools-0.0.52.dist-info/LICENSE,sha256=iwFQQUu2nh_gHEI7WRLvLBV7tl-cWaV5-HRFz4nZ6B0,1069
+pypitools-0.0.52.dist-info/METADATA,sha256=jBQ2Abl4uP1G7j5P4xLehr-Vr3w3q-WJEdMdmdyXD4c,856
+pypitools-0.0.52.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pypitools-0.0.52.dist-info/entry_points.txt,sha256=xYUpw0iSfIzIRx8EZzm4mHCd2deg1qgASMAGSPCHDLk,61
+pypitools-0.0.52.dist-info/top_level.txt,sha256=b88t5_lfx0canhmvK7s5drEjidN0tIYZsUVS2QgZgc0,10
+pypitools-0.0.52.dist-info/RECORD,,

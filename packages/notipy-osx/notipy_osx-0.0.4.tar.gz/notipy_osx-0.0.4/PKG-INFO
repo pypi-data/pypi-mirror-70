@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: notipy_osx
+Version: 0.0.4
+Summary: Display native customizable Mac OS dialogs and notifications with ease
+Home-page: https://github.com/ninest/notipy_osx
+License: MIT
+Description: # Notipy OSX
+        
+        Display native customizable Mac OS dialogs and notifications with ease
+        
+        ## Installing
+        Install it like this
+        
+        python3 setup.py sdist bdist_wheel
+        
+        python3 -m twine upload dist/*
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

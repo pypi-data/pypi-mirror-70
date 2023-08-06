@@ -1,0 +1,10 @@
+setup.py
+dnsq_probability/Binomialdistribution.py
+dnsq_probability/Gaussiandistribution.py
+dnsq_probability/Generaldistribution.py
+dnsq_probability/__init__.py
+dnsq_probability.egg-info/PKG-INFO
+dnsq_probability.egg-info/SOURCES.txt
+dnsq_probability.egg-info/dependency_links.txt
+dnsq_probability.egg-info/not-zip-safe
+dnsq_probability.egg-info/top_level.txt

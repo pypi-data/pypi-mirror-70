@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pybody
+Version: 0.01
+Summary: Python N-Body codes
+Home-page: https://github.com/dangcpham/pybody
+Author: Dang Pham
+Author-email: dang.c.pham@hotmail.com
+License: MIT
+Description: ================
+        **pybody**
+        ================
+        A collection of Python N-body codes with various algorithms. Current status: Alpha. Not ready for use.
+Keywords: nbody,physics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

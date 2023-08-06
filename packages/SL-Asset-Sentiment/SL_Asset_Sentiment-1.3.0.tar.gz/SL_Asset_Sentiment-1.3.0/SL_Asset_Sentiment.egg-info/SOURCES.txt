@@ -1,0 +1,8 @@
+README.md
+setup.py
+SL_Asset_Sentiment/OWSent.py
+SL_Asset_Sentiment/__init__.py
+SL_Asset_Sentiment.egg-info/PKG-INFO
+SL_Asset_Sentiment.egg-info/SOURCES.txt
+SL_Asset_Sentiment.egg-info/dependency_links.txt
+SL_Asset_Sentiment.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+telegram_exception_alerts/__init__.py,sha256=07_qQYr1F14Pk6gL-EvGpzrvrJv6KZujoHrYELttNOw,30
+telegram_exception_alerts/alerter.py,sha256=3l7ls7Jwl7jp5AClghlhhHx36ngzsAlFy7F3UV1QkBw,2575
+telegram_exception_alerts-0.1.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+telegram_exception_alerts-0.1.4.dist-info/METADATA,sha256=cjHvgf1IoToL8ahZkemZPOHuk_hxkfuIeYkSfiBP8uU,2631
+telegram_exception_alerts-0.1.4.dist-info/RECORD,,

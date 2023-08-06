@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: texturize
+Version: 0.4.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Alex J. Champandard
+Author-email: 445208+alexjc@users.noreply.github.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6,<4.0
+Requires-Dist: docopt (<0.7.0,>=0.6.2)
+Requires-Dist: progressbar2 (<4.0.0,>=3.51.3)
+
+UNKNOWN
+
+

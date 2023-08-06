@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: soco-mrc
+Version: 0.0.4
+Summary: Neural machine reading comprehension models
+Home-page: https://www.soco.ai
+Author: tianchez
+License: UNKNOWN
+Description: # RCServing
+        A serve to create APIs for different reading comprehension models.
+        
+        # Usage
+        1. use as a package
+          
+            pip install soco-mrc
+        
+        2. use as a Flask server on docekr.
+        
+        ## Model Ids
+        
+        ### English
+        
+        
+        ### Chinese
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

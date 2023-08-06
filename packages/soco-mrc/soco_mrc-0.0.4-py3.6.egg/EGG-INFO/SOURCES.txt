@@ -1,0 +1,13 @@
+README.md
+setup.py
+soco_mrc/__init__.py
+soco_mrc/cloud_bucket.py
+soco_mrc/config.py
+soco_mrc/mrc_model.py
+soco_mrc/server.py
+soco_mrc/util.py
+soco_mrc.egg-info/PKG-INFO
+soco_mrc.egg-info/SOURCES.txt
+soco_mrc.egg-info/dependency_links.txt
+soco_mrc.egg-info/requires.txt
+soco_mrc.egg-info/top_level.txt

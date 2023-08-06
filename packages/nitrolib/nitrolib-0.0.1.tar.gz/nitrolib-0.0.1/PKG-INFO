@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: nitrolib
+Version: 0.0.1
+Summary: NitroLib is a library for working wih the various systems developed by Intelligent Systems for the Nitro consoles.
+Home-page: https://github.com/martmists/nitrolib
+Author: martmists
+Author-email: mail@martmists.com
+License: MIT
+Description: NitroLib
+        ========
+        
+        NitroLib is a library for working with the various systems developed by
+        Intelligent Systems for the Nitro consoles.
+        
+        --------------
+        
+        TODO
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Hardware :: Hardware Drivers

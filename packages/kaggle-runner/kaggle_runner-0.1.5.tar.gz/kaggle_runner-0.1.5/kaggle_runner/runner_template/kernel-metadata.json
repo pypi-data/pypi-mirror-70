@@ -1,0 +1,25 @@
+{
+  "id": "k1gaggle/jigsaw-multilingual-toxicity-eda-models",
+  "title": "Jigsaw Multilingual Toxicity : EDA + Models \ud83e\udd2c",
+  "code_file": "main.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "maxjeblick/bert-pretrained-models",
+    "matsuik/ppbert",
+    "gabrichy/nvidiaapex",
+    "k1gaggle/jigsaw-multilingula-toxicity-token-encoded",
+    "k1gaggle/jigsaw-toxic-token-ids-for-bert",
+	"k1gaggle/toxic-multilang-trained-torch-model"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "jigsaw-multilingual-toxic-comment-classification"
+  ]
+}

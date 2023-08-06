@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tronpy
+Version: 0.0.1
+Summary: TRON Python client library
+License: MIT
+Author: andelf
+Author-email: andelf@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: base58 (>=2.0.0,<3.0.0)
+Requires-Dist: ecdsa (>=0.15,<0.16)
+Requires-Dist: pycryptodome (>=3.9.7,<4.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)

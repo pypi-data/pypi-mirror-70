@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: x16cli
+Version: 0.1.0
+Summary: X16 Command Line Interface for assembly projects.
+Home-page: https://github.com/GendoIkari/x16cli
+Author: Daniele Maccioni
+Author-email: komradstudios@gmail.com
+License: UNKNOWN
+Keywords: x16,cx16,6502,cc65
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: GitPython
+Requires-Dist: setuptools
+Requires-Dist: dotmap
+Requires-Dist: wheel
+Requires-Dist: twine
+Requires-Dist: toml
+Requires-Dist: gitchangelog
+
+# X16 Command Line Interface
+
+X16 Command Line Interface for assembly projects.
+
+## Requirements
+
+- Python 3.6
+- cc65 build requirements
+- tested on ubuntu
+
+## Install
+
+```pip install x16cli```
+
+## Run
+
+```x16 --help```
+
+

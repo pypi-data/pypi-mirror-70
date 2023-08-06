@@ -1,0 +1,3 @@
+[sentry.plugins]
+sentry_wechat = sentry_wechat.plugin:WechatPlugin
+

@@ -1,0 +1,8 @@
+flake8_noqa/__init__.py,sha256=kc2tZAql7acLr5F2496DkZFyWZeZdbcHLW0KlPuIsPc,173
+flake8_noqa/noqa_checker.py,sha256=joMgym7g8nIUuA71YmPRRrg7hWwczUzxcDDvkgup6eY,6756
+flake8_noqa/noqa_filter.py,sha256=B7qAFeG7Qa5APDh-Iy_bx6lg3BNUkMKN1kRhD9E-6lU,6225
+flake8_noqa-1.0.0.dist-info/METADATA,sha256=vHTdz6-dtgUQFrzm3XI1yyqnsmkCos6nlUxp7TSexPM,4451
+flake8_noqa-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flake8_noqa-1.0.0.dist-info/entry_points.txt,sha256=kIAihJfAB2tbXblwIi6HR9gBLHB2_rbZLJux7l-ZJrs,106
+flake8_noqa-1.0.0.dist-info/top_level.txt,sha256=sLHMWEMZG0_c1chA7loUV9GFocoTTVVkT8PXQ-IHbvE,12
+flake8_noqa-1.0.0.dist-info/RECORD,,

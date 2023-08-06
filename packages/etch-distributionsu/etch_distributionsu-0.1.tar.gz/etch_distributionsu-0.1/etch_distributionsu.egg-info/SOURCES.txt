@@ -1,0 +1,10 @@
+setup.py
+etch_distributionsu/Binomialdistribution.py
+etch_distributionsu/Gaussiandistribution.py
+etch_distributionsu/Generaldistribution.py
+etch_distributionsu/__init__.py
+etch_distributionsu.egg-info/PKG-INFO
+etch_distributionsu.egg-info/SOURCES.txt
+etch_distributionsu.egg-info/dependency_links.txt
+etch_distributionsu.egg-info/not-zip-safe
+etch_distributionsu.egg-info/top_level.txt

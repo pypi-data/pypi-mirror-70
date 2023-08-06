@@ -1,0 +1,16 @@
+_tomotopy.cpython-35m-darwin.so,sha256=J03nBZdXoibLyme_PDxfMNrEzaeSiwejawmdrRwboA0,28990592
+_tomotopy_avx.cpython-35m-darwin.so,sha256=BnScdBvaQiTI6SC1UkO3TU84IryCGqO9AfjU-LMmlcc,28812424
+_tomotopy_avx2.cpython-35m-darwin.so,sha256=PSHSyf_XK28L9B1vjLxOYaVqo1A_MmPOxGBfb-abcL0,28920000
+tomotopy/__init__.py,sha256=OJd25B6CBBbAzaN0KhUSMGqC4x4DBaEquvy4XRtqao4,7325
+tomotopy/auto_labeling_code.rst,sha256=9HDteOaYpyDWHL7_tcd-J2XugX1JVVOPBku_urlzhE8,2244
+tomotopy/auto_labeling_code_with_porter.rst,sha256=Ay5IAOJtpSjvsklRqQ9sdHK10fIjzZa3fYpSKbHMuBw,2553
+tomotopy/documentation.kr.rst,sha256=PAIFCVuh5fKJjueRZk8eQaxeukDegTh5PmDeF5CPliA,22111
+tomotopy/documentation.rst,sha256=GAFaHUd5lXDiAzyrHT9YogpTc_urHy_QS-x2buPROJM,18641
+tomotopy/label.py,sha256=Alt1VCyNrDQ9IND0kJUdwWiUY44hWvnJ1IKCv0XSME8,782
+tomotopy/utils.py,sha256=xRSrox5ctBUUDjworzTvudWGw3pSBTD-GuOzZjw-Awc,13837
+tomotopy/version.py,sha256=5XO7lkEdMsj2jozCc7gHVACp2Mq0ZBatI2TiVkQssc4,21
+tomotopy-0.8.1.dist-info/LICENSE,sha256=_rh6LgwwXeNGTMRAd9pTk8UtjKY2LTdCcVfQTsb0UQ0,1057
+tomotopy-0.8.1.dist-info/METADATA,sha256=-thWazoQ8xg8150c77hHLJCqKZKrVtu4K8gCrv8SqVo,16782
+tomotopy-0.8.1.dist-info/WHEEL,sha256=sET63Ry8MyNJ-zrE56GG4eSXqeQuIC7H8vuKJVdN9JY,111
+tomotopy-0.8.1.dist-info/top_level.txt,sha256=xDsqdkjudfEXmavpqCETVotQQ96a_2zQspJmSFg8fQQ,48
+tomotopy-0.8.1.dist-info/RECORD,,

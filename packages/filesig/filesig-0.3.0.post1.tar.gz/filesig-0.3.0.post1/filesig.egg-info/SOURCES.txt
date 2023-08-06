@@ -1,0 +1,7 @@
+README.md
+setup.py
+filesig/filesig.py
+filesig.egg-info/PKG-INFO
+filesig.egg-info/SOURCES.txt
+filesig.egg-info/dependency_links.txt
+filesig.egg-info/top_level.txt

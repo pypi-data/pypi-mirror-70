@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: python-latex
+Version: 1.0.0
+Summary: Convenience wrappers around latex compilation with python
+Home-page: https://github.com/JoshuaNeely/python-latex
+Author: Joshua Neely
+Author-email: joshua.a.neely@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: latex
+Requires-Dist: watchdog
+
+# python-latex
+
+LaTex has a billion different compilers with fiddly controls and lots of dependencies to install.
+Turns out there is a latex python package with a nice and simple interface. No fiddling with containerization and volume mounts. No funky interface to learn.
+
+`./compile_tex.py` will watch the current directory for _changes_ to any `.tex` file, and compile them to a `.pdf`, without all those useless intermediary files most compilers create.
+
+Use a nice pdf viewer that auto-refreshes, like `zathura`, to continuously develop a file.
+
+

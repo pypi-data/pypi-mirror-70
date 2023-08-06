@@ -1,0 +1,13 @@
+setup.py
+distributions_binomial_dega/Binomialdistribution.py
+distributions_binomial_dega/Gaussiandistribution.py
+distributions_binomial_dega/Generaldistribution.py
+distributions_binomial_dega/__init__.py
+distributions_binomial_dega/numbers.py
+distributions_binomial_dega/numbers_binomial.py
+distributions_binomial_dega/test.py
+distributions_binomial_dega.egg-info/PKG-INFO
+distributions_binomial_dega.egg-info/SOURCES.txt
+distributions_binomial_dega.egg-info/dependency_links.txt
+distributions_binomial_dega.egg-info/not-zip-safe
+distributions_binomial_dega.egg-info/top_level.txt

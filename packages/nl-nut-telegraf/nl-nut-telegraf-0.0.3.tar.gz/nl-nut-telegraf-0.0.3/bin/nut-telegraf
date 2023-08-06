@@ -1,0 +1,29 @@
+#!/bin/env python
+import sys
+import json
+import argparse
+
+from nut_telegraf.ups import NUTExporter
+
+
+def parse_args(args) -> dict:
+    p = argparse.ArgumentParser(prog="nut-telegraf")
+    p.add_argument("--host", type=str, metavar="HOST", default="localhost")
+    p.add_argument("--port", type=int, metavar="PORT", default=3493)
+    p.add_argument("ups", type=str, metavar="UPS_NAME")
+    return vars(p.parse_args())
+
+
+def main():
+    args = parse_args(sys.argv)
+    m = NUTExporter.get_metrics(
+        host=args.get("host"),
+        port=args.get("port"),
+        ups_name=args.get("ups", None)
+    )
+    print(NUTExporter.as_line_protocol(m))
+    # print(NUTExporter.as_json(m))
+
+
+if __name__ == '__main__':
+    main()

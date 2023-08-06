@@ -1,0 +1,9 @@
+setup.py
+bin/nut-telegraf
+nl_nut_telegraf.egg-info/PKG-INFO
+nl_nut_telegraf.egg-info/SOURCES.txt
+nl_nut_telegraf.egg-info/dependency_links.txt
+nl_nut_telegraf.egg-info/requires.txt
+nl_nut_telegraf.egg-info/top_level.txt
+nut_telegraf/__init__.py
+nut_telegraf/ups.py

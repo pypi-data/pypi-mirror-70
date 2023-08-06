@@ -1,0 +1,6 @@
+tensorflow
+stockfish
+pillow
+pyscreenshot
+timeout-decorator
+numpy

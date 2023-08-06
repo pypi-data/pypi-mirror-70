@@ -1,0 +1,8 @@
+README.md
+setup.py
+clearrepetition/__init__.py
+clearrepetition/clearrepetition.py
+clearrepetition.egg-info/PKG-INFO
+clearrepetition.egg-info/SOURCES.txt
+clearrepetition.egg-info/dependency_links.txt
+clearrepetition.egg-info/top_level.txt

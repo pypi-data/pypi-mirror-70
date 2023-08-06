@@ -1,0 +1,9 @@
+numpy
+psutil>=5.7.0
+beeprint>=2.4.10
+Click
+tqdm
+colorama
+
+[resources_plotting]
+matplotlib>=3.2.1

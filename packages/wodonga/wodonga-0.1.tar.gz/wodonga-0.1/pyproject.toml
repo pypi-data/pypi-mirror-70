@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wodonga"
+version = "0.1"
+description = ""
+authors = ["Leigh Brenecki <l@leigh.net.au>"]
+license = "Round Robin 1.0.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+trio = "^0.15.1"
+pytest = "^5.4.2"
+pytest-trio = "^0.5.2"
+structlog = "^20.1.0"
+appdirs = "^1.4.4"
+tomlkit = "^0.6.0"
+cityhash = "^0.2.3"
+
+[tool.poetry.dev-dependencies]
+pycco = "^0.6.0"
+watchdog = "^0.10.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

@@ -1,0 +1,23 @@
+<tr class="btn w-100 p-0" data-toggle="collapse" data-target="#{{ testcase.name }}{{ t_method.name }}" style="border: none;">
+    <td class="text-light pl-2 w-50 text-left">{{ t_method.name }}</td>
+    <td><span class="badge badge-{{ t_method.status_color }}"><i class="fa fa-{{ t_method.status_icon }}"></i></span></td>
+    <td class="text-right w-100"><span class="badge badge-light text-dark mr-1"><i class="fa fa-hourglass-half"></i> {{ t_method.duration }}</span></td>
+</tr>
+<tr class="collapse bg-secondary" id="{{ testcase.name }}{{ t_method.name }}">
+    <td colspan=3><small>
+        <div class="alert alert-{{ t_method.status_color }} rounded m-1" role="alert">
+            {{ t_method.doc }}<br>{{ t_method.status_name }}
+        {% if t_method.error %}
+            <br>
+            {% if t_method.status_name == 'SKIP' %}
+                {{ t_method.error }}
+            {% else %}
+            {% with lines = t_method.error.splitlines()%}
+                {{ lines[-1] }}
+                <div class="alert alert-dark rounded m-1" role="alert">{% for line in lines %}{{ line }}<br>{% endfor %}</div>
+            {% endwith %}
+            {% endif %}
+        {% endif %}
+        </div>
+    </small></td>
+</tr>

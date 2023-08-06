@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: django-adtools
+Version: 1.1
+Summary: UNKNOWN
+Home-page: https://github.com/shmakovpn/django_adtools
+Author: shmakovpn
+Author-email: shmakovpn@yandex.ru
+License: UNKNOWN
+Download-URL: https://github.com/shmakovpn/django_ocr_server/archive/1.1.zip
+Description: ==============
+        Django-adtools
+        ==============
+        
+        Django-adtools is a package with a set of utilities for integrating web applications based on the django framework with
+        MS ActiveDirectory.
+        
+        All documentation is in the "``docs/build``" directory and online at
+        http://django-adtools.readthedocs.org/en/latest
+Platform: UNKNOWN

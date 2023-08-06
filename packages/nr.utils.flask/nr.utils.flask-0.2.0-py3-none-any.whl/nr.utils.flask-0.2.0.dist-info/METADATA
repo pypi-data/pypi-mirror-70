@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nr.utils.flask
+Version: 0.2.0
+Summary: Package description here.
+Home-page: https://git.niklasrosenstein.com/NiklasRosenstein/nr-python-libs
+Author: Niklas Rosenstein
+Author-email: rosensteinniklas@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# nr.utils.flask
+
+Tools for writing Flask applications.
+
+

@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/pytpt/__init__.py
+src/pytpt/finite.py
+src/pytpt/periodic.py
+src/pytpt/stationary.py
+src/pytpt/validation.py
+src/pytpt.egg-info/PKG-INFO
+src/pytpt.egg-info/SOURCES.txt
+src/pytpt.egg-info/dependency_links.txt
+src/pytpt.egg-info/requires.txt
+src/pytpt.egg-info/top_level.txt

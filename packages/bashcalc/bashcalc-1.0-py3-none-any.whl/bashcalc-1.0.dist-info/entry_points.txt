@@ -1,0 +1,3 @@
+[console_scripts]
+bashcalc = bashcalc.bashcalc:command_line_runner
+

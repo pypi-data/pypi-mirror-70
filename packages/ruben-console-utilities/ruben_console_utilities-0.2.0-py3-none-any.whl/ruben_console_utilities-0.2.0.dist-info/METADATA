@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ruben-console-utilities
+Version: 0.2.0
+Summary: Simple utility functions for command-line applications.
+Home-page: https://github.com/Ruben9922/python-console-utilities
+Author: Ruben Dougall
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Console Utilities
+
+[![Travis](https://travis-ci.com/Ruben9922/python-console-utilities.svg?branch=master)](https://travis-ci.com/Ruben9922/python-console-utilities)
+[![PyPI](https://img.shields.io/pypi/v/ruben-console-utilities)](https://pypi.org/project/ruben-console-utilities/)
+[![Licence](https://img.shields.io/github/license/Ruben9922/python-console-utilities)](https://github.com/Ruben9922/python-console-utilities/blob/master/LICENSE)
+
+This is a simple package that contains utility functions for command-line applications. Currently, this includes
+functions for inputting a number, inputting a boolean (e.g. "Enter y or n:") and selecting an option from a list of
+options.
+
+

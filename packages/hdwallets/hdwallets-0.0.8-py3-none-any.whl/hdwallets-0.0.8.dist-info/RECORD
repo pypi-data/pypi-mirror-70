@@ -1,0 +1,7 @@
+hdwallets/__init__.py,sha256=m4kY8t50Fbc_e1FIHpgdGhxQ4ZiNYSMYP-bMkaDdHnk,182
+hdwallets/bip32.py,sha256=l92nlZB5LlISs_bA3td_0Y7Wfxwr7SOV_jZf72uq9Lw,9087
+hdwallets/utils.py,sha256=CMeLhDio2cn6nQAjeSgwtB0EC4LIPexsOxfXqRQMw4U,8425
+hdwallets-0.0.8.dist-info/LICENSE,sha256=ujLxzjbUsQcWT_O3DxReymhubl50-QgPYoVF6-kgncw,1523
+hdwallets-0.0.8.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+hdwallets-0.0.8.dist-info/METADATA,sha256=9mjbvqCvgdNKb1c4svaZsvvHufHaBClzRQFZNpbcCrw,4509
+hdwallets-0.0.8.dist-info/RECORD,,

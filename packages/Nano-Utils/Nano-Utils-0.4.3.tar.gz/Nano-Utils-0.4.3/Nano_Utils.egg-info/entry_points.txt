@@ -1,0 +1,3 @@
+[console_scripts]
+numpy_ge_1_20 = nanoutils.numpy_utils:numpy_ge_1_20
+

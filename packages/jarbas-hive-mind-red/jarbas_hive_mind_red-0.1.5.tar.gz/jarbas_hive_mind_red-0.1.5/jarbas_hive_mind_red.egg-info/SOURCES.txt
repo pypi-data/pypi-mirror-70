@@ -1,0 +1,8 @@
+setup.py
+jarbas_hive_mind_red/__init__.py
+jarbas_hive_mind_red/__main__.py
+jarbas_hive_mind_red.egg-info/PKG-INFO
+jarbas_hive_mind_red.egg-info/SOURCES.txt
+jarbas_hive_mind_red.egg-info/dependency_links.txt
+jarbas_hive_mind_red.egg-info/requires.txt
+jarbas_hive_mind_red.egg-info/top_level.txt

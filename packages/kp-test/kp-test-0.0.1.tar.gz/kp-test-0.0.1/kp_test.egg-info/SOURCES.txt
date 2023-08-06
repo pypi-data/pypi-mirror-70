@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+kp-test/__init__.py
+kp-test/print_test.py
+kp_test.egg-info/PKG-INFO
+kp_test.egg-info/SOURCES.txt
+kp_test.egg-info/dependency_links.txt
+kp_test.egg-info/requires.txt
+kp_test.egg-info/top_level.txt

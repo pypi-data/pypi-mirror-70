@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: kp-test
+Version: 0.0.1
+Summary: Test package
+Home-page: http://pypi.python.org/pypi/kp-test/
+Author: Karan Pathak
+Author-email: pathakkaran1994@gmail.com
+License: LICENSE.txt
+Description: ### This is just a test package
+Platform: UNKNOWN

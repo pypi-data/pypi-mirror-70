@@ -1,0 +1,8 @@
+jsonrpcbase/__init__.py,sha256=yRn7DaNo_9UA-Gcpv26c_B1PRDyEOJo2iCO_dEyHJ8Y,150
+jsonrpcbase/exceptions.py,sha256=giHCqkhgPWKEIYXuhat1TKnFlxGrwbuvLcBz6iKummw,600
+jsonrpcbase/main.py,sha256=uli4YTlby8nL1hA6QhOVtK8jckt8-1sPX-sDTwgsLX8,11318
+jsonrpcbase/utils.py,sha256=jTsDY2XqEYfKJA6oQnBjSpuFkC_2HHf3G6PnXGnpobs,1676
+kbase_jsonrpcbase-0.3.0a3.dist-info/LICENSE,sha256=QBMsXMNTFEX9xuhePmwI80m7VT62g-Bst82604DvBKI,1087
+kbase_jsonrpcbase-0.3.0a3.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+kbase_jsonrpcbase-0.3.0a3.dist-info/METADATA,sha256=j5MCYF7ue9fqvLTBadHXQyBesnmaaTqosX4qWs0y_lk,2671
+kbase_jsonrpcbase-0.3.0a3.dist-info/RECORD,,

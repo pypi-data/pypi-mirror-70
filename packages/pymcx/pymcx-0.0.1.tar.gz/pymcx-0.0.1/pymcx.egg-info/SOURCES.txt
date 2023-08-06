@@ -1,0 +1,5 @@
+setup.py
+pymcx.egg-info/PKG-INFO
+pymcx.egg-info/SOURCES.txt
+pymcx.egg-info/dependency_links.txt
+pymcx.egg-info/top_level.txt

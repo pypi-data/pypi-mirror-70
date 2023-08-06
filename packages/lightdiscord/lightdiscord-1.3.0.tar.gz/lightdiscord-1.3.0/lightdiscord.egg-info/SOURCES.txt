@@ -1,0 +1,8 @@
+README.md
+setup.py
+lightdiscord/__init__.py
+lightdiscord/bot.py
+lightdiscord.egg-info/PKG-INFO
+lightdiscord.egg-info/SOURCES.txt
+lightdiscord.egg-info/dependency_links.txt
+lightdiscord.egg-info/top_level.txt

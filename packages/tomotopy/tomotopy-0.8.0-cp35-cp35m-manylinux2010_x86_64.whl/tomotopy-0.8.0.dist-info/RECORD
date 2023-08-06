@@ -1,0 +1,16 @@
+_tomotopy_avx2.cpython-35m-x86_64-linux-gnu.so,sha256=4hml05RDAowJbUZ96VwCQ53kSoU3SgaB4U6IpujEZ3o,33077896
+_tomotopy.cpython-35m-x86_64-linux-gnu.so,sha256=h5CCSzKy3kWsMGsO5ikMIXYiz9UEB7j34MW9O8Q0usA,32656976
+_tomotopy_avx.cpython-35m-x86_64-linux-gnu.so,sha256=JW0GGoIrzrNs3HdkPMGVW11EA_VH7tTFt-E4nOVZJdU,33059648
+tomotopy-0.8.0.dist-info/RECORD,,
+tomotopy-0.8.0.dist-info/WHEEL,sha256=ou0-hBHfmU_kpHcfKM0I4VAb3l_IyfLzdQNy2VUzD9g,112
+tomotopy-0.8.0.dist-info/top_level.txt,sha256=xDsqdkjudfEXmavpqCETVotQQ96a_2zQspJmSFg8fQQ,48
+tomotopy-0.8.0.dist-info/METADATA,sha256=jz6WkwkYhy8jy0K6Arsf7SPAwdUI6x-xhqUO_7RpK9w,16466
+tomotopy-0.8.0.dist-info/LICENSE,sha256=_rh6LgwwXeNGTMRAd9pTk8UtjKY2LTdCcVfQTsb0UQ0,1057
+tomotopy/utils.py,sha256=xRSrox5ctBUUDjworzTvudWGw3pSBTD-GuOzZjw-Awc,13837
+tomotopy/auto_labeling_code_with_porter.rst,sha256=Ay5IAOJtpSjvsklRqQ9sdHK10fIjzZa3fYpSKbHMuBw,2553
+tomotopy/documentation.kr.rst,sha256=_fDpCkUPuNrsbIHtljDLw37NnbKbv98b5Zg4NLZ6B4o,21746
+tomotopy/auto_labeling_code.rst,sha256=9HDteOaYpyDWHL7_tcd-J2XugX1JVVOPBku_urlzhE8,2244
+tomotopy/documentation.rst,sha256=uRNICfXO36no3lZb91i36qV_rn5nZn_duZe-JrZ9mb0,18325
+tomotopy/__init__.py,sha256=OJd25B6CBBbAzaN0KhUSMGqC4x4DBaEquvy4XRtqao4,7325
+tomotopy/label.py,sha256=Alt1VCyNrDQ9IND0kJUdwWiUY44hWvnJ1IKCv0XSME8,782
+tomotopy/version.py,sha256=ceImgOLnQYbeKHLYYJS5ZBuABnV-cyTzWjoMa_RcZBs,21

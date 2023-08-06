@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: secret_loader
+Version: 0.5
+Summary: Flexible Secret Loader to load secrets from any source with a simple API!
+Home-page: https://github.com/JimFawkes/secret-loader
+Author: Moritz Eilfort
+Author-email: secret-loader@jimfawkes.com

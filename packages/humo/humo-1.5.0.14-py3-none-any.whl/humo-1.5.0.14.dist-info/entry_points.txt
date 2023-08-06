@@ -1,0 +1,6 @@
+[console_scripts]
+gdrive = cli.opendir:gdrive
+img2md = cli.md2jupyter:main
+open = cli.opendir:dir_open
+search = cli.dir:searchwith_gdrive
+

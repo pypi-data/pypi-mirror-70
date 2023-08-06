@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: danksearch
+Version: 0.0.7
+Summary: An async youtube search library made for use with discord.py
+Home-page: https://github.com/actualdankcoder/danksearch-discord
+Author: DankCoder
+Author-email: business.dankcoder@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: Pillow
+Requires-Dist: discord
+Requires-Dist: lxml
+
+# danksearch
+
+danksearch is an async library to search youtube without using any API's.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install danksearch.
+
+```bash
+pip install danksearch
+```
+
+## Usage
+
+```python
+import danksearch, asyncio
+
+async def searchvideo():
+    video=danksearch.Video()
+    await video.search("spooky scary skeletons")
+    print(video.url)
+
+asyncio.run(searchvideo())
+
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://github.com/actualdankcoder/danksearch-discord/blob/master/LICENSE)
+

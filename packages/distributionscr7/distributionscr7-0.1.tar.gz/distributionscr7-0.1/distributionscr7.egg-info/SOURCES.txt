@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+distributionscr7/Binomialdistribution.py
+distributionscr7/Gaussiandistribution.py
+distributionscr7/Generaldistribution.py
+distributionscr7/__init__.py
+distributionscr7.egg-info/PKG-INFO
+distributionscr7.egg-info/SOURCES.txt
+distributionscr7.egg-info/dependency_links.txt
+distributionscr7.egg-info/not-zip-safe
+distributionscr7.egg-info/top_level.txt

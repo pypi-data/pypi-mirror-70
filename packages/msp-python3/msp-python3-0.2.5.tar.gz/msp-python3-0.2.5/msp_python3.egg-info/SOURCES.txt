@@ -1,0 +1,10 @@
+README.md
+setup.py
+msp/__init__.py
+msp/message_ids.py
+msp/multiwii.py
+msp_python3.egg-info/PKG-INFO
+msp_python3.egg-info/SOURCES.txt
+msp_python3.egg-info/dependency_links.txt
+msp_python3.egg-info/requires.txt
+msp_python3.egg-info/top_level.txt

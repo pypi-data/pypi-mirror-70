@@ -1,0 +1,13 @@
+MANIFEST.in
+setup.py
+kema/__init__.py
+kema/app.py
+kema/kema.ini
+kema.egg-info/PKG-INFO
+kema.egg-info/SOURCES.txt
+kema.egg-info/dependency_links.txt
+kema.egg-info/entry_points.txt
+kema.egg-info/requires.txt
+kema.egg-info/top_level.txt
+kema/templates/header.tmpl.h
+kema/templates/source.tmpl.c

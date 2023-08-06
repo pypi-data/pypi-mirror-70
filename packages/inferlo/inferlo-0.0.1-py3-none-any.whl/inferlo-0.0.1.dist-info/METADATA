@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: inferlo
+Version: 0.0.1
+Summary: Inference, Learning & Optimization with Graphical Models
+Home-page: https://github.com/InferLO/inferlo
+Author: The InferLO Developers
+License: Apache 2
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: networkx (>=2.4)
+Requires-Dist: numba (>=0.49.1)
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: scipy (>=1.4)
+
+# InferLO
+
+Python library for Inference, Learning and Optimiation with Graphical Models.
+
+

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rhdash
+Version: 0.1.10
+Summary: Dashboard for RobinHood trading
+License: MIT
+Author: Hernando M. Vidal
+Author-email: nando@hmvidal.io
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dash (>=1.12.0,<2.0.0)
+Requires-Dist: dash_auth (>=1.3.2,<2.0.0)
+Requires-Dist: pandas (>=1.0.4,<2.0.0)
+Requires-Dist: robin-stocks (>=1.0.0,<2.0.0)

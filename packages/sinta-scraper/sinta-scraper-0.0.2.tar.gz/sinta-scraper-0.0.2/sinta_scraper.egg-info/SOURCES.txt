@@ -1,0 +1,9 @@
+README.md
+setup.py
+sinta_scraper/__init__.py
+sinta_scraper/sinta_scraper.py
+sinta_scraper.egg-info/PKG-INFO
+sinta_scraper.egg-info/SOURCES.txt
+sinta_scraper.egg-info/dependency_links.txt
+sinta_scraper.egg-info/requires.txt
+sinta_scraper.egg-info/top_level.txt

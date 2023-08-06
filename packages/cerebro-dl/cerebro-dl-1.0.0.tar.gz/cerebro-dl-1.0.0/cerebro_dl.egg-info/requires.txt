@@ -1,0 +1,12 @@
+h5py>=2.9
+numpy
+petastorm>=0.9.0
+pyarrow==0.16.0
+cloudpickle
+hyperopt>=0.2.3
+
+[cpu]
+tensorflow>=2.0
+
+[gpu]
+tensorflow-gpu>=2.0

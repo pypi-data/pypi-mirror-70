@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: video_flawer
+Version: 0.0.3
+Summary: This package enhances video files with artifical defects.
+Home-page: https://github.com/matousc89/video_flawer
+Author: Matous Cejnek, Yang Hong-Bin
+Author-email: matousc@gmail.com
+License: MIT
+Download-URL: https://github.com/matousc89/video_flawer/archive/v0.0.3.tar.gz
+Description: UNKNOWN
+Keywords: video,noise,artificial
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

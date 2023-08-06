@@ -1,0 +1,3 @@
+[console_scripts]
+ysp_postdown = ysp_postdown.cmdline:execute
+

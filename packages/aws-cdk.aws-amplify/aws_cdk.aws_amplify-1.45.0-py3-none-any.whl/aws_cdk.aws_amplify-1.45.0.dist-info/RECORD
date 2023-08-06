@@ -1,0 +1,8 @@
+aws_cdk/aws_amplify/__init__.py,sha256=s8sDmc4eLwsnhbN07AR7ZHhfIGtfb6aAlucTuzAISJA,147737
+aws_cdk/aws_amplify/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_amplify/_jsii/__init__.py,sha256=CLxnrDDRGiXQ9bf0iHaz3bYeZaZV5Fc6xQaAEs_SfgM,528
+aws_cdk/aws_amplify/_jsii/aws-amplify@1.45.0.jsii.tgz,sha256=CzNLgFnBkdVTjBBzVJ43cKvXWH-mT5aEzXaTlrBOa3M,78183
+aws_cdk.aws_amplify-1.45.0.dist-info/METADATA,sha256=nN1fVlNSaQpTDYGsl5kMHa0LX9YVxCDOkINz68RSBRs,7322
+aws_cdk.aws_amplify-1.45.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_amplify-1.45.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_amplify-1.45.0.dist-info/RECORD,,

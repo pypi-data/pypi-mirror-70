@@ -1,0 +1,15 @@
+README.md
+setup.py
+bin/ezlaunch
+bin/getjid
+bin/jfile
+bin/jstatus
+bin/launch
+bin/rlaunch
+bin/slaunch
+bin/subjids
+ezlaunch.egg-info/PKG-INFO
+ezlaunch.egg-info/SOURCES.txt
+ezlaunch.egg-info/dependency_links.txt
+ezlaunch.egg-info/not-zip-safe
+ezlaunch.egg-info/top_level.txt

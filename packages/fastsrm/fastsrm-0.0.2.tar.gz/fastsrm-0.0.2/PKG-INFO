@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: fastsrm
+Version: 0.0.2
+Summary: Fast Shared response model
+Home-page: https://github.com/hugorichard/FastSRM
+Author: Hugo RICHARD
+Author-email: hugo.richard@inria.fr
+License: MIT
+Download-URL: https://github.com/hugorichard/FastSRM/archive/v_002.tar.gz
+Description: # FastSRM
+        Standalone implementation of FastSRM.
+        
+        See https://arxiv.org/pdf/1909.12537.pdf
+        
+        Install
+        ---------
+        
+        `pip install fastsrm`
+        
+        Docs
+        ------
+        
+        Docs are available at https://hugorichard.github.io/FastSRM/generated/html/  
+        
+Keywords: Component analysis,fMRI
+Platform: UNKNOWN
+Requires-Python: >=3

@@ -1,0 +1,13 @@
+README.md
+setup.py
+bsaUtils/__init__.py
+bsaUtils/performance_metrics.py
+bsaUtils/stats.py
+bsaUtils/bsaScraper/__init__.py
+bsaUtils/bsaScraper/scraper.py
+bsaUtils/bsaScraper/secrets.py
+utils_BSA.egg-info/PKG-INFO
+utils_BSA.egg-info/SOURCES.txt
+utils_BSA.egg-info/dependency_links.txt
+utils_BSA.egg-info/requires.txt
+utils_BSA.egg-info/top_level.txt

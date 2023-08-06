@@ -1,0 +1,10 @@
+setup.py
+mosinDistributions/Binomialdistribution.py
+mosinDistributions/Gaussiandistribution.py
+mosinDistributions/Generaldistribution.py
+mosinDistributions/__init__.py
+mosinDistributions.egg-info/PKG-INFO
+mosinDistributions.egg-info/SOURCES.txt
+mosinDistributions.egg-info/dependency_links.txt
+mosinDistributions.egg-info/not-zip-safe
+mosinDistributions.egg-info/top_level.txt

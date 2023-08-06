@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+deploy_it/__init__.py
+deploy_it/gunicorn-template
+deploy_it/main.py
+deploy_it/nginx-template
+deploy_it.egg-info/PKG-INFO
+deploy_it.egg-info/SOURCES.txt
+deploy_it.egg-info/dependency_links.txt
+deploy_it.egg-info/entry_points.txt
+deploy_it.egg-info/not-zip-safe
+deploy_it.egg-info/requires.txt
+deploy_it.egg-info/top_level.txt

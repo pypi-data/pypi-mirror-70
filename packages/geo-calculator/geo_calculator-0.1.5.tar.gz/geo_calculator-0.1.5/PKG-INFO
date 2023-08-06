@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: geo_calculator
+Version: 0.1.5
+Summary: Multi function Geo Location calculator
+Home-page: http://joaofilipesabinoesperancinha.nl/main
+Author: João Esperancinha
+Author-email: jofisaes@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: Geo Calculator
+        
+        Multi function Geo Location calculator
+        
+        Description
+        This project has the intention of providing a way to make all sorts of Geo calculations.
+        
+        At the moment contains an implementation of:
+        
+        1. Random Western Point contained in one defined square difference.
+        2. Random Eastern Point contained in one defined square difference.
+        3. Calculates the new coordinate based on a source point, and a latitude/longitude delta.
+        
+Keywords: geo,location,latitude,longitude
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

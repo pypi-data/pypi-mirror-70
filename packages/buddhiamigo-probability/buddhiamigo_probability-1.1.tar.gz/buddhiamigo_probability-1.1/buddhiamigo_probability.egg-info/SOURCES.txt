@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+buddhiamigo_probability/Binomialdistribution.py
+buddhiamigo_probability/Gaussiandistribution.py
+buddhiamigo_probability/Generaldistribution.py
+buddhiamigo_probability/__init__.py
+buddhiamigo_probability.egg-info/PKG-INFO
+buddhiamigo_probability.egg-info/SOURCES.txt
+buddhiamigo_probability.egg-info/dependency_links.txt
+buddhiamigo_probability.egg-info/not-zip-safe
+buddhiamigo_probability.egg-info/top_level.txt

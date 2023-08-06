@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: lazyerrors
+Version: 0.0.3
+Summary: Useful errors for lazy people
+Home-page: https://github.com/mrmechko/lazyerrors
+Author: Rik Bose
+Author-email: rbose@cs.rochester.edu
+License: UNKNOWN
+Description: # installation
+        
+        ```
+        pip install lazyerrors
+        ```
+        
+        # usage
+        
+        ```
+        >> from lazyerrors import LazinessError
+        >> raise LazinessError("Please fix this bug", "tired@grad.school.edu")
+        ```
+        
+        # todo
+        
+        [ ] fill in readme
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

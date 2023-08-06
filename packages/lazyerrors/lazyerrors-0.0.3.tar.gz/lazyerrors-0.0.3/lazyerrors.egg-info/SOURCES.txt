@@ -1,0 +1,9 @@
+MANIFEST.in
+README.MD
+setup.py
+lazyerrors/__init__.py
+lazyerrors/error.py
+lazyerrors.egg-info/PKG-INFO
+lazyerrors.egg-info/SOURCES.txt
+lazyerrors.egg-info/dependency_links.txt
+lazyerrors.egg-info/top_level.txt

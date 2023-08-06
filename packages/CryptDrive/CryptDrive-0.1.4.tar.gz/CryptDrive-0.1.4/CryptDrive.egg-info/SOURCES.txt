@@ -1,0 +1,9 @@
+README.md
+setup.py
+CryptDrive/CryptDrive.py
+CryptDrive/__init__.py
+CryptDrive.egg-info/PKG-INFO
+CryptDrive.egg-info/SOURCES.txt
+CryptDrive.egg-info/dependency_links.txt
+CryptDrive.egg-info/requires.txt
+CryptDrive.egg-info/top_level.txt

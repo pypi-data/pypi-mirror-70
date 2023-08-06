@@ -1,0 +1,7 @@
+README.md
+setup.py
+metrix.sh.egg-info/PKG-INFO
+metrix.sh.egg-info/SOURCES.txt
+metrix.sh.egg-info/dependency_links.txt
+metrix.sh.egg-info/requires.txt
+metrix.sh.egg-info/top_level.txt

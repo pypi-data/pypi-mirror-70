@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: metrix.sh
+Version: 0.0.0.post0
+Summary: the official python client for metrix.sh servers
+Home-page: https://gitlab.com/metrixsh/python-client
+Author: Dan Sikes
+Author-email: dansikes7@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://gitlab.com/metrixsh/python-client
+Description: # metrix.sh | Official Python Client
+        The official python client for metrix.sh will live here.
+        Please check back soon for more information.
+Keywords: metrix
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

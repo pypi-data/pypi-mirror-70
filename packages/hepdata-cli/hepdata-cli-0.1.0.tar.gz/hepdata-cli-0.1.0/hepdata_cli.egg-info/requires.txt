@@ -1,0 +1,6 @@
+click
+requests
+
+[tests]
+pytest
+pytest-cov

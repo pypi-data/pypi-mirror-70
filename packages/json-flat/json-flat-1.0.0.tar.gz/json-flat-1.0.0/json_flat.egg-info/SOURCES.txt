@@ -1,0 +1,12 @@
+README.rst
+setup.py
+json_flat.egg-info/PKG-INFO
+json_flat.egg-info/SOURCES.txt
+json_flat.egg-info/dependency_links.txt
+json_flat.egg-info/top_level.txt
+jsonflat/__init__.py
+jsonflat/field.py
+jsonflat/jsonflat.py
+tests/__init__.py
+tests/test_field.py
+tests/test_jsonflat.py

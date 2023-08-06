@@ -1,0 +1,7 @@
+opencv-contrib-python
+paho-mqtt
+pyserial
+psutil
+
+[python 3.6.x needs]
+dataclasses

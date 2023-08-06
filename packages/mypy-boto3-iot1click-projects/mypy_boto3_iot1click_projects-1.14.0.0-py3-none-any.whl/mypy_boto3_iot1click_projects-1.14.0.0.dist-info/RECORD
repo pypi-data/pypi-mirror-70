@@ -1,0 +1,11 @@
+mypy_boto3_iot1click_projects/__init__.py,sha256=VN4Dz6Iuc3SH5tAKax3eibe4XLbWh2gIOQ1YkoPgkGM,970
+mypy_boto3_iot1click_projects/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_iot1click_projects/client.py,sha256=9RSu8P2R4d8uSrZNbK8UbJf5HpiIaCYMEl8nnM_uyUc,8560
+mypy_boto3_iot1click_projects/paginator.py,sha256=s7UYpwwvU1_jgT4PySrBN5biarel9ClJwXaiJFh-gkc,2188
+mypy_boto3_iot1click_projects/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_iot1click_projects/type_defs.py,sha256=vMpdw3DVos0UzssQTwUrcQ6HZEW5n63G7GPRVVZO9kg,4048
+mypy_boto3_iot1click_projects/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_iot1click_projects-1.14.0.0.dist-info/METADATA,sha256=ygt2Jpe-M1Pl-LgjMdA6886O8jNf80OzC1G4Fxj7n_U,4625
+mypy_boto3_iot1click_projects-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_iot1click_projects-1.14.0.0.dist-info/top_level.txt,sha256=Qsu6IISX2co3ULEOdIHXJFrNWaYiio5ROIDoMLit1Ak,30
+mypy_boto3_iot1click_projects-1.14.0.0.dist-info/RECORD,,

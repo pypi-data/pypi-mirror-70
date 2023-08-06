@@ -1,0 +1,6 @@
+MANIFEST.in
+setup.py
+randword.egg-info/PKG-INFO
+randword.egg-info/SOURCES.txt
+randword.egg-info/dependency_links.txt
+randword.egg-info/top_level.txt

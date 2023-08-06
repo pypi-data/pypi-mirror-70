@@ -1,0 +1,7 @@
+README.rst
+setup.py
+tikup.egg-info/PKG-INFO
+tikup.egg-info/SOURCES.txt
+tikup.egg-info/dependency_links.txt
+tikup.egg-info/requires.txt
+tikup.egg-info/top_level.txt

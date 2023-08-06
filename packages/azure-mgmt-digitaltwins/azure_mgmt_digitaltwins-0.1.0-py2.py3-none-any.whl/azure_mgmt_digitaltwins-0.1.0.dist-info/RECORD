@@ -1,0 +1,17 @@
+azure/mgmt/digitaltwins/__init__.py,sha256=V0qSjkTczXug0qRjqhif6ONUL8mjD6lEvII_2M7cVXU,787
+azure/mgmt/digitaltwins/_azure_digital_twins_management_client.py,sha256=E1juYFeTXlITZCLUs-ZER7J1CyDi7E54xe9YLgIhRjM,2697
+azure/mgmt/digitaltwins/_configuration.py,sha256=YjxAEMQdIDlQ3UhV6t3Nv1CkrE92am60W4MmOlngDxI,1896
+azure/mgmt/digitaltwins/version.py,sha256=GukMVZvJdD6GlnUqH5JrIeN8ylWTXk6tJwFIDr8wYLM,493
+azure/mgmt/digitaltwins/models/__init__.py,sha256=IbUN0eRjdnfmHFf9_G8NA4WNWiTALBe_skSoydVElp8,2934
+azure/mgmt/digitaltwins/models/_azure_digital_twins_management_client_enums.py,sha256=2SpDgvsCv7Yup40zcxxfjir5OufQ1trNuEH-GpeUgOI,943
+azure/mgmt/digitaltwins/models/_models.py,sha256=jnuyiLqiK-ZQSrVQ7ToETXke8w4ytFsgQnOqGsQmJL8,22392
+azure/mgmt/digitaltwins/models/_models_py3.py,sha256=Cs5LxjolZffMF7ODotcMwW61pLcpAN3Fs41EU6tRdc0,22669
+azure/mgmt/digitaltwins/models/_paged_models.py,sha256=EHYBzLgYXeMAXcMOrXG-NoepFjjBDdhl-5Swx7SrVCs,1939
+azure/mgmt/digitaltwins/operations/__init__.py,sha256=X7knZJeFNnPbcgfRmrlXTBO94nPzSPtIUe6nBE0efBU,752
+azure/mgmt/digitaltwins/operations/_digital_twins_endpoint_operations.py,sha256=M3tmXFTpTVNpVYGTtbH-2qSJ-yaiUDHqy5_ebKe1pxg,18940
+azure/mgmt/digitaltwins/operations/_digital_twins_operations.py,sha256=UrHVEsNF7EKLQY7gs9aReCd5xxqOUrpMol2cY57mrtA,28833
+azure/mgmt/digitaltwins/operations/_operations.py,sha256=KrmrrkIzMQZGcSe1MwDi-q9ySoAUNTMsWQa8lAsxS8k,3920
+azure_mgmt_digitaltwins-0.1.0.dist-info/METADATA,sha256=zq-nqP1YWE9v3v15ECf49WRCjTdP2k6u_IVtWXI4Jbg,1814
+azure_mgmt_digitaltwins-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+azure_mgmt_digitaltwins-0.1.0.dist-info/top_level.txt,sha256=S7DhWV9m80TBzAhOFjxDUiNbKszzoThbnrSz5MpbHSQ,6
+azure_mgmt_digitaltwins-0.1.0.dist-info/RECORD,,

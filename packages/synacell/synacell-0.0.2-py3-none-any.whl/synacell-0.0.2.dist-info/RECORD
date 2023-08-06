@@ -1,0 +1,9 @@
+synacell/__init__.py,sha256=H2aFnuuKc3wVRVS5pclm5shrCGSe0yEy-rx8rgDrRZA,31
+synacell/cmodule/__init__.py,sha256=qEhW6mcZn8v8nItaFhgeSd8RDKw64ywWAPHZfZCDcOE,52
+synacell/cmodule/snn.py,sha256=Imj6n5YQ0pefTvrfyv6v_WrjVf1ZhGI0AGaggnBqSxI,259
+synacell/cmodule/lib/snn.dll,sha256=Guk1WB110j-QmARYLifVXcxS7qdoQP8qKtkpskJn-p0,47104
+synacell-0.0.2.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+synacell-0.0.2.dist-info/METADATA,sha256=HE27YWTzU5ZEy82jAbV0Bt_7mjpo4Mqb4ZOhLI4cBzY,1178
+synacell-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+synacell-0.0.2.dist-info/top_level.txt,sha256=cjyNQpWIXzJ-Ij1zTDzqEI4rE5nJx1YDn1cdy3iWdfE,9
+synacell-0.0.2.dist-info/RECORD,,

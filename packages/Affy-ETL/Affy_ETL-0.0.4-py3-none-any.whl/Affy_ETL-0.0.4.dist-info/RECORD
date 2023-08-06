@@ -1,0 +1,9 @@
+Affy_ETL/__init__.py,sha256=jYun1oX7F9tuHdTdVwMRT3fQtdQPw0qM0Q3AkK0VdnM,69
+Affy_ETL/extract.py,sha256=XVAkx__CZpboU9kEFVTCnpWB2OsTRIX_Vhg-C5lpS0c,806
+Affy_ETL/loading.py,sha256=n6uRNtRXhf5SY8mZ90g0-AddRjIUcuGbxL0V2_pSMSk,1064
+Affy_ETL/transform.py,sha256=k-IhdtZE0pCRWVc1kA167t4XRiSmOAzRQ8auqVcVOkA,416
+Affy_ETL-0.0.4.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+Affy_ETL-0.0.4.dist-info/METADATA,sha256=86izbHOuW3cDZuEJvV6vWw55HR-aUZDuuzff5v5nmj8,329
+Affy_ETL-0.0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Affy_ETL-0.0.4.dist-info/top_level.txt,sha256=JiiG8x7JxztyyU5KG62y3UnUQpIYCuFH-fXZThQGVBc,9
+Affy_ETL-0.0.4.dist-info/RECORD,,

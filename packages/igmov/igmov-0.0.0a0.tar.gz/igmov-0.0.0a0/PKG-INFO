@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: igmov
+Version: 0.0.0a0
+Summary: Video generator using Ngupuk templates
+Home-page: https://github.com/ngupuk/igmov
+Author: Ngupuk
+Author-email: wafax.4@gmail.com
+License: MIT
+Description: # igmov
+        Video Editing Program for Podcast Preview
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

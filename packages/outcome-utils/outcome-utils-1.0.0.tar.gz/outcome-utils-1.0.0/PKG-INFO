@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: outcome-utils
+Version: 1.0.0
+Summary: A collection of python utils.
+Home-page: https://github.com/outcome-co/utils-py
+License: ISC
+Author: Douglas Willcocks
+Author-email: douglas@outcome.co
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Documentation, https://github.com/outcome-co/utils-py#README
+Project-URL: Repository, https://github.com/outcome-co/utils-py

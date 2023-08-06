@@ -1,0 +1,10 @@
+setup.py
+alanmorrisudacity_distributions/Binomialdistribution.py
+alanmorrisudacity_distributions/Gaussiandistribution.py
+alanmorrisudacity_distributions/Generaldistribution.py
+alanmorrisudacity_distributions/__init__.py
+alanmorrisudacity_distributions.egg-info/PKG-INFO
+alanmorrisudacity_distributions.egg-info/SOURCES.txt
+alanmorrisudacity_distributions.egg-info/dependency_links.txt
+alanmorrisudacity_distributions.egg-info/not-zip-safe
+alanmorrisudacity_distributions.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+README.md
+setup.py
+armadillo/Binomialdistribution.py
+armadillo/Gaussiandistribution.py
+armadillo/Generaldistribution.py
+armadillo/__init__.py
+armadillo.egg-info/PKG-INFO
+armadillo.egg-info/SOURCES.txt
+armadillo.egg-info/dependency_links.txt
+armadillo.egg-info/not-zip-safe
+armadillo.egg-info/top_level.txt

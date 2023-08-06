@@ -1,0 +1,9 @@
+importlib-metadata>=1.6.1
+
+[dev]
+mypy<1,>=0.780
+flake8<4,>=3.8.3
+pytest<5,>=4.6.11
+
+[test]
+pytest<5,>=4.6.11

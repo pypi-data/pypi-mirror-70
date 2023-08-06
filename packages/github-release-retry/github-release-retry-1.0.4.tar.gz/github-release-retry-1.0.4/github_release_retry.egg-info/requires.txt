@@ -1,0 +1,5 @@
+dataclasses-json==0.5.*
+requests==2.*
+
+[:python_version == "3.6"]
+dataclasses

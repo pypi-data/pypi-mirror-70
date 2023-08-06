@@ -1,0 +1,4 @@
+[console_scripts]
+pyterate = Pyterate.Scripts.pyterate:main
+pyterate-rst-api = Pyterate.Scripts.pyterate_rst_api:main
+

@@ -1,0 +1,9 @@
+README.md
+setup.py
+russpdf/__init__.py
+russpdf/pdf2image.py
+russpdf/pdf2text.py
+russpdf.egg-info/PKG-INFO
+russpdf.egg-info/SOURCES.txt
+russpdf.egg-info/dependency_links.txt
+russpdf.egg-info/top_level.txt

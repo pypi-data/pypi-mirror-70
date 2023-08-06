@@ -1,0 +1,8 @@
+README.md
+setup.py
+udirdagch/__init__.py
+udirdagch/udirdagch.py
+udirdagchpython.egg-info/PKG-INFO
+udirdagchpython.egg-info/SOURCES.txt
+udirdagchpython.egg-info/dependency_links.txt
+udirdagchpython.egg-info/top_level.txt

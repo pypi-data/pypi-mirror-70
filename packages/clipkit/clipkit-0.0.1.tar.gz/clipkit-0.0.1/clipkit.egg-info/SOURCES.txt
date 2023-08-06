@@ -1,0 +1,5 @@
+setup.py
+clipkit.egg-info/PKG-INFO
+clipkit.egg-info/SOURCES.txt
+clipkit.egg-info/dependency_links.txt
+clipkit.egg-info/top_level.txt

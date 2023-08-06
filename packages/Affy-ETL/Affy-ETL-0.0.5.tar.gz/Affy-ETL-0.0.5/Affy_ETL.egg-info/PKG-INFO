@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Affy-ETL
+Version: 0.0.5
+Summary: Affydata ETL package
+Home-page: https://github.com/dapingtai/Affy-ETL
+Author: Hung Chang
+Author-email: zero102x@gmail.com
+License: UNKNOWN
+Description: Easy to extract/transform/loading Affy data 
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

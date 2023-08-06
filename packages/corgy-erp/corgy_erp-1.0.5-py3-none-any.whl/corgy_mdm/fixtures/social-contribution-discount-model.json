@@ -1,0 +1,252 @@
+[
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "3ab93726-8c2e-41e1-b584-7bfdc0362384",
+        "code": "1",
+        "name": "R\u00e9szmunkaid\u0151 kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "83034d15-1cfa-4485-a9d4-0be6db5be7a9",
+        "code": "2",
+        "name": "K\u00f6zfoglalkoztat\u00e1s kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "3d38b0ec-3f40-4e76-9a17-94fee87bdd3f",
+        "code": "3",
+        "name": "Rehabilit\u00e1ci\u00f3s k\u00e1rtya kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "f566d22f-b5fb-4919-9612-74a139e4c9e7",
+        "code": "4",
+        "name": "EV-t/T\u00e1rsas v\u00e1llalkoz\u00e1s kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 5,
+    "fields": {
+        "prime_number": "1c49fae8-5704-4635-a6ff-97962bee3c6a",
+        "code": "5",
+        "name": "Szakk\u00e9pzetlen kedvezm\u00e9ny",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 6,
+    "fields": {
+        "prime_number": "9c722e26-488b-447c-9e22-cf15e45b9818",
+        "code": "6",
+        "name": "25 \u00e9v alattiak kedvezm\u00e9nye (180nap alatt)",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 7,
+    "fields": {
+        "prime_number": "788b9305-ea2d-4904-a1ea-f80e0f64f5e8",
+        "code": "7",
+        "name": "25 \u00e9v alattiak kedvezm\u00e9nye (180nap felett)",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 8,
+    "fields": {
+        "prime_number": "7c8bc6a5-8c96-4557-a848-b3daa35b241c",
+        "code": "8",
+        "name": "55 \u00e9v felettiek kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 9,
+    "fields": {
+        "prime_number": "bf800a81-b0c8-41c7-b1ad-2424cd900782",
+        "code": "9",
+        "name": "Tart\u00f3s \u00e1ll\u00e1skeres\u0151k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 10,
+    "fields": {
+        "prime_number": "640c29b3-c1a8-4a0d-ba66-83bd3fbf1563",
+        "code": "10",
+        "name": "Gyed,gyes,gyet foly\u00f3s\u00edt\u00e1s\u00e1t k\u00f6vet\u0151 kedvezm\u00e9ny",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 11,
+    "fields": {
+        "prime_number": "40e49233-1a8b-47f9-a2aa-1165af970d05",
+        "code": "11",
+        "name": "Szabad v\u00e1llakoz\u00e1si z\u00f3n\u00e9k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 12,
+    "fields": {
+        "prime_number": "2e618b96-e352-4f44-90a6-c1083d41127d",
+        "code": "12",
+        "name": "Doktori(PhD)kutat\u00f3k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 13,
+    "fields": {
+        "prime_number": "87437ccb-7393-4e03-9748-6a5846732210",
+        "code": "13",
+        "name": "Doktori k\u00e9pz\u00e9sben l\u00e9v\u0151 hallgat\u00f3k ut\u00e1ni kedvezm\u00e9ny",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 14,
+    "fields": {
+        "prime_number": "a8478e5c-7895-44ea-b7f3-0d296844dccd",
+        "code": "14",
+        "name": "Fbrt.2\u00a7(2)bekezd\u00e9s szerinti mentes\u00fcl\u00e9s",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 15,
+    "fields": {
+        "prime_number": "5ae94157-c2f3-4c9d-bc8c-4e5b689ce024",
+        "code": "15",
+        "name": "Mez\u0151gazdas\u00e1gi munkak\u00f6r kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 16,
+    "fields": {
+        "prime_number": "ffe564e8-7c92-4f34-b3ae-dce5b19e78f7",
+        "code": "16",
+        "name": "Karrier H\u00edd Program kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 17,
+    "fields": {
+        "prime_number": "af147225-285e-400a-bed9-327c11fe4ab3",
+        "code": "17",
+        "name": "V\u00e9dett korban elbocs\u00e1tott k\u00f6ztisztvisel\u0151k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 18,
+    "fields": {
+        "prime_number": "0a626138-f1fe-4f20-980b-015a41bad1b2",
+        "code": "18",
+        "name": "Szakk\u00e9pzetts\u00e9get nem ig\u00e9nyl\u0151 munkak\u00f6r 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 19,
+    "fields": {
+        "prime_number": "e743e9d4-373a-4b51-8d3c-dfb19b9718f2",
+        "code": "19",
+        "name": "Mez\u0151gazdas\u00e1gi munkak\u00f6r kedvezm\u00e9nye 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 20,
+    "fields": {
+        "prime_number": "a0d99fcd-bc55-448d-90a8-b4c1337bc32f",
+        "code": "20",
+        "name": "Munkaer\u0151piacra l\u00e9p\u0151k kedvezm\u00e9nye",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 21,
+    "fields": {
+        "prime_number": "3410125b-aa92-4b89-bbe9-89ed74e0d0ca",
+        "code": "21",
+        "name": "3 vagy t\u00f6bb gyermeket nevel\u0151 munkaer\u0151 piacra l\u00e9p\u0151 n\u0151",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 22,
+    "fields": {
+        "prime_number": "c8b1a69a-fcf1-4295-bcb4-07ca2bf0006a",
+        "code": "22",
+        "name": "Megv\u00e1ltozott munkak\u00e9pess\u00e9g\u00faek ad\u00f3kedvezm\u00e9nye 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 23,
+    "fields": {
+        "prime_number": "2f39b231-e6c8-4491-962a-b5e4e7ee30b4",
+        "code": "23",
+        "name": "K\u00f6zfoglalkoztatottak ad\u00f3kedvezm\u00e9nye 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 24,
+    "fields": {
+        "prime_number": "f56df05d-838e-48d1-8286-039ac51ae03d",
+        "code": "24",
+        "name": "Doktori(PhD)kutat\u00f3k kedvezm\u00e9nye 2019-t\u0151l",
+        "description": null
+    }
+},
+{
+    "model": "corgy_mdm.socialcontributiondiscountmodel",
+    "pk": 25,
+    "fields": {
+        "prime_number": "dafea0e1-7119-4b31-bc45-897cfbc34a40",
+        "code": "25",
+        "name": "Doktori k\u00e9pz\u00e9sben l\u00e9v\u0151 hallgat\u00f3k ut\u00e1ni kedvezm\u00e9ny 2019.-t\u0151l",
+        "description": null
+    }
+}
+]

@@ -1,0 +1,38 @@
+[
+{
+    "model": "corgy_mdm.employmentqualitymodel",
+    "pk": 1,
+    "fields": {
+        "prime_number": "cfc826b9-10c2-447e-800a-71fc49dbf361",
+        "code": "3",
+        "name": "Mez\u0151gazdas\u00e1gi id\u00e9nymunka"
+    }
+},
+{
+    "model": "corgy_mdm.employmentqualitymodel",
+    "pk": 2,
+    "fields": {
+        "prime_number": "0da2c39f-9eb4-441f-bcff-81ddad685ece",
+        "code": "5",
+        "name": "turisztikai id\u00e9nymunka"
+    }
+},
+{
+    "model": "corgy_mdm.employmentqualitymodel",
+    "pk": 3,
+    "fields": {
+        "prime_number": "4a4192b4-3afa-4b4f-9908-b7cf079fc67d",
+        "code": "6",
+        "name": "alkalmi munka"
+    }
+},
+{
+    "model": "corgy_mdm.employmentqualitymodel",
+    "pk": 4,
+    "fields": {
+        "prime_number": "f05d0a98-68db-49ab-bce7-4a3731732504",
+        "code": "7",
+        "name": "filmipari statiszta"
+    }
+}
+]

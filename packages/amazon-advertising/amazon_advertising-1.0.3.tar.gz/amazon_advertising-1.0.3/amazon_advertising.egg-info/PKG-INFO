@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: amazon-advertising
+Version: 1.0.3
+Summary: simple Amazon Advertising API client
+Home-page: https://gitlab.com/ketu.lai/amazon-advertising
+Author: ketu.lai
+Author-email: ketu.lai@gmail.com
+License: MIT
+Description: simple Amazon Advertising API client
+Keywords: amazon advertising api
+Platform: UNKNOWN
+Requires-Python: >=3.6

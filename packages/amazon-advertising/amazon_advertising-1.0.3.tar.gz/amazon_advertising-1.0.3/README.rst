@@ -1,0 +1,1 @@
+simple Amazon Advertising API client

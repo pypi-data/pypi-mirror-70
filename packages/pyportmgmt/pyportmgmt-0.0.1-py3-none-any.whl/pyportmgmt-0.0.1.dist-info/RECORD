@@ -1,0 +1,8 @@
+pyportmgmt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyportmgmt/capm.py,sha256=yGalJrVuPIRTTRQpHIAve64lIJqRFZARzRr3DZPOu38,4783
+pyportmgmt/famafrench.py,sha256=0UbE2th7IVfwbthBlXsQwjZTPHNjk9RRPpCkq2dJMwk,2030
+pyportmgmt/portfolio.py,sha256=UlEkhUoXSTeI8Od2MdImMC1gZ0Nt-5yr3mMlzJUWJDo,4278
+pyportmgmt-0.0.1.dist-info/METADATA,sha256=9nt09iuvGmWtI92v8vzibg2F0rDz1_JxHQzs7OeufjY,5466
+pyportmgmt-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyportmgmt-0.0.1.dist-info/top_level.txt,sha256=CKEjw4R_TmNX1es0woczFCKIy9TC9rxYEnQ8vIohJVs,11
+pyportmgmt-0.0.1.dist-info/RECORD,,

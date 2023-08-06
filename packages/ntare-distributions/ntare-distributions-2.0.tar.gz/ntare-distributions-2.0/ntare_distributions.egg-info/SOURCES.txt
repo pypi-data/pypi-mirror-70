@@ -1,0 +1,6 @@
+setup.py
+ntare_distributions.egg-info/PKG-INFO
+ntare_distributions.egg-info/SOURCES.txt
+ntare_distributions.egg-info/dependency_links.txt
+ntare_distributions.egg-info/not-zip-safe
+ntare_distributions.egg-info/top_level.txt

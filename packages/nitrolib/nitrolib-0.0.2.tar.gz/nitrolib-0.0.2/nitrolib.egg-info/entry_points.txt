@@ -1,0 +1,3 @@
+[console_scripts]
+nitro = nitrolib.__main__:main
+

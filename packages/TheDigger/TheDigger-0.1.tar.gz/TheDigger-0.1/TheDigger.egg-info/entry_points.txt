@@ -1,0 +1,3 @@
+[console_scripts]
+TheDigger = TheDigger_src.main:main
+

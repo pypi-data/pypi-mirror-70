@@ -1,0 +1,9 @@
+b7w_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+b7w_cli/cli.py,sha256=8gFuysdTPfs8Occ9ejRO0-1SLtMZYh36z3GwvepHR28,724
+b7w_cli/images.py,sha256=3zGCMlCXwnvtOaJ59_KCbi7svT3Wh-UNIHcokxD30Mg,2700
+b7w_cli/mac.py,sha256=yVXvwWejaTN0z9JCY8if5TD57PfjW2-m40pzBcZSuhY,485
+b7w_cli/utils.py,sha256=hjDLq0DeGxtvEddrEFLZfFXP3gQxQzrUkjLjt6Wxe70,1262
+b7w_cli-0.1.4.dist-info/entry_points.txt,sha256=JeVFtsPNy8Uvy1jlttTqjkM0ar_w7ff89ifC1gfmPf4,40
+b7w_cli-0.1.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+b7w_cli-0.1.4.dist-info/METADATA,sha256=LXsU3sFZfBXfHJgwFbhMfChZWUZqqnGUujXkkdwckv0,834
+b7w_cli-0.1.4.dist-info/RECORD,,

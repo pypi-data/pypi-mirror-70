@@ -1,0 +1,6 @@
+README.md
+setup.py
+openSheild.egg-info/PKG-INFO
+openSheild.egg-info/SOURCES.txt
+openSheild.egg-info/dependency_links.txt
+openSheild.egg-info/top_level.txt

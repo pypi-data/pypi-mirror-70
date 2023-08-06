@@ -1,0 +1,6 @@
+README.md
+setup.py
+fourier_drawing.egg-info/PKG-INFO
+fourier_drawing.egg-info/SOURCES.txt
+fourier_drawing.egg-info/dependency_links.txt
+fourier_drawing.egg-info/top_level.txt

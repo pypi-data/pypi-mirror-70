@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: pycopy-libc
+Version: 0.4
+Summary: Helper module for libc FFI for Pycopy project (https://github.com/pfalcon/pycopy)
+Home-page: https://github.com/pfalcon/pycopy-lib
+Author: Paul Sokolovsky
+Author-email: pycopy-dev@googlegroups.com
+Maintainer: Paul Sokolovsky
+Maintainer-email: pycopy-dev@googlegroups.com
+License: MIT
+Description: Helper module for libc FFI for Pycopy project (https://github.com/pfalcon/pycopy).
+Platform: UNKNOWN

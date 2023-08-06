@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: whats-app-bot
+Version: 0.0.1
+Summary: For automating whatsapp chats
+Home-page: https://github.com/prashantepicprogrammer/WhatsAppBot
+Author: Prashant Dwivedi
+Author-email: m.prashant.dwivedi@gmail.com
+License: UNKNOWN
+Description: # WhatsAppBot
+        This module helps is automating whats app chats
+        
+        ## Things you should have 
+        1. Chrome driver
+        2. Selenium Installed
+        
+        ## Download chrome driver from here
+        https://chromedriver.chromium.org/downloads
+        
+        ## Install selenium 
+        pip install selenium
+        
+        ## Installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+        
+        ```bash
+        pip install whats_app_bot
+        ```
+        
+        ## Usage
+        
+        ```python
+        import WhatsAppBot
+        
+        bot = WhatsAppBot()
+        bot.send_text_to('username','message','numberoftimes')
+        # numberoftimes has default value as 1
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

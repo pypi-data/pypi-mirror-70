@@ -1,0 +1,7 @@
+README.md
+setup.py
+WhatsAppBot/__init__.py
+whats_app_bot.egg-info/PKG-INFO
+whats_app_bot.egg-info/SOURCES.txt
+whats_app_bot.egg-info/dependency_links.txt
+whats_app_bot.egg-info/top_level.txt

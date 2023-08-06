@@ -1,0 +1,3 @@
+[console_scripts]
+langtojson = langtojson.cli:main
+

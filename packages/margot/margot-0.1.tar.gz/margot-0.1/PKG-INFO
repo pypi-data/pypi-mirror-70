@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: margot
+Version: 0.1
+Summary: simple to use, batteries included, tools for quantitative trading.
+Home-page: https://github.com/atkinson/margot
+Author: Rich Atkinson
+Author-email: rich@airteam.com.au
+License: apache-2.0
+Download-URL: https://github.com/atkinson/margot/archive/v_0.1-alpha.tar.gz
+Description: UNKNOWN
+Keywords: quant,trading,systematic
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

@@ -1,0 +1,10 @@
+setup.py
+distributions_sri/Binomialdistribution.py
+distributions_sri/Gaussiandistribution.py
+distributions_sri/Generaldistribution.py
+distributions_sri/__init__.py
+distributions_sri.egg-info/PKG-INFO
+distributions_sri.egg-info/SOURCES.txt
+distributions_sri.egg-info/dependency_links.txt
+distributions_sri.egg-info/not-zip-safe
+distributions_sri.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+README.md
+setup.py
+griddic_dummy_package.egg-info/PKG-INFO
+griddic_dummy_package.egg-info/SOURCES.txt
+griddic_dummy_package.egg-info/dependency_links.txt
+griddic_dummy_package.egg-info/requires.txt
+griddic_dummy_package.egg-info/top_level.txt
+package/__init__.py

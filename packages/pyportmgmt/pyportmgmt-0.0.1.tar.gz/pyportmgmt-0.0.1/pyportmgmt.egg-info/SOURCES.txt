@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyportmgmt/__init__.py
+pyportmgmt/capm.py
+pyportmgmt/famafrench.py
+pyportmgmt/portfolio.py
+pyportmgmt.egg-info/PKG-INFO
+pyportmgmt.egg-info/SOURCES.txt
+pyportmgmt.egg-info/dependency_links.txt
+pyportmgmt.egg-info/top_level.txt

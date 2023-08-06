@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/.DS_Store
+src/__init__.py
+src/jsonpathgenerator.py
+src/jsonpathgenerator.egg-info/PKG-INFO
+src/jsonpathgenerator.egg-info/SOURCES.txt
+src/jsonpathgenerator.egg-info/dependency_links.txt
+src/jsonpathgenerator.egg-info/top_level.txt

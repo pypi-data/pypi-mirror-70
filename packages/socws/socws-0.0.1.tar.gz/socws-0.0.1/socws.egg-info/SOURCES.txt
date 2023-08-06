@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+socws/__init__.py
+socws/client.py
+socws.egg-info/PKG-INFO
+socws.egg-info/SOURCES.txt
+socws.egg-info/dependency_links.txt
+socws.egg-info/not-zip-safe
+socws.egg-info/requires.txt
+socws.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+Flask-WTF
+MarkupSafe
+WTForms
+WTForms-SQLAlchemy

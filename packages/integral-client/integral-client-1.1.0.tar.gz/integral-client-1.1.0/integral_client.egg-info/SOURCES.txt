@@ -1,0 +1,13 @@
+COPYING
+README.md
+ddaclient.py
+integralclient.py
+service_exception.py
+setup.cfg
+setup.py
+integral_client.egg-info/PKG-INFO
+integral_client.egg-info/SOURCES.txt
+integral_client.egg-info/dependency_links.txt
+integral_client.egg-info/entry_points.txt
+integral_client.egg-info/requires.txt
+integral_client.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+setup.py
+Stats_Distributions_Skyweldor/Binomialdistribution.py
+Stats_Distributions_Skyweldor/Gaussiandistribution.py
+Stats_Distributions_Skyweldor/Generaldistribution.py
+Stats_Distributions_Skyweldor/__init__.py
+Stats_Distributions_Skyweldor.egg-info/PKG-INFO
+Stats_Distributions_Skyweldor.egg-info/SOURCES.txt
+Stats_Distributions_Skyweldor.egg-info/dependency_links.txt
+Stats_Distributions_Skyweldor.egg-info/not-zip-safe
+Stats_Distributions_Skyweldor.egg-info/top_level.txt

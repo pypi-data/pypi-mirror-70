@@ -1,0 +1,10 @@
+ds_ctcdecoder/__init__.py,sha256=rNyConozRdyZp5kxTeDWjmbjCegQ_SWsTWp549e2MFI,5630
+ds_ctcdecoder/_swigwrapper.cpython-36m-x86_64-linux-gnu.so,sha256=dF33VJbihbr4IziHKVou4398TX2fPn80_IebAM_Sm8A,7050457
+ds_ctcdecoder/swigwrapper.py,sha256=FIF1vN4My4IW99dxJFzEgVsGrdGyH7P1Ar3nY8loA3Y,21810
+ds_ctcdecoder-0.7.1.dist-info/COPYING,sha256=isrDXFkSVDyKtDpTuGa7KqZJr2ZTQyEd9NwOn9v0RlU,402
+ds_ctcdecoder-0.7.1.dist-info/LICENSE.paddlepaddle,sha256=4gg7gGIkh71vzcj8eB3Df3_2My1qgq8dpmBkpU4NwaU,11380
+ds_ctcdecoder-0.7.1.dist-info/LICENSE.parlance,sha256=C3BUrZ9M16KR9EBQ0haxRrXji9Y6HgmJwInKemkPxLw,1112
+ds_ctcdecoder-0.7.1.dist-info/METADATA,sha256=T0ihbCqrMq9KNPf5FKZy8OLhqBNzcL6GX1p_vP-s2rU,205
+ds_ctcdecoder-0.7.1.dist-info/WHEEL,sha256=AKoo51LvHJJJz3_DqlQwz4MB2e4xQub2c35_Bx40pVs,109
+ds_ctcdecoder-0.7.1.dist-info/top_level.txt,sha256=pMN8n0pT5rtjb6n5ifcWwTUpqmGp9chcNfSe1FCFgic,14
+ds_ctcdecoder-0.7.1.dist-info/RECORD,,

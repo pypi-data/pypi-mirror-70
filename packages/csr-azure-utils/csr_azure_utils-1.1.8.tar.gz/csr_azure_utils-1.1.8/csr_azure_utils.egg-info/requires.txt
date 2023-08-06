@@ -1,0 +1,11 @@
+python-crontab
+pathlib
+configparser
+pyopenssl
+msrest
+msrestazure
+paramiko
+azure-storage-file
+azure-storage-blob
+azure-storage-common
+azure-storage-nspkg

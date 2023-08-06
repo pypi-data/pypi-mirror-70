@@ -1,0 +1,3 @@
+[console_scripts]
+cmake-tidy = cmake_tidy.run:run
+

@@ -1,0 +1,9 @@
+README.md
+setup.py
+mlnames/__init__.py
+mlnames/corpus
+mlnames/exclude_words
+mlnames.egg-info/PKG-INFO
+mlnames.egg-info/SOURCES.txt
+mlnames.egg-info/dependency_links.txt
+mlnames.egg-info/top_level.txt

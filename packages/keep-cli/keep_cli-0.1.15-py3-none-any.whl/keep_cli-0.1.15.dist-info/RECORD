@@ -1,0 +1,10 @@
+keep/NoteGrid.py,sha256=6_RSrgnehAW1v0QdlqyPybk4aK3lup95XvX4mnOPMFY,6752
+keep/__init__.py,sha256=xPSSfY6ku6QWyVVFqpnrqTYF4Y5m8ZhJA9w4qUUHVVg,23
+keep/__main__.py,sha256=uTpSvHom2i1o1ZIGxXaNMnmbZCLFtkwozkwEcZOofqU,104
+keep/keep.py,sha256=2ijZOgQr7U5ZabK6cObZ2n_o2DQWkmtD1pUPlh1Sz90,16702
+keep_cli-0.1.15.dist-info/LICENSE,sha256=6JHxzzBQ7rkVBO6mheZlFKOYAqsY_BQLuNImnB5jgus,1070
+keep_cli-0.1.15.dist-info/METADATA,sha256=ShLFgdV-g_PsSJSXT2gBzZQg1fMpMNmBBRHxaJ4xtXo,1476
+keep_cli-0.1.15.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+keep_cli-0.1.15.dist-info/entry_points.txt,sha256=u0DN9-MNZFw7osVPcFE20P7S9X4pnX76Lk9-ie1pLhc,67
+keep_cli-0.1.15.dist-info/top_level.txt,sha256=9mCnmW3qz7x1YOQkAFSorYLrAv4lqVBkJX4HCEvKy4U,5
+keep_cli-0.1.15.dist-info/RECORD,,

@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: malekbasiccalculator
+Version: 0.0.1
+Summary: A very basic calculator
+Home-page: UNKNOWN
+Author: Malek Jaouadi
+Author-email: UNKNOWN
+License: MIT
+Description: This very simple calculator Flask application that takes two number then either:
+         * add
+         * substruct
+         * multiply
+         * divise
+        
+        Api endpoints: /add/{number1}/{number2}, /subs/{number1}/{number2}, /multiply/{number1}/{number2}, /divise/{number1}/{number2}
+        
+        Change Log
+        
+        ===============================
+        0.0.1 (07/06/2020)
+        ===============================
+        - First release
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

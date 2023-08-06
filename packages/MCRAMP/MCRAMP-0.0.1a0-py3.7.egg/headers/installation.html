@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Installation &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hello, RAMP: a minimal example" href="hello.html" />
+    <link rel="prev" title="RAMP: Raytracing Achieved via Massive Parallelisation" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Running RAMP requires a working Python 3 installation. If you are unfamiliar with Python, this can be easily obtianed from the <a class="reference external" href="https://www.python.org/">Python website</a> or as part of the <a class="reference external" href="https://www.anaconda.com/">Anaconda package</a>  which comes preloaded with many useful libraries.</p>
+<p>In addition to Python 3, RAMP is parallelized using the OpenCL API. To install the Python port of the OpenCL bindings and compile the OpenCL kernels used by RAMP, it will be necessary to install the OpenCL SDK appropriate to the vendor of the hardware you intend to run RAMP on. At the time of writing, these SDKs can be obtained from</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://software.intel.com/en-us/intel-opencl/">Intel OpenCL SDK</a></p></li>
+<li><p><a class="reference external" href="https://developer.nvidia.com/cuda-downloads/">NVIDIA CUDA Toolkit</a></p></li>
+<li><p><a class="reference external" href="https://gpuopen.com/compute-product/opencl-sdk/">AMD GPUOpen SDK</a></p></li>
+</ul>
+</div></blockquote>
+<p>If during the installation or execution of RAMP you are recieving errors relating to the header file ‘CL\cl.h’ it is likely your OpenCL SDK is incorrectly installed.</p>
+</div>
+<div class="section" id="obtaining-ramp">
+<h2>Obtaining RAMP<a class="headerlink" href="#obtaining-ramp" title="Permalink to this headline">¶</a></h2>
+<p>RAMP is most easily obtained by cloning the public GitHub repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/gcassella/RAMP.git
+</pre></div>
+</div>
+<p>Otherwise the package can be downloaded from the <a class="reference external" href="https://github.com/gcassella/RAMP">GitHub page</a> in a .zip archive. The package can then be installed via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd RAMP
+$ python setup.py install
+</pre></div>
+</div>
+<p>To ensure the package has been installed correctly, try running one of the examples found in the ‘examples’ directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd examples
+$ python LET_RAMP.py
+</pre></div>
+</div>
+<p>If this prompts you to select your OpenCL device and then spits out a handful of detector image plots, everything is installed correctly!</p>
+</div>
+<div class="section" id="jupyter-notebooks">
+<h2>Jupyter notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>Some of the instructional examples for RAMP are presented as <a class="reference external" href="https://jupyter.org/">Jupyter</a> notebooks. These are interactive Python environments that allow code to be presented, edited, and ran alongside relevant text and graphical outputs. The easiest way to get up and running with RAMP notebooks is via Google Colab, see <a class="reference internal" href="../index.html#google-colab"><span class="std std-ref">Quick start</span></a>, however if you wish to run the notebooks locally follow the instructions here.</p>
+<p>To install Jupyter (assuming you followed the instructions above and have a functional Python installation) run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install jupyterlab
+</pre></div>
+</div>
+<p>Jupyter can then be run via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd %your_ramp_directory_here%/examples/%example_you_want_to_run%
+$ jupyter notebook
+</pre></div>
+</div>
+<p>This will open a page in your default web browser from which you can select the example notebook and run the interactive Python therein.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtaining-ramp">Obtaining RAMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-notebooks">Jupyter notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">RAMP: Raytracing Achieved via Massive Parallelisation</a></li>
+      <li>Next: <a href="hello.html" title="next chapter">Hello, RAMP: a minimal example</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/user/installation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

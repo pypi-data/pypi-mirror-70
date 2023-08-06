@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Geometry kernels &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Scattering kernels" href="scat_kernels.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../writing/modes.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="geometry-kernels">
+<h1>Geometry kernels<a class="headerlink" href="#geometry-kernels" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="arm-garm">
+<h2>Arm (<cite>GArm</cite>)<a class="headerlink" href="#arm-garm" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.geom.GArm">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.geom.</code><code class="sig-name descname">GArm</code><span class="sig-paren">(</span><em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/geom/arm.html#GArm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.geom.GArm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry kernel for Arm component - does not store a real intersection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>None</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>None</p>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>None</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="banana-gbanana">
+<h2>Banana (<cite>GBanana</cite>)<a class="headerlink" href="#banana-gbanana" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.geom.GBanana">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.geom.</code><code class="sig-name descname">GBanana</code><span class="sig-paren">(</span><em class="sig-param">radius=0</em>, <em class="sig-param">height=0</em>, <em class="sig-param">mintheta=0</em>, <em class="sig-param">maxtheta=0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/geom/banana.html#GBanana"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.geom.GBanana" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry kernel for ‘banana’ geometry. Intersects with the interior of the
+banana, i.e. first intersection must be at negative time for scattering to
+occur.</p>
+<p>…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>radius</strong><span class="classifier">float</span></dt><dd><p>The radius of the banana</p>
+</dd>
+<dt><strong>height</strong><span class="classifier">float</span></dt><dd><p>The height of the banana</p>
+</dd>
+<dt><strong>mintheta</strong><span class="classifier">float</span></dt><dd><p>The minimum valid intersection angle with the banana</p>
+</dd>
+<dt><strong>maxtheta</strong><span class="classifier">float</span></dt><dd><p>The maximum valid intersection angle with the banana</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Intersection 1 :</dt><dd><p>Negative time intersection with the portion of the banana behind the        neutron trajectory.</p>
+</dd>
+<dt>Intersection 2 :</dt><dd><p>Positive time intersection with the portion of the banana ahead of the        neutron trajectory.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>None</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="box-gbox">
+<h2>Box (<cite>GBox</cite>)<a class="headerlink" href="#box-gbox" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.geom.GBox">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.geom.</code><code class="sig-name descname">GBox</code><span class="sig-paren">(</span><em class="sig-param">width=0</em>, <em class="sig-param">height=0</em>, <em class="sig-param">depth=0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/geom/box.html#GBox"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.geom.GBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry kernel for ‘box’ geometry. Intersects with the exterior of the
+box, i.e. first intersection must be at positive time for scattering to occur.</p>
+<p>…</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width</strong><span class="classifier">float</span></dt><dd><p>The width of the box</p>
+</dd>
+<dt><strong>height</strong><span class="classifier">float</span></dt><dd><p>The height of the box</p>
+</dd>
+<dt><strong>depth</strong><span class="classifier">float</span></dt><dd><p>The depth of the box</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Intersection 1 :</dt><dd><p>First point of intersection with the box geometry - ‘entering’ box.</p>
+</dd>
+<dt>Intersection 2 :</dt><dd><p>Second point of intersection with the box geometry - ‘exiting’ box.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>None</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="plane-gplane">
+<h2>Plane (<cite>GPlane</cite>)<a class="headerlink" href="#plane-gplane" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.geom.GPlane">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.geom.</code><code class="sig-name descname">GPlane</code><span class="sig-paren">(</span><em class="sig-param">width=0</em>, <em class="sig-param">height=0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">orientation='xy'</em>, <em class="sig-param">ctx=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/geom/plane.html#GPlane"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.geom.GPlane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry kernel for ‘plane’ geometry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>width</strong><span class="classifier">float</span></dt><dd><p>The width of the plane</p>
+</dd>
+<dt><strong>height</strong><span class="classifier">float</span></dt><dd><p>The height of the plane</p>
+</dd>
+<dt><strong>orientation</strong><span class="classifier">{“xy”, “yz”}</span></dt><dd><p>The orientation of the plane. “xy” gives a plane normal to the z axis,
+“yz” gives a plane normal to the x axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Intersection 1 :</dt><dd><p>Point of intersection with the plane</p>
+</dd>
+<dt>Intersection 2 :</dt><dd><p>Same as Intersection 1.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>None</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="sphere-gsphere">
+<h2>Sphere (<cite>GSphere</cite>)<a class="headerlink" href="#sphere-gsphere" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.geom.GSphere">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.geom.</code><code class="sig-name descname">GSphere</code><span class="sig-paren">(</span><em class="sig-param">radius=0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/geom/sphere.html#GSphere"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.geom.GSphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry kernel for ‘sphere’ geometry. Intersects with the exterior of the
+sphere, i.e. first intersection time must be positive for scattering to
+occur.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>radius</strong><span class="classifier">float</span></dt><dd><p>The radius of the sphere</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<dl class="simple">
+<dt>Intersection 1 :</dt><dd><p>First point of intersection with the sphere geometry - ‘entering’ sphere.</p>
+</dd>
+<dt>Intersection 2 :</dt><dd><p>Second point of intersection with the sphere geometry - ‘exiting’ sphere.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>None</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Geometry kernels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arm-garm">Arm (<cite>GArm</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#banana-gbanana">Banana (<cite>GBanana</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#box-gbox">Box (<cite>GBox</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plane-gplane">Plane (<cite>GPlane</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sphere-gsphere">Sphere (<cite>GSphere</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../writing/modes.html" title="previous chapter">&lt;no title&gt;</a></li>
+      <li>Next: <a href="scat_kernels.html" title="next chapter">Scattering kernels</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/kernels/geom_kernels.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

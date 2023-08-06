@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>mcramp.scat.detector2D &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for mcramp.scat.detector2D</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.sprim</span> <span class="kn">import</span> <span class="n">SPrim</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyopencl</span> <span class="k">as</span> <span class="nn">cl</span>
+<span class="kn">import</span> <span class="nn">pyopencl.array</span> <span class="k">as</span> <span class="nn">clarr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<div class="viewcode-block" id="SDetector2D"><a class="viewcode-back" href="../../../kernels/scat_kernels.html#mcramp.scat.SDetector2D">[docs]</a><span class="k">class</span> <span class="nc">SDetector2D</span><span class="p">(</span><span class="n">SPrim</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scattering kernel for a two axis monitor supporting a variety of axis variables.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    axis1_var, axis2_var : { &quot;x&quot;, &quot;y&quot;, &quot;theta&quot;, &quot;alpha&quot;, &quot;tof&quot;, &quot;divX&quot;, &quot;divY&quot; }</span>
+<span class="sd">        Chooses the variables of each axis. These correspond to:</span>
+<span class="sd">            - &quot;x&quot; : x coordinate of intersection point with the detector</span>
+<span class="sd">            - &quot;y&quot; : y coordinate of intersection point with the detector</span>
+<span class="sd">            - &quot;theta&quot; : Angle made by intersection point in xz plane with z axis, \</span>
+<span class="sd">                typically the in-plane scattering angle</span>
+<span class="sd">            - &quot;alpha&quot; : Angle made by intersection point in yz plane with z axis, \</span>
+<span class="sd">                typically the out-of-plane scattering angle</span>
+<span class="sd">            - &quot;divX&quot; : Horizontal divergence of neutron velocity</span>
+<span class="sd">            - &quot;divY&quot; : Vertical divergence of neutron velocity</span>
+<span class="sd">    axis1_binning : 3-tuple of floats</span>
+<span class="sd">        Lower bin edge, bin size, and upper bin edge for axis 1</span>
+<span class="sd">    axis2_binning : 3-tuple of floats</span>
+<span class="sd">        Lower bin edge, bin size, and upper bin edge for axis 2</span>
+<span class="sd">    restore_neutron : Boolean</span>
+<span class="sd">        If False, neutron is terminated upon intersection with this component</span>
+<span class="sd">    filename : str or None</span>
+<span class="sd">        Name of the file to which histogram will be saved. No file saved if</span>
+<span class="sd">        filename is None</span>
+<span class="sd">    logscale : Boolean</span>
+<span class="sd">        If True, histogram intensity is plotted on a logarithmic scale</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    Data</span>
+<span class="sd">        Returns a 3-tuple of numpy arrays, the first two containing the binning\</span>
+<span class="sd">        for axes 1 and 2, respectively, and the third containing the histogrammed\</span>
+<span class="sd">        neutron weights for each bin</span>
+<span class="sd">    Plot</span>
+<span class="sd">        Displays a plot of the two dimensional histogram of neutron weights along\</span>
+<span class="sd">        the chosen axes.</span>
+<span class="sd">    Save</span>
+<span class="sd">        Saves the binning along axes 1 and 2 and the histogrammed neutron weights\</span>
+<span class="sd">        for each bin as filename_X, filename_Y, and filename_Z, respectively, if\</span>
+<span class="sd">        filename is not None.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">axis1_binning</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                 <span class="n">axis2_binning</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis1_var</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span> <span class="n">axis2_var</span><span class="o">=</span><span class="s2">&quot;tof&quot;</span><span class="p">,</span>
+                 <span class="n">restore_neutron</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logscale</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">var_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;x&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;y&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;theta&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;alpha&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="s2">&quot;tof&quot;</span> <span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+            <span class="s2">&quot;divX&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;divY&quot;</span> <span class="p">:</span> <span class="mi">6</span>
+        <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">var_label_dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">0</span> <span class="p">:</span> <span class="s2">&quot;x [m]&quot;</span><span class="p">,</span>
+            <span class="mi">1</span> <span class="p">:</span> <span class="s2">&quot;y [m]&quot;</span><span class="p">,</span>
+            <span class="mi">2</span> <span class="p">:</span> <span class="s2">&quot;Theta [deg]&quot;</span><span class="p">,</span>
+            <span class="mi">3</span> <span class="p">:</span> <span class="s2">&quot;Alpha [deg]&quot;</span><span class="p">,</span>
+            <span class="mi">4</span> <span class="p">:</span> <span class="s2">&quot;Time-of-flight [us]&quot;</span><span class="p">,</span>
+            <span class="mi">5</span> <span class="p">:</span> <span class="s2">&quot;Horizontal divergence [deg]&quot;</span><span class="p">,</span>
+            <span class="mi">6</span> <span class="p">:</span> <span class="s2">&quot;Vertical divergence [deg]&quot;</span>
+        <span class="p">}</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_ran_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_copy_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis1_var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">var_dict</span><span class="p">[</span><span class="n">axis1_var</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis2_var</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">var_dict</span><span class="p">[</span><span class="n">axis2_var</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis1_binning</span> <span class="o">=</span> <span class="n">axis1_binning</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis2_binning</span> <span class="o">=</span> <span class="n">axis2_binning</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">restore_neutron</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="n">restore_neutron</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logscale</span> <span class="o">=</span> <span class="n">logscale</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">axis1_binning</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">axis1_binning</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">axis1_binning</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">((</span><span class="n">axis2_binning</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">axis2_binning</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">axis2_binning</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">histo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">num_bins</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">histo2d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span><span class="p">))</span>
+
+        <span class="n">mf</span>               <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">mem_flags</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">histo_cl</span>    <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span>
+                                     <span class="n">mf</span><span class="o">.</span><span class="n">READ_WRITE</span> <span class="o">|</span> <span class="n">mf</span><span class="o">.</span><span class="n">COPY_HOST_PTR</span><span class="p">,</span>
+                                     <span class="n">hostbuf</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">histo</span><span class="p">)</span>
+        
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_binning</span><span class="p">[</span><span class="s1">&#39;s0&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis1_binning</span><span class="p">[</span><span class="s1">&#39;s2&#39;</span><span class="p">],</span> <span class="n">num</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axis2_binning</span><span class="p">[</span><span class="s1">&#39;s0&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis2_binning</span><span class="p">[</span><span class="s1">&#39;s2&#39;</span><span class="p">],</span> <span class="n">num</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">histo2d</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s1">&#39;detector2D.cl&#39;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))))</span>
+
+    <span class="k">def</span> <span class="nf">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">neutron_buf</span><span class="p">,</span> <span class="n">intersection_buf</span><span class="p">,</span> <span class="n">iidx_buf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prg</span><span class="o">.</span><span class="n">detector</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span>
+                          <span class="kc">None</span><span class="p">,</span>
+                          <span class="n">neutron_buf</span><span class="p">,</span>
+                          <span class="n">intersection_buf</span><span class="p">,</span>
+                          <span class="n">iidx_buf</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">histo_cl</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis1_binning</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis2_binning</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis1_var</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">axis2_var</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">restore_neutron</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_ran_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cached_copy</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Z</span> <span class="o">+</span> <span class="mf">1e-7</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">logscale</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">)</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var_label_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_var</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var_label_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">axis2_var</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cached_copy</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">:</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">+</span> <span class="s1">&#39;X.dat&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">+</span> <span class="s1">&#39;Y.dat&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">+</span> <span class="s1">&#39;Z.dat&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cached_copy</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_histo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">sum_histo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Z</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">histo2d</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sample_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sample_pos</span>
+
+    <span class="nd">@sample_pos</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sample_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sample_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mf">0.</span><span class="p">),</span>
+                                 <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float3</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">axis1_binning</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_axis1_binning</span>
+
+    <span class="nd">@axis1_binning</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">axis1_binning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_axis1_binning</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mf">0.</span><span class="p">),</span>
+                                 <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float3</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">axis2_binning</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_axis2_binning</span>
+
+    <span class="nd">@axis2_binning</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">axis2_binning</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_axis2_binning</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">val</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mf">0.</span><span class="p">),</span>
+                                 <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float3</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_cached_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">):</span>        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_ran_datetime</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_copy_datetime</span><span class="p">:</span>
+            <span class="n">cl</span><span class="o">.</span><span class="n">enqueue_copy</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">histo</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">histo_cl</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">histo</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">axis1_num_bins</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis2_num_bins</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_copy_datetime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

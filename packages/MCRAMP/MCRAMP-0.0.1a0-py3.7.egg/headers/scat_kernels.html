@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Scattering kernels &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Geometry kernels" href="geom_kernels.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="scattering-kernels">
+<h1>Scattering kernels<a class="headerlink" href="#scattering-kernels" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="detectors">
+<h2>Detectors<a class="headerlink" href="#detectors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="counter-scounter">
+<h3>Counter (<cite>SCounter</cite>)<a class="headerlink" href="#counter-scounter" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SCounter">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SCounter</code><span class="sig-paren">(</span><em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/counter.html#SCounter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SCounter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for Counter detector. Marks a neutron as detected for usage
+alongside the ‘SRescal’ component, and outputs a floating point number equal
+to the sum of the weights of detected neutrons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">str or None</span></dt><dd><p>Name of the file to which neutron counts will be saved. No file saved if
+filename is None</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 93%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>Returns the sum of detected neutron weights as a floating point number.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>Saves the sum of detected neutron weights as a npy file if the parameter        filename is not None.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="d-detector-sdetector1d">
+<h3>1D Detector (<cite>SDetector1D</cite>)<a class="headerlink" href="#d-detector-sdetector1d" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SDetector1D">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SDetector1D</code><span class="sig-paren">(</span><em class="sig-param">binning=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">0)</em>, <em class="sig-param">restore_neutron=False</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">var='energy'</em>, <em class="sig-param">ctx=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/detector1D.html#SDetector1D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SDetector1D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for a one axis monitor supporting a variety of axis variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>binning</strong><span class="classifier">3-tuple of floats</span></dt><dd><p>Lower bin edge, bin size, and upper bin edge for axis variable</p>
+</dd>
+<dt><strong>restore_neutron</strong><span class="classifier">Boolean</span></dt><dd><p>If False, neutron is terminated upon intersection with this component</p>
+</dd>
+<dt><strong>var</strong><span class="classifier">{ “energy”, “theta”, “tof” }</span></dt><dd><p>Quantity which defines the axis along which neutron weights are histogrammed</p>
+</dd>
+<dt><strong>filename</strong><span class="classifier">str or None</span></dt><dd><p>Name of the file to which spectrum will be saved. No file saved if
+filename is None</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>binning</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 95%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>Returns a 2-tuple of numpy arrays, the first containing the generated         binning axis and the second containing the histogrammed neutron weights in each        bin.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>Displays a plot of histogrammed neutron weights as a function of neutron        energy</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>Saves the histogram axis and histogrammed neutron weights in each energy bin to        numpy files “filename_X.dat” and “filename_Z.dat” if filename is not None.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="d-detector-sdetector2d">
+<h3>2D Detector (<cite>SDetector2D</cite>)<a class="headerlink" href="#d-detector-sdetector2d" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SDetector2D">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SDetector2D</code><span class="sig-paren">(</span><em class="sig-param">shape=''</em>, <em class="sig-param">axis1_binning=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">0)</em>, <em class="sig-param">axis2_binning=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">0)</em>, <em class="sig-param">axis1_var='theta'</em>, <em class="sig-param">axis2_var='tof'</em>, <em class="sig-param">restore_neutron=False</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">logscale=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/detector2D.html#SDetector2D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SDetector2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for a two axis monitor supporting a variety of axis variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>axis1_var, axis2_var</strong><span class="classifier">{ “x”, “y”, “theta”, “alpha”, “tof”, “divX”, “divY” }</span></dt><dd><dl class="simple">
+<dt>Chooses the variables of each axis. These correspond to:</dt><dd><ul class="simple">
+<li><p>“x” : x coordinate of intersection point with the detector</p></li>
+<li><p>“y” : y coordinate of intersection point with the detector</p></li>
+<li><p>“theta” : Angle made by intersection point in xz plane with z axis,                 typically the in-plane scattering angle</p></li>
+<li><p>“alpha” : Angle made by intersection point in yz plane with z axis,                 typically the out-of-plane scattering angle</p></li>
+<li><p>“divX” : Horizontal divergence of neutron velocity</p></li>
+<li><p>“divY” : Vertical divergence of neutron velocity</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>axis1_binning</strong><span class="classifier">3-tuple of floats</span></dt><dd><p>Lower bin edge, bin size, and upper bin edge for axis 1</p>
+</dd>
+<dt><strong>axis2_binning</strong><span class="classifier">3-tuple of floats</span></dt><dd><p>Lower bin edge, bin size, and upper bin edge for axis 2</p>
+</dd>
+<dt><strong>restore_neutron</strong><span class="classifier">Boolean</span></dt><dd><p>If False, neutron is terminated upon intersection with this component</p>
+</dd>
+<dt><strong>filename</strong><span class="classifier">str or None</span></dt><dd><p>Name of the file to which histogram will be saved. No file saved if
+filename is None</p>
+</dd>
+<dt><strong>logscale</strong><span class="classifier">Boolean</span></dt><dd><p>If True, histogram intensity is plotted on a logarithmic scale</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>axis1_binning</strong></dt><dd></dd>
+<dt><strong>axis2_binning</strong></dt><dd></dd>
+<dt><strong>sample_pos</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 96%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>Returns a 3-tuple of numpy arrays, the first two containing the binning        for axes 1 and 2, respectively, and the third containing the histogrammed        neutron weights for each bin</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>Displays a plot of the two dimensional histogram of neutron weights along        the chosen axes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>Saves the binning along axes 1 and 2 and the histogrammed neutron weights        for each bin as filename_X, filename_Y, and filename_Z, respectively, if        filename is not None.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="optics">
+<h2>Optics<a class="headerlink" href="#optics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="guide-sguide">
+<h3>Guide (<cite>SGuide</cite>)<a class="headerlink" href="#guide-sguide" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SGuide">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SGuide</code><span class="sig-paren">(</span><em class="sig-param">w1=0</em>, <em class="sig-param">h1=0</em>, <em class="sig-param">w2=0</em>, <em class="sig-param">h2=0</em>, <em class="sig-param">l=0</em>, <em class="sig-param">R0=0</em>, <em class="sig-param">Qc=0</em>, <em class="sig-param">alpha=0</em>, <em class="sig-param">m=1</em>, <em class="sig-param">W=0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=0</em>, <em class="sig-param">max_bounces=50</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/guide.html#SGuide"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for tapered rectangular Guide. Recreates the functionality
+of the Guide component in McStas. The path of the neutron through the guide
+is numerically simulated and its weight adjusted according to the reflectivity
+function of the guide walls.</p>
+<p>Intersection is taken as the point at which the neutron enters the guide and
+the guide geometry is taken to lie centered along the z axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>w1</strong><span class="classifier">float</span></dt><dd><p>Width of the guide entrance in meters</p>
+</dd>
+<dt><strong>h1</strong><span class="classifier">float</span></dt><dd><p>Height of the guide entrance in meters</p>
+</dd>
+<dt><strong>w2</strong><span class="classifier">float</span></dt><dd><p>Width of the guide exit in meters</p>
+</dd>
+<dt><strong>h2</strong><span class="classifier">float</span></dt><dd><p>Height of the guide exit in meters</p>
+</dd>
+<dt><strong>l</strong><span class="classifier">float</span></dt><dd><p>Length of the guide in meters</p>
+</dd>
+<dt><strong>R0</strong><span class="classifier">float</span></dt><dd><p>Low-angle reflectivity of the guide</p>
+</dd>
+<dt><strong>Qc</strong><span class="classifier">float</span></dt><dd><p>Critical scattering vector of the guide</p>
+</dd>
+<dt><strong>alpha</strong><span class="classifier">float</span></dt><dd><p>Slope of the reflectivity</p>
+</dd>
+<dt><strong>m</strong><span class="classifier">float</span></dt><dd><p>m-value of the guide coating</p>
+</dd>
+<dt><strong>W</strong><span class="classifier">float</span></dt><dd><p>Width of the guide supermirror cutoff</p>
+</dd>
+<dt><strong>max_bounces</strong><span class="classifier">float</span></dt><dd><p>Cutoff to prevent infinite scattering due to numerical error in the kernel</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="disk-chopper-schopper">
+<h3>Disk chopper (<cite>SChopper</cite>)<a class="headerlink" href="#disk-chopper-schopper" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SChopper">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SChopper</code><span class="sig-paren">(</span><em class="sig-param">slit_width=0.0</em>, <em class="sig-param">radius=0.0</em>, <em class="sig-param">freq=0.0</em>, <em class="sig-param">n_slits=0</em>, <em class="sig-param">phase=0.0</em>, <em class="sig-param">jitter=0.0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/chopper.html#SChopper"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SChopper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for Chopper component. Replicates the functionality of the
+DiskChopper component in McStas. Neutrons with velocities that are not
+permitted by the chopper are terminated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>slit_width</strong><span class="classifier">float</span></dt><dd><p>Width of the chopper slits in meters</p>
+</dd>
+<dt><strong>radius</strong><span class="classifier">float</span></dt><dd><p>Radius of the chopper disc in meters</p>
+</dd>
+<dt><strong>freq</strong><span class="classifier">float</span></dt><dd><p>Angular frequency of the chopper in radians per second</p>
+</dd>
+<dt><strong>n_slits</strong><span class="classifier">float</span></dt><dd><p>Number of chopper slits</p>
+</dd>
+<dt><strong>phase</strong><span class="classifier">float</span></dt><dd><p>Initial phase of the chopper in radians</p>
+</dd>
+<dt><strong>jitter</strong><span class="classifier">float</span></dt><dd><p>Jitter in the chopper phase in radians</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="monochromator-smonochromator">
+<h3>Monochromator (<cite>SMonochromator</cite>)<a class="headerlink" href="#monochromator-smonochromator" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SMonochromator">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SMonochromator</code><span class="sig-paren">(</span><em class="sig-param">slab_width=0.0</em>, <em class="sig-param">slab_height=0.0</em>, <em class="sig-param">gap=0.0</em>, <em class="sig-param">n_horizontal=1</em>, <em class="sig-param">n_vertical=1</em>, <em class="sig-param">mosaic_horizontal=0.0</em>, <em class="sig-param">mosaic_vertical=0.0</em>, <em class="sig-param">r0=1.0</em>, <em class="sig-param">d_spacing=0.0</em>, <em class="sig-param">radius_vertical=0.0</em>, <em class="sig-param">radius_horizontal=0.0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/monochromator.html#SMonochromator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SMonochromator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for general curved Monochromator. Recreates the functionality
+of the Monochromator_curved component in McStas. Reflection takes place
+from the local yz plane, higher order scattering and anisotropic gaussian 
+mosaic is simulated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>slab_width</strong><span class="classifier">float</span></dt><dd><p>Width of monochromator crystal slabs in meters</p>
+</dd>
+<dt><strong>slab_height</strong><span class="classifier">float</span></dt><dd><p>Height of monochromator crystal slabs in meters</p>
+</dd>
+<dt><strong>gap</strong><span class="classifier">float</span></dt><dd><p>Gap between monochromator crystal slabs in meters</p>
+</dd>
+<dt><strong>n_horizontal</strong><span class="classifier">float</span></dt><dd><p>Number of monochromator crystal slabs in the z direction</p>
+</dd>
+<dt><strong>n_vertical</strong><span class="classifier">float</span></dt><dd><p>Number of monochromator crystal slabs in the y direction</p>
+</dd>
+<dt><strong>mosaic_horizontal</strong><span class="classifier">float</span></dt><dd><p>Crystal mosaic in the z direction in arc minutes</p>
+</dd>
+<dt><strong>mosaic_vertical</strong><span class="classifier">float</span></dt><dd><p>Crystal mosaic in the y direction in arc minutes</p>
+</dd>
+<dt><strong>r0</strong><span class="classifier">float</span></dt><dd><p>Maximum reflectivity of the monochromator crystal</p>
+</dd>
+<dt><strong>d_spacing</strong><span class="classifier">float</span></dt><dd><p>Lattice spacing of the monochromator crystal plane in AA</p>
+</dd>
+<dt><strong>radius_vertical</strong><span class="classifier">float</span></dt><dd><p>Radius of curvature normal to the z direction in meters</p>
+</dd>
+<dt><strong>radius_horizontal</strong><span class="classifier">float</span></dt><dd><p>Radius of curvature normal to the y direction in meters</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="linear-collimator-slinearcollimator">
+<h3>Linear collimator (<cite>SLinearCollimator</cite>)<a class="headerlink" href="#linear-collimator-slinearcollimator" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SLinearCollimator">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SLinearCollimator</code><span class="sig-paren">(</span><em class="sig-param">length=0.0</em>, <em class="sig-param">divergence_H=0.0</em>, <em class="sig-param">divergence_V=0.0</em>, <em class="sig-param">transmission=1.0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/collimator_lin.html#SLinearCollimator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SLinearCollimator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for Linear Collimator component. Recreates the functionality
+of the Collimator_linear component in McStas. Neutrons with divergence
+exceeding that permitted by the collimator are terminated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>length</strong><span class="classifier">float</span></dt><dd><p>Flight path length of the collimator</p>
+</dd>
+<dt><strong>divergence_H</strong><span class="classifier">float</span></dt><dd><p>Maximum horizontal divergence accepted by the collimator</p>
+</dd>
+<dt><strong>divergence_V</strong><span class="classifier">float</span></dt><dd><p>Maximum vertical divergence accepted by the collimator</p>
+</dd>
+<dt><strong>transmission</strong><span class="classifier">float</span></dt><dd><p>Transmission coefficient of the collimator</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="samples">
+<h2>Samples<a class="headerlink" href="#samples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-line-powder-spowder1">
+<h3>Single line powder (<cite>SPowder1</cite>)<a class="headerlink" href="#single-line-powder-spowder1" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SPowder1">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SPowder1</code><span class="sig-paren">(</span><em class="sig-param">d_spacing=0.0</em>, <em class="sig-param">pack=0.0</em>, <em class="sig-param">vc=0.0</em>, <em class="sig-param">sigma_abs=0.0</em>, <em class="sig-param">multiplicity=0</em>, <em class="sig-param">DW=0.0</em>, <em class="sig-param">F2=0.0</em>, <em class="sig-param">d_phi=180.0</em>, <em class="sig-param">idx=0</em>, <em class="sig-param">ctx=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/powder1.html#SPowder1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SPowder1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for single Bragg scattering powder sample. Recreates the
+functionality of the Powder1 component in McStas. If a neutron satisfies
+the Bragg condition, it is scattered at an angle twotheta into a random angle
+on the Debye-Scherrer cone. Phi focusing is implemented to improve simulation
+performance.</p>
+<p>WARNING: Neutron weights are NOT verified to be physically accurate for the
+scattering from this component, however the lineshape is correct.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>d_spacing</strong><span class="classifier">float</span></dt><dd><p>Lattice spacing corresponding to the Bragg powder line in AA</p>
+</dd>
+<dt><strong>pack</strong><span class="classifier">float in range [0, 1]</span></dt><dd><p>Packing fraction of the sample</p>
+</dd>
+<dt><strong>vc</strong><span class="classifier">float</span></dt><dd><p>Volume of the sample unit cell in AA^3</p>
+</dd>
+<dt><strong>sigma_abs</strong><span class="classifier">float</span></dt><dd><p>Absorption cross section of the sample at 2200 m/s in barns</p>
+</dd>
+<dt><strong>multiplicity</strong><span class="classifier">int</span></dt><dd><p>Multiplicity of the powder line</p>
+</dd>
+<dt><strong>DW</strong><span class="classifier">float in range [0, 1]</span></dt><dd><p>Debye-Waller factor</p>
+</dd>
+<dt><strong>F2</strong><span class="classifier">float</span></dt><dd><p>Structure factor of the powder line</p>
+</dd>
+<dt><strong>d_phi</strong><span class="classifier">float in range [0.0, 180.0]</span></dt><dd><p>Max angle around Debye-Scherrer cone into which neutrons are scattered</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="tas-resolution-sample-srescal">
+<h3>TAS resolution sample (<cite>SRescal</cite>)<a class="headerlink" href="#tas-resolution-sample-srescal" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SRescal">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SRescal</code><span class="sig-paren">(</span><em class="sig-param">target=[0, 0, 0], E0=0, dE=0, focus_r=0, idx=0, ctx=None, **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/rescal.html#SRescal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SRescal" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 40%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>data</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>data_reduce</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>lines</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>plot</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>save</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>scatter_prg</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arm-sarm">
+<h3>Arm (<cite>SArm</cite>)<a class="headerlink" href="#arm-sarm" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mcramp.scat.SArm">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.scat.</code><code class="sig-name descname">SArm</code><span class="sig-paren">(</span><em class="sig-param">idx=0</em>, <em class="sig-param">ctx=0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/scat/arm.html#SArm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.scat.SArm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scattering kernel for Arm component - does not alter the neutron state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>None</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Data</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Plot</strong></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Save</strong></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scattering kernels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#detectors">Detectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#counter-scounter">Counter (<cite>SCounter</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-detector-sdetector1d">1D Detector (<cite>SDetector1D</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-detector-sdetector2d">2D Detector (<cite>SDetector2D</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#optics">Optics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#guide-sguide">Guide (<cite>SGuide</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disk-chopper-schopper">Disk chopper (<cite>SChopper</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monochromator-smonochromator">Monochromator (<cite>SMonochromator</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#linear-collimator-slinearcollimator">Linear collimator (<cite>SLinearCollimator</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#samples">Samples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-line-powder-spowder1">Single line powder (<cite>SPowder1</cite>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tas-resolution-sample-srescal">TAS resolution sample (<cite>SRescal</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#others">Others</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arm-sarm">Arm (<cite>SArm</cite>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="geom_kernels.html" title="previous chapter">Geometry kernels</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/kernels/scat_kernels.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conventions: Scattering kernels &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="modes.html" />
+    <link rel="prev" title="Conventions: Buffer structure" href="buffers.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="conventions-scattering-kernels">
+<h1>Conventions: Scattering kernels<a class="headerlink" href="#conventions-scattering-kernels" title="Permalink to this headline">¶</a></h1>
+<p>The building blocks of instruments in RAMP are OpenCL kernels. These mini programs are executed by the RAMP architecture to manipulate the neutron buffer in the order specified by the instrument definition file. Most useful applications of RAMP will require some custom components, and the process of creating user defined kernels that can be used in RAMP is outlined here.</p>
+<div class="section" id="template">
+<h2>Template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h2>
+<p>The basic template for a scattering kernel <code class="docutils literal notranslate"><span class="pre">mykernel.cl</span></code> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>__kernel void myprog(__global float16* neutrons,
+    __global float8* intersections, __global uint* iidx,
+    uint const comp_idx) {
+
+  uint global_addr        = get_global_id(0);
+  float16 neutron         = neutrons[global_addr];
+  float8 intersection = intersections[global_addr];
+  uint this_iidx          = iidx[global_addr];
+
+  /* Check we are scattering from the intersected component */
+  if (!(this_iidx == comp_idx)) {
+      return;
+  }
+
+  /* Check termination flag */
+  if (neutron.sf &gt; 0.f)  {
+      return;
+  }
+
+  /* Perform scattering here */
+
+
+  /* ----------------------- */
+
+  /* Update global memory and reset intersection */
+  iidx[global_addr] = 0;
+  neutron.sc = comp_idx;
+
+  neutrons[global_addr]      = neutron;
+  intersections[global_addr] = (float8)( 0.0f, 0.0f, 0.0f, 100000.0f,
+                                       0.0f, 0.0f, 0.0f, 100000.0f );
+
+}
+</pre></div>
+</div>
+<p>The basic template for a scattering kernel Python class <code class="docutils literal notranslate"><span class="pre">MyKernel.py</span></code> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mcramp.scat.sprim</span> <span class="kn">import</span> <span class="n">SPrim</span>
+<span class="kn">import</span> <span class="nn">mcramp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">MyKernel</span><span class="p">(</span><span class="n">SPrim</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">prg</span> <span class="o">=</span> <span class="n">mcramp</span><span class="o">.</span><span class="n">build_kernel</span><span class="p">(</span><span class="s1">&#39;mykernel.cl&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">neutron_buf</span><span class="p">,</span> <span class="n">intersection_buf</span><span class="p">,</span> <span class="n">iidx_buf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prg</span><span class="o">.</span><span class="n">myprog</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span>
+                        <span class="kc">None</span><span class="p">,</span>
+                        <span class="n">neutron_buf</span><span class="p">,</span>
+                        <span class="n">intersection_buf</span><span class="p">,</span>
+                        <span class="n">iidx_buf</span><span class="p">,</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With these files in the same location as the instrument definition file, this kernel can be included in the instrument using the Python class name <code class="docutils literal notranslate"><span class="pre">MyKernel</span></code> in the <code class="docutils literal notranslate"><span class="pre">name</span></code> field of a component’s scattering kernel entry.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Running simulations</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conventions: Scattering kernels</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#template">Template</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="buffers.html" title="previous chapter">Conventions: Buffer structure</a></li>
+      <li>Next: <a href="modes.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/writing/scatter.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

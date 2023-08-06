@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conventions: Buffer structure &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conventions: Scattering kernels" href="scatter.html" />
+    <link rel="prev" title="(very) Brief OpenCL Primer" href="primer.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="conventions-buffer-structure">
+<h1>Conventions: Buffer structure<a class="headerlink" href="#conventions-buffer-structure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-neutron-buffer">
+<h2>The neutron buffer<a class="headerlink" href="#the-neutron-buffer" title="Permalink to this headline">¶</a></h2>
+<p>The neutron buffer holds a <code class="docutils literal notranslate"><span class="pre">float16</span></code> entry for each simulated trajectory. The elements of these entries correspond to</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>, the neutron position. In kernels, this is given in the component frame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(vx,</span> <span class="pre">vy,</span> <span class="pre">vz)</span></code>, the neutron velocity. Again, in the component frame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(sx,</span> <span class="pre">sy,</span> <span class="pre">sz)</span></code>, the neutron spin. As of the current update, unused.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>, the neutron weighting i.e. how many counts this trajectory will contribute to a detector.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code>, time of flight.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mc</span></code>, a counter that is incremented upon each Monte Carlo decision, used in random number generation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prevcomp</span></code>, the index of the previous component hit. Prevents spurious multiple collisions due to rounding errors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(_,</span> <span class="pre">_)</span></code>, two unused entries. May be used as custom flags / storage by kernels but this should be made extremely explicit in documentation to avoid conflicts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code>, termination flag. Trajectory is no longer simulated by kernels once this flag is set not equal to zero.</p></li>
+</ul>
+</div></blockquote>
+<p>Altering the data in the neutron buffer is the role of scattering kernels.</p>
+</div>
+<div class="section" id="the-intersection-buffer">
+<h2>The intersection buffer<a class="headerlink" href="#the-intersection-buffer" title="Permalink to this headline">¶</a></h2>
+<p>The intersection buffer holds a <code class="docutils literal notranslate"><span class="pre">float8</span></code> entry for each simulated trajectory. The elements of these entries correspond to</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(x1,</span> <span class="pre">y1,</span> <span class="pre">z1)</span></code>, the coordinates (in component frame) of the earliest intersection with the instrument geometry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t1</span></code>, the time of flight from the neutron position at the previous scattering step to <code class="docutils literal notranslate"><span class="pre">(x1,</span> <span class="pre">y1,</span> <span class="pre">z1)</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(x2,</span> <span class="pre">y2,</span> <span class="pre">z2)</span></code>, the coordinates (in component frame) of the second intersection point with the component intersected at <code class="docutils literal notranslate"><span class="pre">(x1,</span> <span class="pre">y1,</span> <span class="pre">z1)</span></code>, e.g. where the neutron leaves a component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t2</span></code>, the time of flight from the neutron position at the previous scattering step to <code class="docutils literal notranslate"><span class="pre">(x2,</span> <span class="pre">y2,</span> <span class="pre">z2)</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="the-index-buffer">
+<h2>The index buffer<a class="headerlink" href="#the-index-buffer" title="Permalink to this headline">¶</a></h2>
+<p>The index buffer holds a <code class="docutils literal notranslate"><span class="pre">uint</span></code> entry for each simulated trajectory. Each entry corresponds to an index for the earliest intersected component at each scattering step for each trajectory. This allows the execution of the appropriate kernel for each trajectory.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Running simulations</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conventions: Buffer structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-neutron-buffer">The neutron buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-intersection-buffer">The intersection buffer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-index-buffer">The index buffer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="primer.html" title="previous chapter">(very) Brief OpenCL Primer</a></li>
+      <li>Next: <a href="scatter.html" title="next chapter">Conventions: Scattering kernels</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/writing/buffers.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

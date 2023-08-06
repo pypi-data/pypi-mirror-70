@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Running simulations &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="(very) Brief OpenCL Primer" href="../writing/primer.html" />
+    <link rel="prev" title="Instrument definition files" href="idf.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    min-width: 5.5ex;
+    padding-top: 0.3rem;
+    padding-right: 0.3rem;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 0.3rem;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+</style>
+<div class="section" id="Running-simulations">
+<h1>Running simulations<a class="headerlink" href="#Running-simulations" title="Permalink to this headline">¶</a></h1>
+<p>Simulations in RAMP are executed using Python. The architecture of RAMP is contained in the <cite>mcramp</cite> Python package, and is responsible for handling all of the OpenCL operations required to parallelize instrument simulations.</p>
+<hr class="docutils" />
+<div class="section" id="A-detailed-example">
+<h2>A detailed example<a class="headerlink" href="#A-detailed-example" title="Permalink to this headline">¶</a></h2>
+<p>The basic workflow for RAMP is to write an instrument definition file for your instrument, run the simulation in a Python script, and then analyze the resulting data using standard scientific computing libraries for Python (SciPy, etc.).</p>
+<p>The following notebook demonstrates this basic workflow for a simplified powder diffractometer, consisting of a monochromated source, and a sample with a single Bragg peak, described in the instrument definition file <a class="reference external" href="powder.json">powder.json</a>.</p>
+<p>The snippet below contains a small two line initialization of the OpenCL internals required to identify the device on which the simulations should run. For simulations being run on personal workstations, this will be sufficient and can be safely copied and pasted into any RAMP script.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">mcramp</span> <span class="k">as</span> <span class="nn">mcr</span>
+<span class="kn">import</span> <span class="nn">pyopencl</span> <span class="k">as</span> <span class="nn">cl</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">ctx</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">create_some_context</span><span class="p">()</span>
+<span class="n">queue</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">CommandQueue</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Loading-instruments">
+<h2>Loading instruments<a class="headerlink" href="#Loading-instruments" title="Permalink to this headline">¶</a></h2>
+<p>The instrument  <a class="reference external" href="powder.json">powder.json</a> contains the variables <cite>Ei</cite> and <cite>Mono_angle</cite> which we can use to vary the wavelength of incident neutrons. First we shall calculate some values for these variables.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Physical constants</span>
+
+<span class="n">h</span><span class="o">=</span><span class="mf">6.62607015e-34</span>
+<span class="n">mn</span><span class="o">=</span><span class="mf">1.674929e-27</span>
+<span class="n">meV</span><span class="o">=</span><span class="mf">1.602176634e-22</span>
+<span class="n">overAA</span> <span class="o">=</span> <span class="mf">1e10</span>
+
+<span class="n">Ei</span> <span class="o">=</span> <span class="mf">9.09</span> <span class="c1"># meV - 3AA neutrons</span>
+<span class="n">Li</span> <span class="o">=</span> <span class="n">h</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">mn</span><span class="o">*</span><span class="n">Ei</span><span class="o">*</span><span class="n">meV</span><span class="p">)</span> <span class="o">*</span> <span class="n">overAA</span>
+<span class="n">Mono_d_spacing</span> <span class="o">=</span> <span class="mf">3.355</span> <span class="c1"># AA</span>
+<span class="n">Mono_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">Li</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">Mono_d_spacing</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p>The instrument definition file also contains the variable <code class="docutils literal notranslate"><span class="pre">detector_binning</span></code> which we can use to vary the histogram bins in the detector output.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">detector_binning</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">40.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">140.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>Instruments in RAMP are represented by the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class, which contains the methods responsible for instantiating, simulating, and obtaining the results of simulations. Instances of the Instrument class are instantiated as follows:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inst</span> <span class="o">=</span> <span class="n">mcr</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span>
+    <span class="s1">&#39;powder.json&#39;</span><span class="p">,</span>
+    <span class="n">ctx</span><span class="p">,</span>
+    <span class="n">queue</span><span class="p">,</span>
+    <span class="n">Ei</span><span class="o">=</span><span class="n">Ei</span><span class="p">,</span>
+    <span class="n">Mono_angle</span><span class="o">=</span><span class="n">Mono_angle</span><span class="p">,</span>
+    <span class="n">detector_binning</span><span class="o">=</span><span class="n">detector_binning</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+C:\Users\wyz83832\AppData\Local\Continuum\anaconda3\lib\site-packages\pyopencl\__init__.py:235: CompilerWarning: Non-empty compiler output encountered. Set the environment variable PYOPENCL_COMPILER_OUTPUT=1 to see more.
+  &#34;to see more.&#34;, CompilerWarning)
+</pre></div></div>
+</div>
+<p>The constructor for the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class takes three arguments by default: the filename of the instrument definition file, the OpenCL context, and the OpenCL queue (the internals we set up earlier). The additional keyword arguments <code class="docutils literal notranslate"><span class="pre">Ei</span></code> and <code class="docutils literal notranslate"><span class="pre">Mono_angle</span></code> correspond to variables in the instrument definition file.</p>
+<div class="section" id="Executing-simulations">
+<h3>Executing simulations<a class="headerlink" href="#Executing-simulations" title="Permalink to this headline">¶</a></h3>
+<p>Simulations are executed by calling the <code class="docutils literal notranslate"><span class="pre">execute(N)</span></code> method of the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class, where the argument <code class="docutils literal notranslate"><span class="pre">N</span></code> is the desired number of neutron histories to be simulated.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">)</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Analysing-simulation-results">
+<h3>Analysing simulation results<a class="headerlink" href="#Analysing-simulation-results" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way to get a quick visual confirmation that a simulation has returned sensible results is by plotting the output of the instrument monitors using the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> method of the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class. This will do some default plotting using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> of the histograms of all the detectors in the instrument.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">inst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_running_12_0.png" src="../_images/user_running_12_0.png" />
+</div>
+</div>
+<p>We can see that there is a peak at approximately 60 degrees. Let’s adjust the detector binning and re-run the simulation to obtain a better view of the peak shape.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">detector_binning</span> <span class="o">=</span> <span class="p">[</span><span class="mf">50.0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">]</span>
+<span class="n">inst</span> <span class="o">=</span> <span class="n">mcr</span><span class="o">.</span><span class="n">Instrument</span><span class="p">(</span>
+    <span class="s1">&#39;powder.json&#39;</span><span class="p">,</span>
+    <span class="n">ctx</span><span class="p">,</span>
+    <span class="n">queue</span><span class="p">,</span>
+    <span class="n">Ei</span><span class="o">=</span><span class="n">Ei</span><span class="p">,</span>
+    <span class="n">Mono_angle</span><span class="o">=</span><span class="n">Mono_angle</span><span class="p">,</span>
+    <span class="n">detector_binning</span><span class="o">=</span><span class="n">detector_binning</span>
+<span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e7</span><span class="p">)</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_running_14_0.png" src="../_images/user_running_14_0.png" />
+</div>
+</div>
+<p>Pretty ugly, but not surprising for such a crude instrument. To perform a more detailed analysis of the detector output, we can obtain the histogram using the <code class="docutils literal notranslate"><span class="pre">data()</span></code> method of the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class. This method returns a dictionary whose keys are the names of components in the instrument definition and whose values are data produced by the corresponding component. Typically this will be non-zero for detectors which provide their axes and histogrammed intensities.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">data</span> <span class="o">=</span> <span class="n">inst</span><span class="o">.</span><span class="n">data</span><span class="p">()</span>
+<span class="n">detector_output</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Detector&#39;</span><span class="p">]</span>
+<span class="n">theta_axis</span> <span class="o">=</span> <span class="n">detector_output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">intensity</span> <span class="o">=</span> <span class="n">detector_output</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<p>With this data in hand, we can now perform some analysis. To find the peak centre, let’s naievely fit our lineshape to a Gaussian distribution and find the position of the mean.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">:</span> <span class="n">c</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xdata</span><span class="o">=</span><span class="n">theta_axis</span><span class="p">,</span> <span class="n">ydata</span><span class="o">=</span><span class="n">intensity</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mf">1e10</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">popt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[8.84435273e+09 6.03711688e+01 1.02435847e+00]
+</pre></div></div>
+</div>
+<p>Giving a peak center of 60.4 degrees (as compared to the nominal answer of 60 degrees exactly for our chosen sample and instrument parameters). Plotting the resulting fit yields…</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta_axis</span><span class="p">,</span> <span class="n">intensity</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">theta_axis</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">theta_axis</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Intensity&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Theta [deg]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/user_running_20_0.png" src="../_images/user_running_20_0.png" />
+</div>
+</div>
+<p>To save the results of a simulation for analysis at a later date, the <code class="docutils literal notranslate"><span class="pre">Instrument</span></code> class provides the <code class="docutils literal notranslate"><span class="pre">save()</span></code> method. Any component with a <code class="docutils literal notranslate"><span class="pre">filename</span></code> argument will save it’s <code class="docutils literal notranslate"><span class="pre">data()</span></code> output as a numpy file <code class="docutils literal notranslate"><span class="pre">filename.npy</span></code> when <code class="docutils literal notranslate"><span class="pre">inst.save()</span></code> is called.</p>
+</div>
+</div>
+<div class="section" id="Instrument-class-reference">
+<h2>Instrument class reference<a class="headerlink" href="#Instrument-class-reference" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mcramp.Instrument">
+<em class="property">class </em><code class="sig-prename descclassname">mcramp.</code><code class="sig-name descname">Instrument</code><span class="sig-paren">(</span><em class="sig-param">fn</em>, <em class="sig-param">ctx</em>, <em class="sig-param">queue</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mcramp/mcramp.html#Instrument"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mcramp.Instrument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Core class which instantiates instrument definiton files, and provides public
+methods for executing simulations, and plotting, saving, and analyzing results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fn</strong><span class="classifier">str</span></dt><dd><p>Instrument definition file name</p>
+</dd>
+<dt><strong>ctx</strong><span class="classifier">pyopencl.Context</span></dt><dd><p>OpenCL context within which the simulation is to be executed</p>
+</dd>
+<dt><strong>queue</strong><span class="classifier">pyopencl.CommandQueue</span></dt><dd><p>OpenCL command queue for enqueueing simulation kernels</p>
+</dd>
+<dt><strong>**kwargs</strong></dt><dd><p>Values for variables contained in the instrument definition file</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code>(self)</p></td>
+<td><p>Returns a dictionary whose keys are the names of components in the instrument definition file, and whose values are the data arrays returned by the respective component</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute</span></code>(self, N[, debug])</p></td>
+<td><p>Executes the instrument simulation</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>(self)</p></td>
+<td><p>Calls the plotting function of each component and displays the output</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code>(self)</p></td>
+<td><p>Saves the data array returned by each component’s <cite>data()</cite> function to a numpy file “filename.npy”, where filename is the value of the filename attribute in the instrument definition file</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idf.html">Instrument definition files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#A-detailed-example">A detailed example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Loading-instruments">Loading instruments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Instrument-class-reference">Instrument class reference</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="idf.html" title="previous chapter">Instrument definition files</a></li>
+      <li>Next: <a href="../writing/primer.html" title="next chapter">(very) Brief OpenCL Primer</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/user/running.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

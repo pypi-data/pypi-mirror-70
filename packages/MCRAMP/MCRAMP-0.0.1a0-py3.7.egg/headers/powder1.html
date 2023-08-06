@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>mcramp.scat.powder1 &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for mcramp.scat.powder1</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.sprim</span> <span class="kn">import</span> <span class="n">SPrim</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyopencl</span> <span class="k">as</span> <span class="nn">cl</span>
+<span class="kn">import</span> <span class="nn">pyopencl.array</span> <span class="k">as</span> <span class="nn">clarr</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<div class="viewcode-block" id="SPowder1"><a class="viewcode-back" href="../../../kernels/scat_kernels.html#mcramp.scat.SPowder1">[docs]</a><span class="k">class</span> <span class="nc">SPowder1</span><span class="p">(</span><span class="n">SPrim</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scattering kernel for single Bragg scattering powder sample. Recreates the</span>
+<span class="sd">    functionality of the Powder1 component in McStas. If a neutron satisfies</span>
+<span class="sd">    the Bragg condition, it is scattered at an angle twotheta into a random angle</span>
+<span class="sd">    on the Debye-Scherrer cone. Phi focusing is implemented to improve simulation</span>
+<span class="sd">    performance.</span>
+
+<span class="sd">    WARNING: Neutron weights are NOT verified to be physically accurate for the</span>
+<span class="sd">    scattering from this component, however the lineshape is correct.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    d_spacing : float</span>
+<span class="sd">        Lattice spacing corresponding to the Bragg powder line in AA</span>
+<span class="sd">    pack : float in range [0, 1]</span>
+<span class="sd">        Packing fraction of the sample</span>
+<span class="sd">    vc : float</span>
+<span class="sd">        Volume of the sample unit cell in AA^3</span>
+<span class="sd">    sigma_abs : float</span>
+<span class="sd">        Absorption cross section of the sample at 2200 m/s in barns</span>
+<span class="sd">    multiplicity : int</span>
+<span class="sd">        Multiplicity of the powder line</span>
+<span class="sd">    DW : float in range [0, 1]</span>
+<span class="sd">        Debye-Waller factor</span>
+<span class="sd">    F2 : float</span>
+<span class="sd">        Structure factor of the powder line</span>
+<span class="sd">    d_phi : float in range [0.0, 180.0]</span>
+<span class="sd">        Max angle around Debye-Scherrer cone into which neutrons are scattered</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    Data</span>
+<span class="sd">        None</span>
+<span class="sd">    Plot</span>
+<span class="sd">        None</span>
+<span class="sd">    Save</span>
+<span class="sd">        None</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">d_spacing</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">pack</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">vc</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">sigma_abs</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                 <span class="n">multiplicity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">DW</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">F2</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">d_phi</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># F2 in barns         </span>
+
+        <span class="c1"># Scattering cross section will be divided by v^2 in Kernel</span>
+        <span class="c1"># Absorption cross section will be divided by v in Kernel</span>
+        <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">d_spacing</span>
+
+        <span class="n">sigma_scat_numer</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">**</span> <span class="mf">3.0</span> <span class="o">*</span> <span class="n">pack</span> <span class="o">*</span> <span class="n">multiplicity</span> <span class="o">*</span> <span class="n">F2</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">DW</span>
+        <span class="n">sigma_scat_denom</span> <span class="o">=</span> <span class="n">vc</span> <span class="o">**</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">q</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_scat_v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">sigma_scat_numer</span> <span class="o">/</span> <span class="n">sigma_scat_denom</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sigma_abs_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">pack</span> <span class="o">*</span> <span class="n">sigma_abs</span> <span class="o">/</span> <span class="n">vc</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d_phi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">d_phi</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s1">&#39;powder1.cl&#39;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))))</span>
+
+    <span class="k">def</span> <span class="nf">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">neutron_buf</span><span class="p">,</span> <span class="n">intersection_buf</span><span class="p">,</span> <span class="n">iidx_buf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prg</span><span class="o">.</span><span class="n">powder1</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span>
+                          <span class="kc">None</span><span class="p">,</span>
+                          <span class="n">neutron_buf</span><span class="p">,</span>
+                          <span class="n">intersection_buf</span><span class="p">,</span>
+                          <span class="n">iidx_buf</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">sigma_scat_v2</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">sigma_abs_v</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">q</span><span class="p">,</span>
+                          <span class="bp">self</span><span class="o">.</span><span class="n">d_phi</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

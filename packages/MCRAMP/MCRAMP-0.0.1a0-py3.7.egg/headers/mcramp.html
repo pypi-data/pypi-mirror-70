@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>mcramp.mcramp &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for mcramp.mcramp</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyopencl</span> <span class="k">as</span> <span class="nn">cl</span>
+<span class="kn">import</span> <span class="nn">pyopencl.array</span> <span class="k">as</span> <span class="nn">clarr</span>
+
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">importlib</span><span class="o">,</span> <span class="nn">re</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+
+<span class="n">DETECTOR_KERNELS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PSD2d&quot;</span><span class="p">,</span> <span class="s2">&quot;EMon&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">build_kernel</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">ctx</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">prg</span>
+
+<span class="k">class</span> <span class="nc">KernelRef</span><span class="p">:</span>
+    <span class="c1"># Keeps track of the execution block and component that a detector kernel</span>
+    <span class="c1"># belongs to in order to retrieve it&#39;s histogram at the end of execution</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">block</span><span class="p">,</span> <span class="n">comp</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">block</span> <span class="o">=</span> <span class="n">block</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">comp</span> <span class="o">=</span> <span class="n">comp</span>
+
+<span class="k">class</span> <span class="nc">Component</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geom_kernel</span><span class="p">,</span> <span class="n">scat_kernel</span><span class="p">,</span> <span class="n">restore_neutron</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geom_kernel</span> <span class="o">=</span> <span class="n">geom_kernel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scat_kernel</span> <span class="o">=</span> <span class="n">scat_kernel</span>
+
+        <span class="c1"># Should neutron be terminated if it doesn&#39;t hit this component?</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">restore_neutron</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">restore_neutron</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mf">0.</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">rot</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rot</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rot</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mf">0.</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float3</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">ExecutionBlock</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">components</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">linear</span><span class="p">,</span> <span class="n">max_events</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_events</span> <span class="o">=</span> <span class="n">max_events</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">linear</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">components</span> <span class="o">=</span> <span class="n">components</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parent</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">linear</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="n">comps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="n">source</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="ow">in</span> <span class="n">block</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;linear&quot;</span> <span class="ow">or</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;multi&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            
+            <span class="k">if</span> <span class="s2">&quot;source&quot;</span> <span class="ow">in</span> <span class="n">comp</span><span class="p">:</span>
+                <span class="n">mk</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;mcramp&quot;</span><span class="p">),</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;moderator_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span> <span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">,)</span> <span class="ow">in</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;moderator_kernel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">&#39;name&#39;</span><span class="p">}</span>
+                <span class="n">args</span><span class="p">[</span><span class="s1">&#39;ctx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">ctx</span>
+
+                <span class="n">source</span> <span class="o">=</span> <span class="n">mk</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;position&#39;</span> <span class="ow">in</span> <span class="n">comp</span> <span class="k">else</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+                <span class="n">rot</span> <span class="o">=</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;rotation&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;rotation&#39;</span> <span class="ow">in</span> <span class="n">comp</span> <span class="k">else</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+                <span class="n">restore_neutron</span> <span class="o">=</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;restore_neutron&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;restore_neutron&#39;</span> <span class="ow">in</span> <span class="n">comp</span> <span class="k">else</span> <span class="kc">False</span>
+                
+                <span class="k">if</span> <span class="s1">&#39;relative&#39;</span> <span class="ow">in</span> <span class="n">comp</span><span class="p">:</span>
+                    <span class="n">rcomp_name</span> <span class="o">=</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;relative&#39;</span><span class="p">]</span>
+                    <span class="n">rcomp_pos</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="n">rcomp_name</span><span class="p">]</span><span class="o">.</span><span class="n">pos</span>
+                    <span class="n">rcomp_rot</span> <span class="o">=</span> <span class="n">comps</span><span class="p">[</span><span class="n">rcomp_name</span><span class="p">]</span><span class="o">.</span><span class="n">rot</span>
+
+                    <span class="n">pos</span> <span class="o">=</span> <span class="n">frame_rotate</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="p">[</span><span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s0&#39;</span><span class="p">],</span> <span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s1&#39;</span><span class="p">],</span> <span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s2&#39;</span><span class="p">]])</span>
+
+                    <span class="n">pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="p">[</span><span class="n">rcomp_pos</span><span class="p">[</span><span class="s1">&#39;s0&#39;</span><span class="p">],</span> <span class="n">rcomp_pos</span><span class="p">[</span><span class="s1">&#39;s1&#39;</span><span class="p">],</span> <span class="n">rcomp_pos</span><span class="p">[</span><span class="s1">&#39;s2&#39;</span><span class="p">]])</span>
+                    <span class="n">rot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">rot</span><span class="p">,</span> <span class="p">[</span><span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s0&#39;</span><span class="p">],</span> <span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s1&#39;</span><span class="p">],</span> <span class="n">rcomp_rot</span><span class="p">[</span><span class="s1">&#39;s2&#39;</span><span class="p">]])</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">gk</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;mcramp&quot;</span><span class="p">),</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;geom_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                    <span class="n">gk</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">comp</span><span class="p">[</span><span class="s1">&#39;geom_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]),</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;geom_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                
+                <span class="n">gargs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;geom_kernel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">&#39;name&#39;</span><span class="p">}</span>
+                <span class="n">gargs</span><span class="p">[</span><span class="s1">&#39;idx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="n">gargs</span><span class="p">[</span><span class="s1">&#39;ctx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">ctx</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">sk</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;mcramp&quot;</span><span class="p">),</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;scat_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                    <span class="n">sk</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">comp</span><span class="p">[</span><span class="s1">&#39;scat_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]),</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;scat_kernel&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+                
+                <span class="n">sargs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">comp</span><span class="p">[</span><span class="s1">&#39;scat_kernel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s1">&#39;name&#39;</span><span class="p">}</span>
+                <span class="n">sargs</span><span class="p">[</span><span class="s1">&#39;idx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="n">sargs</span><span class="p">[</span><span class="s1">&#39;ctx&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span><span class="o">.</span><span class="n">ctx</span>
+                <span class="n">sargs</span><span class="p">[</span><span class="s1">&#39;inst&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span>
+                <span class="n">sargs</span><span class="p">[</span><span class="s1">&#39;block&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">idx</span>
+
+                <span class="n">comps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">gk</span><span class="p">(</span><span class="o">**</span><span class="n">gargs</span><span class="p">),</span> <span class="n">sk</span><span class="p">(</span><span class="o">**</span><span class="n">sargs</span><span class="p">),</span> <span class="n">restore_neutron</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">rot</span><span class="p">)</span>
+
+                <span class="n">parent</span><span class="o">.</span><span class="n">kernel_refs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">KernelRef</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+            
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">ex_block</span> <span class="o">=</span> <span class="n">ExecutionBlock</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">comps</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">linear</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ex_block</span>
+
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span>
+                      <span class="s1">&#39;scat/terminator.cl&#39;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">term_prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span>
+                                           <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))))</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span>
+                      <span class="s1">&#39;scat/frametransform.cl&#39;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span>
+                                           <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))))</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">:</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+
+                <span class="n">comp</span><span class="o">.</span><span class="n">geom_kernel</span><span class="o">.</span><span class="n">intersect_prg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                                               <span class="n">N</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">iidx_cl</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">term_prg</span><span class="o">.</span><span class="n">terminate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">,</span>
+                                        <span class="nb">getattr</span><span class="p">(</span><span class="n">comp</span><span class="p">,</span> <span class="s1">&#39;restore_neutron&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+
+                <span class="k">if</span> <span class="n">debug</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">cl</span><span class="o">.</span><span class="n">enqueue_copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+                    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections</span><span class="p">)</span>
+
+                <span class="n">comp</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                                             <span class="n">N</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">iidx_cl</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">untransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">debug</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">cl</span><span class="o">.</span><span class="n">enqueue_copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+                    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="k">while</span> <span class="n">events</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_events</span><span class="p">:</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+                    <span class="n">comp</span><span class="o">.</span><span class="n">geom_kernel</span><span class="o">.</span><span class="n">intersect_prg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                                                   <span class="n">N</span><span class="p">,</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">,</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">iidx_cl</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">untransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">term_prg</span><span class="o">.</span><span class="n">terminate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                         <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+                    <span class="n">comp</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                                                 <span class="n">N</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">iidx_cl</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">trans_prg</span><span class="o">.</span><span class="n">untransform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,),</span> <span class="kc">None</span><span class="p">,</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span>
+                                           <span class="n">comp</span><span class="o">.</span><span class="n">rot</span><span class="p">)</span>
+
+                <span class="n">events</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="Instrument"><a class="viewcode-back" href="../../user/running.html#mcramp.Instrument">[docs]</a><span class="k">class</span> <span class="nc">Instrument</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Core class which instantiates instrument definiton files, and provides public</span>
+<span class="sd">    methods for executing simulations, and plotting, saving, and analyzing results</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    fn : str</span>
+<span class="sd">        Instrument definition file name</span>
+<span class="sd">    ctx : pyopencl.Context</span>
+<span class="sd">        OpenCL context within which the simulation is to be executed</span>
+<span class="sd">    queue : pyopencl.CommandQueue</span>
+<span class="sd">        OpenCL command queue for enqueueing simulation kernels</span>
+<span class="sd">    **kwargs</span>
+<span class="sd">        Values for variables contained in the instrument definition file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">ctx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span> <span class="o">=</span> <span class="n">queue</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_refs</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fromJSON</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dev</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="o">.</span><span class="n">devices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a dictionary whose keys are the names of components in the instrument</span>
+<span class="sd">        definition file, and whose values are the data arrays returned by the respective</span>
+<span class="sd">        component</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_refs</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">comp</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">block</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">data</span>
+
+    <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Calls the plotting function of each component and displays the output</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">show</span>
+
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_refs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">block</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+
+        <span class="n">show</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Saves the data array returned by each component&#39;s `data()` function to a numpy</span>
+<span class="sd">        file &quot;filename.npy&quot;, where filename is the value of the filename attribute in</span>
+<span class="sd">        the instrument definition file</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_refs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">block</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_substitute_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">json_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># FIXME: if a token contains another as a substring things get effed up</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;(?:\$)(.*?)(?:\$)&quot;</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">json_str</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+            <span class="n">subbed_t</span> <span class="o">=</span> <span class="n">t</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">subbed_t</span> <span class="o">=</span> <span class="n">subbed_t</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+            <span class="n">json_str</span> <span class="o">=</span> <span class="n">json_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;$</span><span class="si">{}</span><span class="s2">$&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="n">subbed_t</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">json_str</span>
+
+    <span class="k">def</span> <span class="nf">_fromJSON</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">json_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="n">json_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_substitute_params</span><span class="p">(</span><span class="n">json_str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="n">inst</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+
+        <span class="n">blocks</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="n">inst</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+
+            <span class="k">if</span> <span class="s2">&quot;linear&quot;</span> <span class="ow">in</span> <span class="n">block</span><span class="p">:</span>
+                <span class="n">linear</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="s2">&quot;linear&quot;</span><span class="p">]</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">linear</span><span class="p">:</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="n">block</span><span class="p">[</span><span class="s2">&quot;multi&quot;</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">linear</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">events</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="n">blocks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ExecutionBlock</span><span class="o">.</span><span class="n">fromJSON</span><span class="p">(</span><span class="n">block</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">linear</span><span class="p">,</span> <span class="n">events</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">blocks</span>
+
+    <span class="k">def</span> <span class="nf">_initialize_buffers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">neutrons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">intersections</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">clarr</span><span class="o">.</span><span class="n">vec</span><span class="o">.</span><span class="n">float8</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iidx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
+
+        <span class="n">mf</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">mem_flags</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">neutrons_cl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span>
+                                     <span class="n">mf</span><span class="o">.</span><span class="n">READ_WRITE</span> <span class="o">|</span> <span class="n">mf</span><span class="o">.</span><span class="n">COPY_HOST_PTR</span><span class="p">,</span>
+                                     <span class="n">hostbuf</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">neutrons</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">intersections_cl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span>
+                                          <span class="n">mf</span><span class="o">.</span><span class="n">READ_WRITE</span><span class="p">,</span>
+                                          <span class="bp">self</span><span class="o">.</span><span class="n">intersections</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iidx_cl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctx</span><span class="p">,</span>
+                                 <span class="n">mf</span><span class="o">.</span><span class="n">WRITE_ONLY</span><span class="p">,</span>
+                                 <span class="bp">self</span><span class="o">.</span><span class="n">iidx</span><span class="o">.</span><span class="n">nbytes</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Executes the instrument simulation</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        N : int</span>
+<span class="sd">            Number of neutron trajectories to simulate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">device</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">get_info</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">command_queue_info</span><span class="o">.</span><span class="n">DEVICE</span><span class="p">)</span>
+        <span class="n">max_mem_alloc_size</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">get_info</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">device_info</span><span class="o">.</span><span class="n">MAX_MEM_ALLOC_SIZE</span><span class="p">)</span>
+        <span class="n">buf_max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_mem_alloc_size</span> <span class="o">/</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">26</span><span class="p">)</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">block</span><span class="o">.</span><span class="n">source</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">source_idx</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">break</span>
+
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">_initialize_buffers</span><span class="p">(</span><span class="n">buf_max</span> <span class="k">if</span> <span class="n">N</span> <span class="o">&gt;</span> <span class="n">buf_max</span> <span class="k">else</span> <span class="n">N</span><span class="p">)</span>
+
+        <span class="n">remaining</span> <span class="o">=</span> <span class="n">N</span>
+        <span class="k">while</span> <span class="n">remaining</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">torun</span> <span class="o">=</span> <span class="n">buf_max</span> <span class="k">if</span> <span class="n">remaining</span> <span class="o">&gt;</span> <span class="n">buf_max</span> <span class="k">else</span> <span class="n">remaining</span>
+            <span class="n">remaining</span> <span class="o">=</span> <span class="n">remaining</span> <span class="o">-</span> <span class="n">torun</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">source_idx</span><span class="p">]</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">gen_prg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">,</span>
+                                    <span class="n">torun</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">neutrons_cl</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">intersections_cl</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">block</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">:</span>
+                <span class="n">block</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">torun</span><span class="p">,</span> <span class="n">debug</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_refs</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">blocks</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">block</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">comp</span><span class="p">]</span><span class="o">.</span><span class="n">scat_kernel</span><span class="o">.</span><span class="n">data_reduce</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">queue</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span></div>
+
+<span class="k">def</span> <span class="nf">frame_rotate</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+    <span class="n">x_a</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_a</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">z_a</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">r00</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r01</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r02</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r11</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r12</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z_a</span><span class="p">)</span>
+    <span class="n">r20</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span>
+    <span class="n">r21</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span>
+    <span class="n">r22</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x_a</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y_a</span><span class="p">)</span>
+
+    <span class="n">row1</span> <span class="o">=</span> <span class="p">[</span><span class="n">r00</span><span class="p">,</span> <span class="n">r01</span><span class="p">,</span> <span class="n">r02</span><span class="p">]</span>
+    <span class="n">row2</span> <span class="o">=</span> <span class="p">[</span><span class="n">r10</span><span class="p">,</span> <span class="n">r11</span><span class="p">,</span> <span class="n">r12</span><span class="p">]</span>
+    <span class="n">row3</span> <span class="o">=</span> <span class="p">[</span><span class="n">r20</span><span class="p">,</span> <span class="n">r21</span><span class="p">,</span> <span class="n">r22</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">row1</span><span class="p">,</span> <span class="n">vec</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">row2</span><span class="p">,</span> <span class="n">vec</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">row3</span><span class="p">,</span> <span class="n">vec</span><span class="p">)]</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

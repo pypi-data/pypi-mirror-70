@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>(very) Brief OpenCL Primer &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conventions: Buffer structure" href="buffers.html" />
+    <link rel="prev" title="Running simulations" href="../user/running.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="very-brief-opencl-primer">
+<h1>(very) Brief OpenCL Primer<a class="headerlink" href="#very-brief-opencl-primer" title="Permalink to this headline">¶</a></h1>
+<p>A full account of the OpenCL kernel language is beyond the scope of this document, however some basics that are important for RAMP will be outlined here for reference. For a more complete account of the OpenCL API, <a class="reference external" href="https://www.khronos.org/opencl/">see here</a>. I have found <a class="reference external" href="https://www.khronos.org/files/opencl-1-2-quick-reference-card.pdf">this reference card</a> exceptionally helpful, and have learned almost everything I needed to know to write RAMP so far using only my knowledge of C and this reference card, as the OpenCL kernel language closely mirrors C99 and the majority of syntax is identical.</p>
+<p>Manipulating OpenCL objects from Python is accomplished via the PyOpenCL library. The documentation for PyOpenCL can be found <a class="reference external" href="https://documen.tician.de/pyopencl/">here</a>.</p>
+<div class="section" id="kernel-program-declarations">
+<h2>Kernel program declarations<a class="headerlink" href="#kernel-program-declarations" title="Permalink to this headline">¶</a></h2>
+<p>While normal C99 functions can be declared in OpenCL kernels as usual, the programs that are invoked from the host device must be prepended with the <code class="docutils literal notranslate"><span class="pre">__kernel</span></code> keyword.</p>
+<p>In addition to this, there are some important keywords to bear in mind when declaring program arguments. Buffers should be passed as <code class="docutils literal notranslate"><span class="pre">__global</span></code> pointers (global memory is not the only option in OpenCL, but it is the only option we will care about here). Kernel parameters should be passed as <code class="docutils literal notranslate"><span class="pre">const</span></code>.</p>
+</div>
+<div class="section" id="buffers">
+<h2>Buffers<a class="headerlink" href="#buffers" title="Permalink to this headline">¶</a></h2>
+<p>Data which is to be operated on in a parallel fashion (i.e. a kernel invocation for each entry in an array) is stored in a buffer. A good example of how buffers are instantiated from the host device can be found in the <a href="#id1"><span class="problematic" id="id2">`Detector1D scattering kernel &lt;&gt;`_</span></a>.</p>
+</div>
+<div class="section" id="vectors-and-swizzling">
+<h2>Vectors and swizzling<a class="headerlink" href="#vectors-and-swizzling" title="Permalink to this headline">¶</a></h2>
+<p>A number of non-standard vector types are natively supported by OpenCL. The most relevant of these for RAMP are <code class="docutils literal notranslate"><span class="pre">float3</span></code>, <code class="docutils literal notranslate"><span class="pre">float4</span></code>, <code class="docutils literal notranslate"><span class="pre">float8</span></code>, and <code class="docutils literal notranslate"><span class="pre">float16</span></code>.</p>
+<p>Standard vector operations e.g. <code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">dot(v1,</span> <span class="pre">v2)</span></code>, <code class="docutils literal notranslate"><span class="pre">cross(v1,</span> <span class="pre">v2)</span></code> exist for these types.</p>
+<p>Vector elements are accessed as <code class="docutils literal notranslate"><span class="pre">v.sX</span></code> where X is a number (zero-indexed) corresponding to the element to access. For example, if <code class="docutils literal notranslate"><span class="pre">float3</span> <span class="pre">v</span> <span class="pre">=</span> <span class="pre">(float3){</span> <span class="pre">0.0f,</span> <span class="pre">1.0f,</span> <span class="pre">0.2f</span> <span class="pre">}</span></code> then <code class="docutils literal notranslate"><span class="pre">v.s0</span> <span class="pre">=</span> <span class="pre">0.0f</span></code>, <code class="docutils literal notranslate"><span class="pre">v.s1</span> <span class="pre">=</span> <span class="pre">1.0f</span></code>, and <code class="docutils literal notranslate"><span class="pre">v.s2</span> <span class="pre">=</span> <span class="pre">0.2f</span></code>. Vector indices can also be ‘swizzled’, this means that sub-vectors can be sliced by arranging element indices in any order e.g. <code class="docutils literal notranslate"><span class="pre">float2</span> <span class="pre">w</span> <span class="pre">=</span> <span class="pre">v.s20</span></code> yields <code class="docutils literal notranslate"><span class="pre">w.s0</span> <span class="pre">=</span> <span class="pre">0.2f</span></code> and <code class="docutils literal notranslate"><span class="pre">w.s1</span> <span class="pre">=</span> <span class="pre">0.0f</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Running simulations</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">(very) Brief OpenCL Primer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kernel-program-declarations">Kernel program declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#buffers">Buffers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vectors-and-swizzling">Vectors and swizzling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../user/running.html" title="previous chapter">Running simulations</a></li>
+      <li>Next: <a href="buffers.html" title="next chapter">Conventions: Buffer structure</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/writing/primer.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

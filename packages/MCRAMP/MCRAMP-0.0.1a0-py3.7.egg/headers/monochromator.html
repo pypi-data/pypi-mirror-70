@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>mcramp.scat.monochromator &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for mcramp.scat.monochromator</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.sprim</span> <span class="kn">import</span> <span class="n">SPrim</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyopencl</span> <span class="k">as</span> <span class="nn">cl</span>
+<span class="kn">import</span> <span class="nn">pyopencl.array</span> <span class="k">as</span> <span class="nn">clarr</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<div class="viewcode-block" id="SMonochromator"><a class="viewcode-back" href="../../../kernels/scat_kernels.html#mcramp.scat.SMonochromator">[docs]</a><span class="k">class</span> <span class="nc">SMonochromator</span><span class="p">(</span><span class="n">SPrim</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scattering kernel for general curved Monochromator. Recreates the functionality</span>
+<span class="sd">    of the Monochromator_curved component in McStas. Reflection takes place</span>
+<span class="sd">    from the local yz plane, higher order scattering and anisotropic gaussian </span>
+<span class="sd">    mosaic is simulated.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    slab_width : float</span>
+<span class="sd">        Width of monochromator crystal slabs in meters</span>
+<span class="sd">    slab_height : float</span>
+<span class="sd">        Height of monochromator crystal slabs in meters</span>
+<span class="sd">    gap : float</span>
+<span class="sd">        Gap between monochromator crystal slabs in meters</span>
+<span class="sd">    n_horizontal : float</span>
+<span class="sd">        Number of monochromator crystal slabs in the z direction</span>
+<span class="sd">    n_vertical : float</span>
+<span class="sd">        Number of monochromator crystal slabs in the y direction</span>
+<span class="sd">    mosaic_horizontal : float</span>
+<span class="sd">        Crystal mosaic in the z direction in arc minutes</span>
+<span class="sd">    mosaic_vertical : float</span>
+<span class="sd">        Crystal mosaic in the y direction in arc minutes</span>
+<span class="sd">    r0 : float</span>
+<span class="sd">        Maximum reflectivity of the monochromator crystal</span>
+<span class="sd">    d_spacing : float</span>
+<span class="sd">        Lattice spacing of the monochromator crystal plane in AA</span>
+<span class="sd">    radius_vertical : float</span>
+<span class="sd">        Radius of curvature normal to the z direction in meters</span>
+<span class="sd">    radius_horizontal : float</span>
+<span class="sd">        Radius of curvature normal to the y direction in meters</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    Data</span>
+<span class="sd">        None</span>
+<span class="sd">    Plot</span>
+<span class="sd">        None</span>
+<span class="sd">    Save</span>
+<span class="sd">        None</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slab_width</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">slab_height</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">gap</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">n_horizontal</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">n_vertical</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">mosaic_horizontal</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">mosaic_vertical</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                 <span class="n">r0</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">d_spacing</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">radius_vertical</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">radius_horizontal</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                 <span class="n">idx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ctx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+                
+        <span class="n">mf</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">mem_flags</span>
+
+        <span class="n">gaussX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.987992518020485</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.937273392400706</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.848206583410427</span><span class="p">,</span>
+<span class="o">-</span><span class="mf">0.724417731360170</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.570972172608539</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.394151347077563</span><span class="p">,</span>
+<span class="o">-</span><span class="mf">0.201194093997435</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.201194093997435</span><span class="p">,</span>
+<span class="mf">0.394151347077563</span><span class="p">,</span> <span class="mf">0.570972172608539</span><span class="p">,</span> <span class="mf">0.724417731360170</span><span class="p">,</span>
+<span class="mf">0.848206583410427</span><span class="p">,</span> <span class="mf">0.937273392400706</span><span class="p">,</span> <span class="mf">0.987992518020485</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="n">gaussW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.030753241996117</span><span class="p">,</span> <span class="mf">0.070366047488108</span><span class="p">,</span> <span class="mf">0.107159220467172</span><span class="p">,</span>
+<span class="mf">0.139570677926154</span><span class="p">,</span> <span class="mf">0.166269205816994</span><span class="p">,</span> <span class="mf">0.186161000115562</span><span class="p">,</span>
+<span class="mf">0.198431485327111</span><span class="p">,</span> <span class="mf">0.202578241925561</span><span class="p">,</span> <span class="mf">0.198431485327111</span><span class="p">,</span>
+<span class="mf">0.186161000115562</span><span class="p">,</span> <span class="mf">0.166269205816994</span><span class="p">,</span> <span class="mf">0.139570677926154</span><span class="p">,</span>
+<span class="mf">0.107159220467172</span><span class="p">,</span> <span class="mf">0.070366047488108</span><span class="p">,</span> <span class="mf">0.030753241996117</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gausslen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gaussX</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gaussX_opencl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">mf</span><span class="o">.</span><span class="n">READ_ONLY</span> <span class="o">|</span> <span class="n">mf</span><span class="o">.</span><span class="n">COPY_HOST_PTR</span><span class="p">,</span> <span class="n">hostbuf</span><span class="o">=</span><span class="n">gaussX</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gaussW_opencl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Buffer</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">mf</span><span class="o">.</span><span class="n">READ_ONLY</span> <span class="o">|</span> <span class="n">mf</span><span class="o">.</span><span class="n">COPY_HOST_PTR</span><span class="p">,</span> <span class="n">hostbuf</span><span class="o">=</span><span class="n">gaussW</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slab_width</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">slab_width</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">slab_height</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">slab_height</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">gap</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_horizontal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">n_horizontal</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_vertical</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">(</span><span class="n">n_vertical</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mosaic_horizontal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">mosaic_horizontal</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mosaic_vertical</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">mosaic_vertical</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">r0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d_spacing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">d_spacing</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radius_vertical</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">radius_vertical</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">radius_horizontal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="n">radius_horizontal</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s1">&#39;monochromator.cl&#39;</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">prg</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Program</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;-I &quot;</span><span class="si">{}</span><span class="s1">/include&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)))))</span>
+
+    <span class="k">def</span> <span class="nf">scatter_prg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">neutron_buf</span><span class="p">,</span> <span class="n">intersection_buf</span><span class="p">,</span> <span class="n">iidx_buf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prg</span><span class="o">.</span><span class="n">monochromator</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="p">),</span>
+                                <span class="kc">None</span><span class="p">,</span>
+                                <span class="n">neutron_buf</span><span class="p">,</span>
+                                <span class="n">intersection_buf</span><span class="p">,</span>
+                                <span class="n">iidx_buf</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">idx</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">slab_width</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">slab_height</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">gap</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">n_horizontal</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">n_vertical</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">mosaic_horizontal</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">mosaic_vertical</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">r0</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">d_spacing</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">radius_vertical</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">radius_horizontal</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">gaussX_opencl</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">gaussW_opencl</span><span class="p">,</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">gausslen</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/idf.html">Instrument definition files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

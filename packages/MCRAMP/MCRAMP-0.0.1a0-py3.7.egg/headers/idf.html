@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Instrument definition files &#8212; RAMP 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Running simulations" href="running.html" />
+    <link rel="prev" title="Hello, RAMP: a minimal example" href="hello.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="instrument-definition-files">
+<h1>Instrument definition files<a class="headerlink" href="#instrument-definition-files" title="Permalink to this headline">¶</a></h1>
+<p>Instrument layouts are specified in RAMP using instrument definition files written in Javascript Object Notation (JSON). JSON is a widely adopted format for describing objects as a heirarchical list of key-value pairs, and there are a <a class="reference external" href="https://www.google.com/search?q=JSON+basics">number of readily available learning resources</a> online which describe the format better than I could here.</p>
+<p>The hierarchy of objects in the RAMP instrument definition file goes <em>execution block</em> -&gt; <em>component</em> -&gt; <em>kernels</em> -&gt; <em>attributes</em>, each of which are described in turn below.</p>
+<div class="section" id="execution-blocks">
+<h2>Execution blocks<a class="headerlink" href="#execution-blocks" title="Permalink to this headline">¶</a></h2>
+<p>Top level objects in RAMP instrument definition files are execution blocks. These blocks are used to separate sections of the instrument into linear and non-linear execution. The name of execution block objects is arbitrary.</p>
+<p>In linear execution blocks, each successive component is executed in turn a single time. This is useful when simulating, for example, guide sections, where each neutron is expected to proceed in an orderly fashion from one guide component to the next.</p>
+<p>In non-linear execution blocks, the geometry kernel of every component is executed and the earliest intersected component for each neutron is stored. Then, only the scattering kernel for the earliest intersected component acts upon the neutron. This is useful when simulating, for example, sample environments, where there is no guarantee that neutrons will intersect components in the order they are specified in the instrument definition file.</p>
+<p>The following is an example of a truncated instrument definition file containing two blocks: a linearly executed guide section and a non-linearly executed sample environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;guides&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;linear&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+
+        <span class="o">...</span>
+
+    <span class="p">},</span>
+
+    <span class="s2">&quot;sample_env&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;linear&quot;</span> <span class="p">:</span> <span class="n">false</span>
+
+        <span class="o">...</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>Below the level of execution blocks come component definitions. An execution block contains several components.</p>
+<p>The position and rotation of a component are specified using the <cite>position</cite> and <cite>rotation</cite> attributes of the component object. Both attributes are specified as an array of three floating point values. For <cite>position</cite> these are the Cartesian coordinates of the component in meters and for <cite>rotation</cite> these are the rotation angles (in radians) about the Cartesian axes with the component at the origin, in the order z, y, x.</p>
+<p>The position and rotation of a component can also be specified relative to a component declared earlier in the instrument definition file using the <cite>relative</cite> attribute. This is best demonstrated by example - the following is a truncated instrument definition file demonstrating a basic monochromator setup using relative rotations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;all&quot;</span> <span class="p">:</span> <span class="p">{</span>
+       <span class="s2">&quot;linear&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+       <span class="s2">&quot;neutron_source&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+
+           <span class="o">...</span>
+
+       <span class="p">},</span>
+
+       <span class="s2">&quot;Mono_arm&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+           <span class="s2">&quot;rotation&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+           <span class="s2">&quot;relative&quot;</span> <span class="p">:</span> <span class="s2">&quot;neutron_source&quot;</span>
+
+           <span class="o">...</span>
+
+       <span class="p">},</span>
+
+       <span class="s2">&quot;Mono_out&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+           <span class="s2">&quot;rotation&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+           <span class="s2">&quot;relative&quot;</span> <span class="p">:</span> <span class="s2">&quot;Mono_arm&quot;</span><span class="p">,</span>
+
+           <span class="o">...</span>
+
+       <span class="p">},</span>
+
+       <span class="s2">&quot;mono&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+           <span class="s2">&quot;relative&quot;</span> <span class="p">:</span> <span class="s2">&quot;Mono_arm&quot;</span><span class="p">,</span>
+
+           <span class="o">...</span>
+
+       <span class="p">},</span>
+
+       <span class="s2">&quot;sample&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+           <span class="s2">&quot;relative&quot;</span> <span class="p">:</span> <span class="s2">&quot;Mono_out&quot;</span><span class="p">,</span>
+
+           <span class="o">...</span>
+
+       <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Another important component level attribute is the <cite>restore_neutron</cite> attribute. In linear execution mode, if a neutron does not intersect with the geometry of a given component during its execution step, the neutron is ‘terminated’, i.e. it will no longer interact with later components in the instrument. The <cite>restore_neutron</cite> flag prevents neutrons from being terminated in this case. This is useful in situations where the path of neutrons through the instrument ‘splits’, for example if an energy monitor is placed such that it monitors the transmitted beam through a monochromator. When set to <cite>true</cite>, the <cite>restore_neutron</cite> flag will ensure that the reflected neutrons are not terminated while the transmitted beam is being detected.</p>
+</div>
+<div class="section" id="kernels">
+<h2>Kernels<a class="headerlink" href="#kernels" title="Permalink to this headline">¶</a></h2>
+<p>All of the calculations in RAMP are handled by OpenCL kernels - programs which run on OpenCL capable devices. There are three classes of kernel in a RAMP simulation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Moderator kernels</p></li>
+<li><p>Geometry kernels</p></li>
+<li><p>Scattering kernels</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="moderator-kernels">
+<h3>Moderator kernels<a class="headerlink" href="#moderator-kernels" title="Permalink to this headline">¶</a></h3>
+<p>Typically an instrument will contain a single component which executes a moderator kernel, to generate the neutrons at the beginning of the simulation. There is a special component level attribute which must be specified for neutron sources: the <cite>source</cite> attribute should be set to <cite>true</cite>. For example, the following component defines an ISIS style moderator using the <cite>MISIS</cite> moderator kernel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;mod&quot;</span> <span class="p">:</span> <span class="p">{</span>
+           <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+           <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+           <span class="s2">&quot;moderator_kernel&quot;</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MISIS&quot;</span><span class="p">,</span>
+
+               <span class="o">...</span>
+
+           <span class="p">}</span>
+       <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geometry-and-scattering-kernels">
+<h3>Geometry and scattering kernels<a class="headerlink" href="#geometry-and-scattering-kernels" title="Permalink to this headline">¶</a></h3>
+<p>The kernels which dictate how a component interacts with neutrons are specified below the level of component objects in the kernel objects <cite>geom_kernel</cite> and <cite>scat_kernel</cite>.</p>
+<p>Each component which is not a source should contain a <cite>geom_kernel</cite> and <cite>scat_kernel</cite> object. The <cite>name</cite> attribute of these objects specify which kernel the component should use. The other attributes of the kernel objects are used to specify the parameters of the scattering kernel. For example, one would specify the radius of a spherical geometry kernel, or the lattice spacing of a monochromator scattering kernel.</p>
+<p>The following is an example of the definition of a flat monochromator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;mono&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;position&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
+    <span class="s2">&quot;geom_kernel&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;GPlane&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mf">0.10</span><span class="p">,</span>
+        <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="mf">0.10</span><span class="p">,</span>
+        <span class="s2">&quot;orientation&quot;</span><span class="p">:</span> <span class="s2">&quot;yz&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;scat_kernel&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SMonochromator&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;slab_width&quot;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="s2">&quot;slab_height&quot;</span> <span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="s2">&quot;mosaic_horizontal&quot;</span> <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+        <span class="s2">&quot;mosaic_vertical&quot;</span> <span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+        <span class="s2">&quot;r0&quot;</span> <span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+        <span class="s2">&quot;d_spacing&quot;</span> <span class="p">:</span> <span class="mf">3.53</span><span class="p">,</span>
+        <span class="s2">&quot;radius_vertical&quot;</span> <span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>It is often inconvenient to edit the instrument definition file every time a component parameter such as the angle of a monochromator must be adjusted. To remedy this, RAMP supports a non-standard notation for its JSON files to allow variable to be set directly from the Python script. Variable names surrounded by $ signs inside instrument definition files will be substituted for by keyword arguments provided when the instrument is instantiated in Python.</p>
+<p>For example, if the following component was specified inside an instrument definition file <cite>inst.json</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;mod&quot; : {
+    &quot;source&quot;: true,
+    &quot;position&quot; : [0.0, 0.0, 0.0],
+    &quot;moderator_kernel&quot;: {
+        &quot;name&quot;: &quot;MISIS&quot;,
+        &quot;spec_file&quot;: &quot;Let_Base.mcstas&quot;,
+        &quot;mod_dim&quot;: [0.04, 0.09],
+        &quot;target_dim&quot;: [0.04, 0.09],
+        &quot;target_dist&quot;: 1.7,
+        &quot;E_min&quot;: $emin$,
+        &quot;E_max&quot;: $emax$
+    }
+},
+</pre></div>
+</div>
+<p>The moderator attributes <cite>E_min</cite> and <cite>E_max</cite> could be set when the instrument is instantiated to 1.0 and 9.0, respectively, in Python via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inst</span> <span class="o">=</span> <span class="n">Instrument</span><span class="p">(</span><span class="s1">&#39;inst.json&#39;</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span> <span class="n">queue</span><span class="p">,</span> <span class="n">emin</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">emax</span><span class="o">=</span><span class="mf">9.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The variable syntax also supports basic arithmetic. After the variable names have been substituted for the values specified, the resulting expression within the $ signs is evaluated as a Python expression. For example, if the instrument definition file <cite>inst.json</cite> were to contain two choppers with the same constant phase offset but different initial phases, this could be specified as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;Chopper1&quot; : {
+    &quot;position&quot; : [0.0, 0.0, 5.0],
+    &quot;geom_kernel&quot; : {
+        &quot;name&quot; : &quot;GPlane&quot;,
+        &quot;width&quot; : 0.5,
+        &quot;height&quot; : 0.5
+    },
+    &quot;scat_kernel&quot; : {
+        &quot;name&quot; : &quot;SChopper&quot;,
+        &quot;radius&quot;: 0.5,
+        &quot;freq&quot; : 314.1,
+        &quot;n_slits&quot; : 6,
+        &quot;jitter&quot; : 7e-7,
+        &quot;slit_width&quot; : 0.04,
+        &quot;phase&quot; : $initial_pha_chop1 + pha_offset$
+    }
+},
+
+&quot;Chopper2&quot; : {
+    &quot;position&quot; : [0.0, 0.0, 10.0],
+    &quot;geom_kernel&quot; : {
+        &quot;name&quot; : &quot;GPlane&quot;,
+        &quot;width&quot; : 0.5,
+        &quot;height&quot; : 0.5
+    },
+    &quot;scat_kernel&quot; : {
+        &quot;name&quot; : &quot;SChopper&quot;,
+        &quot;radius&quot;: 0.5,
+        &quot;freq&quot; : -314.1,
+        &quot;n_slits&quot; : 6,
+        &quot;jitter&quot; : 7e-7,
+        &quot;slit_width&quot; : 0.04,
+        &quot;phase&quot; : $initial_pha_chop2 + pha_offset$
+    }
+}
+</pre></div>
+</div>
+<p>and in the Python script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inst</span> <span class="o">=</span> <span class="n">Instrument</span><span class="p">(</span>
+    <span class="s1">&#39;inst.json&#39;</span><span class="p">,</span>
+    <span class="n">ctx</span><span class="p">,</span>
+    <span class="n">queue</span><span class="p">,</span>
+    <span class="n">initial_pha_chop1</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">initial_pha_chop2</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">pha_offset</span> <span class="o">=</span> <span class="mf">55.0e-3</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><cite>NOTE: once variables have been added to an instrument definition file it is no longer a strictly valid JSON file, and many programs that interpret JSON files will no longer properly load the instrument definition file.</cite></p>
+</div>
+<div class="section" id="complete-example">
+<h2>Complete example<a class="headerlink" href="#complete-example" title="Permalink to this headline">¶</a></h2>
+<p>The following is a complete example of an instrument definition file modelling the LET spectrometer at ISIS, incorporating all of the concepts discussed above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
+    &quot;all&quot; : {
+        &quot;linear&quot; : true,
+        &quot;mod&quot; : {
+            &quot;source&quot;: true,
+            &quot;position&quot; : [0.0, 0.0, 0.0],
+            &quot;moderator_kernel&quot;: {
+                &quot;name&quot;: &quot;MISIS&quot;,
+                &quot;spec_file&quot;: &quot;Let_Base.mcstas&quot;,
+                &quot;mod_dim&quot;: [0.04, 0.09],
+                &quot;target_dim&quot;: [0.04, 0.09],
+                &quot;target_dist&quot;: 1.7,
+                &quot;E_min&quot;: 1.1,
+                &quot;E_max&quot;: 9.0
+            }
+        },
+
+        &quot;moderator_Emon&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 0.01],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot; : &quot;GPlane&quot;,
+                &quot;width&quot; : 0.1,
+                &quot;height&quot; : 0.1
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SDetector1D&quot;,
+                &quot;binning&quot; : [1.1, 0.05, 9.0],
+                &quot;var&quot; : &quot;energy&quot;,
+                &quot;restore_neutron&quot; : true
+            }
+        },
+
+        &quot;guide1&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 1.680],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 1.98,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;guide2&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 3.740],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 2.50,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;guide3&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 6.30],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 1.514,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;Res1&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 7.83],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot; : &quot;GPlane&quot;,
+                &quot;width&quot; : 0.6,
+                &quot;height&quot; : 0.6
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SChopper&quot;,
+                &quot;radius&quot;: 0.279,
+                &quot;freq&quot; : 314.1,
+                &quot;n_slits&quot; : 6,
+                &quot;jitter&quot; : 7e-7,
+                &quot;slit_width&quot; : 0.04,
+                &quot;phase&quot; : $7.83 / v_foc + pha_offset$
+            }
+        },
+
+        &quot;Res1_counter&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 7.830002],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot; : &quot;GPlane&quot;,
+                &quot;width&quot; : 0.6,
+                &quot;height&quot; : 0.6
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SChopper&quot;,
+                &quot;radius&quot;: 0.279,
+                &quot;freq&quot; : -314.1,
+                &quot;n_slits&quot; : 6,
+                &quot;jitter&quot; : 7e-7,
+                &quot;slit_width&quot; : 0.04,
+                &quot;phase&quot; : -$7.83 / v_foc + pha_offset$
+            }
+        },
+
+        &quot;guide4&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 7.852],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 0.312,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;guide5&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 8.236],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 3.499,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;PR&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 11.75],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot; : &quot;GPlane&quot;,
+                &quot;width&quot; : 0.6,
+                &quot;height&quot; : 0.6
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SChopper&quot;,
+                &quot;radius&quot;: 0.29,
+                &quot;freq&quot; : 628.3,
+                &quot;n_slits&quot; : 2,
+                &quot;jitter&quot; : 7e-7,
+                &quot;slit_width&quot; : 0.058,
+                &quot;phase&quot; : $11.75 / v_foc + pha_offset$
+            }
+        },
+
+        &quot;guide6&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 11.765],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.09,
+                &quot;l&quot; : 3.886,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;CR&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 15.66],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot; : &quot;GPlane&quot;,
+                &quot;width&quot; : 0.6,
+                &quot;height&quot; : 0.6
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SChopper&quot;,
+                &quot;radius&quot;: 0.29,
+                &quot;freq&quot; : 314.1,
+                &quot;n_slits&quot; : 6,
+                &quot;jitter&quot; : 7e-7,
+                &quot;slit_width&quot; : 0.054,
+                &quot;phase&quot; : $15.66 / v_foc + pha_offset$
+            }
+        },
+
+        &quot;guide7&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 15.681],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.09
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.09,
+                &quot;w2&quot; : 0.04,
+                &quot;h2&quot; : 0.0639,
+                &quot;l&quot; : 5.807,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 2,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;guide8&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 21.489],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.04,
+                &quot;height&quot;: 0.0639
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.04,
+                &quot;h1&quot; : 0.0639,
+                &quot;w2&quot; : 0.031,
+                &quot;h2&quot; : 0.06,
+                &quot;l&quot; : 0.7823,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 4,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;funnel&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 22.373],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.031,
+                &quot;height&quot;: 0.05711
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.031,
+                &quot;h1&quot; : 0.05711,
+                &quot;w2&quot; : 0.02,
+                &quot;h2&quot; : 0.04868,
+                &quot;l&quot; : 1.117,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 4,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;endguide&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 23.52],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.02,
+                &quot;height&quot;: 0.0484
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SGuide&quot;,
+                &quot;w1&quot; : 0.02,
+                &quot;h1&quot; : 0.0484,
+                &quot;w2&quot; : 0.02,
+                &quot;h2&quot; : 0.04,
+                &quot;l&quot; : 1.1,
+                &quot;R0&quot; : 1.0,
+                &quot;Qc&quot; : 0.0218,
+                &quot;alpha&quot; : 4.38,
+                &quot;m&quot; : 4,
+                &quot;W&quot; : 0.003
+            }
+        },
+
+        &quot;Emon&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 25.0],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 1.0,
+                &quot;height&quot;: 1.0
+            },
+            &quot;scat_kernel&quot; : {
+                &quot;name&quot; : &quot;SDetector1D&quot;,
+                &quot;binning&quot;: [0.0, 0.01, 10.0],
+                &quot;var&quot; : &quot;energy&quot;,
+                &quot;restore_neutron&quot;: true
+            }
+        },
+
+        &quot;samplepos_divpos&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 25.0],
+            &quot;geom_kernel&quot;: {
+                &quot;name&quot;: &quot;GPlane&quot;,
+                &quot;width&quot;: 0.1,
+                &quot;height&quot;: 0.1
+            },
+            &quot;scat_kernel&quot;: {
+                &quot;name&quot;: &quot;SDetector2D&quot;,
+                &quot;axis1_binning&quot;: [-0.05, 0.001, 0.05],
+                &quot;axis2_binning&quot;: [-3.0, 0.01, 3.0],
+                &quot;axis1_var&quot;: &quot;x&quot;,
+                &quot;axis2_var&quot;: &quot;divX&quot;,
+                &quot;restore_neutron&quot; : true
+            }
+        },
+
+        &quot;sample&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 25.0],
+            &quot;rotation&quot; : [0.0, 0.0, 0.0],
+            &quot;geom_kernel&quot; : {
+                &quot;name&quot;: &quot;GSphere&quot;,
+                &quot;radius&quot;: 0.03
+            },
+            &quot;scat_kernel&quot;: {
+                &quot;name&quot;: &quot;SPowder1&quot;,
+                &quot;d_spacing&quot;: 14.2,
+                &quot;pack&quot;: 1.0,
+                &quot;vc&quot;: 85.0,
+                &quot;sigma_abs&quot;: 0.0,
+                &quot;multiplicity&quot;: 1,
+                &quot;DW&quot;: 1.0,
+                &quot;F2&quot;: 60.0
+            }
+        },
+
+        &quot;det&quot; : {
+            &quot;position&quot; : [0.0, 0.0, 25.0],
+            &quot;rotation&quot; : [0.0, 0.0, 0.0],
+            &quot;geom_kernel&quot;: {
+                &quot;name&quot;: &quot;GBanana&quot;,
+                &quot;radius&quot;: 0.5,
+                &quot;height&quot;: 0.1,
+                &quot;mintheta&quot; : -80.0,
+                &quot;maxtheta&quot; : 80.0
+            },
+            &quot;scat_kernel&quot;: {
+                &quot;name&quot;: &quot;SDetector2D&quot;,
+                &quot;axis1_binning&quot;: [-40.0, 1.0, 140.0],
+                &quot;axis2_binning&quot;: [22000, 50, 50000],
+                &quot;axis1_var&quot;: &quot;theta&quot;,
+                &quot;axis2_var&quot;: &quot;tof&quot;,
+                &quot;logscale&quot; : true
+            }
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">RAMP</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hello.html">Hello, RAMP: a minimal example</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instrument definition files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#execution-blocks">Execution blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kernels">Kernels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#complete-example">Complete example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running simulations</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing/primer.html">(very) Brief OpenCL Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/buffers.html">Conventions: Buffer structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing/scatter.html">Conventions: Scattering kernels</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/geom_kernels.html">Geometry kernels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernels/scat_kernels.html">Scattering kernels</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="hello.html" title="previous chapter">Hello, RAMP: a minimal example</a></li>
+      <li>Next: <a href="running.html" title="next chapter">Running simulations</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Gino Cassella.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/user/idf.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

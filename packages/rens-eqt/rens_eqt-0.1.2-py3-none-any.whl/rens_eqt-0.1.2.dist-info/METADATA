@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: rens-eqt
+Version: 0.1.2
+Summary: Secure Equality Testing
+Home-page: https://gitlab.com/RensOliemans/eqt
+Author: Rens Oliemans
+Author-email: rens.oliemans@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/RensOliemans/eqt/-/archive/master/eqt-master.tar.gz
+Project-URL: Source, https://gitlab.com/RensOliemans/eqt
+Project-URL: Tracker, https://gitlab.com/RensOliemans/eqt/-/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: rens-paillier (>=1.0)
+
+# Secure Equality Testing
+
+`python3.8` package for secure equality testing, implementation of the EQT-1 protocol of [this paper](https://dl.acm.org/doi/10.1145/3230833.3230866)
+
+**Not working fully as of yet, secure comparison based on DGK is not yet error-free.**
+
+
+### Example usage
+
+With predetermined `a` and `b`
+
+
+    from eqt.protocol import Protocol
+
+    p = Protocol(a=12313, b=12312, length=14, kappa=40)
+    p.start()
+    print(p.decrypted_result)
+
+    p = Protocol(a=12313, b=12313, length=14, kappa=40)
+    p.start()
+    print(p.decrypted_result)
+
+
+Using `a` and `b` as input
+
+    from eqt.main import main
+    main()
+

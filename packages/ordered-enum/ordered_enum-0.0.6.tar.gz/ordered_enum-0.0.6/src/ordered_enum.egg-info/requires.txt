@@ -1,0 +1,8 @@
+
+[dev]
+flake8
+black
+isort[pyproject]
+pytest
+coverage
+twine

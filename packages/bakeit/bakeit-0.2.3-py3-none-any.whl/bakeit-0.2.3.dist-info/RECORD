@@ -1,0 +1,11 @@
+bakeit/__init__.py,sha256=QB9AwgWzDZhV2EXyPuJW2MVcbTD9PI_41Ly5H9ijLog,99
+bakeit/cli.py,sha256=5LdemyUOZ6feIZMk6leaY70RVB4auyZesf_D5ciQqPM,3645
+bakeit/tests.py,sha256=4V6o_duxqvgJMieC7wKR2wzoSnj5H7X2mgmSuOsOHeM,854
+bakeit/uploader.py,sha256=ivP2svlnsIMib6CB7V-hqbpMyPKQLr_EW3ndJrI1-fo,1356
+bakeit/version.py,sha256=PNiDER4qM19h9zdsdfgKt2_dT4WgYK7EguJ8RU2qA_g,22
+bakeit-0.2.3.dist-info/LICENSE,sha256=ZNDwA2IEBEWvNXSpNiOK9JxzljzLzJbVhFvfoBfmMtM,1087
+bakeit-0.2.3.dist-info/METADATA,sha256=k8wW7eqQ832yOIbvWOnV_NgBoWib-GDNCLttAoQ54bg,2847
+bakeit-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bakeit-0.2.3.dist-info/entry_points.txt,sha256=bNZLEaxIfVOfjRYA-T2ZECVF_HZk4NpEQ_2yOA1mfLE,44
+bakeit-0.2.3.dist-info/top_level.txt,sha256=A-9n8uz4A5bf4EHLv_QH5Oi5s8wLA1p5YdBjNwqZLeQ,7
+bakeit-0.2.3.dist-info/RECORD,,

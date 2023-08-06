@@ -1,0 +1,3 @@
+[console_scripts]
+python_latex = python_latex.python_latex:main
+

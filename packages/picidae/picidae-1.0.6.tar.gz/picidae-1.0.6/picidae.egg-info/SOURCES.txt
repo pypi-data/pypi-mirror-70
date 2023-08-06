@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+picidae/__init__.py
+picidae.egg-info/PKG-INFO
+picidae.egg-info/SOURCES.txt
+picidae.egg-info/dependency_links.txt
+picidae.egg-info/not-zip-safe
+picidae.egg-info/top_level.txt

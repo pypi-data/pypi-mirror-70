@@ -1,0 +1,15 @@
+fbchatbot/__init__.py,sha256=ah3tOVWjv3OX7Yqje6XU9CkoltQYQa-pE_VYq1nH7hw,271
+fbchatbot/base_plugin/__init__.py,sha256=hNx7RjnKNUXTrAodck7yNMV4gfW5GGWk0lG7ug0Hmj4,154
+fbchatbot/base_plugin/listeners.py,sha256=-dqc3aDwvB1nuPS_psV1SLmgrhOwuKWdYTolByyog7g,154
+fbchatbot/base_plugin/plugin.py,sha256=umA7b5kNJszF_1XVH6eANofw7dVzXcY8g_fGYvs1e90,63
+fbchatbot/command.py,sha256=wpUENSi5hvmWbIkmMEPexQtV72Gcg4ZRYYUUYaoQt50,425
+fbchatbot/core_commands.py,sha256=qMOAvcO_jT8BIiKsTIqaIqTzjmEGY8kmAM_9EpXfqAw,840
+fbchatbot/core_events.py,sha256=68T8W-vMZy_PeBJhJoepk1XiQHsKdP1H9kztt9WZ5kQ,4578
+fbchatbot/events_handler.py,sha256=rG1TCdMW08B_5pOvw0qLMbTMDnLD4ZETan7VLOcdMwI,5422
+fbchatbot/fbchatbot.py,sha256=x-0188FwBpXdHMKvAAOSqabyxL4Ir4fB5ELgq4hVqxw,2170
+fbchatbot/plugin.py,sha256=4iUOmB_H6OyNlNcgAaFxLdtz5oCK091pokEQiQQJmls,278
+fbchatbot/types_util.py,sha256=UEgKC46r1rGybi9BO_prUWk29CiigxbMees-d10qero,211
+fbchatbot/util.py,sha256=K22F3TH9IgoU0H0q2lEsQPv_dliwIMPhCQb7ULwnPns,619
+fbchatbot-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+fbchatbot-0.1.0.dist-info/METADATA,sha256=_UvmopvmKHmwioZE3YRBDm4l8_ys7fDK0ei8kBX0x2E,366
+fbchatbot-0.1.0.dist-info/RECORD,,

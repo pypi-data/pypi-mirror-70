@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fbchatbot
+Version: 0.1.0
+Summary: Easily define chatbots for Facebook Messenger
+Author: Matthew Wetmore
+Author-email: wetmore.matt@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: attr (>=0.3.1,<0.4.0)
+Requires-Dist: fbchat (==2.0.0a2)

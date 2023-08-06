@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: yoohoo
+Version: 0.0.3
+Summary: Test Pip package
+Home-page: https://github.com/LeFrank/pip_yoohoo.git
+Author: Francois Campbell
+Author-email: campbellfd@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.1
+Description-Content-Type: text/markdown
+
+# yoohoo
+
+Testing creating a pip file for now.
+Please ignore :D
+

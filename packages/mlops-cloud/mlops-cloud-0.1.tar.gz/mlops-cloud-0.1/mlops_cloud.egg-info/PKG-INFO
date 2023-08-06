@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mlops-cloud
+Version: 0.1
+Summary: UNKNOWN
+Home-page: https://mlops.cloud
+Author: Petter Gustafsson
+Author-email: petter@mlops.cloud
+License: UNKNOWN
+Download-URL: https://github.com/mlops-cloud/sdk/archive/0.1.tar.gz
+Description: # sdk
+        Test
+        
+        The MLOps SDK
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

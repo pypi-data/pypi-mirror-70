@@ -1,0 +1,4 @@
+
+# sample ./px data ingest --csv ../Etching2_2020-04-20_100k.csv --keyspace tmp_backyard --cassandra_host 10.0.0.4,10.0.0.5
+
+python -m phoenix.cli $@

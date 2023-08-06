@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: phoenix-cli
+Version: 0.0.2
+Summary: Phoenix Command Line Interface
+Home-page: https://pypi.org/project/phoenix-cli/
+Author: Pitsanu Swangpheaw
+Author-email: pitsanu_s@hotmail.com
+License: MIT
+Description: # Phoenix Command Line Interface
+        
+        ## Features
+        - ingest data
+        
+        ## Released under MIT License
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

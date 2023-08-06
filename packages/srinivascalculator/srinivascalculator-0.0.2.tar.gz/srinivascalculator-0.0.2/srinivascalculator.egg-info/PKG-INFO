@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: srinivascalculator
+Version: 0.0.2
+Summary: A very basic calculator
+Home-page: https://github.com/srsapireddy
+Author: Sapireddy Srinivas Rahul
+Author-email: sapireddyrahul@gmail.com
+License: MIT
+Description: This is a very simple calculator that takes two numbers and either add, subtract, multiply or divide them.
+        
+        Function in the Package:
+        add_numbers,subtract_numbers, multiply_numbers, divide_numbers
+        
+        Running the Package:
+        Example:
+        import srinivascalculator
+        
+        add = srinivascalculator.add_numbers(3,4)
+        print(add)
+              
+        
+        Change Log
+        ==========
+        
+        0.0.2 (09/06/2020)
+        -------------------
+        - First Release
+        
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

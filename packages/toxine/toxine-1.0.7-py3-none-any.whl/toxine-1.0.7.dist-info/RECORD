@@ -1,0 +1,9 @@
+toxine/__init__.py,sha256=rSzO5rH8gdp2EqzI7GyLkYEK5GM8nRTkMC_-L4Jh6-Y,363
+toxine/_version.py,sha256=Th6FPUfmw3s94879QiaD_OgzmQyEFPOnYrMVoQqee8Y,22
+toxine/text_preprocessor.py,sha256=7_50gn8Xm4cvZbgGu_nGsh6cqQ_o-87JAnr-EuYvYsY,55448
+toxine/wikipedia_utils.py,sha256=RjX6nh2A32R6yNu1jGJRbjdx3dMPB61ZfTj6IfBjDJA,1676
+toxine-1.0.7.dist-info/LICENSE,sha256=JFHcX_bij5qTp6d6H9jC0G6WLJiXnef5_j899T4dT_E,1524
+toxine-1.0.7.dist-info/METADATA,sha256=qjRdds35D2tO9VOS3hTk0ghuLfHynJDUgx5-hBTvlJ0,3285
+toxine-1.0.7.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+toxine-1.0.7.dist-info/top_level.txt,sha256=a5BcaOwSt1H-ywhv5zebfwUey8PrdgzpF0pUJk1WxDY,7
+toxine-1.0.7.dist-info/RECORD,,

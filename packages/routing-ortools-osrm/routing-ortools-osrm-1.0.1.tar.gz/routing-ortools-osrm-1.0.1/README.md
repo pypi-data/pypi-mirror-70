@@ -1,0 +1,94 @@
+# Routing   [![coverage report](https://gitlab.com/Tonow-c2c/routing/badges/master/coverage.svg)](https://gitlab.com/Tonow-c2c/routing/commits/master)
+
+## Description
+
+Package to use [Ortools](https://pypi.org/project/ortools/) combine with [Osrm](https://pypi.org/project/osrm/) for routing.
+
+## Install
+
+* You should have a OSRM server with the right data [section](#sample-for-osrm-server-with-monaco-data-on-localhost5ooo)
+
+## Options
+
+You can set local search options with params in https://developers.google.com/optimization/routing/routing_options#local_search_options
+
+## Usage
+
+* import package and set the host
+```python
+from routingoo.routing_data_matrix import RoutingDataMatrix
+from routingoo.vrp_solver import VrpSolver
+
+HOST=my_host # eg "localhost:5000" or "router.project-osrm.org"
+```
+
+* Set location address in one list
+```python
+add1 = '15 Rue Basse Monaco'
+add2 = '1 Avenue des Pins Monaco'
+add3 = """ Maison de Stéphanie de Monaco, Avenue Saint-Martin,
+Monaco-Ville, Monaco, 98000 """
+locations = [add1, add2, add3]
+```
+
+* Retrive coordinates and distance and duration infos with Nominatim and OSRM
+```python
+routing_data_matrix = RoutingDataMatrix(host=HOST)
+coordinates, points = routing_data_matrix.coordinate_infos(locations)
+distance_matrix, duration_matrix = routing_data_matrix.distance_duration_matrix_simple_route(points)
+```
+
+* Use solver to find a heuristic
+```python
+num_vehicles = 1
+vrp_solver = VrpSolver(num_vehicles)
+route = vrp_solver.solver_guided_local_search(distance_matrix, time_max)[0]
+```
+
+* Retrieve the total distance if needed
+```python
+total_distance = vrp_solver.compute_total_distance(route, distance_matrix)
+```
+
+## Model methods
+
+* RoutingDataMatrix
+	* __init__(self, host="localhost:5000")
+	* coordinate_infos(self, locations)
+	* distance_duration_matrix_simple_route(self, points)
+
+* VrpSolver
+	* __init__(self, num_vehicles)
+	* create_data_model(self, distance_matrix)
+	* compute_total_distance(self, route, distance_matrix, unite_mesure="m", show_log=False)
+	* print_solution(self, manager, routing, solution)
+	* get_routes(self, manager, routing, solution)
+	* solver_guided_local_search(self, distance_matrix, time_max, heuristic_type="FirstSolutionStrategy", heuristic="PATH_CHEAPEST_ARC",max_travel_distance=False, show_log=False)
+
+### Sample for Osrm server with Monaco data on localhost:5OOO
+
+* Retrieve the data :
+
+`wget http://download.geofabrik.de/europe/monaco-latest.osm.pbf`
+
+* Extract data :
+
+`docker run -t -v $(pwd):/data osrm/osrm-backend:latest osrm-extract -p /opt/car.lua /data/monaco-latest.osm.pbf`
+
+* Contract data :
+
+`docker run -t -v $(pwd):/data osrm/osrm-backend:latest osrm-contract /data/monaco-latest.osrm`
+
+* Run your server on localhost:5000 :
+
+`docker run -t -i -p 5000:5000 -v $(pwd):/data osrm/osrm-backend:latest osrm-routed /data/monaco-latest.osrm`
+
+## Testing
+
+* use `python -m unittest discover -v`
+* :warning: the tests use [VCR](https://vcrpy.readthedocs.io/en/latest/) if you want fresh call to Nominatim and Osrm remove the folder vcr_cassettes
+
+## Resources :
+* https://developers.google.com/optimization/routing
+* https://github.com/Xevib/pynominatim
+* https://github.com/ustroetz/python-osrm

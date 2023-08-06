@@ -1,0 +1,7 @@
+build
+dist
+docs
+mailflagger
+requirements
+venv
+wheels

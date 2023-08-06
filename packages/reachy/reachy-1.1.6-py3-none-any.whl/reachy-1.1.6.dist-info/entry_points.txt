@@ -1,0 +1,4 @@
+[console_scripts]
+dxl-config = reachy.utils.dxl_config:main
+orbita-config = reachy.utils.orbita_config:main
+

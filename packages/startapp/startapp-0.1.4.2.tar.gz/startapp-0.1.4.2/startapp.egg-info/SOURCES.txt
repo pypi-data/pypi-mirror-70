@@ -1,0 +1,10 @@
+README.md
+setup.py
+startapp.egg-info/PKG-INFO
+startapp.egg-info/SOURCES.txt
+startapp.egg-info/dependency_links.txt
+startapp.egg-info/entry_points.txt
+startapp.egg-info/requires.txt
+startapp.egg-info/top_level.txt
+takeaway/script/__init__.py
+takeaway/script/order.py

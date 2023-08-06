@@ -1,0 +1,3 @@
+[console_scripts]
+search_this = search_this.start:start
+

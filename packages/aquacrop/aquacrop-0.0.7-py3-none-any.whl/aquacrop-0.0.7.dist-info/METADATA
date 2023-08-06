@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: aquacrop
+Version: 0.0.7
+Summary: python version of AquaCropOS
+Home-page: https://github.com/thomasdkelly/aquacrop
+Author: Tom Kelly
+Author-email: thomas.kelly-2@manchester.ac.uk
+License: Apache Software License 2.0
+Keywords: aquacrop aquacropos python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pathlib
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: numba (>=0.49.0)
+
+# AquaCrop-OS
+> Python version of AquaCropOS 
+
+
+## Install
+
+`pip install aquacrop`
+
+AquaCropOS is an environment built for the design and testing of irrigation stratgeies. We are still in early development and so ensure you have downloaded the latest version.
+
+It is built upon the AquaCropOS crop-growth model (written in Matlab `link`) which itself itself is based on the FAO AquaCrop model. Comparisons to both base models are shown in `link`
+
+### to do:
+
+ - Adjust dz so that it covers whole root zone. [0.1]*12 is default. if max_root>1.2 then keep 0.1m to final layer until last layer =0.3 or max_root is inside the root zone. If not add 0.1 to the second last layer and so on. 
+
+ - finish jit conversions
+
+ - fix func docstrings
+
+ - change NewCond class to struct
+
+ - create struct for other classes
+
+ - tutorials (comparisson)
+
+ - batch tutorials
+
+ - optimisation
+
+ - calibration
+
+ - custom irrigation decisions
+
+ - env.gym style wrapper
+
+ - add a display_full_outputs arg so we dont create a pandas dataframe after each model end
+
+

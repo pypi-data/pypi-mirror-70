@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: swalign
+Version: 0.3.5
+Summary: Smith-Waterman local aligner
+Home-page: http://github.com/mbreese/swalign/
+Author: Marcus Breese
+Author-email: marcus@breese.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.1

@@ -1,0 +1,14 @@
+dbapi/__init__.py,sha256=nWbfDHNgbK93IRLEuYklGOU067OaJTcfXrgU0u3ooUM,310
+dbapi/db/__init__.py,sha256=l1QTvOmPr8yfMiTn2QbSwWEBBN_r6ZPFNNhmYiIxYHU,327
+dbapi/db/base.py,sha256=6XzrMstUa90sTJGEURWkW0yvrtZ5P1gm8SuU_h8E3Rg,4857
+dbapi/db/fileexec.py,sha256=-55_UV461bxbmk04Ui07M6uQlRQSMVEUZKHdvcaZXbY,1537
+dbapi/exec/__init__.py,sha256=ulWJIUojKAX3o5-GaqU61D91kolD3kf_qwrcw4-_3pE,358
+dbapi/exec/redshift.py,sha256=hHqaDHC2uOuPlFNGPHsoljyUVhZb7VxnBzkiuiKU-KM,5844
+dbapi/exec/sqlite.py,sha256=O46m1xGVZkIKitvbo16TI0ElCFNvfIXxCHYxg-vt3Cs,5841
+dbapi/sql/__init__.py,sha256=Fafb7qOvl3QhAWxUwUuytUTD31U8MG0vB6GV1z_vRuM,357
+dbapi/sql/compile.py,sha256=FbN0V05mYe33w9tErrEXNvR_ZsjhCV9q40c81G3lLns,4780
+dbapi/sql/parse.py,sha256=gL6f9LpZvWQ2VcIe_3-8S0kjg95B3saTjTpXpnW1CVM,3075
+pydbapi-0.0.1.dist-info/METADATA,sha256=nWlX8-qqUCaNPEx9EqsYtCb2u87zqst-MxsbzB9cODE,3703
+pydbapi-0.0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+pydbapi-0.0.1.dist-info/top_level.txt,sha256=eiRQAR1xJvAfaXss1R-ipZeTLyzmfY15R7eb6M6B6eo,6
+pydbapi-0.0.1.dist-info/RECORD,,

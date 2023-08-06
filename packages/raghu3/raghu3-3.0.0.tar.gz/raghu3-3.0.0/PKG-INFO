@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: raghu3
+Version: 3.0.0
+Summary: A Python package to test in local
+Home-page: https://github.com/Raghu960/raghu
+Author: Raghavendra Deshmukh
+Author-email: raghu.deshmukh55@gmail.com
+License: MIT
+Description: # raghu
+        
+        A Python package to to test it locally.
+        
+        ## Usage
+        
+        Following query on terminal will provide you hello raghu.
+        
+        ```
+        raghu()
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

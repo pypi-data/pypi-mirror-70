@@ -1,0 +1,9 @@
+aliyunstoreplugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunstoreplugin/store/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunstoreplugin/store/artifact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunstoreplugin/store/artifact/aliyun_oss_artifact_repo.py,sha256=QbTDwt5QYNRAgFtsiWXEaukeH3VeuN6B5ZGbMHK1cAg,5155
+aliyunstoreplugin-1.0.0.dist-info/METADATA,sha256=u-fqB2IiHxH96lov0YS3kLiNaP3_eBQoauwHT_zVdkg,1623
+aliyunstoreplugin-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aliyunstoreplugin-1.0.0.dist-info/entry_points.txt,sha256=LLsKOim94vk0X3FkIVRm8PhOep4XZQ8VztDndSdjqU0,122
+aliyunstoreplugin-1.0.0.dist-info/top_level.txt,sha256=0EUCYhu6erqJgVHe09nM0jwheugPR4et9EF5y4IZG_g,18
+aliyunstoreplugin-1.0.0.dist-info/RECORD,,

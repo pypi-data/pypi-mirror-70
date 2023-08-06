@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: pyTableMaker
+Version: 1.2.1
+Summary: A library that creates text-based tables
+Home-page: https://github.com/windowsboy111/pyTableMaker/
+Author: windowsboy111
+Author-email: cyruschan0111@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/windowsboy111/pyTableMaker/archive/1.2.1.tar.gz
+Description: UNKNOWN
+Keywords: table,create table,make table,tables
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

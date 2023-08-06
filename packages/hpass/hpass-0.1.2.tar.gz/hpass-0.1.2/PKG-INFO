@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: hpass
+Version: 0.1.2
+Summary: A simple password management tool
+Home-page: https://github.com/hekaiyou/hpass
+Author: Kaiyou He
+Author-email: hky0313@outlook.com
+License: UNKNOWN
+Description: # hpass
+        
+        Hello Password
+        
+        **Why?** Because I can't believe the current password management software. In addition, the fact that the data file cannot be exported bothers me.
+        
+        ## Installation
+        
+        As usual, the easiest way is with pip:
+        
+        ```powershell
+        $ pip install hpass
+        ```
+        
+        Alternatively you can [download](https://pypi.org/project/hpass/#files) the `hpass-x.x.x.tar.gz` installation file:
+        
+        ```powershell
+        $ pip install hpass-x.x.x.tar.gz
+        ```
+        
+        Pip will install dependencies *([colorama](https://pypi.org/project/colorama/) and [PrettyTable](https://pypi.org/project/PrettyTable/))* for you. Alternatively you can clone the repository:
+        
+        ```powershell
+        $ git clone https://github.com/hekaiyou/hpass.git --recursive
+        $ cd hpass
+        $ python setup.py install
+        ```
+        
+        ## Usage
+        
+Keywords: password pass hpass hello
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Desktop Environment :: File Managers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

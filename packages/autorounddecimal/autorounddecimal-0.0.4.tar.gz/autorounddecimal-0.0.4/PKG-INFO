@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: autorounddecimal
+Version: 0.0.4
+Summary: automatic rounding decimal 
+Home-page: https://github.com/niitsuma/autorounddecimal/
+Author: Hirotaka Niitsuma
+Author-email: hirotaka.niitsuma@gmail.com
+License: GNU Affero General Public License
+Description: UNKNOWN
+Keywords: hy
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Lisp
+Classifier: Topic :: Software Development :: Libraries

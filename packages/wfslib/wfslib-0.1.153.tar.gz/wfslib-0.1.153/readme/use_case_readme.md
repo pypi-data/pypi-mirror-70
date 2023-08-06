@@ -1,0 +1,317 @@
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+from wfslib.geometry import Geometry
+from wfslib.wfs import WFSData
+```
+
+### Крупная сетка засвеченная полностью 
+
+
+```python
+from PIL import Image
+
+
+path = "../data/bad_img3.tiff"
+
+arr = np.array(Image.open(path))[500:1500, 500:1500]
+arr = np.expand_dims(arr, 0)
+wfs = WFSData(arr)
+wfs.geometry.set_options(shift=(-22, -36))
+wfs.reference = 27
+wfs.good_only = True #отображать только качественные субапертуры
+plt.imshow(arr[0])
+wfs.show_geometry()
+```
+
+
+
+![png](https://sun4-12.userapi.com/HfzddsQRbM9YEgbq1rx2L5RTtfXKg6TqSjccJA/OEfDJCoygO4.jpg)
+
+
+
+![png](https://sun4-15.userapi.com/hczA1ywT0YDusH5-Zdubo1oVRenVe4e0yp1NtQ/7uQ8cesypQI.jpg)
+
+
+
+```python
+#print(str (wfs[0].get_offset(43)))
+wfs.mask = True
+plt.subplot(1,2,1)
+plt.imshow(wfs[0][17])
+plt.subplot(1,2,2)
+plt.imshow(wfs[0][1])
+```
+
+
+
+
+    <matplotlib.image.AxesImage at 0x2781c39aa90>
+
+
+
+
+![png](https://sun9-4.userapi.com/er4u7B2mBIAcam73L0_MgU8pAR3x2RnrTyk8pA/upOyKQGpA1k.jpg)
+
+
+### Крупная сетка хасвеченная диагонально
+
+
+```python
+path = "../data/bad_img1.tiff"
+
+Geometry.only_wavelets = 0
+
+arr = np.array(Image.open(path))[500:1500, 500:1500]
+arr = np.expand_dims(arr, 0)
+wfs = WFSData(arr)
+wfs.geometry.set_options(shift=(-65, -15))
+wfs.reference = 27
+
+
+
+plt.imshow(arr[0])
+wfs.show_geometry(show_type = "offsets")
+```
+
+
+
+![png](https://sun9-17.userapi.com/7lBb99L-aCm6DVLSwRCi8iH_s0CbrSQlcx-BVw/92MwjRzDHMU.jpg)
+
+
+
+![png](https://sun9-17.userapi.com/gCrdKv68-tf5R0Co0ep6tLUAruic_4z9EwsoJA/ZBbiEycotVs.jpg)
+
+
+### Мелкая сетка полностью засвеченная
+
+
+```python
+wfs = WFSData('../data/file.h5', dataset_name = "data")
+#wfs.close_stream()
+p = wfs.geometry.options
+print(p)
+wfs.geometry.set_options( shift = (-1,1), border = 6)
+wfs.reference = 87
+#wfs.domask = True
+
+wfs.show_geometry()
+wfs[0].offsets()
+
+#    plt.imshow(wfs[0][172])    
+print(wfs[1].get_offset(130))
+
+```
+
+
+    {'border': 8.0, 'cell_width': 32.0, 'start_point': [139, 99]}
+    
+
+![png](https://sun9-15.userapi.com/GUeplLgDKYt1znknIYlipu2V4H1GOEDKLUdEsQ/FTFmhFr0LDk.jpg)
+
+
+    [0. 0.]
+    
+
+### Точки
+
+
+```python
+
+
+path = "../data/bad_img2.tiff"
+
+arr = np.array(Image.open(path))
+arr = np.expand_dims(arr, 0)
+
+plt.imshow(arr[0])
+wfs = WFSData(arr)
+wfs.geometry.set_options(shift=(64, -38),swap = True, rotate = 1)
+
+#plt.imshow(arr[0])
+wfs.show_geometry()
+```
+
+
+
+
+![png](https://sun9-38.userapi.com/NanWySSVDsLVDxw0LvJTnUK77vLQiDvjo6K-nQ/1Rxzx7bQBE8.jpg)
+
+
+
+![png](https://sun9-23.userapi.com/SdQmWktGVIjzfKVh63XT84tMuHBpr2oYfko2Gg/0JKoMLOdml0.jpg)
+
+
+## Bims
+
+
+```python
+def read_bim(path):
+    with open(path, "rb") as f:
+        ny = int.from_bytes(f.read(4), "little")
+        nx = int.from_bytes(f.read(4), "little")
+        return np.frombuffer(f.read()).reshape(ny, nx)
+```
+
+
+```python
+bim_img = read_bim("../data/bims/lsvt-z2=-2.bim").copy()
+plt.imshow(bim_img)
+```
+
+
+
+
+    <matplotlib.image.AxesImage at 0x2781c113b70>
+
+
+
+
+![png](https://sun9-52.userapi.com/3bZBvGBtYiVwNOra4CE2OUVdxCHUpcE1A2P12g/-4rMNtGzhVA.jpg)
+
+
+
+```python
+Geometry.only_wavelets = 0
+wfs = WFSData(bim_img)
+
+p = wfs.geometry.options
+print(p)
+wfs.geometry.set_options(shift=(-56, -38))
+
+wfs.good_only = True
+wfs.reference = 0
+#plt.imshow(arr[0])
+wfs.show_geometry(show_type = "offsets")
+wfs.show_geometry()
+```
+
+
+    {'border': 4.0, 'cell_width': 76.0, 'start_point': [185, 167]}
+    
+
+![png](https://sun9-44.userapi.com/l6oGl5bsW6tTfW29L98EMDl8Y61xx67Ra9ujVw/OUG-BZ8BFmY.jpg)
+
+
+
+![png](https://sun9-9.userapi.com/bi_XJjKFnwQbXM1swwT6lvcqqGf2lXlBnNAoUg/yOkcBtN2WXE.jpg)
+
+
+### Разные функции качества
+
+
+```python
+def qualitative_sub_std(cell, std, mean_val):
+        return np.mean(cell) > std
+    
+def qualitative_sub_mean(cell, std, mean_val):
+        return np.mean(cell) > mean_val
+
+def qualitative_sub_median(cell, std, mean_val):
+    return np.median(cell) > mean_val
+```
+
+
+```python
+
+path = "../data/bad_img3.tiff"
+
+arr = np.array(Image.open(path))[500:1500, 500:1500]
+arr = np.expand_dims(arr, 0)
+wfs = WFSData(arr)
+wfs.geometry.set_options(shift=(-22, -36))
+wfs.qualitative_function = qualitative_sub_mean
+wfs.reference = 27
+
+wfs.show_geometry()
+```
+
+    240.66666666666666
+    317.0
+    
+
+![png](https://sun9-35.userapi.com/Oy2-UbtJyhsU4pNLRukGbn4vqhiPlMWp77WwOw/ab97IQUobHQ.jpg)
+
+
+
+```python
+wfs.qualitative_function = qualitative_sub_median
+wfs.show_geometry()
+```
+
+
+![png](https://sun9-50.userapi.com/j62HJ08jDoo0HurVUsAvZZhNJ3R_g9SeNxty1A/10SZ3LCzMDI.jpg)
+
+
+
+```python
+wfs.qualitative_function = qualitative_sub_std
+wfs.show_geometry()
+```
+
+
+![png](https://sun9-47.userapi.com/KLvFlq9Dy_nf6OVOciLfmJPlvvnYNWvOjA1dPg/B6o9VbOXKgE.jpg)
+
+
+### Cмотрим смещения
+
+
+```python
+
+path = "../data/bad_img3.tiff"
+
+arr = np.array(Image.open(path))[500:1500, 500:1500]
+arr = np.expand_dims(arr, 0)
+wfs = WFSData(arr)
+wfs.geometry.set_options(shift=(-22, -36))
+wfs.qualitative_function = qualitative_sub_mean
+wfs.reference = 13
+wfs.good_only = True
+
+wfs.show_geometry()
+```
+
+![png](https://sun4-15.userapi.com/hczA1ywT0YDusH5-Zdubo1oVRenVe4e0yp1NtQ/7uQ8cesypQI.jpg)
+
+
+
+```python
+wfs[0].offsets()
+```
+
+
+
+
+    array([[-28., -23.],
+           [-25.,  -0.],
+           [-30.,  -0.],
+           [-29.,  -1.],
+           [-28., -43.],
+           [-25., -47.],
+           [-28.,  -0.],
+           [  1.,  -0.],
+           [ 45.,  -0.],
+           [-30., -43.],
+           [-25., -37.],
+           [ -0.,  -0.],
+           [ 24.,  -0.],
+           [ -0.,  -0.],
+           [-26.,  -1.],
+           [ 46., -35.],
+           [ 38.,  -0.],
+           [ 42.,  -0.],
+           [-30.,  -0.],
+           [ 41., -31.],
+           [ 34., -40.],
+           [ 31.,  -0.],
+           [ 41.,  -0.],
+           [ 37., -36.],
+           [ 34., -39.],
+           [ 29., -45.],
+           [ 24., -32.]])
+
+
+
+
+

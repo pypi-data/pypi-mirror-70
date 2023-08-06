@@ -1,0 +1,10 @@
+backtester/__init__.py,sha256=D4o-diXmZW2dK7gFzFG0z877xXKKaHmER2uMScwUTjU,116
+backtester/backtest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backtester/backtest/backtest.py,sha256=YenUWDI1H7awwoy1eUXi1DkX7GGbAfBMCYWkKjPziIU,9652
+backtester/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backtester/metrics/metrics.py,sha256=Ot9r6xnBJuYhXpLcvcaGtsvMNnDsF-4dYOImc0Msfck,39663
+backtester-0.6.dist-info/LICENSE,sha256=RRwDjJdcLB4jY7V6z-ewVc5-82sqQlyrPD-ZfpksP-s,1068
+backtester-0.6.dist-info/METADATA,sha256=hOVY5U4iEJESkraNPIvEX8sP_IERI60LWsXqMrDizy8,1190
+backtester-0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+backtester-0.6.dist-info/top_level.txt,sha256=pHVPM8OTboBiWnkfnGdyoq72BpyuLdOVwAgXvQ0Q9MM,11
+backtester-0.6.dist-info/RECORD,,

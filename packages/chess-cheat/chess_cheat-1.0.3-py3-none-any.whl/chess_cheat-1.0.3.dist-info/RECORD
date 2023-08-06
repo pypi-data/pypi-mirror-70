@@ -1,0 +1,10 @@
+chess-cheat.py,sha256=2U2vjiysKdmz9ugJ94MkOQE2YmcplkZ7C7o9rX7EHt8,5787
+chess_cheat_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chess_cheat_utils/board.py,sha256=zJusKBcUQ8Ry2EDSc7Tv17ayZXeAh5VQ6RDzAKYHCrs,2122
+chess_cheat_utils/finder.py,sha256=T0qccU454mpHCkxfSmguUS_kYZjdOV6Q_ugFuv9zJkM,11548
+chess_cheat_utils/model.pb,sha256=TdYkfXZgDTpobOZ-vqCu84Ko_u2Up_XJaP616sSt188,17046610
+chess_cheat_utils/utils.py,sha256=tUKazVMW55RQVabEVHi5XeNYn6x530eBOyI5scDMbiw,858
+chess_cheat-1.0.3.dist-info/METADATA,sha256=Hci0ywEeRWKxctutNb1E6e3wF0ox7o1XYQL04Z3NZLw,3034
+chess_cheat-1.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+chess_cheat-1.0.3.dist-info/top_level.txt,sha256=5jnbPiLvyheiOzwOZPNMIOE2m5DfzyCFphtjSoWBf7c,30
+chess_cheat-1.0.3.dist-info/RECORD,,

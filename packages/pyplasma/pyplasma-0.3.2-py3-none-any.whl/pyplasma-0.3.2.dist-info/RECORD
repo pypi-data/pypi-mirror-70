@@ -1,0 +1,14 @@
+pyplasma/__init__.py,sha256=U64K6l4AqodgEsETUh9vCAjMXfFNldM6dxejSruD828,356
+pyplasma/backend.py,sha256=Mc5eAenvubge6B0xcb1IDvKfXHhO37neDPz2qCbw6gQ,7585
+pyplasma/boundaries.py,sha256=_XHyEmmf1MYVI4yEr07zq4EB0M2nXlOAU-1ugNEyr0Q,6081
+pyplasma/field_ionization.py,sha256=usPhX6npo-0XE-tU88-U5Sgxx-P0TLXa1FhVnjY53s4,2191
+pyplasma/impact_ionization.py,sha256=Otgqag_rPOjGX53UC_gGM9hw5nLQTemUPoptFjofvn4,4686
+pyplasma/laser.py,sha256=xd0tzHbPB2KQjFx8-dn5xxgG9dv4pZTcPcoNMCOmHbI,2833
+pyplasma/material.py,sha256=gU-kssn-M9f5DIXkgAJEBsAuL3XBwVGD6_Gpq6TCJWU,13426
+pyplasma/misc.py,sha256=7La1NYiQhVJwTd3B461wQr3_qM7RFLkxT-A6MMoX40M,6384
+pyplasma/observers.py,sha256=6LiB5e9flx71JM2oc3KUujozjOdMY70Tw9__gUqDcW0,14951
+pyplasma/simulation.py,sha256=UvcOJvrOffHwuzQJOhyGHvkbDHxOr52xNvdOzFbJgpo,11300
+pyplasma-0.3.2.dist-info/METADATA,sha256=TAlEQopBPRLJx_sPsy2MReVCmm5Pdj7pOI0uJLhhDfA,9566
+pyplasma-0.3.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyplasma-0.3.2.dist-info/top_level.txt,sha256=rJ9M1JJB7BmeimGsxTK0awV-tj8S5nm65NQMICz_QOg,9
+pyplasma-0.3.2.dist-info/RECORD,,

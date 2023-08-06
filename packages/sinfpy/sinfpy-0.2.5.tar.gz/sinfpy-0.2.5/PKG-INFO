@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: sinfpy
+Version: 0.2.5
+Summary: Algorithm to compute semantic influence scores in dynamic graphs.
+Home-page: https://github.com/enrlor/sinfpy
+Author: enrlor
+Author-email: enricaloria94@gmail.com
+License: GNU GPLv3
+Download-URL: https://github.com/enrlor/sinfpy/releases/tag/v_0.2.5
+Description: UNKNOWN
+Keywords: sna,graph,influence,game analytics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)

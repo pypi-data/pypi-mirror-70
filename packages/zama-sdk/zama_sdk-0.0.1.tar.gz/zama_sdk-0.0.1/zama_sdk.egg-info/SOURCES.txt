@@ -1,0 +1,8 @@
+README.md
+setup.py
+zama_sdk/__init__.py
+zama_sdk/file.py
+zama_sdk.egg-info/PKG-INFO
+zama_sdk.egg-info/SOURCES.txt
+zama_sdk.egg-info/dependency_links.txt
+zama_sdk.egg-info/top_level.txt

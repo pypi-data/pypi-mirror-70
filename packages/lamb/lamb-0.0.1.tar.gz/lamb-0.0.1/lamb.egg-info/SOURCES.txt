@@ -1,0 +1,8 @@
+README.md
+setup.py
+lamb/__init__.py
+lamb/lamb.py
+lamb.egg-info/PKG-INFO
+lamb.egg-info/SOURCES.txt
+lamb.egg-info/dependency_links.txt
+lamb.egg-info/top_level.txt

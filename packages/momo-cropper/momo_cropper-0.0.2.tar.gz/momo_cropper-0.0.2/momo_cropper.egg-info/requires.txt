@@ -1,0 +1,4 @@
+opencv-python==4.2.0.34
+numpy==1.18.4
+pillow==7.1.2
+setuptools==47.1.1

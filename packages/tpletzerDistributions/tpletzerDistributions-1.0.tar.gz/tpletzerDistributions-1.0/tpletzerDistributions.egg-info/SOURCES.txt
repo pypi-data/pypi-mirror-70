@@ -1,0 +1,10 @@
+setup.py
+tpletzerDistributions/Binomialdistribution.py
+tpletzerDistributions/Gaussiandistribution.py
+tpletzerDistributions/Generaldistribution.py
+tpletzerDistributions/__init__.py
+tpletzerDistributions.egg-info/PKG-INFO
+tpletzerDistributions.egg-info/SOURCES.txt
+tpletzerDistributions.egg-info/dependency_links.txt
+tpletzerDistributions.egg-info/not-zip-safe
+tpletzerDistributions.egg-info/top_level.txt

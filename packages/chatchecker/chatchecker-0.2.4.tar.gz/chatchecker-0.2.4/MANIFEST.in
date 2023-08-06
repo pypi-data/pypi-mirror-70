@@ -1,0 +1,4 @@
+include chatchecker/clean_dataset.csv
+include chatchecker/dictionary.txt
+include chatchecker/vocab.pt
+include chatchecker/final-model.pt

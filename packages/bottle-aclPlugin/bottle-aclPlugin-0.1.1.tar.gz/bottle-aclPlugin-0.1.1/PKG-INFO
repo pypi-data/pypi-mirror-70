@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: bottle-aclPlugin
+Version: 0.1.1
+Summary: A plug-in for permission control. User permission is defined by himself
+Home-page: https://github.com/bottlepy/bottle-beaker
+Author: Xu_beixiong
+Author-email: 17610739793@163.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Environment :: Plugins
+Classifier: Framework :: Bottle
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: bottle (>=0.9)

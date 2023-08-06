@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bqmail
+Version: 2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Mijian Xu
+Author-email: gomijianxu@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: obspy
+Requires-Dist: pandas
+
+UNKNOWN
+
+

@@ -1,0 +1,4 @@
+tabulate
+GitPython
+toml
+PyYAML

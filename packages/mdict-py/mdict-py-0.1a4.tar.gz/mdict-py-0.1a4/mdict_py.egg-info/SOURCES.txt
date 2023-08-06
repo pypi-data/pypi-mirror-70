@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+mdict/__init__.py
+mdict/ciphers/__init__.py
+mdict/ciphers/ripemd128.py
+mdict/ciphers/salsa20.py
+mdict/core/__init__.py
+mdict/core/index.py
+mdict/core/mdict.py
+mdict_py.egg-info/PKG-INFO
+mdict_py.egg-info/SOURCES.txt
+mdict_py.egg-info/dependency_links.txt
+mdict_py.egg-info/requires.txt
+mdict_py.egg-info/top_level.txt

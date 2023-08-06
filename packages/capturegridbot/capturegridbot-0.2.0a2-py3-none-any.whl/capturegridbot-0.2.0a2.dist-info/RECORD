@@ -1,0 +1,12 @@
+capturegridbot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+capturegridbot/capturegrid.py,sha256=Tr7Zkw71qW7RSLtJfe0IfMpD1Wy5rPcecU62GeyybvI,3199
+capturegridbot/cli.py,sha256=QWOVJU4DXYeiFvK8-IbZGCrgoSTiRSPGVBYR38R1rYg,7894
+capturegridbot/config.py,sha256=BFgbtG6DhURRrvHeNN7M41grCyqIapE7gjdMJi3Q_54,784
+capturegridbot/events.py,sha256=x8SHoewgpg_cDG1hVAkKtJER5V-X3ApMl-_34oy2L-Q,599
+capturegridbot/mounting.py,sha256=Yxx8G0fuUtHFWW3ZbRYqDzc76k-AUl8-5SgFVk93xm0,1728
+capturegridbot/service.py,sha256=4FLWicLbEoiVhbGYR0CoGyQIdCiKaVU-3nUnxqKnalc,1255
+capturegridbot-0.2.0a2.dist-info/METADATA,sha256=pPalk1Q_fIi3P9cCvaLmMTEwl4WIBJLLz-GbZNKH4PU,1601
+capturegridbot-0.2.0a2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+capturegridbot-0.2.0a2.dist-info/entry_points.txt,sha256=1ErX3oZ8S15b-J5dec_6haH6IzEBoq2L1rRrBpYtink,61
+capturegridbot-0.2.0a2.dist-info/top_level.txt,sha256=NEmDnONlcZOim1Ajhi80q6xY5EkNp1W2umFWeDHnw4c,15
+capturegridbot-0.2.0a2.dist-info/RECORD,,

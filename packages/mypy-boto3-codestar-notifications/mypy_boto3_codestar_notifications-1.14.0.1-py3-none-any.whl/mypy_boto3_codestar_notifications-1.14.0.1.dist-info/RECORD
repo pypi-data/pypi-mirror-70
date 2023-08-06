@@ -1,0 +1,11 @@
+mypy_boto3_codestar_notifications/__init__.py,sha256=TAhlIfqpLA_tBOhMUgeTYfz9rYsEWxkmpIRpuqXG7TQ,1280
+mypy_boto3_codestar_notifications/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codestar_notifications/client.py,sha256=VHE7SrV6gJRCLzb9j2D00WFNNhQxYQ6dUMSpQG2K2h0,8824
+mypy_boto3_codestar_notifications/paginator.py,sha256=qhgWrr4pG8dyUlMm47MwU4S0W77KSqjQF27mWaDufbw,3437
+mypy_boto3_codestar_notifications/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codestar_notifications/type_defs.py,sha256=r58G5bRt-yFz48spH9EuKtVzOqU935QXRPmgObv9aVM,4447
+mypy_boto3_codestar_notifications/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_codestar_notifications-1.14.0.1.dist-info/METADATA,sha256=ZZrSB45M-YMdo9scGfswzMWeheKjRJG2BFpJ1Y8_iWU,5506
+mypy_boto3_codestar_notifications-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_codestar_notifications-1.14.0.1.dist-info/top_level.txt,sha256=CPGxQNuvN50o3S1Y3sk7v-x8pcK5Bj-8EZgjCLbChrg,34
+mypy_boto3_codestar_notifications-1.14.0.1.dist-info/RECORD,,

@@ -1,0 +1,42 @@
+Metadata-Version: 1.2
+Name: beyondvcr
+Version: 0.1.0a1
+Summary: BeyondVCR helps you to write tests for code that does HTTP calls
+Home-page: https://gitlab.com/eliasdorneles/beyondvcr
+Author: Elias Dorneles
+Author-email: eliasdorneles@gmail.com
+License: MIT license
+Description: ==========
+        Beyond VCR
+        ==========
+        
+        
+        
+        BeyondVCR helps you to write tests for code that does HTTP calls
+        
+        
+        * Free software: MIT license
+        * Documentation: TODO
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0a1 (2020-06-09)
+        --------------------
+        
+        * First release on PyPI.
+        
+Keywords: beyondvcr
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5

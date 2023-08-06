@@ -1,0 +1,11 @@
+README.rst
+setup.py
+beyondvcr/__init__.py
+beyondvcr/client.py
+beyondvcr/server.py
+beyondvcr.egg-info/PKG-INFO
+beyondvcr.egg-info/SOURCES.txt
+beyondvcr.egg-info/dependency_links.txt
+beyondvcr.egg-info/not-zip-safe
+beyondvcr.egg-info/requires.txt
+beyondvcr.egg-info/top_level.txt

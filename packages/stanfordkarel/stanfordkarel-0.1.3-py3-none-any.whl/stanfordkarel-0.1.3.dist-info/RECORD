@@ -1,0 +1,15 @@
+stanfordkarel/__init__.py,sha256=IFKe-qXM_4MdocsIc7oTrI6NuBG0qWVB6h7Zb2GFxNo,749
+stanfordkarel/icon.png,sha256=21Dcou1pPWCjBTzj2v1JFnIiw47Lb6rzts23GJDWvqQ,21722
+stanfordkarel/karel.py,sha256=KyFAfNbEFUXysBgjdEviJUoXJQ1SL5lUMw8uPdpEdz4,15492
+stanfordkarel/karel_application.py,sha256=Ls_P1iBPbaGk_YYZJPLy4IL-j9XOOmgri4cFdteHgYg,13110
+stanfordkarel/karel_ascii.py,sha256=slSJ8MC58ptEX9J5NXa5qH4-NbgeM2paFjW6TLH1Ois,7482
+stanfordkarel/karel_canvas.py,sha256=xmMpiq7OfQeihSU9y2P2T2u9TPpTGRrLSrCyyu_0WAg,17975
+stanfordkarel/karel_definitions.py,sha256=FTihbFgi8qjpKYVvehfD_IXQWZFYh3IsiuFxP0upv1Q,2734
+stanfordkarel/karel_world.py,sha256=h-dLmMGLI2jZQKOYcdCjwpYwRP4BcaW3V7so11_slhU,13801
+stanfordkarel/stanfordkarel.py,sha256=_g5k9vxJw9pEWob4cjFxtXfy-pF-QpN4bdnk0ML8jrk,2483
+stanfordkarel/world_editor.py,sha256=T1Kjn8a7SNB7XT_UU2X9BZqEsmt3egl01c2gmn_vfaU,14330
+stanfordkarel-0.1.3.dist-info/LICENSE,sha256=BG98wJh8OVnY-yqhPcrURJNI3zX3JM-sQc-YmrFF1vg,1072
+stanfordkarel-0.1.3.dist-info/METADATA,sha256=CH20ztCc9wJPB4EG79cWBGOzxYInhw51bng6MjDLqw0,3902
+stanfordkarel-0.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+stanfordkarel-0.1.3.dist-info/top_level.txt,sha256=WZVmDgtCsquxjiIeB-yQt0lI9AI7ddua6SHVUJ-Q8JE,14
+stanfordkarel-0.1.3.dist-info/RECORD,,

@@ -1,0 +1,13 @@
+image: python
+
+stages:
+- test
+- lint
+
+tests:
+  stage: test
+  script: tox -e test
+
+lint:
+  stage: test
+  script: tox -e codestyle

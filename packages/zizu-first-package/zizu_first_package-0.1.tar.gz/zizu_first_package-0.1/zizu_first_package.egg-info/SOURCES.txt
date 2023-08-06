@@ -1,0 +1,10 @@
+setup.py
+zizu_first_package/Binomialdistribution.py
+zizu_first_package/Gaussiandistribution.py
+zizu_first_package/Generaldistribution.py
+zizu_first_package/__init__.py
+zizu_first_package.egg-info/PKG-INFO
+zizu_first_package.egg-info/SOURCES.txt
+zizu_first_package.egg-info/dependency_links.txt
+zizu_first_package.egg-info/not-zip-safe
+zizu_first_package.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+.DS_Store,sha256=ZsvkxWr_a42RT2jdiKCxh957K-QRUa4eIYmXOmzDyQE,6148
+pycof/__init__.py,sha256=FthIsZ0nQnl9LUQWPIhaHRi_GMe260gF10B7QFVKhVQ,61
+pycof/data.py,sha256=SEYkzD4SjkttRvdxvaeNTrYH1HFEDNYVZnkzdnrtYcU,5551
+pycof/format.py,sha256=W4PFxgZX3nSq6A0zJF7xTt5mLonVA7MfKG-z_O7XW4M,12099
+pycof/misc.py,sha256=eaeAHBOtogphKGa_98t_65GIkONL5BC622qEWoY4pu4,4395
+pycof/oldpycof.py,sha256=IE12hKHdboP-lfb0xq51-HiEj6AcL-SxGAWCRo51UOM,23844
+pycof/pycof.py,sha256=8Ar90SA1f9kNWTUP644hJGs_hhqarEZbm1IBsFwzD8M,23660
+pycof/sql.py,sha256=Fdt7r1GjF7S-JcS9Am9_H1hPx6-GlB3DhSm4GPpdYl8,6395
+pycof/sqlhelper.py,sha256=UJw0mERbPM-T6hyLVWttBmBfwNdmEfJC3AAqc8tcQFc,9456
+pycof/test.py,sha256=KkqgRN8-DNrTKWYXtoUprkPw2W4jyplZs9S8XuFb3Rc,177
+pycof-1.1.34.dist-info/LICENSE,sha256=2kqr7o_GQV6E3hoLZM1D9P-7GdOGH6PJICiC64MEsfY,1071
+pycof-1.1.34.dist-info/METADATA,sha256=YkvygE7ll-bSXNfBwG1keoYfa7_g5edkmFf4a1Showg,5148
+pycof-1.1.34.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pycof-1.1.34.dist-info/top_level.txt,sha256=0VQwc__JecbAF4xj3L6bZuvCUt8TzKYkGFKYLFTdDCU,6
+pycof-1.1.34.dist-info/RECORD,,

@@ -1,0 +1,17 @@
+cpaassdk/__init__.py,sha256=MF64bwUCd4sm3dvcxZnkb4ujHtxT_KeuXdD0nVieEt4,27
+cpaassdk/__version__.py,sha256=Mlm4Gvmb_6yQxwUbv2Ksc-BJFXLPg9H1Vt2iV7wXrA4,22
+cpaassdk/api.py,sha256=jga_Hi-EA6yYiJpCwuC-9p-rTCQOjYwOV7SrPa-GkBM,3672
+cpaassdk/client.py,sha256=xyLndM2lTM7bJp6aj17N7OLUBNXACqTQY2wPMBbeOww,1448
+cpaassdk/config.py,sha256=FJG5uHNyUqBE54Du9gzZZIofxy_A-FnDnMeg5ltJsYo,736
+cpaassdk/resources.py,sha256=HpKMqpOk8GOEKm9qDM-KHMEj4dy_f1dw8GjeLan2JXI,266
+cpaassdk/utils.py,sha256=yAebL7E9g6fRp3l-b20MQH3VOW_2iwfeWK5JTFznY7U,2441
+cpaassdk/resources/__init__.py,sha256=YhSmNIDvdyhAIvyEwJAfj9VH8fDEE8Z7SlvQWLmBfew,225
+cpaassdk/resources/conversation.py,sha256=c6KHcJLavBTenW5GpIZ5XJACDuyvhHqMQnYmaTr7k4s,14752
+cpaassdk/resources/notification.py,sha256=bfLwi2_410v1iVq6Grf_7mVQG3syO7dUAyEk8qGKNyA,3120
+cpaassdk/resources/notification_channel.py,sha256=a2NRPJproRPbuYZtVKUZZH6MmIQ34DJ5mu_4qMu6PPE,2020
+cpaassdk/resources/twofactor.py,sha256=uBO6gU-FSj3Ma2iVoShDnZhT2T-ktYDavXlWeNv-QXM,7293
+cpaassdk-1.2.1.dist-info/LICENSE,sha256=CbQUdXhmXtyb8_-1i64W2-LNpfSEJToaR7q2GRLR7Ao,334
+cpaassdk-1.2.1.dist-info/METADATA,sha256=qV36yNMj9SYFPwvh9P4K2v-4Lcs1PNeIR21gzB2kwac,744
+cpaassdk-1.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+cpaassdk-1.2.1.dist-info/top_level.txt,sha256=ij4du9ALjgGklKcLbD9GX1uOKGYwwxYiZ07Zfw3Mx3U,9
+cpaassdk-1.2.1.dist-info/RECORD,,

@@ -1,0 +1,12 @@
+mdict/__init__.py,sha256=Pnl6KtYAvTNEwFfyr3SqSZAqrwPYQ8y6x6v74m5dZkM,44
+mdict/ciphers/__init__.py,sha256=_x5snSz_70oH7eU5eMOU6xem3EzbwQDe7WkKuxJFVbc,64
+mdict/ciphers/ripemd128.py,sha256=PydUuwpgGS8_zLTt2PitOaDeNg8JEBnS5g_Ky9QSnY0,3969
+mdict/ciphers/salsa20.py,sha256=TwEMv8ioBShILa7cqkNjR-Gfs3Z9f4FCQGvwSdUA2Hc,6020
+mdict/core/__init__.py,sha256=1V3EM1PSyDVLf_cD1rFCz3_tfpOA0MzhpqhzcqGoh4M,45
+mdict/core/index.py,sha256=oU1yOzxFKPJspyAseQiXeuCB96NirGDw3zaEFLYvRVM,10256
+mdict/core/mdict.py,sha256=B9gjAZW-YSRLc95U0FkDUGQrQvVnXJhb9HfPK-BqOMk,18959
+mdict_py-0.1a2.dist-info/LICENSE,sha256=xu5vqUdShx0SXX8GZzN_QLE5eYKkFeNSd1b9ypLSCrE,1082
+mdict_py-0.1a2.dist-info/METADATA,sha256=DMldH6sA0P7IZyDUvogKZtUm1zkIErzNflJpRj1AFms,309
+mdict_py-0.1a2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+mdict_py-0.1a2.dist-info/top_level.txt,sha256=_Y4h9C4-BHiQKgwF_WIXFTwF2R8JM3xkRGnhu-Vl6js,6
+mdict_py-0.1a2.dist-info/RECORD,,

@@ -1,0 +1,15 @@
+# This requirements file is for development virtual environments.
+
+
+-e .
+black
+check-manifest
+pep517
+pylint
+pytest
+pytest-cov
+setuptools_scm
+tox
+tox-pyenv
+twine
+wheel

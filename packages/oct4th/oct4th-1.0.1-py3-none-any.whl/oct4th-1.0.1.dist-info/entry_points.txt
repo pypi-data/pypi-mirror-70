@@ -1,0 +1,3 @@
+[console_scripts]
+oct4th = oct4th.main:cli
+

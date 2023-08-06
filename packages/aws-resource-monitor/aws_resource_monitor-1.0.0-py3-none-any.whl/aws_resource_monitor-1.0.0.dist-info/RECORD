@@ -1,0 +1,7 @@
+aws_resource_monitor/__init__.py,sha256=4Rd_h9Q1MZ6cJTO4AjHn6_6G9Sucyoqs4cnRv_kxtHw,55
+aws_resource_monitor/monitor.py,sha256=Y-rRI3uuMqjJkbNfAHfrMYLYJRYqrYW6uy5opr5f5xg,4018
+aws_resource_monitor-1.0.0.dist-info/LICENSE,sha256=08i0khiY46Sny-SKP3HL61Lz5DIZxQ3WV-d8eQFDb6M,1078
+aws_resource_monitor-1.0.0.dist-info/METADATA,sha256=2OMYa3TAX04mo8ENufn4xEjBLS4XyfNpvktswdrfl4g,4006
+aws_resource_monitor-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_resource_monitor-1.0.0.dist-info/top_level.txt,sha256=R4lGpmb-Mc9fMiwDUZ4jnJopwZiYuQlSfvxDXYLkagM,21
+aws_resource_monitor-1.0.0.dist-info/RECORD,,

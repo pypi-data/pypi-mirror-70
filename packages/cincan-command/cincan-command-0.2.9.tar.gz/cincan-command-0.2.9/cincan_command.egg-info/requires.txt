@@ -1,0 +1,2 @@
+docker>=4.1
+cincan-registry>=0.1.1

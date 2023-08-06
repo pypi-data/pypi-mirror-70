@@ -1,0 +1,14 @@
+auto_diff/__init__.py,sha256=0KN69Gvnns-e3RS-Kxiklyqq_wEnggBvF_eRICGN4Qg,6082
+auto_diff/numpy_masking.py,sha256=LvJU2eWKN0rp45IJEUiNJv-njf41HwIuDMHwe3dOJe4,6176
+auto_diff/sparse_numpy_masking.py,sha256=eernft345P2h0Rz8twENQZSj4wvPU8Nu5XpsCdtDhCk,5687
+auto_diff/sparsevecvalder.py,sha256=Cx2vJPv0qr28Wb68itAKvu7_f9_q66wZEfkzlmKmsXY,4530
+auto_diff/sparsevecvalder_funcs_and_ufuncs.py,sha256=LMPKTHgFuTEWe1tYoh8tRNN5o-nIfnQJpgdaCqANFeM,20468
+auto_diff/test_auto_diff_on_dae.py,sha256=zk5BcM3hAGB7vSXWUdc_WoMgfTD-flgo53cwPzpUULw,1320
+auto_diff/true_np.py,sha256=eFlY3dWF3XafSuiq62P1OAe2Nw6mDm33GhiZWtwM29g,20
+auto_diff/vecvalder.py,sha256=V4sbEe0_Tgv6yivGUbKFHwltcIPYrh9aaRI8A31FA7c,3101
+auto_diff/vecvalder_funcs_and_ufuncs.py,sha256=QOa7DP1E6b-VayBxCVMvbvoBCS81AbFD09W9Vsc9s8I,16409
+auto_diff-0.4.0.dist-info/LICENSE,sha256=cY0q_py1wXTTixS6aLZRwOmO0o7LNS2aEBguF4_opkA,1461
+auto_diff-0.4.0.dist-info/METADATA,sha256=h60AnIVlwrb0UWXbjYUxhoLGfvT-AMJN33yCsdfxgY4,4284
+auto_diff-0.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+auto_diff-0.4.0.dist-info/top_level.txt,sha256=CK3s4_IdS60GNkH70Ehg_r2-RcpQwSW5GYsA1ivx5RA,10
+auto_diff-0.4.0.dist-info/RECORD,,

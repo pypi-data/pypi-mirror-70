@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-site-params-list">
+        {% include "_partials/pagination.html" %}
+        {% for site_param in siteparam_list %}
+            <div class="muses-site-param-item">{{ site_param.key }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

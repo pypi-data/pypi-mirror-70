@@ -1,0 +1,6 @@
+recursive-include api *
+recursive-include core *
+recursive-include db *
+recursive-include editorjs *
+recursive-include web *
+

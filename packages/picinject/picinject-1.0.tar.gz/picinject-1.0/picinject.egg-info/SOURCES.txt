@@ -1,0 +1,7 @@
+setup.py
+picinject.egg-info/PKG-INFO
+picinject.egg-info/SOURCES.txt
+picinject.egg-info/dependency_links.txt
+picinject.egg-info/requires.txt
+picinject.egg-info/top_level.txt
+src/picinject.py

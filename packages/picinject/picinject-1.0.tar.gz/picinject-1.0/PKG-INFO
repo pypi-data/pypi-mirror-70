@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: picinject
+Version: 1.0
+Summary: With picinject you can simply hide files in pictures and extract them again when you need them
+Home-page: https://github.com/spezialcoder/PicInject
+Author: Lewin Sorg
+Author-email: developermind405@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.*

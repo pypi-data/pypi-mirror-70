@@ -1,0 +1,8 @@
+README.md
+extract_contents
+setup.py
+document_contents_extractor.egg-info/PKG-INFO
+document_contents_extractor.egg-info/SOURCES.txt
+document_contents_extractor.egg-info/dependency_links.txt
+document_contents_extractor.egg-info/requires.txt
+document_contents_extractor.egg-info/top_level.txt

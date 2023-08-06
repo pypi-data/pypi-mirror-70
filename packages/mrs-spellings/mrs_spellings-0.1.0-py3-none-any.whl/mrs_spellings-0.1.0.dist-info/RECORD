@@ -1,0 +1,11 @@
+mrs_spellings/__init__.py,sha256=ai8aZmHgmEPF3Efl8LKt7svv4OCYnE_oy3UFQSxd9sw,79
+mrs_spellings/mrs_spellings.py,sha256=bNxo3pKd0CPLbbVDW6idGqQ1ZvEjqunl6P_m5hhu3pw,2235
+mrs_spellings/qwerty_caches/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mrs_spellings/qwerty_caches/closest_cache.py,sha256=Sarp3bAps3pruJ5A4aBxgVQepEnhaSdIL2gKEbF0TNw,60541
+mrs_spellings/qwerty_caches/closest_dists_cache.py,sha256=s5A3M_UHLshPejSazk-Yly9J4huQANZusGt2h54YNfg,33069
+mrs_spellings/qwerty_caches/dists_cache.py,sha256=5Y839e7vh26oBLY3PqcWEZsfvhRuGESqXjo3I4PZ_8c,76162
+mrs_spellings/qwerty_caches/qwerty_positions.py,sha256=xINAPrQNWPprSmcsu8TOBXqthM4qt21yA2dWRpbL7Nc,1191
+mrs_spellings-0.1.0.dist-info/LICENSE,sha256=fWNind9yZgDm8lO2Kagqe5Uxp2ANW-PGw0bLfxYKrT0,1065
+mrs_spellings-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+mrs_spellings-0.1.0.dist-info/METADATA,sha256=BQ0MykdGDmJVd9fIDll-_beG6YIx1i58nhIWzOwGwJA,562
+mrs_spellings-0.1.0.dist-info/RECORD,,

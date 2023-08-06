@@ -1,0 +1,16 @@
+cpac/__init__.py,sha256=5VyXI1G8hH3omfDJXqO1BWu2Bi6iuiWpqtBqi-s0LyY,287
+cpac/__main__.py,sha256=Jx53FGNgADDkDKIRx3wQCJ8_V8aAD4_0h8czpwmGCoo,8187
+cpac/utils.py,sha256=VXzKW-T3Zq6A40_ONgnNQRpf-Gnm5AN7Kp-wWe9YcvE,4992
+cpac/backends/__init__.py,sha256=IHwm5dk6JZxu0ksIE1iNBb4QDcHD6vwJ8CLzYFusvPE,610
+cpac/backends/docker.py,sha256=7DzNOyvL8NZHr2hqwjwE05FenH2cm-wTn0yF6DYKXic,4571
+cpac/backends/platform.py,sha256=yZa8yUaPEeMBFB0niVJcB1l6PVytRfdLpW_UrV0hGbk,6811
+cpac/backends/singularity.py,sha256=hV30K5snigo7r506_XYhpQt2cG8U0K9Fs1v4qHZJSz4,4126
+cpac/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cpac/helpers/cpac_read_crash.py,sha256=3vxOOAngsyhUniw35u9VRSvh3yMJHzJ_0KvBam1NYWg,1137
+cpac_py-0.2.4.dist-info/AUTHORS.rst,sha256=95jP_w0jyFZavFAY5cX3_eQcNC0Tcv-owdY3jsbqG2o,117
+cpac_py-0.2.4.dist-info/LICENSE.txt,sha256=-z7TbPL1c6fmwWU_KbFT2qCYI2AtmJoaMf3d05eySlE,1117
+cpac_py-0.2.4.dist-info/METADATA,sha256=TcV9_xjHM4ggW0Xe_ZM3aGhFiqD9eAmWZ4n-d4fh5E8,4628
+cpac_py-0.2.4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+cpac_py-0.2.4.dist-info/entry_points.txt,sha256=UuauRPfIBbRwQCEBovmUYygC2dILBQ-e1n_kF9Csrv0,44
+cpac_py-0.2.4.dist-info/top_level.txt,sha256=08GizS8ZnXCu2L3ETZhyb1reX6F9TCaoWIYH2AeF26g,5
+cpac_py-0.2.4.dist-info/RECORD,,

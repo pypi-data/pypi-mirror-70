@@ -1,0 +1,12 @@
+seashore/__init__.py,sha256=IIKEACpX9OI__tUCfi0KnAM-LP7vgY1p0WijrV0kvQ0,355
+seashore/_version.py,sha256=RfqU_XoPEVTPxx5uKoT3If2_DpGhCRocfvES_E6OcDM,323
+seashore/executor.py,sha256=jH9IoDPr0qLDpcH4QQSVnpq7nj3z5T2NnInTe-RX7dk,9692
+seashore/shell.py,sha256=_Q91tx0xmFdqB4ZscTCIe_QpnSIk6ntVFvKdD_gI_U4,6640
+seashore/tests/__init__.py,sha256=fuPxrq2APJ0dIHayqN0JUox3MwN3OmIOYn8FRKew8qQ,57
+seashore/tests/test_executor.py,sha256=CSEL-XpwEgBWIm_BnrJ8XEkWNyO-8CU_MXwuVvN4B_0,10942
+seashore/tests/test_shell.py,sha256=Z5FLqreBqAdUzLGgnbQPUEXg4qR6FUxboorEfaJNNjA,6006
+seashore-20.6.0.dist-info/LICENSE,sha256=Uk2dKuXaAjOn_hY9yNor044ctXnoqaNnWmWzGQoGaII,1089
+seashore-20.6.0.dist-info/METADATA,sha256=8PtWNkJ2ETrRle5oS6GvNPB86KYrkjkKA4Dx_ADqrfU,1474
+seashore-20.6.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+seashore-20.6.0.dist-info/top_level.txt,sha256=t0FHlt8eTbaMNzArfpVsEe4ZiRSbxFEjxqj2WxDdK-Q,9
+seashore-20.6.0.dist-info/RECORD,,

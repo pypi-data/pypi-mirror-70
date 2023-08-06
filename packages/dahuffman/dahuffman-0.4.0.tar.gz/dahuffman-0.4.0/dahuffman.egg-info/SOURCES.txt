@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dahuffman/__init__.py
+dahuffman/huffmancodec.py
+dahuffman.egg-info/PKG-INFO
+dahuffman.egg-info/SOURCES.txt
+dahuffman.egg-info/dependency_links.txt
+dahuffman.egg-info/top_level.txt
+dahuffman/codecs/json-compact.pickle
+dahuffman/codecs/json.pickle
+dahuffman/codecs/shakespeare-lower.pickle
+dahuffman/codecs/shakespeare-raw.pickle
+dahuffman/codecs/shakespeare.pickle
+dahuffman/codecs/xml.pickle

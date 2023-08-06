@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: verta-simulate-crashing
+Version: 1.0.0
+Summary: Read the latest Real Python tutorials
+Home-page: https://github.com/VertaAI/modedb
+Author: John Dean
+Author-email: john.dean@verta.ai
+License: MIT
+Description: # Crashing library
+        
+        Will crash and exit process if not called within 1000ms
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

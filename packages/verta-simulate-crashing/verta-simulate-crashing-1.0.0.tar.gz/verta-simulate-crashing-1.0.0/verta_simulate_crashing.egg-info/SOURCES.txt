@@ -1,0 +1,6 @@
+README.md
+setup.py
+verta_simulate_crashing.egg-info/PKG-INFO
+verta_simulate_crashing.egg-info/SOURCES.txt
+verta_simulate_crashing.egg-info/dependency_links.txt
+verta_simulate_crashing.egg-info/top_level.txt

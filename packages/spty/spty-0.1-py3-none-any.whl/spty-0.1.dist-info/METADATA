@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: spty
+Version: 0.1
+Summary: A simple spotify cli
+Home-page: https://github.com/rgbongocan/spty
+Author: Renzo Gabriel Bongocan
+Author-email: gabrielbongocan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: click-aliases
+Requires-Dist: ruamel.yaml
+Requires-Dist: spotipy
+
+UNKNOWN
+
+

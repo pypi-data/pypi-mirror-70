@@ -1,0 +1,8 @@
+flask_session_azure/__init__.py,sha256=Iz62E5zYULiuW0oOmbjKnr_vnvtJ8VtAWiHe8zlm6sU,1287
+flask_session_azure/storage_account.py,sha256=zIz69Jzw0FuOWhb6h8iZet-DnZNY7C3s_YOaLyx_ipg,4335
+flask_session_azure/storage_account_session.py,sha256=2t5JW1Wx22tb3hLkNNHCpSTf3Xa5xawmrsV75agRcTw,4324
+flask_session_azure-0.4.1.dist-info/LICENSE,sha256=wHrjjXApUtbdyNCgM9f7UreNBd33TYDCspSQ9mOIrRU,1094
+flask_session_azure-0.4.1.dist-info/METADATA,sha256=IOMulKYx4ROkkU0OrybzTnYRF8lWLa5NS2nILZBP_Uo,2656
+flask_session_azure-0.4.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+flask_session_azure-0.4.1.dist-info/top_level.txt,sha256=t_AFZ5yb9h5fdv66qIwYyrrJ9CDtUxSOA2Thx6FeRBM,20
+flask_session_azure-0.4.1.dist-info/RECORD,,

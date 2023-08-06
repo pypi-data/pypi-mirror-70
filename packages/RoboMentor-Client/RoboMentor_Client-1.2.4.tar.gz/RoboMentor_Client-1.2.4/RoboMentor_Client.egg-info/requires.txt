@@ -1,0 +1,7 @@
+paho-mqtt
+pyserial
+psutil
+rpi.gpio
+
+[python 3.6.x needs]
+dataclasses

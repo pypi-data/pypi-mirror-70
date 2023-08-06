@@ -1,0 +1,3 @@
+[console_scripts]
+capturegridbotd = capturegridbot.cli:main
+

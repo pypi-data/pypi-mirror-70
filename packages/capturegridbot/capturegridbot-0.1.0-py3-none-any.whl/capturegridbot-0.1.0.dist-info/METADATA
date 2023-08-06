@@ -1,0 +1,51 @@
+Metadata-Version: 2.0
+Name: capturegridbot
+Version: 0.1.0
+Summary: Simple automation tool for capture grid
+Home-page: https://github.com/ejfitzgerald/capturegridbot
+Author: Ed FitzGerald
+Author-email: ejafitzgerald@gmail.com
+License: UNKNOWN
+Keywords: capturegrid
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.5, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+Requires-Dist: pyzmq
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+
+# Capture Grid Bot
+
+Simple application to automate common use  cases with [CaptureGrid4](https://www.kuvacode.com/)
+
+## Installation
+
+The actual application can be installed or upgraded with the following command:
+
+    sudo pip3 install -U capturegridbot --system
+
+## CaptureGrid4 Setup
+
+The easiest way to CaptureGrid4 should be installed via snap. However, due to the strict limitations of the snap 
+sandboxing, it is expected that you have installed it with `--devmode`. Otherwise downloading of files might not
+work correctly.
+
+Given this, it is best to reinstall the application to make sure that the
+
+    sudo snap remove capturegrid4; sudo snap install capturegrid4 --devmode
+
+
+

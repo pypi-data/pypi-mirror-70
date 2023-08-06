@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pychadwicklib
+Version: 0.3.0
+Summary: Python bindings to the Chadwick library
+Home-page: https://github.com/bdilday/pychadwicklib
+Author: Ben Dilday
+Author-email: ben.dilday.phd@gmail.com
+License: UNKNOWN
+Description: # pychadwicklib
+        Python bindings to chadwick library
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

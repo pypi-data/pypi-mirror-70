@@ -1,0 +1,11 @@
+mreddata/__init__.py,sha256=Ax7zps-pTqOm4hxzHVh4E3qFKEugquNSHGczCmo3aMI,277
+mreddata/datatools.py,sha256=3xDxykY5hptdewJawtykVFqMKrNDqPDRHDo9WJ9e-uc,18790
+mreddata/hdf5data.py,sha256=-8h4TIoolwTlDZWFp5vBsOderlZo4R-XztcR4dYit38,7368
+mreddata/pkldata.py,sha256=W7Nj3hvpseaA6AReBIzsGnHnD-tpMVLkOer_68e8ayI,3527
+mreddata/plottools.py,sha256=IX2CUcYjTznB9FjZNgk_gVC4SrfX4pTo7JOPKE8rAWk,488
+mreddata/txtdata.py,sha256=B_skQmpBd9ASHDsF8E7dn6EIGXsVcc8xZMgdE-9Vmps,1564
+mreddata-0.3.83.dist-info/LICENSE,sha256=HEvlcHqgyIfFzybUMY9rDxF6c9l8aNk5HWJUcqojTGE,1073
+mreddata-0.3.83.dist-info/METADATA,sha256=5icGgiYHcgFIt-bpCJ66hWpSpSl1s38VPBDp1mJqN-A,719
+mreddata-0.3.83.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mreddata-0.3.83.dist-info/top_level.txt,sha256=VUt5XfLFwyd6H4Oc9u3WeJW-BCeAR1fMfag25kAyeps,9
+mreddata-0.3.83.dist-info/RECORD,,

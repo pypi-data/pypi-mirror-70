@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+Perceptron/__init__.py
+Perceptron/perceptron.py
+PyPerceptron.egg-info/PKG-INFO
+PyPerceptron.egg-info/SOURCES.txt
+PyPerceptron.egg-info/dependency_links.txt
+PyPerceptron.egg-info/requires.txt
+PyPerceptron.egg-info/top_level.txt
+test/test_activation_functions.py
+test/test_error_functions.py
+test/test_percepton.py

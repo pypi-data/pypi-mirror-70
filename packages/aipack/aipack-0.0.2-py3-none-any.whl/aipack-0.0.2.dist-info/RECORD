@@ -1,0 +1,9 @@
+aipack/__init__.py,sha256=XyD-lAQ1eoQI3zB4HXgcaC37w8nVuG5BHBmvf0Pmzfw,30
+aipack/converter.py,sha256=L7co_dYe-T6ixlAx_MuGiaSbbbJpufKJ-9tQhmRfwgY,3592
+aipack/data.py,sha256=jlEyPh3_Qi75_0P9M2cuFSVFzNmhkrmlcMQG9kOU7mQ,7781
+aipack/tf.py,sha256=cxEubqZ_8vvey1EE7GKhoVDiu9UJz1YDY10wkbUE5jk,276
+aipack-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aipack-0.0.2.dist-info/METADATA,sha256=EAfEtODqUGJAdYd_wMuY-NsdGRSdzVDNX908MV5Adjc,781
+aipack-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aipack-0.0.2.dist-info/top_level.txt,sha256=dVodyLNvniV1taYbgb_dulIgTJIoO17nvTmsy3f8Wk8,7
+aipack-0.0.2.dist-info/RECORD,,

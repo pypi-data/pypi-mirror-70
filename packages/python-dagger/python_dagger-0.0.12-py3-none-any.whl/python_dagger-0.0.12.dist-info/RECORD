@@ -1,0 +1,14 @@
+dagger/DaggerAPI.py,sha256=uIDborIebPDMI2W-M2qsTiWEciJdHr4Y82Yb0ADguxo,1404
+dagger/Task.py,sha256=ODLV0EwgMB-ztUxtqPlC4JvWVxLbVKkvxnd7lh0BjGs,938
+dagger/__init__.py,sha256=gLkRvPRMbeBVrpKoReJP3B8Qk8XTjb-XS51L9fc0SEI,326
+dagger/constants.py,sha256=UpmMf_W3jGk4lq7bnyyL0kpjY1WHp-oho7vQxxBSbZA,57
+dagger/dream.tmp.py,sha256=DQZEocX4drU7KZ7IUFB44AAYeCrfR67sIIgw2PIWaBE,652
+dagger/test_dagger.py,sha256=lWWE3KLwNAb1tGDkffvBehMBLEIT6XxiNAQ1oYobxRk,1371
+dagger/integrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagger/integrations/aws_ecs.py,sha256=TAAR-OJu4QnClv08mEQ9TYs6y8Qa8ZheAgqJm0rUYBw,3685
+dagger/integrations/aws_lambda.py,sha256=k948BzY9KLBIxHDyXHEMhz8DOX2oz3I1uvJy0YgedPY,1170
+dagger/integrations/test_aws_ecs.py,sha256=DRahFL3Fegu4bLNeMnchyOKdF_ggdq_4DN0zfblivRQ,2722
+python_dagger-0.0.12.dist-info/METADATA,sha256=_4Jj4ebDy24lAWf42fNf4P6NJYDDjStobqPO-Syc6Tg,311
+python_dagger-0.0.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_dagger-0.0.12.dist-info/top_level.txt,sha256=ho6tBYUMWaSPztOsPrMz_9y8lI5kXOZBaKCdssw-6Ew,7
+python_dagger-0.0.12.dist-info/RECORD,,

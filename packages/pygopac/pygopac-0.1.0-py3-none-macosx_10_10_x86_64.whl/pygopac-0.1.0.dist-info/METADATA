@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pygopac
+Version: 0.1.0
+Summary: Python library to parse proxy auto-config (PAC) files.
+Home-page: https://bitbucket.org/alex925/py-gopac/src/master/
+Author: Aleksey Petrunnik
+Author-email: petrunnik.a@mail.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.18.4)
+
+pygopac
+========
+
+Python library to parse proxy auto-config (PAC) files.
+
+**Example**
+
+```python
+import requests
+
+import gopac
+
+pac_path = gopac.download_pac_file(
+    'https://antizapret.prostovpn.org/proxy.pac'
+)
+proxy = gopac.find_proxy(pac_path, 'https://www.linkedin.com')
+response = requests.get('https://www.linkedin.com', proxies=proxy)
+print(response.text)
+```
+
+```python
+import requests
+
+import gopac
+
+proxy = gopac.find_proxy(
+    'https://antizapret.prostovpn.org/proxy.pac', 'https://www.linkedin.com'
+)
+response = requests.get('https://www.linkedin.com', proxies=proxy)
+print(response.text)
+```
+
+

@@ -1,0 +1,10 @@
+setup.py
+fredpidistri/Binomialdistribution.py
+fredpidistri/Gaussiandistribution.py
+fredpidistri/Generaldistribution.py
+fredpidistri/__init__.py
+fredpidistri.egg-info/PKG-INFO
+fredpidistri.egg-info/SOURCES.txt
+fredpidistri.egg-info/dependency_links.txt
+fredpidistri.egg-info/not-zip-safe
+fredpidistri.egg-info/top_level.txt

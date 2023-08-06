@@ -1,0 +1,28 @@
+data: ''
+root: ''
+checkpoint: ''
+download: True
+from_folder: ''
+
+model:
+  name: 'resnet-18'
+  out_dim: 128
+  num_ftrs: 16
+  width: 1
+
+criterion:
+  temperature: 0.5
+  use_cosine_similarity: 1
+
+optimizer:
+  lr: 1e-0
+  weight_decay: 1e-5
+
+collate:
+  input_size: 32
+
+loader:
+  batch_size: 768
+  shuffle: False
+  num_workers: 8
+  drop_last: False

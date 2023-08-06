@@ -1,0 +1,8 @@
+relink/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+relink/client.py,sha256=ONXrwEj1hkmuEVRfrUcqCv-U9Ry-31OHmwpePTHmwSk,940
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=_cjyoMRnvvl4YsyLiuJ_xizk_InMxGe_SodRDl-YUGU,1483
+relink-0.0.1.dist-info/METADATA,sha256=AN--vvZo7Ieab1RqX36T-oxhjF_VB1mflNwpoSYR5SE,1392
+relink-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+relink-0.0.1.dist-info/top_level.txt,sha256=daQPuLdyMCkdyKeIX5i3pz87RhmYXy6-hDE-BPc3eXE,13
+relink-0.0.1.dist-info/RECORD,,

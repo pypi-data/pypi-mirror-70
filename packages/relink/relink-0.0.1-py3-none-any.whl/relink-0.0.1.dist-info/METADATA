@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: relink
+Version: 0.0.1
+Summary: A client for https://rel.ink/ API
+Home-page: UNKNOWN
+Author: Romain Ardiet
+Author-email: romardie@publicisgroupe.net
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: requests-mock ; extra == 'dev'
+
+relink
+========
+
+A client for https://rel.ink/ API
+
+## Installation
+
+```
+$ pip install relink
+````
+
+## Usage
+
+```
+from relink.client import RelinkClient
+
+client = RelinkClient()
+
+shortened_url = client.shorten_url("https://news.ycombinator.com/")
+print(shortened_url) # => 'https://rel.ink/Nn8y9p'
+
+client.get_full_url(shortened_url) # => "https://news.ycombinator.com/"
+```
+
+## License
+
+relink is licensed under the Apache 2.0 license.
+
+

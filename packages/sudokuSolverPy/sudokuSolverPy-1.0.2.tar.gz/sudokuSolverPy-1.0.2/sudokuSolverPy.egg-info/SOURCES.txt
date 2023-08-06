@@ -1,0 +1,10 @@
+README.md
+setup.py
+sudokuSolverPy/SudokuSolver.py
+sudokuSolverPy/__init__.py
+sudokuSolverPy/main.py
+sudokuSolverPy.egg-info/PKG-INFO
+sudokuSolverPy.egg-info/SOURCES.txt
+sudokuSolverPy.egg-info/dependency_links.txt
+sudokuSolverPy.egg-info/not-zip-safe
+sudokuSolverPy.egg-info/top_level.txt

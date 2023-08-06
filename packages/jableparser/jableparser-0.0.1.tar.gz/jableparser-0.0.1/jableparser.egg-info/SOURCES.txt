@@ -1,0 +1,12 @@
+README.md
+setup.py
+jableparser/__init__.py
+jableparser/model.py
+jableparser/region.py
+jableparser/tags_util.py
+jableparser.egg-info/PKG-INFO
+jableparser.egg-info/SOURCES.txt
+jableparser.egg-info/dependency_links.txt
+jableparser.egg-info/not-zip-safe
+jableparser.egg-info/requires.txt
+jableparser.egg-info/top_level.txt

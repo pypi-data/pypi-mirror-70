@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: OrglabExt
+Version: 1.0.8
+Summary: Orglab Extension
+Home-page: https://www.originlab.com
+Author: OriginLab
+Author-email: folger@originlab.com.cn
+License: UNKNOWN
+Keywords: Origin,Originlab
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+OrglabExt is a Python package that enables you to access Orglab functionality from Python. It allows exchange data back and forth between Python and Orglab. [Visual C++ 2019 redistributable](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) is required.
+
+

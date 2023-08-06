@@ -1,0 +1,9 @@
+easybake/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easybake/__main__.py,sha256=kkn2DhUumEH_pdMjFJLtC9krUnNqua0bWp0-zjo-xqE,902
+easybake/compile.py,sha256=bHSiatY_P1QSFQmjJ244S-uOecvaKSIxR456Rs744KU,5269
+easybake/easybake.py,sha256=ldM8vUX7Rr4wKFpfHp4KC-3hENcs6IE2Q9v7ixcZuHs,4462
+easybake-0.0.1.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+easybake-0.0.1.dist-info/METADATA,sha256=NYG7fQIjwY9noVju9njJ0Hwa40RnwhfP6-_-6PhGcUs,5262
+easybake-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+easybake-0.0.1.dist-info/top_level.txt,sha256=Hmi0toFRe9wU8uLJ91BtuR_RQ3dhKQW97dKcXBoFSPc,9
+easybake-0.0.1.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+urwid
+jinja2
+numpy
+pygdtf

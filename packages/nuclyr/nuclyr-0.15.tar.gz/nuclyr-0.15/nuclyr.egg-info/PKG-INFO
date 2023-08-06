@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: nuclyr
+Version: 0.15
+Summary: A utility package for nuclear data.
+Home-page: https://github.com/phScholz/nuclyr
+Author: Philipp Scholz
+Author-email: pscholz@outlook.com
+License: MIT
+Description: A utility package for nuclear physics.        Features include the automatic data mining from the EXFOR database
+Platform: UNKNOWN

@@ -1,0 +1,11 @@
+README.md
+setup.py
+nuclyr/EXFOR.py
+nuclyr/config.py
+nuclyr/exfor.py
+nuclyr.egg-info/PKG-INFO
+nuclyr.egg-info/SOURCES.txt
+nuclyr.egg-info/dependency_links.txt
+nuclyr.egg-info/not-zip-safe
+nuclyr.egg-info/requires.txt
+nuclyr.egg-info/top_level.txt

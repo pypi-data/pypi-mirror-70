@@ -1,0 +1,8 @@
+README.md
+setup.py
+picklenote/__init__.py
+picklenote/pickler.py
+picklenote.egg-info/PKG-INFO
+picklenote.egg-info/SOURCES.txt
+picklenote.egg-info/dependency_links.txt
+picklenote.egg-info/top_level.txt

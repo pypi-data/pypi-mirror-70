@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: confselector
+Version: 1.0.1
+Summary: config selector
+Home-page: https://github.com/wzwjustdoit/confselector
+Author: wzwjustdoit
+Author-email: wzwjustdoit@163.com
+Maintainer: wzwjustdoit
+Maintainer-email: wzwjustdoit@163.com
+License: MIT
+Description: 
+        
+        config selector
+        
+        ```pycon
+        >>> import os
+        >>> SELFDIR = os.path.dirname(os.path.abspath('.'))  # or : SELFDIR = os.path.dirname(os.path.abspath(__file__))
+        >>> PROJECTDIR = os.path.dirname(SELFDIR)
+        >>> 
+        >>> from confselector import ConfSelector
+        >>> ConfSelector.configure([PROJECTDIR, os.path.join(PROJECTDIR, 'config'), os.path.join(PROJECTDIR, 'conf'), SELFDIR, ])
+        >>> 
+        >>> pyfile, configobj = ConfSelector.selected('-dev')
+        >>> print(pyfile, configobj)
+        >>> 
+        >>> pyfile, configobj = ConfSelector.selected('-prod')
+        >>> print(pyfile, configobj)
+        >>> 
+        >>> pyfile, configobj = ConfSelector.selected('')
+        >>> print(pyfile, configobj)
+        >>> 
+        ```
+        
+        ---------------------------------------------------------------------
+        
+Keywords: confselector,conf,config,selector
+Platform: all
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.0.0
+Description-Content-Type: text/markdown

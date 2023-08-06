@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+confselector/ConfSelector.py
+confselector/__init__.py
+confselector/__version__.py
+confselector.egg-info/PKG-INFO
+confselector.egg-info/SOURCES.txt
+confselector.egg-info/dependency_links.txt
+confselector.egg-info/top_level.txt

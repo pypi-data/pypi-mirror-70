@@ -1,0 +1,15 @@
+python2latex/__init__.py,sha256=AH3-GN0zT9zJNLnvgLTQzUI1Ubq32ojAo1TY5H8XwWw,402
+python2latex/color.py,sha256=qp0rtIBQExYMYKTP2K2Y8YkoHBkOayWF2KG74I2gzRg,1067
+python2latex/document.py,sha256=YOhqwhd_NrOLqrPXd35EA4LD9GtM0nbkfcG4NJQrEFg,5195
+python2latex/floating_environment.py,sha256=7v29sMWfNta93B3sI74pwRofmsn5l2ACZlwS8UxAfUU,4819
+python2latex/plot.py,sha256=JZo56f29Ns2rD3NEi5rnnBC7iglvUF-LrvEx1lqocZc,15557
+python2latex/table.py,sha256=CVd4RZp_yc0C-jNojY_FLsCq7_RmP_5j2oYDPapaozo,15787
+python2latex/template.py,sha256=wjxp4l464atNMyljM5wNzlcTvDj4i50NAxoBH8vOlLs,5222
+python2latex/tex_base.py,sha256=_T9Q-1sL2hMgKQ1UQXJsmaUkwDkDfj9DR6j5sztF8I8,6782
+python2latex/tex_environment.py,sha256=LBtJFmW50Ffi_yl4AawQmEFXo86ZKTiwY_VSp7o0npk,6163
+python2latex/utils.py,sha256=tBpMZ_ixJgb1lqg87k-u8SLXZ_3kC9eB4BMGxczWbCE,475
+python2latex-0.3.0.dist-info/LICENSE,sha256=KkktPSXvpm1RKjw8TvWAWmBLtzggpCgqVuaQ3Of1WYI,1097
+python2latex-0.3.0.dist-info/METADATA,sha256=4-KKwQ-r41De2IF1aDpt41-KG9nWnw4traqdz7bynLk,12085
+python2latex-0.3.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+python2latex-0.3.0.dist-info/top_level.txt,sha256=9X5j3Bt92sQqaBQliGcR0j7lccd5mk1ZqAK15RBPwwM,13
+python2latex-0.3.0.dist-info/RECORD,,

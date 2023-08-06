@@ -1,0 +1,7 @@
+README.md
+setup.py
+pycommerce/__init__.py
+pycommerce.egg-info/PKG-INFO
+pycommerce.egg-info/SOURCES.txt
+pycommerce.egg-info/dependency_links.txt
+pycommerce.egg-info/top_level.txt

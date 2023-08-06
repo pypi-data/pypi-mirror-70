@@ -1,0 +1,5 @@
+numpy
+pyyaml
+
+[data_science]
+pandas

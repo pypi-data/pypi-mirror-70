@@ -1,0 +1,10 @@
+setup.py
+Damola_distributions/Binomialdistribution.py
+Damola_distributions/Gaussiandistribution.py
+Damola_distributions/Generaldistribution.py
+Damola_distributions/__init__.py
+Damola_distributions.egg-info/PKG-INFO
+Damola_distributions.egg-info/SOURCES.txt
+Damola_distributions.egg-info/dependency_links.txt
+Damola_distributions.egg-info/not-zip-safe
+Damola_distributions.egg-info/top_level.txt

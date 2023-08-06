@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+PdfFieldFiller/__init__.py
+PdfFieldFiller/_version.py
+PdfFieldFiller/read_form.py
+PdfFieldFiller/utils.py
+PdfFieldFiller/write_form.py
+PdfFieldFiller.egg-info/PKG-INFO
+PdfFieldFiller.egg-info/SOURCES.txt
+PdfFieldFiller.egg-info/dependency_links.txt
+PdfFieldFiller.egg-info/requires.txt
+PdfFieldFiller.egg-info/top_level.txt

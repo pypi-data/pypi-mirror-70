@@ -1,0 +1,6 @@
+[carlae.cli]
+upload = carlae.client.cli:upload
+
+[console_scripts]
+carlae = carlae.cli:cli
+

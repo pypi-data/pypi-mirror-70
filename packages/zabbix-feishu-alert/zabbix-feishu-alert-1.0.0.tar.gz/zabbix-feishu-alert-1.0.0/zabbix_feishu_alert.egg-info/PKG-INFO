@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: zabbix-feishu-alert
+Version: 1.0.0
+Summary: zabbix send alert message and graph to feishu robot
+Home-page: http://bbs.yhyblog.cn
+Author: Robby
+Author-email: yinhuanyicn@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

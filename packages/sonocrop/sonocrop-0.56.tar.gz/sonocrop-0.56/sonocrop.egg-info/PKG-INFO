@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: sonocrop
+Version: 0.56
+Summary: Prepare ultrasound videos for machine learning-- crop and remove static clutter from ultrasound video.
+Home-page: https://github.com/davycro/sonocrop
+Author: David Crockett, MD
+Author-email: davycro1@gmail.com
+License: Apache Software License 2.0
+Description: # SONOCROP [![PyPI](https://img.shields.io/pypi/pyversions/sonocrop.svg?style=plastic)](https://github.com/davycro/sonocrop)
+        
+        Prepare bedside ultrasounds for machine learning and image interpretation. Sonocrop isolates the dynamic component of an ultrasound movie and strips away the rest.
+        
+        ![Example video](https://davycro.s3.amazonaws.com/sonocrop-readme-sidebyside.gif)
+        
+        ## Installation
+        
+        Requires python 3.7 or higher
+        
+        Install with pip: ```pip3 install sonocrop --upgrade```
+        
+        
+        ## Basic usage
+        
+        Sonocrop runs from the command line:
+        
+        #### crop
+        
+        Automatically crop away static borders
+        ```shell
+        $ sonocrop crop inputscan.mp4 out.mp4 --thresh=0.1
+        ```
+        
+        #### mask
+        
+        Blackout static pixels
+        ```shell
+        $ sonocrop mask inputscan.mp4 out.mp4
+        ```
+        
+        #### edges
+        
+        Extracts the edges around an ultrasound
+        
+        Returns the distance in pixels in the form:
+        left,right,top,bottom
+        
+        ```shell
+        $ sonocrop edges inputscan.mp4
+        $ > 100,500,10,700
+        ```
+        
+        #### summary
+        
+        Command | Input | Output
+        ------- | ----- | ------
+        crop | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-cropped.png)
+        mask | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | ![Out](https://davycro.s3.amazonaws.com/sonocrop-readme-mask.png)
+        edges | ![Input](https://davycro.s3.amazonaws.com/sonocrop-readme-in.png) | 237,717,72,518
+        
+Keywords: ultrasound bedside ultrasound pocus ffmpeg opencv echo cardiac
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

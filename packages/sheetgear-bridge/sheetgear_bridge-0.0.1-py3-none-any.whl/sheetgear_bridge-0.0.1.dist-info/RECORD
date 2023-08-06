@@ -1,0 +1,8 @@
+sheetgear/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sheetgear/bridge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sheetgear/bridge/spreadsheet.py,sha256=ic92xnWQJ7d8y6jRa6YkuBoDSF86wfHqMk5DQVWbY-s,4496
+sheetgear_bridge-0.0.1.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+sheetgear_bridge-0.0.1.dist-info/METADATA,sha256=VFKFSd62pdXUCr1Nno2dNkK9CyfVDnI_FRLizR1HhN0,322
+sheetgear_bridge-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sheetgear_bridge-0.0.1.dist-info/top_level.txt,sha256=0O0fqd6BV_pBDSSpIY2KTcD0hT7ntTAFR7MVtBrISDQ,10
+sheetgear_bridge-0.0.1.dist-info/RECORD,,

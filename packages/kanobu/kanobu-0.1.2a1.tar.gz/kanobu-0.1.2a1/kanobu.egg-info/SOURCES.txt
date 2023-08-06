@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+kanobu.egg-info/PKG-INFO
+kanobu.egg-info/SOURCES.txt
+kanobu.egg-info/dependency_links.txt
+kanobu.egg-info/entry_points.txt
+kanobu.egg-info/not-zip-safe
+kanobu.egg-info/requires.txt
+kanobu.egg-info/top_level.txt
+kanobu/locale/de.cson
+kanobu/locale/em.cson
+kanobu/locale/en.cson
+kanobu/locale/fr.cson
+kanobu/locale/it.cson
+kanobu/locale/ru.cson
+kanobu/locale/ua.cson

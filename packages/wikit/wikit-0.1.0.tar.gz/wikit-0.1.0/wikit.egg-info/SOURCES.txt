@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+bin/wikit
+libwikit/__init__.py
+libwikit/_version.py
+libwikit/wikit.py
+wikit.egg-info/PKG-INFO
+wikit.egg-info/SOURCES.txt
+wikit.egg-info/dependency_links.txt
+wikit.egg-info/requires.txt
+wikit.egg-info/top_level.txt

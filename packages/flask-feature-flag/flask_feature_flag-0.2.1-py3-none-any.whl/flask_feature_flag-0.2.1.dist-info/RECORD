@@ -1,0 +1,11 @@
+flask_feature_flag/__init__.py,sha256=rgVQ20SVmlAHz9aulArnohQAQo8rzOoYXoVx-434FmI,51
+flask_feature_flag/flag.py,sha256=86P1yrB9DQjV10Cz6fW5oDx6hfffofOJAAGsqYVJUO8,4005
+flask_feature_flag/models.py,sha256=WuYDIxa-KP1U8qmOEwkvWUyQcj99X3zQ119zOqGelsE,233
+flask_feature_flag/repository.py,sha256=S1u88SP9yq_3w3hAxfM0uEHlZSwhgsMkJWo65XgYHkY,603
+flask_feature_flag/use_cases.py,sha256=OFxEwddjr6MPf1G4RnzCrqzFQZbKa743mIFZal_N33U,12525
+flask_feature_flag/utils.py,sha256=zNubsn1VtdhQwzcYP7lY84qA1vV5d5CKsY-5w9IAjSg,515
+flask_feature_flag-0.2.1.dist-info/LICENSE,sha256=iBtPdLUA5sr-tGMGSyp1qHXrPHXuyMHLTvd9nooMWmo,1072
+flask_feature_flag-0.2.1.dist-info/METADATA,sha256=DzQfNkUgK0GbSMLgm74Nxtf9yrzOFX1ZpwV_6mi6W4g,2382
+flask_feature_flag-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flask_feature_flag-0.2.1.dist-info/top_level.txt,sha256=Cv2EPrg7BNHk55EpUkZYl1jOS7ass6s0KK1NFHe3DKM,19
+flask_feature_flag-0.2.1.dist-info/RECORD,,

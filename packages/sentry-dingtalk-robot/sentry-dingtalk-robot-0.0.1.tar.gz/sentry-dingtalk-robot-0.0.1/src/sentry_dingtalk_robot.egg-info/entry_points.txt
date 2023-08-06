@@ -1,0 +1,3 @@
+[sentry.plugins]
+sentry_dingtalk_robot = sentry_dingtalk_robot.plugin:DingTalkPlugin
+

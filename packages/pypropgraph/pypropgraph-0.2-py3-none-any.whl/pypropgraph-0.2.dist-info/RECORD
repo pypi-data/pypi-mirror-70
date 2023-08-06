@@ -1,0 +1,9 @@
+propgraph/__init__.py,sha256=ruKN5SEM8XHpolcZSebSkDwfnoY1v7B9WHzkp7-bnE4,476
+propgraph/__main__.py,sha256=ANN77zOP-hz_SMSm_w_7vXnU8FgZSHjnUiq6H4GkVlU,4289
+propgraph/cypher.py,sha256=hrMK6_eUaanMyJgJqqsn5Cj32eoCGeYEFYsf3qZ3XMU,10521
+propgraph/schema.py,sha256=gFO-QA5qDiqP-MsW7akwGdhxUSO4sg1ShrXLdk7vRPQ,10345
+pypropgraph-0.2.dist-info/LICENSE,sha256=KBbYuTiNbTg2wx_c16BbZX0pxV4SYq-h6yFQ7I1k4cc,1072
+pypropgraph-0.2.dist-info/METADATA,sha256=iFFyq8khL9Hyl_KUS_ZnTfd_3nUT8P2rwQrsLE7VgS8,8784
+pypropgraph-0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pypropgraph-0.2.dist-info/top_level.txt,sha256=fGzU5pt2gNwys1Z4mCHCx6PXawXbufeGlxYARAszWzc,10
+pypropgraph-0.2.dist-info/RECORD,,

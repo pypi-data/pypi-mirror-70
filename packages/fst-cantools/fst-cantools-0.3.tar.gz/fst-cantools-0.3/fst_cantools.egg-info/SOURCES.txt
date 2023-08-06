@@ -1,0 +1,6 @@
+setup.py
+fst_cantools/fst_cantools.py
+fst_cantools.egg-info/PKG-INFO
+fst_cantools.egg-info/SOURCES.txt
+fst_cantools.egg-info/dependency_links.txt
+fst_cantools.egg-info/top_level.txt

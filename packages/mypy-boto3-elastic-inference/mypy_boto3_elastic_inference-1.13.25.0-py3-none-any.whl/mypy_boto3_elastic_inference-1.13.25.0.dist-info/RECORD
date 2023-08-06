@@ -1,0 +1,11 @@
+mypy_boto3_elastic_inference/__init__.py,sha256=uy8r1lMttC2F7aUvEoJ_PR6zI_aH5uThzWVWtlwuSXw,824
+mypy_boto3_elastic_inference/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_elastic_inference/client.py,sha256=u_fc8cvsqK7XVHKzA2A4xBNAUVPzZeJvS04ROsXsEpk,4729
+mypy_boto3_elastic_inference/paginator.py,sha256=_zKfEldLZeVgyTjyHsXeQdSEKL0B07q8g_vjZO1EXRM,1579
+mypy_boto3_elastic_inference/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_elastic_inference/type_defs.py,sha256=QgaZ84ZaKTextKqIsDxgLKX_h9Y649pHM0tXJGeTK6Y,3033
+mypy_boto3_elastic_inference/version.py,sha256=VW5RACddn_EHSLbmM4hyurzoi5hejPhoyhSChXFgiws,57
+mypy_boto3_elastic_inference-1.13.25.0.dist-info/METADATA,sha256=TGmq8Jn_ikUT2LdxEGzJwK0_KF8mWSkCd7kWm32RGuw,4761
+mypy_boto3_elastic_inference-1.13.25.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_elastic_inference-1.13.25.0.dist-info/top_level.txt,sha256=_-wnsthkmBsmgWk7yQfIrl5O-hgPxm_BCIaVvPcPkLo,29
+mypy_boto3_elastic_inference-1.13.25.0.dist-info/RECORD,,

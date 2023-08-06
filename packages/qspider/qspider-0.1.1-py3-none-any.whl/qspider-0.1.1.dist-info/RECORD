@@ -1,0 +1,10 @@
+qspider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qspider/core.py,sha256=3m-rBW2d7aVFh7OM32Ors5WkqBq_7CBuHsLwSrQ0bz0,5963
+qspider/utils.py,sha256=MKk6Aqrzb444WoOnuTtI6nm3d08ZJI_2yfadp7fB7zc,1459
+qspider/templates/spider_template.py,sha256=xGSSNOOpLfsy2Q0XJ2OItSTzbzfOT9rHg-pwy2clPJY,674
+qspider-0.1.1.dist-info/LICENSE,sha256=vbW518NmHMrnqU6345kUFrZqnFH4qjebWHOVfVDWhyU,1063
+qspider-0.1.1.dist-info/METADATA,sha256=eUgUr55DfPnXpaludMD6zZAYqOMRFCDbqaAFqjXAV2Q,5784
+qspider-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+qspider-0.1.1.dist-info/entry_points.txt,sha256=FuFA-iKnlmi4yUEmq3Av7r3qm7Ap4-epNCPXyAEuaPQ,56
+qspider-0.1.1.dist-info/top_level.txt,sha256=cmbWQy28ggslGUQIB4idGRYvGS3QAGwBqWLUf1ezsbE,8
+qspider-0.1.1.dist-info/RECORD,,

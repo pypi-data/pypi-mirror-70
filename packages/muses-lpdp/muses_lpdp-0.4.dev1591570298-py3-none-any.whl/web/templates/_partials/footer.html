@@ -1,0 +1,21 @@
+{% load i18n %}
+<div class="muses-footer-item">
+    {% trans "Join us on" %}&nbsp;
+    {% if site_twitter_url != None %}
+        <span class="item-cursor-pointer" onclick="window.open('{{ site_twitter_url }}','_blank')">
+            <em class="fab fa-twitter"></em>
+        </span>
+    {% endif %}
+    &nbsp;
+    {% if site_facebook_url != None %}
+        <span class="item-cursor-pointer" onclick="window.open('{{ site_facebook_url }}','_blank')">
+            <em class="fab fa-facebook-f"></em>
+        </span>
+    {% endif %}
+</div>
+<div class="muses-footer-item"></div>
+<div class="muses-footer-item">
+    <span class="item-cursor-pointer" onclick="window.open('{% url "admin:index" %}','_blank')">
+        <em class="fas fa-tools"></em>
+    </span>
+</div>

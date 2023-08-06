@@ -1,0 +1,6 @@
+$text-color: lightgrey;
+$primary-color: rgba(255, 0, 130, 1);
+$background: invert($text-color);
+$background-1: #f5ade8;
+@import "variables";
+@import "base";

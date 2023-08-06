@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load user_tags %}
+<div class="muses-flex-row">
+    <div class="muses-item" onclick="location.href='{% url "muses_personal_list_post_alerts" %}'">
+        <div class="muses-label">
+            <span class="muses-left"><em class="fa fa-exclamation-circle"></em></span>
+            <span class="muses-right">0</span>
+        </div>
+    </div>
+    <div class="muses-item" onclick="location.href='{% url "muses_personal_list_admonitions" %}'">
+        <div class="muses-label">
+            <span class="muses-left"><em class="fa fa-exclamation-triangle"></em></span>
+            <span class="muses-right">0</span>
+        </div>
+    </div>
+    <div class="muses-item" onclick="location.href='{% url "muses_personal_list_messages" %}'">
+        <div class="muses-label">
+            <span class="muses-left"><em class="fa fa-envelope"></em></span>
+            <span class="muses-right">0</span>
+        </div>
+    </div>
+</div>
+<div class="muses-item" onclick="location.href='{% url "muses_personal_profile" %}'">
+    <div class="muses-label">
+        <span class="muses-left">{% trans "my profile" %}</span>
+    </div>
+</div>
+<div class="muses-item" onclick="location.href='{% url "muses_personal_preferences" %}'">
+    <div class="muses-label">
+        <span class="muses-left">{% trans "my preferences" %}</span>
+    </div>
+</div>
+<div class="muses-item" onclick="location.href='{% url "muses_personal_control_center" %}'">
+    <div class="muses-label">
+        <span class="muses-left">{% trans "control center" %}</span>
+    </div>
+</div>
+<div>
+    <form id="select_theme" method="post" action="{% url 'muses_save_theme' %}">
+        {% csrf_token %}
+        {{ theme_selector_form }}
+        <input id="target_url" name="target_url" type="hidden"
+               value="">
+        <em class="fa fa-save"
+            onclick="document.getElementById('target_url').value=window.location.pathname;document.getElementById('select_theme').submit();"></em>
+    </form>
+</div>
+<div class="muses-flex-row">
+
+    {% if request.user|has_group:"muses_correctors" %}
+        <div class="muses-item" onclick="location.href='{% url "muses_cor" %}'">
+            <div class="muses-label">
+                <span class="muses-left"><em class="fa fa-spell-check"></em></span>
+            </div>
+        </div>
+    {% endif %}
+    {% if request.user|has_group:"muses_moderators" %}
+        <div class="muses-item" onclick="location.href='{% url "muses_mod" %}'">
+            <div class="muses-label">
+                <span class="muses-left"><em class="fa fa-user-shield"></em></span>
+            </div>
+        </div>
+    {% endif %}
+    {% if request.user|has_group:"muses_administrators" %}
+        <div class="muses-item" onclick="location.href='{% url "muses_admin" %}'">
+            <div class="muses-label">
+                <span class="muses-left"><em class="fa fa-users-cog"></em></span>
+            </div>
+        </div>
+    {% endif %}
+</div>

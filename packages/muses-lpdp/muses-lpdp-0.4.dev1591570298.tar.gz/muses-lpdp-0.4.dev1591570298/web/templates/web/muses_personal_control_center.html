@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-control-center">
+        <div class="muses-control-center-level">
+            <div class="tile">
+                <div class="muses-control-center-title-2">{% trans "Change your password" %}</div>
+                <div class="muses-control-center-section">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form_change_password.as_div }}
+                        <div class="muses-form-submit">
+                            <input type="submit" value="{% trans "Save" %}">
+                            <input type="reset" value="{% trans "Reset" %}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="muses-control-center-title-2">{% trans "Change your email" %}</div>
+                <div class="muses-control-center-section">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form_change_email.as_div }}
+                        <div class="muses-form-submit">
+                            <input type="submit" value="{% trans "Save" %}">
+                            <input type="reset" value="{% trans "Reset" %}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="muses-control-center-title-2">{% trans "Activate two-factor authentication" %}</div>
+                <div class="muses-control-center-section">
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="muses-form-submit">
+                            <input type="submit" value="{% trans "Save" %}">
+                            <input type="reset" value="{% trans "Reset" %}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

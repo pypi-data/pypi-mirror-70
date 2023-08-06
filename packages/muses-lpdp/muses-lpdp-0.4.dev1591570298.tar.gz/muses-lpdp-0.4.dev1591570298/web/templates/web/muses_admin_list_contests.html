@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-contests-list">
+        {% include "_partials/pagination.html" %}
+        {% for contest in object_list %}
+            <div class="muses-contest-item">{{ contest.id }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-alerts-list">
+        {% include "_partials/pagination.html" %}
+        {% for alert in object_list %}
+            <div class="muses-alert-item">{{ alert.id }}</div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

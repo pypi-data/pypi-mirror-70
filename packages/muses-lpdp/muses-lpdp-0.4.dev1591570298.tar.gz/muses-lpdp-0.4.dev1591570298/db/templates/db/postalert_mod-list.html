@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for comment_alert in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_mod_comment_alert_detail" comment_alert.id %}'">
+                <div>
+                    {{ comment_alert.details }}
+                </div>
+                <div>
+                    <a href="{% url "muses_mod_comment_alert_delete" comment_alert.id %}" class="muses-button">
+                        {% trans "Delete" %}
+                    </a>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

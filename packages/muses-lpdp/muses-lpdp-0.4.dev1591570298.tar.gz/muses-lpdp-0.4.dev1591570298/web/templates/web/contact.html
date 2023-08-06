@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {{ site_title }} - {% trans "Contact" %}
+{% endblock %}
+{% block nav_bar %}
+
+    {% include '_partials/nav_bar_section.html' %}
+
+{% endblock %}
+{% block pageloader %}
+    <div class="pageloader"></div>
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        <div class="muses-list-section">
+            <form name="contact">
+                {{ form.as_div }}
+                <div class="muses-form-submit">
+                    <input type="submit" value="{% trans "Send" %}">
+                    <input type="reset" value="{% trans "Reset" %}">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

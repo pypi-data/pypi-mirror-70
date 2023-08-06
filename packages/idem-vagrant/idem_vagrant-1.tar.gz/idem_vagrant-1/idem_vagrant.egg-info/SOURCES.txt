@@ -1,0 +1,12 @@
+README.rst
+pyproject.toml
+setup.py
+idem_vagrant/conf.py
+idem_vagrant/version.py
+idem_vagrant.egg-info/PKG-INFO
+idem_vagrant.egg-info/SOURCES.txt
+idem_vagrant.egg-info/dependency_links.txt
+idem_vagrant.egg-info/requires.txt
+idem_vagrant.egg-info/top_level.txt
+idem_vagrant/exec/vagrant.py
+idem_vagrant/states/vagrant.py

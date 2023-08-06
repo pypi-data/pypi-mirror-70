@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+src/kaomojin/__init__.py
+src/kaomojin/dumpers.py
+src/kaomojin/kaomojin.py
+src/kaomojin.egg-info/PKG-INFO
+src/kaomojin.egg-info/SOURCES.txt
+src/kaomojin.egg-info/dependency_links.txt
+src/kaomojin.egg-info/entry_points.txt
+src/kaomojin.egg-info/requires.txt
+src/kaomojin.egg-info/top_level.txt
+src/kaomojin/data/__init__.py

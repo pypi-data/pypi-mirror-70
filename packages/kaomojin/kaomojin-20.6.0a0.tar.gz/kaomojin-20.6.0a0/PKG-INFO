@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: kaomojin
+Version: 20.6.0a0
+Summary: A kaomoji extractor for Python
+Home-page: https://github.com/okomestudio/kaomojin
+Author: Taro Sato
+Author-email: okomestudio@gmail.com
+License: Apache-2.0
+Description: ***********
+        Kaomojin
+        ***********
+        
+        A kaomoji extractor for Python.
+        
+Platform: Linux
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+Provides-Extra: tests

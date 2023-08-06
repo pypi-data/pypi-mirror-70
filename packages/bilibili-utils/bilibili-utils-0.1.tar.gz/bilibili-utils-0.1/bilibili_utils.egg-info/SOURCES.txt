@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bilibili/__init__.py
+bilibili_utils.egg-info/PKG-INFO
+bilibili_utils.egg-info/SOURCES.txt
+bilibili_utils.egg-info/dependency_links.txt
+bilibili_utils.egg-info/requires.txt
+bilibili_utils.egg-info/top_level.txt

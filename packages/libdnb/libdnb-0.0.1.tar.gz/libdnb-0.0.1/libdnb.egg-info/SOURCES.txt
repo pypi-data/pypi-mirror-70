@@ -1,0 +1,7 @@
+README.md
+setup.py
+libdnb/__init__.py
+libdnb.egg-info/PKG-INFO
+libdnb.egg-info/SOURCES.txt
+libdnb.egg-info/dependency_links.txt
+libdnb.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+setup.py
+distandrea/Binomialdistribution.py
+distandrea/Gaussiandistribution.py
+distandrea/Generaldistribution.py
+distandrea/__init__.py
+distandrea.egg-info/PKG-INFO
+distandrea.egg-info/SOURCES.txt
+distandrea.egg-info/dependency_links.txt
+distandrea.egg-info/not-zip-safe
+distandrea.egg-info/top_level.txt

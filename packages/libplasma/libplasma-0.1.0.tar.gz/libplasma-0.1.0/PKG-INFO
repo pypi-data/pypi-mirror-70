@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: libplasma
+Version: 0.1.0
+Summary: Embeddable plasma variant.
+Home-page: https://github.com/s20ai/libplasma
+Author: Tabish Imran
+Author-email: vector@s20.ai
+License: UNKNOWN
+Description: # libplasma
+        
+        embeddable plasma variant which can be used to handle model deployment and workflow management
+        inside apps.
+        
+        
+Keywords: libplasma
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5

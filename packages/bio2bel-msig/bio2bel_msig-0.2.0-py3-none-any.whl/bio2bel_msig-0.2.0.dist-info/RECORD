@@ -1,0 +1,14 @@
+bio2bel_msig/__init__.py,sha256=HxDB6QdF3TUBLutoLV3iNY2pLfnHROO7ObgZX6IJd8Y,761
+bio2bel_msig/__main__.py,sha256=UfZ9XmEusVdUt8DYecSqYMc-js-r2_TMC98CIkoLXS8,86
+bio2bel_msig/cli.py,sha256=x5vLfND7L5Yuv6kWM4P3TymUn3pUbNbkFmdOPnbwaWc,119
+bio2bel_msig/constants.py,sha256=y42Aw2i3gfmpWRunyabeio7psbpiVLGKYfaP8XKYqHo,700
+bio2bel_msig/manager.py,sha256=FbYaXQBlTDFom_Xn3v0rQw9HFBo1VtR6lDsAVkUOoLw,3146
+bio2bel_msig/models.py,sha256=iACF4_-5E9i49GGd2EOJFAraVmbyLjWUiWC51NkppJY,1743
+bio2bel_msig/parser.py,sha256=Zc_x0Pgr6b5VbxZVetwrl4v3uPIgDTGb-7y-NoZ182I,2728
+bio2bel_msig/web.py,sha256=IY3m0YW4awf17nn3fqAnci3rN-qxX-OhNYBF9H5RfMs,268
+bio2bel_msig-0.2.0.dist-info/LICENSE,sha256=-6_7CGI7ZN4Z9Z9LID_xjjzs38Xk9svPTv2k14BEJFk,1111
+bio2bel_msig-0.2.0.dist-info/METADATA,sha256=0qF106sIiPNMGs0VvkkPwhAMSOth11I_gE9A0XA7Ozw,5598
+bio2bel_msig-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bio2bel_msig-0.2.0.dist-info/entry_points.txt,sha256=5vogjC1KSBJYj3OHeq5A9da7Miuos7a_Xk7JdI6H6g4,118
+bio2bel_msig-0.2.0.dist-info/top_level.txt,sha256=ydnfArlh4zQX-BDmzw2Vrpv5l2bf9TLl2NmG0bWcLmY,13
+bio2bel_msig-0.2.0.dist-info/RECORD,,

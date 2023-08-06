@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cmaketools
+Version: 0.1.0
+Summary: Seamless integration of Cmake build system to setuptools/distutils
+Home-page: https://github.com/python-cmaketools/python-cmaketools
+Author: Takeshi (Kesh) Ikuma
+Author-email: tikuma@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+
+

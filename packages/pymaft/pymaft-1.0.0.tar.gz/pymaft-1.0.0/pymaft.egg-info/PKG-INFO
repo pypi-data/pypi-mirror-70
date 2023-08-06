@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pymaft
+Version: 1.0.0
+Summary: python library for numerical simulation of field theories
+Home-page: https://github.com/rajeshrinet/pymaft
+Author: The PyMAFT team
+License: MIT
+Description: PyGL is a library for numerical simulation of field theories    in non-equilibrium statistical mechanics
+Platform: works on all platforms (such as LINUX
+Platform: macOS
+Platform: and Microsoft Windows)
+Provides-Extra: plotting
+Provides-Extra: notebook

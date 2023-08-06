@@ -1,0 +1,43 @@
+data: ''
+root: ''
+download: True
+from_folder: ''
+seed: 1
+
+model:
+  name: 'resnet-18'
+  out_dim: 128
+  num_ftrs: 16
+  width: 1
+
+criterion:
+  temperature: 0.5
+  use_cosine_similarity: 1
+
+optimizer:
+  lr: 1e-0
+  weight_decay: 1e-5
+
+collate:
+  input_size: 32
+  cj_prob: 0.8
+  cj_bright: 0.7 
+  cj_contrast: 0.7
+  cj_sat: 0.7
+  cj_hue: 0.2
+  min_scale: 0.08
+  random_gray_scale: 0.2
+  kernel_size: 0.1
+
+loader:
+  batch_size: 768
+  shuffle: True
+  num_workers: 8
+  drop_last: True
+
+trainer:
+  gpus: 1
+
+
+
+  

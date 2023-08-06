@@ -1,0 +1,8 @@
+torch==1.4.0
+tqdm==4.45.0
+pandas==1.0.3
+torchvision==0.5.0
+numpy==1.18.1
+hydra-core==0.11.3
+prefetch_generator==1.0.1
+pytorch_lightning==0.7.6

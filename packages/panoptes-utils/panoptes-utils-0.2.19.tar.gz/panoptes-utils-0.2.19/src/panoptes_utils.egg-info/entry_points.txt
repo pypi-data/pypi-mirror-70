@@ -1,0 +1,3 @@
+[console_scripts]
+panoptes-config-server = panoptes.utils.config.server:run
+

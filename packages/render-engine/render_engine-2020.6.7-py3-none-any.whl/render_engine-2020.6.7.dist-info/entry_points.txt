@@ -1,0 +1,3 @@
+[console_scripts]
+quickstart = render_engine.quickstart:quickstart
+

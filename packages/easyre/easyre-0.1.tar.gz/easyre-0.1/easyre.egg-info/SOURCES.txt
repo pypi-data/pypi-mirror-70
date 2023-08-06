@@ -1,0 +1,8 @@
+README.md
+setup.py
+easyre/maskcode.py
+easyre/matches.py
+easyre.egg-info/PKG-INFO
+easyre.egg-info/SOURCES.txt
+easyre.egg-info/dependency_links.txt
+easyre.egg-info/top_level.txt

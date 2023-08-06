@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vprint
+Version: 0.0.3
+Summary: Verbose Printing Utility
+Home-page: https://github.com/xkortex/vprint
+Author: Michael McDermott
+License: MIT
+Description: # vprint
+        
+        [![Build Status](https://travis-ci.com/xkortex/vprint.svg?branch=master)](https://travis-ci.com/xkortex/vprint)
+        
+        Utility for verbose printing in python
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

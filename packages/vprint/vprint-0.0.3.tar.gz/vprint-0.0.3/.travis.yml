@@ -1,0 +1,43 @@
+stages:
+  - test
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "nightly"
+
+matrix:
+  allow_failures:
+    - python: "nightly"
+  include:
+    - name: python 3.6 (default)
+      language: python
+      python: 3.6
+      install: pip install .
+      script:
+        - ./test/py_test.sh
+
+    - name: python 2.7
+      language: python
+      python: 2.7
+      install: pip install .
+      script:
+        - ./test/py_test.sh
+
+    - name: python nightly
+      language: python
+      python: nightly
+      install: pip install .
+      script:
+        - ./test/py_test.sh
+
+    - name: go stable
+      language: go
+      go: 1.13
+      script:
+        - go build -o build/vprint test/main.go
+        - ./build/vprint
+

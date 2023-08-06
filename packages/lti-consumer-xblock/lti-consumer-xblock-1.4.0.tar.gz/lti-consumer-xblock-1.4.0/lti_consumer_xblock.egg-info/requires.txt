@@ -1,0 +1,8 @@
+mako
+bleach
+oauthlib
+lxml
+django
+lazy
+XBlock
+xblock-utils

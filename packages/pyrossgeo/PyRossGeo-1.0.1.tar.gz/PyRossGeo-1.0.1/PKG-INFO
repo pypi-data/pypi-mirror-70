@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: PyRossGeo
+Version: 1.0.1
+Summary: python library for spatial numerical simulation of infectious diseases
+Home-page: https://github.com/lukastk/PyRossGeo.git
+Author: The PyRossGeo team
+Author-email: UNKNOWN
+License: MIT
+Description: pyrossgeo is a library for spatially resolved mathematical modelling of infectious diseases
+Platform: works on all platforms (such as LINUX
+Platform: macOS
+Platform: and Microsoft Windows)

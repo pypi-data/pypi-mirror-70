@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: lenluhub_utils
+Version: 0.0.4
+Summary: lenluhub_utils
+Home-page: https://gitlab.lenovo.com/moli
+Author: yangst2
+Author-email: yangst2@lenovo.com
+Maintainer: yangst2
+Maintainer-email: yangst2@lenovo.com
+License: MIT
+Description: lenluhub utils.
+        
+        Has Done:
+        
+        1. support health check for tornado service.
+        
+        
+        To Do:
+        
+        1. back translation.
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries

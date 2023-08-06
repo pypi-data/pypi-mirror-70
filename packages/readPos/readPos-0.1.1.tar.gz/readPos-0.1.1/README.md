@@ -1,0 +1,53 @@
+# readPos Package usage
+
+readPos is a package built to work with data files by positions.
+So we gonna need some text plain data file and some definition files (csv) to read that data. 
+
+With some methods we can directly work with dataframe objetc (pandas) and a 
+definition file to construct the dat file output.
+
+#### IMPORT PACKAGE IN OUT SCRIPTS
+The statement to import some objects and methos from readPos Package is like this:
+```python
+from readPos.readPos import {{METHOD}}
+```
+Where {{METHOD}} we must indicate which object we gonna import. The most used is:
+```python
+from readPos.readPos import ReadPos
+```
+ReadPos class need two params to create an instance:
+* <b>file_name</b> = this param will be a string containing the absolute or relative path to data file we wanna work with (if we gonna write some dat file, this gonna be the output name)
+
+* <b>csv_file </b> = this param will be a string containing the absolute or relative path to csv file that contains the definition for each variable we wanna work with. This file must contain 3 fields at least (order not matter but exact column name does):
+  * variable: string field that have a value (without spaces and non number starting) used to set column names in read method or to match dataframe columns in write method.
+  * initial: integer field. Initial position (not index) where data will be read from input file or where will be writted in output file.
+  * end: integer field. Final position (not index) where data will be read from input file or where will be writted in output file.
+
+  Other self information columns (descriptions, length) can be added to csv file, them not gonna do a crash error but can overcharge process time.
+  Initial position of the variables could not be in ascending order. The read/write method will order it internally. 
+
+
+
+#### HOW TO READ DAT FILES INTO STRUCTURED DATA FRAME
+
+```python
+from readPos.readPos import ReadPos
+
+readpos_instance = ReadPos(file_name = 'C:/Users/MyUser/dummy.dat', csv_file = 'definition.csv')
+
+dataframe = readpos_instance.read() # dataframe objetct will be a pandas core dataframe with as many columns as rows you have in your csv file and as many rows as lines you have in your 
+
+```
+*Optional "encoding" param with string like 'latin-1' is allowed. Default value = 'UTF-8'*
+
+#### HOW TO ERITE DAT FILES FROM STRUCTURED DATA FRAME
+```python
+from readPos.readPos import ReadPos
+
+readpos_instance = ReadPos(file_name = 'C:/Users/MyUser/dummy.dat', csv_file = 'definition.csv')
+
+readpos_instance.write(df) # df is a dataframe object with at least all de columns that we have defined in csv file. df can contain more columns than csv, so these columns will be not written in output dat file.
+
+*Optional "encoding" param with string like 'latin-1' is allowed. Default value = 'UTF-8'*
+
+```

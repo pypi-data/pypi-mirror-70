@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: automl-utils
+Version: 0.1.0a1
+Summary: Facilitating reproducible AutoML research.
+Home-page: https://github.com/microsoft/automl_utils
+Author: Neil Tenenholtz
+Author-email: neil.tenenholtz@microsoft.com
+License: UNKNOWN
+Keywords: PyTorch AutoML NAS reproducibility
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: torch (~=1.3)
+Requires-Dist: torchvision (~=0.5)
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-blind-except ; extra == 'dev'
+Requires-Dist: flake8-bugbear ; extra == 'dev'
+Requires-Dist: flake8-builtins ; extra == 'dev'
+Requires-Dist: flake8-docstrings ; extra == 'dev'
+Requires-Dist: flake8-import-order ; extra == 'dev'
+Requires-Dist: flake8-mutable ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Provides-Extra: tensorboard
+Requires-Dist: tensorflow (>=1.0) ; extra == 'tensorboard'
+
+# AutoML Utils
+While machine learning is facing a [reproducibility crisis](https://youtube.videoken.com/embed/jH0AgVcwIBc), the problem
+is exacerbated in the subdiscipline of automated machine learning [[1](https://arxiv.org/abs/1902.07638), 
+[2](https://arxiv.org/abs/1912.12522)] where the number of potential hyperparameters and variations in search and 
+training regimens can be vast.
+
+When combined with the duplication of code across projects, often with subtle differences in implementation, it can be
+challenging to resolve whether changes in performance stem from improved methodology or from changes in configuration.
+
+This repository aims to facilitate these comparisons by providing reference implementations of commonly used components.
+It is designed to be minimal and unopinionated to ensure maximum flexibility for the researcher.
+
+**Note**: This work is intentionally being released in an early state of development to enable use in other projects and
+guide future efforts based on feedback received. 
+
+

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: filewatcher
+Version: 0.0.1
+Summary: A helper package to monitor files
+Home-page: https://github.com/cyberinfy/Tools/tree/master/python-scripts
+Author: Krishna
+Author-email: kvrks@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# filewatcher
+
+This is a helper package to monitor files. You can use
+[Github-flavored Markdown](https://github.com/cyberinfy/Tools/tree/master/python-scripts/)
+to write your content.
+
+

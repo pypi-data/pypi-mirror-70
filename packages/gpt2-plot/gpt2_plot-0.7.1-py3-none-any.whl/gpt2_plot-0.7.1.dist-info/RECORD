@@ -1,0 +1,14 @@
+gpt2-plot/__init__.py,sha256=H3E3Ls_lPWPJiSz2vh_et79Gn4Xf53Ps3IhOiGpelNg,20
+gpt2-plot/gpt_2.py,sha256=iPSFEIdGwug9u8QhNUwKvIiUkY79moQBDX48yEOopG0,32466
+gpt2-plot/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpt2-plot/src/accumulate.py,sha256=gNz3qH7e-y3TgctsSRtlUBwpnlFKvlFMVXsvz5slt1w,1457
+gpt2-plot/src/encoder.py,sha256=Ev4glfyl7IAzfEHRAzV94ocItKfjoPDi9uoNxO9iO6A,4221
+gpt2-plot/src/load_dataset.py,sha256=Hof6o6Y1GqGFigbK1xoZ12BjjcN5MUeNMoGNn2a_OFc,2986
+gpt2-plot/src/memory_saving_gradients.py,sha256=BZ3QBv_V6E2vg0a7M9EUidkWcUv43-3TAsS8mN8xGSQ,17353
+gpt2-plot/src/model.py,sha256=zFxRVmOMPTGOTsiPmyksKFkD8rRRmYwFz0MbU4XKONg,8113
+gpt2-plot/src/sample.py,sha256=7myYzS6-kajwAnc20R7CxHj6pZGuC6O1AVmY59B7WyU,3744
+gpt2_plot-0.7.1.dist-info/LICENSE,sha256=37POxwwgblq6Nzb1pdYuw3Qqt2lai8JDNDFbyFYoy8c,2140
+gpt2_plot-0.7.1.dist-info/METADATA,sha256=BHdLn0os4uteijyEg3QSNkK3NMKVbuGL_FClOusSkPA,2010
+gpt2_plot-0.7.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gpt2_plot-0.7.1.dist-info/top_level.txt,sha256=avagTwcdvXtQbZYf8_M3YhjTtY8B168DzSVTctqR234,10
+gpt2_plot-0.7.1.dist-info/RECORD,,

@@ -1,0 +1,8 @@
+README.rst
+colorfield.py
+setup.cfg
+setup.py
+django_html5_colorfield.egg-info/PKG-INFO
+django_html5_colorfield.egg-info/SOURCES.txt
+django_html5_colorfield.egg-info/dependency_links.txt
+django_html5_colorfield.egg-info/top_level.txt

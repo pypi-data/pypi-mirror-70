@@ -1,0 +1,40 @@
+Metadata-Version: 1.1
+Name: django-html5-colorfield
+Version: 2.0
+Summary: A HTML5 color field for Django models.
+Home-page: https://github.com/knyghty/django-html5-colorfield
+Author: Tom Carrick
+Author-email: tom@carrick.eu
+License: UNKNOWN
+Description: Django HTML5 Colorfield
+        #######################
+        
+        This module fills the need of having a 'colorfield' that's usable in both
+        django models and forms.
+        
+        Usage
+        =====
+        
+        ::
+        
+            from colorfield import ColorField
+        
+        
+            class MyModel(models.Model):
+                color = ColorField()
+        
+        
+        Thanks
+        ======
+        
+        Many thanks to Jared Forsyth and others for the original javascript version of
+        this package.
+        
+Keywords: django,color
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3

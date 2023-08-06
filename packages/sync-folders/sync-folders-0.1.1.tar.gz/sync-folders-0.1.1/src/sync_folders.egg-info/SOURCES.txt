@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/sync-folders/__init__.py
+src/sync-folders/main.py
+src/sync_folders.egg-info/PKG-INFO
+src/sync_folders.egg-info/SOURCES.txt
+src/sync_folders.egg-info/dependency_links.txt
+src/sync_folders.egg-info/top_level.txt

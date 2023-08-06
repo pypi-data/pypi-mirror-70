@@ -1,0 +1,399 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-07 21:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: web/forms/__contact_form.py:12
+msgid "Subject"
+msgstr ""
+
+#: web/forms/__contact_form.py:16
+msgid "Message"
+msgstr ""
+
+#: web/forms/__control_center_form.py:12 web/forms/__control_center_form.py:13
+#: web/forms/__login_form.py:20 web/forms/__login_form.py:21
+#: web/forms/__register_form.py:22 web/forms/__register_form.py:23
+msgid "Password"
+msgstr ""
+
+#: web/forms/__control_center_form.py:17 web/forms/__control_center_form.py:18
+#: web/forms/__register_form.py:27 web/forms/__register_form.py:28
+msgid "Repeat your password"
+msgstr ""
+
+#: web/forms/__control_center_form.py:28 web/forms/__control_center_form.py:29
+#: web/forms/__register_form.py:17 web/forms/__register_form.py:18
+msgid "Email"
+msgstr ""
+
+#: web/forms/__control_center_form.py:33 web/forms/__control_center_form.py:34
+msgid "Repeat your email"
+msgstr ""
+
+#: web/forms/__login_form.py:15 web/forms/__login_form.py:16
+#: web/forms/__profile_form.py:12 web/forms/__profile_form.py:13
+#: web/forms/__register_form.py:12 web/forms/__register_form.py:13
+msgid "Username"
+msgstr ""
+
+#: web/forms/__login_form.py:22
+msgid "Remember me"
+msgstr ""
+
+#: web/forms/__login_form.py:23
+msgid "Auto login"
+msgstr ""
+
+#: web/forms/__preferences_form.py:11
+msgid "email notification on new comment"
+msgstr ""
+
+#: web/forms/__preferences_form.py:14
+msgid "email notification on new message"
+msgstr ""
+
+#: web/forms/__profile_form.py:17 web/forms/__profile_form.py:18
+#: web/forms/__register_form.py:31 web/forms/__register_form.py:32
+msgid "Birth date"
+msgstr ""
+
+#: web/forms/__register_form.py:36
+msgid "I have read and accept the CGU"
+msgstr ""
+
+#: web/templates/_partials/footer.html:3
+msgid "Join us on"
+msgstr ""
+
+#: web/templates/_partials/pagination.html:5
+#: web/templates/_partials/pagination.html:8
+msgid "first"
+msgstr ""
+
+#: web/templates/_partials/pagination.html:6
+#: web/templates/_partials/pagination.html:9
+msgid "previous"
+msgstr ""
+
+#: web/templates/_partials/pagination.html:17
+#: web/templates/_partials/pagination.html:20
+msgid "next"
+msgstr ""
+
+#: web/templates/_partials/pagination.html:18
+#: web/templates/_partials/pagination.html:21
+msgid "last"
+msgstr ""
+
+#: web/templates/_partials/search_bar.html:5
+msgid "Search"
+msgstr ""
+
+#: web/templates/_partials/tags_selector.html:8
+msgid "Add new tag and press [enter]"
+msgstr ""
+
+#: web/templates/_partials/top_bar.html:25
+msgid "my profile"
+msgstr ""
+
+#: web/templates/_partials/top_bar.html:30
+msgid "my preferences"
+msgstr ""
+
+#: web/templates/_partials/top_bar.html:35
+msgid "control center"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:5
+msgid "Members"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:9
+msgid "FAQ"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:13 web/templates/web/gcu.html:4
+msgid "GCU"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:25 web/templates/web/about_us.html:4
+#: web/urls.py:20
+msgid "About us"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:29 web/templates/web/contact.html:4
+#: web/urls.py:35
+msgid "Contact"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:34 web/views/views.py:63
+msgid "Login"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:43 web/views/views.py:85
+msgid "Register"
+msgstr ""
+
+#: web/templates/_partials/top_menu.html:52
+msgid "Activate your account"
+msgstr ""
+
+#: web/templates/web/activate_account.html:4
+msgid "Account Activation"
+msgstr ""
+
+#: web/templates/web/admin.html:25 web/templates/web/mod.html:25
+msgid "Admonition management"
+msgstr ""
+
+#: web/templates/web/admin.html:26 web/templates/web/mod.html:26
+msgid "allow to manage admonitions"
+msgstr ""
+
+#: web/templates/web/admin.html:32
+msgid "Members management"
+msgstr ""
+
+#: web/templates/web/admin.html:33
+msgid "allow to manage members"
+msgstr ""
+
+#: web/templates/web/admin.html:39
+msgid "Books management"
+msgstr ""
+
+#: web/templates/web/admin.html:40
+msgid "allow to manage books"
+msgstr ""
+
+#: web/templates/web/admin.html:46 web/templates/web/mod.html:32
+msgid "Post Alerts management"
+msgstr ""
+
+#: web/templates/web/admin.html:47 web/templates/web/mod.html:33
+msgid "allow to manage post alerts"
+msgstr ""
+
+#: web/templates/web/admin.html:53 web/templates/web/mod.html:39
+msgid "Comment Alerts management"
+msgstr ""
+
+#: web/templates/web/admin.html:54 web/templates/web/mod.html:40
+msgid "allow to manage Comment alerts"
+msgstr ""
+
+#: web/templates/web/admin.html:60 web/templates/web/mod.html:46
+msgid "Tags management"
+msgstr ""
+
+#: web/templates/web/admin.html:61 web/templates/web/mod.html:47
+msgid "allow to manage tags"
+msgstr ""
+
+#: web/templates/web/admin.html:67
+msgid "Faq management"
+msgstr ""
+
+#: web/templates/web/admin.html:68
+msgid "allow to manage faqs"
+msgstr ""
+
+#: web/templates/web/admin.html:75 web/templates/web/cor.html:25
+#: web/templates/web/mod.html:53
+msgid "Correction requests management"
+msgstr ""
+
+#: web/templates/web/admin.html:76 web/templates/web/cor.html:26
+#: web/templates/web/mod.html:54
+msgid "allow to manage correction requests"
+msgstr ""
+
+#: web/templates/web/admin.html:82 web/templates/web/mod.html:60
+msgid "Contests management"
+msgstr ""
+
+#: web/templates/web/admin.html:83 web/templates/web/mod.html:61
+msgid "allow to manage contests"
+msgstr ""
+
+#: web/templates/web/admin.html:89 web/templates/web/mod.html:67
+msgid "Licenses management"
+msgstr ""
+
+#: web/templates/web/admin.html:90 web/templates/web/mod.html:68
+msgid "allow to manage licenses"
+msgstr ""
+
+#: web/templates/web/admin.html:96
+msgid "Site parameters management"
+msgstr ""
+
+#: web/templates/web/admin.html:97
+msgid "allow to manage site parameters"
+msgstr ""
+
+#: web/templates/web/contact.html:26
+msgid "Send"
+msgstr ""
+
+#: web/templates/web/contact.html:27
+#: web/templates/web/muses_personal_control_center.html:23
+#: web/templates/web/muses_personal_control_center.html:36
+#: web/templates/web/muses_personal_control_center.html:49
+#: web/templates/web/muses_personal_preferences.html:23
+#: web/templates/web/muses_personal_preferences.html:36
+#: web/templates/web/muses_personal_profile.html:27
+msgid "Reset"
+msgstr ""
+
+#: web/templates/web/login.html:22 web/templates/web/register.html:22
+msgid "Submit"
+msgstr ""
+
+#: web/templates/web/login.html:23 web/templates/web/register.html:23
+msgid "Cancel"
+msgstr ""
+
+#: web/templates/web/logout.html:20
+msgid "Could you confirm you want to logout?"
+msgstr ""
+
+#: web/templates/web/logout.html:24
+msgid "Yes"
+msgstr ""
+
+#: web/templates/web/logout.html:25
+msgid "No"
+msgstr ""
+
+#: web/templates/web/muses_admin_tag_create.html:4
+msgid "New tag"
+msgstr ""
+
+#: web/templates/web/muses_personal_control_center.html:16
+msgid "Change your password"
+msgstr ""
+
+#: web/templates/web/muses_personal_control_center.html:22
+#: web/templates/web/muses_personal_control_center.html:35
+#: web/templates/web/muses_personal_control_center.html:48
+#: web/templates/web/muses_personal_preferences.html:22
+#: web/templates/web/muses_personal_preferences.html:35
+#: web/templates/web/muses_personal_profile.html:26
+msgid "Save"
+msgstr ""
+
+#: web/templates/web/muses_personal_control_center.html:29
+msgid "Change your email"
+msgstr ""
+
+#: web/templates/web/muses_personal_control_center.html:42
+msgid "Activate two-factor authentication"
+msgstr ""
+
+#: web/templates/web/muses_personal_list_messages.html:14
+msgid "New message"
+msgstr ""
+
+#: web/templates/web/muses_personal_preferences.html:16
+msgid "Notifications"
+msgstr ""
+
+#: web/templates/web/muses_personal_preferences.html:29
+msgid "Timezone"
+msgstr ""
+
+#: web/templates/web/muses_personal_profile.html:4
+#: web/templates/web/muses_personal_profile.html:19
+msgid "Profile"
+msgstr ""
+
+#: web/templates/web/muses_personal_profile.html:20
+msgid "General information"
+msgstr ""
+
+#: web/templates/web/muses_post_create.html:4
+msgid "New post"
+msgstr ""
+
+#: web/urls.py:13
+msgid "Home"
+msgstr ""
+
+#: web/urls.py:25
+msgid "Faq"
+msgstr ""
+
+#: web/urls.py:30
+msgid "General Conditions of Use"
+msgstr ""
+
+#: web/urls.py:79
+msgid "Members list"
+msgstr ""
+
+#: web/urls.py:83
+msgid "Member profile"
+msgstr ""
+
+#: web/urls.py:88
+msgid "Administration"
+msgstr ""
+
+#: web/urls.py:92
+msgid "Manage members"
+msgstr ""
+
+#: web/urls.py:122
+msgid "Admonitions management"
+msgstr ""
+
+#: web/urls.py:272
+msgid "Moderation"
+msgstr ""
+
+#: web/urls.py:380
+msgid "Correction"
+msgstr ""
+
+#: web/views/generic/create_view.py:31 web/views/generic/delete_view.py:32
+#: web/views/generic/detail_view.py:26 web/views/generic/update_view.py:31
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: web/views/views.py:74
+msgid "Logout"
+msgstr ""
+
+#: web/views/views.py:96
+msgid "Activate Account"
+msgstr ""
+
+#: web/views/views.py:301
+msgid "My Messages"
+msgstr ""
+
+#: web/views/views.py:316
+msgid "Control Center"
+msgstr ""
+
+#: web/views/views.py:334
+msgid "Preferences"
+msgstr ""

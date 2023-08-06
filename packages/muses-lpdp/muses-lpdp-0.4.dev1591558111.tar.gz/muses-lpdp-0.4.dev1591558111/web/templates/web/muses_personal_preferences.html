@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-preferences">
+        <div class="muses-preferences-level">
+            <div class="tile">
+                <div class="muses-preferences-title-2">{% trans "Notifications" %}</div>
+                <div class="muses-preferences-section">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form_preferences_notifications.as_div }}
+                        <div class="muses-form-submit">
+                            <input type="submit" value="{% trans "Save" %}">
+                            <input type="reset" value="{% trans "Reset" %}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="muses-control-center-title-2">{% trans "Timezone" %}</div>
+                <div class="muses-control-center-section">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form_preferences_general.as_div }}
+                        <div class="muses-form-submit">
+                            <input type="submit" value="{% trans "Save" %}">
+                            <input type="reset" value="{% trans "Reset" %}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

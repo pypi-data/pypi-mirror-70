@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "aircloak-tools"
+version = "0.1.1"
+description = "Tools for querying an Aircloak service via its postgres api."
+authors = ["dlennon <3168260+dandanlen@users.noreply.github.com>"]
+readme="README.md"
+license="MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+psycopg2 = "^2.8.5"
+pandas = "^1.0.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

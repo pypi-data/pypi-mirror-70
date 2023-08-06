@@ -1,0 +1,7 @@
+README.md
+nanoio.py
+setup.py
+nanoio.egg-info/PKG-INFO
+nanoio.egg-info/SOURCES.txt
+nanoio.egg-info/dependency_links.txt
+nanoio.egg-info/top_level.txt

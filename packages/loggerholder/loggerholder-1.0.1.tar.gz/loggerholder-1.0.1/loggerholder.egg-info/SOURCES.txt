@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+loggerholder/LoggerHolder.py
+loggerholder/__init__.py
+loggerholder/__version__.py
+loggerholder.egg-info/PKG-INFO
+loggerholder.egg-info/SOURCES.txt
+loggerholder.egg-info/dependency_links.txt
+loggerholder.egg-info/top_level.txt

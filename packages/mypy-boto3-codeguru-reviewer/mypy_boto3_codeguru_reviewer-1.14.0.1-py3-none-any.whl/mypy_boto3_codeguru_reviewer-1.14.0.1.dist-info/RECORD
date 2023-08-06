@@ -1,0 +1,11 @@
+mypy_boto3_codeguru_reviewer/__init__.py,sha256=6wOA2-heujd5HVMsoNCriVJFCMgqAhlMCGNAWen0qLs,862
+mypy_boto3_codeguru_reviewer/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codeguru_reviewer/client.py,sha256=PfV27_d6HPS8-kXC6QAbKHeVbBB7ajBqH8M4tXv2QAQ,7267
+mypy_boto3_codeguru_reviewer/paginator.py,sha256=A6z__z-g2jt0lNkSAdShiPbBp9GcO0Db0fjISp5jHm4,1921
+mypy_boto3_codeguru_reviewer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codeguru_reviewer/type_defs.py,sha256=tTXsGvYR9Ft6-TjgvEirCb-qqDLkVBm7xsESxUmZTqA,7210
+mypy_boto3_codeguru_reviewer/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_codeguru_reviewer-1.14.0.1.dist-info/METADATA,sha256=rolkKPNlsXhmUAJPSzZ_BRsk86LU6b0IDyqbAwxhYlo,5135
+mypy_boto3_codeguru_reviewer-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_codeguru_reviewer-1.14.0.1.dist-info/top_level.txt,sha256=zy_KYC9gApIjp4BnHv403_rq4tBnG3fU6Yd_KKHz6W8,29
+mypy_boto3_codeguru_reviewer-1.14.0.1.dist-info/RECORD,,

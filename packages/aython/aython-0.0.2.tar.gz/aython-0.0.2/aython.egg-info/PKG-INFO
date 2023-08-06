@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aython
+Version: 0.0.2
+Summary: A small easy to use tool for building alexa apps with python
+Home-page: https://github.com/wedwrd/aython
+Author: Edward Wildman
+License: UNKNOWN
+Description: text/markdown
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

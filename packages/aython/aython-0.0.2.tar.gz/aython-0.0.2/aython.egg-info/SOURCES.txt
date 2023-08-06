@@ -1,0 +1,8 @@
+README.md
+setup.py
+aython/__init__.py
+aython/aython.py
+aython.egg-info/PKG-INFO
+aython.egg-info/SOURCES.txt
+aython.egg-info/dependency_links.txt
+aython.egg-info/top_level.txt

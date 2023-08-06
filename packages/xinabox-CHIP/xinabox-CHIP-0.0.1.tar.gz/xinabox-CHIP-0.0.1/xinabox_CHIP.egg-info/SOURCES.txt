@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+XCHIP/__init__.py
+XCHIP/xCHIP.py
+xinabox_CHIP.egg-info/PKG-INFO
+xinabox_CHIP.egg-info/SOURCES.txt
+xinabox_CHIP.egg-info/dependency_links.txt
+xinabox_CHIP.egg-info/top_level.txt

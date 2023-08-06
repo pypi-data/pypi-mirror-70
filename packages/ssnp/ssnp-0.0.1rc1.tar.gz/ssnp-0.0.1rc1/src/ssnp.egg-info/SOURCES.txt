@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ssnp/__init__.py
+src/ssnp/calc.py
+src/ssnp/data.py
+src/ssnp/tftool.py
+src/ssnp.egg-info/PKG-INFO
+src/ssnp.egg-info/SOURCES.txt
+src/ssnp.egg-info/dependency_links.txt
+src/ssnp.egg-info/requires.txt
+src/ssnp.egg-info/top_level.txt

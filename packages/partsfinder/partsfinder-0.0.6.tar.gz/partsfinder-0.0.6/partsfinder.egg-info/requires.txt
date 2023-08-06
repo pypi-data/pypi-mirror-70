@@ -1,0 +1,7 @@
+structlog
+requests
+requests_toolbelt
+js2py
+money
+pint
+beautifulsoup4

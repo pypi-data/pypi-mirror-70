@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+sheetgear/__init__.py
+sheetgear/bridge/__init__.py
+sheetgear/bridge/spreadsheet.py
+sheetgear_bridge.egg-info/PKG-INFO
+sheetgear_bridge.egg-info/SOURCES.txt
+sheetgear_bridge.egg-info/dependency_links.txt
+sheetgear_bridge.egg-info/top_level.txt

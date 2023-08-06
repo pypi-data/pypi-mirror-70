@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+dsnd_probability_yrmadev/Binomialdistribution.py
+dsnd_probability_yrmadev/Gaussiandistribution.py
+dsnd_probability_yrmadev/Generaldistribution.py
+dsnd_probability_yrmadev/__init__.py
+dsnd_probability_yrmadev.egg-info/PKG-INFO
+dsnd_probability_yrmadev.egg-info/SOURCES.txt
+dsnd_probability_yrmadev.egg-info/dependency_links.txt
+dsnd_probability_yrmadev.egg-info/not-zip-safe
+dsnd_probability_yrmadev.egg-info/top_level.txt

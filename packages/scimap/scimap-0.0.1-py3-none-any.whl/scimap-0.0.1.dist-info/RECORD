@@ -1,0 +1,13 @@
+scimap/__init__.py,sha256=HUqu9eOhXLveA3BxWGrcmri1dqrf8DBqGs2-p2nRkFE,181
+scimap/__main__.py,sha256=WRy_2nSg-WbBqQ6Q7w7nIZ-i-mnNngGx6fSK7oVxhPU,140
+scimap/cli.py,sha256=6yLvenYqWPopOv2NX_51FXbxfgdaVi47LoeJHP8Q6fk,301
+scimap/gui.py,sha256=d0JrQiM1T0_5T6V-kYxXoWfNyrfWX7q9dUuErD8PACc,2794
+scimap/tests/__init__.py,sha256=LURUPwwDqcFmVe1XvEzadPdXxro8RdEF-rTaMw-AfiI,34
+scimap/tests/conftest.py,sha256=Noz5CUwT-xh2CJNKsYyu_bUFaoMMKavOiAuhHzZeOp8,267
+scimap/tests/test_utils.py,sha256=k81yikSyDaZaZW0Y0TiW90NuwcHq8nspNeSYvhgScX8,393
+scimap/utils.py,sha256=jVRiWXlDuQkq-4CXuavgUMvhnGD--d8lD4JlTUN32ak,283
+scimap-0.0.1.dist-info/entry_points.txt,sha256=oGHzwngYGf51g-saWVrKt0FEdRUopUyogxibrxvD7JE,42
+scimap-0.0.1.dist-info/LICENSE.md,sha256=LmnwDp5Q5V9N68WBtjXROgjFS1BOOGqJ-aMk3tTz1Os,1094
+scimap-0.0.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+scimap-0.0.1.dist-info/METADATA,sha256=JiQ4rS1iOmkRj3dpt-JA27MV9lwYl0Hn6XgbscWSIf0,2226
+scimap-0.0.1.dist-info/RECORD,,

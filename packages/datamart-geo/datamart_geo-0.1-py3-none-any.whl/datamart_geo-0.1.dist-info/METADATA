@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: datamart-geo
+Version: 0.1
+Summary: Datamart geographical data
+Home-page: https://gitlab.com/ViDA-NYU/datamart/datamart
+Author: Remi Rampin
+Author-email: remi.rampin@nyu.edu
+Maintainer: Remi Rampin
+Maintainer-email: remi.rampin@nyu.edu
+License: BSD-3-Clause
+Project-URL: Homepage, https://gitlab.com/ViDA-NYU/datamart/datamart
+Project-URL: Source, https://gitlab.com/ViDA-NYU/datamart/datamart
+Project-URL: Tracker, https://gitlab.com/ViDA-NYU/datamart/datamart/issues
+Keywords: datamart
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+
+Datamart geospatial data
+========================
+
+This package contains geospatial data and associated facilities to resolve administrative areas. It is used by Auctus, NYU's Datamart system, to resolved named areas during profiling.
+
+See also:
+
+* `The datamart-profiler library, used to profile datasets for search <https://pypi.org/project/datamart-profiler/>`__
+* `Auctus, NYU's Datamart system <https://auctus.vida-nyu.org/>`__
+* `Our project on GitLab <https://gitlab.com/ViDA-NYU/datamart/datamart>`__
+
+

@@ -1,0 +1,11 @@
+mypy_boto3_codestar/__init__.py,sha256=7-WENnSvU9oH3AX58_Zz58M99lOdUWPJvnQCGBGcKKg,1271
+mypy_boto3_codestar/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codestar/client.py,sha256=5ut_3_pvxlXqLtAkAG-Zy9lQAsEdxIX18IS_44ifHXw,10433
+mypy_boto3_codestar/paginator.py,sha256=budK044zqdhjtwSZmN-B_2GUjfEj8J6PED-TrIQDVK8,3613
+mypy_boto3_codestar/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_codestar/type_defs.py,sha256=2Aaua73xQfbvsknc2Hn8eVRIGRYih6FOIg21J21nWUo,8614
+mypy_boto3_codestar/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_codestar-1.14.0.0.dist-info/METADATA,sha256=90yjZxDT-v1-dYrW_M-9n7FbJQ2NruO53sLE1zoHygA,4568
+mypy_boto3_codestar-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_codestar-1.14.0.0.dist-info/top_level.txt,sha256=yr_mizgi02k0hsa81Y2j__FtGrT8HbpivARupsSQSTo,20
+mypy_boto3_codestar-1.14.0.0.dist-info/RECORD,,

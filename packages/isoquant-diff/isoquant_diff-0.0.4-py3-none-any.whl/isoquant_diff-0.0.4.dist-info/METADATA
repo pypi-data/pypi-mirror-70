@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: isoquant-diff
+Version: 0.0.4
+Summary: Find the difference between 2 Isoquant configs
+Home-page: https://github.com/thiloschild/isoquant_diff
+Author: Thilo Schild
+Author-email: work@thilo-schild.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: configparser
+Requires-Dist: pandas
+Requires-Dist: xlrd
+Requires-Dist: openpyxl
+
+# Isoquant_diff
+
+Isoquant_diff is a Python library that works with the  Isoquant Software. It can find the differences between two config files.
+It supports .ini and .xlsx files.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install isoquant_diff.
+
+```bash
+pip install isoquant_diff
+```
+
+## Usage
+
+Once the package is installed you can call isoquant_diff from the command line.
+
+It will ask for two file in the command prompt and will create an excel file and html file with all differences.
+
+Command prompt:
+
+```bash
+isoquant_diff
+```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+

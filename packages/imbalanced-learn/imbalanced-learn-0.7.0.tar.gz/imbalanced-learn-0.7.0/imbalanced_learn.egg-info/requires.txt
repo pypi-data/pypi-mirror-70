@@ -1,0 +1,17 @@
+numpy>=1.13.3
+scipy>=0.19.1
+scikit-learn>=0.23
+joblib>=0.11
+
+[docs]
+sphinx
+sphinx-gallery
+sphinx_rtd_theme
+sphinxcontrib-bibtex
+numpydoc
+matplotlib
+pandas
+
+[tests]
+pytest
+pytest-cov

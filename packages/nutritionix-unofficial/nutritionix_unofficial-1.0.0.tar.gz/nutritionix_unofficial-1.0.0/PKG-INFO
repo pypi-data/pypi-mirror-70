@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: nutritionix_unofficial
+Version: 1.0.0
+Summary: Nutritionix Python Client (Unofficial update)
+Home-page: https://github.com/olliet88/nutritionix-python-update
+Author: Ollie Thwaites
+Author-email: olliethwaites@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: nutritionix food nutrition
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4

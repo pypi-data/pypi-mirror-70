@@ -1,0 +1,9 @@
+README.md
+setup.py
+nutritionix/__init__.py
+nutritionix/nutritionix.py
+nutritionix_unofficial.egg-info/PKG-INFO
+nutritionix_unofficial.egg-info/SOURCES.txt
+nutritionix_unofficial.egg-info/dependency_links.txt
+nutritionix_unofficial.egg-info/requires.txt
+nutritionix_unofficial.egg-info/top_level.txt

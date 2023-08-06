@@ -1,0 +1,7 @@
+include assets/error.png
+include assets/appicon.png
+include README.md
+include LICENSE
+include .gitignore
+include Osmapy/config.txt
+include examples/*.png

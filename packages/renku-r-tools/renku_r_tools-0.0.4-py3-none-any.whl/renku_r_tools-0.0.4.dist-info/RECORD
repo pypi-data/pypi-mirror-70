@@ -1,0 +1,10 @@
+renku_r_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+renku_r_tools/__main__.py,sha256=J_nF3DqAfEs0Kzp04rDtoggY4cKsH-RRSXuB27xyyqE,2019
+renku_r_tools/packrat.py,sha256=7o71wxpoMV8bLM2JzsoE5E3N1gr2wSwVlmr69KqCVbg,1918
+renku_r_tools/renv.py,sha256=Wnl5qiIem9MloC1wJJgc1Tw_D8TbK_TopJM0ImYT8hw,1894
+renku_r_tools-0.0.4.dist-info/LICENSE,sha256=k3OnzfzBaKPJfAH59tBO9uQVoGo5bu6jg9rcZjZu120,634
+renku_r_tools-0.0.4.dist-info/METADATA,sha256=21RUrml-w3tJbLzhUeRlzh_OTR-Svxf7v0S4MOqNQVo,2410
+renku_r_tools-0.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+renku_r_tools-0.0.4.dist-info/entry_points.txt,sha256=Vplkphw0PiM4nlYbHwWzKkcv03XMsO6wzfHmHxmkv9k,56
+renku_r_tools-0.0.4.dist-info/top_level.txt,sha256=Yz8DPZKZa5yxfoi6zZthMOETFcGJ9V37BQDtvmeEP4I,14
+renku_r_tools-0.0.4.dist-info/RECORD,,

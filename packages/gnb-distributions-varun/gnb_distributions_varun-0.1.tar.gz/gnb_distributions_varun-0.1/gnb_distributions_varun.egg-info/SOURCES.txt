@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+gnb_distributions_varun/Binomialdistribution.py
+gnb_distributions_varun/Gaussiandistribution.py
+gnb_distributions_varun/Generaldistribution.py
+gnb_distributions_varun/__init__.py
+gnb_distributions_varun.egg-info/PKG-INFO
+gnb_distributions_varun.egg-info/SOURCES.txt
+gnb_distributions_varun.egg-info/dependency_links.txt
+gnb_distributions_varun.egg-info/not-zip-safe
+gnb_distributions_varun.egg-info/top_level.txt

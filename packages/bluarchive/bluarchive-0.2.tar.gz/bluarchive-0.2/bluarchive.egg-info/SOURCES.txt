@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+bluarchive/__init__.py
+bluarchive/bluarchive.py
+bluarchive.egg-info/PKG-INFO
+bluarchive.egg-info/SOURCES.txt
+bluarchive.egg-info/dependency_links.txt
+bluarchive.egg-info/entry_points.txt
+bluarchive.egg-info/requires.txt
+bluarchive.egg-info/top_level.txt

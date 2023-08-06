@@ -1,0 +1,3 @@
+[console_scripts]
+bluarchive = bluarchive.bluarchive:main
+

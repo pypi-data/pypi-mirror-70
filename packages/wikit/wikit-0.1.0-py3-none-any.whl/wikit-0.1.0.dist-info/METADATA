@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: wikit
+Version: 0.1.0
+Summary: wikit python clone
+Home-page: https://github.com/ginsburgnm/wikit
+Author: Noah Ginsburg
+Author-email: ginsburgnm@gmail.com
+License: GPLV3
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: Wikipedia-API (==0.5.4)
+
+# wikit
+
+This is a wikit clone for python because I don't like node and don't want to install it, but the wikit tool seemed neat
+
+

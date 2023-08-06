@@ -1,0 +1,8 @@
+git_commit="0c95186e34e4ae5268d0e9d6602dad91bc562e20"
+git_commit_timestamp="2020-06-08_14:00:54_-0700"
+git_describe="0c95186e3.dirty"
+build_os="Darwin mb.local 18.7.0 Darwin Kernel Version 18.7.0: Mon Apr 27 20:09:39 PDT 2020; root:xnu-4903.278.35~1/RELEASE_X86_64 x86_64"
+build_machine="mb.local"
+build_date="Mon Jun  8 14:03:25 PDT 2020"
+build_user="jgranados"
+version="1.8.6.3b1"

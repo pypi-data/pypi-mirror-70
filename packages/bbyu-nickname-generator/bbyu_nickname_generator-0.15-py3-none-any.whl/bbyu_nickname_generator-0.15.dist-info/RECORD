@@ -1,0 +1,9 @@
+bbyu/__init__.py,sha256=3Olb3nFUg9EGUt6br7AavxrAHUznTvqrl-SzfVVBBiE,32
+bbyu/generator.py,sha256=0e_vERkWTro10vqGLhO4spWRItgYqgbvSlpGPYGR34Y,1135
+bbyu/data/__init__.py,sha256=YHyGeYVVuBbihb7mROpJIXxkqUkfqTq83E9VHjw30G4,21
+bbyu/data/korean.py,sha256=NpuGCMhgdEEflvFKIRO8K_VqyMsRQgz00JJVUVMYgCQ,3360
+bbyu_nickname_generator-0.15.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+bbyu_nickname_generator-0.15.dist-info/METADATA,sha256=SbCeBrg1qPJGuvze1eWeiObXetlBXj_MEZMqSiXFcpI,768
+bbyu_nickname_generator-0.15.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+bbyu_nickname_generator-0.15.dist-info/top_level.txt,sha256=_df14BLlPvsRW7hplaNCRbKw25Mv9jSSMNK6M-uqByg,5
+bbyu_nickname_generator-0.15.dist-info/RECORD,,

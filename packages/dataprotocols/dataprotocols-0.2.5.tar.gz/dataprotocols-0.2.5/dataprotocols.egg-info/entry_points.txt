@@ -1,0 +1,4 @@
+[console_scripts]
+eryo = dataprotocols.eryo.test_eryo:run_eryo
+gsof = dataprotocols.gsof.test_gsof:run_gsof
+

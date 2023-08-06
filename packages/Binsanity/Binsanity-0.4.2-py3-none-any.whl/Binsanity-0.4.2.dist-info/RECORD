@@ -1,0 +1,17 @@
+Binsanity-0.4.2.data/scripts/Binsanity,sha256=fTaTn8o_NtcJ9epCALR5srVbReNXMPHczpzXreHmo04,11558
+Binsanity-0.4.2.data/scripts/Binsanity-lc,sha256=edgcAVJY1MXMcc82qwTLtgE9LMqUMcoSvYsDGlpIm4w,35865
+Binsanity-0.4.2.data/scripts/Binsanity-profile,sha256=lfNTRnd9102fiBwksAUIVI0w9hq-s-ezGrtHFCaIoK4,9342
+Binsanity-0.4.2.data/scripts/Binsanity-refine,sha256=FrRRacPjjlG_81Gzqnx3Cthr6gW_vqUuV-GE8i1xIwM,16475
+Binsanity-0.4.2.data/scripts/Binsanity-wf,sha256=PIZ4ihaTVY9mhItIudAI1n-9UjON5KA3YhNlGTrVVTo,31926
+Binsanity-0.4.2.data/scripts/bin_evaluation,sha256=uVUXLKHVM89xkLvBPWBIsaEP8QD3avD3LTx1ROYrpGI,3828
+Binsanity-0.4.2.data/scripts/checkm_analysis,sha256=GdxtgaQgd5MVQcG2IvDFievEJANozy8lWIosN_qXVFY,2997
+Binsanity-0.4.2.data/scripts/concat,sha256=vhw_mXVUy6vBmtLJy4OyMvQHL0xUcRJi0ouYEur3KP8,3645
+Binsanity-0.4.2.data/scripts/get-ids,sha256=Up4qDSJq6eFybygeDrbWwV0Auvudb4YiMekXWEWDiZw,2315
+Binsanity-0.4.2.data/scripts/identifyHMM,sha256=6dEqa8QmbGngUvM6chMhaTRhVFzSXl2mKgVHC7PngGM,4777
+Binsanity-0.4.2.data/scripts/simplify-fasta,sha256=F5ZJ2WQla-aXqWkOhachltP2tG_2aHOw81iuCKLPQ5E,1916
+Binsanity-0.4.2.data/scripts/transform-coverage-profile,sha256=aOznh4rcJ2u_lnwZB-4wjHxh84gOnIUL7B10q5_zYeQ,4186
+Binsanity-0.4.2.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+Binsanity-0.4.2.dist-info/METADATA,sha256=J7a7BTGdi5n4CFwWr3WdO6VCnvfULyK3aPd2g3Y8L70,442
+Binsanity-0.4.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+Binsanity-0.4.2.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+Binsanity-0.4.2.dist-info/RECORD,,

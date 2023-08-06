@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyxedit
+Version: 0.1
+Summary: python wrapper around xedit-lib
+Home-page: UNKNOWN
+Author: leontristain
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: cached-property (>=1.5.1)
+
+UNKNOWN
+
+

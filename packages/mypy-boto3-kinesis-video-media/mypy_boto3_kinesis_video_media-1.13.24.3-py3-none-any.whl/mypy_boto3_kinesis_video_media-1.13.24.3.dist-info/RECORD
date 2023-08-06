@@ -1,0 +1,10 @@
+mypy_boto3_kinesis_video_media/__init__.py,sha256=71isPXW7Ym0VRm_Q5zdO3jc1xl_OuOe0h6MFu3RcyRA,571
+mypy_boto3_kinesis_video_media/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_kinesis_video_media/client.py,sha256=0HGo4XLUtdPoPLkRHPLENFxRjljheZxyLgZEaUqBNwQ,2371
+mypy_boto3_kinesis_video_media/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_kinesis_video_media/type_defs.py,sha256=Z74Ps4Mi5ZRO_cfttkVpx4ezKWXzNm-WCFoi5rRA7yM,1304
+mypy_boto3_kinesis_video_media/version.py,sha256=hKuNRULB4BZPVfJKH7E8Zn7kZmNzsGVZ1vLc7i7KHZ4,57
+mypy_boto3_kinesis_video_media-1.13.24.3.dist-info/METADATA,sha256=FUyDcCGVULLg-xx_M6KpzMk6kWI0WHkYWOIgOrmGMiY,4552
+mypy_boto3_kinesis_video_media-1.13.24.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_kinesis_video_media-1.13.24.3.dist-info/top_level.txt,sha256=WlpJ8jfTEf0ZwZZVmx78OOA5vQNfH_LXSpCbljGiQlc,31
+mypy_boto3_kinesis_video_media-1.13.24.3.dist-info/RECORD,,

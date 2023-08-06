@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: zabel
+Version: 0.10.0
+Summary: Zabel
+Home-page: https://github.com/engie-group/zabel
+Author: Martin Lafaix
+Author-email: martin.lafaix@external.engie.com
+License: Eclipse Public License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >= 3.6.5
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.23)
+Requires-Dist: zabel-commons (>=1.0)
+Requires-Dist: zabel-fabric (>=0.12)
+
+# zabel
+
+

@@ -1,0 +1,9 @@
+python-dateutil
+requests
+numpy
+pillow
+psycopg2
+oauth2client
+google-api-python-client
+google-cloud-storage
+google-cloud-pubsub

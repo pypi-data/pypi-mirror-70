@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cdk-serverless-api
+Version: 0.0.2
+Summary: A sample JSII construct lib for AWS CDK
+Home-page: https://github.com/pahud/awscdk-jsii-template.git
+Author: Pahud Hsieh<hunhsieh@amazon.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/pahud/awscdk-jsii-template.git
+Description: # Welcome to `cdk-serverless-api`
+        
+        This sample construct library helps you build Serverless API in AWS.
+        
+        ```python
+        # Example automatically generated without compilation. See https://github.com/aws/jsii/issues/826
+        from cdk_serverless_api import ServerlessApi
+        
+        ServerlessApi(self, "Api")
+        ```
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Typing :: Typed
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tracemoepy
+Version: 0.1
+Summary: Trace.moe python wrapper
+Home-page: https://github.com/DragSama/tracemoepy
+License: UNKNOWN
+Download-URL: https://github.com/DragSama/tracemoepy/releases
+Description: # tracemoepy
+        trace.moe python wrapper, does not support all api methods yet.
+        Work in progress.
+        
+        # Install
+        `pip install tracemoepy`
+        
+        # Examples
+        `Soooon`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

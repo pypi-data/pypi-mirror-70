@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Growing Pains &mdash; Blessed 1.17.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api.html" />
+    <link rel="prev" title="Further Reading" href="further.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="further.html">Further Reading</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Growing Pains</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#and-16-colors">8 and 16 colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#where-is-brown-purple-or-grey">Where is brown, purple, or grey?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#white-on-black">white-on-black</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#history-of-ink-paper-inspired-black-on-white">History of ink-paper inspired black-on-white</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bold-is-bright">Bold is bright</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#history-of-bold-as-wide-stroke">History of bold as “wide stroke”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enforcing-white-on-black">Enforcing white-on-black</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#beware-of-customized-color-schemes">Beware of customized color schemes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#colors-can-avoid-customization">256 colors can avoid customization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monochrome-and-reverse">Monochrome and reverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multibyte-encodings-and-code-pages">Multibyte Encodings and Code pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alt-or-meta-sends-escape">Alt or meta sends Escape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backspace-sends-delete">Backspace sends delete</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-misnomer-of-ansi">The misnomer of ANSI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Growing Pains</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pains.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="growing-pains">
+<h1>Growing Pains<a class="headerlink" href="#growing-pains" title="Permalink to this headline">¶</a></h1>
+<p>When making terminal applications, there are a surprisingly number of
+portability issues and edge cases.  Although Blessed provides an abstraction
+for the full curses capability database, it is not sufficient to secure
+you from several considerations shared here.</p>
+<div class="section" id="and-16-colors">
+<h2>8 and 16 colors<a class="headerlink" href="#and-16-colors" title="Permalink to this headline">¶</a></h2>
+<p>XXX</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/ANSI_escape_code#3/4_bit">https://en.wikipedia.org/wiki/ANSI_escape_code#3/4_bit</a></p>
+<p>As a curses library, I think we should safely assume to map our colorspace
+to rgb values that match xterm.</p>
+<p>XXX</p>
+<p>Where 8 and 16 colors are used, they should be assumed to be the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Color_Graphics_Adapter#With_an_RGBI_monitor">CGA Color Palette</a>.  Though there is no terminal standard that proclaims
+that the CGA colors are used, their values are the best approximations
+across all common hardware terminals and terminal emulators.</p>
+<p>A recent phenomenon of users is to customize their base 16 colors to provide
+(often, more “washed out”) color schemes.  Furthermore, we are only recently
+getting LCD displays of colorspaces that achieve close approximation to the
+original video terminals.  Some find these values uncomfortably intense: in
+their original CRT form, their contrast and brightness was lowered by hardware
+dials, whereas today’s LCD’s typically display colors well near full intensity.</p>
+<p>Though we may not <em>detect</em> the colorspace of the remote terminal, <strong>we can</strong>:</p>
+<ul class="simple">
+<li><p>Trust that a close approximation of the <a class="reference external" href="https://en.wikipedia.org/wiki/Color_Graphics_Adapter#With_an_RGBI_monitor">CGA Color Palette</a> for the base
+16 colors will be displayed for <strong>most</strong> users.</p></li>
+<li><p>Trust that users who have made the choice to adjust their palette have made
+the choice to do so, and are able to re-adjust such palettes as necessary
+to accommodate different programs (such as through the use of “Themes”).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It has become popular to use dynamic system-wide color palette adjustments
+in software such as <a class="reference external" href="https://justgetflux.com/">f.lux</a>, “Dark Mode”, “Night Mode”, and others,
+which adjust the system-wide “Color Profile” of the entire graphics display
+depending on the time of day.  One might assume that <code class="docutils literal notranslate"><span class="pre">term.blue(&quot;text&quot;)</span></code>
+may become <strong>completely</strong> invisible to such users during the night!</p>
+</div>
+</div>
+<div class="section" id="where-is-brown-purple-or-grey">
+<h2>Where is brown, purple, or grey?<a class="headerlink" href="#where-is-brown-purple-or-grey" title="Permalink to this headline">¶</a></h2>
+<p>There are <strong>only 8 color names</strong> on a 16-color terminal:  The second set of
+eight colors are “high intensity” versions of the first in direct series.</p>
+<p>The colors <em>brown</em>, <em>purple</em>, and <em>grey</em> are not named in the first series,
+though they are available:</p>
+<ul>
+<li><p><strong>brown</strong>: <em>yellow is brown</em>, only high-intensity yellow
+(<code class="docutils literal notranslate"><span class="pre">bright_yellow</span></code>) is yellow!</p></li>
+<li><p><strong>purple</strong>: <em>magenta is purple</em>.  In earlier, 4-bit color spaces, there
+were only black, cyan, magenta, and white of low and high intensity, such
+as found on common home computers like the <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_8-bit_computer_hardware_palettes#ZX_Spectrum">ZX Spectrum</a>.</p>
+<p>Additional “colors” were only possible through dithering.  The color names
+cyan and magenta on later graphics adapters are carried over from its
+predecessors.  Although the color cyan remained true in RGB value on
+16-color to its predecessor, magenta shifted farther towards blue from red
+becoming purple (as true red was introduced as one of the new base 8
+colors).</p>
+</li>
+<li><p><strong>grey</strong>: there are actually <strong>three shades of grey</strong> (or American spelling,
+‘gray’), though the color attribute named ‘grey’ does not exist!</p>
+<p>In ascending order of intensity, the shades of grey are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bold_black</span></code>: in lieu of the uselessness of an “intense black”, this is
+color is instead mapped to “dark grey”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">white</span></code>: white is actually mild compared to the true color ‘white’: this
+is more officially mapped to “common grey”, and is often the default
+foreground color.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bright_white</span></code>: is pure white (<code class="docutils literal notranslate"><span class="pre">#ffffff</span></code>).</p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="white-on-black">
+<h3>white-on-black<a class="headerlink" href="#white-on-black" title="Permalink to this headline">¶</a></h3>
+<p>The default foreground and background should be assumed as <em>white-on-black</em>.</p>
+<p>For quite some time, the families of terminals produced by DEC, IBM, and
+Tektronix dominated the computing world with the default color scheme of
+<em>green-on-black</em> and less commonly <em>amber-on-black</em> monochrome displays:
+The inverse was a non-default configuration.  The IBM 3270 clients exclusively
+used <em>green-on-black</em> in both hardware and software emulators, and is likely
+a driving factor of the default <em>white-on-black</em> appearance of the first IBM
+Personal Computer.</p>
+<p>The less common <em>black-on-white</em> “ink paper” style of emulators is a valid
+concern for those designing terminal interfaces.  The color scheme of
+<em>black-on-white</em> directly conflicts with the intention of <a class="reference internal" href="#bold-is-bright">bold is bright</a>,
+where <code class="docutils literal notranslate"><span class="pre">term.bright_red('ATTENTION!')</span></code> may become difficult to read,
+as it appears as <em>pink on white</em>!</p>
+<div class="section" id="history-of-ink-paper-inspired-black-on-white">
+<h4>History of ink-paper inspired black-on-white<a class="headerlink" href="#history-of-ink-paper-inspired-black-on-white" title="Permalink to this headline">¶</a></h4>
+<p>Early home computers with color video adapters, such as the Commodore 64
+provided <em>white-on-blue</em> as their basic video terminal configuration.  One can
+only assume such appearances were provided to demonstrate their color
+capabilities over competitors (such as the Apple ][).</p>
+<p>More common, X11’s xterm and the software HyperTerm bundle with MS Windows
+provided an “ink on paper” <em>black-on-white</em> appearance as their default
+configuration.  Two popular emulators continue to supply <em>black-on-white</em> by
+default to this day: Xorg’s xterm and Apple’s Terminal.app.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Windows no longer supplies a terminal emulator: the “command prompt”
+as we know it now uses the MSVCRT API routines to interact and does not
+make use of terminal sequences, even ignoring those sequences that MS-DOS
+family of systems previously interpreted through the ANSI.SYS driver,
+though it continues to default to <em>white-on-black</em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bold-is-bright">
+<h2>Bold is bright<a class="headerlink" href="#bold-is-bright" title="Permalink to this headline">¶</a></h2>
+<p><strong>Where Bold is used, it should be assumed to be *Bright*</strong>.</p>
+<p>Due to the influence of early graphics adapters providing a set of 8
+“low-intensity” and 8 “high intensity” versions of the first, the term
+“bold” for terminals sequences is synonymous with “high intensity” in
+almost all circumstances.</p>
+<div class="section" id="history-of-bold-as-wide-stroke">
+<h3>History of bold as “wide stroke”<a class="headerlink" href="#history-of-bold-as-wide-stroke" title="Permalink to this headline">¶</a></h3>
+<p>In typography, the true translation of “bold” is that a font should be
+displayed <em>with emphasis</em>.  In classical terms, this would be achieved by
+pen be re-writing over the same letters.  On a teletype or printer, this was
+similarly achieved by writing a character, backspacing, then repeating the
+same character in a form called <strong>overstriking</strong>.</p>
+<p>To bold a character, <code class="docutils literal notranslate"><span class="pre">C</span></code>, one would emit the sequence <code class="docutils literal notranslate"><span class="pre">C^HC</span></code> where
+<code class="docutils literal notranslate"><span class="pre">^H</span></code> is backspace (0x08).  To underline <code class="docutils literal notranslate"><span class="pre">C</span></code>, one would would emit
+<code class="docutils literal notranslate"><span class="pre">C^H_</span></code>.</p>
+<p><strong>Video terminals do not support overstriking</strong>.  Though the mdoc format for
+manual pages continue to emit overstriking sequences for bold and underline,
+translators such as mandoc will instead emit an appropriate terminal sequence.</p>
+<p>Many characters previously displayable by combining using overstriking of
+ASCII characters on teletypes, such as: ±, ≠, or ⩝ were delegated to a
+<a class="reference external" href="https://en.wikipedia.org/wiki/Code_page">code page</a> or lost entirely until the introduction of multibyte encodings.</p>
+<p>Much like the “ink paper” introduction in windowing systems for terminal
+emulators, “wide stroke” bold was introduced only much later when combined
+with operating systems that provided font routines such as TrueType.</p>
+</div>
+<div class="section" id="enforcing-white-on-black">
+<h3>Enforcing white-on-black<a class="headerlink" href="#enforcing-white-on-black" title="Permalink to this headline">¶</a></h3>
+<p>In conclusion, <em>white-on-black</em> should be considered the default.  If there is
+a need to <strong>enforce</strong> <em>white-on-black</em> for terminal clients suspected to be
+defaulted as <em>black-on-white</em>, one would want to trust that a combination of
+<code class="docutils literal notranslate"><span class="pre">term.home</span> <span class="pre">+</span> <span class="pre">term.white_on_black</span> <span class="pre">+</span> <span class="pre">term.clear</span></code> should repaint the entire
+emulator’s window with the desired effect.</p>
+<p>However, this cannot be trusted to <strong>all</strong> terminal emulators to perform
+correctly!  Depending on your audience, you may instead ensure that the
+entire screen (including whitespace) is painted using the <code class="docutils literal notranslate"><span class="pre">on_black</span></code>
+mnemonic.</p>
+</div>
+</div>
+<div class="section" id="beware-of-customized-color-schemes">
+<h2>Beware of customized color schemes<a class="headerlink" href="#beware-of-customized-color-schemes" title="Permalink to this headline">¶</a></h2>
+<p>A recent phenomenon is for users to customize these first 16 colors of their
+preferred emulator to colors of their own liking.  Though this has always been
+possible with <code class="docutils literal notranslate"><span class="pre">~/.XResources</span></code>, the introduction of PuTTy and iTerm2 to
+interactively adjustment these colors have made this much more common.</p>
+<p>This may cause your audience to see your intended interface in a wildly
+different form.  Your intended presentation may appear mildly unreadable.</p>
+<p>Users are certainly free to customize their colors however they like, but it
+should be known that displaying <code class="docutils literal notranslate"><span class="pre">term.black_on_red(&quot;DANGER!&quot;)</span></code> may appear
+as “grey on pastel red” to your audience, reducing the intended effect of
+intensity.</p>
+<div class="section" id="colors-can-avoid-customization">
+<h3>256 colors can avoid customization<a class="headerlink" href="#colors-can-avoid-customization" title="Permalink to this headline">¶</a></h3>
+<p>The first instinct of a user who aliases ls(1) to <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-G</span></code> or <code class="docutils literal notranslate"><span class="pre">colorls</span></code>,
+when faced with the particularly low intensity of the default <code class="docutils literal notranslate"><span class="pre">blue</span></code>
+attribute is <strong>to adjust their terminal emulator’s color scheme of the base
+16 colors</strong>.</p>
+<p>This is not necessary: the environment variable <code class="docutils literal notranslate"><span class="pre">LSCOLORS</span></code> may be redefined
+to map an alternative color for blue, or to use <code class="docutils literal notranslate"><span class="pre">bright_blue</span></code> in its place.</p>
+<p>Furthermore, all common terminal text editors such as emacs or vim may be
+configured with “colorschemes” to make use of the 256-color support found in
+most modern emulators.  Many readable shades of blue are available, and many
+programs that emit such colors can be configured to emit a higher or lower
+intensity variant from the full 256 color space through program configuration.</p>
+</div>
+</div>
+<div class="section" id="monochrome-and-reverse">
+<h2>Monochrome and reverse<a class="headerlink" href="#monochrome-and-reverse" title="Permalink to this headline">¶</a></h2>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">reverse</span></code> takes the current foreground and background colors and
+reverses them.  In contrast, the compound formatter <code class="docutils literal notranslate"><span class="pre">black_on_red</span></code> would
+fail to set the background <em>or</em> foreground color on a monochrome display,
+resulting in the same stylization as <code class="docutils literal notranslate"><span class="pre">normal</span></code> – it would not appear any
+different!</p>
+<p>If your userbase consists of monochrome terminals, you may wish to provide
+“lightbars” and other such effects using the compound formatter
+<code class="docutils literal notranslate"><span class="pre">red_reverse</span></code>.  In the literal sense of “set foreground color to red, then
+swap foreground and background”, this produces a similar effect on
+<strong>both</strong> color and monochrome displays.</p>
+<p>For text, very few <code class="docutils literal notranslate"><span class="pre">{color}_on_{color}</span></code> formatters are visible with the
+base 16 colors, so you should generally wish for <code class="docutils literal notranslate"><span class="pre">black_on_{color}</span></code>
+anyway.  By using <code class="docutils literal notranslate"><span class="pre">{color}_reverse</span></code> you may be portable with monochrome
+displays as well.</p>
+</div>
+<div class="section" id="multibyte-encodings-and-code-pages">
+<h2>Multibyte Encodings and Code pages<a class="headerlink" href="#multibyte-encodings-and-code-pages" title="Permalink to this headline">¶</a></h2>
+<p>A terminal that supports both multibyte encodings (UTF-8) and legacy 8-bit
+code pages (ISO 2022) may instruct the terminal to switch between both
+modes using the following sequences:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\x1b%G</span></code> activates UTF-8 with an unspecified implementation level
+from ISO 2022 in a way that allows to go back to ISO 2022 again.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\x1b%&#64;</span></code> goes back from UTF-8 to ISO 2022 in case UTF-8 had been
+entered via <code class="docutils literal notranslate"><span class="pre">\x1b%G</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\x1b%/G</span></code> switches to UTF-8 Level 1 with no return.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\x1b%/H</span></code> switches to UTF-8 Level 2 with no return.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\x1b%/I</span></code> switches to UTF-8 Level 3 with no return.</p></li>
+</ul>
+</div></blockquote>
+<p>When a terminal is in ISO 2022 mode, you may use a sequence
+to request a terminal to change its <a class="reference external" href="https://en.wikipedia.org/wiki/Code_page">code page</a>.  It begins by <code class="docutils literal notranslate"><span class="pre">\x1b(</span></code>,
+followed by an ASCII character representing a code page selection.  For
+example <code class="docutils literal notranslate"><span class="pre">\x1b(U</span></code> on the legacy VGA Linux console switches to the <a class="reference external" href="https://en.wikipedia.org/wiki/Code_page_437">IBM CP437</a>
+<a class="reference external" href="https://en.wikipedia.org/wiki/Code_page">code page</a>, allowing North American MS-DOS artwork to be displayed in its
+natural 8-bit byte encoding.  A list of standard codes and the expected code
+page may be found on Thomas E. Dickey’s xterm control sequences section on
+sequences following the <a class="reference external" href="http://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h2-Controls-beginning-with-ESC">Control-Sequence-Inducer</a>.</p>
+<p>For more information, see <a class="reference external" href="http://www.cl.cam.ac.uk/~mgk25/unicode.html#term">What are the issues related to UTF-8 terminal
+emulators?</a> by
+<a class="reference external" href="http://www.cl.cam.ac.uk/~mgk25/">Markus Kuhn</a> of the University of
+Cambridge.</p>
+<p>One can be assured that the connecting client is capable of representing
+UTF-8 and other multibyte character encodings by the Environment variable
+<code class="docutils literal notranslate"><span class="pre">LANG</span></code>.  If this is not possible or reliable, there is an intrusive detection
+method demonstrated in the example program <a class="reference internal" href="examples.html#detect-multibyte-py"><span class="std std-ref">detect-multibyte.py</span></a>.</p>
+</div>
+<div class="section" id="alt-or-meta-sends-escape">
+<h2>Alt or meta sends Escape<a class="headerlink" href="#alt-or-meta-sends-escape" title="Permalink to this headline">¶</a></h2>
+<p>Programs using GNU readline such as bash continue to provide default mappings
+such as <em>ALT+u</em> to uppercase the word after cursor.  This is achieved
+by the configuration option altSendsEscape or <a class="reference external" href="http://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h2-Alt-and-Meta-Keys">metaSendsEscape</a></p>
+<p>The default for most terminals, however, is that the meta key is bound by
+the operating system (such as <em>META + F</em> for find), and that <em>ALT</em> is used
+for inserting international keys (where the combination <em>ALT+u, a</em> is used
+to insert the character <code class="docutils literal notranslate"><span class="pre">ä</span></code>).</p>
+<p>It is therefore a recommendation to <strong>avoid alt or meta keys entirely</strong> in
+applications, and instead prefer the ctrl-key combinations, so as to avoid
+instructing your users to configure their terminal emulators to communicate
+such sequences.</p>
+<p>If you wish to allow them optionally (such as through readline), the ability
+to detect alt or meta key combinations is achieved by prefacing the combining
+character with escape, so that <em>ALT+z</em> becomes <em>Escape + z</em> (or, in raw form
+<code class="docutils literal notranslate"><span class="pre">\x1bz</span></code>).  Blessings currently provides no further assistance in detecting
+these key combinations.</p>
+</div>
+<div class="section" id="backspace-sends-delete">
+<h2>Backspace sends delete<a class="headerlink" href="#backspace-sends-delete" title="Permalink to this headline">¶</a></h2>
+<p>Typically, backspace is <code class="docutils literal notranslate"><span class="pre">^H</span></code> (8, or 0x08) and delete is ^? (127, or 0x7f).</p>
+<p>On some systems however, the key for backspace is actually labeled and
+transmitted as “delete”, though its function in the operating system behaves
+just as backspace.</p>
+<p>It is highly recommend to accept <strong>both</strong> <code class="docutils literal notranslate"><span class="pre">KEY_DELETE</span></code> and <code class="docutils literal notranslate"><span class="pre">KEY_BACKSPACE</span></code>
+as having the same meaning except when implementing full screen editors,
+and provide a choice to enable the delete mode by configuration.</p>
+</div>
+<div class="section" id="the-misnomer-of-ansi">
+<h2>The misnomer of ANSI<a class="headerlink" href="#the-misnomer-of-ansi" title="Permalink to this headline">¶</a></h2>
+<p>When people say ‘ANSI Sequence’, they are discussing:</p>
+<ul class="simple">
+<li><p>Standard <a class="reference external" href="http://www.ecma-international.org/publications/standards/Ecma-048.htm">ECMA-48</a>: Control Functions for Coded Character Sets</p></li>
+<li><p><a class="reference external" href="http://sydney.edu.au/engineering/it/~tapted/ansi.html">ANSI X3.64</a> from
+1981, when the <a class="reference external" href="http://www.ansi.org/">American National Standards Institute</a> adopted the <a class="reference external" href="http://www.ecma-international.org/publications/standards/Ecma-048.htm">ECMA-48</a> as standard, which was later
+withdrawn in 1997 (so in this sense it is <em>not</em> an ANSI standard).</p></li>
+<li><p>The <a class="reference external" href="http://www.kegel.com/nansi/">ANSI.SYS</a> driver provided in MS-DOS and
+clones.  The popularity of the IBM Personal Computer and MS-DOS of the era,
+and its ability to display colored text further populated the idea that such
+text “is ANSI”.</p></li>
+<li><p>The various code pages used in MS-DOS Personal Computers,
+providing “block art” characters in the 8th bit (int 127-255), paired
+with <a class="reference external" href="http://www.ecma-international.org/publications/standards/Ecma-048.htm">ECMA-48</a> sequences supported by the MS-DOS <a class="reference external" href="http://www.kegel.com/nansi/">ANSI.SYS</a> driver
+to create artwork, known as <a class="reference external" href="http://pc.textmod.es/">ANSI art</a>.</p></li>
+<li><p>The ANSI terminal database entry and its many descendants in the
+<a class="reference external" href="http://invisible-island.net/ncurses/terminfo.src.html">terminfo database</a>.  This is mostly
+due to terminals compatible with SCO UNIX, which was the successor of
+Microsoft’s Xenix, which brought some semblance of the Microsoft DOS
+<a class="reference external" href="http://www.kegel.com/nansi/">ANSI.SYS</a> driver capabilities.</p></li>
+<li><p><a class="reference external" href="http://vt100.net/docs/vt510-rm/SGR">Select Graphics Rendition (SGR)</a>
+on vt100 clones, which include many of the common sequences in <a class="reference external" href="http://www.ecma-international.org/publications/standards/Ecma-048.htm">ECMA-48</a>.</p></li>
+<li><p>Any sequence started by the <a class="reference external" href="http://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h2-Controls-beginning-with-ESC">Control-Sequence-Inducer</a> is often
+mistakenly termed as an “ANSI Escape Sequence” though not appearing in
+<a class="reference external" href="http://www.ecma-international.org/publications/standards/Ecma-048.htm">ECMA-48</a> or interpreted by the <a class="reference external" href="http://www.kegel.com/nansi/">ANSI.SYS</a> driver. The adjoining phrase
+“Escape Sequence” is so termed because it follows the ASCII character
+for the escape key (ESC, <code class="docutils literal notranslate"><span class="pre">\x1b</span></code>).</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="further.html" class="btn btn-neutral float-left" title="Further Reading" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,844 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; Blessed 1.17.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#styling-and-formatting">Styling and Formatting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#capabilities">Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colors">Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#colorless-terminals">Colorless Terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compound-formatting">Compound Formatting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-the-cursor">Moving The Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finding-the-cursor">Finding The Cursor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#one-notch-movement">One-Notch Movement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#height-and-width">Height And Width</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearing-the-screen">Clearing The Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-screen-mode">Full-Screen Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pipe-savvy">Pipe Savvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sequence-awareness">Sequence Awareness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-input">Keyboard Input</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cbreak">cbreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raw">raw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inkey">inkey</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keyboard-codes">keyboard codes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="further.html">Further Reading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pains.html">Growing Pains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Blessed provides just <strong>one</strong> top-level object: <a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a>.
+Instantiating a <a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> figures out whether you’re on a terminal at
+all and, if so, does any necessary setup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>After that, you can proceed to ask it all sorts of things about the terminal,
+such as its size:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">width</span>
+<span class="go">(34, 102)</span>
+</pre></div>
+</div>
+<p>Its color support:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">number_of_colors</span>
+<span class="go">256</span>
+</pre></div>
+</div>
+<p>And use construct strings containing color and styling:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">green_reverse</span><span class="p">(</span><span class="s1">&#39;ALL SYSTEMS GO&#39;</span><span class="p">)</span>
+<span class="go">&#39;\x1b[32m\x1b[7mALL SYSTEMS GO\x1b[m&#39;</span>
+</pre></div>
+</div>
+<p>Furthermore, the special sequences inserted with application keys
+(arrow and function keys) are understood and decoded, as well as your
+locale-specific encoded multibyte input, such as utf-8 characters.</p>
+<div class="section" id="styling-and-formatting">
+<h2>Styling and Formatting<a class="headerlink" href="#styling-and-formatting" title="Permalink to this headline">¶</a></h2>
+<p>Lots of handy formatting codes are available as attributes on a
+<a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> class instance. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am &#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">bold</span> <span class="o">+</span> <span class="s1">&#39;bold&#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These capabilities (<em>bold</em>, <em>normal</em>) are translated to their sequences, which
+when displayed simply change the video attributes.  And, when used as a
+callable, automatically wraps the given string with this sequence, and
+terminates it with <em>normal</em>.</p>
+<p>The same can be written as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I am&#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You may also use the <a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance as an argument for
+the <code class="xref py py-meth docutils literal notranslate"><span class="pre">str.format`()</span></code> method, so that capabilities can be displayed in-line
+for more complex strings:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{t.red_on_yellow}</span><span class="s1">Candy corn</span><span class="si">{t.normal}</span><span class="s1"> for everyone!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="n">term</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="capabilities">
+<h3>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this headline">¶</a></h3>
+<p>Capabilities supported by most terminals are:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">bold</span></code></dt><dd><p>Turn on ‘extra bright’ mode.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">reverse</span></code></dt><dd><p>Switch fore and background attributes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">blink</span></code></dt><dd><p>Turn on blinking.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">normal</span></code></dt><dd><p>Reset attributes to default.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">underline</span></code></dt><dd><p>Enable underline mode.</p>
+</dd>
+</dl>
+<p>Note that, while the inverse of <em>underline</em> is <em>no_underline</em>, the only way
+to turn off <em>bold</em> or <em>reverse</em> is <em>normal</em>, which also cancels any custom
+colors.</p>
+<p>Many of these are aliases, their true capability names (such as ‘smul’ for
+‘begin underline mode’) may still be used. Any capability in the <a class="reference external" href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man4/termios.3">terminfo(5)</a>
+manual, under column <strong>Cap-name</strong>, may be used as an attribute of a
+<a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance. If it is not a supported capability for the
+current terminal, or a non-tty is used as output stream, an empty string is
+always returned.</p>
+</div>
+<div class="section" id="colors">
+<h3>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h3>
+<p>XXX TODO XXX</p>
+<p>all X11 colors are available,
+rgb(int, int, int),
+truecolor is automatically detected,
+or, downsampled to 256 or 16, 8, etc colorspace.</p>
+<p>Color terminals are capable of at least 8 basic colors.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">black</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">red</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">green</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">yellow</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">magenta</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cyan</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">white</span></code></p></li>
+</ul>
+<p>The same colors, prefixed with <em>bright_</em> (synonymous with <em>bold_</em>),
+such as <em>bright_blue</em>, provides 16 colors in total.</p>
+<p>Prefixed with <em>on_</em>, the given color is used as the background color.
+Some terminals also provide an additional 8 high-intensity versions using
+<em>on_bright</em>, some example compound formats:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">on_bright_blue</span><span class="p">(</span><span class="s1">&#39;Blue skies!&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bright_red_on_bright_yellow</span><span class="p">(</span><span class="s1">&#39;Pepperoni Pizza!&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You may also specify the <a class="reference internal" href="api.html#blessed.terminal.Terminal.color" title="blessed.terminal.Terminal.color"><code class="xref py py-meth docutils literal notranslate"><span class="pre">color()</span></code></a> index by number, which
+should be within the bounds of value returned by
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">number_of_colors</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="n">idx</span><span class="p">)(</span><span class="s1">&#39;Color </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>You can check whether the terminal definition used supports colors, and how
+many, using the <code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code> property, which returns
+any of <em>0</em>, <em>8</em> or <em>256</em> for terminal types such as <em>vt220</em>, <em>ansi</em>, and
+<em>xterm-256color</em>, respectively.</p>
+</div>
+<div class="section" id="colorless-terminals">
+<h3>Colorless Terminals<a class="headerlink" href="#colorless-terminals" title="Permalink to this headline">¶</a></h3>
+<p>If the terminal defined by the Environment variable <strong>TERM</strong> does not support
+colors, these simply return empty strings.  When used as a callable, the string
+passed as an argument is returned as-is.  Most sequences emitted to a terminal
+that does not support them are usually harmless and have no effect.</p>
+<p>Colorless terminals (such as the amber or green monochrome <em>vt220</em>) do not
+support colors but do support reverse video. For this reason, it may be
+desirable in some applications to simply select a foreground color, followed
+by reverse video to achieve the desired background color effect:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">green_reverse</span><span class="p">(</span><span class="s1">&#39;some terminals standout more than others&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Which appears as <em>black on green</em> on color terminals, but <em>black text
+on amber or green</em> on monochrome terminals. Whereas the more declarative
+formatter <em>black_on_green</em> would remain colorless.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On most color terminals, <em>bright_black</em> is not invisible – it is
+actually a very dark shade of grey!</p>
+</div>
+</div>
+<div class="section" id="compound-formatting">
+<h3>Compound Formatting<a class="headerlink" href="#compound-formatting" title="Permalink to this headline">¶</a></h3>
+<p>If you want to do lots of crazy formatting all at once, you can just mash it
+all together:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bold_underline_green_on_yellow</span><span class="p">(</span><span class="s1">&#39;Woo&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>I’d be remiss if I didn’t credit <a class="reference external" href="https://pypi.python.org/pypi/couleur">couleur</a>, where I probably got the idea for
+all this mashing.</p>
+<p>This compound notation comes in handy if you want to allow users to customize
+formatting, just allow compound formatters, like <em>bold_green</em>, as a command
+line argument or configuration item such as in the <a class="reference internal" href="examples.html#tprint-py"><span class="std std-ref">tprint.py</span></a>
+demonstration script.</p>
+</div>
+</div>
+<div class="section" id="moving-the-cursor">
+<h2>Moving The Cursor<a class="headerlink" href="#moving-the-cursor" title="Permalink to this headline">¶</a></h2>
+<p>If you just want to move and aren’t worried about returning, do something like
+this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;Hi, mom!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are three basic direct movement capabilities:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">move_xy(x,</span> <span class="pre">y)</span></code></dt><dd><p>Position cursor at given <strong>x</strong>, <strong>y</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_x(x)</span></code></dt><dd><p>Position cursor at column <strong>x</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_y(y)</span></code></dt><dd><p>Position cursor at row <strong>y</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">home</span></code></dt><dd><p>Position cursor at (0, 0).</p>
+</dd>
+</dl>
+<p>And your basic set of relative capabilities:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">move_up</span></code> or <code class="docutils literal notranslate"><span class="pre">move_up(y)</span></code></dt><dd><p>Position cursor 1 or <strong>y</strong> cells above the current position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_down</span></code> or <code class="docutils literal notranslate"><span class="pre">move_down(y)</span></code></dt><dd><p>Position cursor 1 or <strong>y</strong> cells below the current position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_left</span></code> or <code class="docutils literal notranslate"><span class="pre">move_left(x)</span></code></dt><dd><p>Position cursor 1 or <strong>x</strong> cells left of the current position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_right</span></code> or <code class="docutils literal notranslate"><span class="pre">move_right(x)</span></code></dt><dd><p>Position cursor 1 or <strong>x</strong> cells right of the current position.</p>
+</dd>
+</dl>
+<p>A context manager, <a class="reference internal" href="api.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> is provided to move the cursor
+to an <em>(x, y)</em> screen position and <em>restore the previous position</em> on exit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here is the bottom.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is back where I came from.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Parameters to <a class="reference internal" href="api.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> are the <strong>optional</strong> <em>x</em> and/or <em>y</em> keyword arguments.
+When only one argument is used, only the row or column is positioned. When both arguments are
+omitted, it saves the current cursor position, without performing any movement, but restore that
+position on exit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;Hi&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;Mom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>calls to <a class="reference internal" href="api.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> may not be nested.</p>
+</div>
+</div>
+<div class="section" id="finding-the-cursor">
+<h2>Finding The Cursor<a class="headerlink" href="#finding-the-cursor" title="Permalink to this headline">¶</a></h2>
+<p>We can determine the cursor’s current position at anytime using
+<a class="reference internal" href="api.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>, returning the current (y, x) location.  This uses a
+kind of “answer back” sequence that your terminal emulator responds to.  If
+the terminal may not respond, the <a class="reference internal" href="api.html#blessed.terminal.Terminal.get_location.params.timeout" title="blessed.terminal.Terminal.get_location"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">timeout</span></code></a> keyword
+argument can be specified to return coordinates (-1, -1) after a blocking
+timeout:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">get_location</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_y</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">height</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;Get down there!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="one-notch-movement">
+<h3>One-Notch Movement<a class="headerlink" href="#one-notch-movement" title="Permalink to this headline">¶</a></h3>
+<p>Finally, there are some parameterless movement capabilities that move the
+cursor one character in various directions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">move_left</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move_right</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move_up</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">move_down</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>move_down</em> is often valued as <em>\n</em>, which additionally returns
+the carriage to column 0, depending on your terminal emulator, and may
+also destructively destroy any characters at the given position to the
+end of margin.</p>
+</div>
+</div>
+</div>
+<div class="section" id="height-and-width">
+<h2>Height And Width<a class="headerlink" href="#height-and-width" title="Permalink to this headline">¶</a></h2>
+<p>Use the <code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code> properties to
+determine the size of the window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="n">height</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">width</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">term</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;1/3 ways in!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These values are always current.  To detect when the size of the window
+changes, you may author a callback for <a class="reference external" href="https://en.wikipedia.org/wiki/SIGWINCH">SIGWINCH</a> signals:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">on_resize</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;height=</span><span class="si">{t.height}</span><span class="s1">, width=</span><span class="si">{t.width}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="n">term</span><span class="p">))</span>
+
+<span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGWINCH</span><span class="p">,</span> <span class="n">on_resize</span><span class="p">)</span>
+
+<span class="c1"># wait for keypress</span>
+<span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not compatible with Windows!</p>
+</div>
+</div>
+<div class="section" id="clearing-the-screen">
+<h2>Clearing The Screen<a class="headerlink" href="#clearing-the-screen" title="Permalink to this headline">¶</a></h2>
+<p>Blessed provides syntactic sugar over some screen-clearing capabilities:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">clear</span></code></dt><dd><p>Clear the whole screen.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">clear_eol</span></code></dt><dd><p>Clear to the end of the line.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">clear_bol</span></code></dt><dd><p>Clear backward to the beginning of the line.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">clear_eos</span></code></dt><dd><p>Clear to the end of screen.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="full-screen-mode">
+<h2>Full-Screen Mode<a class="headerlink" href="#full-screen-mode" title="Permalink to this headline">¶</a></h2>
+<p>If you’ve ever noticed a program, such as an editor, restores the previous
+screen (such as your shell prompt) after exiting, you’re seeing the
+<em>enter_fullscreen</em> and <em>exit_fullscreen</em> attributes in effect.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">enter_fullscreen</span></code></dt><dd><p>Switch to alternate screen, previous screen is stored by terminal driver.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">exit_fullscreen</span></code></dt><dd><p>Switch back to standard screen, restoring the same terminal state.</p>
+</dd>
+</dl>
+<p>There’s also a context manager you can use as a shortcut:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">fullscreen</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_y</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
+          <span class="n">term</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="s1">&#39;press any key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+    <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pipe-savvy">
+<h2>Pipe Savvy<a class="headerlink" href="#pipe-savvy" title="Permalink to this headline">¶</a></h2>
+<p>If your program isn’t attached to a terminal, such as piped to a program
+like <em>less(1)</em> or redirected to a file, all the capability attributes on
+<a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> will return empty strings. You’ll get a nice-looking
+file without any formatting codes gumming up the works.</p>
+<p>If you want to override this, such as when piping output to <em>less -r</em>, pass
+argument value <em>True</em> to the <a class="reference internal" href="api.html#blessed.terminal.Terminal.params.force_styling" title="blessed.terminal.Terminal"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">force_styling</span></code></a> parameter.</p>
+<p>In any case, there is a <code class="xref py py-attr docutils literal notranslate"><span class="pre">does_styling</span></code> attribute that lets
+you see whether the terminal attached to the output stream is capable of
+formatting.  If it is <em>False</em>, you may refrain from drawing progress
+bars and other frippery and just stick to content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Progress: [=======&gt;   ]&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="s2">&quot;60%&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequence-awareness">
+<h2>Sequence Awareness<a class="headerlink" href="#sequence-awareness" title="Permalink to this headline">¶</a></h2>
+<p>Blessed may measure the printable width of strings containing sequences,
+providing <a class="reference internal" href="api.html#blessed.terminal.Terminal.center" title="blessed.terminal.Terminal.center"><code class="xref py py-meth docutils literal notranslate"><span class="pre">center()</span></code></a>, <a class="reference internal" href="api.html#blessed.terminal.Terminal.ljust" title="blessed.terminal.Terminal.ljust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ljust()</span></code></a>, and
+<a class="reference internal" href="api.html#blessed.terminal.Terminal.rjust" title="blessed.terminal.Terminal.rjust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rjust()</span></code></a> methods, using the terminal screen’s width as
+the default <em>width</em> value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="s1">&#39;bold and centered&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Any string containing sequences may have its printable length measured using
+the <a class="reference internal" href="api.html#blessed.terminal.Terminal.length" title="blessed.terminal.Terminal.length"><code class="xref py py-meth docutils literal notranslate"><span class="pre">length()</span></code></a> method.</p>
+<p>Additionally, a sequence-aware version of <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.wrap" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">textwrap.wrap()</span></code></a> is supplied as
+class as method <a class="reference internal" href="api.html#blessed.terminal.Terminal.wrap" title="blessed.terminal.Terminal.wrap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap()</span></code></a> that is also sequence-aware, so now you
+may word-wrap strings containing sequences.  The following example displays a
+poem word-wrapped to 25 columns:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="n">poem</span> <span class="o">=</span> <span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bold_cyan</span><span class="p">(</span><span class="s1">&#39;Plan difficult tasks&#39;</span><span class="p">),</span>
+        <span class="n">term</span><span class="o">.</span><span class="n">cyan</span><span class="p">(</span><span class="s1">&#39;through the simplest tasks&#39;</span><span class="p">),</span>
+        <span class="n">term</span><span class="o">.</span><span class="n">bold_cyan</span><span class="p">(</span><span class="s1">&#39;Achieve large tasks&#39;</span><span class="p">),</span>
+        <span class="n">term</span><span class="o">.</span><span class="n">cyan</span><span class="p">(</span><span class="s1">&#39;through the smallest tasks&#39;</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">poem</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">subsequent_indent</span><span class="o">=</span><span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Sometimes it is necessary to make sense of sequences, and to distinguish them
+from plain text.  The <a class="reference internal" href="api.html#blessed.terminal.Terminal.split_seqs" title="blessed.terminal.Terminal.split_seqs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">split_seqs()</span></code></a> method can allow us to
+iterate over a terminal string by its characters or sequences:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="n">phrase</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="s1">&#39;bbq&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">split_seqs</span><span class="p">(</span><span class="n">phrase</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Will display something like, <code class="docutils literal notranslate"><span class="pre">['\x1b[1m',</span> <span class="pre">'b',</span> <span class="pre">'b',</span> <span class="pre">'q',</span> <span class="pre">'\x1b(B',</span> <span class="pre">'\x1b[m']</span></code></p>
+<p>Similarly, the method <a class="reference internal" href="api.html#blessed.terminal.Terminal.strip_seqs" title="blessed.terminal.Terminal.strip_seqs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">strip_seqs()</span></code></a> may be used on a string to
+remove all occurrences of terminal sequences:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="n">phrase</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">bold_black</span><span class="p">(</span><span class="s1">&#39;coffee&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">(</span><span class="n">phrase</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Will display only <code class="docutils literal notranslate"><span class="pre">'coffee'</span></code></p>
+</div>
+<div class="section" id="keyboard-input">
+<h2>Keyboard Input<a class="headerlink" href="#keyboard-input" title="Permalink to this headline">¶</a></h2>
+<p>The built-in python function <code class="xref py py-func docutils literal notranslate"><span class="pre">raw_input()</span></code> does not return a value until
+the return key is pressed, and is not suitable for detecting each individual
+keypress, much less arrow or function keys.</p>
+<p>Furthermore, when calling <a class="reference external" href="https://docs.python.org/3/library/os.html#os.read" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.read()</span></code></a> on input stream, only bytes are
+received, which must be decoded to unicode using the locale-preferred encoding.
+Finally, multiple bytes may be emitted which must be paired with some verb like
+<code class="docutils literal notranslate"><span class="pre">KEY_LEFT</span></code>: blessed handles all of these special cases for you!</p>
+<div class="section" id="cbreak">
+<h3>cbreak<a class="headerlink" href="#cbreak" title="Permalink to this headline">¶</a></h3>
+<p>The context manager <a class="reference internal" href="api.html#blessed.terminal.Terminal.cbreak" title="blessed.terminal.Terminal.cbreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cbreak()</span></code></a> can be used to enter
+<em>key-at-a-time</em> mode: Any keypress by the user is immediately consumed by read
+calls:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">cbreak</span><span class="p">():</span>
+    <span class="c1"># block until any single key is pressed.</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The mode entered using <a class="reference internal" href="api.html#blessed.terminal.Terminal.cbreak" title="blessed.terminal.Terminal.cbreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cbreak()</span></code></a> is called
+<a class="reference external" href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/cbreak.3">cbreak(3)</a> in curses:</p>
+<blockquote>
+<div><p>The cbreak routine disables line buffering and erase/kill
+character-processing (interrupt and flow control characters are unaffected),
+making characters typed by the user immediately available to the program.</p>
+</div></blockquote>
+</div>
+<div class="section" id="raw">
+<h3>raw<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="api.html#blessed.terminal.Terminal.raw" title="blessed.terminal.Terminal.raw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">raw()</span></code></a> is similar to cbreak, except that control-C and
+other keystrokes are “ignored”, and received as their keystroke value
+rather than interrupting the program with signals.</p>
+<p>Output processing is also disabled, you must print phrases with carriage
+return after newline. Without raw mode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello, world.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With raw mode:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello, world.&quot;</span><span class="p">,</span> <span class="n">endl</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inkey">
+<h3>inkey<a class="headerlink" href="#inkey" title="Permalink to this headline">¶</a></h3>
+<p>The method <a class="reference internal" href="api.html#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> combined with <a class="reference internal" href="#cbreak">cbreak</a>
+completes the circle of providing key-at-a-time keyboard input with multibyte
+encoding and awareness of application keys.</p>
+<p><a class="reference internal" href="api.html#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> resolves many issues with terminal input by
+returning a unicode-derived <a class="reference internal" href="api.html#blessed.keyboard.Keystroke" title="blessed.keyboard.Keystroke"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keystroke</span></code></a> instance.  Its return value
+may be printed, joined with, or compared like any other unicode strings, it
+also provides the special attributes <code class="xref py py-attr docutils literal notranslate"><span class="pre">is_sequence</span></code>,
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">code</span></code>, and <code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;press &#39;q&#39; to quit.&quot;</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">cbreak</span><span class="p">():</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">while</span> <span class="n">val</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">val</span><span class="p">:</span>
+           <span class="c1"># timeout</span>
+           <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It sure is quiet in here ...&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">val</span><span class="o">.</span><span class="n">is_sequence</span><span class="p">:</span>
+           <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;got sequence: </span><span class="si">{0}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">val</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">code</span><span class="p">)))</span>
+        <span class="k">elif</span> <span class="n">val</span><span class="p">:</span>
+           <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;got </span><span class="si">{0}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bye!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Its output might appear as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>got sequence: (&#39;\x1b[A&#39;, &#39;KEY_UP&#39;, 259).
+got sequence: (&#39;\x1b[1;2A&#39;, &#39;KEY_SUP&#39;, 337).
+got sequence: (&#39;\x1b[17~&#39;, &#39;KEY_F6&#39;, 270).
+got sequence: (&#39;\x1b&#39;, &#39;KEY_ESCAPE&#39;, 361).
+got sequence: (&#39;\n&#39;, &#39;KEY_ENTER&#39;, 343).
+got /.
+It sure is quiet in here ...
+got sequence: (&#39;\x1bOP&#39;, &#39;KEY_F1&#39;, 265).
+It sure is quiet in here ...
+got q.
+bye!
+</pre></div>
+</div>
+<p>A <a class="reference internal" href="api.html#blessed.terminal.Terminal.inkey.params.timeout" title="blessed.terminal.Terminal.inkey"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">timeout</span></code></a> value of <em>None</em> (default) will block
+forever until a keypress is received. Any other value specifies the length of
+time to poll for input: if no input is received after the given time has
+elapsed, an empty string is returned. A <a class="reference internal" href="api.html#blessed.terminal.Terminal.inkey.params.timeout" title="blessed.terminal.Terminal.inkey"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">timeout</span></code></a>
+value of <em>0</em> is non-blocking.</p>
+</div>
+<div class="section" id="keyboard-codes">
+<h3>keyboard codes<a class="headerlink" href="#keyboard-codes" title="Permalink to this headline">¶</a></h3>
+<p>When the <code class="xref py py-attr docutils literal notranslate"><span class="pre">is_sequence</span></code> property tests <em>True</em>, the value
+is a special application key of the keyboard.  The <code class="xref py py-attr docutils literal notranslate"><span class="pre">code</span></code>
+attribute may then be compared with attributes of <a class="reference internal" href="api.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a>,
+which are duplicated from those found in <a class="reference external" href="http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/curs_getch.3">curs_getch(3)</a>, or those
+<a class="reference external" href="https://docs.python.org/3/library/curses.html#constants">constants</a>
+in <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> beginning with phrase <em>KEY_</em>.</p>
+<p>Some of these mnemonics are shorthand or predate modern PC terms and
+are difficult to recall. The following helpful aliases are provided
+instead:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 25%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>blessed</p></th>
+<th class="head"><p>curses</p></th>
+<th class="head"><p>note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_DELETE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_DC</span></code></p></td>
+<td><p>chr(127).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_TAB</span></code></p></td>
+<td></td>
+<td><p>chr(9)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_INSERT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_IC</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_PGUP</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_PPAGE</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_PGDOWN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_NPAGE</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_ESCAPE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_EXIT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_SUP</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_SR</span></code></p></td>
+<td><p>(shift + up)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_SDOWN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_SF</span></code></p></td>
+<td><p>(shift + down)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_DOWN_LEFT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_C1</span></code></p></td>
+<td><p>(keypad lower-left)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_UP_RIGHT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_A1</span></code></p></td>
+<td><p>(keypad upper-left)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_DOWN_RIGHT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_C3</span></code></p></td>
+<td><p>(keypad lower-left)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_UP_RIGHT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_A3</span></code></p></td>
+<td><p>(keypad lower-right)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_CENTER</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_B2</span></code></p></td>
+<td><p>(keypad center)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KEY_BEGIN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">KEY_BEG</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The <code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code> property will prefer these
+aliases over the built-in <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> names.</p>
+<p>The following are <strong>not</strong> available in the <a class="reference external" href="https://docs.python.org/3/library/curses.html#module-curses" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> module, but are
+provided for keypad support, especially where the <a class="reference internal" href="api.html#blessed.terminal.Terminal.keypad" title="blessed.terminal.Terminal.keypad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code></a>
+context manager is used with numlock on:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_MULTIPLY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_ADD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_SEPARATOR</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_SUBTRACT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_DECIMAL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_DIVIDE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_KP_0</span></code> through <code class="docutils literal notranslate"><span class="pre">KEY_KP_9</span></code></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+pytest>=3.5.0
+jinja2
+selenium
+pydantic
+webdriver-manager

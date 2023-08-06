@@ -1,0 +1,11 @@
+mypy_boto3_lightsail/__init__.py,sha256=0qSucZI8l6NOqTuvgm_oSN7e5FCSwxU8pCKcJeZ7z9k,4945
+mypy_boto3_lightsail/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_lightsail/client.py,sha256=4t_Mxx5_hCuYPBlsLkljJyrZrqUh5xQe9eXlhQhEfjY,60121
+mypy_boto3_lightsail/paginator.py,sha256=oANE6fT__myw8WBsMaTNcwDeHb7do0B4_v1qiWOxeF0,17238
+mypy_boto3_lightsail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_lightsail/type_defs.py,sha256=evYw9OpvDCjEFDtl0xwifRu1WNy94QjpVxGnsskYzVQ,61962
+mypy_boto3_lightsail/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_lightsail-1.14.0.0.dist-info/METADATA,sha256=_QFYgRPj1HKsqYRPJgSqMxgDwA3qYJQBaeQIBvDFDlg,6755
+mypy_boto3_lightsail-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_lightsail-1.14.0.0.dist-info/top_level.txt,sha256=V_GO38lnmr7DKRuc9O8UY7xZmAWXFBps1rsEoEf_bDg,21
+mypy_boto3_lightsail-1.14.0.0.dist-info/RECORD,,

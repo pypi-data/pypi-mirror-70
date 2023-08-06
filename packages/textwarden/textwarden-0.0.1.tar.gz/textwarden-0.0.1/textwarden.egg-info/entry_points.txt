@@ -1,0 +1,4 @@
+[console_scripts]
+textwarden = textwarden.__main__:cli
+tw = textwarden.__main__:cli
+

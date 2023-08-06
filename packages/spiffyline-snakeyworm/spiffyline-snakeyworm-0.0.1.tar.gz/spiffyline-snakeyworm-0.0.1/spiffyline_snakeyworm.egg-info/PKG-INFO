@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: spiffyline-snakeyworm
+Version: 0.0.1
+Summary: Spiff up your CLI with color, formatting, and utilities
+Home-page: https://github.com/snakeyworm/spiffy-line
+Author: Caleb Loera
+License: UNKNOWN
+Description: 
+        A package for terminal formatting and logging using ANSI escape sequences
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

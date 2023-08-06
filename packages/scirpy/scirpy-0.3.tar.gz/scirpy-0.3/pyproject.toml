@@ -1,0 +1,59 @@
+[build-system]
+requires = ['flit']
+build-backend = 'flit.buildapi'
+
+[tool.flit.metadata]
+module = 'scirpy'
+author = 'Gregor Sturm'
+author-email = 'gregor.sturm@i-med.ac.at'
+home-page = 'https://github.com/grst/scirpy'
+description-file = "README.rst"
+classifiers = [
+    'License :: OSI Approved :: BSD License',
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: R'
+]
+requires-python = '>= 3.6'
+requires = [
+    'get_version',
+    'anndata>=0.7.3',
+    'scanpy>=1.5.1',
+    'pandas>=0.21',
+    'numpy',
+    'scipy',
+    'parasail',
+    'scikit-learn',
+    'python-levenshtein',
+    'python-igraph',
+    'networkx',
+    'squarify',
+    'airr',
+    'tqdm>=4.29.1' # See https://github.com/icbi-lab/scirpy/issues/128#issuecomment-632646608
+]
+
+[tool.flit.metadata.requires-extra]
+optional = [
+    'rectangle-packer',
+]
+test = [
+    'pytest',
+    'black'
+]
+doc = [
+    'sphinx>=3.0.1',
+    'sphinx_autodoc_typehints>=1.8.0',
+    'sphinx_rtd_theme>=0.4',
+    'scanpydoc>=0.4.5',
+    'typing_extensions; python_version < "3.8"',  # for `Literal`
+    # for tutorial
+    'leidenalg',
+    'nbsphinx>=0.6.0',
+    'jupytext',
+    'sphinxcontrib-bibtex>=1.0.0',
+    'pycairo',
+    'jupyter_client',
+    'ipykernel',
+]

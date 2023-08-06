@@ -1,0 +1,3 @@
+[console_scripts]
+jsonbrowse = pyauxm.bin.jsonbrowse:main
+

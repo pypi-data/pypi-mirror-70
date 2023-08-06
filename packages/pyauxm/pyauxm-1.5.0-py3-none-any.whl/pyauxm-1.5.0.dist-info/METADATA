@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyauxm
+Version: 1.5.0
+Summary: Collection of helpers and useful things for Python: library-specific pieces
+Home-page: https://gitlab.com/hoverhell/pyauxm
+Author: HoverHell
+Author-email: hoverhell@gmail.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/hoverhell/pyauxm/-/archive/1.5.0/pyauxm-1.5.0.tar.bz2
+Platform: UNKNOWN
+Requires-Dist: six
+Requires-Dist: pyaux
+Provides-Extra: jsonbrowse
+Requires-Dist: urwid; extra == 'jsonbrowse'
+Provides-Extra: known
+Requires-Dist: django; extra == 'known'
+Requires-Dist: Twisted; extra == 'known'
+Requires-Dist: Cython; extra == 'known'
+Requires-Dist: pandas; extra == 'known'
+Requires-Dist: Pygments; extra == 'known'
+Requires-Dist: pylzma; extra == 'known'
+Requires-Dist: simplejson; extra == 'known'
+Requires-Dist: pp; extra == 'known'
+Requires-Dist: line-profiler; extra == 'known'
+Requires-Dist: pyzmq; extra == 'known'
+Requires-Dist: urwid; extra == 'known'
+
+
+pyauxm
+======
+
+...
+
+

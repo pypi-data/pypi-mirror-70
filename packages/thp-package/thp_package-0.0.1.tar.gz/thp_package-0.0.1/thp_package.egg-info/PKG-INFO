@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: thp-package
+Version: 0.0.1
+Summary: Weather Monitoring
+Home-page: UNKNOWN
+Author: Prabhu Prasad Biswal
+Author-email: prabhuprasadbiswal5@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7

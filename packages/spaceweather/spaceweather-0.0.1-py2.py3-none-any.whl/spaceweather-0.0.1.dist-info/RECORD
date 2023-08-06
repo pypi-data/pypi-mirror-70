@@ -1,0 +1,11 @@
+spaceweather/__init__.py,sha256=H4YCz4wspQH8QlCP3Bzlzv8JZSrTEP-dDk3wg9XXFYg,438
+spaceweather/core.py,sha256=n-e15nZLmfoWvV16xDKc3vmD8UrNWb1UTbjjNrKaS3o,10790
+spaceweather/data/.cache,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spaceweather/data/SW-All.txt,sha256=f-gtqFSz4iQHNaujI1zA97uKiR6dkay2-l6oEamup4Q,3046273
+spaceweather/data/SW-Last5Years.txt,sha256=iqK-yuhVJ0noIQPPj94PZpKX4buy3_TVywWtG9kZJxg,286020
+spaceweather-0.0.1.dist-info/COPYING.GPLv2,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+spaceweather-0.0.1.dist-info/COPYING.data,sha256=1uW53WFixf8Rt85EKpx2k3L1jofcniiLI7afDw5hzPA,717
+spaceweather-0.0.1.dist-info/METADATA,sha256=yx2ChPLBp2mC7IXXDwIzdmnRR7oU0Zga8RjsbXtwp6s,4865
+spaceweather-0.0.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+spaceweather-0.0.1.dist-info/top_level.txt,sha256=mRh8r8ycFgX3E-zzrJKiob1QLVf9bad5sN2U3OLIk6Y,13
+spaceweather-0.0.1.dist-info/RECORD,,

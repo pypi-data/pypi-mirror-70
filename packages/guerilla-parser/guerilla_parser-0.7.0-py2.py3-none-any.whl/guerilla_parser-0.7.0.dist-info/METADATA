@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: guerilla-parser
+Version: 0.7.0
+Summary: This python module provide an easy way to parse Guerilla files and navigate into parsed nodes and plugs.
+Home-page: https://github.com/Narann/guerilla_parser
+Author: Dorian Fevrier
+Author-email: fevrier.dorian@yahoo.fr
+License: MIT
+Keywords: guerilla,parser,gproject
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+
+
+Python Guerilla file parser
+===========================
+
+
+.. image:: https://travis-ci.org/Narann/guerilla_parser.svg?branch=master
+   :target: https://travis-ci.org/Narann/guerilla_parser
+   :alt: Build Status
+
+
+.. image:: https://readthedocs.org/projects/guerilla-parser/badge/?version=latest
+   :target: http://guerilla-parser.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+
+This python module provide an easy way to parse Guerilla files and navigate into parsed nodes and plugs.
+
+It support Python 2.7 and 3.4, 3.5 and 3.6.
+
+Full documentation is available `here <http://guerilla-parser.readthedocs.io>`_. It includes reference, a changelog and many examples.
+
+

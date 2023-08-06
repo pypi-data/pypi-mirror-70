@@ -1,0 +1,14 @@
+dbbase/__init__.py,sha256=vpaaeYMh8rpXHr3xYXV7ijRlRRCrtVImS_yUQpQqTb0,282
+dbbase/_version.py,sha256=OT_K8ujSDRE1wuYsdzXZAOx0cYUPFR8sT7jr-GlkcUE,36
+dbbase/base.py,sha256=kbGMIUcRPLFP0UmQvcgzgBRyLvYB5iBzWpNPkrCTWOY,14163
+dbbase/column_types.py,sha256=siCb1dGM5D8pLnb3ZSSFz4eWttpb9B-chqbssGtxAs8,378
+dbbase/doc_utils.py,sha256=DL1srCjP3qrbHVHkoS0biWLbknkrqqvVyfb37FND5Tk,7817
+dbbase/maint.py,sha256=0yclQNAImTtAbpvfRKntbK6guS3MNemtVP8mtOk36Yw,2470
+dbbase/model.py,sha256=CkYYAHGzU_VnAYiLuvqt48p7QPdC07aYP9D3ed5VvZY,17609
+dbbase/serializers.py,sha256=SxqUG5whcEQUIHtVw1uYVNkBoQBOjBY_jqnJCM6PCao,5007
+dbbase/utils.py,sha256=tOdKRS2J8PkTtwFOH4m3_bbQ7HmRZo4cwz0zx65yoUw,2894
+dbbase-0.2.6.dist-info/LICENSE.txt,sha256=k-vjxaznS1YFAk0MAamrKGl9RVHgsZmskt2laO1AlwQ,1067
+dbbase-0.2.6.dist-info/METADATA,sha256=M7Fx6Ph-v4dkdgJJ6MI0lvALvrzya0O8wgbrXkP_8aA,7571
+dbbase-0.2.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dbbase-0.2.6.dist-info/top_level.txt,sha256=XzQ6Dy_-FzZnM5BDCRWZ6ARM-EkmYyJo2-5tXUdcsRM,7
+dbbase-0.2.6.dist-info/RECORD,,

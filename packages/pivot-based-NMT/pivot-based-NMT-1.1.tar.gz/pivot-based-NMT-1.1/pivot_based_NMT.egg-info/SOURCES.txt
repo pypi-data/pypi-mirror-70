@@ -1,0 +1,8 @@
+README.md
+setup.py
+pivot_based_NMT.egg-info/PKG-INFO
+pivot_based_NMT.egg-info/SOURCES.txt
+pivot_based_NMT.egg-info/dependency_links.txt
+pivot_based_NMT.egg-info/entry_points.txt
+pivot_based_NMT.egg-info/requires.txt
+pivot_based_NMT.egg-info/top_level.txt

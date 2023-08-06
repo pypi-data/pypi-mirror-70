@@ -1,0 +1,12 @@
+coinespy/__init__.py,sha256=uIxoIYIVrU64mNtGdW233bXLQum9gXGq7klqDhbivoQ,15061
+coinespy/libcoines.dylib,sha256=p57Em2BQYzRQegM6xntbRxSAtUn_isQLsM_P2FlwdHc,36228
+coinespy/libcoines_32.dll,sha256=0qi5GmNlHQAzriNpm4JlSXi2tF8cebJqgk_qP3HPNxw,33294
+coinespy/libcoines_32.so,sha256=bnHqvLTlGVxQC9Yriik1qX4_Hp4apr3hEky_PSBriv4,36580
+coinespy/libcoines_64.dll,sha256=wzyGYkv_ldMdp2G45FCMgF9yihG2TTrvLirTxJkjGfo,35840
+coinespy/libcoines_64.so,sha256=RqOy-80_k6z-vbeKxwM6FzOZFE3iSA9bsHIf8KNmDG8,31208
+coinespy/libcoines_armv7_32.so,sha256=_ot5k2fv-VPu3x_y3v7rHW2MJd1HsAayQlbqsckAEAE,44016
+coinespy-0.8.3.dist-info/LICENSE.txt,sha256=pO30kWSS-aD3TbRjmM2rI1b48CutNL7clFcrW1viVq8,4273
+coinespy-0.8.3.dist-info/METADATA,sha256=y04JoWUi0Fy2xSSr2FFM0wJpl2QU0DdfibHOGUVD8PU,862
+coinespy-0.8.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+coinespy-0.8.3.dist-info/top_level.txt,sha256=RMv8IZI2ooaEpcxjeIPgrbC8bOeviy-JObGBTL96BGA,9
+coinespy-0.8.3.dist-info/RECORD,,

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gflick
+Version: 0.1.3
+Summary: 
+License: MIT
+Author: Bùi Thành Nhân
+Author-email: hi@imnhan.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: httpx (>=0.13.3,<0.14.0)
+Requires-Dist: starlette (>=0.13.4,<0.14.0)
+Requires-Dist: uvicorn (>=0.11.5,<0.12.0)

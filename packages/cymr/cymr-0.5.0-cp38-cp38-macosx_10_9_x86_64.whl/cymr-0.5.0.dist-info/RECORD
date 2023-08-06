@@ -1,0 +1,11 @@
+cymr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cymr/fit.py,sha256=-j_btAGaFiGsaXVmruXFzW1QH_AYotojiy9R0DFw79k,21849
+cymr/lba.cpython-38-darwin.so,sha256=qAxysN3G64nBBGD7Q5RkBcBQsLFOQ4CTNGQ-0HuzkgQ,166972
+cymr/models.py,sha256=lV1R4u8yGRHg6cuDlek3R9Ysxvig3SZaWVmMqnZXX8c,11258
+cymr/network.py,sha256=LPisRigyWHackNcgvG4FXsVA6PDilYqWO2O_QBYrqwM,26968
+cymr/operations.cpython-38-darwin.so,sha256=awXHcuSlOsstpqiE4CBsdW3kMpX0On6iTFs-bMtP0Rw,210236
+cymr-0.5.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cymr-0.5.0.dist-info/METADATA,sha256=5XO5j3dtrt7X0WeKor7lyBjlb4IXr-8X4g6PrMWXlgc,2510
+cymr-0.5.0.dist-info/WHEEL,sha256=Hic4Br7HyqQlo_WBiWK58UvEogCnWnn00TOHJ0MUqpc,109
+cymr-0.5.0.dist-info/top_level.txt,sha256=B-gt4jkYr7v_sFpduGOy4hXNMaX23sVMvW12iZJUJcI,5
+cymr-0.5.0.dist-info/RECORD,,

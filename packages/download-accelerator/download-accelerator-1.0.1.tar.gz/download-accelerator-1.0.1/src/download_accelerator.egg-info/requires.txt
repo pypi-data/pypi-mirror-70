@@ -1,0 +1,6 @@
+aiohttp
+argh
+asyncio
+click
+funcy
+tqdm

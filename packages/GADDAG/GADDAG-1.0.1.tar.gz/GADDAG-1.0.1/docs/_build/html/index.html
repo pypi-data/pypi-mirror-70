@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GADDAG Documentation &#8212; GADDAG 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">GADDAG</a></h1>
+
+
+
+<p class="blurb">A Python wrapper around cGADDAG.</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=jorbas&repo=GADDAG&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GADDAG Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#searching">Searching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#low-level-access">Low level access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#api">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="gaddag-documentation">
+<h1>GADDAG Documentation<a class="headerlink" href="#gaddag-documentation" title="Permalink to this headline">¶</a></h1>
+<p>GADDAG is a Python wrapper around <a class="reference external" href="https://github.com/jorbas/cGADDAG">cGADDAG</a>.</p>
+<p>A GADDAG data structure provides rapid word lookups for prefixes, suffixes and
+substrings, making it ideal for use in applications such as move generation in
+word games such as <a class="reference external" href="https://en.wikipedia.org/wiki/Scrabble">Scrabble</a>.</p>
+<p>GADDAG currently only supports the ASCII alphabet.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>From <a class="reference external" href="https://pypi.python.org/pypi/GADDAG">PyPI</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install gaddag
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">gaddag</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdg</span> <span class="o">=</span> <span class="n">gaddag</span><span class="o">.</span><span class="n">GADDAG</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;foo&quot;</span> <span class="ow">in</span> <span class="n">gdg</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s2">&quot;bor&quot;</span> <span class="ow">in</span> <span class="n">gdg</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdg</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;ba&quot;</span><span class="p">)</span>
+<span class="go">[&#39;bar&#39;, &#39;foobar&#39;, &#39;baz&#39;]</span>
+</pre></div>
+</div>
+<p>Words stored in the GADDAG can be iterated over:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">gdg</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">foobar</span>
+<span class="go">foo</span>
+<span class="go">baz</span>
+<span class="go">bar</span>
+</pre></div>
+</div>
+<div class="section" id="searching">
+<h3>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h3>
+<p>More advanced searching features are available, such as finding words starting
+with, ending with, or containing a given substring:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gdg</span><span class="o">.</span><span class="n">starts_with</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+<span class="go">[&#39;foobar&#39;, &#39;foo&#39;]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdg</span><span class="o">.</span><span class="n">ends_with</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+<span class="go">[&#39;foobar&#39;, &#39;bar&#39;]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gdg</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;ba&quot;</span><span class="p">)</span>
+<span class="go">[&#39;bar&#39;, &#39;foobar&#39;, &#39;baz&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="low-level-access">
+<h3>Low level access<a class="headerlink" href="#low-level-access" title="Permalink to this headline">¶</a></h3>
+<p>Low level access is provided, which allows for the GADDAG to be traversed
+manually.</p>
+<p>The root node of the GADDAG can be accessed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">root_node</span> <span class="o">=</span> <span class="n">gdg</span><span class="o">.</span><span class="n">root</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">root_node</span><span class="o">.</span><span class="n">edges</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;, &#39;f&#39;, &#39;o&#39;, &#39;r&#39;, &#39;z&#39;]</span>
+</pre></div>
+</div>
+<p>Edges can be followed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a_node</span> <span class="o">=</span> <span class="n">root_node</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_node</span><span class="o">.</span><span class="n">edges</span>
+<span class="go">[&#39;b&#39;]</span>
+</pre></div>
+</div>
+<p>Following an edge which does not exist throws <cite>KeyError</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a_node</span><span class="p">[</span><span class="s2">&quot;f&quot;</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+  File <span class="nb">&quot;.../gaddag/node.py&quot;</span>, line <span class="m">73</span>, in <span class="n">__getitem__</span>
+    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+<span class="gr">KeyError</span>: <span class="n">&#39;f&#39;</span>
+</pre></div>
+</div>
+<p>Following edges in succession can become tedious, so a method is provided for
+ease of use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">root_node</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="s2">&quot;ab&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="n">root_node</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">][</span><span class="s2">&quot;b&quot;</span><span class="p">]</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>The “+” character is the <em>break</em> character, which signifies that the start of
+the word has been reached and that the subsequent edges (if any) now form the
+suffix. A node’s letter set shows the characters which will end a word:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">break_node</span> <span class="o">=</span> <span class="n">root_node</span><span class="o">.</span><span class="n">follow</span><span class="p">(</span><span class="s2">&quot;ab+&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">break_node</span><span class="o">.</span><span class="n">letter_set</span>
+<span class="go">[&#39;r&#39;, &#39;z&#39;]</span>
+</pre></div>
+</div>
+<p>The words “bar” and “baz” have been found.</p>
+<p>Using these features, <strong>GADDAG</strong> can be used for more specialised applications,
+such as move generation in word games.</p>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="gaddag.load">
+<code class="sig-prename descclassname">gaddag.</code><code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a GADDAG from file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path: path to saved GADDAG to be loaded.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Loaded GADDAG.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="gaddag.GADDAG">
+<em class="property">class </em><code class="sig-prename descclassname">gaddag.</code><code class="sig-name descname">GADDAG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">words</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG" title="Permalink to this definition">¶</a></dt>
+<dd><p>A data structure allowing for extremely fast prefix, suffix and substring
+searching of words.</p>
+<dl class="py method">
+<dt id="gaddag.GADDAG.add_word">
+<code class="sig-name descname">add_word</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">word</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.add_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a word to the GADDAG.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>word: A word to be added to the GADDAG.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.capacity">
+<em class="property">property </em><code class="sig-name descname">capacity</code><a class="headerlink" href="#gaddag.GADDAG.capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current capacity of the GADDAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.contains">
+<code class="sig-name descname">contains</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sub</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all words containing a substring.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>sub: A substring to be searched for.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A list of all words found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.ends_with">
+<code class="sig-name descname">ends_with</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">suffix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.ends_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all words ending with a suffix.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>suffix: A suffix to be searched for.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A list of all words found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a GADDAG from file, replacing the words currently in this GADDAG.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path: path to saved GADDAG to be loaded.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.num_edges">
+<em class="property">property </em><code class="sig-name descname">num_edges</code><a class="headerlink" href="#gaddag.GADDAG.num_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of edges in the GADDAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.num_nodes">
+<em class="property">property </em><code class="sig-name descname">num_nodes</code><a class="headerlink" href="#gaddag.GADDAG.num_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of nodes in the GADDAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.num_words">
+<em class="property">property </em><code class="sig-name descname">num_words</code><a class="headerlink" href="#gaddag.GADDAG.num_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of words in the GADDAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.root">
+<em class="property">property </em><code class="sig-name descname">root</code><a class="headerlink" href="#gaddag.GADDAG.root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the root node of the GADDAG.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span></em>, <em class="sig-param"><span class="n">compressed</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">exist_ok</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the GADDAG to file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path: path to save the GADDAG to.
+compressed: compress the saved GADDAG using gzip.
+exist_ok: overwrite existing file at <cite>path</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.GADDAG.starts_with">
+<code class="sig-name descname">starts_with</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prefix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.GADDAG.starts_with" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all words starting with a prefix.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>prefix: A prefix to be searched for.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A list of all words found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gaddag.Node">
+<em class="property">class </em><code class="sig-prename descclassname">gaddag.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gdg</span></em>, <em class="sig-param"><span class="n">node</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>A node in a GADDAG.</p>
+<dl class="py method">
+<dt id="gaddag.Node.edges">
+<em class="property">property </em><code class="sig-name descname">edges</code><a class="headerlink" href="#gaddag.Node.edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edge characters of this node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.Node.follow">
+<code class="sig-name descname">follow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.Node.follow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traverse the GADDAG to the node at the end of the given characters.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>chars: An string of characters to traverse in the GADDAG.</p>
+</dd>
+<dt>Returns:</dt><dd><p>The Node which is found by traversing the tree.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.Node.is_end">
+<code class="sig-name descname">is_end</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">char</span></em><span class="sig-paren">)</span><a class="headerlink" href="#gaddag.Node.is_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <cite>True</cite> if this <cite>char</cite> is part of this node’s letter set,
+<cite>False</cite> otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gaddag.Node.letter_set">
+<em class="property">property </em><code class="sig-name descname">letter_set</code><a class="headerlink" href="#gaddag.Node.letter_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the letter set of this node.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>Licensed under the MIT License, see <a class="reference external" href="https://github.com/jorbas/GADDAG/blob/master/LICENSE">LICENSE</a>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2017, Jordan Bass.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

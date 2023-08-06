@@ -1,0 +1,17 @@
+permittivitycalc/__init__.py,sha256=Sa1gnrfQyk9xra7VVYp5bYHVZ4KuRY3767I0-Xp2IIA,221
+permittivitycalc/helper_functions.py,sha256=3pJX-l1KuNFXkc5iwOTl_DlESHVph52SmyxAjxAWVhQ,6418
+permittivitycalc/iter_data.py,sha256=tQDICelJtC1B5eg5EN9XBfyL_WT72YdN9AYY5R1Mm6k,51910
+permittivitycalc/permittivity_plot.py,sha256=bAPZsXE2GK0MFRIT7TaSStAtSs4-mHm4GFgh47wyS3E,14571
+permittivitycalc/sparam_data.py,sha256=K7CzR7rLzqtGGLiInQq8gEYAzVTvkjT1vaR7TuS828Q,76225
+permittivitycalc/data/rexolite_PAL.txt,sha256=kzn_cTge84ne1sXmNrBwqV4IP5T_syfFh3clTFyXdWo,134062
+permittivitycalc/data/serpentine_dry.txt,sha256=4cFMoXuq9wbcZiOK0vyWtclkcbPyTpWeLkEuxRDhcRo,133931
+permittivitycalc/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+permittivitycalc/tests/test_helper_functions.py,sha256=OVcmbyq1A4bMHBv0OGUsFIZBbAcnXeuE9JNbZ9CC5WU,8875
+permittivitycalc/tests/test_iter_data.py,sha256=v49zhKwzBi4JGwL8BzovSkiH2V4ry1E1Wjpa_3vymCM,4401
+permittivitycalc/tests/test_permittivity_plot.py,sha256=ZvTtfCHJ6ShAwnoP62oV_TVDShcQXOSkujMwUN31DJI,8143
+permittivitycalc/tests/test_sparam_data.py,sha256=ySW1mT4WQOPhJ3dVD6WCGnhTvm9ja8d9Z7vTvODPbcs,21795
+permittivitycalc-0.6.1.dist-info/LICENSE.txt,sha256=Stupic8620Wqqf8xfEeerIe_rOJu4a1Nr4UABOnV6EI,1072
+permittivitycalc-0.6.1.dist-info/METADATA,sha256=VbM2CIqHHWdq4aIUYVB0gkp-3M-9LcvNqKar-gLcHkY,7331
+permittivitycalc-0.6.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+permittivitycalc-0.6.1.dist-info/top_level.txt,sha256=t0HNHHMrjRT0N6XR2kGQCtxnErJjTfHNmmejfSBFuAA,17
+permittivitycalc-0.6.1.dist-info/RECORD,,

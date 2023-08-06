@@ -1,0 +1,6 @@
+README.md
+setup.py
+bimp.egg-info/PKG-INFO
+bimp.egg-info/SOURCES.txt
+bimp.egg-info/dependency_links.txt
+bimp.egg-info/top_level.txt

@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: stethoscope-clients
+Version: 0.1.0
+Summary: Eth2 clients packaged for networking tests
+Home-page: https://github.com/lsankar4033/stethoscope-clients
+Author: lsankar4033
+Author-email: lsankar4033@gmail.com
+License: MIT
+Keywords: networking,eth2,stethoscope
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: pyrum (<0.3.0,>=0.2.1)
+Requires-Dist: trio (==0.15.0)
+Requires-Dist: tenacity (==6.2.0)
+
+# stethoscope-clients
+
+Code for spinning up each Eth2 client, for use with stethoscope.
+
+| client | status |
+|---|---|
+| lighthouse | done |
+| prysm | done |
+| nimbus | in progress |
+| teku | TODO |
+
+

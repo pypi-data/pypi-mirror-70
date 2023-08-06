@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "bilibili-image"
+version = "0.1.3"
+description = "命令行下载bilibili封面图片"
+authors = ["guaifish <guaifish@hotmail.com>",]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/guaifish/bilibili-image.git"
+packages = [
+    { include = "main.py"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.23.0"
+parsel = "^1.6.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+bilibili-image = "main:main"

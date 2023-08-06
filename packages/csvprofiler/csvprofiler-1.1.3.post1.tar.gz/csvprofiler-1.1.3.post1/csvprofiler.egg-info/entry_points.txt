@@ -1,0 +1,3 @@
+[console_scripts]
+csvprofiler = csvprofiler.__main__:main
+

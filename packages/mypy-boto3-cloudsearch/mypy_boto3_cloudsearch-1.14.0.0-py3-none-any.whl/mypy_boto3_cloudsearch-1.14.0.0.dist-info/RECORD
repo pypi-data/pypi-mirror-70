@@ -1,0 +1,10 @@
+mypy_boto3_cloudsearch/__init__.py,sha256=iLBv7kCQOw8tn6RM3KE2IO-BcDfoOz0iYZHLrqApjpo,482
+mypy_boto3_cloudsearch/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cloudsearch/client.py,sha256=WpJzh-aPPAug8sJKoM1YmCMJ59FyeUqtD6OeNUU5FWg,11972
+mypy_boto3_cloudsearch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cloudsearch/type_defs.py,sha256=fiSpamu_7dlXmVNMFjCDFt2iqEYaTuxGiA-GT9YVg5I,15924
+mypy_boto3_cloudsearch/version.py,sha256=sS21mAc2uI2YDkgQgYM0Qyqoc1kxIuCDbiaWpiKLvUo,56
+mypy_boto3_cloudsearch-1.14.0.0.dist-info/METADATA,sha256=0vRTwQG4HqiKppzE15NDA7Hfu9Q-5NkkhszL0-ThT7I,4082
+mypy_boto3_cloudsearch-1.14.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_cloudsearch-1.14.0.0.dist-info/top_level.txt,sha256=xSgnSAMNvdXgdsWlbdEOd09QkkbvnKOSyQ6bOBatMrk,23
+mypy_boto3_cloudsearch-1.14.0.0.dist-info/RECORD,,

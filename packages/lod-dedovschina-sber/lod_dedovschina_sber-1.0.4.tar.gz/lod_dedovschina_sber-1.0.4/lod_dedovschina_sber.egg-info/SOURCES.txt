@@ -1,0 +1,16 @@
+README.md
+setup.py
+lod_dedovschina_sber.egg-info/PKG-INFO
+lod_dedovschina_sber.egg-info/SOURCES.txt
+lod_dedovschina_sber.egg-info/dependency_links.txt
+lod_dedovschina_sber.egg-info/top_level.txt
+models/Address.py
+models/AddressCSV.py
+models/RomanInteger.py
+models/__init__.py
+presets/__init__.py
+presets/clear_characters.py
+presets/fias_types.py
+tests/__init__.py
+tests/test_address.py
+tests/test_roman_integer.py

@@ -1,0 +1,10 @@
+jableparser/__init__.py,sha256=QJd1LGvS3Ix90ZDeGIeinmskH5x1NgvUNNHVrWcGVrg,63
+jableparser/model.py,sha256=uVw-i2ULNYxGrUNJ24yucJMrY12JX17EvFmIxYP2-vY,11282
+jableparser/region.py,sha256=CXw5o95xo9LsGmvS4TWKKu1owLPlNGmn1c_D8NWdGlE,2648
+jableparser/tags_util.py,sha256=shXtRxsPGjLMuOpvTAWgtaJivlmH5QzP-86W_KRx6dk,1708
+jableparser-0.0.1.dist-info/DESCRIPTION.rst,sha256=738v-644rhuaUI3ZZbxMxlFtUviuxQ3xdjaUL1vfUrA,765
+jableparser-0.0.1.dist-info/METADATA,sha256=HwqJDfxVc4VtyfSbfXlFsk_d2vMGt9dvHixYzQ39lMk,1135
+jableparser-0.0.1.dist-info/RECORD,,
+jableparser-0.0.1.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+jableparser-0.0.1.dist-info/metadata.json,sha256=HOkkRQv52UxZEn9bg_5vm15VUO8fpHcgqIn9pK53SX4,580
+jableparser-0.0.1.dist-info/top_level.txt,sha256=tGN8hgNf0cj69kn6uqkArBPDWE1qQC7LNgDWlMh3UDI,12

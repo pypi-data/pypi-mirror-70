@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+outlookutility/__init__.py
+outlookutility/display_email.py
+outlookutility/display_email_with_attachments.py
+outlookutility/email_with_attachments.py
+outlookutility/email_without_attachment.py
+outlookutility/notify_error.py
+outlookutility.egg-info/PKG-INFO
+outlookutility.egg-info/SOURCES.txt
+outlookutility.egg-info/dependency_links.txt
+outlookutility.egg-info/requires.txt
+outlookutility.egg-info/top_level.txt

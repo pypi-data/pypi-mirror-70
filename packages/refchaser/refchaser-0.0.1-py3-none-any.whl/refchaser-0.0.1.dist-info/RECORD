@@ -1,0 +1,11 @@
+refchaser/__init__.py,sha256=AJl4VmXZY7smJSrkIPWsLGmurJElczsOz4CugA_AoBM,195
+refchaser/__main__.py,sha256=0NL-O8XHCk7SP9k461Vx3phi3eDhYS1QtVMLqAHz53g,3354
+refchaser/bibparser.py,sha256=WqvKa_je1E9nkNg5knWwWLD0QPHIitbs6fRdwT2EZO8,10250
+refchaser/bioreader.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+refchaser/massdownlit.py,sha256=cd9hjjYTdWte9KlSHp3kELOESah2cIHo4JJFxVDLFJ0,8200
+refchaser/querydatabase.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+refchaser/refchaser.py,sha256=xaO2NkLCEBhLEKRkaB3gHmRi41-IKFB3O8r_6mCdAdg,13658
+refchaser-0.0.1.dist-info/METADATA,sha256=EjQJF4ZA8A0OU-bVA63FihAzIpbtASQvYTUJBJJyZYQ,3754
+refchaser-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+refchaser-0.0.1.dist-info/top_level.txt,sha256=9B7TIQ_NWtKrEuAHU973HqU6S4m0hSHYCe8d5zsmzmE,10
+refchaser-0.0.1.dist-info/RECORD,,

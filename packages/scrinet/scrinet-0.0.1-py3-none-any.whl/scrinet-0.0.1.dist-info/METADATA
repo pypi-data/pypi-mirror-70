@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scrinet
+Version: 0.0.1
+Summary: Modelling
+Home-page: https://gitlab.com/SpaceTimeKhantinuum/scrinet
+Author: Sebastian Khan
+Author-email: sebastian.khan@LIGO.org
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: matplotlib (==3.1.3)
+Requires-Dist: arviz (==0.7.0)
+Requires-Dist: gw-phenom (==1.0.1)
+Requires-Dist: george (==0.3.1)
+Requires-Dist: tensorflow (==2.1.0)
+Requires-Dist: tensorflow-probability (==0.9.0)
+Requires-Dist: scipy (==1.4.1)
+Requires-Dist: numpy (==1.18.1)
+Requires-Dist: lalsuite (==6.68)
+Requires-Dist: phenom (==0.0.1.1a0)
+Requires-Dist: scikit-learn (==0.22.2.post1)
+
+UNKNOWN
+
+

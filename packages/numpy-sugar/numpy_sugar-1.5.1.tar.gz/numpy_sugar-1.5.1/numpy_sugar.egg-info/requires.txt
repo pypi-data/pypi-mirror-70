@@ -1,0 +1,4 @@
+dask[array]>=2.18.0
+numpy>=1.18.5
+pytest>=5.4.3
+scipy>=1.4.1

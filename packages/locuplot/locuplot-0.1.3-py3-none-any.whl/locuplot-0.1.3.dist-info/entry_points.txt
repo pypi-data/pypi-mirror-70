@@ -1,0 +1,3 @@
+[console_scripts]
+locuplot=locuplot.main:main
+

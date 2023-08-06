@@ -1,0 +1,10 @@
+setup.py
+yesmkaran_distributions/Binomialdistribution.py
+yesmkaran_distributions/Gaussiandistribution.py
+yesmkaran_distributions/Generaldistribution.py
+yesmkaran_distributions/__init__.py
+yesmkaran_distributions.egg-info/PKG-INFO
+yesmkaran_distributions.egg-info/SOURCES.txt
+yesmkaran_distributions.egg-info/dependency_links.txt
+yesmkaran_distributions.egg-info/not-zip-safe
+yesmkaran_distributions.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+aws_cdk.aws_iam<1.50.0,>=1.44.0
+aws_cdk.aws_lambda<1.50.0,>=1.44.0
+aws_cdk.core<1.50.0,>=1.44.0
+aws_cdk.custom_resources<1.50.0,>=1.44.0

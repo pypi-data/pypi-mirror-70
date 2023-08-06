@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django-custom-cache-page
+Version: 0.1
+Summary: A customizable implementation of Django's cache_page decorator.
+Home-page: https://github.com/zidsa/django-custom-cache-page
+Author: Mohamad Bahamdain
+Author-email: i@mhmd.dev
+License: MIT
+Download-URL: https://pypi.org/project/django-custom-cache-page/
+Description: 
+        
+        
+Keywords: Django,Django Cache,cache_page
+Platform: UNKNOWN
+Description-Content-Type: text/plain
+Provides-Extra: dev

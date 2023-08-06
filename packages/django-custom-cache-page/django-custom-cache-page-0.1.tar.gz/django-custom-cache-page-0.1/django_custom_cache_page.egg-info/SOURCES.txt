@@ -1,0 +1,13 @@
+README.md
+setup.py
+custom_page_cache/__init__.py
+custom_page_cache/cache.py
+custom_page_cache/utils.py
+django_custom_cache_page.egg-info/PKG-INFO
+django_custom_cache_page.egg-info/SOURCES.txt
+django_custom_cache_page.egg-info/dependency_links.txt
+django_custom_cache_page.egg-info/requires.txt
+django_custom_cache_page.egg-info/top_level.txt
+tests/__init__.py
+tests/test_cache.py
+tests/test_utils.py

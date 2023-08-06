@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+nik_distribution/Binomialdistribution.py
+nik_distribution/Gaussiandistribution.py
+nik_distribution/Generaldistribution.py
+nik_distribution/__init__.py
+nik_distribution.egg-info/PKG-INFO
+nik_distribution.egg-info/SOURCES.txt
+nik_distribution.egg-info/dependency_links.txt
+nik_distribution.egg-info/not-zip-safe
+nik_distribution.egg-info/top_level.txt

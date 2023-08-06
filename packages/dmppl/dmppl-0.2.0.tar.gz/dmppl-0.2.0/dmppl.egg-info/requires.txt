@@ -1,0 +1,13 @@
+joblib~=0.14.1
+numpy~=1.16.5
+prettytable~=0.7.2
+pyserial~=3.4
+pyyaml~=5.3.1
+toml~=0.10.0
+coverage~=5.0.4
+graphviz~=0.13.2
+matplotlib~=3.2.1
+mypy>=0.770
+pydot~=1.4.1
+seaborn~=0.10.0
+tinyprog==1.0.21

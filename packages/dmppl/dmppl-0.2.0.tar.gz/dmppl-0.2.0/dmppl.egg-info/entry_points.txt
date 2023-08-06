@@ -1,0 +1,9 @@
+[console_scripts]
+beamer-times = dmppl.scripts.beamer_times:entryPoint
+bytePipe-utils = dmppl.scripts.bytePipe_utils:entryPoint
+parvec = dmppl.scripts.parvec:entryPoint
+plotCsv = dmppl.scripts.plotCsv:entryPoint
+plotDistBytes = dmppl.scripts.plotDistBytes:entryPoint
+svg2png = dmppl.scripts.svg2png:entryPoint
+vcd-utils = dmppl.scripts.vcd_utils:entryPoint
+

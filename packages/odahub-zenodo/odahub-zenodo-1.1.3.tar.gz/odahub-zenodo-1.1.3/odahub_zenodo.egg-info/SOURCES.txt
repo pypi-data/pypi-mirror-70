@@ -1,0 +1,12 @@
+COPYING
+README.md
+setup.cfg
+setup.py
+odahub_zenodo.egg-info/PKG-INFO
+odahub_zenodo.egg-info/SOURCES.txt
+odahub_zenodo.egg-info/dependency_links.txt
+odahub_zenodo.egg-info/entry_points.txt
+odahub_zenodo.egg-info/requires.txt
+odahub_zenodo.egg-info/top_level.txt
+odahubz/__init__.py
+odahubz/cli.py

@@ -1,0 +1,7 @@
+[gui_scripts]
+mailflagger = mailflagger.cmd:main
+
+[mailflagger.plugins.commands]
+daemon = mailflagger.server
+flag = mailflagger.plugins.manual
+

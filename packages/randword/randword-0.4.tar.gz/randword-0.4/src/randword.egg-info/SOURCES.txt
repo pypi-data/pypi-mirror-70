@@ -1,0 +1,8 @@
+setup.py
+src/__init__.py
+src/randword.py
+src/utils.py
+src/randword.egg-info/PKG-INFO
+src/randword.egg-info/SOURCES.txt
+src/randword.egg-info/dependency_links.txt
+src/randword.egg-info/top_level.txt

@@ -1,0 +1,6 @@
+setup.py
+XDoToolWrapper/__init__.py
+XDoToolWrapper.egg-info/PKG-INFO
+XDoToolWrapper.egg-info/SOURCES.txt
+XDoToolWrapper.egg-info/dependency_links.txt
+XDoToolWrapper.egg-info/top_level.txt

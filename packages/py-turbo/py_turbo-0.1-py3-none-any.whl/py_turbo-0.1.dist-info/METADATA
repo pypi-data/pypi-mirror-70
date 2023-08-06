@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: py-turbo
+Version: 0.1
+Summary: A pipeline system for efficient execution.
+Home-page: https://github.com/Lijun-Yu/pyturbo
+Author: Lijun Yu
+Author-email: lijun@lj-y.com
+License: GPL
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+Requires-Dist: GPUtil
+
+# Pyturbo Package
+
+Author: Lijun Yu
+
+Email: lijun@lj-y.com
+
+A pipeline system for efficient execution.
+
+## Demo program
+
+See [demo.py](demo.py).
+
+## Version History
+
+See [version.md](docs/version.md).
+
+

@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: rens-eqt
+Version: 0.1.1
+Summary: Secure Equality Testing
+Home-page: https://gitlab.com/RensOliemans/eqt
+Author: Rens Oliemans
+Author-email: rens.oliemans@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Requires-Dist: rens-paillier (>=0.1)
+Provides-Extra: testing
+Requires-Dist: coverage (==5.0.3) ; extra == 'testing'
+Requires-Dist: flake8 (==3.7.9) ; extra == 'testing'
+
+=======================
+Secure Equality Testing
+=======================
+
+``python3.8`` package for secure equality testing, implementation of the EQT-1 protocol of `this paper <https://dl.acm.org/doi/10.1145/3230833.3230866>`_
+
+
+**Not working fully as of yet, secure comparison based on DGK is not yet error-free.**
+
+Example usage
+-------------
+
+With predetermined ``a`` and ``b``
+
+.. code-block::
+
+    from eqt.protocol import Protocol
+
+    p = Protocol(a=12313, b=12312, length=14, kappa=40)
+    p.start()
+    print(p.decrypted_result)
+
+    p = Protocol(a=12313, b=12313, length=14, kappa=40)
+    p.start()
+    print(p.decrypted_result)
+
+
+Using ``a`` and ``b`` as input
+
+.. code-block::
+
+    from eqt.main import main
+    main()
+

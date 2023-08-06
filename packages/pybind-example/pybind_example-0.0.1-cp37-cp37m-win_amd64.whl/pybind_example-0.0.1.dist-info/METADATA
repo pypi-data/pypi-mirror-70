@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pybind-example
+Version: 0.0.1
+Summary: A test package using pybind11
+Home-page: https://github.com/python-cmaketools/pybind-example.git
+Author: Takeshi (Kesh) Ikuma
+Author-email: tikuam@gmail.com
+License: MIT License
+Platform: UNKNOWN
+
+UNKNOWN
+
+

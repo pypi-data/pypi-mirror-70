@@ -1,0 +1,8 @@
+pybind_example/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybind_example/compute.cp37-win_amd64.pyd,sha256=eDmms9xHaN7x6ne56DcBjsVD_P5j9WpPeAUForUVByc,87040
+pybind_example/__pycache__/__init__.cpython-37.pyc,sha256=TbyNokM51s92m0Z3MkeTl9fmtWQ5spxPCmTG2NmQhbM,183
+pybind_example-0.0.1.dist-info/LICENSE,sha256=N_R9-5l0U5HZyk0-el1LtB0nxSXttAIy78h4x_w_bgk,2218
+pybind_example-0.0.1.dist-info/METADATA,sha256=ccP8WkW_8uRJ14fwAjlD199yPsON8L9pCevEEArrtws,274
+pybind_example-0.0.1.dist-info/WHEEL,sha256=g8eocn77V_iXxq9laUIPSuxdwRHlhOsH3tLpu1uKUvQ,106
+pybind_example-0.0.1.dist-info/top_level.txt,sha256=ykHAHVJq-8Qb0cz_n8kmT-WUN_8ioOpdsijGUYsClR0,15
+pybind_example-0.0.1.dist-info/RECORD,,

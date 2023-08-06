@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: vsdx
+Version: 0.1a2
+Summary: vsdx - A python library for processing .vsdx files
+Home-page: https://github.com/dave-howard/vsdx
+Author: Dave Howard
+Author-email: dave@copypy.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# vsdx - A python library for processing .vsdx files
+
+## Note: this is an alpha release with limited functionality
+
+Please refer to tests/test.py for usage examples
+
+

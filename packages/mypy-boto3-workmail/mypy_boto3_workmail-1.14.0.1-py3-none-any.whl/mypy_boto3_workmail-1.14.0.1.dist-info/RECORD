@@ -1,0 +1,11 @@
+mypy_boto3_workmail/__init__.py,sha256=I5tjuClYOEvkqw-Zem-Urm2q9g7NDzYD0zRm9cEDmO8,2075
+mypy_boto3_workmail/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_workmail/client.py,sha256=WG-Lv9aiVHzbHpF9SamYPz7Mo097zYhstItfIfB35C0,20643
+mypy_boto3_workmail/paginator.py,sha256=OisCjgyX53LuP2cB9hmlF-9fHCNSkWKF-k7w0ArV8QE,6965
+mypy_boto3_workmail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_workmail/type_defs.py,sha256=NMJnd_zzkw0ft96kcZgnwkWZMJPqJsPBAGDtcn42Lmw,8718
+mypy_boto3_workmail/version.py,sha256=spCFEuvkDQEhpugs9gNzXZWMvSmdOKYIONY4UlOll40,56
+mypy_boto3_workmail-1.14.0.1.dist-info/METADATA,sha256=Ho6Zljja6HvVMfYZj0hAnsI7p6U10GmpDcq8lLqFhb4,5680
+mypy_boto3_workmail-1.14.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_workmail-1.14.0.1.dist-info/top_level.txt,sha256=q28973Ou6RDP-PWerdELKphoyxTL-TdsGXdqxp__hiA,20
+mypy_boto3_workmail-1.14.0.1.dist-info/RECORD,,

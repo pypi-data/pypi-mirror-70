@@ -1,0 +1,36 @@
+{
+    "name": "grr_flow_collect",
+    "description": "Download GRR flows.\n\nDownload a GRR flow's results to the local filesystem.",
+    "short_description": "Download GRR flows.\n\nDownload a GRR flow's results to the local filesystem.",
+    "modules": [{
+        "wants": [],
+        "name": "GRRFlowCollector",
+        "args": {
+            "host": "@host",
+            "flow_id": "@flow_id",
+            "reason": "@reason",
+            "grr_server_url": "@grr_server_url",
+            "grr_username": "@grr_username",
+            "grr_password": "@grr_password",
+            "approvers": "@approvers",
+            "verify": "@verify"
+        }
+    }, {
+        "wants": ["GRRFlowCollector"],
+        "name": "LocalFilesystemCopy",
+        "args": {
+            "target_directory": "@directory"
+        }
+    }],
+    "args": [
+        ["host", "Hostname to collect the flow from", null],
+        ["flow_id", "Flow ID to download", null],
+        ["reason", "Reason for collection", null],
+        ["directory", "Directory in which to export files.", null],
+        ["--approvers", "Emails for GRR approval request", null],
+        ["--grr_server_url", "GRR endpoint", "http://localhost:8000"],
+        ["--verify", "Whether to verify the GRR TLS certificate", true],
+        ["--grr_username", "GRR username", "admin"],
+        ["--grr_password", "GRR password", "admin"]
+    ]
+}

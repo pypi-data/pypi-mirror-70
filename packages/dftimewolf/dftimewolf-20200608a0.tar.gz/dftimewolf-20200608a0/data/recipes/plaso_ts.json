@@ -1,0 +1,30 @@
+{
+    "name": "plaso_ts",
+    "description": "Processes a list of file paths using plaso and sends results to Timesketch.\n\n- Collectors collect from a path in the FS\n- Processes them with a local install of plaso\n- Exports them to a new Timesketch sketch",
+    "short_description": "Processes a list of file paths using plaso and sends results to Timesketch.",
+    "modules": [{
+        "wants": [],
+        "name": "FilesystemCollector",
+        "args": {
+            "paths": "@paths"
+        }
+    }, {
+        "wants": ["FilesystemCollector"],
+        "name": "LocalPlasoProcessor",
+        "args": {
+            "timezone": null
+        }
+    }, {
+        "wants": ["LocalPlasoProcessor"],
+        "name": "TimesketchExporter",
+        "args": {
+            "incident_id": "@incident_id",
+            "sketch_id": "@sketch_id"
+        }
+    }],
+    "args": [
+        ["paths", "Paths to process", null],
+        ["--incident_id", "Incident ID (used for Timesketch description)", null],
+        ["--sketch_id", "Sketch to which the timeline should be added", null]
+    ]
+}

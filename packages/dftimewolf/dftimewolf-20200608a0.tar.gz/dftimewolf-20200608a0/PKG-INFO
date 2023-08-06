@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: dftimewolf
+Version: 20200608a0
+Summary: Digital forensic orchestration.
+Home-page: https://github.com/log2timeline/dftimewolf
+Maintainer: Log2Timeline maintainers
+Maintainer-email: log2timeline-maintainers@googlegroups.com
+License: Apache License, Version 2.0
+Description: dfTimeWolf, a framework for orchestrating forensic collection, processing and data export.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

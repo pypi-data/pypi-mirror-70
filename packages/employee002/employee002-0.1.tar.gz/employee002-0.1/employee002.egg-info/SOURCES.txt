@@ -1,0 +1,8 @@
+setup.py
+employee002.egg-info/PKG-INFO
+employee002.egg-info/SOURCES.txt
+employee002.egg-info/dependency_links.txt
+employee002.egg-info/not-zip-safe
+employee002.egg-info/top_level.txt
+employee_package/__init__.py
+employee_package/employee_module.py

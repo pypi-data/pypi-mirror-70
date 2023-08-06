@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+zabel.egg-info/PKG-INFO
+zabel.egg-info/SOURCES.txt
+zabel.egg-info/dependency_links.txt
+zabel.egg-info/requires.txt
+zabel.egg-info/top_level.txt
+zabel/core/__init__.py
+zabel/core/storage.py
+zabel/core/accounts/__init__.py
+zabel/core/manifests/bootstrap.yaml
+zabel/core/projects/__init__.py
+zabel/core/projects/domainprovidermpd.py
+zabel/core/projects/mpdmanager.py
+zabel/core/services/__init__.py

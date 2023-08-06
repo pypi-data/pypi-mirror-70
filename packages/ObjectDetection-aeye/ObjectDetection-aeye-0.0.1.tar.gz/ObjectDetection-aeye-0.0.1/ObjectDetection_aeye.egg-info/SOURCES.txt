@@ -1,0 +1,17 @@
+README.md
+setup.py
+ObjectDetection_aeye.egg-info/PKG-INFO
+ObjectDetection_aeye.egg-info/SOURCES.txt
+ObjectDetection_aeye.egg-info/dependency_links.txt
+ObjectDetection_aeye.egg-info/top_level.txt
+objectDetection/__init__.py
+objectDetection/create_data_lists.py
+objectDetection/datasets.py
+objectDetection/definitions.py
+objectDetection/detect.py
+objectDetection/eval.py
+objectDetection/inferencing.py
+objectDetection/jutils.py
+objectDetection/model.py
+objectDetection/train.py
+objectDetection/utils.py

@@ -1,0 +1,6 @@
+numpy
+pyparsing
+six
+nltk
+scipy
+markupsafe

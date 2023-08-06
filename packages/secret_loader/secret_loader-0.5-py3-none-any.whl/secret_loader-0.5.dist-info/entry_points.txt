@@ -1,0 +1,3 @@
+[console_scripts]
+secret-loader=secret_loader.cli:cli
+

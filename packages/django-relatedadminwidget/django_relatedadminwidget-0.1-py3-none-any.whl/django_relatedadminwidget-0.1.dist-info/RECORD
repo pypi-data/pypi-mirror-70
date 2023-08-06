@@ -1,0 +1,7 @@
+relatedwidget/__init__.py,sha256=OXt8bi_yrZxfs6Ug30d_CyRiBoHWeEAtNZCw2HwH7TI,5480
+relatedwidget/static/relatedwidget/js/relatedwidget.js,sha256=GDY4Xh11sFRkndiGMlDcNit65Cd3DpTBdr_qUsalCaA,1742
+relatedwidget/templates/relatedwidget/widget.html,sha256=jlvmnGN9RQecq235Heg29MPcBrz6jYaMXv82JEHXRd8,1121
+django_relatedadminwidget-0.1.dist-info/METADATA,sha256=G3Ms0nNe8J7eQmuWeLrD3xvthbv5tzXktf6eqC8-3hA,2101
+django_relatedadminwidget-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_relatedadminwidget-0.1.dist-info/top_level.txt,sha256=6x2FjVqtuhtSl3RUpxDE0NeEfAqeAMGIjl34SPEGpgE,14
+django_relatedadminwidget-0.1.dist-info/RECORD,,

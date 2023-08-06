@@ -1,0 +1,14 @@
+affine
+cartopy>=0.18
+geopandas
+jinja2
+matplotlib
+metpy
+numpy
+pandas
+pydantic
+pyproj
+pytz
+psycopg2
+scipy
+shapely

@@ -1,0 +1,9 @@
+tffm2/__init__.py,sha256=0MAgSnE7XGUH-FEI1tBMBpl-N3q4xTJwz4p4vLvTVGg,97
+tffm2/base.py,sha256=YuovFjr2zs6mLEpLne3g5HMx61OSZBwo4Gu94pMxSdM,6918
+tffm2/core.py,sha256=h0bwMjEiwxwoI8s95di48e4HmDEhUjP3USIzHX8uIPE,5635
+tffm2/models.py,sha256=TYrF6_cIGpzaJdKKr5vF86OASwfPZtVoldcc9wQ0zAA,8307
+tffm2/utils.py,sha256=bgdwF-0hN15umRfQBrDTCSM9y_H2gAaa1ouTWD98vjA,5384
+tffm2-0.0.15.dist-info/METADATA,sha256=rDgTlXsnnyjfpXrcXbCd9ZHcv8PocE4GZdRdy0K-dFI,463
+tffm2-0.0.15.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tffm2-0.0.15.dist-info/top_level.txt,sha256=LdWCUhw1H9k0k8PS6fovflFstgqyrNp7J0YBxAYTM-8,6
+tffm2-0.0.15.dist-info/RECORD,,

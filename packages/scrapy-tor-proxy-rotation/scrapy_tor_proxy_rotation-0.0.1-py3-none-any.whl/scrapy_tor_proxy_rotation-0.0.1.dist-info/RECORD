@@ -1,0 +1,8 @@
+tor_ip_rotator/__init__.py,sha256=u5PYs8BpdUzyIQh2tyQsRbFDzhX6y0spcVY8llfWomA,113
+tor_ip_rotator/middlewares.py,sha256=kVpLB1hbiGt_j6K6GIm33isfz001LpIVH8fi9Om5ZKc,1534
+tor_ip_rotator/tor_controller.py,sha256=6WxzSLgJK26VnVr_dUGkCRRdyEjYQjzCF_P0W3g82eI,2652
+scrapy_tor_proxy_rotation-0.0.1.dist-info/LICENSE,sha256=m6QUdjs94Rolk1oHGIoLS-B_ddyclabmvi3xix7_tfU,1075
+scrapy_tor_proxy_rotation-0.0.1.dist-info/METADATA,sha256=kBiJRhLebvp4rtrfVhy1PdJ8ksU2k9szSC8uaEWSAjw,3443
+scrapy_tor_proxy_rotation-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scrapy_tor_proxy_rotation-0.0.1.dist-info/top_level.txt,sha256=drEF-COo_CWPFz5KZ3q8GDtOr283plGoYMMfdzi0m4Y,15
+scrapy_tor_proxy_rotation-0.0.1.dist-info/RECORD,,

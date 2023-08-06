@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cognite-inso-toolbox
+Version: 0.2.7
+Summary: Inso Toolbox
+Author: cognite
+Author-email: gustavo.zarruk@cognite.com, nicholas.calen@cognite.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cognite-sdk-experimental (>=0.11.0,<0.12.0)

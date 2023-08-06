@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+javathon/__init__.py
+jspython.egg-info/PKG-INFO
+jspython.egg-info/SOURCES.txt
+jspython.egg-info/dependency_links.txt
+jspython.egg-info/top_level.txt

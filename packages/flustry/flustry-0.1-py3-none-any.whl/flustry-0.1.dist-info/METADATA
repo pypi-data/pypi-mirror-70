@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: flustry
+Version: 0.1
+Summary: Python client for the Flustry API (https://flustry.com/)
+Home-page: http://github.com/adaniels21487/flustry-client_python
+Author: flustry.com
+Author-email: aaron@daniels.id.au
+Maintainer: Aaron Daniels
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: requests
+Requires-Dist: furl
+
+UNKNOWN
+
+

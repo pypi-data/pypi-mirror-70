@@ -1,0 +1,13 @@
+nuclyr/config.py,sha256=Jl3rD0zM4e1qoFEQTX3GYOlh7WSB2iSJvU_spFkPVtg,948
+nuclyr/constants.py,sha256=SsZhoZbh1bhMI0Ln8AGcBn2o0iwt-zRoLeqgszJQLwA,21
+nuclyr/exfor.py,sha256=iXRtJ1QcCWAqE4tE1BMV3-f_YugfeBcanIWYchLfHSM,10686
+nuclyr/mass.py,sha256=jYPlRSp5jFiiZi-w1mUP9LOChRlw2G_sDQPbKj0Ya_U,2392
+nuclyr/nndc.py,sha256=QmkhYNg-pQNgRAQgqzSvNJOWFNxiYvCA3tgOG4jOvxc,1929
+nuclyr/data/amdc/mass16.dat,sha256=wY7xThK5BV7H6p7u7m16qV7QJN4r4CgiQrh_lHgyFD8,288721
+nuclyr/data/ripl/abundance.dat,sha256=0r76-xkfp3VMTMMIpfAwkR3eZA7APOK6zPWxmF8T3CE,10656
+nuclyr/data/ripl/mass-frdm95.dat,sha256=yzbmaTzCI3ip_621IZWFFCGK1gqDe3-cq9NMstMNbk0,880355
+nuclyr-0.17.dist-info/LICENSE,sha256=O1RWha5otQagLh4u7FXoydPq63fwjcQc7pBfjBZ9zGI,1090
+nuclyr-0.17.dist-info/METADATA,sha256=CfmFqqlHzfYiHbm-dr3wGg1VVYnTHrzbfXLXlNpSJMY,6067
+nuclyr-0.17.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+nuclyr-0.17.dist-info/top_level.txt,sha256=yo7tY0mBFAzxXKOqtbRuo5aO3ZHWM2eWnPijnmCj_7w,7
+nuclyr-0.17.dist-info/RECORD,,

@@ -1,0 +1,14 @@
+piscord/API_Elements.py,sha256=GEFaw8fv0EcbHH0dMh8JE-MpcWXHoCjBMfzFIId0nEA,20600
+piscord/Errors.py,sha256=mjmkpo209fTdNurUCbOBs0MRWN-KcKCp1vCBUr8CeFE,553
+piscord/Events.py,sha256=yZycIYizbhG4uYmgipNA_heT2bzzJ_hPYZmzl0GET7Q,10163
+piscord/Gateway.py,sha256=nx1qdl8xQJITYtvGPCmyqQCVymVsynHUcPr6urFGekw,2957
+piscord/OAuth.py,sha256=qZkpFzeoP552FgA3eNCuyJv4HEILHn5T9aRMFcLZwPE,1511
+piscord/Permission.py,sha256=J50FDYasEStBaOh5vhYJzKOUZB5scw8LjdsXZFDdsw8,983
+piscord/Piscord.py,sha256=FRM_DWSA0J-Szk-G7DCzNFh97yqS1d-rjjc3_zw-Nk4,4649
+piscord/Voice.py,sha256=aIpm_v4tZy7b000xbzEuSQ0uU2IgjbEV92DP0qJW1zo,2534
+piscord/__init__.py,sha256=iNWHTm5IjKZ93UT4Tu6Set41Y60HHDEwGs25XSgSupI,99
+piscord-1.4.0.dist-info/LICENSE,sha256=BkpXIJ9_YZUWtQKKzMpm6_1xvHDjP4_3dhdlcvQTzjw,1068
+piscord-1.4.0.dist-info/METADATA,sha256=eJZ6mZdVThjjl7wtUD6MJo2Kf87_LXZN_sM0SJRx6Bs,1402
+piscord-1.4.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+piscord-1.4.0.dist-info/top_level.txt,sha256=c5tPKUvvKrqnHJiR1KkaI7oMpUow7QRhob5N5w4NGXY,8
+piscord-1.4.0.dist-info/RECORD,,

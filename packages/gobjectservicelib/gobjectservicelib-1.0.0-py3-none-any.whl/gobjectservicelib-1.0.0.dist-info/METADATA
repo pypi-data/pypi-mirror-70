@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gobjectservicelib
+Version: 1.0.0
+Summary: GObject mainloop implementation of https://gitlab.com/advian-oss/python-datastreamservicelib
+Author: Eero af Heurlin
+Author-email: eero.afheurlin@advian.fi
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: dataclasses (>=0.7,<0.8); python_version >= "3.6" and python_version < "3.7"
+Requires-Dist: datastreamservicelib (>=1.5.1,<2.0.0)

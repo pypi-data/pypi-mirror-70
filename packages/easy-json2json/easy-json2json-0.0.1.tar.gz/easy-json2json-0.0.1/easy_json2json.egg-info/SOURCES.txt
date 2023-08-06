@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+easy_json2json.egg-info/PKG-INFO
+easy_json2json.egg-info/SOURCES.txt
+easy_json2json.egg-info/dependency_links.txt
+easy_json2json.egg-info/top_level.txt
+easyjson2json/__init__.py
+easyjson2json/helpers.py
+easyjson2json/json2json.py
+tests/__init__.py
+tests/json2json_test.py

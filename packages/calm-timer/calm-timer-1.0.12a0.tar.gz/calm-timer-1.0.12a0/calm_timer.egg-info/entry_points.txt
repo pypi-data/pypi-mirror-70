@@ -1,0 +1,3 @@
+[console_scripts]
+calm-timer = __main__.py:main
+

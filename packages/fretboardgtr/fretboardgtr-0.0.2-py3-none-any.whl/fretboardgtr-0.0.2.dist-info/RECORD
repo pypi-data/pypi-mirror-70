@@ -1,0 +1,10 @@
+fretboardgtr/__init__.py,sha256=9MuRk7q1u_UgNVFeZT8gVhu2-bPD6Q_QuDJUSZduEHg,134
+fretboardgtr/chordgtr.py,sha256=E1l0UJ7L80x67Ga0jGK1Eg5rG-AcdpDFZ5ESu83hiH4,12142
+fretboardgtr/constants.py,sha256=CoV1DC5VO41RPQzjkBYJZyN8fGYVuUHagv1ysrO7HBc,3272
+fretboardgtr/fretboardgtr.py,sha256=TxKD2Hp_bpGiSVpocaRHby-lznxKGebRDRXq7tpbzHE,12341
+fretboardgtr/scalegtr.py,sha256=wTr64Z8OwB0dz-Un-NWcTO9twBAfjLwxmjtOM_j88uQ,16923
+fretboardgtr-0.0.2.dist-info/LICENSE,sha256=F2UciBrIRwPICJm9JewWn3YkiUzGfIglULnqXbhn59A,35809
+fretboardgtr-0.0.2.dist-info/METADATA,sha256=TD-zJDxJ1ZZQUIcBPFxhBq5H3Cpw8VdnPW5QiXp7a4c,6815
+fretboardgtr-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+fretboardgtr-0.0.2.dist-info/top_level.txt,sha256=OkULcfp4hsuRG4YDCFEp8UbxkvATV6S23N9yCxDBTqE,13
+fretboardgtr-0.0.2.dist-info/RECORD,,

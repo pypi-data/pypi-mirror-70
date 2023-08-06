@@ -1,0 +1,8 @@
+sql_athame/__init__.py,sha256=rzUQcbzmj3qkPZpL9jI_ALTRv-e1pAV4jSCryWkutlk,130
+sql_athame/base.py,sha256=ZAxbcsqMB8VnSZiXHSiNLqDZ7cZ9kROIKGh59t_psfg,8241
+sql_athame/dataclasses.py,sha256=S7hDaNLSCBEmqyqf7hngTiYECKmfgN37CKH5BXQuB1I,13287
+sql_athame/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_athame-0.3.6.dist-info/LICENSE,sha256=qsnSlPWwbnijlYDCBnEZ75eFeIZLcZ2_3zU3Gh8dcE0,1070
+sql_athame-0.3.6.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+sql_athame-0.3.6.dist-info/METADATA,sha256=bySWrvOQxcstVtbbJo_hj_-dd9sI_L_YMxJG168QOTs,2320
+sql_athame-0.3.6.dist-info/RECORD,,

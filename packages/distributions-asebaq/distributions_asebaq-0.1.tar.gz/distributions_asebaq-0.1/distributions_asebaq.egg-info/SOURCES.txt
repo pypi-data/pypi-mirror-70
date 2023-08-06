@@ -1,0 +1,10 @@
+setup.py
+distributions_asebaq/Binomialdistribution.py
+distributions_asebaq/Gaussiandistribution.py
+distributions_asebaq/Generaldistribution.py
+distributions_asebaq/__init__.py
+distributions_asebaq.egg-info/PKG-INFO
+distributions_asebaq.egg-info/SOURCES.txt
+distributions_asebaq.egg-info/dependency_links.txt
+distributions_asebaq.egg-info/not-zip-safe
+distributions_asebaq.egg-info/top_level.txt

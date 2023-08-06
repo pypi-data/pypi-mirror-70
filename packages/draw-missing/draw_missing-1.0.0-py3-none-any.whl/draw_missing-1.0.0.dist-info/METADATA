@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: draw-missing
+Version: 1.0.0
+Summary: A Python package to visualize missing values in a data frame
+Home-page: https://github.com/Tejas003/draw_missing
+Author: Tejas Sanjay Shinde
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+
+# Drawing a Missing Plot
+
+This is a Python package to visualize missing values in a data frame
+
+## Installation
+
+Run the following to install:
+
+```
+pip install drawmissing
+
+```
+## Usage
+
+```
+import drawmissing as d
+
+# Create an object 
+obj = d.Draw(df)
+
+#Visualize Missing Values
+Obj.draw_missing_plot()
+
+```
+

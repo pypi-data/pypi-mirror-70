@@ -1,0 +1,14 @@
+dicksonui/Application.py,sha256=14oZCKnxcnrM4mz1jC_OlLMRixbRvURlWQzrrLOUM7M,5711
+dicksonui/Control.py,sha256=10YJZidmt4M6OYPeXngb6xLBcUge0WqFJOLK0gxpR0I,3530
+dicksonui/Controls.py,sha256=NxItRwaHzd3HtHE6BYiKYDYG0oLplMZcgqTERNVGO0Y,5609
+dicksonui/Form.py,sha256=m_POD377I9gbxPnCzRZJ8SJVr3Xxvn8ewlZbrrLM7F8,3041
+dicksonui/__init__.py,sha256=vt1rCZqN485KQp71LuGVLeUggsPAEqX_ZxGUCL5bH-Q,171
+dicksonui/chrome.py,sha256=1N2YBIdqcxxEBDy6fap1WFFs72Le95UdLg8nThEWJuo,4018
+dicksonui/edge.py,sha256=lBCzNV9ZIMwi-d-Cj8llTr7CKjqOMODfmjkZ31i33lo,285
+dicksonui/firefox.py,sha256=CbCq84OcimUmQWyy-cyWWzqmEjUsNasOPqOnruIAdtk,4399
+dicksonui/utiles.py,sha256=w9kRRLFObP3jV0jAnGePUNusmMTcXlF2ecKC6V35UQE,419
+DicksonUI-1.1.0.0.dist-info/LICENSE,sha256=F3soEOCP0akyMnG23d-SBJoCOP3w1gjdwjcsJZ5ckm8,1073
+DicksonUI-1.1.0.0.dist-info/METADATA,sha256=YNvoRhblEkpnMiN3USK3-Epy0gYEfdBxN2VpZQwa8Q8,3831
+DicksonUI-1.1.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+DicksonUI-1.1.0.0.dist-info/top_level.txt,sha256=s-FLEX7hnmRI68jD4goST7A3iXXtevJdTIwr5wa6jlI,10
+DicksonUI-1.1.0.0.dist-info/RECORD,,

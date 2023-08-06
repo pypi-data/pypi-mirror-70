@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Supported NumPy functions &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../index.html" />
+    <link rel="up" title="Numpy methods" href="../numpy_wrappers.html" />
+    <link rel="next" title="Dimension specific Apodization methods" href="apodization.html" />
+    <link rel="prev" title="Numpy methods" href="../numpy_wrappers.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../numpy_wrappers.html" title="Numpy methods" accesskey="P">previous </a></li>
+              <li><a href="apodization.html" title="Dimension specific Apodization methods" accesskey="N">next </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../referenceAPI.html" >API-Reference</a></li>
+              <li><a href="../numpy_wrappers.html" accesskey="U">Numpy methods</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/api/wrappers/element_wise_operation.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../referenceAPI.html">API-Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../csdmpy.html">csdmpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CSDM.html">CSDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Dimensions.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DependentVariable.html">DependentVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../statistics.html">Statistics</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../numpy_wrappers.html">Numpy methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="supported-numpy-functions">
+<span id="numpy-support"></span><h1>Supported NumPy functions<a class="headerlink" href="#supported-numpy-functions" title="Permalink to this headline">¶</a></h1>
+<p>The csdm object supports the use of NumPy functions, as</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are the csdm objects, and <code class="docutils literal notranslate"><span class="pre">func</span></code> is any one of the
+following functions. These functions apply to each component of the dependent
+variables from a given <cite>csdm</cite> object, <cite>x</cite>.</p>
+<p class="rubric">Trigonometric functions</p>
+<p>The trigonometric functions apply to the components of the dependent
+variables from a csdm object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The components must be dimensionless quantities.</p>
+</div>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">A list of supported trigonometric functions.</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sin.html#numpy.sin">sin</a></p></td>
+<td><p>Apply sine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cos.html#numpy.cos">cos</a></p></td>
+<td><p>Apply cosine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tan.html#numpy.tan">tan</a></p></td>
+<td><p>Apply tangent to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsin.html#numpy.arcsin">arcsin</a></p></td>
+<td><p>Apply inverse sine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccos.html#numpy.arccos">arccos</a></p></td>
+<td><p>Apply inverse cosine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctan.html#numpy.arctan">arctan</a></p></td>
+<td><p>Apply inverse tangent to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sinh.html#numpy.sinh">sinh</a></p></td>
+<td><p>Apply hyperbolic sine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cosh.html#numpy.cosh">cosh</a></p></td>
+<td><p>Apply hyperbolic cosine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.tanh.html#numpy.tanh">tanh</a></p></td>
+<td><p>Apply hyperbolic tangent to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arcsinh.html#numpy.arcsinh">arcsinh</a></p></td>
+<td><p>Apply inverse hyperbolic sine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arccosh.html#numpy.arccosh">arccosh</a></p></td>
+<td><p>Apply inverse hyperbolic cosine to the components of the dependent variables</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arctanh.html#numpy.arctanh">arctanh</a></p></td>
+<td><p>Apply inverse hyperbolic tangent to the components of the dependent variables</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Mathematical operations</p>
+<p>The following mathematical functions apply to the components of the dependent
+variables from a csdm object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The components must be dimensionless quantities.</p>
+</div>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id2">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">A list of supported mathematical functions.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp.html#numpy.exp">exp</a></p></td>
+<td><p>Calculate the exponential of the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.expm1.html#numpy.expm1">expm1</a></p></td>
+<td><p>Apply <span class="math notranslate nohighlight">\(e^x - 1\)</span>, where <cite>x</cite> are the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.exp2.html#numpy.exp2">exp2</a></p></td>
+<td><p>Calculate <span class="math notranslate nohighlight">\(2^x\)</span>, where <cite>x</cite> are the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.log.html#numpy.log">log</a></p></td>
+<td><p>Calculate natural logarithm of the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.log1p.html#numpy.log1p">log1p</a></p></td>
+<td><p>Calculate natural logarithm plus one on the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.log2.html#numpy.log2">log2</a></p></td>
+<td><p>Calculate base-2 logarithm of the components of the dependent variables.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.log10.html#numpy.log10">log10</a></p></td>
+<td><p>Calculate base-10 logarithm of the components of the dependent variables.</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following mathematical functions apply to the components of the dependent
+variables from a csdm object irrespective of the components’ dimensionality.</p>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id3">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Arithmetic operations</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.reciprocal.html#numpy.reciprocal">reciprocal</a></p></td>
+<td><p>Return element-wise reciprocal.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.positive.html#numpy.positive">positive</a></p></td>
+<td><p>Return element-wise numerical positive.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.negative.html#numpy.negative">negative</a></p></td>
+<td><p>Return element-wise numerical negative.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id4">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Miscellaneous</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html#numpy.sqrt">sqrt</a></p></td>
+<td><p>Return element-wise non-negative square-root.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.cbrt.html#numpy.cbrt">cbrt</a></p></td>
+<td><p>Return element-wise cube-root.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html#numpy.square">square</a></p></td>
+<td><p>Return element-wise square.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.absolute.html#numpy.absolute">absolute</a></p></td>
+<td><p>Return element-wise absolute value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.fabs.html#numpy.fabs">fabs</a></p></td>
+<td><p>Return element-wise absolute value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sign.html#numpy.sign">sign</a></p></td>
+<td><p>Return element-wise sign of the values.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id5">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Handling complex numbers</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.angle.html#numpy.angle">angle</a></p></td>
+<td><p>Return element-wise angle of a complex value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.real.html#numpy.real">real</a></p></td>
+<td><p>Return element-wise real part of a complex value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.imag.html#numpy.imag">imag</a></p></td>
+<td><p>Return element-wise imaginary part of a complex value.å</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.conj.html#numpy.conj">conj</a></p></td>
+<td><p>Return element-wise conjugate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.conjugate.html#numpy.conjugate">conjugate</a></p></td>
+<td><p>Return element-wise conjugate.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id6">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Sums, products, differences</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.prod.html#numpy.prod">prod</a></p></td>
+<td><p>Return the product of the components of a dependent variable along a dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.sum.html#numpy.sum">sum</a></p></td>
+<td><p>Return the sum of the components of a dependent variable along a dimension.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default" id="id7">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Rounding</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Functions</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.rint.html#numpy.rint">rint</a></p></td>
+<td><p>Round elements to the nearest integer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.around.html#numpy.around">around</a></p></td>
+<td><p>Round elements to the given number of decimals.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.round_.html#numpy.round_">round</a></p></td>
+<td><p>Round elements to the given number of decimals.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Other functions</p>
+<ul class="simple">
+<li><p>min</p></li>
+<li><p>max</p></li>
+<li><p>mean</p></li>
+<li><p>var</p></li>
+<li><p>std</p></li>
+</ul>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../_sources/api/wrappers/element_wise_operation.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>csdmpy &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for csdmpy</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;The data model build on the Core Scientific Dataset Model.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">as_dependent_variable</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">as_dimension</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">CSDM</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">DependentVariable</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">Dimension</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">LabeledDimension</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">LinearDimension</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.csdm</span> <span class="kn">import</span> <span class="n">MonotonicDimension</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.dependent_variables</span> <span class="kn">import</span> <span class="n">download</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.helper_functions</span> <span class="kn">import</span> <span class="n">_preview</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.numpy_wrapper</span> <span class="kn">import</span> <span class="n">apodize</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.tests</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.units</span> <span class="kn">import</span> <span class="n">ScalarQuantity</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.units</span> <span class="kn">import</span> <span class="n">string_to_quantity</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.utils</span> <span class="kn">import</span> <span class="n">QuantityType</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+<span class="kn">from</span> <span class="nn">csdmpy.utils</span> <span class="kn">import</span> <span class="n">validate</span>  <span class="c1"># lgtm [py/import-own-module]</span>
+
+
+<span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Deepansh J. Srivastava&quot;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&quot;srivastava.89@osu.edu&quot;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;Copyright 2019-2020, The CSDMpy Project.&quot;</span>
+<span class="n">__credits__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Deepansh J. Srivastava&quot;</span><span class="p">]</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;BSD License&quot;</span>
+<span class="n">__maintainer__</span> <span class="o">=</span> <span class="s2">&quot;Deepansh J. Srivastava&quot;</span>
+<span class="n">__status__</span> <span class="o">=</span> <span class="s2">&quot;Development&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.2.2&quot;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;parse_dict&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;load&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;loads&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;new&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;as_csdm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;as_dependent_variable&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;as_dimension&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;plot&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">_import_json</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">download</span><span class="o">.</span><span class="n">download_file_from_url</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="parse_dict"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.parse_dict">[docs]</a><span class="k">def</span> <span class="nf">parse_dict</span><span class="p">(</span><span class="n">dictionary</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Parse a CSDM compliant python dictionary and return a CSDM object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            dictionary: A CSDM compliant python dictionary.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">key_list_root</span> <span class="o">=</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+    <span class="k">if</span> <span class="s2">&quot;CSDM&quot;</span> <span class="ow">in</span> <span class="n">key_list_root</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+            <span class="s2">&quot;&#39;CSDM&#39; is not a valid keyword for the CSD model. Did you mean &#39;csdm&#39;?&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;csdm&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">key_list_root</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;Missing a required `csdm` key from the data model.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># inside csdm object</span>
+    <span class="n">optional_keys</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;read_only&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;geographic_coordinate&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;application&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tags&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="n">required_keys</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]</span>
+    <span class="n">all_keys</span> <span class="o">=</span> <span class="n">optional_keys</span> <span class="o">+</span> <span class="n">required_keys</span>
+
+    <span class="n">key_list_csdm</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">key_list_csdm_lower_case</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">key_list_csdm</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key_list_csdm</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">key_list_csdm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_keys</span> <span class="ow">and</span> <span class="n">key_list_csdm_lower_case</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">all_keys</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key_list_csdm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> is an invalid key for the CSDM object. &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Did you mean &#39;</span><span class="si">{</span><span class="n">key_list_csdm_lower_case</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;?&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">required_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">key_list_csdm</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing a required `</span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">` key from the CSDM object.&quot;</span><span class="p">)</span>
+
+    <span class="n">_version</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">][</span><span class="s2">&quot;version&quot;</span><span class="p">]</span>
+    <span class="n">validate</span><span class="p">(</span><span class="n">_version</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;filename&quot;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">csdm</span> <span class="o">=</span> <span class="n">CSDM</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="n">_version</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;timestamp&quot;</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">_timestamp</span> <span class="o">=</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">][</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+        <span class="n">validate</span><span class="p">(</span><span class="n">_timestamp</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="n">csdm</span><span class="o">.</span><span class="n">_timestamp</span> <span class="o">=</span> <span class="n">_timestamp</span>
+
+    <span class="k">if</span> <span class="s2">&quot;dimensions&quot;</span> <span class="ow">in</span> <span class="n">key_list_csdm</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">][</span><span class="s2">&quot;dimensions&quot;</span><span class="p">]:</span>
+            <span class="n">csdm</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;dependent_variables&quot;</span> <span class="ow">in</span> <span class="n">key_list_csdm</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">dat</span> <span class="ow">in</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">][</span><span class="s2">&quot;dependent_variables&quot;</span><span class="p">]:</span>
+            <span class="n">csdm</span><span class="o">.</span><span class="n">add_dependent_variable</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">optional_keys</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_list_csdm</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="n">csdm</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">key</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;csdm&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">csdm</span></div>
+
+
+<div class="viewcode-block" id="load"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.load">[docs]</a><span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">application</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Loads a .csdf/.csdfe file and returns an instance of the :ref:`csdm_api` class.</span>
+
+<span class="sd">    The file must be a JSON serialization of the CSD Model.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; data1 = cp.load(&#39;local_address/file.csdf&#39;) # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; data2 = cp.load(&#39;url_address/file.csdf&#39;) # doctest: +SKIP</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filename (str): A local or a remote address to the `.csdf or `.csdfe` file.</span>
+<span class="sd">        application (bool): If true, the application metadata from application that</span>
+<span class="sd">                last serialized the file will be imported. Default is False.</span>
+<span class="sd">        verbose (bool): If the filename is a URL, this option will show the progress</span>
+<span class="sd">                bar for the file download status, when True.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A CSDM instance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Missing the value for the required `filename` attribute.&quot;</span><span class="p">)</span>
+
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="n">_import_json</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">verbose</span><span class="p">)</span>
+    <span class="n">dictionary</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filename</span>
+    <span class="n">csdm_object</span> <span class="o">=</span> <span class="n">parse_dict</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">application</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="n">csdm_object</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">csdm_object</span><span class="o">.</span><span class="n">dimensions</span><span class="p">:</span>
+            <span class="n">dim</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="s2">&quot;reciprocal&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">dim</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;label&quot;</span><span class="p">:</span>
+                <span class="n">dim</span><span class="o">.</span><span class="n">reciprocal</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">csdm_object</span><span class="o">.</span><span class="n">dependent_variables</span><span class="p">:</span>
+            <span class="n">dim</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="c1"># if hasattr(dim., &#39;dimension indexes&#39;):</span>
+            <span class="c1">#     dim.reciprocal.application = {}</span>
+    <span class="c1"># csdm_objects = []</span>
+    <span class="c1"># for file_ in csdm_files:</span>
+    <span class="c1">#     csdm_objects.append(_load(file_, application=application))</span>
+    <span class="k">return</span> <span class="n">csdm_object</span></div>
+
+
+<div class="viewcode-block" id="loads"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.loads">[docs]</a><span class="k">def</span> <span class="nf">loads</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads a JSON serialized string as a CSDM object.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            string: A JSON serialized CSDM string.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            A CSDM object.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; object_from_string = cp.loads(cp.new(&#39;A test dump&#39;).dumps())</span>
+<span class="sd">            &gt;&gt;&gt; print(object_from_string.data_structure)  # doctest: +SKIP</span>
+<span class="sd">            {</span>
+<span class="sd">              &quot;csdm&quot;: {</span>
+<span class="sd">                &quot;version&quot;: &quot;1.0&quot;,</span>
+<span class="sd">                &quot;timestamp&quot;: &quot;2019-10-21T20:33:17Z&quot;,</span>
+<span class="sd">                &quot;description&quot;: &quot;A test dump&quot;,</span>
+<span class="sd">                &quot;dimensions&quot;: [],</span>
+<span class="sd">                &quot;dependent_variables&quot;: []</span>
+<span class="sd">              }</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="n">csdm_object</span> <span class="o">=</span> <span class="n">parse_dict</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">csdm_object</span></div>
+
+
+<div class="viewcode-block" id="new"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.new">[docs]</a><span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a new instance of the :ref:`csdm_api` class containing a 0D{0} dataset.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        description (str): A string describing the csdm object. This is optional.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; import csdmpy as cp</span>
+<span class="sd">        &gt;&gt;&gt; emptydata = cp.new(description=&#39;Testing Testing 1 2 3&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; print(emptydata.data_structure)</span>
+<span class="sd">        {</span>
+<span class="sd">          &quot;csdm&quot;: {</span>
+<span class="sd">            &quot;version&quot;: &quot;1.0&quot;,</span>
+<span class="sd">            &quot;description&quot;: &quot;Testing Testing 1 2 3&quot;,</span>
+<span class="sd">            &quot;dimensions&quot;: [],</span>
+<span class="sd">            &quot;dependent_variables&quot;: []</span>
+<span class="sd">          }</span>
+<span class="sd">        }</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A CSDM instance.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">CSDM</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="as_csdm"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.as_csdm">[docs]</a><span class="k">def</span> <span class="nf">as_csdm</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s2">&quot;scalar&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate and return a view of the nD numpy array as a csdm object.</span>
+<span class="sd">    The nD array is the dependent variable of the csdm object of the given quantity</span>
+<span class="sd">    type. The shape of the nD array is used to generate Dimension object of `linear`</span>
+<span class="sd">    subtype.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        array: The nD numpy array.</span>
+<span class="sd">        unit: The unit for the dependent variable. The default is empty string.</span>
+<span class="sd">        quantity_type: The quantity type of the dependent variable.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; array = np.arange(30).reshape(3, 10)</span>
+<span class="sd">        &gt;&gt;&gt; csdm_obj = cp.as_csdm(array)</span>
+<span class="sd">        &gt;&gt;&gt; print(csdm_obj)</span>
+<span class="sd">        CSDM(</span>
+<span class="sd">        DependentVariable(</span>
+<span class="sd">        [[[ 0  1  2  3  4  5  6  7  8  9]</span>
+<span class="sd">          [10 11 12 13 14 15 16 17 18 19]</span>
+<span class="sd">          [20 21 22 23 24 25 26 27 28 29]]], quantity_type=scalar, numeric_type=int64),</span>
+<span class="sd">        LinearDimension([0. 1. 2. 3. 4. 5. 6. 7. 8. 9.]),</span>
+<span class="sd">        LinearDimension([0. 1. 2.])</span>
+<span class="sd">        )</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">q_type</span> <span class="o">=</span> <span class="n">QuantityType</span><span class="p">(</span><span class="n">quantity_type</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">q_type</span><span class="o">.</span><span class="n">p</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">array</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span>
+
+    <span class="k">if</span> <span class="n">q_type</span><span class="o">.</span><span class="n">p</span> <span class="o">!=</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Expecting exactly </span><span class="si">{</span><span class="n">q_type</span><span class="o">.</span><span class="n">p</span><span class="si">}</span><span class="s2"> components for quantity type, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">quantity_type</span><span class="si">}</span><span class="s2">`, found </span><span class="si">{</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">. Make sure `array.shape[0]` &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;is equal to the number of components supported by </span><span class="si">{</span><span class="n">quantity_type</span><span class="si">}</span><span class="s2">.&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">csdm</span> <span class="o">=</span> <span class="n">new</span><span class="p">()</span>
+
+    <span class="c1"># dimensions should be added first</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">csdm</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">LinearDimension</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">increment</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">))</span>
+
+    <span class="n">csdm</span><span class="o">.</span><span class="n">add_dependent_variable</span><span class="p">(</span>
+        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;internal&quot;</span><span class="p">,</span>
+        <span class="n">components</span><span class="o">=</span><span class="n">array</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
+        <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
+        <span class="n">quantity_type</span><span class="o">=</span><span class="n">quantity_type</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">csdm</span></div>
+
+
+<div class="viewcode-block" id="plot"><a class="viewcode-back" href="../api/csdmpy.html#csdmpy.plot">[docs]</a><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">csdm_object</span><span class="p">,</span> <span class="n">reverse_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A supplementary function for plotting basic 1D and 2D datasets only.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        csdm_object: The CSDM object.</span>
+<span class="sd">        reverse_axis: An ordered array of boolean specifying which dimensions will be</span>
+<span class="sd">            displayed on a reverse axis.</span>
+<span class="sd">        range: A list of minimum and maxmim coordinates along the dimensions. The range</span>
+<span class="sd">            along each dimension is given as [min, max]</span>
+<span class="sd">        kwargs: Additional keyword arguments are used in matplotlib plotting functions.</span>
+<span class="sd">            We implement the following matplotlib methods for the one and</span>
+<span class="sd">            two-dimensional datasets.</span>
+
+<span class="sd">            - The 1D{1} scalar dataset use the plt.plot() method.</span>
+<span class="sd">            - The 1D{2} vector dataset use the plt.quiver() method.</span>
+<span class="sd">            - The 2D{1} scalar dataset use the plt.imshow() method if the two dimensions have a `linear` subtype. If any one of the dimension is `monotonic`, plt.NonUniformImage() method is used instead.</span>
+<span class="sd">            - The 2D{2} vector dataset use the plt.quiver() method.</span>
+<span class="sd">            - The 2D{3} pixel dataset use the plt.imshow(), assuming the pixel dataset as an RGB image.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A matplotlib figure instance.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; cp.plot(data_object) # doctest: +SKIP</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_preview</span><span class="p">(</span><span class="n">csdm_object</span><span class="p">,</span> <span class="n">reverse_axis</span><span class="p">,</span> <span class="nb">range</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex"> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

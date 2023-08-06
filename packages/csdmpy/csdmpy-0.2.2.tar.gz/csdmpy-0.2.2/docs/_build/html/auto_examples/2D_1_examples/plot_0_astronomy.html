@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Astronomy dataset &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../index.html" />
+    <link rel="up" title="Example Gallery" href="../index.html" />
+    <link rel="next" title="Nuclear Magnetic Resonance (NMR) dataset" href="plot_1_NMR_satrec.html" />
+    <link rel="prev" title="Mass spectrometry (sparse) dataset" href="../1D_1_examples/plot_6_Mass.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../1D_1_examples/plot_6_Mass.html" title="Mass spectrometry (sparse) dataset" accesskey="P">previous </a></li>
+              <li><a href="plot_1_NMR_satrec.html" title="Nuclear Magnetic Resonance (NMR) dataset" accesskey="N">next </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../index.html" accesskey="U">Example Gallery</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/auto_examples/2D_1_examples/plot_0_astronomy.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-2d-1-examples-plot-0-astronomy-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="astronomy-dataset">
+<span id="sphx-glr-auto-examples-2d-1-examples-plot-0-astronomy-py"></span><h1>Astronomy dataset<a class="headerlink" href="#astronomy-dataset" title="Permalink to this headline">¶</a></h1>
+<p>The following dataset is a new observation of the Bubble Nebula
+acquired by
+<a class="reference external" href="https://archive.stsci.edu/prepds/heritage/bubble/introduction.html">The Hubble Heritage Team</a>,
+in February 2016. The original dataset was obtained in the FITS format
+and subsequently converted to the CSD model file-format. For the convenience of
+illustration, we have downsampled the original dataset.</p>
+<p>Let’s load the <cite>.csdfe</cite> file and look at its data structure.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;https://osu.box.com/shared/static/0p3o1ga1kqno4dk4sooi1rbk29pbs3mm.csdf&quot;</span>
+<a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">bubble_nebula</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">load</span></a></a></a></a></a><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">bubble_nebula</span><span class="o">.</span><span class="n">data_structure</span></a></a></a></a></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{
+  &quot;csdm&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;timestamp&quot;: &quot;2020-01-04T01:43:31Z&quot;,
+    &quot;description&quot;: &quot;The dataset is a new observation of the Bubble Nebula acquired by The Hubble Heritage Team, in February 2016.&quot;,
+    &quot;dimensions&quot;: [
+      {
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;count&quot;: 1024,
+        &quot;increment&quot;: &quot;-0.0002581136196 °&quot;,
+        &quot;coordinates_offset&quot;: &quot;350.311874957 °&quot;,
+        &quot;quantity_name&quot;: &quot;plane angle&quot;,
+        &quot;label&quot;: &quot;Right Ascension&quot;
+      },
+      {
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;count&quot;: 1024,
+        &quot;increment&quot;: &quot;0.0001219957797701109 °&quot;,
+        &quot;coordinates_offset&quot;: &quot;61.12851494969163 °&quot;,
+        &quot;quantity_name&quot;: &quot;plane angle&quot;,
+        &quot;label&quot;: &quot;Declination&quot;
+      }
+    ],
+    &quot;dependent_variables&quot;: [
+      {
+        &quot;type&quot;: &quot;internal&quot;,
+        &quot;name&quot;: &quot;Bubble Nebula, 656nm&quot;,
+        &quot;numeric_type&quot;: &quot;float32&quot;,
+        &quot;quantity_type&quot;: &quot;scalar&quot;,
+        &quot;components&quot;: [
+          [
+            &quot;0.0, 0.0, ..., 0.0, 0.0&quot;
+          ]
+        ]
+      }
+    ]
+  }
+}
+</pre></div>
+</div>
+<p>Here, the variable <code class="docutils literal notranslate"><span class="pre">bubble_nebula</span></code> is an instance of the <a class="reference internal" href="../../api/CSDM.html#csdm-api"><span class="std std-ref">CSDM</span></a>
+class. From the data structure, one finds two dimensions, labeled as
+<em>Right Ascension</em> and <em>Declination</em>, and one single-component dependent
+variable named <em>Bubble Nebula, 656nm</em>.</p>
+<p>Let’s get the tuple of the dimension and dependent variable instances from
+the <code class="docutils literal notranslate"><span class="pre">bubble_nebula</span></code> instance following,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">bubble_nebula</span><span class="o">.</span><span class="n">dimensions</span></a></a></a></a></a>
+<span class="n">y</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">bubble_nebula</span><span class="o">.</span><span class="n">dependent_variables</span></a></a></a></a></a>
+</pre></div>
+</div>
+<p>There are two dimension instances in <code class="docutils literal notranslate"><span class="pre">x</span></code>. Let’s look
+at the coordinates along each dimension, using the
+<a class="reference internal" href="../../api/Dimensions.html#csdmpy.Dimension.coordinates" title="csdmpy.Dimension.coordinates"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coordinates</span></code></a> attribute of the
+respective instances.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[350.31187496 350.31161684 350.31135873 350.31110062 350.3108425
+ 350.31058439 350.31032628 350.31006816 350.30981005 350.30955193] deg
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[61.12851495 61.12863695 61.12875894 61.12888094 61.12900293 61.12912493
+ 61.12924692 61.12936892 61.12949092 61.12961291] deg
+</pre></div>
+</div>
+<p>Here, we only print the first ten coordinates along the respective dimensions.</p>
+<p>The component of the dependent variable is accessed through the
+<a class="reference internal" href="../../api/DependentVariable.html#csdmpy.DependentVariable.components" title="csdmpy.DependentVariable.components"><code class="xref py py-attr docutils literal notranslate"><span class="pre">components</span></code></a> attribute.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">y00</span></a></a></a></a></a> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Visualize the dataset</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><span class="n">LogNorm</span></a></a></a></a></a>
+
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">bubble_nebula</span></a></a></a></a></a><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><a href="https://matplotlib.org/api/_as_gen/matplotlib.colors.LogNorm.html#matplotlib.colors.LogNorm" title="matplotlib.colors.LogNorm" class="sphx-glr-backref-module-matplotlib-colors sphx-glr-backref-type-py-class"><span class="n">LogNorm</span></a></a></a></a></a><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">7.5e-3</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Bubble Nebula, 656nm" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_0_astronomy_001.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For 2D{1} datasets, the <a class="reference internal" href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot()</span></code></a> method utilizes the matplotlib <cite>imshow</cite>
+method to render figures. Any additional arguments provided to the <a class="reference internal" href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot()</span></code></a>
+method becomes the arguments for the matplotlib <cite>imshow</cite> method. In the above
+example, the argument <cite>norm</cite> is the argument for the <cite>imshow</cite> method.</p>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.475 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-2d-1-examples-plot-0-astronomy-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/d64374736dfd5d31b246ff983b2fe70f/plot_0_astronomy.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_0_astronomy.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2020e1296499fe7ab16b06d333bbc333/plot_0_astronomy.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_0_astronomy.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../_sources/auto_examples/2D_1_examples/plot_0_astronomy.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

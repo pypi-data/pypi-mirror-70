@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Nuclear Magnetic Resonance (NMR) dataset &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../index.html" />
+    <link rel="up" title="Example Gallery" href="../index.html" />
+    <link rel="next" title="Electron Paramagnetic Resonance (EPR) dataset" href="plot_2_EPR.html" />
+    <link rel="prev" title="Global Mean Sea Level rise dataset" href="plot_0_gmsl.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="plot_0_gmsl.html" title="Global Mean Sea Level rise dataset" accesskey="P">previous </a></li>
+              <li><a href="plot_2_EPR.html" title="Electron Paramagnetic Resonance (EPR) dataset" accesskey="N">next </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../index.html" accesskey="U">Example Gallery</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/auto_examples/1D_1_examples/plot_1_NMR_bloch.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-1d-1-examples-plot-1-nmr-bloch-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="nuclear-magnetic-resonance-nmr-dataset">
+<span id="sphx-glr-auto-examples-1d-1-examples-plot-1-nmr-bloch-py"></span><h1>Nuclear Magnetic Resonance (NMR) dataset<a class="headerlink" href="#nuclear-magnetic-resonance-nmr-dataset" title="Permalink to this headline">¶</a></h1>
+<p>The following dataset is a <span class="math notranslate nohighlight">\(^{13}\mathrm{C}\)</span> time-domain NMR Bloch decay
+signal of ethanol.
+Let’s load this data file and take a quick look at its data
+structure. We follow the steps described in the previous example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;https://osu.box.com/shared/static/2e4fqm8n8bh4i5wgrinbwcavafa8x7y1.csdf&quot;</span>
+<a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">NMR_data</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">load</span></a></a></a></a></a><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">data_structure</span></a></a></a></a></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{
+  &quot;csdm&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;read_only&quot;: true,
+    &quot;timestamp&quot;: &quot;2016-03-12T16:41:00Z&quot;,
+    &quot;geographic_coordinate&quot;: {
+      &quot;altitude&quot;: &quot;238.9719543457031 m&quot;,
+      &quot;longitude&quot;: &quot;-83.05154573892345 °&quot;,
+      &quot;latitude&quot;: &quot;39.97968794964322 °&quot;
+    },
+    &quot;tags&quot;: [
+      &quot;13C&quot;,
+      &quot;NMR&quot;,
+      &quot;spectrum&quot;,
+      &quot;ethanol&quot;
+    ],
+    &quot;description&quot;: &quot;A time domain NMR 13C Bloch decay signal of ethanol.&quot;,
+    &quot;dimensions&quot;: [
+      {
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;count&quot;: 4096,
+        &quot;increment&quot;: &quot;0.1 ms&quot;,
+        &quot;coordinates_offset&quot;: &quot;-0.3 ms&quot;,
+        &quot;quantity_name&quot;: &quot;time&quot;,
+        &quot;reciprocal&quot;: {
+          &quot;coordinates_offset&quot;: &quot;-3005.363 Hz&quot;,
+          &quot;origin_offset&quot;: &quot;75426328.86 Hz&quot;,
+          &quot;quantity_name&quot;: &quot;frequency&quot;,
+          &quot;label&quot;: &quot;13C frequency shift&quot;
+        }
+      }
+    ],
+    &quot;dependent_variables&quot;: [
+      {
+        &quot;type&quot;: &quot;internal&quot;,
+        &quot;numeric_type&quot;: &quot;complex128&quot;,
+        &quot;quantity_type&quot;: &quot;scalar&quot;,
+        &quot;components&quot;: [
+          [
+            &quot;(-8899.40625-1276.7734375j), (-4606.88037109375-742.4124755859375j), ..., (37.548492431640625+20.156890869140625j), (-193.9228515625-67.06524658203125j)&quot;
+          ]
+        ]
+      }
+    ]
+  }
+}
+</pre></div>
+</div>
+<p>This particular example illustrates two additional attributes of the CSD model,
+namely, the <a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">geographic_coordinate</span></code></a> and
+<a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tags</span></code></a>. The <cite>geographic_coordinate</cite> described the
+location where the CSDM file was last serialized. You may access this
+attribute through,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">geographic_coordinate</span></a></a></a></a></a>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;altitude&#39;: &#39;238.9719543457031 m&#39;, &#39;longitude&#39;: &#39;-83.05154573892345 °&#39;, &#39;latitude&#39;: &#39;39.97968794964322 °&#39;}
+</pre></div>
+</div>
+<p>The <cite>tags</cite> attribute is a list of keywords that best describe the dataset.
+The <cite>tags</cite> attribute is accessed through,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">tags</span></a></a></a></a></a>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;13C&#39;, &#39;NMR&#39;, &#39;spectrum&#39;, &#39;ethanol&#39;]
+</pre></div>
+</div>
+<p>You may add additional tags, if so desired, using the <cite>append</cite>
+method of python’s list class, for example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span></a></a></a></a></a><span class="p">(</span><span class="s2">&quot;Bloch decay&quot;</span><span class="p">)</span>
+<a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">tags</span></a></a></a></a></a>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;13C&#39;, &#39;NMR&#39;, &#39;spectrum&#39;, &#39;ethanol&#39;, &#39;Bloch decay&#39;]
+</pre></div>
+</div>
+<p>The coordinates along the dimension are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">dimensions</span></a></a></a></a></a>
+<a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x0</span></a></a></a></a></a> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x0</span></a></a></a></a></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[-3.000e-01 -2.000e-01 -1.000e-01 ...  4.090e+02  4.091e+02  4.092e+02] ms
+</pre></div>
+</div>
+<p>Unlike the previous example, the data structure of an NMR measurement is
+a complex-valued dependent variable. The numeric type of the components from
+a dependent variable is accessed through the
+<a class="reference internal" href="../../api/DependentVariable.html#csdmpy.DependentVariable.numeric_type" title="csdmpy.DependentVariable.numeric_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">numeric_type</span></code></a> attribute.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">dependent_variables</span></a></a></a></a></a>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">numeric_type</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>complex128
+</pre></div>
+</div>
+<p><strong>Visualizing the dataset</strong></p>
+<p>In the previous example, we illustrated a matplotlib script for plotting 1D data.
+Here, we use the csdmpy <a class="reference internal" href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">plot()</span></code></a> method, which is a supplementary method
+for plotting 1D and 2D datasets only.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data</span><span class="o">.</span><span class="n">real</span></a></a></a></a></a><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="plot 1 NMR bloch" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_1_NMR_bloch_001.png" />
+<p><strong>Reciprocal dimension object</strong></p>
+<p>When closely observing the dimension instance of <cite>NMR_data</cite>,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data_structure</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{
+  &quot;type&quot;: &quot;linear&quot;,
+  &quot;count&quot;: 4096,
+  &quot;increment&quot;: &quot;0.1 ms&quot;,
+  &quot;coordinates_offset&quot;: &quot;-0.3 ms&quot;,
+  &quot;quantity_name&quot;: &quot;time&quot;,
+  &quot;reciprocal&quot;: {
+    &quot;coordinates_offset&quot;: &quot;-3005.363 Hz&quot;,
+    &quot;origin_offset&quot;: &quot;75426328.86 Hz&quot;,
+    &quot;quantity_name&quot;: &quot;frequency&quot;,
+    &quot;label&quot;: &quot;13C frequency shift&quot;
+  }
+}
+</pre></div>
+</div>
+<p>notice, there is a reciprocal keyword. The
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">reciprocal</span></code> attribute is useful for datasets
+that frequently transform to a reciprocal domain, such as the NMR dataset.
+The value of the reciprocal attribute is the reciprocal object, which contains metadata
+for describing the reciprocal coordinates, such as the <cite>coordinates_offset</cite>,
+<cite>origin_offset</cite> of the reciprocal dimension.</p>
+<p>You may perform a fourier transform to visualize the NMR spectrum. Use the
+<a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fft()</span></code></a> method on the csdm object <code class="docutils literal notranslate"><span class="pre">NMR_data</span></code> as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fft_NMR_data</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><span class="n">NMR_data</span><span class="o">.</span><span class="n">fft</span></a></a></a></a></a><span class="p">()</span>
+
+<span class="c1"># plot of the time domain data.</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">fft_NMR_data</span><span class="o">.</span><span class="n">real</span></a></a></a></a></a><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="plot 1 NMR bloch" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_1_NMR_bloch_002.png" />
+<p>To return to time domain signal, use the <a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fft()</span></code></a> method on the
+<code class="docutils literal notranslate"><span class="pre">fft_NMR_data</span></code> object,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">NMR_data_2</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><a href="../../api/CSDM.html#csdmpy.CSDM.fft" title="csdmpy.CSDM.fft" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-method"><span class="n">fft_NMR_data</span><span class="o">.</span><span class="n">fft</span></a></a></a></a></a><span class="p">()</span>
+
+<span class="c1"># plot of the frequency domain data.</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.real" title="csdmpy.CSDM.real" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">NMR_data_2</span><span class="o">.</span><span class="n">real</span></a></a></a></a></a><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="plot 1 NMR bloch" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_1_NMR_bloch_003.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.382 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-1d-1-examples-plot-1-nmr-bloch-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/30b7d295d2c6b7a25967271a75e63c55/plot_1_NMR_bloch.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_1_NMR_bloch.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/629690b7b87e002c83b241e260aa4018/plot_1_NMR_bloch.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_1_NMR_bloch.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../_sources/auto_examples/1D_1_examples/plot_1_NMR_bloch.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

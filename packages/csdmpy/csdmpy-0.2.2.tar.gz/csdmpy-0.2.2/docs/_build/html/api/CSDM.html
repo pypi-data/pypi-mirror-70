@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>CSDM &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../index.html" />
+    <link rel="up" title="API-Reference" href="../referenceAPI.html" />
+    <link rel="next" title="Dimension" href="Dimensions.html" />
+    <link rel="prev" title="csdmpy" href="csdmpy.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="csdmpy.html" title="csdmpy" accesskey="P">previous </a></li>
+              <li><a href="Dimensions.html" title="Dimension" accesskey="N">next </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../referenceAPI.html" accesskey="U">API-Reference</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/api/CSDM.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../referenceAPI.html">API-Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="csdmpy.html">csdmpy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CSDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dimensions.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DependentVariable.html">DependentVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistics.html">Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="numpy_wrappers.html">Numpy methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="csdm">
+<span id="csdm-api"></span><h1>CSDM<a class="headerlink" href="#csdm" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="csdmpy.CSDM">
+<em class="property">class </em><code class="sig-prename descclassname">csdmpy.</code><code class="sig-name descname">CSDM</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create an instance of a CSDM class.</p>
+<p>This class is based on the root CSDM object of the core scientific dataset
+(CSD) model. The class is a composition of the <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> and
+<a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instances, where an instance of the <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> class
+describes a <span class="math notranslate nohighlight">\(p\)</span>-component dependent variable, and an instance of the
+<a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> class describes a dimension of a <span class="math notranslate nohighlight">\(d\)</span>-dimensional
+space. Additional attributes of this class are listed below.</p>
+<p class="rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.version" title="csdmpy.CSDM.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
+<td><p>Version number of the CSD model on file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.description" title="csdmpy.CSDM.description"><code class="xref py py-obj docutils literal notranslate"><span class="pre">description</span></code></a></p></td>
+<td><p>Description of the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.read_only" title="csdmpy.CSDM.read_only"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_only</span></code></a></p></td>
+<td><p>If True, the data-file is serialized as read only, otherwise, False.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.tags" title="csdmpy.CSDM.tags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tags</span></code></a></p></td>
+<td><p>List of tags attached to the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.timestamp" title="csdmpy.CSDM.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a></p></td>
+<td><p>Timestamp from when the file was last serialized.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.geographic_coordinate" title="csdmpy.CSDM.geographic_coordinate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geographic_coordinate</span></code></a></p></td>
+<td><p>Geographic coordinate, if present, from where the file was last serialized.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a></p></td>
+<td><p>Tuple of the <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dependent_variables</span></code></a></p></td>
+<td><p>Tuple of the <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> instances.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.application" title="csdmpy.CSDM.application"><code class="xref py py-obj docutils literal notranslate"><span class="pre">application</span></code></a></p></td>
+<td><p>Application metadata dictionary of the CSDM object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_structure</span></code></a></p></td>
+<td><p>Json serialized string describing the CSDM class instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.filename" title="csdmpy.CSDM.filename"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code></a></p></td>
+<td><p>Local file address of the current file.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.add_dimension" title="csdmpy.CSDM.add_dimension"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_dimension</span></code></a></p></td>
+<td><p>Add a new <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instance to the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.add_dependent_variable" title="csdmpy.CSDM.add_dependent_variable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_dependent_variable</span></code></a></p></td>
+<td><p>Add a new <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> instance to the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.dict" title="csdmpy.CSDM.dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></p></td>
+<td><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a python dictionary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.to_dict" title="csdmpy.CSDM.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p>Alias to the <cite>dict()</cite> method of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.dumps" title="csdmpy.CSDM.dumps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dumps</span></code></a></p></td>
+<td><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a JSON data-exchange string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.astype" title="csdmpy.CSDM.astype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astype</span></code></a></p></td>
+<td><p>Return a copy of the CSDM object by converting the numeric type of each dependent variables components to the given value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.save" title="csdmpy.CSDM.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a></p></td>
+<td><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a JSON data-exchange file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.copy" title="csdmpy.CSDM.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a></p></td>
+<td><p>Create a copy of the current CSDM instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.split" title="csdmpy.CSDM.split"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split</span></code></a></p></td>
+<td><p>Split the dependent-variables into view of individual csdm objects.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Numpy compatible attributes summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.real" title="csdmpy.CSDM.real"><code class="xref py py-obj docutils literal notranslate"><span class="pre">real</span></code></a></p></td>
+<td><p>Return a csdm object with only the real part of the dependent variable components.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.imag" title="csdmpy.CSDM.imag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imag</span></code></a></p></td>
+<td><p>Return a csdm object with only the imaginary part of the dependent variable components.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.shape" title="csdmpy.CSDM.shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></a></p></td>
+<td><p>Return the count along each dimension of the csdm objects as a tuple.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.T" title="csdmpy.CSDM.T"><code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code></a></p></td>
+<td><p>Return a csdm object with a transpose of the dataset.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Numpy compatible method summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.max" title="csdmpy.CSDM.max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max</span></code></a></p></td>
+<td><p>Return a csdm object with the maximum dependent variable component along a given axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.min" title="csdmpy.CSDM.min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min</span></code></a></p></td>
+<td><p>Return a csdm object with the minimum dependent variable component along a given axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.clip" title="csdmpy.CSDM.clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip</span></code></a></p></td>
+<td><p>Clip the dependent variable components between the <cite>min</cite> and <cite>max</cite> values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.conj" title="csdmpy.CSDM.conj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conj</span></code></a></p></td>
+<td><p>Return a csdm object with the complex conjugate of all dependent variable components.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.round" title="csdmpy.CSDM.round"><code class="xref py py-obj docutils literal notranslate"><span class="pre">round</span></code></a></p></td>
+<td><p>Return a csdm object by rounding the dependent variable components to the given <cite>decimals</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.sum" title="csdmpy.CSDM.sum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sum</span></code></a></p></td>
+<td><p>Return a csdm object with the sum of the dependent variable components over a given <cite>dimension=axis</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.mean" title="csdmpy.CSDM.mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean</span></code></a></p></td>
+<td><p>Return a csdm object with the mean of the dependent variable components over a given <cite>dimension=axis</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.var" title="csdmpy.CSDM.var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">var</span></code></a></p></td>
+<td><p>Return a csdm object with the variance of the dependent variable components over a given <cite>dimension=axis</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#csdmpy.CSDM.std" title="csdmpy.CSDM.std"><code class="xref py py-obj docutils literal notranslate"><span class="pre">std</span></code></a></p></td>
+<td><p>Return a csdm object with the standard deviation of the dependent variable components over a given <cite>dimension=axis</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#csdmpy.CSDM.prod" title="csdmpy.CSDM.prod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod</span></code></a></p></td>
+<td><p>Return a csdm object with the product of the dependent variable components over a given <cite>dimension=axis</cite>.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes documentation</p>
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.version">
+<code class="sig-name descname">version</code><a class="headerlink" href="#csdmpy.CSDM.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version number of the CSD model on file.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.description">
+<code class="sig-name descname">description</code><a class="headerlink" href="#csdmpy.CSDM.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the dataset. The default value is an empty string.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>
+<span class="go">A simulated sine curve.</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A string of UTF-8 allows characters describing the dataset.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>TypeError</strong> – When the assigned value is not a string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.read_only">
+<code class="sig-name descname">read_only</code><a class="headerlink" href="#csdmpy.CSDM.read_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, the data-file is serialized as read only, otherwise, False.</p>
+<p>By default, the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> object loads a copy of the .csdf(e) file,
+irrespective of the value of the <cite>read_only</cite> attribute. The value of this
+attribute may be toggled at any time after the file import.
+When serializing the <cite>.csdf(e)</cite> file, if the value of the <cite>read_only</cite>
+attribute is found True, the file will be serialized as read only.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.tags">
+<code class="sig-name descname">tags</code><a class="headerlink" href="#csdmpy.CSDM.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of tags attached to the dataset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.timestamp">
+<code class="sig-name descname">timestamp</code><a class="headerlink" href="#csdmpy.CSDM.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestamp from when the file was last serialized. This attribute is real only.</p>
+<p>The timestamp stamp is a string representation of the Coordinated Universal
+Time (UTC) formatted according to the iso-8601 standard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AttributeError</strong> – When the attribute is modified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.geographic_coordinate">
+<code class="sig-name descname">geographic_coordinate</code><a class="headerlink" href="#csdmpy.CSDM.geographic_coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geographic coordinate, if present, from where the file was last serialized.
+This attribute is read-only.</p>
+<p>The geographic coordinates correspond to the location where the file was last
+serialized. If present, the geographic coordinates are described with three
+attributes, the required latitude and longitude, and an optional altitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AttributeError</strong> – When the attribute is modified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.dimensions">
+<code class="sig-name descname">dimensions</code><a class="headerlink" href="#csdmpy.CSDM.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of the <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.dependent_variables">
+<code class="sig-name descname">dependent_variables</code><a class="headerlink" href="#csdmpy.CSDM.dependent_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tuple of the <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> instances.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.application">
+<code class="sig-name descname">application</code><a class="headerlink" href="#csdmpy.CSDM.application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application metadata dictionary of the CSDM object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">application</span><span class="p">)</span>
+<span class="go">{}</span>
+</pre></div>
+</div>
+<p>By default, the application attribute is an empty dictionary, that is,
+the application metadata stored by the previous application is ignored
+upon file import.</p>
+<p>The application metadata may, however, be retained with a request via
+the <a class="reference internal" href="csdmpy.html#csdmpy.load" title="csdmpy.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> method. This feature may be useful to related
+applications where application metadata might contain additional information.
+The attribute may be updated with a python dictionary.</p>
+<p>The application attribute is where an application can place its own
+metadata as a python dictionary object containing application specific
+metadata, using a reverse domain name notation string as the attribute
+key, for example,</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">application</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;com.example.myApp&quot;</span> <span class="p">:</span> <span class="p">{</span>
+<span class="gp">... </span>        <span class="s2">&quot;myApp_key&quot;</span><span class="p">:</span> <span class="s2">&quot;myApp_metadata&quot;</span>
+<span class="gp">... </span>     <span class="p">}</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">application</span><span class="p">)</span>
+<span class="go">{&#39;com.example.myApp&#39;: {&#39;myApp_key&#39;: &#39;myApp_metadata&#39;}}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Python dictionary object with the application metadata.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.data_structure">
+<code class="sig-name descname">data_structure</code><a class="headerlink" href="#csdmpy.CSDM.data_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Json serialized string describing the CSDM class instance.</p>
+<p>The data_structure attribute is only intended for a quick preview of
+the dataset. This JSON serialized string from this attribute avoids
+displaying large datasets. Do not use the value of this attribute to
+save the data to a file, instead use the <a class="reference internal" href="#csdmpy.CSDM.save" title="csdmpy.CSDM.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a>
+methods of the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AttributeError</strong> – When modified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.filename">
+<code class="sig-name descname">filename</code><a class="headerlink" href="#csdmpy.CSDM.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local file address of the current file.</p>
+</dd></dl>
+
+<p class="rubric">Numpy compatible attributes documentation</p>
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.real">
+<code class="sig-name descname">real</code><a class="headerlink" href="#csdmpy.CSDM.real" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with only the real part of the dependent variable
+components.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.imag">
+<code class="sig-name descname">imag</code><a class="headerlink" href="#csdmpy.CSDM.imag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with only the imaginary part of the dependent variable
+components.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.shape">
+<code class="sig-name descname">shape</code><a class="headerlink" href="#csdmpy.CSDM.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the count along each dimension of the csdm objects as a
+tuple.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="csdmpy.CSDM.T">
+<code class="sig-name descname">T</code><a class="headerlink" href="#csdmpy.CSDM.T" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with a transpose of the dataset.</p>
+</dd></dl>
+
+<p class="rubric">Methods documentation</p>
+<dl class="py method">
+<dt id="csdmpy.CSDM.add_dimension">
+<code class="sig-name descname">add_dimension</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.add_dimension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.add_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instance to the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> object.</p>
+<p>There are several ways to add a new independent variable.</p>
+<p><em>From a python dictionary containing valid keywords.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">py_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;increment&#39;</span><span class="p">:</span> <span class="s1">&#39;5 G&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;coordinates_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;-10 mT&#39;</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">py_dictionary</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Using keyword as the arguments.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">increment</span> <span class="o">=</span> <span class="s1">&#39;5 G&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">count</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">coordinates_offset</span> <span class="o">=</span> <span class="s1">&#39;-10 mT&#39;</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Using a</em> <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> <em>class.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var1</span> <span class="o">=</span> <span class="n">Dimension</span><span class="p">(</span><span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">increment</span> <span class="o">=</span> <span class="s1">&#39;5 G&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">count</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">coordinates_offset</span> <span class="o">=</span> <span class="s1">&#39;-10 mT&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>Using a subtype class.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">LinearDimension</span><span class="p">(</span><span class="n">count</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">increment</span> <span class="o">=</span> <span class="s1">&#39;5 G&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">coordinates_offset</span> <span class="o">=</span> <span class="s1">&#39;-10 mT&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>From a numpy array.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dim</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dimension</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the third and fourth example, the instances, <code class="docutils literal notranslate"><span class="pre">var1</span></code> and <code class="docutils literal notranslate"><span class="pre">var2</span></code> are added
+to the <code class="docutils literal notranslate"><span class="pre">datamodel</span></code> as a reference, <cite>i.e.</cite>, if the instance <code class="docutils literal notranslate"><span class="pre">var1</span></code> or
+<code class="docutils literal notranslate"><span class="pre">var2</span></code> is destroyed, the <code class="docutils literal notranslate"><span class="pre">datamodel</span></code> instance will become corrupt. As a
+recommendation, always pass a copy of the <a class="reference internal" href="Dimensions.html#dim-api"><span class="std std-ref">Dimension</span></a> instance to the
+<a class="reference internal" href="#csdmpy.CSDM.add_dimension" title="csdmpy.CSDM.add_dimension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_dimension()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.add_dependent_variable">
+<code class="sig-name descname">add_dependent_variable</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.add_dependent_variable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.add_dependent_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> instance to the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance.</p>
+<p>There are again several ways to add a new dependent variable instance.</p>
+<p><em>From a python dictionary containing valid keywords.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numpy_array</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">py_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;internal&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;components&#39;</span><span class="p">:</span> <span class="n">numpy_array</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;star&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;unit&#39;</span><span class="p">:</span> <span class="s1">&#39;W s&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;quantity_name&#39;</span><span class="p">:</span> <span class="s1">&#39;energy&#39;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s1">&#39;quantity_type&#39;</span><span class="p">:</span> <span class="s1">&#39;pixel_3&#39;</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dependent_variable</span><span class="p">(</span><span class="n">py_dictionary</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>From a list of valid keyword arguments.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dependent_variable</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;internal&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="n">name</span><span class="o">=</span><span class="s1">&#39;star&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;W s&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;pixel_3&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                 <span class="n">components</span><span class="o">=</span><span class="n">numpy_array</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><em>From a</em> <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> <em>instance.</em></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">csdmpy</span> <span class="kn">import</span> <span class="n">DependentVariable</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var1</span> <span class="o">=</span> <span class="n">DependentVariable</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;internal&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">name</span><span class="o">=</span><span class="s1">&#39;star&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;W s&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;pixel_3&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">components</span><span class="o">=</span><span class="n">numpy_array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datamodel</span><span class="o">.</span><span class="n">add_dependent_variable</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If passing a <a class="reference internal" href="DependentVariable.html#dv-api"><span class="std std-ref">DependentVariable</span></a> instance, as a general recommendation,
+always pass a copy of the DependentVariable instance to the
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">add_dependent_variable()</span></code> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.dict">
+<code class="sig-name descname">dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update_timestamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a python dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update_timestamp</strong> (<em>bool</em>) – If True, timestamp is updated to current time.</p></li>
+<li><p><strong>read_only</strong> (<em>bool</em>) – If true, the read_only flag is set true.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span> 
+<span class="go">{&#39;csdm&#39;: {&#39;version&#39;: &#39;1.0&#39;, &#39;timestamp&#39;: &#39;1994-11-05T13:15:30Z&#39;,</span>
+<span class="go">&#39;geographic_coordinate&#39;: {&#39;latitude&#39;: &#39;10 deg&#39;, &#39;longitude&#39;: &#39;93.2 deg&#39;,</span>
+<span class="go">&#39;altitude&#39;: &#39;10 m&#39;}, &#39;description&#39;: &#39;A simulated sine curve.&#39;,</span>
+<span class="go">&#39;dimensions&#39;: [{&#39;type&#39;: &#39;linear&#39;, &#39;description&#39;: &#39;A temporal dimension.&#39;,</span>
+<span class="go">&#39;count&#39;: 10, &#39;increment&#39;: &#39;0.1 s&#39;, &#39;quantity_name&#39;: &#39;time&#39;,&#39;label&#39;: &#39;time&#39;,</span>
+<span class="go">&#39;reciprocal&#39;: {&#39;quantity_name&#39;: &#39;frequency&#39;}}], &#39;dependent_variables&#39;:</span>
+<span class="go">[{&#39;type&#39;: &#39;internal&#39;, &#39;description&#39;: &#39;A response dependent variable.&#39;,</span>
+<span class="go">&#39;name&#39;: &#39;sine curve&#39;, &#39;encoding&#39;: &#39;base64&#39;, &#39;numeric_type&#39;: &#39;float32&#39;,</span>
+<span class="go">&#39;quantity_type&#39;: &#39;scalar&#39;, &#39;component_labels&#39;: [&#39;response&#39;],&#39;components&#39;:</span>
+<span class="go">[&#39;AAAAABh5Fj9xeHM/cXhzPxh5Fj8yMQ0lGHkWv3F4c79xeHO/GHkWvw==&#39;]}]}}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update_timestamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias to the <cite>dict()</cite> method of the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.dumps">
+<code class="sig-name descname">dumps</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update_timestamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">'1.0'</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.dumps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.dumps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a JSON data-exchange string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>update_timestamp</strong> (<em>bool</em>) – If True, timestamp is updated to current time.</p></li>
+<li><p><strong>read_only</strong> (<em>bool</em>) – If true, the file is serialized as read_only.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – The file is serialized with the given CSD model version.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">dumps</span><span class="p">()</span>  
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">''</span></em>, <em class="sig-param"><span class="n">read_only</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">'1.0'</span></em>, <em class="sig-param"><span class="n">output_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">indent</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the <a class="reference internal" href="#csdm-api"><span class="std std-ref">CSDM</span></a> instance as a JSON data-exchange file.</p>
+<p>There are two types of file serialization extensions, <cite>.csdf</cite> and
+<cite>.csdfe</cite>. In the CSD model, when every instance of the DependentVariable
+objects from a CSDM class has an <cite>internal</cite> subtype, the corresponding
+CSDM instance is serialized with a <cite>.csdf</cite> file extension.
+If any single DependentVariable instance has an <cite>external</cite> subtype, the
+CSDM instance is serialized with a <cite>.csdfe</cite> file extension.
+The two different file extensions are used to alert the end-user of the
+possible deserialization error associated with the <cite>.csdfe</cite> file
+extensions had the external data file becomes inaccessible.</p>
+<p>In <cite>csdmpy</cite>, however, irrespective of the dependent variable subtypes
+from the serialized JSON file, by default, all instances of
+DependentVariable class are treated an <cite>internal</cite> after import.
+Therefore, when serialized, the CSDM object should be stored as a <cite>.csdf</cite>
+file.</p>
+<p>To store a file as a <cite>.csdfe</cite> file, the user much set the value of
+the <a class="reference internal" href="DependentVariable.html#csdmpy.DependentVariable.encoding" title="csdmpy.DependentVariable.encoding"><code class="xref py py-attr docutils literal notranslate"><span class="pre">encoding</span></code></a>
+attribute from the dependent variables to <code class="docutils literal notranslate"><span class="pre">raw</span></code>.
+In which case, a binary file named <cite>filename_i.dat</cite> will be generated
+where <span class="math notranslate nohighlight">\(i\)</span> is the <span class="math notranslate nohighlight">\(i^\text{th}\)</span> dependent variable.
+The parameter <cite>filename</cite> is an argument of this method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only dependent variables with <code class="docutils literal notranslate"><span class="pre">encoding=&quot;raw&quot;</span></code> will be
+serialized to a binary file.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – The filename of the serialized file.</p></li>
+<li><p><strong>read_only</strong> (<em>bool</em>) – If true, the file is serialized as read_only.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – The file is serialized with the given CSD model version.</p></li>
+<li><p><strong>output_device</strong> (<em>object</em>) – Object where the data is written. If provided,
+the argument <cite>filename</cite> become irrelevant.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;my_file.csdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.to_list">
+<code class="sig-name descname">to_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.to_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.to_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dimension coordinates and dependent variable components as
+a list of numpy arrays. For multiple dependent variables, the components
+of each dependent variable is appended in the order of the dependent
+variables.</p>
+<dl class="simple">
+<dt>For example,</dt><dd><ul class="simple">
+<li><p>A 2D{1} will be packed as <span class="math notranslate nohighlight">\([x_{0}, x_{1}, y_{0,0}]\)</span></p></li>
+<li><p>A 2D{3} will be packed as <span class="math notranslate nohighlight">\([x_{0}, x_{1}, y_{0,0}, y_{0,1}, y_{0,2}]\)</span></p></li>
+<li><p>A 1D{1,2} will be packed as <span class="math notranslate nohighlight">\([x_{0}, y_{0,0}, y_{1,0}, y_{1,1}]\)</span></p></li>
+</ul>
+</dd>
+</dl>
+<p>where <span class="math notranslate nohighlight">\(x_i\)</span> represents the <span class="math notranslate nohighlight">\(i^\text{th}\)</span> dimension and
+<span class="math notranslate nohighlight">\(y_{i,j}\)</span> represents the <span class="math notranslate nohighlight">\(j^\text{th}\)</span> component of the
+<span class="math notranslate nohighlight">\(i^\text{th}\)</span> dependent variable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.astype">
+<code class="sig-name descname">astype</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">numeric_type</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.astype"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.astype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of the CSDM object by converting the numeric type of each
+dependent variables components to the given value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>numeric_type</strong> – A numpy dtype or a string with a valid numeric type</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data_32</span> <span class="o">=</span> <span class="n">data_64</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a copy of the current CSDM instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A CSDM instance.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.split">
+<code class="sig-name descname">split</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.split"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the dependent-variables into view of individual csdm objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of CSDM objects, each with one dependent variable. The
+objects are returned as a view.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># data contains two dependent variables</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d1</span><span class="p">,</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.transpose">
+<code class="sig-name descname">transpose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.transpose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a transpose of the dependent variable data from the CSDM object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.fft">
+<code class="sig-name descname">fft</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.fft"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a FFT along the given <cite>dimension=axis</cite>, for linear dimension assuming
+Nyquist-shannan relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – The index of the dimension along which the FFT is performed.</p>
+</dd>
+</dl>
+<p>The FFT method uses the <a class="reference internal" href="Dimensions.html#csdmpy.Dimension.complex_fft" title="csdmpy.Dimension.complex_fft"><code class="xref py py-attr docutils literal notranslate"><span class="pre">complex_fft</span></code></a> attribute of the
+Dimension object to decide whether a forward or inverse Fourier transform is
+performed. If the value of the <cite>complex_fft</cite> is True, an inverse FFT is
+performed, otherwise a forward FFT.</p>
+<p>For FFT process, this function is equivalent to performing</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="n">j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">coordinates_offset</span> <span class="o">*</span> <span class="n">reciprocal_coordinates</span><span class="p">)</span>
+<span class="n">x_fft</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">*</span> <span class="n">phase</span>
+</pre></div>
+</div>
+<p>over all components for every dependent variable.</p>
+<p>Similarly, for inverse FFT process, this function is equivalent to performing</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="n">j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">reciprocal_coordinates_offset</span> <span class="o">*</span> <span class="n">coordinates</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifftshift</span><span class="p">(</span><span class="n">x_fft</span> <span class="o">*</span> <span class="n">phase</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>over all components for every dependent variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A CSDM object with the Fourier Transform data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Numpy compatible method documentation</p>
+<dl class="py method">
+<dt id="csdmpy.CSDM.max">
+<code class="sig-name descname">max</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the maximum dependent variable component along a
+given axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+the sum over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a numpy array when dimension
+is None.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>  
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.min">
+<code class="sig-name descname">min</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.min"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the minimum dependent variable component along a
+given axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.clip">
+<code class="sig-name descname">clip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">min</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.clip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.clip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clip the dependent variable components between the <cite>min</cite> and <cite>max</cite> values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min</strong> – The minimum clip value.</p></li>
+<li><p><strong>max</strong> – The maximum clip value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with values clipped between min and max.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.conj">
+<code class="sig-name descname">conj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.conj"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.conj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the complex conjugate of all dependent variable
+components.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.round">
+<code class="sig-name descname">round</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decimals</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.round"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.round" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object by rounding the dependent variable components to the
+given <cite>decimals</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.sum">
+<code class="sig-name descname">sum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.sum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the sum of the dependent variable components over
+a given <cite>dimension=axis</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.mean">
+<code class="sig-name descname">mean</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.mean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the mean of the dependent variable components over
+a given <cite>dimension=axis</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.var">
+<code class="sig-name descname">var</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.var"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the variance of the dependent variable components
+over a given <cite>dimension=axis</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.std">
+<code class="sig-name descname">std</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.std"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the standard deviation of the dependent variable
+components over a given <cite>dimension=axis</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the sum of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="csdmpy.CSDM.prod">
+<code class="sig-name descname">prod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/csdmpy/csdm.html#CSDM.prod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#csdmpy.CSDM.prod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a csdm object with the product of the dependent variable components
+over a given <cite>dimension=axis</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – An integer or None or a tuple of <cite>m</cite> integers cooresponding to
+the index/indices of dimensions along which the product of the
+dependent variable components is performed. If None, the output is
+over all dimensions per dependent variable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A CSDM object with <cite>m</cite> dimensions removed, or a list when <cite>axis</cite> is None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../_sources/api/CSDM.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

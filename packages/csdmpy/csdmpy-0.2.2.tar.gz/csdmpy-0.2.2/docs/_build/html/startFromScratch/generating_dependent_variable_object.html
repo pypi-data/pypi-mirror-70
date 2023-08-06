@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Generating DependentVariable objects &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../index.html" />
+    <link rel="up" title="Generating csdmpy objects" href="start.html" />
+    <link rel="next" title="Generating CSDM objects" href="generating_csdm_object.html" />
+    <link rel="prev" title="Generating Dimension objects" href="dimension/generate/dimension_objects.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Generating DependentVariable objects</a><ul>
+<li><a class="reference internal" href="#internaldependentvariable">InternalDependentVariable</a><ul>
+<li><a class="reference internal" href="#single-component-dependent-variable">Single component dependent variable</a></li>
+<li><a class="reference internal" href="#multi-component-dependent-variable">Multi-component dependent variable</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#externaldependentvariable">ExternalDependentVariable</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="dimension/generate/dimension_objects.html" title="Generating Dimension objects" accesskey="P">previous </a></li>
+              <li><a href="generating_csdm_object.html" title="Generating CSDM objects" accesskey="N">next </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="start.html" accesskey="U">Generating csdmpy objects</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/startFromScratch/generating_dependent_variable_object.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="start.html">Generating csdmpy objects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dimension/generate/dimension_objects.html">Generating Dimension objects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generating DependentVariable objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generating_csdm_object.html">Generating CSDM objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_dimension_object.html">Adding instances of Dimension class to CSDM object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_dependent_variable_object.html">Adding instances of DependentVariable class to CSDM object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="generating-dependentvariable-objects">
+<span id="generate-dependent-variable-objects"></span><h1>Generating DependentVariable objects<a class="headerlink" href="#generating-dependentvariable-objects" title="Permalink to this headline">¶</a></h1>
+<p>A DependentVariable is where the responses of the multi-dimensional dataset
+reside. There are two types of DependentVariable objects, <cite>internal</cite> and
+<cite>external</cite>. In this section, we show how to generate DependentVariable objects
+of both types.</p>
+<div class="section" id="internaldependentvariable">
+<h2>InternalDependentVariable<a class="headerlink" href="#internaldependentvariable" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-component-dependent-variable">
+<h3>Single component dependent variable<a class="headerlink" href="#single-component-dependent-variable" title="Permalink to this headline">¶</a></h3>
+<p><strong>Using the</strong> <a class="reference internal" href="../api/DependentVariable.html#csdmpy.DependentVariable" title="csdmpy.DependentVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">DependentVariable</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">DependentVariable</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;internal&#39;</span><span class="p">,</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;scalar&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">components</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;J&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">description</span><span class="o">=</span><span class="s1">&#39;A sample internal dependent variable.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dv1</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[   0    1    2 ... 9997 9998 9999]] J, quantity_type=scalar, numeric_type=int64)</span>
+</pre></div>
+</div>
+<p><strong>Using NumPy array</strong></p>
+<p>Use the <a class="reference internal" href="../api/csdmpy.html#csdmpy.as_dependent_variable" title="csdmpy.as_dependent_variable"><code class="xref py py-meth docutils literal notranslate"><span class="pre">as_dependent_variable()</span></code></a> method to convert a NumPy array
+into a DependentVariable object. Note, this method returns a view of the NumPy
+array as the DependentVariable object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dependent_variable</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;J&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dv1</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.000e+00+0.j 1.000e+00+0.j 2.000e+00+0.j ... 9.997e+03+0.j</span>
+<span class="go">  9.998e+03+0.j 9.999e+03+0.j]] J, quantity_type=scalar, numeric_type=complex64)</span>
+</pre></div>
+</div>
+<p>You may additionally provide the quantity_type for the dependent variable,</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dependent_variable</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">),</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;pixel_1&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dv2</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.000e+00+0.j 1.000e+00+0.j 2.000e+00+0.j ... 9.997e+03+0.j</span>
+<span class="go">  9.998e+03+0.j 9.999e+03+0.j]], quantity_type=pixel_1, numeric_type=complex64)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multi-component-dependent-variable">
+<h3>Multi-component dependent variable<a class="headerlink" href="#multi-component-dependent-variable" title="Permalink to this headline">¶</a></h3>
+<p>To generate a multi-component DependentVariable object, add an appropriate
+<cite>quantity_type</cite> value, see <a class="reference internal" href="../CSDmodel_uml/enumeration.html#quantitytype-uml"><span class="std std-ref">QuantityType</span></a> for details.</p>
+<p><strong>Using the</strong> <a class="reference internal" href="../api/DependentVariable.html#csdmpy.DependentVariable" title="csdmpy.DependentVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">DependentVariable</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">DependentVariable</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;internal&#39;</span><span class="p">,</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;vector_2&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">components</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10000</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;J&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                           <span class="n">description</span><span class="o">=</span><span class="s1">&#39;A sample internal dependent variable.&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dv1</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[   0    1    2 ... 4997 4998 4999]</span>
+<span class="go"> [5000 5001 5002 ... 9997 9998 9999]] J, quantity_type=vector_2, numeric_type=int64)</span>
+</pre></div>
+</div>
+<p>The above example generates a two-component dependent variable.</p>
+<p><strong>Using NumPy array</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dependent_variable</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">,</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;symmetric_matrix_3&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dv1</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.000e+00+0.j 1.000e+00+0.j 2.000e+00+0.j ... 1.497e+03+0.j</span>
+<span class="go">  1.498e+03+0.j 1.499e+03+0.j]</span>
+<span class="go"> [1.500e+03+0.j 1.501e+03+0.j 1.502e+03+0.j ... 2.997e+03+0.j</span>
+<span class="go">  2.998e+03+0.j 2.999e+03+0.j]</span>
+<span class="go"> [3.000e+03+0.j 3.001e+03+0.j 3.002e+03+0.j ... 4.497e+03+0.j</span>
+<span class="go">  4.498e+03+0.j 4.499e+03+0.j]</span>
+<span class="go"> [4.500e+03+0.j 4.501e+03+0.j 4.502e+03+0.j ... 5.997e+03+0.j</span>
+<span class="go">  5.998e+03+0.j 5.999e+03+0.j]</span>
+<span class="go"> [6.000e+03+0.j 6.001e+03+0.j 6.002e+03+0.j ... 7.497e+03+0.j</span>
+<span class="go">  7.498e+03+0.j 7.499e+03+0.j]</span>
+<span class="go"> [7.500e+03+0.j 7.501e+03+0.j 7.502e+03+0.j ... 8.997e+03+0.j</span>
+<span class="go">  8.998e+03+0.j 8.999e+03+0.j]] m / s, quantity_type=symmetric_matrix_3, numeric_type=complex64)</span>
+</pre></div>
+</div>
+<p>The above example generates a six-component dependent variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For multi-component DependentVariable objects, the size of the NumPy array
+must be an integer multiple of the total number of components.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dependent_variable</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">127</span><span class="p">),</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;pixel_2&#39;</span><span class="p">)</span> 
+<span class="go">ValueError: cannot reshape array of size 127 into shape (2,63)</span>
+</pre></div>
+</div>
+</div>
+<p>Notice in the above examples, we use a one-dimensional NumPy array to generate
+a DependentVariable object. If a multi-dimensional NumPy array is given as the
+argument, the array will be raveled (flattened) before returning the
+DependentVariable object. Note, in the core scientific dataset model, the
+DependentVariable objects only contain information about the number of
+components and not the dimensions. For example, consider the following.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dependent_variable</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6000</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;vector_2&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[   0    1    2 ... 2997 2998 2999]</span>
+<span class="go"> [3000 3001 3002 ... 5997 5998 5999]], quantity_type=vector_2, numeric_type=int64)</span>
+</pre></div>
+</div>
+<p>Here, a three-dimensional Numpy array is given as the argument with a
+quantity_type of <cite>vector_2</cite>. The DependentVariable object generated from this
+array contains two-components by appropriately flattening the input array.</p>
+</div>
+</div>
+<div class="section" id="externaldependentvariable">
+<h2>ExternalDependentVariable<a class="headerlink" href="#externaldependentvariable" title="Permalink to this headline">¶</a></h2>
+<p>The ExternalDependentVariable objects are generated similar to the
+InternalDependentVariable object. The only difference is that the components
+of the dependent variable are located at a remote and local address.</p>
+<p><strong>Using the</strong> <a class="reference internal" href="../api/DependentVariable.html#csdmpy.DependentVariable" title="csdmpy.DependentVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">DependentVariable</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dv</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">DependentVariable</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;external&#39;</span><span class="p">,</span> <span class="n">quantity_type</span><span class="o">=</span><span class="s1">&#39;scalar&#39;</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;J&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">components_url</span><span class="o">=</span><span class="s1">&#39;address to the binary file.&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">numeric_type</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                          <span class="n">description</span><span class="o">=</span><span class="s1">&#39;A sample internal dependent variable.&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+<p>A DependentVariable of type <cite>external</cite> is useful for data serialization. When
+using with <cite>csdmpy</cite>, all instances of the <cite>external</cite> dependent variable objects
+are set as <cite>internal</cite> after downloading the components from the
+<cite>components_url</cite>.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../_sources/startFromScratch/generating_dependent_variable_object.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

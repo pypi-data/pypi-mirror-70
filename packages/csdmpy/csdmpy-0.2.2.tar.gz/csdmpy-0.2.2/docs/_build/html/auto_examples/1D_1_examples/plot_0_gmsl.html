@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Global Mean Sea Level rise dataset &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../index.html" />
+    <link rel="up" title="Example Gallery" href="../index.html" />
+    <link rel="next" title="Nuclear Magnetic Resonance (NMR) dataset" href="plot_1_NMR_bloch.html" />
+    <link rel="prev" title="Example Gallery" href="../index.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../index.html" title="Example Gallery" accesskey="P">previous </a></li>
+              <li><a href="plot_1_NMR_bloch.html" title="Nuclear Magnetic Resonance (NMR) dataset" accesskey="N">next </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../index.html" accesskey="U">Example Gallery</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/auto_examples/1D_1_examples/plot_0_gmsl.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-1d-1-examples-plot-0-gmsl-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="global-mean-sea-level-rise-dataset">
+<span id="sphx-glr-auto-examples-1d-1-examples-plot-0-gmsl-py"></span><h1>Global Mean Sea Level rise dataset<a class="headerlink" href="#global-mean-sea-level-rise-dataset" title="Permalink to this headline">¶</a></h1>
+<p>The following dataset is the Global Mean Sea Level (GMSL) rise from the late
+19th to the Early 21st Century <a class="footnote-reference brackets" href="#f0" id="id1">1</a>. The
+<a class="reference external" href="http://www.cmar.csiro.au/sealevel/sl_data_cmar.html">original dataset</a> was
+downloaded as a CSV file and subsequently converted to the CSD model format.</p>
+<p>Let’s import this file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;https://osu.box.com/shared/static/vetjm3cndxdps05ijvv603ajth3jocck.csdf&quot;</span>
+<a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sea_level</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">load</span></a></a></a></a></a><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The variable <cite>filename</cite> is a string with the address to the <cite>.csdf</cite> file.
+The <a class="reference internal" href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load()</span></code></a> method of the <cite>csdmpy</cite> module reads the
+file and returns an instance of the <a class="reference internal" href="../../api/CSDM.html#csdm-api"><span class="std std-ref">CSDM</span></a> class, in
+this case, as a variable <code class="docutils literal notranslate"><span class="pre">sea_level</span></code>. For a quick preview of the data
+structure, use the <a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_structure</span></code></a> attribute of this
+instance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">sea_level</span><span class="o">.</span><span class="n">data_structure</span></a></a></a></a></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{
+  &quot;csdm&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;read_only&quot;: true,
+    &quot;timestamp&quot;: &quot;2019-05-21T13:43:00Z&quot;,
+    &quot;tags&quot;: [
+      &quot;Jason-2&quot;,
+      &quot;satellite altimetry&quot;,
+      &quot;mean sea level&quot;,
+      &quot;climate&quot;
+    ],
+    &quot;description&quot;: &quot;Global Mean Sea Level (GMSL) rise from the late 19th to the Early 21st Century.&quot;,
+    &quot;dimensions&quot;: [
+      {
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;count&quot;: 1608,
+        &quot;increment&quot;: &quot;0.08333333333 yr&quot;,
+        &quot;coordinates_offset&quot;: &quot;1880.0416666667 yr&quot;,
+        &quot;quantity_name&quot;: &quot;time&quot;,
+        &quot;reciprocal&quot;: {
+          &quot;quantity_name&quot;: &quot;frequency&quot;
+        }
+      }
+    ],
+    &quot;dependent_variables&quot;: [
+      {
+        &quot;type&quot;: &quot;internal&quot;,
+        &quot;name&quot;: &quot;Global Mean Sea Level&quot;,
+        &quot;unit&quot;: &quot;mm&quot;,
+        &quot;quantity_name&quot;: &quot;length&quot;,
+        &quot;numeric_type&quot;: &quot;float32&quot;,
+        &quot;quantity_type&quot;: &quot;scalar&quot;,
+        &quot;component_labels&quot;: [
+          &quot;GMSL&quot;
+        ],
+        &quot;components&quot;: [
+          [
+            &quot;-183.0, -171.125, ..., 59.6875, 58.5&quot;
+          ]
+        ]
+      }
+    ]
+  }
+}
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The serialized string from the <a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data_structure</span></code></a>
+attribute is not the same as the JSON serialization on the file.
+This attribute is only intended for a quick preview of the data
+structure and avoids displaying large datasets. Do not use
+the value of this attribute to save the data to the file. Instead, use the
+<a class="reference internal" href="../../api/CSDM.html#csdmpy.CSDM.save" title="csdmpy.CSDM.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> method of the <a class="reference internal" href="../../api/CSDM.html#csdm-api"><span class="std std-ref">CSDM</span></a>
+class.</p>
+</div>
+<p>The tuple of the dimensions and dependent variables, from this example, are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dimensions" title="csdmpy.CSDM.dimensions" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">sea_level</span><span class="o">.</span><span class="n">dimensions</span></a></a></a></a></a>
+<span class="n">y</span> <span class="o">=</span> <a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.dependent_variables" title="csdmpy.CSDM.dependent_variables" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">sea_level</span><span class="o">.</span><span class="n">dependent_variables</span></a></a></a></a></a>
+</pre></div>
+</div>
+<p>respectively. The coordinates along the dimension and the
+component of the dependent variable are</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[1880.04166667 1880.125      1880.20833333 ... 2013.79166666 2013.87499999
+ 2013.95833333] yr
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[-183.     -171.125  -164.25   ...   66.375    59.6875   58.5   ]
+</pre></div>
+</div>
+<p>respectively.</p>
+<p><strong>Plotting the data</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following code is only for illustrative purposes. The users may use
+any plotting library to visualize their datasets.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sea_level</span></a></a></a></a></a><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Global Mean Sea Level" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_0_gmsl_001.png" />
+<p>The following is a quick description of the above code. Within the code, we
+make use of the csdm instance’s attributes in addition to the matplotlib
+functions. The first line is an import call for the matplotlib functions.
+The following line generates a plot of the coordinates along the
+dimension verse the component of the dependent variable.
+The next line sets the x-range. For labeling the axes,
+use the <a class="reference internal" href="../../api/Dimensions.html#csdmpy.Dimension.axis_label" title="csdmpy.Dimension.axis_label"><code class="xref py py-attr docutils literal notranslate"><span class="pre">axis_label</span></code></a> attribute
+of both dimension and dependent variable instances. For the figure title,
+use the <a class="reference internal" href="../../api/DependentVariable.html#csdmpy.DependentVariable.name" title="csdmpy.DependentVariable.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> attribute
+of the dependent variable instance. The next statement adds the grid lines.
+For additional information, refer to <a class="reference external" href="https://matplotlib.org">Matplotlib</a>
+documentation.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../getting_started.html#getting-started"><span class="std std-ref">Getting started with csdmpy package</span></a></p>
+</div>
+<p class="rubric">Citation</p>
+<dl class="footnote brackets">
+<dt class="label" id="f0"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Church JA, White NJ. Sea-Level Rise from the Late 19th to the Early 21st Century.
+Surveys in Geophysics. 2011;32:585–602. DOI:10.1007/s10712-011-9119-1</p>
+</dd>
+</dl>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.522 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-1d-1-examples-plot-0-gmsl-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2f15257c6f0a64007724e64c49572fb6/plot_0_gmsl.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_0_gmsl.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/6108c741ecb1196ac1442cd2e18ea68b/plot_0_gmsl.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_0_gmsl.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../_sources/auto_examples/1D_1_examples/plot_0_gmsl.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

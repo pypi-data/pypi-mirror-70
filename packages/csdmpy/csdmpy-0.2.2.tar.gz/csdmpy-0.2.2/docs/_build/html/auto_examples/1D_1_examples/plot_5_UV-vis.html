@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Ultraviolet–visible (UV-vis) dataset &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../index.html" />
+    <link rel="up" title="Example Gallery" href="../index.html" />
+    <link rel="next" title="Mass spectrometry (sparse) dataset" href="plot_6_Mass.html" />
+    <link rel="prev" title="Fourier Transform Infrared Spectroscopy (FTIR) dataset" href="plot_4_FTIR.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="plot_4_FTIR.html" title="Fourier Transform Infrared Spectroscopy (FTIR) dataset" accesskey="P">previous </a></li>
+              <li><a href="plot_6_Mass.html" title="Mass spectrometry (sparse) dataset" accesskey="N">next </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../index.html" accesskey="U">Example Gallery</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/auto_examples/1D_1_examples/plot_5_UV-vis.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-1d-1-examples-plot-5-uv-vis-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="ultravioletvisible-uv-vis-dataset">
+<span id="sphx-glr-auto-examples-1d-1-examples-plot-5-uv-vis-py"></span><h1>Ultraviolet–visible (UV-vis) dataset<a class="headerlink" href="#ultravioletvisible-uv-vis-dataset" title="Permalink to this headline">¶</a></h1>
+<p>The following
+<a class="reference external" href="http://wwwchem.uwimona.edu.jm/spectra/index.html">UV-vis dataset</a>
+was obtained as a JCAMP-DX file, and subsequently converted to the CSD model
+file-format. The data structure of the UV-vis dataset follows,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;https://osu.box.com/shared/static/c9wg59hya5ohc083qi2jgd7wk5emmlmu.csdf&quot;</span>
+<a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">UV_data</span></a></a></a></a></a> <span class="o">=</span> <a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.load" title="csdmpy.load" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">load</span></a></a></a></a></a><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><a href="../../api/CSDM.html#csdmpy.CSDM.data_structure" title="csdmpy.CSDM.data_structure" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-attribute"><span class="n">UV_data</span><span class="o">.</span><span class="n">data_structure</span></a></a></a></a></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{
+  &quot;csdm&quot;: {
+    &quot;version&quot;: &quot;1.0&quot;,
+    &quot;read_only&quot;: true,
+    &quot;timestamp&quot;: &quot;2014-09-30T11:16:33Z&quot;,
+    &quot;description&quot;: &quot;A UV-vis spectra of benzene vapours.&quot;,
+    &quot;dimensions&quot;: [
+      {
+        &quot;type&quot;: &quot;linear&quot;,
+        &quot;count&quot;: 4001,
+        &quot;increment&quot;: &quot;0.01 nm&quot;,
+        &quot;coordinates_offset&quot;: &quot;230.0 nm&quot;,
+        &quot;quantity_name&quot;: &quot;length&quot;,
+        &quot;label&quot;: &quot;wavelength&quot;,
+        &quot;reciprocal&quot;: {
+          &quot;quantity_name&quot;: &quot;wavenumber&quot;
+        }
+      }
+    ],
+    &quot;dependent_variables&quot;: [
+      {
+        &quot;type&quot;: &quot;internal&quot;,
+        &quot;name&quot;: &quot;Vapour of Benzene&quot;,
+        &quot;numeric_type&quot;: &quot;float32&quot;,
+        &quot;quantity_type&quot;: &quot;scalar&quot;,
+        &quot;component_labels&quot;: [
+          &quot;Absorbance&quot;
+        ],
+        &quot;components&quot;: [
+          [
+            &quot;0.25890622, 0.25923702, ..., 0.16814752, 0.16786034&quot;
+          ]
+        ]
+      }
+    ]
+  }
+}
+</pre></div>
+</div>
+<p>and the corresponding plot</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a></a></a></a></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><a href="../../api/csdmpy.html#csdmpy.plot" title="csdmpy.plot" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-function"><span class="n">cp</span><span class="o">.</span><span class="n">plot</span></a></a></a></a></a><span class="p">(</span><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/CSDM.html#csdmpy.CSDM" title="csdmpy.CSDM" class="sphx-glr-backref-module-csdmpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">UV_data</span></a></a></a></a></a><span class="p">)</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html#matplotlib.pyplot.tight_layout" title="matplotlib.pyplot.tight_layout" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span></a></a></a></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a></a></a></a><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="Vapour of Benzene" class="sphx-glr-single-img" src="../../_images/sphx_glr_plot_5_UV-vis_001.png" />
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.139 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-1d-1-examples-plot-5-uv-vis-py">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2ace467373af2d3284b725b1c2a02845/plot_5_UV-vis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_5_UV-vis.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/840e320c9fa46d272b2149ec074058b9/plot_5_UV-vis.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_5_UV-vis.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../_sources/auto_examples/1D_1_examples/plot_5_UV-vis.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Interacting with CSDM objects &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../index.html" />
+    <link rel="up" title="Interacting with csdmpy objects" href="interacting_with_csdmpy_objects.html" />
+    <link rel="next" title="Serializing CSDM object to files" href="save_dataset.html" />
+    <link rel="prev" title="Interacting with Dimension objects" href="dimension/interact/dimension_objects.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Interacting with CSDM objects</a><ul>
+<li><a class="reference internal" href="#basic-math-operations">Basic math operations</a><ul>
+<li><a class="reference internal" href="#additive-operations-involving-a-scalar">Additive operations involving a scalar</a></li>
+<li><a class="reference internal" href="#multiplicative-operations-involving-scalar-scalarquantity">Multiplicative operations involving scalar / ScalarQuantity</a></li>
+<li><a class="reference internal" href="#additive-operations-involving-two-csdm-objects">Additive operations involving two csdm objects</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#basic-slicing-and-indexing">Basic Slicing and Indexing</a></li>
+<li><a class="reference internal" href="#support-for-numpy-methods">Support for Numpy methods</a><ul>
+<li><a class="reference internal" href="#method-that-only-operate-on-dimensionless-dependent-variables">Method that only operate on dimensionless dependent variables</a></li>
+<li><a class="reference internal" href="#method-that-are-independent-of-the-dependent-variable-dimensionality">Method that are independent of the dependent variable dimensionality</a></li>
+<li><a class="reference internal" href="#dimension-reduction-methods">Dimension reduction methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="dimension/interact/dimension_objects.html" title="Interacting with Dimension objects" accesskey="P">previous </a></li>
+              <li><a href="save_dataset.html" title="Serializing CSDM object to files" accesskey="N">next </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="interacting_with_csdmpy_objects.html" accesskey="U">Interacting with csdmpy objects</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/startFromScratch/interacting_with_csdm.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dimension/interact/dimension_objects.html">Interacting with Dimension objects</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Interacting with CSDM objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="interacting-with-csdm-objects">
+<h1>Interacting with CSDM objects<a class="headerlink" href="#interacting-with-csdm-objects" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-math-operations">
+<h2>Basic math operations<a class="headerlink" href="#basic-math-operations" title="Permalink to this headline">¶</a></h2>
+<p>The csdm object supports basic mathematical operations such as additive and
+multiplicative operations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All operations applied to or involving the csdm objects apply only to
+the components of the dependent variables within the csdm object. These
+operations do not apply to the dimensions within the csdm object.</p>
+</div>
+<p>Consider the following csdm data object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">arr1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># converting the dimension to proper physical dimensions.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*=</span><span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;2.64 m&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates_offset</span> <span class="o">=</span> <span class="s1">&#39;1 km&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># converting the dimension to proper physical dimensions.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*=</span><span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;10 µs&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">coordinates_offset</span> <span class="o">=</span> <span class="s1">&#39;-0.5 ms&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[0. 1. 2.]</span>
+<span class="go">  [3. 4. 5.]]], quantity_type=scalar, numeric_type=float32),</span>
+<span class="go">LinearDimension([1000.   1002.64 1005.28] m),</span>
+<span class="go">LinearDimension([-500. -490.] us)</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<div class="section" id="additive-operations-involving-a-scalar">
+<h3>Additive operations involving a scalar<a class="headerlink" href="#additive-operations-involving-a-scalar" title="Permalink to this headline">¶</a></h3>
+<p><strong>Example 1</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[3.1415927 4.141593  5.141593 ]</span>
+<span class="go">  [6.141593  7.141593  8.141593 ]]], quantity_type=scalar, numeric_type=float32),</span>
+<span class="go">LinearDimension([1000.   1002.64 1005.28] m),</span>
+<span class="go">LinearDimension([-500. -490.] us)</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 2</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj2</span> <span class="o">=</span> <span class="n">csdm_obj1</span> <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="n">j</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj2</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[ 5.141593-4.j  6.141593-4.j  7.141593-4.j]</span>
+<span class="go">  [ 8.141593-4.j  9.141593-4.j 10.141593-4.j]]], quantity_type=scalar, numeric_type=complex64),</span>
+<span class="go">LinearDimension([1000.   1002.64 1005.28] m),</span>
+<span class="go">LinearDimension([-500. -490.] us)</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiplicative-operations-involving-scalar-scalarquantity">
+<h3>Multiplicative operations involving scalar / ScalarQuantity<a class="headerlink" href="#multiplicative-operations-involving-scalar-scalarquantity" title="Permalink to this headline">¶</a></h3>
+<p><strong>Example 3</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj2</span> <span class="o">=</span> <span class="n">csdm_obj1</span> <span class="o">*</span> <span class="mf">4.693</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj2</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[4.693 4.693 4.693]</span>
+<span class="go">  [4.693 4.693 4.693]]], quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2.]),</span>
+<span class="go">LinearDimension([0. 1.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 4</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj2</span> <span class="o">=</span> <span class="n">csdm_obj1</span> <span class="o">*</span> <span class="mi">3</span><span class="n">j</span><span class="o">/</span><span class="mf">2.4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj2</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[0.+1.25j 0.+1.25j 0.+1.25j]</span>
+<span class="go">  [0.+1.25j 0.+1.25j 0.+1.25j]]], quantity_type=scalar, numeric_type=complex128),</span>
+<span class="go">LinearDimension([0. 1. 2.]),</span>
+<span class="go">LinearDimension([0. 1.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p>You may change the dimensionality of the dependent variables by multiplying the
+csdm object with the appropriate scalar quantity, for example,</p>
+<p><strong>Example 5</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">*=</span> <span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;3.23 m&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[3.23 3.23 3.23]</span>
+<span class="go">  [3.23 3.23 3.23]]] m, quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2.]),</span>
+<span class="go">LinearDimension([0. 1.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 6</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">/=</span> <span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;3.23 m&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[1. 1. 1.]</span>
+<span class="go">  [1. 1. 1.]]], quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2.]),</span>
+<span class="go">LinearDimension([0. 1.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="additive-operations-involving-two-csdm-objects">
+<h3>Additive operations involving two csdm objects<a class="headerlink" href="#additive-operations-involving-two-csdm-objects" title="Permalink to this headline">¶</a></h3>
+<p>The additive operations are supported between two csdm objects only when the
+two objects have identical sets of Dimension objects and DependentVariable
+objects with the same dimensionality. For examples,</p>
+<p><strong>Example 7</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;cm/s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj</span> <span class="o">=</span> <span class="n">csdm1</span> <span class="o">+</span> <span class="n">csdm2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm_obj</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[[1.01 1.01 1.01]</span>
+<span class="go">  [1.01 1.01 1.01]]] m / s, quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2.]),</span>
+<span class="go">LinearDimension([0. 1.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p>An exception will be raised if the DependentVariable objects of the two
+csdm objects have different dimensionality.</p>
+<p><strong>Example 8</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj</span> <span class="o">=</span> <span class="n">csdm1</span> <span class="o">+</span> <span class="n">csdm2</span> 
+<span class="go">Exception: Cannot operate on dependent variables with physical types: speed and dimensionless.</span>
+</pre></div>
+</div>
+<p>Similarly, an exception will be raised if the dimension objects of the two
+csdm objects are different.</p>
+<p><strong>Example 9</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m/s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">MonotonicDimension</span><span class="p">(</span><span class="n">coordinates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1 ms&#39;</span><span class="p">,</span> <span class="s1">&#39;1 s&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;cm/s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj</span> <span class="o">=</span> <span class="n">csdm1</span> <span class="o">+</span> <span class="n">csdm2</span> 
+<span class="go">Exception: Cannot operate on CSDM objects with different dimensions.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="basic-slicing-and-indexing">
+<h2>Basic Slicing and Indexing<a class="headerlink" href="#basic-slicing-and-indexing" title="Permalink to this headline">¶</a></h2>
+<p>The CSDM objects support NumPy basic slicing and indexing and follow the same
+rules as the NumPy array. Consider the following 3D{1} csdm object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="o">+</span><span class="mf">4.3</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;kg&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;mm&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">LabeledDimension</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcde&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">(20, 10, 5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">csdm1</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[LinearDimension(count=20, increment=0.5 kg, coordinates_offset=4.3 kg, quantity_name=mass),</span>
+<span class="go">MonotonicDimension(coordinates=[ 1.  2.  3.  5.  7. 11. 13. 17. 19. 23.] mm, quantity_name=length, reciprocal={&#39;quantity_name&#39;: &#39;wavenumber&#39;}),</span>
+<span class="go">LabeledDimension(labels=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])]</span>
+</pre></div>
+</div>
+<p>The above object <code class="docutils literal notranslate"><span class="pre">csdm1</span></code> has three dimensions, each with different
+dimensionality and dimension type.
+To retrieve a sub-grid of this 3D{1} dataset, use the NumPy indexing scheme.</p>
+<p><strong>Example 10</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sub_csdm</span> <span class="o">=</span> <span class="n">csdm1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">(10, 5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[MonotonicDimension(coordinates=[ 1.  2.  3.  5.  7. 11. 13. 17. 19. 23.] mm, quantity_name=length, reciprocal={&#39;quantity_name&#39;: &#39;wavenumber&#39;}),</span>
+<span class="go">LabeledDimension(labels=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])]</span>
+</pre></div>
+</div>
+<p>The above example returns a 2D{1} cross-section of the 3D{1} datasets
+corresponding to the index 0 along the first dimension of the <code class="docutils literal notranslate"><span class="pre">csdm1</span></code>
+object as a <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code> csdm object. The two dimensions in <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code> are
+the MonotonicDimension and LabeledDimension.</p>
+<p><strong>Example 11</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sub_csdm</span> <span class="o">=</span> <span class="n">csdm1</span><span class="p">[::</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">(4, 4, 5)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[LinearDimension(count=4, increment=2.5 kg, coordinates_offset=4.3 kg, quantity_name=mass),</span>
+<span class="go">MonotonicDimension(coordinates=[ 3.  7. 13. 19.] mm, quantity_name=length, reciprocal={&#39;quantity_name&#39;: &#39;wavenumber&#39;}),</span>
+<span class="go">LabeledDimension(labels=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])]</span>
+</pre></div>
+</div>
+<p>The above example returns a 3D{1} dataset, <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code>, which contains a
+sub-grid of the 3D{1} datasets in <code class="docutils literal notranslate"><span class="pre">csdm1</span></code>. In <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code>, the first
+dimension is a sub-grid of the first dimension from the <code class="docutils literal notranslate"><span class="pre">csdm1</span></code> object,
+where only every fifth grid point is selected. Similarly, the second dimension
+of the <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code> object is sampled from the second dimension of the
+<code class="docutils literal notranslate"><span class="pre">csdm1</span></code> object, where every second grid point is selected, starting with the
+entry at the grid index two. The third dimension of the <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code> object
+is the same as the third object of the <code class="docutils literal notranslate"><span class="pre">csdm1</span></code> object. The values of the
+corresponding linear, monotonic, and labeled dimensions are accordingly
+adjusted, for example, notice the value of the <cite>count</cite> and <cite>increment</cite>
+attribute of the linear dimension in <code class="docutils literal notranslate"><span class="pre">sub_csdm</span></code> object.</p>
+<p><strong>Example 12</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sub_csdm</span> <span class="o">=</span> <span class="n">csdm1</span><span class="p">[::</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="go">(4, 4, 3)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sub_csdm</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[LinearDimension(count=4, increment=2.5 kg, coordinates_offset=4.3 kg, quantity_name=mass),</span>
+<span class="go">MonotonicDimension(coordinates=[ 3.  7. 13. 19.] mm, quantity_name=length, reciprocal={&#39;quantity_name&#39;: &#39;wavenumber&#39;}),</span>
+<span class="go">LabeledDimension(labels=[&#39;c&#39;, &#39;b&#39;, &#39;a&#39;])]</span>
+</pre></div>
+</div>
+<p>The above example is similar to the previous examples, except the third
+dimension indexed in reversed starting at the third index from the end.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing-and-indexing">Basic Slicing and Indexing</a></p>
+</div>
+</div>
+<div class="section" id="support-for-numpy-methods">
+<h2>Support for Numpy methods<a class="headerlink" href="#support-for-numpy-methods" title="Permalink to this headline">¶</a></h2>
+<p>In most cases, the csdm object may be used as if it were a NumPy array.
+See the list of all supported <a class="reference internal" href="../api/wrappers/element_wise_operation.html#numpy-support"><span class="std std-ref">Supported NumPy functions</span></a>.</p>
+<div class="section" id="method-that-only-operate-on-dimensionless-dependent-variables">
+<h3>Method that only operate on dimensionless dependent variables<a class="headerlink" href="#method-that-only-operate-on-dimensionless-dependent-variables" title="Permalink to this headline">¶</a></h3>
+<p><strong>Example 13</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm_obj1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_csdm1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">csdm_obj1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_csdm1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9]], quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2. 3. 4. 5. 6. 7. 8. 9.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 14</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_csdm2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">new_csdm1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_csdm2</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[ 1.          0.80901699  0.30901699 -0.30901699 -0.80901699 -1.</span>
+<span class="go">  -0.80901699 -0.30901699  0.30901699  0.80901699]], quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2. 3. 4. 5. 6. 7. 8. 9.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 15</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_csdm2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">new_csdm1</span> <span class="o">*</span> <span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">))</span> 
+<span class="go">ValueError: Cannot apply `exp` to quantity with physical type `temperature`.</span>
+</pre></div>
+</div>
+<p>An exception is raised for csdm object with non-dimensionless dependent
+variables.</p>
+</div>
+<div class="section" id="method-that-are-independent-of-the-dependent-variable-dimensionality">
+<h3>Method that are independent of the dependent variable dimensionality<a class="headerlink" href="#method-that-are-independent-of-the-dependent-variable-dimensionality" title="Permalink to this headline">¶</a></h3>
+<p><strong>Example 16</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_csdm2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">new_csdm1</span> <span class="o">*</span> <span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;K&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_csdm2</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.   0.01 0.04 0.09 0.16 0.25 0.36 0.49 0.64 0.81]] K2, quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2. 3. 4. 5. 6. 7. 8. 9.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+<p><strong>Example 17</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">new_csdm1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">new_csdm2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new_csdm1</span><span class="p">)</span>
+<span class="go">CSDM(</span>
+<span class="go">DependentVariable(</span>
+<span class="go">[[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9]] K, quantity_type=scalar, numeric_type=float64),</span>
+<span class="go">LinearDimension([0. 1. 2. 3. 4. 5. 6. 7. 8. 9.])</span>
+<span class="go">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dimension-reduction-methods">
+<h3>Dimension reduction methods<a class="headerlink" href="#dimension-reduction-methods" title="Permalink to this headline">¶</a></h3>
+<p><strong>Example 18</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;µG&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(30, 20, 10)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">csdm1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(30, 10)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[LinearDimension(count=30, increment=1.0),</span>
+<span class="go">LinearDimension(count=10, increment=1.0)]</span>
+</pre></div>
+</div>
+<p><strong>Example 19</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_csdm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">)),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;µG&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">csdm1</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(30, 20, 10)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">csdm1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(30,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">new</span><span class="o">.</span><span class="n">dimensions</span><span class="p">)</span>
+<span class="go">[LinearDimension(count=30, increment=1.0)]</span>
+</pre></div>
+</div>
+<p><strong>Example 20</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">minimum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">new_csdm1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">minimum</span><span class="p">)</span>
+<span class="go">0.0 K</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">new_csdm1</span><span class="p">)</span> <span class="o">==</span> <span class="n">new_csdm1</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the list of all supported <a class="reference internal" href="../api/wrappers/element_wise_operation.html#numpy-support"><span class="std std-ref">Supported NumPy functions</span></a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../_sources/startFromScratch/interacting_with_csdm.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

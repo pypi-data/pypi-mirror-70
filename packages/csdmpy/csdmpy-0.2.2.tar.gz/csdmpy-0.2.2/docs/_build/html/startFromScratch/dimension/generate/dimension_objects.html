@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Generating Dimension objects &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../../../index.html" />
+    <link rel="up" title="Generating csdmpy objects" href="../../start.html" />
+    <link rel="next" title="Generating DependentVariable objects" href="../../generating_dependent_variable_object.html" />
+    <link rel="prev" title="Generating csdmpy objects" href="../../start.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Generating Dimension objects</a><ul>
+<li><a class="reference internal" href="#lineardimension">LinearDimension</a></li>
+<li><a class="reference internal" href="#monotonicdimension">MonotonicDimension</a></li>
+<li><a class="reference internal" href="#labeleddimension">LabeledDimension</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../start.html" title="Generating csdmpy objects" accesskey="P">previous </a></li>
+              <li><a href="../../generating_dependent_variable_object.html" title="Generating DependentVariable objects" accesskey="N">next </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../start.html" accesskey="U">Generating csdmpy objects</a></li>
+            
+            <li class="visible-xs"><a href="../../../_sources/startFromScratch/dimension/generate/dimension_objects.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../start.html">Generating csdmpy objects</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Generating Dimension objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generating_dependent_variable_object.html">Generating DependentVariable objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../generating_csdm_object.html">Generating CSDM objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../add_dimension_object.html">Adding instances of Dimension class to CSDM object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../add_dependent_variable_object.html">Adding instances of DependentVariable class to CSDM object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="generating-dimension-objects">
+<span id="generate-dimension-objects"></span><h1>Generating Dimension objects<a class="headerlink" href="#generating-dimension-objects" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lineardimension">
+<h2>LinearDimension<a class="headerlink" href="#lineardimension" title="Permalink to this headline">¶</a></h2>
+<p>A LinearDimension is where the coordinates are regularly spaced along the
+dimension. This type of dimension is frequently encountered in many scientific
+datasets. There are several ways to generate LinearDimension.</p>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/Dimensions.html#csdmpy.Dimension" title="csdmpy.Dimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Dimension</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">increment</span><span class="o">=</span><span class="s2">&quot;0.1 s&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A temporal dimension.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">LinearDimension([0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9] s)</span>
+</pre></div>
+</div>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/dimension/linear.html#csdmpy.LinearDimension" title="csdmpy.LinearDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinearDimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x1</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">LinearDimension</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">increment</span><span class="o">=</span><span class="s2">&quot;0.1 s&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>
+<span class="gp">... </span>                         <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A temporal dimension.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+<span class="go">LinearDimension([0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9] s)</span>
+</pre></div>
+</div>
+<p><strong>Using NumPy array</strong></p>
+<p>You may also create a LinearDimesion object from a one-dimensional NumPy array
+using the <a class="reference internal" href="../../../api/csdmpy.html#csdmpy.as_dimension" title="csdmpy.as_dimension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">as_dimension()</span></code></a> method.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+<span class="go">LinearDimension([0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9])</span>
+</pre></div>
+</div>
+<p>Note, the Dimension object <code class="docutils literal notranslate"><span class="pre">x2</span></code> is dimensionless. You can create a physical
+dimension by either providing an appropriate unit as the argument to the
+<a class="reference internal" href="../../../api/csdmpy.html#csdmpy.as_dimension" title="csdmpy.as_dimension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">as_dimension()</span></code></a> method,</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x3</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x3</span><span class="p">)</span>
+<span class="go">LinearDimension([0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9] s)</span>
+</pre></div>
+</div>
+<p>or appropriately multiplying the dimension object <code class="docutils literal notranslate"><span class="pre">x2</span></code> with a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ScalarQuantity</span></code>.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x2</span> <span class="o">*=</span> <span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+<span class="go">LinearDimension([0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9] s)</span>
+</pre></div>
+</div>
+<p>The coordinates of the <code class="docutils literal notranslate"><span class="pre">x2</span></code> LinearDimension object,
+.. doctest:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x2</span><span class="o">.</span><span class="n">coordinates</span>
+<span class="go">&lt;Quantity [0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] s&gt;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">x2.coordinates</span></code> is a <a class="reference external" href="http://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity">Quantity</a>
+array. The value and the unit of the quantity instance are</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># To access the numpy array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numpy_array</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">value</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;numpy array =&#39;</span><span class="p">,</span> <span class="n">numpy_array</span><span class="p">)</span>
+<span class="go">numpy array = [0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># To access the astropy.unit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unit</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">unit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;unit =&#39;</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
+<span class="go">unit = s</span>
+</pre></div>
+</div>
+<p>respectively.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When generating LinearDimension objects from NumPy array, the NumPy
+array must be one-dimensional and regularly spaced.</p>
+</div>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>  
+<span class="go">ValueError: Cannot convert a 2 dimensional array to a Dimension object.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="monotonicdimension">
+<h2>MonotonicDimension<a class="headerlink" href="#monotonicdimension" title="Permalink to this headline">¶</a></h2>
+<p>A MonotonicDimension is one where the coordinates along the dimension are
+sampled monotonically, that is, either strictly increasing or decreasing
+coordinates. Like the LinearDimension, there are several ways to generate
+a MonotonicDimension.</p>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/Dimensions.html#csdmpy.Dimension" title="csdmpy.Dimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Dimension</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;monotonic&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">coordinates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;10ns&#39;</span><span class="p">,</span> <span class="s1">&#39;100ns&#39;</span><span class="p">,</span> <span class="s1">&#39;1µs&#39;</span><span class="p">,</span> <span class="s1">&#39;10µs&#39;</span><span class="p">,</span> <span class="s1">&#39;100µs&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                              <span class="s1">&#39;1ms&#39;</span><span class="p">,</span> <span class="s1">&#39;10ms&#39;</span><span class="p">,</span> <span class="s1">&#39;100ms&#39;</span><span class="p">,</span> <span class="s1">&#39;1s&#39;</span><span class="p">,</span> <span class="s1">&#39;10s&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">MonotonicDimension([1.e+01 1.e+02 1.e+03 1.e+04 1.e+05 1.e+06 1.e+07 1.e+08 1.e+09 1.e+10] ns)</span>
+</pre></div>
+</div>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/dimension/monotonic.html#csdmpy.MonotonicDimension" title="csdmpy.MonotonicDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">MonotonicDimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="o">-</span><span class="mf">0.28758166</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.22712233</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.19913859</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.17235106</span><span class="p">,</span>
+<span class="gp">... </span>                    <span class="o">-</span><span class="mf">0.1701172</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.10372635</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01817061</span><span class="p">,</span> <span class="mf">0.05936719</span><span class="p">,</span>
+<span class="gp">... </span>                    <span class="mf">0.18141424</span><span class="p">,</span> <span class="mf">0.34758913</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">MonotonicDimension</span><span class="p">(</span><span class="n">coordinates</span><span class="o">=</span><span class="n">array</span><span class="p">)</span><span class="o">*</span><span class="n">cp</span><span class="o">.</span><span class="n">ScalarQuantity</span><span class="p">(</span><span class="s1">&#39;cm&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">MonotonicDimension([-0.28758166 -0.22712233 -0.19913859 -0.17235106 -0.1701172  -0.10372635</span>
+<span class="go"> -0.01817061  0.05936719  0.18141424  0.34758913] cm)</span>
+</pre></div>
+</div>
+<p>In the above example, we generate a dimensionless MonotonicDimension from
+the NumPy array and scale its dimensionality by multiplying the object with an
+appropriate <code class="xref py py-class docutils literal notranslate"><span class="pre">ScalarQuantity</span></code>.</p>
+<p><strong>From numpy arrays.</strong></p>
+<p>Use the <a class="reference internal" href="../../../api/csdmpy.html#csdmpy.as_dimension" title="csdmpy.as_dimension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">as_dimension()</span></code></a> method to convert a numpy array as a
+Dimension object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numpy_array</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_dim</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">numpy_array</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x_dim</span><span class="p">)</span>
+<span class="go">MonotonicDimension([1.         1.25892541 1.58489319 1.99526231 2.51188643 3.16227766</span>
+<span class="go"> 3.98107171 5.01187234 6.30957344 7.94328235] A)</span>
+</pre></div>
+</div>
+<p>When generating MonotonicDimension object using the Numpy array, the array
+must be monotonic, that is, either strictly increasing or decreasing.
+An exception will be raised otherwise.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">numpy_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_dim</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">numpy_array</span><span class="p">)</span> 
+<span class="go">Exception: Invalid array for Dimension object.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="labeleddimension">
+<h2>LabeledDimension<a class="headerlink" href="#labeleddimension" title="Permalink to this headline">¶</a></h2>
+<p>A LabeledDimension is one where the coordinates along the dimension are
+string labels. You can similarly generate a labeled dimension.</p>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/Dimensions.html#csdmpy.Dimension" title="csdmpy.Dimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">csdmpy</span> <span class="k">as</span> <span class="nn">cp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">Dimension</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;labeled&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                 <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;The&#39;</span><span class="p">,</span> <span class="s1">&#39;great&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">LabeledDimension([&#39;The&#39; &#39;great&#39; &#39;circle&#39;])</span>
+</pre></div>
+</div>
+<p><strong>Using the</strong> <a class="reference internal" href="../../../api/dimension/labeled.html#csdmpy.LabeledDimension" title="csdmpy.LabeledDimension"><code class="xref py py-class docutils literal notranslate"><span class="pre">LabeledDimension</span></code></a> <strong>class.</strong></p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">LabeledDimension</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;The&#39;</span><span class="p">,</span> <span class="s1">&#39;great&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">LabeledDimension([&#39;The&#39; &#39;great&#39; &#39;circle&#39;])</span>
+</pre></div>
+</div>
+<p><strong>From numpy arrays or python list.</strong></p>
+<p>Use the <a class="reference internal" href="../../../api/csdmpy.html#csdmpy.as_dimension" title="csdmpy.as_dimension"><code class="xref py py-meth docutils literal notranslate"><span class="pre">as_dimension()</span></code></a> method to convert a numpy array as a
+Dimension object.</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;The&#39;</span><span class="p">,</span> <span class="s1">&#39;great&#39;</span><span class="p">,</span> <span class="s1">&#39;circle&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">as_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="go">LabeledDimension([&#39;The&#39; &#39;great&#39; &#39;circle&#39;])</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../../../_sources/startFromScratch/dimension/generate/dimension_objects.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

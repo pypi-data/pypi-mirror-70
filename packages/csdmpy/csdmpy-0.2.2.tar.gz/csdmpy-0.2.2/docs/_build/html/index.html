@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Welcome to the csdmpy documentation &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="_static/style.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="_static/style.css" type="text/css" />
+<link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="#" />
+    <link rel="next" title="The core scientific dataset (CSD) model" href="CSD_model.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Welcome to the csdmpy documentation</a><ul>
+<li><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li><a class="reference internal" href="#citation">Citation</a></li>
+<li><a class="reference internal" href="#media-coverage">Media coverage</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="CSD_model.html" title="The core scientific dataset (CSD) model" accesskey="N">next </a></li>
+              <li><a href="genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="_sources/index.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="#">
+      <img class="logo" src="_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="#">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="welcome-to-the-csdmpy-documentation">
+<h1>Welcome to the csdmpy documentation<a class="headerlink" href="#welcome-to-the-csdmpy-documentation" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-given table-bordered table-striped centered docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Deployment</p></td>
+<td><a class="reference external image-reference" href="https://pypi.python.org/pypi/csdmpy"><img alt="PyPI version" src="https://img.shields.io/pypi/v/csdmpy.svg?style=flat&amp;logo=pypi&amp;logoColor=white" /></a>
+</td>
+</tr>
+<tr class="row-even"><td><p>Build Status</p></td>
+<td><a class="reference external image-reference" href="https://travis-ci.org/DeepanshS/csdmpy"><img alt="Build Status" src="https://travis-ci.org/DeepanshS/csdmpy.svg?style=flat&amp;logo=travis&amp;color=white" /></a>
+<a class="reference external image-reference" href="https://csdmpy.readthedocs.io/en/stable/?badge=stable"><img alt="Documentation Status" src="https://readthedocs.org/projects/csdmpy/badge/?version=stable" /></a>
+</td>
+</tr>
+<tr class="row-odd"><td><p>License</p></td>
+<td><a class="reference external image-reference" href="https://opensource.org/licenses/BSD-3-Clause"><img alt="License" src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" /></a>
+</td>
+</tr>
+<tr class="row-even"><td><p>Metrics</p></td>
+<td><a class="reference external image-reference" href="https://img.shields.io/pypi/dm/csdmpy"><img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/csdmpy.svg" /></a>
+<a class="reference external image-reference" href="https://lgtm.com/projects/g/DeepanshS/csdmpy/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/DeepanshS/csdmpy.svg?logo=lgtm&amp;logoWidth=18" /></a>
+<a class="reference external image-reference" href="https://lgtm.com/projects/g/DeepanshS/csdmpy/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/DeepanshS/csdmpy.svg?logo=lgtm&amp;logoWidth=18" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/DeepanshS/csdmpy"><img alt="https://codecov.io/gh/DeepanshS/csdmpy/branch/master/graph/badge.svg" src="https://codecov.io/gh/DeepanshS/csdmpy/branch/master/graph/badge.svg" /></a>
+</td>
+</tr>
+<tr class="row-odd"><td><p>GitHub</p></td>
+<td><a class="reference external image-reference" href="https://github.com/DeepanshS/csdmpy/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/deepanshs/csdmpy" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>About</strong></p>
+<p>The <cite>csdmpy</cite> package is the Python support for the core scientific
+dataset (CSD) model file exchange-format <a class="footnote-reference brackets" href="#f10" id="id1">1</a>.
+The package is based on the core scientific dataset (CSD) model, which is
+designed as a building block in the development of a more sophisticated
+portable scientific dataset file standard.
+The CSD model is capable of handling a wide variety of
+scientific datasets both within and across disciplinary fields.</p>
+<p>The main objective of this python package is to facilitate an easy import and
+export of the CSD model serialized files for Python users. The
+package utilizes Numpy library and, therefore, offers the end-users versatility
+to process or visualize the imported datasets with any third-party package(s)
+compatible with Numpy.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>The sample CSDM compliant files used in this documentation are available online.</strong></p>
+<a class="reference external image-reference" href="https://osu.box.com/s/bq10pc5jyd3mu67vqvhw4xmrqgsd0x8u"><img alt="https://img.shields.io/badge/Download-CSDM%20sample%20files-blueviolet?size=large" src="https://img.shields.io/badge/Download-CSDM%20sample%20files-blueviolet?size=large" /></a>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>View the core scientific dataset model (CSDM) examples gallery.</strong></p>
+<a class="reference external image-reference" href="auto_examples/index.html"><img alt="https://img.shields.io/badge/View-Example%20Gallery-Purple?size=large" src="https://img.shields.io/badge/View-Example%20Gallery-Purple?size=large" /></a>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p><strong>Tutorial on generating and serializing CSDM objects from Numpy arrays.</strong></p>
+<a class="reference external image-reference" href="auto_tutorials/index.html"><img alt="https://img.shields.io/badge/View-Tutorial%20Gallery-Blue?size=large" src="https://img.shields.io/badge/View-Tutorial%20Gallery-Blue?size=large" /></a>
+</div></blockquote>
+<hr class="docutils" />
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CSD_model.html">The core scientific dataset (CSD) model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CSDmodel_uml/csdm.html">CSDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSDmodel_uml/dimensions/dimension.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSDmodel_uml/dependent_variables/dependent_variable.html">DependentVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSDmodel_uml/enumeration.html">Enumeration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CSDmodel_uml/scalarQuantity.html">ScalarQuantity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html"><cite>csdmpy</cite> package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-csdmpy-package">Installing <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#the-requirements-for-csdmpy">The requirements for <cite>csdmpy</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started with <cite>csdmpy</cite> package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#accessing-the-dimensions-and-dependent-variables-of-the-dataset">Accessing the dimensions and dependent variables of the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#plotting-the-dataset">Plotting the dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Example Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#scalar-1d-1-datasets">Scalar, 1D{1} datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#scalar-2d-1-datasets">Scalar, 2D{1} datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#vector-datasets">Vector datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#tensor-datasets">Tensor datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#pixel-datasets">Pixel datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#correlated-datasets">Correlated datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_examples/index.html#sparse-datasets">Sparse datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/start.html">Generating csdmpy objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/dimension/generate/dimension_objects.html">Generating Dimension objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/generating_dependent_variable_object.html">Generating DependentVariable objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/generating_csdm_object.html">Generating CSDM objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/add_dimension_object.html">Adding instances of Dimension class to CSDM object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/add_dependent_variable_object.html">Adding instances of DependentVariable class to CSDM object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto_tutorials/index.html#d-1-datasets">2D{1} Datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/dimension/interact/dimension_objects.html">Interacting with Dimension objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="startFromScratch/interacting_with_csdm.html">Interacting with CSDM objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referenceAPI.html">API-Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/csdmpy.html">csdmpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/CSDM.html">CSDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/Dimensions.html">Dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/DependentVariable.html">DependentVariable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/statistics.html">Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/numpy_wrappers.html">Numpy methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">CHANGELOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#upcoming-additions-and-changes">Upcoming additions and changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-2-2">v0.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-2-1">v0.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-2-0">v0.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-1-5">v0.1.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-1-4">v0.1.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-1-3">v0.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v0-0-11-to-v0-1-2">v0.0.11 to v0.1.2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="f10"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Srivastava D.J., Vosegaard T., Massiot D., Grandinetti P.J. (2020) Core Scientific Dataset Model: A lightweight and portable model and file format for multi-dimensional scientific data. <a class="reference external" href="https://doi.org/10.1371/journal.pone.0225953">PLOS ONE 15(1): e0225953.</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="media-coverage">
+<h2>Media coverage<a class="headerlink" href="#media-coverage" title="Permalink to this headline">¶</a></h2>
+<p> <a href="https://inc.cnrs.fr/fr/cnrsinfo/des-chimistes-elaborent-un-nouveau-format-pour-le-partage-de-donnees-scientifiques"><img src="https://inc.cnrs.fr/sites/institut_inc/files/styles/top_left/public/image/cnrs_20180120_0025%20%281%29.jpg?itok=i3wlyGBq" style="width:64px; height:64px" alt="Des chimistes élaborent un nouveau format pour le partage de données scientifiques"></a> <a href="https://inc.cnrs.fr/fr/cnrsinfo/des-chimistes-elaborent-un-nouveau-format-pour-le-partage-de-donnees-scientifiques"> Des chimistes élaborent un nouveau format pour le partage de données scientifiques. </a> </p>
+
+
+<p> <a href="https://www.technology.org/2020/01/03/simplifying-how-scientists-share-data/"><img src="https://www.technology.org/texorgwp/wp-content/uploads/2020/01/1920_data-1536x1024.jpg" style="width:64px; height:64px" alt="Simplifying how scientists share data"></a> <a href="https://www.technology.org/2020/01/03/simplifying-how-scientists-share-data/"> Simplifying how scientists share data. </a> </p></div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="_sources/index.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

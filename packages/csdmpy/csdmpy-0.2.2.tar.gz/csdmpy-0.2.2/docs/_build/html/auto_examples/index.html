@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Example Gallery &mdash; csdmpy:doc v0.2.2</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+<link rel="stylesheet" href="../_static/style.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+<link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.2.2',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="csdmpy:doc v0.2.2" href="../index.html" />
+    <link rel="next" title="Global Mean Sea Level rise dataset" href="1D_1_examples/plot_0_gmsl.html" />
+    <link rel="prev" title="Getting started with csdmpy package" href="../getting_started.html" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">csdmpy:doc v0.2.2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Example Gallery</a><ul>
+<li><a class="reference internal" href="#scalar-1d-1-datasets">Scalar, 1D{1} datasets</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#scalar-2d-1-datasets">Scalar, 2D{1} datasets</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#vector-datasets">Vector datasets</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#tensor-datasets">Tensor datasets</a></li>
+<li><a class="reference internal" href="#pixel-datasets">Pixel datasets</a></li>
+<li><a class="reference internal" href="#correlated-datasets">Correlated datasets</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#sparse-datasets">Sparse datasets</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../getting_started.html" title="Getting started with csdmpy package" accesskey="P">previous </a></li>
+              <li><a href="1D_1_examples/plot_0_gmsl.html" title="Global Mean Sea Level rise dataset" accesskey="N">next </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../_sources/auto_examples/index.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/csdmpy.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../CSD_model.html">The core scientific dataset (CSD) model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html"><cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started with <cite>csdmpy</cite> package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scalar-1d-1-datasets">Scalar, 1D{1} datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scalar-2d-1-datasets">Scalar, 2D{1} datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-datasets">Vector datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tensor-datasets">Tensor datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pixel-datasets">Pixel datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#correlated-datasets">Correlated datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sparse-datasets">Sparse datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/start.html">Generating csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_tutorials/index.html">Tutorial examples on generating CSDM datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/interacting_with_csdmpy_objects.html">Interacting with csdmpy objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/save_dataset.html">Serializing CSDM object to files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../startFromScratch/A fun example.html">An emoji 😁 example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../referenceAPI.html">API-Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">CHANGELOG</a></li>
+</ul>
+
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="example-gallery">
+<span id="sphx-glr-auto-examples"></span><h1>Example Gallery<a class="headerlink" href="#example-gallery" title="Permalink to this headline">¶</a></h1>
+<p>In this section, we present illustrative examples for importing files
+serialized with the CSD model, using the <cite>csdmpy</cite> package.
+Because the CSD model allows multi-dimensional datasets with multiple dependent
+variables, we use a shorthand notation of <span class="math notranslate nohighlight">\(d\mathrm{D}\{p\}\)</span> to
+indicate that a dataset has a <span class="math notranslate nohighlight">\(p\)</span>-component dependent variable defined
+on a <span class="math notranslate nohighlight">\(d\)</span>-dimensional coordinate grid.
+In the case of <cite>correlated datasets</cite>, the number of components in each
+dependent variable is given as a list within the curly braces, <cite>i.e.</cite>,
+<span class="math notranslate nohighlight">\(d\mathrm{D}\{p_0, p_1, p_2, ...\}\)</span>.</p>
+<hr class="docutils" />
+<p><strong>The sample CSDM compliant files used in this documentation are available online.</strong></p>
+<a class="reference external image-reference" href="https://osu.box.com/s/bq10pc5jyd3mu67vqvhw4xmrqgsd0x8u"><img alt="https://img.shields.io/badge/Download-CSDM%20sample%20files-blueviolet" src="https://img.shields.io/badge/Download-CSDM%20sample%20files-blueviolet" /></a>
+<hr class="docutils" />
+<div class="sphx-glr-clear"></div><div class="section" id="scalar-1d-1-datasets">
+<span id="sphx-glr-auto-examples-1d-1-examples"></span><h2>Scalar, 1D{1} datasets<a class="headerlink" href="#scalar-1d-1-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The 1D{1} datasets are one dimensional, <span class="math notranslate nohighlight">\(d=1\)</span>, with one single-component,
+<span class="math notranslate nohighlight">\(p=1\)</span>, dependent variable. These datasets are the most common, and we,
+therefore, provide a few examples from various fields of science.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="Global Mean Sea Level rise dataset"><div class="figure align-default" id="id1">
+<img alt="Global Mean Sea Level rise dataset" src="../_images/sphx_glr_plot_0_gmsl_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_0_gmsl.html#sphx-glr-auto-examples-1d-1-examples-plot-0-gmsl-py"><span class="std std-ref">Global Mean Sea Level rise dataset</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Nuclear Magnetic Resonance (NMR) dataset"><div class="figure align-default" id="id2">
+<img alt="Nuclear Magnetic Resonance (NMR) dataset" src="../_images/sphx_glr_plot_1_NMR_bloch_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_1_NMR_bloch.html#sphx-glr-auto-examples-1d-1-examples-plot-1-nmr-bloch-py"><span class="std std-ref">Nuclear Magnetic Resonance (NMR) dataset</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Electron Paramagnetic Resonance (EPR) dataset"><div class="figure align-default" id="id3">
+<img alt="Electron Paramagnetic Resonance (EPR) dataset" src="../_images/sphx_glr_plot_2_EPR_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 3 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_2_EPR.html#sphx-glr-auto-examples-1d-1-examples-plot-2-epr-py"><span class="std std-ref">Electron Paramagnetic Resonance (EPR) dataset</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Gas Chromatography dataset"><div class="figure align-default" id="id4">
+<img alt="Gas Chromatography dataset" src="../_images/sphx_glr_plot_3_GS_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 4 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_3_GS.html#sphx-glr-auto-examples-1d-1-examples-plot-3-gs-py"><span class="std std-ref">Gas Chromatography dataset</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Fourier Transform Infrared Spectroscopy (FTIR) dataset"><div class="figure align-default" id="id5">
+<img alt="Fourier Transform Infrared Spectroscopy (FTIR) dataset" src="../_images/sphx_glr_plot_4_FTIR_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 5 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_4_FTIR.html#sphx-glr-auto-examples-1d-1-examples-plot-4-ftir-py"><span class="std std-ref">Fourier Transform Infrared Spectroscopy (FTIR) dataset</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Ultraviolet–visible (UV-vis) dataset"><div class="figure align-default" id="id6">
+<img alt="Ultraviolet–visible (UV-vis) dataset" src="../_images/sphx_glr_plot_5_UV-vis_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_5_UV-vis.html#sphx-glr-auto-examples-1d-1-examples-plot-5-uv-vis-py"><span class="std std-ref">Ultraviolet–visible (UV-vis) dataset</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Mass spectrometry (sparse) dataset"><div class="figure align-default" id="id7">
+<img alt="Mass spectrometry (sparse) dataset" src="../_images/sphx_glr_plot_6_Mass_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text"><a class="reference internal" href="1D_1_examples/plot_6_Mass.html#sphx-glr-auto-examples-1d-1-examples-plot-6-mass-py"><span class="std std-ref">Mass spectrometry (sparse) dataset</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="scalar-2d-1-datasets">
+<span id="sphx-glr-auto-examples-2d-1-examples"></span><h2>Scalar, 2D{1} datasets<a class="headerlink" href="#scalar-2d-1-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The 2D{1} datasets are two dimensional, <span class="math notranslate nohighlight">\(d=2\)</span>, with one
+single-component dependent variable, <span class="math notranslate nohighlight">\(p=1\)</span>. Following are some
+2D{1} example datasets from various scientific fields expressed in CSDM
+format.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="Astronomy dataset"><div class="figure align-default" id="id8">
+<img alt="Astronomy dataset" src="../_images/sphx_glr_plot_0_astronomy_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text"><a class="reference internal" href="2D_1_examples/plot_0_astronomy.html#sphx-glr-auto-examples-2d-1-examples-plot-0-astronomy-py"><span class="std std-ref">Astronomy dataset</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Nuclear Magnetic Resonance (NMR) dataset"><div class="figure align-default" id="id9">
+<img alt="Nuclear Magnetic Resonance (NMR) dataset" src="../_images/sphx_glr_plot_1_NMR_satrec_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text"><a class="reference internal" href="2D_1_examples/plot_1_NMR_satrec.html#sphx-glr-auto-examples-2d-1-examples-plot-1-nmr-satrec-py"><span class="std std-ref">Nuclear Magnetic Resonance (NMR) dataset</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Transmission Electron Microscopy (TEM) dataset"><div class="figure align-default" id="id10">
+<img alt="Transmission Electron Microscopy (TEM) dataset" src="../_images/sphx_glr_plot_2_TEM_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text"><a class="reference internal" href="2D_1_examples/plot_2_TEM.html#sphx-glr-auto-examples-2d-1-examples-plot-2-tem-py"><span class="std std-ref">Transmission Electron Microscopy (TEM) dataset</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Labeled Dataset"><div class="figure align-default" id="id11">
+<img alt="Labeled Dataset" src="../_images/sphx_glr_plot_3_labeled_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 11 </span><span class="caption-text"><a class="reference internal" href="2D_1_examples/plot_3_labeled.html#sphx-glr-auto-examples-2d-1-examples-plot-3-labeled-py"><span class="std std-ref">Labeled Dataset</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="vector-datasets">
+<span id="sphx-glr-auto-examples-vector"></span><h2>Vector datasets<a class="headerlink" href="#vector-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Vector, 1D{2} dataset"><div class="figure align-default" id="id12">
+<img alt="Vector, 1D{2} dataset" src="../_images/sphx_glr_plot_0_vector_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 12 </span><span class="caption-text"><a class="reference internal" href="vector/plot_0_vector.html#sphx-glr-auto-examples-vector-plot-0-vector-py"><span class="std std-ref">Vector, 1D{2} dataset</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Vector, 2D{2} dataset"><div class="figure align-default" id="id13">
+<img alt="Vector, 2D{2} dataset" src="../_images/sphx_glr_plot_1_vector_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 13 </span><span class="caption-text"><a class="reference internal" href="vector/plot_1_vector.html#sphx-glr-auto-examples-vector-plot-1-vector-py"><span class="std std-ref">Vector, 2D{2} dataset</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="tensor-datasets">
+<span id="sphx-glr-auto-examples-tensor"></span><h2>Tensor datasets<a class="headerlink" href="#tensor-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Diffusion tensor MRI, 3D{6} dataset"><div class="figure align-default" id="id14">
+<img alt="Diffusion tensor MRI, 3D{6} dataset" src="../_images/sphx_glr_plot_0_3D_diff_tensor_mri_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 14 </span><span class="caption-text"><a class="reference internal" href="tensor/plot_0_3D_diff_tensor_mri.html#sphx-glr-auto-examples-tensor-plot-0-3d-diff-tensor-mri-py"><span class="std std-ref">Diffusion tensor MRI, 3D{6} dataset</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="pixel-datasets">
+<span id="sphx-glr-auto-examples-pixel"></span><h2>Pixel datasets<a class="headerlink" href="#pixel-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Image, 2D{3} datasets"><div class="figure align-default" id="id15">
+<img alt="Image, 2D{3} datasets" src="../_images/sphx_glr_plot_0_image_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 15 </span><span class="caption-text"><a class="reference internal" href="pixel/plot_0_image.html#sphx-glr-auto-examples-pixel-plot-0-image-py"><span class="std std-ref">Image, 2D{3} datasets</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="correlated-datasets">
+<span id="sphx-glr-auto-examples-correlated-examples"></span><h2>Correlated datasets<a class="headerlink" href="#correlated-datasets" title="Permalink to this headline">¶</a></h2>
+<p>The Core Scientific Dataset Model (CSDM) supports multiple dependent
+variables that share the same <cite>d</cite>-dimensional coordinate grid, where
+<span class="math notranslate nohighlight">\(d&gt;=0\)</span>.
+We call the dependent variables from these datasets as <cite>correlated datasets</cite>.
+Following are a few examples of the correlated dataset.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="Scatter, 0D{1,1} dataset"><div class="figure align-default" id="id16">
+<img alt="Scatter, 0D{1,1} dataset" src="../_images/sphx_glr_plot_0_0D11_dataset_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 16 </span><span class="caption-text"><a class="reference internal" href="correlated_examples/plot_0_0D11_dataset.html#sphx-glr-auto-examples-correlated-examples-plot-0-0d11-dataset-py"><span class="std std-ref">Scatter, 0D{1,1} dataset</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Meteorological, 2D{1,1,2,1,1} dataset"><div class="figure align-default" id="id17">
+<img alt="Meteorological, 2D{1,1,2,1,1} dataset" src="../_images/sphx_glr_plot_1_meteorology_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 17 </span><span class="caption-text"><a class="reference internal" href="correlated_examples/plot_1_meteorology.html#sphx-glr-auto-examples-correlated-examples-plot-1-meteorology-py"><span class="std std-ref">Meteorological, 2D{1,1,2,1,1} dataset</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Astronomy, 2D{1,1,1} dataset (Creating image composition)"><div class="figure align-default" id="id18">
+<img alt="Astronomy, 2D{1,1,1} dataset (Creating image composition)" src="../_images/sphx_glr_plot_2_astronomy_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 18 </span><span class="caption-text"><a class="reference internal" href="correlated_examples/plot_2_astronomy.html#sphx-glr-auto-examples-correlated-examples-plot-2-astronomy-py"><span class="std std-ref">Astronomy, 2D{1,1,1} dataset (Creating image composition)</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div></div>
+<div class="section" id="sparse-datasets">
+<span id="sphx-glr-auto-examples-sparse"></span><h2>Sparse datasets<a class="headerlink" href="#sparse-datasets" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Sparse along one dimension, 2D{1,1} dataset"><div class="figure align-default" id="id19">
+<img alt="Sparse along one dimension, 2D{1,1} dataset" src="../_images/sphx_glr_plot_0_1D_sparse_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 19 </span><span class="caption-text"><a class="reference internal" href="sparse/plot_0_1D_sparse.html#sphx-glr-auto-examples-sparse-plot-0-1d-sparse-py"><span class="std std-ref">Sparse along one dimension, 2D{1,1} dataset</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Sparse along two dimensions, 2D{1,1} dataset"><div class="figure align-default" id="id20">
+<img alt="Sparse along two dimensions, 2D{1,1} dataset" src="../_images/sphx_glr_plot_1_2D_sparse_thumb.png" />
+<p class="caption"><span class="caption-number">Figure 20 </span><span class="caption-text"><a class="reference internal" href="sparse/plot_1_2D_sparse.html#sphx-glr-auto-examples-sparse-plot-1-2d-sparse-py"><span class="std std-ref">Sparse along two dimensions, 2D{1,1} dataset</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-clear"></div><div class="sphx-glr-footer class sphx-glr-footer-gallery docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/45c310ac48f2283b106d8142fd90861c/auto_examples_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">auto_examples_python.zip</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../_downloads/b46523d028b80e73d88578babbd3ac71/auto_examples_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">auto_examples_jupyter.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+      </div><!-- /row -->
+
+      <!-- footer -->
+<footer class="footer">
+  <p class="flex">
+    <a href="../_sources/auto_examples/index.rst.txt" rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a>
+  </p>
+  <p>
+    &copy; Copyright 2019-2020, Deepansh J. Srivastava.<br /> Created using
+    <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 3.0.3. &nbsp; Last built Jun 09, 2020.
+    <br />
+  </p>
+</footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

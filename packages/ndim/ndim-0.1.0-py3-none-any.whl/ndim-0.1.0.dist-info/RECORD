@@ -1,0 +1,13 @@
+ndim/__about__.py,sha256=fUMa3o2xd-f5Pdmz2TZ2r-rE2SaF8z2EWBPLB1nS2Jk,214
+ndim/__init__.py,sha256=9ytxAm3EuoZSjGBUv2Q5lQ7ZjgVPdrCYBPeRXuVAH1w,152
+ndim/enr.py,sha256=7CP_H2kGdkRg_OOHi9syk0vSX_8h8l0cU9nbI9UooSA,1193
+ndim/enr2.py,sha256=zirBt0j9t2ogBPTlst-Qx2qEHhLkJgiLfA1VjXPXV1s,1936
+ndim/nball.py,sha256=8iOloXm25nsFbM-tyJuOniHSQzGWhw-wFYoscB3dR3o,1060
+ndim/ncube.py,sha256=jIu9ukvigWkR4C9vHZLgLHyshcsN0s4cBUHaPFQFn1U,564
+ndim/nsimplex.py,sha256=6VbzLnuKSxFWUqimNf51sP3R-PXOzSeML-lSt88V5uM,718
+ndim/nsphere.py,sha256=0RNCdcr18ftZEu_cTuYhYRlzGEKTaEx-rRH500BpshM,911
+ndim-0.1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ndim-0.1.0.dist-info/METADATA,sha256=_bQK13Rb3tXYnNeDH9nFAt3bI5gyvgDXTgnHZr8lNHk,12337
+ndim-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ndim-0.1.0.dist-info/top_level.txt,sha256=q7QblEY_o9WJZg9fH7vGf7Ms3SF-TSoGcSS5s3-iARQ,5
+ndim-0.1.0.dist-info/RECORD,,

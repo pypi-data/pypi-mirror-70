@@ -1,0 +1,13 @@
+{
+    "name": "QID",
+    "description": "Device Serial Number inquiry",
+    "help": " -- queries the device serial number",
+    "type": "QUERY",
+    "response": [
+            ["string", "Serial Number", ""]
+        ],
+    "test_responses": [
+           ["(9293333010501", "BB07"]
+        ],
+	"regex": ""
+}

@@ -1,0 +1,9 @@
+bendeep/__init__.py,sha256=Q1V8Ifcj_HymZhviJHZYR_wl8XE5-Ly70aaFVHZJORQ,275
+bendeep/sentiment.py,sha256=zpdwEfGCiHjzQz9dPBztRLOCKJy2qDYL8hKcK6MvRCc,6187
+bendeep/translation.py,sha256=LGgqmh2wy2a_5Z9G1Vl_FM9KZ-yo0a-oOmfz1WgK3pE,13014
+bendeep/utils.py,sha256=2jG7Ja6ynmmJCjniuSCvVcSQXR3ABGSiu99d5KOHNiE,283
+bendeep-1.2.dist-info/LICENSE,sha256=3cb70ajwbaBlR7U558vVLnwo3gYzfc13pbF9fn0KnEg,1069
+bendeep-1.2.dist-info/METADATA,sha256=XR_tzrt9PCML1AJWJ12agZ4-08E3D6we7BSp7IBhd74,4491
+bendeep-1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bendeep-1.2.dist-info/top_level.txt,sha256=TFtX-gJ9y029bH3w5KCaUfRMWJjLJkjHzBbISQ5Cmqg,8
+bendeep-1.2.dist-info/RECORD,,

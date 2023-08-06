@@ -1,0 +1,4 @@
+pymongo
+click
+inquirer
+kachery>=0.5.2

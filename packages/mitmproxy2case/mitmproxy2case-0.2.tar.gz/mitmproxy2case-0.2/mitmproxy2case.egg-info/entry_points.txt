@@ -1,0 +1,3 @@
+[console_scripts]
+mitm2case = mitmproxy2case.mitmproxy2case:cli
+

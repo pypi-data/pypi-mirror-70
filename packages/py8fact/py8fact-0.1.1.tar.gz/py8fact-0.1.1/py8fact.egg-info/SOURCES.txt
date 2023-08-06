@@ -1,0 +1,10 @@
+MANIFEST.in
+readme.md
+setup.py
+py8fact/__init__.py
+py8fact.egg-info/PKG-INFO
+py8fact.egg-info/SOURCES.txt
+py8fact.egg-info/dependency_links.txt
+py8fact.egg-info/top_level.txt
+py8fact/__pycache__/__init__.cpython-38.pyc
+py8fact/res/en/facts.txt

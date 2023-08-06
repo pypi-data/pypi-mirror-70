@@ -1,0 +1,14 @@
+setup.py
+src/randword.egg-info/PKG-INFO
+src/randword.egg-info/SOURCES.txt
+src/randword.egg-info/dependency_links.txt
+src/randword.egg-info/top_level.txt
+src/words/__init__.py
+src/words/adj.txt
+src/words/adv.txt
+src/words/conj.txt
+src/words/interj.txt
+src/words/noun.txt
+src/words/prep.txt
+src/words/pron.txt
+src/words/verb.txt

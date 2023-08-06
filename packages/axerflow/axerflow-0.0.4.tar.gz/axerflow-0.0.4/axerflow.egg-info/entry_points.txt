@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        axerflow=axerflow.cli:cli
+    

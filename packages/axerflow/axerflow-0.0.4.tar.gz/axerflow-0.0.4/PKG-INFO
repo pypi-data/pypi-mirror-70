@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: axerflow
+Version: 0.0.4
+Summary: Axerflow: An ML Workflow Tool
+Home-page: https://bitbucket.org/axer-team/axerflow/src/dev_wj/
+Author: Databricks
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/axerflow/axerflow/issues
+Project-URL: Documentation, https://github.com/axerflow/axerflow/docs/latest/index.html
+Project-URL: Source Code, https://github.com/axerflow/axerflow
+Description: UNKNOWN
+Keywords: ml ai databricks
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Provides-Extra: extras
+Provides-Extra: sqlserver

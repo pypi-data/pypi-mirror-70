@@ -1,0 +1,10 @@
+client.py
+config.py
+main.py
+setup.py
+kuenta_assistant.egg-info/PKG-INFO
+kuenta_assistant.egg-info/SOURCES.txt
+kuenta_assistant.egg-info/dependency_links.txt
+kuenta_assistant.egg-info/entry_points.txt
+kuenta_assistant.egg-info/requires.txt
+kuenta_assistant.egg-info/top_level.txt

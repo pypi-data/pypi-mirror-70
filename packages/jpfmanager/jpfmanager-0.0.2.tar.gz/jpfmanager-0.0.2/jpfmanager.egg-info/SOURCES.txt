@@ -1,0 +1,9 @@
+README.md
+setup.py
+jpfmanager/__init__.py
+jpfmanager/jpf.py
+jpfmanager.egg-info/PKG-INFO
+jpfmanager.egg-info/SOURCES.txt
+jpfmanager.egg-info/dependency_links.txt
+jpfmanager.egg-info/requires.txt
+jpfmanager.egg-info/top_level.txt

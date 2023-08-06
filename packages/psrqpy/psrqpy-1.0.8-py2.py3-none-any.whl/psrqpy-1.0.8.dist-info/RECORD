@@ -1,0 +1,9 @@
+psrqpy/__init__.py,sha256=Y3BV3JnxFzy0-pPu8Qzk42RYgxs1qmMZPYscI4MGz1s,873
+psrqpy/config.py,sha256=AJfmSjKW01FP3v9MaUDqFNmNE92dN8N8flJH5uyyi8w,20785
+psrqpy/pulsar.py,sha256=6F6vlg_FeCRE6qtBws6aUTXF9cSi8QcqHqkgFChclKI,8313
+psrqpy/search.py,sha256=fSz76jBsojhJvNuA-tfTR1aEwT2vxl9tb9itegjF-gM,116750
+psrqpy/utils.py,sha256=aN4WQWNYVDVoJpko7QBOdpXt2nHEJP5yu5hvEUJ7_us,44557
+psrqpy-1.0.8.dist-info/METADATA,sha256=2xPK3B2EfW4e67RHdnm-vfK7mUu1CTwGBbpDzx4Sxk8,9602
+psrqpy-1.0.8.dist-info/RECORD,,
+psrqpy-1.0.8.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+psrqpy-1.0.8.dist-info/top_level.txt,sha256=cXfJzu98gyKQroOwsJDgl8_bwn1EOxkWRLXW8Q4DiE4,7

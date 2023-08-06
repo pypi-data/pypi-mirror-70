@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: gaussian-binomial-distribution-calculation
+Version: 1.0.2
+Summary: Gaussian and Binomial distributions 
+Home-page: UNKNOWN
+Author: Paribesh Ranabhat
+Author-email: paribessh_sab@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+
+# Gaussian-Binomial-Distribution Package
+
+A python module to calculate and plot Gaussian and binomial distributions.
+
+## Uploading a Package
+
+[optional] commands 
+
+    [pipenv run] python3 setup.py sdist bdist_wheel
+    [pipenv run] twine check dist/*
+    [pipenv run] twine upload dist/*
+
+## Distribution Formulas Used
+
+Calculated mean, standard deviation, variance and probability density function in both distibutions.
+
+1. [Gaussian Distribution formulas](https://en.wikipedia.org/wiki/Normal_distribution)
+2. [Binomial Distribution formulas](https://en.wikipedia.org/wiki/Binomial_distribution)
+
+## Example to use the package
+
+After installing the package, create a file `example_test.py` and add following lines
+
+    from gaussian_binomial_distribution_calculation import Gaussian, Binomial
+
+
+    gaussian_one = Gaussian(10, 7) 
+
+    gaussian_two = Gaussian(15, 21)
+
+    gaussian_sum = gaussian_one + gaussian_two
+
+    binomial_one = Binomial(.4, 25)
+
+    binomial_two = Binomial(.4, 30)
+
+    binomial_sum = binomial_one + binomial_two
+    print("-----Gaussian mean, standard deviation, and probability density function---")
+    print(gaussian_one.mean)
+    print(binomial_one.stdev)
+    print(gaussian_one.pdf(4))
+    print("First gaussian",gaussian_one)
+    print("Second gaussian",gaussian_two)
+    print("--------sum calculation-----------")
+    print("sum of two gaussian distribution",gaussian_sum)
+    print("-----Binomial mean, standard deviation, and probability density function---")
+    print(binomial_one.mean)
+    print(binomial_one.stdev)
+    print(binomial_one.pdf(4))
+    print("First binomial",binomial_one)
+    print("Second binomial",binomial_two)
+    print("--------sum calculation-----------")
+    print("sum of two binomial distribution", binomial_sum)
+
+The following program result 
+
+    -----Gaussian mean, standard deviation, and probability density function---
+    10
+    2.449489742783178
+    0.03947074079064297
+    First gaussian mean 10, standard deviation 7
+    Second gaussian mean 15, standard deviation 21
+    --------sum calculation-----------
+    sum of two gaussian distribution mean 25, standard deviation 22.135943621178654
+    -----Binomial mean, standard deviation, and probability density function---
+    10.0
+    2.449489742783178
+    0.00710406209537996
+    First binomial mean 10.0, standard deviation 2.449489742783178, p 0.4, n 25
+    Second binomial mean 12.0, standard deviation 2.6832815729997477, p 0.4, n 30
+    --------sum calculation-----------
+    sum of two binomial distribution mean 22.0, standard deviation 5.132771315782925, p 0.4, n 55
+
+
+
+
+
+
+

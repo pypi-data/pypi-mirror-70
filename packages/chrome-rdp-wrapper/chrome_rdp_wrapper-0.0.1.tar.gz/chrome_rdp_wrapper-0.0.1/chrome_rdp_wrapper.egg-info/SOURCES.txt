@@ -1,0 +1,8 @@
+README.md
+setup.py
+chrome_rdp_wrapper/__init__.py
+chrome_rdp_wrapper.egg-info/PKG-INFO
+chrome_rdp_wrapper.egg-info/SOURCES.txt
+chrome_rdp_wrapper.egg-info/dependency_links.txt
+chrome_rdp_wrapper.egg-info/requires.txt
+chrome_rdp_wrapper.egg-info/top_level.txt

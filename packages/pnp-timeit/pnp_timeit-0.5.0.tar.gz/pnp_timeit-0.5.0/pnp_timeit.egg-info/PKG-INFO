@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: pnp-timeit
+Version: 0.5.0
+Summary: Measure execution time of small code snippets, write to log
+Home-page: https://github.com/pypnp/pnp_timeit
+Author: PyPnP
+Author-email: pypnp@protonmail.com
+License: UNKNOWN
+Description: # Project description
+        > Author: PyPnPteam <pypnp@protonmail.com>
+        
+        ## Introduction
+        Measure execution time of small code snippets, write to log, Plug and Play style
+        
+        
+        
+        ## Installation
+        This package can either be installed using pip or from a tarball using the standard Python distutils.
+        
+        If installing using pip, you can download latest version from PyPI:
+        
+            pip install pypnp-timeit
+        
+        If you are installing from a tarball, run the following command as an administrative user:
+        
+            python setup.py install
+        
+        
+        # Example & Usage
+        ## Example Code 1
+        
+        copy following code to file: aa.py
+        
+            import time
+            from pnp_timeit.pnp_timeit import Pnp_Timeit
+        
+            @Pnp_Timeit.timeit
+            def myfunc(arg1, arg2, arg3='hello'):
+                time.sleep(3)
+        
+            if __name__ == "__main__":
+                Pnp_Timeit.enable()
+                myfunc("a1", "a2", arg3="hello world")
+        
+        
+        execute file: aa.py
+        
+            $ python aa.py
+        
+            {"func": "myfunc", "args": ["a1", "a2"], "kwargs": {"arg3": "hello world"}, "time_cost_seconds": 3.002114}
+        
+        
+        
+        ## Example Code 2
+        
+        copy following code to file: bb.py
+        
+            import time
+            import logging
+            from pnp_timeit.pnp_timeit import Pnp_Timeit
+        
+            @Pnp_Timeit.timeit
+            def myfunc(arg1, arg2, arg3='hello'):
+                time.sleep(3)
+        
+            if __name__ == "__main__":
+        
+                logger = logging.getLogger("MYTEST_LOGGER")
+                ch = logging.StreamHandler()
+                formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+                ch.setFormatter(formatter)
+                logger.addHandler(ch)
+                logger.setLevel(logging.INFO)
+        
+                Pnp_Timeit.enable(logger)
+                myfunc("a1", "a2", arg3="hello world")
+        
+        
+        
+        execute file: bb.py
+        
+            $ python bb.py
+        
+            2020-06-08 16:39:54,151 - MYTEST_LOGGER - INFO - {"func": "myfunc", "args": ["a1", "a2"], "kwargs": {"arg3": "hello world"}, "time_cost_seconds": 3.
+        01584}
+        
+        
+        
+        
+        
+        # License
+        MIT license.
+        
+        If needed for inclusion in other open source projects, I’m glad to relicense this code.
+        
+        
+        
+        # Bugs, Feature Requests & Patches
+        
+        # Security Issues
+        
+        
+        # Contact
+        PyPnP team <pypnp@protonmail.com>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

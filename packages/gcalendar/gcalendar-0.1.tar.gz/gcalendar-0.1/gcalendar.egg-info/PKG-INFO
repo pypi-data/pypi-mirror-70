@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: gcalendar
+Version: 0.1
+Summary: Read Google Calendar events from your terminal.
+Home-page: https://github.com/slgobinath/gcalendar
+Author: Gobinath Loganathan
+Author-email: slgobinath@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/slgobinath/gcalendar/archive/v0.1.tar.gz
+Description: # gcalendar
+        
+        A command-line tool to read your Google Calendar events in JSON format.
+        
+        
+        ## Help
+        
+        ```shell script
+        usage: __main__.py [-h] [--no-of-days NO_OF_DAYS]
+                           [--calendar [CALENDAR [CALENDAR ...]]] [--list-calendars]
+                           [--client-id CLIENT_ID] [--client-secret CLIENT_SECRET]
+                           [--account ACCOUNT]
+        
+        Retrieve Google Calendar events.
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          --no-of-days NO_OF_DAYS
+                                number of days to include
+          --calendar [CALENDAR [CALENDAR ...]]
+          --list-calendars
+          --client-id CLIENT_ID
+                                the Google client id
+          --client-secret CLIENT_SECRET
+                                the Google client secret
+          --account ACCOUNT     a name to uniquely identify the account
+        ```
+        
+        ## License
+        
+        GNU General Public License v3
+Keywords: linux utility google-calendar
+Platform: UNKNOWN
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

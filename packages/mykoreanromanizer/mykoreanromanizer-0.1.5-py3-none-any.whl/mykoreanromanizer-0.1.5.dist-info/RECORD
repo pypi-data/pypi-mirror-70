@@ -1,0 +1,10 @@
+mykoreanromanizer/__init__.py,sha256=jJrEc6BkzftXejMZmsWoIpAAS8DS2UyxT2bKZyr4r3g,95
+mykoreanromanizer/enhacer.py,sha256=T01_thoV4uaDDMl-Tme49Oihrii7YrSXu8HBVeHFJOw,724
+mykoreanromanizer/hangul_romanization_equivalents.py,sha256=gf4On9YvVQCp2GXGeRX8JItxO_RO7bfG7XprygnFX1k,2221
+mykoreanromanizer/romanizer.py,sha256=Rjz8P_O3haRsiN6XLm8WWKRFZivfgcehnfHW6nv4hOo,4271
+mykoreanromanizer/syllable.py,sha256=2zbospPtWWumHs4DyFOQ0_nxCNmh67c4DyljEZagnn0,1603
+mykoreanromanizer-0.1.5.dist-info/LICENSE.txt,sha256=QvqWvSlMyLc_-h92EOhfQCuz7Oz5vCPwTWaVVQWlwNY,1066
+mykoreanromanizer-0.1.5.dist-info/METADATA,sha256=kIWH5CAYygzKlaSyA_x618NV1pgd7PSVhD3uyZs63iY,739
+mykoreanromanizer-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mykoreanromanizer-0.1.5.dist-info/top_level.txt,sha256=4ZGKadbRHUvu8z9wN1I9LOU7FqHHoBhcFqnh0HaDqxg,18
+mykoreanromanizer-0.1.5.dist-info/RECORD,,

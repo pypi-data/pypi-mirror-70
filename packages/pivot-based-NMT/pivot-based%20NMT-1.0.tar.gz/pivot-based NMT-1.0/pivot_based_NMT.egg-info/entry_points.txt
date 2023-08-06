@@ -1,0 +1,8 @@
+[console_scripts]
+my_apply_bpe = ZSMT.bin.apply_bpe:main
+my_bpe_learn = ZSMT.bin.learn_bpe:main
+my_pre_pipline = ZSMT.bin.pre_pipeline:main
+my_preprocess = ZSMT.bin.preprocess:main
+my_train = ZSMT.bin.train:main
+my_translate = ZSMT.bin.translate:main
+

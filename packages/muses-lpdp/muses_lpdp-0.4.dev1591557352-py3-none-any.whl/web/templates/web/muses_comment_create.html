@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+    Comment new
+    <form>
+        {% csrf_token %}
+        {{ form.as_div }}
+    </form>
+
+{% endblock %}

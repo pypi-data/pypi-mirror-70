@@ -1,0 +1,5 @@
+arguable
+cpymad
+matplotlib
+numpy
+PyQt5

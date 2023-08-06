@@ -1,0 +1,13 @@
+tokenVerif/__init__.py,sha256=-LGgpVzBvQsNFEbahLrAD1u9e1Ur3koil2eg54r1t7Y,23
+tokenVerif/__main__.py,sha256=e0JoZl0_Mmz9p0OQ-wzhW5Fxq5AQzreDEBHGi7G_qZQ,422
+tokenVerif/_version.py,sha256=GeQJ6v6kIYu04StiMqGXv1ELJiVrS0wVU6vXpIBTRTo,120
+tokenVerif/cli.py,sha256=2G_0LFTjiKldM8pTJ3vpH1PXSMvLAfrpUMt1sqYrU0g,2181
+tokenVerif/tokenVerif.py,sha256=H_FC8XvHC-3BpCBF5_pLa64QmWLBiPKOLa7k1J0RAiw,1294
+tokenVerif/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tokenVerif-0.0.1.dist-info/AUTHORS.rst,sha256=ZdxC3yH7rvaDaoX2pTD2UE42elyLlnF2bIjc9KP2BAA,87
+tokenVerif-0.0.1.dist-info/LICENSE,sha256=MlPDyDbafh-i4zE7Y1Niyi0sI0hUS1BwRusre6DDkuc,1115
+tokenVerif-0.0.1.dist-info/METADATA,sha256=kWGTBdMo0s8SPpoOvzAAdud2nOUk7ffL643qX0DWBYc,2090
+tokenVerif-0.0.1.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+tokenVerif-0.0.1.dist-info/entry_points.txt,sha256=AVNV66ldRLy4kADG1Lgp6tDoOxm_XddaHjmRWHJ6oXs,69
+tokenVerif-0.0.1.dist-info/top_level.txt,sha256=2xRB2Z73x7qORjI14VP2Zq4e__puzr-_tYm7Y_4QMmg,11
+tokenVerif-0.0.1.dist-info/RECORD,,

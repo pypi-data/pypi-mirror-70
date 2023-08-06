@@ -1,0 +1,3 @@
+[console_scripts]
+tokenVerif = tokenVerif.tokenVerif:validate_token
+

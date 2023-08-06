@@ -1,0 +1,17 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+Pipfile
+Pipfile.lock
+README.md
+TODO.md
+setup.py
+bashcalc/__init__.py
+bashcalc/bashcalc.py
+bashcalc.egg-info/PKG-INFO
+bashcalc.egg-info/SOURCES.txt
+bashcalc.egg-info/dependency_links.txt
+bashcalc.egg-info/entry_points.txt
+bashcalc.egg-info/requires.txt
+bashcalc.egg-info/top_level.txt
+test/test.py

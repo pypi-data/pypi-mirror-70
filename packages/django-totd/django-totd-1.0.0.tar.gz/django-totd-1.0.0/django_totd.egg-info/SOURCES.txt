@@ -1,0 +1,16 @@
+README.md
+setup.py
+django_totd.egg-info/PKG-INFO
+django_totd.egg-info/SOURCES.txt
+django_totd.egg-info/dependency_links.txt
+django_totd.egg-info/requires.txt
+django_totd.egg-info/top_level.txt
+totd/__init__.py
+totd/admin.py
+totd/apps.py
+totd/context_processors.py
+totd/models.py
+totd/tests.py
+totd/views.py
+totd/migrations/0001_Initial_models.py
+totd/migrations/__init__.py

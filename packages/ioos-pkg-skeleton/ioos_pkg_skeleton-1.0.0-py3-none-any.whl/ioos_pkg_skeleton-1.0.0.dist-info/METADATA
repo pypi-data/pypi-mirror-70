@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: ioos-pkg-skeleton
+Version: 1.0.0
+Summary: My Awesome module
+Home-page: https://github.com/ioos/ioos-python-package-skeleton
+Author: AUTHOR NAME
+Author-email: AUTHOR@EMAIL.COM
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: requests
+
+## ioos_pkg_skeleton
+
+[![Build Status](https://travis-ci.com/ioos/ioos-python-package-skeleton.svg?branch=master)](https://travis-ci.com/ioos/ioos-python-package-skeleton)
+
+Quick description
+
+### Documentation and code
+
+URLs for the docs and code.
+
+### Installation
+
+For `conda` users you can
+
+```shell
+conda install --channel conda-forge ioos_pkg_skeleton
+```
+
+or, if you are a `pip` users
+
+```shell
+pip install ioos_pkg_skeleton
+```
+
+### Example
+
+```python
+from ioos_pkg_skeleton import ioos_pkg_skeleton
+
+
+ioos_pkg_skeleton.meaning_of_life_url()
+```
+
+
+## Get in touch
+
+Report bugs, suggest features or view the source code on [GitHub](https://github.com/ioos/ioos_pkg_skeleton/issues).
+
+
+## License and copyright
+
+ioos_pkg_skeleton is licensed under BSD 3-Clause "New" or "Revised" License (BSD-3-Clause).
+
+Development occurs on GitHub at <https://github.com/ioos/ioos_pkg_skeleton>.
+
+

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: calm-timer
+Version: 1.0.14a0
+Summary: A simple timer application with some calm sounds to choose from
+Home-page: https://gitlab.com/SunyataZero/calm-timer
+Author: Tord Dellsén
+Author-email: tord.dellsen@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: pydub
+
+UNKNOWN
+
+

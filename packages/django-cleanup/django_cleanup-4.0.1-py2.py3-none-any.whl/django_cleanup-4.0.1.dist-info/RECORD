@@ -1,0 +1,11 @@
+django_cleanup/__init__.py,sha256=t1ti3d4qDkdGHGNyv46DRvppraic4VRQ8b3YDAB7_nM,351
+django_cleanup/apps.py,sha256=jioVwWsNkS1IaMdTBlnnFwAI2xSsdWCSUrFtPKDZo00,381
+django_cleanup/cache.py,sha256=9RlRITsi3OX_dSoon1CZri9jENlSDORLNV6XseRdv48,4878
+django_cleanup/cleanup.py,sha256=3d1rRLKHlvP2APnzEjNbc3kYdT4VJ5eHs6gBCtppKUM,479
+django_cleanup/handlers.py,sha256=uOjB5Dss-fPAOGN5RSfdfXD4-JbYIvEkJIZTY25RQ5Q,4284
+django_cleanup/signals.py,sha256=sTl_T-1f5-mxuX944BoDcm2gG0OJZp73bncmOamKe0o,313
+django_cleanup-4.0.1.dist-info/LICENSE,sha256=ZuBRARHiKWth81gw_Rm-Sq0oz-qAptFQ3u5T-ANsBjI,1096
+django_cleanup-4.0.1.dist-info/METADATA,sha256=PJH1r6VIZeuZOKzd5UwLXqjDFlrITe5c7iWpOMmMWuU,9155
+django_cleanup-4.0.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+django_cleanup-4.0.1.dist-info/top_level.txt,sha256=GfquCZ3cavkw7WtzNvOFnaJl9sDm2xee8nDzRUE19gM,15
+django_cleanup-4.0.1.dist-info/RECORD,,

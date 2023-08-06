@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+tf2_sku/__init__.py
+tf2_sku/prettify.py
+tf2_sku/sku.py
+tf2_sku.egg-info/PKG-INFO
+tf2_sku.egg-info/SOURCES.txt
+tf2_sku.egg-info/dependency_links.txt
+tf2_sku.egg-info/top_level.txt

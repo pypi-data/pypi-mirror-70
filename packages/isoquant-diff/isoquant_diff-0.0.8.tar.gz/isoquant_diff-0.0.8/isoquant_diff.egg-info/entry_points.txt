@@ -1,0 +1,3 @@
+[console_scripts]
+isoquant_diff_test = isoquant_diff.isoquant_diff:test
+

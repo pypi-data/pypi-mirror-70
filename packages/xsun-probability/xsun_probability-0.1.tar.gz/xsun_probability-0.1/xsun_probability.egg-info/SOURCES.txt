@@ -1,0 +1,10 @@
+setup.py
+xsun_probability/Binomialdistribution.py
+xsun_probability/Gaussiandistribution.py
+xsun_probability/Generaldistribution.py
+xsun_probability/__init__.py
+xsun_probability.egg-info/PKG-INFO
+xsun_probability.egg-info/SOURCES.txt
+xsun_probability.egg-info/dependency_links.txt
+xsun_probability.egg-info/not-zip-safe
+xsun_probability.egg-info/top_level.txt

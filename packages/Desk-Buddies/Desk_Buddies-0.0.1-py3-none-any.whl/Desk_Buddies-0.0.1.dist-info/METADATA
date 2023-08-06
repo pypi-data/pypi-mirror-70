@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Desk-Buddies
+Version: 0.0.1
+Summary: A simple TCP client-server application to manage scheduling in an effort to maintain social distancing
+Home-page: UNKNOWN
+Author: Conor Murphy Jennifer Gu
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: appdirs
+Requires-Dist: prettyTable
+
+UNKNOWN
+
+

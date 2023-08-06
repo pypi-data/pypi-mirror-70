@@ -1,0 +1,8 @@
+paho-mqtt
+pyserial
+psutil
+rpi.gpio
+PyV4L2Camera
+
+[python 3.6.x needs]
+dataclasses

@@ -1,0 +1,6 @@
+opencv-python>=4.1.0
+tensorflow>=2.1.0
+numpy>=1.18.0
+easydict
+matplotlib
+pillow

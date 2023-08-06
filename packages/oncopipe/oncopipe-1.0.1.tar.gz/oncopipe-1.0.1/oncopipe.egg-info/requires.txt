@@ -1,0 +1,3 @@
+pyyaml
+pandas
+snakemake>=5.4

@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mailflagger-ercoin
+Version: 0.1.0
+Summary: An Ercoin plugin for Mail Flagger
+Home-page: UNKNOWN
+Author-email: krzysztof.jurewicz@gmail.com
+License: UNKNOWN
+Keywords: cryptocurrency
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Email :: Filters
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: ern-reactor
+Requires-Dist: mailflagger
+
+An [Ercoin](https://ercoin.tech) plugin for [Mail Flagger](https://mailflagger.org). See the [main repository](https://gitub.com/KrzysiekJ/mailflagger) for details.
+
+

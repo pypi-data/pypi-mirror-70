@@ -1,0 +1,34 @@
+# Microclient
+Microclient is a library for building simple python clients for your microservices.
+
+Basic usage:
+```python
+from microclient import BaseClient, EndpointInfo
+
+class ZOOClient(BaseClient):
+    service_name = 'ZOO API'
+    endpoints = [
+        EndpointInfo("animals", [
+            EndpointInfo("cats", "GET"),
+            EndpointInfo("dogs", "GET"),
+            EndpointInfo("elephants", "GET"),
+        ]),
+        EndpointInfo("zoo-status", "GET"),
+        EndpointInfo("tickets", "GET, POST, DELETE")
+    ]
+```
+
+Which translates into client like this:
+```python
+zoo_client = ZooClient('http://localhost:8000')
+zoo_client.animals.cats() # sends GET request to http://localhost:8000/animals/cats
+zoo_client.tickets.post(data={'amount': 2})  # sends POST request to http://localhost:8000/tickets with json data
+```
+
+For now, authorization can be done via Auth Token on client initialization:
+```python
+zoo_client = ZooClient('http://localhost:8000', auth='some_token')
+```
+And the token will be appended to every request header.
+
+Currently microclient is working with json data only (requests and responses).

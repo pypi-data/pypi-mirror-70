@@ -1,0 +1,4 @@
+qtpy
+docutils
+qtawesome
+bidict

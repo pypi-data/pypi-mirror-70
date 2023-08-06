@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: linguist-breakdown
+Version: 1.0.0
+Summary: View the language breakdown of your entire GitHub account.
+Home-page: http://github.com/justintime50/linguist
+Author: Justintime50
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (>=3.2.0)
+Requires-Dist: PyGithub (>=1.51)
+Provides-Extra: dev
+Requires-Dist: pylint (>=2.5.0) ; extra == 'dev'
+
+<div align="center">
+
+# Linguist
+
+View the language breakdown of your entire GitHub account.
+
+[![Build Status](https://travis-ci.com/Justintime50/linguist.svg?branch=master)](https://travis-ci.com/Justintime50/linguist)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
+<img src="assets/showcase.png">
+
+</div>
+
+GitHub displays beautiful language breakdowns on each repo on their website; however, they do not show your entire language breakdown across all your projects.
+
+Linguist can return the language breakdown of your personal repos or all repos you have access to individually via the command line, then Linguist will build a customized pie chart breakdown of your overall language usage across all repos (limited to the top 8 for clarity; all languages are returned via CLI). Configure some settings and quickly find out what languages you use the most!
+
+## Install
+
+```bash
+pip3 install linguist-breakdown
+```
+
+## Usage
+
+```
+Usage:
+    GITHUB_TOKEN=123... linguist --type owner --pieces 8 --forks
+
+Options
+    -t, --type TYPE         The repo type to look at (OPTIONS: all, owner, member, private, public).
+    -p, --pieces PIECES     Number of chart pieces of the chart to generate (will use greatest percentages).
+    -f, --forks             Include forked repos in the language breakdown.
+
+TYPE expects a string option listed above.
+PIECES expects an integer. The lower the number, the more readable your graph will be.
+```
+
+## Development
+
+Install project with dev depencencies:
+
+```bash
+pip3 install -e ."[dev]"
+```
+
+Lint the project:
+
+```bash
+pylint linguist/*.py
+```
+
+

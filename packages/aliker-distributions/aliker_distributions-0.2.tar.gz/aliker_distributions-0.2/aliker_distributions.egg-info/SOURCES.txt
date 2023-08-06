@@ -1,0 +1,10 @@
+setup.py
+aliker_distributions/Binomialdistribution.py
+aliker_distributions/Gaussiandistribution.py
+aliker_distributions/Generaldistribution.py
+aliker_distributions/__init__.py
+aliker_distributions.egg-info/PKG-INFO
+aliker_distributions.egg-info/SOURCES.txt
+aliker_distributions.egg-info/dependency_links.txt
+aliker_distributions.egg-info/not-zip-safe
+aliker_distributions.egg-info/top_level.txt

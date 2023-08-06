@@ -1,0 +1,14 @@
+mdtocf/__init__.py,sha256=2zYJ2rWFgSdfYuTpK7l-rh2owmwY0dD_m57UgGKSjN4,17
+mdtocf/mdtocf.py,sha256=KxyguewGRgOGY9GjqhWI5rwCCKC8QMr8QRlx_iw3iWw,2665
+mdtocf/classes/ConfluencePublisher.py,sha256=nSZzfObAJYTRATn3GcWFlEUvpyMagrgJIjA7cnSw8Lo,7421
+mdtocf/classes/ConfluenceRenderer.py,sha256=NusNELsx-NRHs4FcAtrSWSo2sxqDhT96wtmO3HjXAj0,2203
+mdtocf/classes/KeyValue.py,sha256=WMaHpgSz4lh7CGavXRdfaA_bdaBNmJyOG2JHAUV8VC4,894
+mdtocf/classes/MetadataPlugin.py,sha256=PxrJM-Y59TLC5blJiXGhE7UTFzRavTx7QkZHJpXJmMA,1333
+mdtocf/classes/__init__.py,sha256=gLW8mQ7UZmfPYboc0J_XqKnx5ESyxbSSYhYvX9igvsc,25
+mdtocf/tests/__init__.py,sha256=V2fw3sV8bUpEKYvLIQVRC_sC3YL5hAvPlQ17Wm32aeM,23
+mdtocf/tests/regexp.py,sha256=mTWYivE3DfkgOY4dJ3Y_NbqwxhqNYGJFu_jPMSmw1m4,437
+mdtocf-1.1.0.dist-info/LICENSE,sha256=pbugUco1RKyMpuGKo4HM1rxqVrDyeCE8g8ObSBKtzC0,1081
+mdtocf-1.1.0.dist-info/METADATA,sha256=HgqsFwhGn2jVxbcU9aZaMMlyV1AyivxEhGvwMFuy7Kk,8142
+mdtocf-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mdtocf-1.1.0.dist-info/top_level.txt,sha256=ZJUNwMjokjX5RiRVd97Og2RF1-XpMJoxZhGInKTuElw,7
+mdtocf-1.1.0.dist-info/RECORD,,

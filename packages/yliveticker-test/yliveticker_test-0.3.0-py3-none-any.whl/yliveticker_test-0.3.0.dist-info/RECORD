@@ -1,0 +1,8 @@
+yliveticker/__init__.py,sha256=zAr-oyzIDoHu7myq-hwLurPhuXdxrWhD8jy6kyUltrQ,3512
+yliveticker/client_code.py,sha256=0stzCD0fYbKjuIXABV43vU5vHEjwKBR99dyYqVcULXc,505
+yliveticker/yaticker_pb2.py,sha256=ZkNCSlOPUhckyMmAfHsv4l3dk4UzEAmrV4kblQxMz4Y,19378
+yliveticker_test-0.3.0.dist-info/LICENSE,sha256=uQXqI1IjXsB7vUDREeUDDvCkzm8VN7R1vCVK1tmRYeo,1061
+yliveticker_test-0.3.0.dist-info/METADATA,sha256=4iczzKjJIlyqMlJjXSHqceTgFyxCKZyqP7RwATHg6MM,1191
+yliveticker_test-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+yliveticker_test-0.3.0.dist-info/top_level.txt,sha256=lleh15qWO1xugy7AZwIp-9P5hyE2NWyc_vns03T8LQM,12
+yliveticker_test-0.3.0.dist-info/RECORD,,

@@ -1,0 +1,11 @@
+meteoclimatic/__init__.py,sha256=eLYAS6NqqTF8Kz3mocrrWD0TWwTkMZBV_nsHtBfZVJU,254
+meteoclimatic/client.py,sha256=yOVWIi1C_L20Aok_sPL6AezmuUFpgAr6RI6uAFcdMak,1057
+meteoclimatic/feed.py,sha256=G6ZyGpU620pi9TF8V_af3E8hsIAflrSAD9RUQckky4A,1540
+meteoclimatic/observation.py,sha256=O7bvsqd2yJD8MImQC9iVEeGMFQOe95raTqtEcQxpkNY,4217
+meteoclimatic/station.py,sha256=8pfl1wYCAhcRV5za2cPffvxUx-zisTZbAhWe0WskhhA,1125
+meteoclimatic/weather.py,sha256=jbGZ6eFUsg4rgXxCCshmKr3xmIWs2DWDDUhWMeNmko8,4304
+pymeteoclimatic-0.0.3.dist-info/LICENSE,sha256=zRIXnPiCKT5mhStEpxG-bJqx2eSqo52JF8f3ZC_kNWI,1054
+pymeteoclimatic-0.0.3.dist-info/METADATA,sha256=eKOpiejVQ84HMtn9yb-taO2OcqTuAgZ7xXWvryOtRjQ,7111
+pymeteoclimatic-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pymeteoclimatic-0.0.3.dist-info/top_level.txt,sha256=yq1NJ619Rn3x6O2xr9Eu50g5DtlzHqzMib74EQpeJ6I,14
+pymeteoclimatic-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: erexplain
+Version: 0.1.1
+Summary: library to explain models for Entity Resolution
+Home-page: https://github.com/vincenzomartello/ERExplain.git
+Author: Vincenzo Martello
+Author-email: v.martello@libero.it
+License: apache-2.0
+Download-URL: https://github.com/vincenzomartello/ERExplain/archive/0.1.1.tar.gz
+Description: UNKNOWN
+Keywords: ML,Entity-Resolution,explainable-ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

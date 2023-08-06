@@ -1,0 +1,11 @@
+gnodatapackages/__init__.py,sha256=ZXRqW7CaETegHcW9Qym3dcQV9k9JCS57_RgvsEkAMDY,215
+gnodatapackages/gen_stopwords_gno.csv,sha256=-klGLG4FdaUuQMci1QCI_aTW--uOCmLVxN3pcdEo1tk,7507
+gnodatapackages/gno_gen_stopwords.py,sha256=Hz_8FrVZW-b5j0MC7hcIlBbgBuyEOAqyVJ-7tgWqAng,393
+gnodatapackages/gno_name_stopwords.py,sha256=F8t3uDtNpe8Kx2frLKbmzwuwxhby8RjcJmjd37jSkL8,736
+gnodatapackages/honorifics_remove_gno.csv,sha256=RXXnet3awjePSURasPi7qu50PIx18qlrF2x9moVUr9E,418
+gnodatapackages/personname_wordsremove_gno.csv,sha256=7Kzkz1BY7G3lwn3_cvp0wkqloKZPNkYSmASXqsrhPGE,57
+gnodatapackages-0.0.3.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+gnodatapackages-0.0.3.dist-info/METADATA,sha256=SHuqB_PW-mcML-kHW3XOk2TVziGYRABFn_A7SSaXtx4,512
+gnodatapackages-0.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+gnodatapackages-0.0.3.dist-info/top_level.txt,sha256=SDEQpOLUUz0urFh4tHLVnnfAIcfeNk8L-E-Ty3h4YFU,16
+gnodatapackages-0.0.3.dist-info/RECORD,,

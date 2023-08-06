@@ -1,0 +1,3 @@
+[console_scripts]
+speedread = speedread.speedread:main
+

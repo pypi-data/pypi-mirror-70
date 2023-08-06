@@ -1,0 +1,10 @@
+README.md
+setup.py
+speedread/__init__.py
+speedread/__main__.py
+speedread/speedread.py
+speedread.egg-info/PKG-INFO
+speedread.egg-info/SOURCES.txt
+speedread.egg-info/dependency_links.txt
+speedread.egg-info/entry_points.txt
+speedread.egg-info/top_level.txt

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for admonition in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_admin_admonition_detail" admonition.id %}'">
+                <div>
+                    {{ admonition.name }}
+                </div>
+                <div>
+                    <a href="{% url "muses_admin_admonition_update" admonition.id %}" class="muses-button">
+                        {% trans "Update" %}
+                    </a>
+                </div>
+                <div>
+                    <a href="{% url "muses_admin_admonition_delete" admonition.id %}" class="muses-button">
+                        {% trans "Delete" %}
+                    </a>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

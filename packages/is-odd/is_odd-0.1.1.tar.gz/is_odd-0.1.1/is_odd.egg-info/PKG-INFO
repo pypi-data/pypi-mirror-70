@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: is-odd
+Version: 0.1.1
+Summary: A package to check if a number is odd or not
+Home-page: https://github.com/datnguye/is-odd
+Author: Dat Nguyen, Nam Vu
+Author-email: datnguyen.it09@gmail.com, yvisvu@gmail.com
+License: MIT
+Description: # is-odd
+        A package to check if a number is odd or not
+        
+        Installation:
+        ```
+        python -m pip install is_odd
+        ```
+        
+        ### Python version used
+        ```
+        Python 3.7.5
+        ```
+        
+        
+        ## USAGE
+        
+        ```
+        import is_odd
+        r = is_odd.valid(23)
+        print(r)
+        r = is_odd.valid("352")
+        print(r)
+        ```
+Platform: UNKNOWN
+Requires-Python: >=3.7.5
+Description-Content-Type: text/markdown

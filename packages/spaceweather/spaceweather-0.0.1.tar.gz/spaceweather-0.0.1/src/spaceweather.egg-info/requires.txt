@@ -1,0 +1,10 @@
+numpy>=1.13.0
+pandas
+
+[all]
+pytest
+pytest-mock
+
+[tests]
+pytest
+pytest-mock

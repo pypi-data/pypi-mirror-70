@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: ohsgpgn
+Version: 0.0.25
+Summary: oh Simple good password generator(ohsgpgn)
+Home-page: http://pypi.python.org/pypi/ohsgpgn/
+Author: OhYoungJooung
+Author-email: wnapdlf05@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+===========
+  ohsgpgn
+===========
+
+This ohsgpgn is a simple good password generator. The generated password includes at least one number,one ascii,one capatalized ascii and one special chars('!@$%^&*()+').With argument, length of password can be set. If the argument(n) is  less than 10(n < 10), the generated password length will be at least 10.
+
+    #!/usr/bin/env python3
+
+    import ohsgpgn
+
+    ohsgpgn.genGoodpass(10)
+
+Python 3.6.9 (default, Apr 18 2020, 01:56:04) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ohsgpgn
+>>> ohsgpgn.genGoodpass(3)
+'&92DLE1Kf&'
+>>> ohsgpgn.genGoodpass(20)
+'ae5s67NN4H04bJt$Aajd'
+>>> ohsgpgn.genGoodpass(100)
+'IN5SATQaVW8E9JL)Q5K2oIJ02Ep5@YVMQ6CAY6LAXPIKDu*COCKGC0Y8EM2Q1VSCEE286XZT2Q8yMDX9JH8OYRXB7YHUPO0D2IDZ'
+
+

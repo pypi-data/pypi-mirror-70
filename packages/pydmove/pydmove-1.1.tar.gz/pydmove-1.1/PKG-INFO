@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pydmove
+Version: 1.1
+Summary: mv (using dd followed by rm) with a progressbar
+Home-page: https://github.com/avivajpeyi/pydd
+Author: Avi Vajpeyi
+Author-email: avi.vajpeyi@gmail.com
+License: MIT
+Description: # pydd: mv (using dd followed by rm) with a progressbar
+        
+        Sometimes you want to use [`dd`](https://unix.stackexchange.com/questions/12532/dd-vs-cat-is-dd-still-relevant-these-days) instead of mv or cp. This package helps you use `dd` to move emtire contents of a dir to another dir. 
+        
+        ## Installation
+        Installable via pip`
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

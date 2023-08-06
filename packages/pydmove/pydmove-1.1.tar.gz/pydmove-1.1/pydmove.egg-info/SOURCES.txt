@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pydd/__init__.py
+pydd/dd.py
+pydd/parser.py
+pydd/pydd.py
+pydmove.egg-info/PKG-INFO
+pydmove.egg-info/SOURCES.txt
+pydmove.egg-info/dependency_links.txt
+pydmove.egg-info/entry_points.txt
+pydmove.egg-info/not-zip-safe
+pydmove.egg-info/requires.txt
+pydmove.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+click>=7.0
+click-plugins
+click-log
+entrypoints
+
+[doc]
+sphinx
+sphinx-autoapi
+sphinx-click
+watchdog
+
+[test]
+pytest>=3
+pytest-cov

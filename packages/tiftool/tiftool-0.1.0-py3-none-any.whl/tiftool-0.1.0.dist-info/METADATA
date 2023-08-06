@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tiftool
+Version: 0.1.0
+Summary: tiftool
+Home-page: https://github.com/SteveJayH/tiftool
+Author: Seungjae
+Author-email: jay0118@yonsei.ac.kr
+License: UNKNOWN
+Download-URL: https://api.github.com/repos/SteveJayH/tiftool/tarball
+Keywords: tiftool,tiff,microscopy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+Requires-Dist: tifffile
+Requires-Dist: Pillow
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: torch
+
+UNKNOWN
+
+

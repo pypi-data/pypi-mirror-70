@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: zeroed
+Version: 0.1.0rc1
+Summary: Zeroed is a CLI package for resetting trash and apps to the settings of certain apps on Linux.
+Home-page: https://github.com/snakypy/zeroed
+License: MIT
+Keywords: zeroed,reset
+Author: William C. Canin
+Author-email: william.costa.canin@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Project-URL: Bug Tracker, https://github.com/snakypy/zeroed/issues
+Project-URL: Repository, https://github.com/snakypy/zeroed
+Description-Content-Type: text/x-rst
+
+.. image:: https://github.com/snakypy/zeroed/workflows/Python%20package/badge.svg
+    :target: https://github.com/snakypy/zeroed
+
+.. image:: https://img.shields.io/pypi/v/zeroed.svg
+    :target: https://pypi.python.org/pypi/zeroed
+
+.. image:: https://travis-ci.com/snakypy/zeroed.svg?branch=master
+    :target: https://travis-ci.com/snakypy/zeroed
+
+.. image:: https://img.shields.io/pypi/wheel/zeroed
+    :alt: PyPI - Wheel
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+.. image:: https://pyup.io/repos/github/snakypy/zeroed/shield.svg
+    :target: https://pyup.io/repos/github/snakypy/zeroed/
+    :alt: Updates
+
+.. image:: https://img.shields.io/github/issues-raw/snakypy/zeroed
+    :alt: GitHub issues
+
+.. image:: https://img.shields.io/github/license/snakypy/zeroed
+    :alt: GitHub license
+    :target: https://github.com/snakypy/zeroed/blob/master/LICENSE
+
+Requirements
+------------
+
+To work correctly, you will first need:
+
+* `python`_ (v3.8 or recent) must be installed.
+* `pip`_ (v20.0 or recent) must be installed.
+
+Installing
+----------
+
+Globally:
+
+.. code-block:: shell
+
+    $ sudo pip install zeroed
+
+For the user:
+
+.. code-block:: shell
+
+    $ pip install zeroed --user
+
+
+Using
+-----
+
+Access the official page of the project where you can find a description of use:
+
+
+The gem is available as open source under the terms of the `MIT License`_ ©
+
+Credits
+-------
+
+See, `AUTHORS`_.
+
+Links
+-----
+
+* Code: https://github.com/snakypy/zeroed
+* Documentation: https://github.com/snakypy/zeroed/blob/master/README.md
+* Releases: https://pypi.org/project/zeroed/#history
+* Issue tracker: https://github.com/snakypy/zeroed/issues
+
+.. _AUTHORS: https://github.com/snakypy/zeroed/blob/master/AUTHORS.rst
+.. _python: https://python.org
+.. _pip: https://pip.pypa.io/en/stable/quickstart/
+.. _MIT License: https://github.com/snakypy/zeroed/blob/master/LICENSE
+

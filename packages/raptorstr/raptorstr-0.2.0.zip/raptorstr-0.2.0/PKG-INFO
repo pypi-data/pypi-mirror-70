@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: raptorstr
+Version: 0.2.0
+Summary: A package for working with strings with the purpose of generating code
+Home-page: https://github.com/Mewongu/raptorstr
+Author: Andreas Stenberg
+Author-email: andreas@mewongu.com
+License: UNKNOWN
+Description: When generating code based off of format description files it is sometimes necessary
+        to conform strings to the code standard you are generating for. This lib is made for
+        this sole purpose and has some convenient functions for doing so with some thought out
+        decisions regarding where one is to break strings in different scenarios.
+        
+Keywords: strings code case
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Intended Audience :: Developers

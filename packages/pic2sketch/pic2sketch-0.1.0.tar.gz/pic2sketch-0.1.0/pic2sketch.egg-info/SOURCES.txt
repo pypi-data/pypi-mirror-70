@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pic2sketch/__init__.py
+pic2sketch/cli.py
+pic2sketch/picture_to_sketch.py
+pic2sketch/version.py
+pic2sketch.egg-info/PKG-INFO
+pic2sketch.egg-info/SOURCES.txt
+pic2sketch.egg-info/dependency_links.txt
+pic2sketch.egg-info/entry_points.txt
+pic2sketch.egg-info/requires.txt
+pic2sketch.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+smtputility/__init__.py,sha256=xl1SIl7-JTNz5MKHVgt_GZ8tqc5g5JXq_UPMRoXtqp4,213
+smtputility/email_with_attachments.py,sha256=7-kNa8D_oLotBX8unFWZbKKh92-p2FtbLMBSJ-q3-z0,2004
+smtputility/email_without_attachment.py,sha256=EvEOVMItci5Eq7mxB6pXzSZqFNDs45Q_PlX4IYLf1jc,1146
+smtputility/notify_error.py,sha256=CFdRtxekGzjkOAJwdbabbdoVPkR8Z6AY3LU7WPiWjEs,1566
+smtputility-1.0.dist-info/LICENSE,sha256=F1DbdVSSHZfh9FpQImCoraAgcSkt5w39hR_OWJ1jEXM,1092
+smtputility-1.0.dist-info/METADATA,sha256=3gBr8ErfgqEMtWJrXQyC9xXOx8qRIccN7LPfhfsAc1w,3430
+smtputility-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+smtputility-1.0.dist-info/top_level.txt,sha256=SORI-jHmBoI2k_Ih6pJZUQyBbh-U18fa9O892yN45pg,12
+smtputility-1.0.dist-info/RECORD,,

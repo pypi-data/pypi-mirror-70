@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: lod_dedovschina_sber
+Version: 1.0.3
+Summary: Исходный код задания для кейса от Сбербанка
+Home-page: https://github.com/NtZyr/digital-hack-sber
+Author: Дедовщина
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

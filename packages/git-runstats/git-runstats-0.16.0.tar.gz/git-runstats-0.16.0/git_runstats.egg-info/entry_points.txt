@@ -1,0 +1,3 @@
+[console_scripts]
+git-runstats = git_runstats:main
+

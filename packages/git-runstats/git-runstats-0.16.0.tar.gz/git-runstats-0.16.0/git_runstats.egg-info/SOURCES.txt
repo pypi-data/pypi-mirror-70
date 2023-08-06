@@ -1,0 +1,10 @@
+README.md
+git_runstats.py
+setup.cfg
+setup.py
+git_runstats.egg-info/PKG-INFO
+git_runstats.egg-info/SOURCES.txt
+git_runstats.egg-info/dependency_links.txt
+git_runstats.egg-info/entry_points.txt
+git_runstats.egg-info/requires.txt
+git_runstats.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mlnames
+Version: 0.1.3
+Summary: Name generator that uses machine learning vocabulary.
+Home-page: https://github.com/seungjaeryanlee/mlnames
+Author: Seungjae Ryan Lee
+Author-email: seungjaeryanlee@github.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# MLNames
+
+Name Generator that uses machine learning vocabulary.
+
+

@@ -1,0 +1,16 @@
+wario/CustomSettings.py,sha256=w4l0ssB-6DuOcHXv8Vjd4Dm18Bxj8RJikZtXAOouR3o,1969
+wario/CustomWidgets.py,sha256=JPJ5Drnd_CvUr4AQjzVo0FhL6pp05-2_myYWdk9I7UI,21676
+wario/GlobalWidgets.py,sha256=dltHEZV653uP9wvuTOuqBHtErsT3RWBkKFtjCbFtnqE,11058
+wario/PipelineThread.py,sha256=CQjeWOfo8prd6C8kbYaO8E0UU7Ll-Gx2n5VKEcA-Gc8,1821
+wario/__init__.py,sha256=Edt3KjCZjewozPXmdnXYKsXXrqjklfw7wkAlyw3qmhA,121
+wario/pipeline/GlobalVar.py,sha256=UsME96XMtf3VZk_W_LNP4zre349RY47WL_8jc2v_T_M,387
+wario/pipeline/JsonInterface.py,sha256=vVyT22ugDVK91FvvzHQb54RElof0AVIIRIt7bm3pEPs,3132
+wario/pipeline/Node.py,sha256=LLvkhGCGTRJ222lzBUD3gOz8SUcLAvu9EbzzolvgWFE,3221
+wario/pipeline/NodeFactory.py,sha256=A7hjEpM-1MpUeueTpUjQkKtouZo-1qckZYUCLErKrcs,2717
+wario/pipeline/Pipeline.py,sha256=KZ0zogdbsTRhJaDD3Vgn4dc2Taj7dX2YemRu29pHMRM,7972
+wario/pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+WARIO-1.0.dist-info/LICENSE,sha256=SuMy4be_REsaqEH2340sWW33gPWT2FO1OcH6ls4jzXc,1103
+WARIO-1.0.dist-info/METADATA,sha256=Omd1AVfmzNwoDWhSbP1MBepIxgfyAzDEMuTzMt8SB9s,1354
+WARIO-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+WARIO-1.0.dist-info/top_level.txt,sha256=0nEvQ21FlIxqKsnu79aP9gEAhKUueC73AVSV8bJpQ4U,6
+WARIO-1.0.dist-info/RECORD,,

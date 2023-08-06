@@ -1,0 +1,12 @@
+azure_debrepo/__init__.py,sha256=OhxKb79wb83u5qkEVpgJ8K8Ucnt_hN0OONhR_p7cQ_c,159
+azure_debrepo/__main__.py,sha256=0v_9186ugXMjP7RenGg-TR3ghHfHBcEuc6BptOnagxo,2854
+azure_debrepo/azure_storage.py,sha256=7daVHuHRfIqIzKZx-ehU3QbH5TMztlvp-DBDPz1IRRo,544
+azure_debrepo/cli.py,sha256=fleVrF3HuS679LZCt9Ga7GjAvWzWQ_LhFuTaL8qUTBM,1238
+azure_debrepo/gpg.py,sha256=IuxXXi4dHxSwHiL1G11IHLwuD76lb4nq1eo5GIG1um0,695
+azure_debrepo/lib.py,sha256=If1J3i0Petd6Aml92zZFVte2wQvXBqB3pRcLPC-07Uc,297
+azure_debrepo/packages.py,sha256=XK5tDImq-qKtDp9wGX0cmdTJNA4ArwJCOsTpkmgrfeM,1207
+azure_debrepo/release.py,sha256=YNhGFmt4WE3MoZp28M3kg-Bl38h0KCf3C1Iz0GES-0Y,828
+azure_debrepo-0.0.2.dist-info/METADATA,sha256=rzmDRWRhai-9b3cmJsHdc4hCxZT2tCuvG1ws1SWdblY,238
+azure_debrepo-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+azure_debrepo-0.0.2.dist-info/top_level.txt,sha256=DqvW1b0ud7XvdPOHLa1UC65ZSgsR9EvjLEIx-cSGcw0,14
+azure_debrepo-0.0.2.dist-info/RECORD,,

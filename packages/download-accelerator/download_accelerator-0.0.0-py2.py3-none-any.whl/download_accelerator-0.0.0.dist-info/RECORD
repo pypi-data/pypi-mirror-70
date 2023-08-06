@@ -1,0 +1,10 @@
+download_accelerator/__init__.py,sha256=7Mp8iqklf3_AKmDXbtfWFufmP2NUURhE5CXW4A0vn-c,22
+download_accelerator/__main__.py,sha256=9frTXBIuzjmqu_JFsPvQB39vvSVYoI0lvvvv03lN-iA,409
+download_accelerator/cli.py,sha256=-Z9bPwYMNakbAUkq9oAGnxF2Tfh9AEiJJrlnXhj91pM,849
+download_accelerator-0.0.0.dist-info/AUTHORS.rst,sha256=jOVa7CtTckxwchvsBSbPtld-8FC8gy5GULtlmuNUk40,65
+download_accelerator-0.0.0.dist-info/LICENSE,sha256=yQLWdWX9B7aQRspYtAa_NGUPrYemiMx-Vl-PeTHO3sQ,1100
+download_accelerator-0.0.0.dist-info/METADATA,sha256=5b9WyqT9y-zM9wGUVSuJhkN65bQeSN6JSuAcsfbPliU,2231
+download_accelerator-0.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+download_accelerator-0.0.0.dist-info/entry_points.txt,sha256=MAF-pdLFKLC0kV-v3FpTayYGi0rNNMs4yxXO8ykKxvI,72
+download_accelerator-0.0.0.dist-info/top_level.txt,sha256=6zE8piz1bt_oAqU2XqrY7dVQR70IPdQOLltNC4uHxfQ,21
+download_accelerator-0.0.0.dist-info/RECORD,,

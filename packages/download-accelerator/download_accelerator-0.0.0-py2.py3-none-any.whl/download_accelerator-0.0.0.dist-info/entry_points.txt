@@ -1,0 +1,3 @@
+[console_scripts]
+download-accelerator = download_accelerator.cli:main
+

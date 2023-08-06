@@ -1,0 +1,10 @@
+setup.py
+controlla.egg-info/PKG-INFO
+controlla.egg-info/SOURCES.txt
+controlla.egg-info/dependency_links.txt
+controlla.egg-info/not-zip-safe
+controlla.egg-info/top_level.txt
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py

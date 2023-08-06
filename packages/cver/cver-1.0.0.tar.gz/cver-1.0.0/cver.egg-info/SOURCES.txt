@@ -1,0 +1,11 @@
+README.md
+setup.py
+cver/__init__.py
+cver/__main__.py
+cver/scraper.py
+cver.egg-info/PKG-INFO
+cver.egg-info/SOURCES.txt
+cver.egg-info/dependency_links.txt
+cver.egg-info/entry_points.txt
+cver.egg-info/requires.txt
+cver.egg-info/top_level.txt

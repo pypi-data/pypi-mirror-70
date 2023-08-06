@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tmc-finance
+Version: 0.0.1
+Summary: A package developed to create a summary of London Business School's Tech & Media Club's financial position
+Home-page: https://github.com/MacarielAerial/tmc_finance
+Author: Yifei Yu
+Author-email: yyu.mam2020@london.edu
+License: UNKNOWN
+Download-URL: https://github.com/MacarielAerial/tmc_finance/archive/v_0.0.1.tar.gz
+Description: # Tech & Media Club Financial Position Summary Creation Package
+        
+        ## Executive Summary
+        The package creates an excel file including six sheets and three plots which provide insight into the club's financial position
+        
+Keywords: SUMMARY,FINANCE,LONDONBUSINESSSCHOOL
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

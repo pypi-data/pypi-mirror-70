@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+tmc_finance/Analyse.py
+tmc_finance/__init__.py
+tmc_finance.egg-info/PKG-INFO
+tmc_finance.egg-info/SOURCES.txt
+tmc_finance.egg-info/dependency_links.txt
+tmc_finance.egg-info/requires.txt
+tmc_finance.egg-info/top_level.txt

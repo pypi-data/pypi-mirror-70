@@ -1,0 +1,7 @@
+README.md
+setup.py
+ulaumwencien-hello32/__init__.py
+ulaumwencien_hello32.egg-info/PKG-INFO
+ulaumwencien_hello32.egg-info/SOURCES.txt
+ulaumwencien_hello32.egg-info/dependency_links.txt
+ulaumwencien_hello32.egg-info/top_level.txt

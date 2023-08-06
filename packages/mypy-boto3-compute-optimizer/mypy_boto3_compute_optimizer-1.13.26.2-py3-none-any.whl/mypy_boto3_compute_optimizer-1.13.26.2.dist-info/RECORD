@@ -1,0 +1,10 @@
+mypy_boto3_compute_optimizer/__init__.py,sha256=HaI4NhQ9gEb3p2hgDa2eoiRmuS-x1c4ncq57woXxWnw,555
+mypy_boto3_compute_optimizer/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_compute_optimizer/client.py,sha256=IER3D1gRkxAJl9aehKJBKsEnVqJEQZe873z51jOzOY8,5328
+mypy_boto3_compute_optimizer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_compute_optimizer/type_defs.py,sha256=zPXjsGUTzym04eWSpJYeBcH21w9UH7bbB0i2UoHdowc,6556
+mypy_boto3_compute_optimizer/version.py,sha256=ZsP-L5GEaCxsn9RWloMK3OiuNQCDdAIiKryY1Cfycns,57
+mypy_boto3_compute_optimizer-1.13.26.2.dist-info/METADATA,sha256=UZ8TygFD-6QLfRUQIUzRsJH86Kb0HVEWJb15pe0i_AU,4235
+mypy_boto3_compute_optimizer-1.13.26.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_compute_optimizer-1.13.26.2.dist-info/top_level.txt,sha256=Cbj8FPlxTYcpHXcWRpiJaeZVlsVYbeME3IsDiwHq2Q4,29
+mypy_boto3_compute_optimizer-1.13.26.2.dist-info/RECORD,,

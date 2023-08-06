@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: PyPerceptron
+Version: 1.0.0
+Summary: A python implementation of the build block of the Neural Network, The Perceptron
+Home-page: https://github.com/paolodelia99/Python-Perceptron
+Author: Paolo D'Elia
+Author-email: paolo.delia99@gmail.com
+License: MIT
+Project-URL: Demo, https://github.com/paolodelia99/Python-Perceptron/tree/master/demo
+Project-URL: Repo, https://github.com/paolodelia99/Python-Perceptron
+Description: UNKNOWN
+Keywords: Perceptron,Neural Net,Machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

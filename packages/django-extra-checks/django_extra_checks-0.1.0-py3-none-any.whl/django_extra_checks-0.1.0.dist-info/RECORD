@@ -1,0 +1,10 @@
+extra_checks/__init__.py,sha256=dIcQEICpRQlRR0ZVn7iJ3Y6c9Ur5CFbxcobsXYr4oYw,515
+extra_checks/apps.py,sha256=tMfBkJv3UEjXgNNjyvTRgn34Jg1BGufBN8OmOPdCc6s,280
+extra_checks/ast.py,sha256=iN8XMHJQahHTVXUMGjVedsrd-omF26mTkyghTNcW_oc,3797
+extra_checks/checks.py,sha256=stDb1juOC9aeeZmt9HDfDDs75PCn13whb20GdeeS0Og,7206
+extra_checks/controller.py,sha256=8a3-jqYGDEM6KWfmOEQrAT1TQRkM6zVrNuynY-c-zZU,4262
+extra_checks/forms.py,sha256=2D3C-WMcRVmqzxm-P1fWRQipwtsdXHFcEah9-rUaZ4c,5388
+django_extra_checks-0.1.0.dist-info/METADATA,sha256=PFVinJx7hifoU9BBa1WO1QyLIq2663KZ6RbujE8s7W4,2711
+django_extra_checks-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_extra_checks-0.1.0.dist-info/top_level.txt,sha256=OJ5_4kRIpNvGNphmGYt68luZwnw7rXJGoO9arSXR5w0,13
+django_extra_checks-0.1.0.dist-info/RECORD,,

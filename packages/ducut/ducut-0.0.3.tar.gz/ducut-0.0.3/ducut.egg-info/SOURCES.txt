@@ -1,0 +1,8 @@
+README.md
+ducut.py
+setup.py
+ducut.egg-info/PKG-INFO
+ducut.egg-info/SOURCES.txt
+ducut.egg-info/dependency_links.txt
+ducut.egg-info/requires.txt
+ducut.egg-info/top_level.txt

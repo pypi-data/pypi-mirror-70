@@ -1,0 +1,10 @@
+setup.py
+sayar-distributions/Binomialdistribution.py
+sayar-distributions/Gaussiandistribution.py
+sayar-distributions/Generaldistribution.py
+sayar-distributions/__init__.py
+sayar_distributions.egg-info/PKG-INFO
+sayar_distributions.egg-info/SOURCES.txt
+sayar_distributions.egg-info/dependency_links.txt
+sayar_distributions.egg-info/not-zip-safe
+sayar_distributions.egg-info/top_level.txt

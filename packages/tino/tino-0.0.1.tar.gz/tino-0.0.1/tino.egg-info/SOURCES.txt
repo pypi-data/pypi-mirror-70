@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tino/__init__.py
+tino/tino.py
+tino.egg-info/PKG-INFO
+tino.egg-info/SOURCES.txt
+tino.egg-info/dependency_links.txt
+tino.egg-info/not-zip-safe
+tino.egg-info/requires.txt
+tino.egg-info/top_level.txt

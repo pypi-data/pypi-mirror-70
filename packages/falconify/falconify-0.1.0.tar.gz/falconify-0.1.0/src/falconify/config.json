@@ -1,0 +1,44 @@
+[
+    {
+        "template": "CommandHandler",
+        "path": "Application/Features/${module}/",
+        "comments": "Creating the feature / command handler",
+        "filename": "${module}+template"
+    },
+    {
+        "template": "Model",
+        "path": "Domain/Model/",
+        "filename": "${module}",
+        "comments": "Creating the domain model"
+    },
+    {
+        "template": "Repository",
+        "path": "Adapters/Repository/",
+        "filename": "${module}Repository",
+        "comments": "Creating the repository"
+    },
+    {
+        "template": "RequestHandler",
+        "path": "Application/Infrastructure/Port/Request/${module}/",
+        "filename": "${module}+template",
+        "comments": "Creating port / request handler"
+    },
+    {
+        "template": "Routes",
+        "path": "Application/Infrastructure/Port/Request/${module}/",
+        "filename": "${module}+template",
+        "comments": "Creating routes"
+    },
+    {
+        "template": "Transformer",
+        "path": "Application/Infrastructure/Port/Transformer/",
+        "filename": "${module}+template",
+        "comments": "Creating routes"
+    },
+    {
+        "template": "UseCase",
+        "path": "Domain/UseCases/",
+        "filename": "${module}",
+        "comments": "Creating routes"
+    }
+]

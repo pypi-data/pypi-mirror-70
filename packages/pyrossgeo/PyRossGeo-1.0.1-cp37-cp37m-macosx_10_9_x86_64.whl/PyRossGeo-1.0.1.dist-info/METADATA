@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyRossGeo
+Version: 1.0.1
+Summary: python library for spatial numerical simulation of infectious diseases
+Home-page: https://github.com/lukastk/PyRossGeo.git
+Author: The PyRossGeo team
+Author-email: UNKNOWN
+License: MIT
+Platform: works on all platforms (such as LINUX
+Platform: macOS
+Platform: and Microsoft Windows)
+Requires-Dist: cython
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: zarr
+Requires-Dist: matplotlib
+Requires-Dist: jupyter
+
+pyrossgeo is a library for spatially resolved mathematical modelling of infectious diseases
+
+

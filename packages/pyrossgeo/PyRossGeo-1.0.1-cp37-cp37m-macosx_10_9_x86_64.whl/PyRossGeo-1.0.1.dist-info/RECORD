@@ -1,0 +1,16 @@
+deterministic.cpython-37m-darwin.so,sha256=K89XmZC9c6WvUBECXD1Umb1J32nAC_M3YbrT7gZLiBA,1274996
+pyrossgeo/Simulation.cpython-37m-darwin.so,sha256=f0d56iwRjxkVW4sF8aeIfq1vopdcSsAXRLsQPN2JncI,253640
+pyrossgeo/Simulation.pxd,sha256=kBKPAnwSNv9JJMYLHwKxJC56VkXQYli6XzLMeQXPU9M,3604
+pyrossgeo/__defs__.cpython-37m-darwin.so,sha256=2gmGRCsxxT9DXeKyn2AgivdEl3GBvlNkj6dGJQX607A,92604
+pyrossgeo/__defs__.pxd,sha256=yADde6wNtdFigC3zAuSHY9dXlY03Z4WkOHkdxsjHixI,1808
+pyrossgeo/__init__.py,sha256=JTvSHACf_IrqdNvkWHkU8SXcqjwadUa48vffG48Xe5o,67
+pyrossgeo/_helpers.cpython-37m-darwin.so,sha256=RbYoYtkd4wBzsiwUcJJO1bTPQ3TxJ2UqGJP8nw51Qak,181052
+pyrossgeo/_initialization.cpython-37m-darwin.so,sha256=mYwciSZI99wEetOYkKp5vG2A0iNifvHf7zPomskayuE,624704
+pyrossgeo/_simulation.cpython-37m-darwin.so,sha256=v3y1WnURJ7aYj19wc07-O1nWYmgM3C1OaXLXfwBH_Vk,420792
+pyrossgeo/_simulation.pxd,sha256=oMA_4Rj6B5zMjHT8UYj2_KTmlj1KhnIbtyNtsSSE3aw,996
+pyrossgeo/utils.py,sha256=-3GVG1zHYhVLuPftORVGtxCTBvupE9M4JrbnADGu4iI,11015
+PyRossGeo-1.0.1.dist-info/LICENSE,sha256=voac1eR03ACvZzM9zQwD2ewpOYnp4WjvfyllN2azRaU,1070
+PyRossGeo-1.0.1.dist-info/METADATA,sha256=FHZ_ZkHoPqEKvZRnmRsjN0guUdG4_hvPUirFn-JXfko,594
+PyRossGeo-1.0.1.dist-info/WHEEL,sha256=ePSmKDYpHLRUYc6QuHiYMO-IoN8XmQMJmY2AHxzV4Bc,110
+PyRossGeo-1.0.1.dist-info/top_level.txt,sha256=dn2koc-JxDYdAnftJK6eDLPGrV25unqwB7cwLXbBmmE,10
+PyRossGeo-1.0.1.dist-info/RECORD,,

@@ -1,0 +1,8 @@
+idem_virtualbox/conf.py,sha256=r_0jGoUbZFU2-LHUt8Emt03AJAQ-wY8k2fKjJfCkJmQ,104
+idem_virtualbox/version.py,sha256=pGxff2Z-oRkJzGZ0OIVtemOcUgnEkb3X74alAFYd-z0,551
+idem_virtualbox/exec/virtualbox.py,sha256=ypBb7DTZHS9ivkWQ7Prr9Bg-HnR3N9fGVoeOUEdi1zo,10056
+idem_virtualbox/states/virtualbox.py,sha256=YAUQ5arWaqjZL1dpvl76daeK1xH5OUvQtW2TaHg-Ess,1270
+idem_virtualbox-1.dist-info/METADATA,sha256=kzCmHEiVC77MPHuc6PdChZjhtwBQYAmqbYRBAwxzylU,1860
+idem_virtualbox-1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+idem_virtualbox-1.dist-info/top_level.txt,sha256=6EHPzeA-eWLebVDclDoiGgIbmAUxd-oYvK3S6zlh3ZA,16
+idem_virtualbox-1.dist-info/RECORD,,

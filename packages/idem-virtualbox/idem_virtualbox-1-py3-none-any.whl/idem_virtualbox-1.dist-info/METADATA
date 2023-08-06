@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: idem-virtualbox
+Version: 1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: 
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: idem (>=7)
+Requires-Dist: pop (>=13)
+Requires-Dist: pop-config (>=6)
+Requires-Dist: virtualbox (>=2.0.0)
+Requires-Dist: idem-bsd ; "BSD" in sys_platform
+Requires-Dist: idem-solaris ; "sunos" in sys_platform
+Requires-Dist: idem-darwin ; sys_platform == "darwin"
+Requires-Dist: idem-linux ; sys_platform == "linux"
+Requires-Dist: idem-windows ; sys_platform == "win32"
+
+===============
+IDEM_VIRTUALBOX
+===============
+
+# VirtualBox Provider for Idem
+
+============
+INSTALLATION
+============
+
+The virtualbox idem provider can be installed via pip:
+`pip install idem-virtualbox`
+
+============================
+INSTALLATION FOR DEVELOPMENT
+============================
+
+1. Clone the `idem_provider_virtualbox` repository and install with pip:
+`pip install -r requirements.txt`
+2. Run `pip install -e <path to provider>` from your project's root directory
+
+You are now fully set up to begin developing additional functionality for this provider.
+
+=========
+EXECUTION
+=========
+
+After installation the Azure Resource Manager Idem Provider execution and state modules will be accessible to the hub.
+
+The following example uses a virtualbox state module to ensure the existence of vm::
+
+    VM exists:
+      vbox.present:
+        - name: instance_name
+
+
+Use the command line to run virtualbox specific execution modules::
+
+    idem exec vbox.list
+
+
+

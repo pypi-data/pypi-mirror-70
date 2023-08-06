@@ -1,0 +1,7 @@
+pyopencl
+numpy
+matplotlib
+nbsphinx
+numpydoc
+pandoc
+mcpl

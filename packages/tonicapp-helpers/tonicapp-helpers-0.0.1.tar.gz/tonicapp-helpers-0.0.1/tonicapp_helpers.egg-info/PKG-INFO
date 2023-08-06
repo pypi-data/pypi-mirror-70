@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tonicapp-helpers
+Version: 0.0.1
+Summary: Toolbox with general functions and models to avoid repetition.
+Home-page: UNKNOWN
+Author: tonicapp
+Author-email: web@tonicapp.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Description-Content-Type: text/markdown

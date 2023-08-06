@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: isEven
+Version: 0.1.0
+Summary: Simple library to check if a number is even
+Home-page: https://github.com/juanbenitezdev/isEven
+Author: Juan Benitez
+Author-email: juanbenitezdev@gmail.com
+License: MIT
+Download-URL: https://github.com/JuanBenitezDev/isEven/archive/v0.1.0.tar.gz
+Description: # isEven
+        
+        isEven is a simple library to check if a number is even.
+        
+        ### Installation
+        
+        ```
+        pip install isEven
+        ```
+        
+        ### Usage
+        
+        ```
+        from isEven import isEven
+        
+        print(isEven('1')) //=> False
+        print(isEven('5')) //=> False
+        
+        print(isEven(0)) //=> True
+        print(isEven(4)) //=> True
+        ```
+        
+Keywords: Even,Integer,Math
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

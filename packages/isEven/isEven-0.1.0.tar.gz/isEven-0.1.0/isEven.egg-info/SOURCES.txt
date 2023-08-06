@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+isEven/__init__.py
+isEven/is_even.py
+isEven.egg-info/PKG-INFO
+isEven.egg-info/SOURCES.txt
+isEven.egg-info/dependency_links.txt
+isEven.egg-info/requires.txt
+isEven.egg-info/top_level.txt

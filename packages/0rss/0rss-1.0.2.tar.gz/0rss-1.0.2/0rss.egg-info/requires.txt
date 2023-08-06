@@ -1,0 +1,9 @@
+metaform
+metatype
+typer
+feedparser
+
+[test]
+coverage
+pytest
+pytest-cov

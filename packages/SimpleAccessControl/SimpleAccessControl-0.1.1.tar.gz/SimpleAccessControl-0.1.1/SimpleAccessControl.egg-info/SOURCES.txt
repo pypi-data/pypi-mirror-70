@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+SimpleAccessControl.egg-info/PKG-INFO
+SimpleAccessControl.egg-info/SOURCES.txt
+SimpleAccessControl.egg-info/dependency_links.txt
+SimpleAccessControl.egg-info/not-zip-safe
+SimpleAccessControl.egg-info/top_level.txt
+rbac/__init__.py
+rbac/acl.py
+rbac/context.py
+rbac/proxy.py

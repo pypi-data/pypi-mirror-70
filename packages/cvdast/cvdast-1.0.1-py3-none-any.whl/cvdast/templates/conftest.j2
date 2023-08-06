@@ -1,0 +1,27 @@
+
+import json
+import pytest
+import random
+
+
+def get_params_from_file(param):
+    with open("params_captured.json") as fobj:
+        params = json.load(fobj)
+    for api, params_info in params.items():
+        if param in params_info:
+            values = params[api][param]
+            if None in values:
+                values.remove(None)
+            return random.choice(values)
+{% set params_covered = [] %}
+{% for api,params in api_info.items() %}
+{% for param,values in params.items() %}
+{% if param not in params_covered %}
+@pytest.fixture(scope="session", autouse=True)
+def {{ param }}():
+    return get_params_from_file("{{ param }}")
+{% set params_covered = params_covered.append(param) %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+

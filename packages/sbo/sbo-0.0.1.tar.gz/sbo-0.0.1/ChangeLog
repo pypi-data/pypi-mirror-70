@@ -1,0 +1,18 @@
+CHANGES
+=======
+
+v0.0.1
+------
+
+* Modularize sbo
+* Add CI
+* Add requirements.txt
+* Update readme
+* Fix linked file type
+* Remove demo file
+* Add demo plot
+* Add demo to readme
+* Add demo script
+* Add SBO and GHO
+* Add gitignore
+* Initial commit

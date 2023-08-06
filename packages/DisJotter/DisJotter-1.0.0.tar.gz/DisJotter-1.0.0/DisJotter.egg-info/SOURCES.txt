@@ -1,0 +1,5 @@
+README.md
+DisJotter.egg-info/PKG-INFO
+DisJotter.egg-info/SOURCES.txt
+DisJotter.egg-info/dependency_links.txt
+DisJotter.egg-info/top_level.txt

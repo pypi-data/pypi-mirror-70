@@ -1,0 +1,5 @@
+setup.py
+dnac_shell_rks.egg-info/PKG-INFO
+dnac_shell_rks.egg-info/SOURCES.txt
+dnac_shell_rks.egg-info/dependency_links.txt
+dnac_shell_rks.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+metaform
+metatype
+
+[test]
+coverage
+pytest
+pytest-cov

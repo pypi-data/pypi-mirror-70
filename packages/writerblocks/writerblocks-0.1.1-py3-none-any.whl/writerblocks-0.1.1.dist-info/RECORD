@@ -1,0 +1,10 @@
+writerblocks/__init__.py,sha256=DJUT03NSOqyeuhP-vA9g0eM09-UkpTjMpIUgFUvWe_w,68
+writerblocks/backend.py,sha256=NB88uWd8q-TcFVLGWf93FS1hNTTQa4MWZBMcJ7iyPoI,15765
+writerblocks/cli.py,sha256=M009HFydKLXNYCiM6A1TM6XMIWJfPNcpp1a0nlZWjz8,5014
+writerblocks/common.py,sha256=_IAnIZJKsvg8DkrkD8bpmSsRwEwHU4kvFyFEpw3ly5c,965
+writerblocks-0.1.1.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+writerblocks-0.1.1.dist-info/METADATA,sha256=t5mNgDqg_7_iWhwHBDdn-xEHMWZHJ4vX5LEIfu_jFPo,3925
+writerblocks-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+writerblocks-0.1.1.dist-info/entry_points.txt,sha256=jPAT1zW-CqC6skAg5jGIV_17ZSK7u7gkalfXgadkkGs,60
+writerblocks-0.1.1.dist-info/top_level.txt,sha256=WVliCWsWdieBmuiuCCwNjzihnEUTyAaLr9sxQQLATAg,13
+writerblocks-0.1.1.dist-info/RECORD,,

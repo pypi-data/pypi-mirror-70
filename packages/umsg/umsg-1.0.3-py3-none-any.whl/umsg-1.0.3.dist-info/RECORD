@@ -1,0 +1,10 @@
+umsg/__about__.py,sha256=r4NdIFQYrmeWseCv40pNS0ctERPrvx5zktaLA_gA9bo,308
+umsg/__init__.py,sha256=UNoCwInmgEt7kUAtxaaHwI8TJWD7oac_SgoSAeborJk,615
+umsg/core.py,sha256=M-GBED9sunop0CrMzoTkS7425M6T92y8t0OoH7Y4eYk,9189
+umsg/mixins.py,sha256=IOYrn5t0PsXr2WfvvrzgIZ-RlPt3w6aWNXVJglSvtxo,1616
+umsg/util.py,sha256=Zn9ql3yOfmq6nF0I9irsllpbc6NU2Cfn6B-UfPudC4I,1173
+umsg-1.0.3.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+umsg-1.0.3.dist-info/METADATA,sha256=ToOybrOIk3vwi6nmeDetZ1vPlzsIgtNxSO6R5DHNM0o,2113
+umsg-1.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+umsg-1.0.3.dist-info/top_level.txt,sha256=8ZCWFU-hhhTsjg163fdqZPXvLL-J4qpNsIOlKHwSoww,5
+umsg-1.0.3.dist-info/RECORD,,

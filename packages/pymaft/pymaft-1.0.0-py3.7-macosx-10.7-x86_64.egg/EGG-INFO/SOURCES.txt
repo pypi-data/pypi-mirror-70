@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+pymaft/__init__.py
+pymaft/dms.c
+pymaft/solvers.c
+pymaft/utils.c
+pymaft.egg-info/PKG-INFO
+pymaft.egg-info/SOURCES.txt
+pymaft.egg-info/dependency_links.txt
+pymaft.egg-info/top_level.txt

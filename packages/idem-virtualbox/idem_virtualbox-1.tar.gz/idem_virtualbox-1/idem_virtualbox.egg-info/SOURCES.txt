@@ -1,0 +1,12 @@
+README.rst
+pyproject.toml
+setup.py
+idem_virtualbox/conf.py
+idem_virtualbox/version.py
+idem_virtualbox.egg-info/PKG-INFO
+idem_virtualbox.egg-info/SOURCES.txt
+idem_virtualbox.egg-info/dependency_links.txt
+idem_virtualbox.egg-info/requires.txt
+idem_virtualbox.egg-info/top_level.txt
+idem_virtualbox/exec/virtualbox.py
+idem_virtualbox/states/virtualbox.py

@@ -1,0 +1,19 @@
+idem>=7
+pop>=13
+pop-config>=6
+virtualbox>=2.0.0
+
+[:"BSD" in sys_platform]
+idem-bsd
+
+[:"sunos" in sys_platform]
+idem-solaris
+
+[:sys_platform == "darwin"]
+idem-darwin
+
+[:sys_platform == "linux"]
+idem-linux
+
+[:sys_platform == "win32"]
+idem-windows

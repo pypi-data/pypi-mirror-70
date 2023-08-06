@@ -1,0 +1,16 @@
+xt_models/models/__init__.py,sha256=4tN5y_j_0JEEry84nEv419JdYUd6u0TkEMVccm2ezic,122
+xt_models/models/pspnet.py,sha256=I3jKjvmJf6GfBnx6MhtQSBzKSKSXLESu6sRfhLvk8ZU,2711
+xt_models/models/resnet.py,sha256=MsGzE-8EPcXFDDqeMjEuV3jJzMXX_--85OoyBMDzzqo,14191
+xt_models/models/ses.py,sha256=T1TnnfM15Q9OQmWykIkGsibzBXdPtvwmINT8LMS2YU0,3468
+xt_models/models/semantic_segmentation/__init__.py,sha256=kRev6sJtckvbpvnzXVS33auB4zhH5xcHHG7XiaRY2Es,53
+xt_models/models/semantic_segmentation/hrnet.py,sha256=MrfxkTm4Dxi6g7HDTyf3gF3I1LlUgU_QErDSxqCsHKg,16793
+xt_models/models/semantic_segmentation/mobilenet.py,sha256=_bVLnGs0h9_DaPzULNmVNBHRuWD6-GCqWAf0i7voqDE,4919
+xt_models/models/semantic_segmentation/models.py,sha256=GAuWjVBEvpyi64hvcKFa35F1WO367xZA7DddDGegdY0,20415
+xt_models/models/semantic_segmentation/resnet.py,sha256=VwNOgwgMuu3gRA6OPi1cRRBg-tnn1yAUhOtgs5mQxxw,6752
+xt_models/models/semantic_segmentation/resnext.py,sha256=W0RYezdNjYQJIIBInIuDvObmhRk1COvU5HDQ4yCN39o,5349
+xt_models/models/semantic_segmentation/utils.py,sha256=Vaj0Emm-KMF-RW5a4fJGv3E1R2Vznc7KHkW-zVjLpeI,577
+xt_models/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xt_models-0.2.0.dist-info/METADATA,sha256=2siWg1mHktCjqIrMQegI_Di95LC3q1AzEZn4B077Y_w,1400
+xt_models-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+xt_models-0.2.0.dist-info/top_level.txt,sha256=5dI0xG97hPdqyG9P3mY2Bx5r0UKEK4kZcXXEZGJm-Dw,10
+xt_models-0.2.0.dist-info/RECORD,,

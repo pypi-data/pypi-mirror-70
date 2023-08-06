@@ -1,0 +1,11 @@
+README.md
+VERSION
+requirements.txt
+setup.py
+src/hkb_diamondsquare/DiamondSquare.py
+src/hkb_diamondsquare/__init__.py
+src/hkb_diamondsquare.egg-info/PKG-INFO
+src/hkb_diamondsquare.egg-info/SOURCES.txt
+src/hkb_diamondsquare.egg-info/dependency_links.txt
+src/hkb_diamondsquare.egg-info/requires.txt
+src/hkb_diamondsquare.egg-info/top_level.txt

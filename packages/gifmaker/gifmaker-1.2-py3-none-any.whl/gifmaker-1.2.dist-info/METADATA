@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: gifmaker
+Version: 1.2
+Summary: Convert a series of images into a gif animation.
+Home-page: UNKNOWN
+Author: Julien Cohen-Adad
+Author-email: jcohen@polymtl.ca
+License: LICENSE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: imageio
+Requires-Dist: scipy
+
+gifmaker
+========
+
+.. image:: https://github.com/neuropoly/gifmaker/blob/master/docs/brain.gif
+
+Convert a series of images into a gif animation, with the possibility to apply
+various processing on the input image (cropping, rescaling, etc.).
+
+For installation and usage, please see the `Documentation <https://neuropoly.github.io/gifmaker>`_.
+
+

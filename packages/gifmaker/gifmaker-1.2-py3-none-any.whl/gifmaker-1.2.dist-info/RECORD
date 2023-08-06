@@ -1,0 +1,10 @@
+gifmaker/__init__.py,sha256=Uk3KS1HVHSLVwh4OIHzOnUSZAcKiy_tuhjB9uKGPtqk,85
+gifmaker/gifmaker.py,sha256=7iE204y3jYogJoI35yb8kwDujpyBXfR-q6NTy8_KfYM,4016
+gifmaker/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gifmaker/tests/test_gifmaker.py,sha256=8b60VvcyFO0QOED11Zr6BlICKDCxPDZAOyb-urwNR-4,520
+gifmaker-1.2.dist-info/LICENSE,sha256=d8apNClz6Vx_hNRjcmoE9rd0Uu3nmFZQ0I9fKRP1acg,1074
+gifmaker-1.2.dist-info/METADATA,sha256=D0Z4EVu0v8CeacRLW5b-AB6h5t4F8dTux4NDuP3hA7M,816
+gifmaker-1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gifmaker-1.2.dist-info/entry_points.txt,sha256=sIpfAVwNKHh8VYa9YESyB5LJeXneswnzeOwPDsaSICA,53
+gifmaker-1.2.dist-info/top_level.txt,sha256=TrnftA9Cypz9bDX71KliyfJ6mEel6S8SrvCMgx6RCJc,9
+gifmaker-1.2.dist-info/RECORD,,

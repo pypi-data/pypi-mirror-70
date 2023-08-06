@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+rse/__init__.py
+rse/version.py
+rse.egg-info/PKG-INFO
+rse.egg-info/SOURCES.txt
+rse.egg-info/dependency_links.txt
+rse.egg-info/entry_points.txt
+rse.egg-info/not-zip-safe
+rse.egg-info/requires.txt
+rse.egg-info/top_level.txt

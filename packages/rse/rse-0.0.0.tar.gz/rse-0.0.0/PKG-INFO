@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: rse
+Version: 0.0.0
+Summary: the research software encyclopedia
+Home-page: http://www.github.com/rseng/rse
+Author: Vanessa Sochat
+Author-email: vsochat@stanford.edu
+Maintainer: Vanessa Sochat
+Maintainer-email: vsochat@stanford.edu
+License: LICENSE
+Description: # Research Software Engineering
+        
+        [![PyPI version](https://badge.fury.io/py/qme.svg)](https://badge.fury.io/py/rseng)
+        
+        Rseng is software to query and otherwise interact with a database of research
+        software, and a research software taxonomy.
+        
+        **under development**
+        
+        ## License
+        
+         * Free software: MPL 2.0 License
+        
+Keywords: rseng,software,research software,database,taxonomy
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: database
+Provides-Extra: all

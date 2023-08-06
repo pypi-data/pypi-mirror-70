@@ -1,0 +1,3 @@
+[console_scripts]
+qme = qme.client:main
+

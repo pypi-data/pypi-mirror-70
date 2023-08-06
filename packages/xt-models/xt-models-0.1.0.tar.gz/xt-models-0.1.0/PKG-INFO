@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: xt-models
+Version: 0.1.0
+Summary: Models and model utilities for common ML tasks
+Home-page: https://github.com/XtractTech/xt-models
+Author: Xtract AI
+Author-email: info@xtract.ai
+License: UNKNOWN
+Description: # xt-cv
+          
+        ## Description
+        
+        This repo contains common models and utilities for working with ML tasks, developed by [Xtract AI](https://xtract.ai/).
+        
+        
+        
+        More to come.
+        
+        ## Installation
+        
+        
+        From source:
+        ```bash
+        git clone https://github.com/XtractTech/xt-models.git
+        pip install ./xt-models
+        ```
+        
+        ## Usage
+        
+        
+        #### Grabbing a model
+        
+        ```python
+        from xt_cv.models import PSPNet
+        
+        # Build an object populated with the COCO image list, categories, and annotations
+        model = PSPNet(sizes=(1, 2, 3, 6), psp_size=2048, deep_features_size=1024, backend='resnet50')
+        ```
+        
+        #### Implementing a new model
+        
+        If you are having to always copy and paste the same model code for different projects, simply add the model code to the `models` directory, and import it in the `models/__init__.py` file.
+        
+        ## Data Sources
+        
+        [descriptions and links to data]
+          
+        ## Dependencies/Licensing
+        
+        [list of dependencies and their licenses, including data]
+        
+        ## References
+        
+        [list of references]
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Provides: xt_models
+Description-Content-Type: text/markdown

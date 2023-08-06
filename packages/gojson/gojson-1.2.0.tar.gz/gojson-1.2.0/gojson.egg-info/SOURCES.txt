@@ -1,0 +1,9 @@
+README.md
+setup.py
+gojson/__init__.py
+gojson.egg-info/PKG-INFO
+gojson.egg-info/SOURCES.txt
+gojson.egg-info/dependency_links.txt
+gojson.egg-info/not-zip-safe
+gojson.egg-info/requires.txt
+gojson.egg-info/top_level.txt

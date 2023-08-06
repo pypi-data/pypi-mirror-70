@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block pageloader %}
+    <div class="pageloader"></div>
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block search_bar %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div style="width: 100%">
+        <div class="muses-list-home">
+            <a href="{% url 'muses_post_create' %}" class="muses-button muses-float">
+                <em class="fas fa-file-alt"></em>
+            </a>
+            <div class="muses-slider-box">
+                <div><em class="fa fa-chevron-circle-left" onclick="plusSlides(-1)"></em></div>
+                <div class="slider">
+                    <div class="slide fade">
+                        <p class="caption">The first slide.<br><small>This is an awesome forest.</small></p>
+                    </div>
+                    <div class="slide fade">
+                        <p class="caption">The second slide.<br><small>This is an awesome forest.</small></p>
+                    </div>
+                    <div class="slide fade">
+                        <p class="caption">The third slide.<br><small>This is an awesome forest.</small></p>
+                    </div>
+                </div>
+                <div><em class="fa fa-chevron-circle-right" onclick="plusSlides(1)"></em></div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <script defer>
+                let slideIndex = 1;
+
+                function showSlides(n) {
+                    let i;
+                    const slides = document.getElementsByClassName("slide");
+                    const dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    return "ok"
+                }
+
+                showSlides(slideIndex);
+                const autoSlider = setInterval(function () {
+                    showSlides(slideIndex += 1);
+                }, 10000);
+
+                function plusSlides(n) {
+                    clearInterval(autoSlider);
+                    showSlides(slideIndex += 1);
+                }
+
+                function currentSlide(n) {
+                    clearInterval(autoSlider);
+                    showSlides(slideIndex = n);
+                }
+            </script>
+            <div><input type="search"></div>
+        </div>
+        <hr>
+        <div class="muses-list-home">
+            <div>Test 1</div>
+            <div>Test 2</div>
+        </div>
+    </div>
+{% endblock %}

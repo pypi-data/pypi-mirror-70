@@ -1,0 +1,6 @@
+#!python
+
+import parlai.scripts.parlai_exe as parlai
+
+if __name__ == '__main__':
+    parlai.Parlai()

@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: oeispy
+Version: 0.0.5
+Summary: Simple Python Library for OEIS
+Home-page: https://github.com/phantom-5/oeispy
+Author: Rudra M Biswal
+Author-email: rickrudra@gmail.com
+License: MIT
+Description: # oeispy
+        Simple Python library for OEIS ( Online Encyclopedia of Integer Sequences )
+        
+        List of methods with examples :
+        
+        Query OEIS
+        ```sh
+        import oeispy as op
+        res=op.resultEois('1,9,15,19')
+        ```
+        Best Result
+        ```sh
+        op.topResult(res)
+        ```
+        Count Results
+        ```sh
+        op.countResult(res)
+        ```
+        Get Number
+        ```sh
+        op.getNumber(res[0])
+        ```
+        Get Id
+        ```sh
+        op.getId(res[0])
+        ```
+        Get Data
+        ```sh
+        op.getData(res[0])
+        ```
+        Get Name
+        ```sh
+        op.getName(res[0])
+        ```
+        Get Comment
+        ```sh
+        op.getComment(res[0])
+        ```
+        Get Link
+        ```sh
+        op.getLink(res[0])
+        ```
+        Get Example
+        ```sh
+        op.getExample(res[0])
+        ```
+        Similarly , getAuthor(..), getTime(..), getCreated(..), getFormula(..), getProgram(..)
+        
+        Get Graph and Save Image
+        ```sh
+        op.getGraph('A000001')
+        ```
+        Get Random
+        ```sh
+        res=op.getRandom()
+        ```
+        
+        
+        
+        
+        
+        
+        
+        
+Keywords: oeis
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

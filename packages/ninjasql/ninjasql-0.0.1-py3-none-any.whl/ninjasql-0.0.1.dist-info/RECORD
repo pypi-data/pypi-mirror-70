@@ -1,0 +1,16 @@
+ninjasql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ninjasql/app.py,sha256=MYWHv7p5QK528BDtFqvfdy-nZU2WVAmjzKQD0ZNpkgU,17047
+ninjasql/errors.py,sha256=51Ekyj7Oqr-V6LCOCvyXcZlktYxRyurRwe_QbjHa9sM,202
+ninjasql/settings.py,sha256=boGBdhg1wuCTbOOcxxc7ovLDREbUy0P_VeJtSVO178o,2067
+ninjasql/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ninjasql/db/history_table.py,sha256=b-xPKf3XO_DY9GTgPvMQd0LsUVGNyXvtga-IYpu4m2c,37
+ninjasql/db/sqa_dml_extractor.py,sha256=yokRMxGTSAjiqGBYUWzBgl8KC9P_ojsnqd2Z8dzhFTY,12671
+ninjasql/db/sqa_table_loads.py,sha256=KYExRNBrJtRCNs60d-DFzIUdV6HaEIHWc45AUOg2yT8,565
+ninjasql/db/staging_table.py,sha256=m-mPsWw_lzcOYLiJBgJBeVSNEnm6hpsZlUMDplWcpDw,37
+ninjasql/dep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ninjasql/dep/table_dependency.py,sha256=nKvBFFTt5Tp_Su2_Qg-oAO-5RDdPFkvAg53OVl15Ezw,2113
+ninjasql/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ninjasql-0.0.1.dist-info/METADATA,sha256=7o2Lyw9g50JaoTWBK1cNfHJkpSTQGlZpvTlxO_oSapM,16856
+ninjasql-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ninjasql-0.0.1.dist-info/top_level.txt,sha256=cHsp92nyawNWtEe20tgTVrOw2rnSzSny5SvpCk1jcmg,9
+ninjasql-0.0.1.dist-info/RECORD,,

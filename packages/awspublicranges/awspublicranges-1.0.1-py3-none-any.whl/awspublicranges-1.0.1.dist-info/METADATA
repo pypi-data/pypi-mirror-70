@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: awspublicranges
+Version: 1.0.1
+Summary: Simple utility for grabbing and using AWS public IPS
+Home-page: https://github.com/mgmonteleone/python-aws-public-ranges
+Author: Matthew G. Monteleone
+Author-email: mgm@mgm.dev
+License: MIT License
+Keywords: cloud,aws
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: requests
+
+Atlas API
+==========
+
+Small library to make grabbing an processing AWS public IP address ranges easier.
+
+
+Usage
+------
+
+.. code:: python
+
+    from awspublicranges.ranges import AwsIpRanges
+
+    out = AwsIpRanges()
+
+    for each_range in out.prefixes_for_lambda('us-west-2'):
+        pprint(each_range.__dict__)
+
+

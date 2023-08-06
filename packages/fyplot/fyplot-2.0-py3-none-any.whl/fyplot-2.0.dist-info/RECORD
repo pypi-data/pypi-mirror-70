@@ -1,0 +1,11 @@
+fyplot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fyplot/dict_plot.py,sha256=mvBGBm0ynQr0LMv7nnyyUxngWIfa_s6eCyWI7PCu_H4,3621
+fyplot/function_plot.py,sha256=PuKnd7gld8wtZZaGU-zc4m0eZIk6IMifXDnh_BjiSdE,3355
+fyplot-2.0.data/scripts/fyplot_demo,sha256=1fUpnr15D6swcbWj0LG8ivmbe1Y6L5bh6ehuC7jpk1U,1564
+fyplot-2.0.data/scripts/fyplot_demo2,sha256=aTnkOcKjUV7JDaPDOCAswka3pZ4iEsVikj8Nvz4ZWZ0,1255
+fyplot-2.0.dist-info/DESCRIPTION.rst,sha256=6Ay2HdCsvU_q5eC0VLGg0x-4TRvhxWJcgZgAdBowL3w,47
+fyplot-2.0.dist-info/METADATA,sha256=qIqqaiLHuVAdd7yYlIrEJ7YLQ42ojIF6-UKttGwMgDk,332
+fyplot-2.0.dist-info/RECORD,,
+fyplot-2.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+fyplot-2.0.dist-info/metadata.json,sha256=l_XdRsKzLSoE2NjqN7GpgabnYtiIS_CWmayrnEznBOc,485
+fyplot-2.0.dist-info/top_level.txt,sha256=X-XYRC1QYD-dS4URKkYOWGkO_SjUP0fPqGCatU8YQEg,7

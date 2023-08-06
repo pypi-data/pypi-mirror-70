@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: CUP-EXAM
+Version: 2.6.11
+Summary: Check exam information of China university of petroleum (Beijing)
+Home-page: https://github.com/Rhythmicc/CUP_EXAM
+Author: RhythmLian
+License: MIT
+Description: # China University of Petroleum (Beijing) exam information searcher
+        
+        ## Setup：`pip install CUP_EXAM`
+        ## Run：`$ exam`
+        
+Keywords: Check exam information
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

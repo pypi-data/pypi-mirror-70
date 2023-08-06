@@ -1,0 +1,17 @@
+README.md
+setup.py
+Flask_Saved.egg-info/PKG-INFO
+Flask_Saved.egg-info/SOURCES.txt
+Flask_Saved.egg-info/dependency_links.txt
+Flask_Saved.egg-info/not-zip-safe
+Flask_Saved.egg-info/requires.txt
+Flask_Saved.egg-info/top_level.txt
+flask_save/__init__.py
+flask_save/_compat.py
+flask_save/_config.py
+flask_save/_utils.py
+flask_save/exception.py
+flask_save/providers/__init__.py
+flask_save/providers/base.py
+flask_save/providers/local.py
+flask_save/providers/oss.py

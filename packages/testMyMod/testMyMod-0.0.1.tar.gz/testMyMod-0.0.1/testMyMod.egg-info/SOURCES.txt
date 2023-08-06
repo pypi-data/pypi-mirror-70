@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+testMyMod/__init__.py
+testMyMod.egg-info/PKG-INFO
+testMyMod.egg-info/SOURCES.txt
+testMyMod.egg-info/dependency_links.txt
+testMyMod.egg-info/top_level.txt

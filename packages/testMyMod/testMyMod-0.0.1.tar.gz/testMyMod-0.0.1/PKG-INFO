@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: testMyMod
+Version: 0.0.1
+Summary: A package for test purposes
+Home-page: UNKNOWN
+Author: Sudeep Swarnapuri
+Author-email: sudeepswarnapuri@gmail.com
+License: MIT
+Description: This is a test module for use by Sudeep Swarnapuri
+        
+        Change Log
+        ==========
+        
+        0.0.1 (06/04/2020)
+        --------------------
+        - Initial Release
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

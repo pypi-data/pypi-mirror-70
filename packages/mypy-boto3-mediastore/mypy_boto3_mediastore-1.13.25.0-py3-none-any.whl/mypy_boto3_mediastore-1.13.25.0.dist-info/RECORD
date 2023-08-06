@@ -1,0 +1,11 @@
+mypy_boto3_mediastore/__init__.py,sha256=i5-qYmeVYtw2-zk-WFubm12bIoZPLzgrecQLULWrwNo,697
+mypy_boto3_mediastore/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_mediastore/client.py,sha256=cj8d6eYiqPniSBbTuo09xwKE4-Ge9JbIIZKJ6vgipD0,8903
+mypy_boto3_mediastore/paginator.py,sha256=gI0S4JDky2HHkHf4LZUcfzsKgVK33WZ_urbN74Heito,1296
+mypy_boto3_mediastore/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_mediastore/type_defs.py,sha256=XgktEXf1d4FcM0WTJUtOwUxIDCAh2vY-BmaDm7zYfyM,3795
+mypy_boto3_mediastore/version.py,sha256=VW5RACddn_EHSLbmM4hyurzoi5hejPhoyhSChXFgiws,57
+mypy_boto3_mediastore-1.13.25.0.dist-info/METADATA,sha256=vP-4X1LfFzPBidIxCHYZQbcOCky6AnZbQmENOZeu6hE,4500
+mypy_boto3_mediastore-1.13.25.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_mediastore-1.13.25.0.dist-info/top_level.txt,sha256=kri-xdGIHsqdqldiIhtzSNKAYEXPRbjnq2sl_pIy6Do,22
+mypy_boto3_mediastore-1.13.25.0.dist-info/RECORD,,

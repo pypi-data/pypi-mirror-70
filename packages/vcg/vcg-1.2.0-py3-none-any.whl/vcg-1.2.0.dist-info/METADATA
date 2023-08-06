@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: vcg
+Version: 1.2.0
+Summary: Shared toolkit for VCG@XMU
+Home-page: UNKNOWN
+Author: VCG@XMU
+Author-email: elliott.zheng@foxmail.com
+License: MIT
+Keywords: VCG@XMU
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: zmail
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+

@@ -1,0 +1,11 @@
+vcg/__init__.py,sha256=OgmEQgmjCodSS-ZXG30a61V5ReNgfio9ha3pQV4fJ2k,166
+vcg/_version.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+vcg/config.py,sha256=7DCZljJjtz93XLZ3b3OXgk_e0M-MO9JGsoKCC-9gtlg,1526
+vcg/host_specific.py,sha256=aT3xkxqAYD3M6p1Ekdf436XhbKYBfC46QHhQSm7Fz2M,865
+vcg/notifier.py,sha256=ii5Gt9UbRKOWBHo3sZ5qWK8MbP5AuGMyNZHVd3S7zMY,3506
+vcg/tools.py,sha256=R2Q7aQ8qtRUpCIHF2C1hbUQJ9EtPehcO5tPU8XG1-Do,1401
+vcg-1.2.0.dist-info/LICENSE,sha256=KisdR_gzmk4rW4dmVPQD6MtRIZ3aIumnCKpi09mDGBI,1085
+vcg-1.2.0.dist-info/METADATA,sha256=kpEjelh6uC3cygBQR-pUOe-YNwXG_S1sZl42BwrjN28,743
+vcg-1.2.0.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+vcg-1.2.0.dist-info/top_level.txt,sha256=t6csaqK6e6ieJt0V9oj2iy_mn-A4diTQnpgp7YelQUU,4
+vcg-1.2.0.dist-info/RECORD,,

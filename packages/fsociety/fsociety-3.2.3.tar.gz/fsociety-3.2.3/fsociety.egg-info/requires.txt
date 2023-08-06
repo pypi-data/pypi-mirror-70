@@ -1,0 +1,9 @@
+gitpython
+rich
+requests
+
+[dev]
+wheel
+pylint
+autopep8
+twine

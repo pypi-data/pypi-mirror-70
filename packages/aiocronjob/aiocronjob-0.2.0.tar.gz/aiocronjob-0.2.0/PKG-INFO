@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aiocronjob
+Version: 0.2.0
+Summary: 
+Author: devtud
+Author-email: devtud@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: crontab (>=0.22.8,<0.23.0)
+Requires-Dist: fastapi (>=0.55.1,<0.56.0)
+Requires-Dist: importlib_metadata (>=1.6.1,<2.0.0); python_version < "3.8"
+Requires-Dist: pytz (>=2020.1,<2021.0)
+Requires-Dist: uvicorn (>=0.11.5,<0.12.0)

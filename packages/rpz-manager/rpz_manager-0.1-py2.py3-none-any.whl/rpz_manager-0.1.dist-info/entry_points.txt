@@ -1,0 +1,3 @@
+[console_scripts]
+rpz-manager = rpz_manager:main
+

@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+gitmanager/__init__.py
+gitmanager/github.py
+gitmanager/handler.py
+gitmanager/utils.py
+gitmantool.egg-info/PKG-INFO
+gitmantool.egg-info/SOURCES.txt
+gitmantool.egg-info/dependency_links.txt
+gitmantool.egg-info/entry_points.txt
+gitmantool.egg-info/requires.txt
+gitmantool.egg-info/top_level.txt

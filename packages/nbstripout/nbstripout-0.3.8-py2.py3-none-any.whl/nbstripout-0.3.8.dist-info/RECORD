@@ -1,0 +1,11 @@
+nbstripout.py,sha256=O25gml3XVlOTQWTe__gGIzSf3OwsQl-MSpHkyuyNIV8,13445
+nbstripout/__init__.py,sha256=PC4jK6qNrFKeCBLR7ByJyB7OaxbDn2eg-Yv9N8WcVC8,277
+nbstripout/__main__.py,sha256=xfVws8NbW_9PYzB9bCO7mj992dhliCXk3ZRJHiErptY,36
+nbstripout/_nbstripout.py,sha256=C3sWFa6bU-CsSu4JSjitBszZCJuE3QZX2kFpT4y0qYo,14148
+nbstripout/_utils.py,sha256=NJYF5cZLcdeOegOI0yzwTx-jqMVnWlg9iB1wReab34o,4568
+nbstripout-0.3.8.dist-info/LICENSE.txt,sha256=zOtlgeErTkb4KR0TixVzHot35uHu6dyiO-IpfixI_ik,1118
+nbstripout-0.3.8.dist-info/METADATA,sha256=a52UD12T8bp-KkJfmfLd-dOY5JIClf5PW8Fv6J1FSng,14135
+nbstripout-0.3.8.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+nbstripout-0.3.8.dist-info/entry_points.txt,sha256=YodCCjWrf-LCPFo0lRQYkNd_9r1KthK271lQCgQlTHI,60
+nbstripout-0.3.8.dist-info/top_level.txt,sha256=bveRSCyWJ_9mx7f0rJxvBR2Lf8kFAOvs5z8i_Wndt4s,11
+nbstripout-0.3.8.dist-info/RECORD,,

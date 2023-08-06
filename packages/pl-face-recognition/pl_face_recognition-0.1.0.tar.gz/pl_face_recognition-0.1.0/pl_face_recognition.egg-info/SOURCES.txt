@@ -1,0 +1,15 @@
+README.md
+setup.py
+face_recognition/__init__.py
+face_recognition/face_recognizers.py
+face_recognition/face_space.py
+face_recognition/classifiers/__init__.py
+face_recognition/classifiers/distance_classifier.py
+face_recognition/classifiers/one_neighbor_classifier.py
+face_recognition/helpers/__init__.py
+face_recognition/helpers/simple_metric_report.py
+pl_face_recognition.egg-info/PKG-INFO
+pl_face_recognition.egg-info/SOURCES.txt
+pl_face_recognition.egg-info/dependency_links.txt
+pl_face_recognition.egg-info/requires.txt
+pl_face_recognition.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+include README.md
+include LICENSE.txt
+
+include *.py
+
+include src/*.py
+
+include src/data/*.txt
+include src/data/*.csv
+
+include src/dependencies/*
+
+include images/progressBar_complete.PNG
+include images/progressBar_inProgress.PNG

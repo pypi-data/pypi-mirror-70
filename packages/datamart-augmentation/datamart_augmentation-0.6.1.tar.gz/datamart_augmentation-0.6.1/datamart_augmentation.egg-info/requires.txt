@@ -1,0 +1,4 @@
+datamart_materialize==0.6.1
+datamart_profiler==0.6.1
+numpy
+pandas

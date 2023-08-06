@@ -1,0 +1,13 @@
+CHANGES.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+nested_dataclasses/__init__.py
+nested_dataclasses/mixins.py
+nested_dataclasses/nested_dataclass.py
+nested_dataclasses.egg-info/PKG-INFO
+nested_dataclasses.egg-info/SOURCES.txt
+nested_dataclasses.egg-info/dependency_links.txt
+nested_dataclasses.egg-info/not-zip-safe
+nested_dataclasses.egg-info/top_level.txt

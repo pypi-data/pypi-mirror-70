@@ -1,0 +1,7 @@
+README.md
+setup.py
+xtract_sdk/__init__.py
+xtract_sdk.egg-info/PKG-INFO
+xtract_sdk.egg-info/SOURCES.txt
+xtract_sdk.egg-info/dependency_links.txt
+xtract_sdk.egg-info/top_level.txt

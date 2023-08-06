@@ -1,0 +1,9 @@
+perf_timer/__init__.py,sha256=fh0_je5kxUN_MnIP_lHGWSRgf5hV-f6fDFJGFs3w-wQ,515
+perf_timer/_impl.py,sha256=JZT2XNUtnN-RJPiYrUeiB4NZXUsUYhrw9vk-GuOxMFg,4451
+perf_timer/_trio.py,sha256=PmE-VKnHOeuyQUzUatmYVg5_t3gD3L2Sps72pfddyYU,3227
+perf_timer/_version.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+perf_timer-0.1.1.dist-info/LICENSE,sha256=AhslDP0RGn0KpIKnEmLsXB3bjm58oxJik42c0ItNYAw,1070
+perf_timer-0.1.1.dist-info/METADATA,sha256=B5gRB6j3Qf5fIz7QoBD04-F13WszYpRCGbXj7jZLseg,1173
+perf_timer-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+perf_timer-0.1.1.dist-info/top_level.txt,sha256=Ipp6N3mNhxH0GYBy5ZPcLECofXfn6hF4mZfkKTAeeho,11
+perf_timer-0.1.1.dist-info/RECORD,,

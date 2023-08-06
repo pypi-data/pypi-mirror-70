@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pycateda.egg-info/PKG-INFO
+pycateda.egg-info/SOURCES.txt
+pycateda.egg-info/dependency_links.txt
+pycateda.egg-info/requires.txt
+pycateda.egg-info/top_level.txt

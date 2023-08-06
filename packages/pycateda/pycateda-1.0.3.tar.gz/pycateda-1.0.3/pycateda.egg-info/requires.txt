@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+seaborn
+missingno
+notebook
+pandas_profiling

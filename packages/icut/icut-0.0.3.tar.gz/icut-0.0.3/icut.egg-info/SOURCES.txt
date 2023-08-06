@@ -1,0 +1,8 @@
+README.md
+setup.py
+icut/__init__.py
+icut.egg-info/PKG-INFO
+icut.egg-info/SOURCES.txt
+icut.egg-info/dependency_links.txt
+icut.egg-info/requires.txt
+icut.egg-info/top_level.txt

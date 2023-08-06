@@ -1,0 +1,17 @@
+MANIFEST.in
+setup.py
+randword/__init__.py
+randword/rand_letter.py
+randword/rand_word.py
+randword.egg-info/PKG-INFO
+randword.egg-info/SOURCES.txt
+randword.egg-info/dependency_links.txt
+randword.egg-info/top_level.txt
+randword/words/adj.txt
+randword/words/adv.txt
+randword/words/conj.txt
+randword/words/interj.txt
+randword/words/noun.txt
+randword/words/prep.txt
+randword/words/pron.txt
+randword/words/verb.txt

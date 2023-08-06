@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: time-series-analysis-plugin
+Version: 0.0.1
+Summary: Time series analysis plugin
+Home-page: https://github.com/minkefusiji/TimeSeriesAnalysisPlugin
+Author: Chunlei Wang
+Author-email: chuwan@microsoft.com
+License: MIT Licence
+Keywords: pip,SICA,featureextraction
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+An plugin package for time series analysis, 3rd party could implement their own train/inference.
+
+

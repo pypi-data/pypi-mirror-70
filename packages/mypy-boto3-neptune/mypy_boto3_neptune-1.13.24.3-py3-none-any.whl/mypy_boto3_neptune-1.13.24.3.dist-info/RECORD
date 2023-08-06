@@ -1,0 +1,12 @@
+mypy_boto3_neptune/__init__.py,sha256=GzRGjhWlGtEDb7J7gebbLDmBUInFn97IhvjEvJg5Kec,4559
+mypy_boto3_neptune/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_neptune/client.py,sha256=VfqJv7Zka4YanNifsoteOu3sf4wALuGyxIvNDYUVLc0,44197
+mypy_boto3_neptune/paginator.py,sha256=cJe0EcFTDago6cr1FcFtTSS0aGLm-LjoYTAYX7u-sFw,15282
+mypy_boto3_neptune/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_neptune/type_defs.py,sha256=UCMcZkvnNqfMJ6b5cApPgpckgk-muX_evf2x8K6li0c,25992
+mypy_boto3_neptune/version.py,sha256=hKuNRULB4BZPVfJKH7E8Zn7kZmNzsGVZ1vLc7i7KHZ4,57
+mypy_boto3_neptune/waiter.py,sha256=FjPyeFAUfDis1s_ftX5AWPxLjuNGzi0yd3tgMGtZUA8,2185
+mypy_boto3_neptune-1.13.24.3.dist-info/METADATA,sha256=R-Ij4zLkRm189CJJSzd10tf3L27tmc3HR1qKRe2AMp8,6674
+mypy_boto3_neptune-1.13.24.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypy_boto3_neptune-1.13.24.3.dist-info/top_level.txt,sha256=_nWnYa5dnFcdko4NxAu4IjbYABz29P4ycMOE3zj1y1I,19
+mypy_boto3_neptune-1.13.24.3.dist-info/RECORD,,

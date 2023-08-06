@@ -1,0 +1,10 @@
+cloudflareddns/__about__.py,sha256=R9xOYoYrWKcfO5zvTeGC3m_eDNOvxMd8CocQs2tLufo,22
+cloudflareddns/__init__.py,sha256=VHvbaVE0GkQESqIxHoA0IEM4ZpOoFgf9-UeELQTFQEM,222
+cloudflareddns/__main__.py,sha256=I83hIFtID7wEgmz7LfENg3yulcck6CiCTEmvOl8SVFk,52
+cloudflareddns/cloudflareddns.py,sha256=55XmuEKL0Yop5GnZONwFXHNnQMVL2M9URv8R0eRjUU4,9050
+cloudflareddns-0.0.7.dist-info/LICENSE,sha256=E7ds_pXXMtdYKjux8pSZjbqHr_l0TF_TXS-JtjxE0yQ,1326
+cloudflareddns-0.0.7.dist-info/METADATA,sha256=ewrfLj0y9l_bld5AdpJGupP6loUoh7U6tWRNgMstY7k,5775
+cloudflareddns-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cloudflareddns-0.0.7.dist-info/entry_points.txt,sha256=nbThnpaUotr1FrYA_LkfZqOP2LItA1IhXxoWK99HCZ8,98
+cloudflareddns-0.0.7.dist-info/top_level.txt,sha256=GHoUHvg3QaejHxS_P8cAwxuTb2LipHYWEh9NnVVrwUI,15
+cloudflareddns-0.0.7.dist-info/RECORD,,

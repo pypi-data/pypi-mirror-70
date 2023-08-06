@@ -1,0 +1,2 @@
+cli
+eos_name_generator

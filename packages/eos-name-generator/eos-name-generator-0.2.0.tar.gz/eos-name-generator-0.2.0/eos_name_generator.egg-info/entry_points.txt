@@ -1,0 +1,3 @@
+[console_scripts]
+eos-name-generator = cli.entrypoint:cli
+

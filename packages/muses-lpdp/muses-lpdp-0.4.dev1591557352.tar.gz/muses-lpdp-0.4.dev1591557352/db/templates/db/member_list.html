@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block nav_bar %}
+    {% include '_partials/nav_bar_section.html' %}
+{% endblock %}
+{% block current_context %}
+{% endblock %}
+{% block tags_selector %}
+{% endblock %}
+{% block content %}
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for member in member_list %}
+            <div class="muses-list-item" onclick="location.href='{% url "muses_member_detail" member.id %}'">
+                <div class="muses-member-avatar">
+                    <img src="{{ member.avatar|default:"http://via.placeholder.com/100x100" }}" alt="">
+                </div>
+                <div>{{ member.username|default:"Undefined" }}</div>
+                <div>{{ member.first_name|default:"Undefined" }}</div>
+                <div>{{ member.last_name|default:"Undefined" }}</div>
+                <div>{{ member.gender|default:"Undefined" }}</div>
+                <div><input type="button" value="{% trans "Send a message" %}"></div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+{% endblock %}

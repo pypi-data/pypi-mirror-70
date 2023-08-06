@@ -1,0 +1,3 @@
+[console_scripts]
+tdms2axg = tdms2axg.scripts:main
+

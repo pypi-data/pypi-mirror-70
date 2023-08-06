@@ -1,0 +1,4 @@
+numpy
+quantities
+nptdms
+axographio

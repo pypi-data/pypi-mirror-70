@@ -1,0 +1,25 @@
+.idea
+__pycache__
+.coverage
+dist/
+covid/notebooks/.ipynb_checkpoints/
+Untitled.ipynb
+cache
+
+# docker-compose
+docker-compose*
+
+# vscode
+.devcontainer*
+.vscode
+
+# gettext
+*.mo
+notebooks/playground.ipynb
+.ipynb_checkpoints
+old
+tabela de parâmetros1.docx
+htmlcov/
+Global_Mobility_Report.csv
+cc-test-reporter
+coverage.xml

@@ -1,0 +1,7 @@
+setup.py
+basic_logtools/filelog.py
+basic_logtools.egg-info/PKG-INFO
+basic_logtools.egg-info/SOURCES.txt
+basic_logtools.egg-info/dependency_links.txt
+basic_logtools.egg-info/not-zip-safe
+basic_logtools.egg-info/top_level.txt

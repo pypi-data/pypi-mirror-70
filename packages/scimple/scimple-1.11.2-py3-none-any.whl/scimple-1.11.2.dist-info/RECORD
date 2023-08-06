@@ -1,0 +1,17 @@
+scimple/__init__.py,sha256=L_D5ppRC-do55RRLxz880HtGIeiptIRYJO30KEcDJgw,206
+scimple/graph.py,sha256=QhIBGy3mhtKTard9XihFVtyJPY-Z-lhfDhXJJqwsJZo,7065
+scimple/kafka.py,sha256=MRBSt3vAdh9WuBMgIP-bkft_VOcOsFcjxqXJlmw4gk4,6108
+scimple/plot.py,sha256=57SZJFzjLGqTwcfI63YsUUhEeKvnWWC6jIsBtZMRpQ4,49679
+scimple/pygal_utils.py,sha256=9BjGCeEi2lbk187uUcA58tzRXl3wCYWwaCI393X6cV8,921
+scimple/pyspark_utils.py,sha256=1wFRKvG_9oYSZWyBRtixvMft2bd-yQxmrsyY-ebTaN4,2426
+scimple/stats.py,sha256=WvWgTCN3V3PzZRsBN9O4sbyovU-ATfQ43yCzsSmAuV4,3787
+scimple/utils.py,sha256=ioTaI4zm72ohNmlSIpMCvzmubb9LTU2I8N8LDb9C4c8,7967
+scimple/scimple_data/CHARGES_phenyl-Fe-porphyirine-CO2-Me_4_rel,sha256=OKzbyg0IACVDR4_ZxK_bTBKMrnjxUKSUkJ9n5zVMHvs,21168
+scimple/scimple_data/adult.txt,sha256=EEq1oWub87szEmyEIIsdu11jBDz49ImWj8DpEWZkWX4,3518492
+scimple/scimple_data/ek_InTP_CO2_Me_4_graphene_W_r2_k.dat,sha256=6IDPCQk4dM2fQulGecSS7FuVXnyl4hTcNQjWkwLnrWE,22815
+scimple/scimple_data/phenyl-Fe-porphyirine-CO2-Me_4_rel.xyz,sha256=HCWLBeIbMHrUKqQSMi5_cw2sXGDFZVXSHC0s_xDL97M,23181
+scimple/scimple_data/spark-streaming-kafka-0-8-assembly_2.11-2.3.0.jar,sha256=YTHdUw7gtA3mNb6NvdDIrTcPuMIe4JfMG2nN9UNsajs,12271023
+scimple-1.11.2.dist-info/METADATA,sha256=PPQMRVmoIDfg7yRo_535DcZEzUsU2GaoiGXfa1-6cKQ,425
+scimple-1.11.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scimple-1.11.2.dist-info/top_level.txt,sha256=qCqm2rDKbGXfYa0gtJWQ7RMg-J-k0c_8UNdH5kByxFA,29
+scimple-1.11.2.dist-info/RECORD,,

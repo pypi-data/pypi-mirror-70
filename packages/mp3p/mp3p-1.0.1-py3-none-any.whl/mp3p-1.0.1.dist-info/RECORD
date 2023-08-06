@@ -1,0 +1,12 @@
+mp3p/__init__.py,sha256=ZXmJ3_h2dggQ8l2goyFuz9CpIoQ4Fq9j63PbXtDlauM,67
+mp3p/__main__.py,sha256=oDHCh6YPzYujepGoCSDLCqBVLLOCIEnR20eZJbtwz5Y,172
+mp3p/command_player.py,sha256=u51BRhJDnICVpYZb2-tcKryyuj7DdsdbaIkfqO1NmwU,1039
+mp3p/controls.py,sha256=3NuD1G1Ua7SJ3JeQUgRzqdwmCbyZ4-ot8za_LcAiK3o,1843
+mp3p/time_manipulation.py,sha256=lwcTuXoGGPN0TTseGYr3bfUHyt2BzhC73v7UKM48mD8,1686
+mp3p/time_util.py,sha256=tTI-qbtzZ2VvlkefoyWpiiiWzZXHd_gv48K1ANcumdk,333
+mp3p/volume.py,sha256=lH2a4bCHUPu2OgfkRxoq5IPoJF1SeD1N3zy_-tIBNJI,1883
+mp3p-1.0.1.dist-info/METADATA,sha256=VhhTKHoedMUEL6W8Dnj4S-0KBMd7d1tVgDptmoEZYBc,1633
+mp3p-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mp3p-1.0.1.dist-info/entry_points.txt,sha256=WZfoOe2dsFdvR87mf_dnJ3_Le8Q_v_SVYrQ8wr3IQ1s,45
+mp3p-1.0.1.dist-info/top_level.txt,sha256=W1CbZmyLMS9CTrc0Ub58nqS84LmxejboMa2jEBadBEY,5
+mp3p-1.0.1.dist-info/RECORD,,

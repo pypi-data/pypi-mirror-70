@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block current_context %}
+{% endblock %}
+{% block content %}
+
+    <div class="muses-list">
+        {% include "_partials/pagination.html" %}
+        {% for contest in object_list %}
+            <div class="muses-list-item"
+                 onclick="location.href='{% url "muses_admin_contest_detail" contest.id %}'">
+                <div>
+                    {{ contest.details }}
+                </div>
+                <div>
+                    <a href="{% url "muses_admin_contest_delete" contest.id %}" class="muses-button">
+                        {% trans "Delete" %}
+                    </a>
+                </div>
+
+            </div>
+        {% endfor %}
+        {% include "_partials/pagination.html" %}
+    </div>
+
+{% endblock %}

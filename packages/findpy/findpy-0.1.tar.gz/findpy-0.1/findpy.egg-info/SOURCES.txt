@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+findpy/__init__.py
+findpy/find.py
+findpy.egg-info/PKG-INFO
+findpy.egg-info/SOURCES.txt
+findpy.egg-info/dependency_links.txt
+findpy.egg-info/top_level.txt

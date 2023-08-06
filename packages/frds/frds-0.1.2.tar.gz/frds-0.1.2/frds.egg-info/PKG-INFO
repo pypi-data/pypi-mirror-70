@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: frds
+Version: 0.1.2
+Summary: Financial Research Data Services
+Home-page: https://github.com/mgao6767/frds/
+Author: Mingze Gao
+Author-email: adrian.gao@outlook.com
+License: MIT
+Description: # FRDS
+        
+        ![LICENSE](https://img.shields.io/github/license/mgao6767/frds?color=green)
+        
+        General purpose financial research data services.
+        
+        ## Usage
+        
+        ```python
+        python -m frds.run
+        ```
+        
+        ## Test
+        
+        ```python
+        python -m unittest
+        ```
+        
+        ## Structure
+        
+        | Module          | Description                                        |
+        |-----------------|----------------------------------------------------|
+        | `frds.data`     | provides data access to various data vendors.      |
+        | `frds.ra`       | the hard-working RA that does all the computation. |
+        | `frds.measures` | the collection of measures to estimate.            |
+        
+        ## Measures
+        
+        | Measure                                      | Description                    | Datasets Used |
+        |----------------------------------------------|--------------------------------|---------------|
+        | [tangibility](/frds/measures/tangibility.py) | Asset tangibility = ppent / at | wrds.funda    |
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Description-Content-Type: text/markdown

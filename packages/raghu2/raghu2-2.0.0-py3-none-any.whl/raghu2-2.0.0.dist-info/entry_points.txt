@@ -1,0 +1,3 @@
+[console_scripts]
+raghu = raghu.__main__:main
+

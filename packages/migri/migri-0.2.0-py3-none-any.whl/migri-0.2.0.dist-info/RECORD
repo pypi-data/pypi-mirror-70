@@ -1,0 +1,12 @@
+migri/__init__.py,sha256=dumgbyyk5JXaEbv5qmzydDldn_xClXzLIaGmGSnCW7g,58
+migri/main.py,sha256=1MfbP7O0TXK1jrz-00m5apJuEq-fkLCH8aSpKCeJ3Pc,8490
+migri/sql/applied_migration.sql,sha256=-GsrwVeY3C_8mBLqlm3HSwUl2F-jeCe-PiOaokGOXxI,151
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/conftest.py,sha256=AomJa2HcPPIi5JxQhTdvSCswezN-97dsTwQCuiPikLM,1368
+test/test_run_migrations.py,sha256=XEtPr_umtmHyG7rFvdZQh7x3tC3sLyuPHIgskLFMaD4,3071
+migri-0.2.0.dist-info/LICENSE,sha256=LqRrWpVOVmyrvDqc8QG8Oq6U520PbT4OFiZY2_4Uczg,1065
+migri-0.2.0.dist-info/METADATA,sha256=y-OpMma-3yEKryr6hwRspg6Igr-uuUfH7xp4N__uQeg,542
+migri-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+migri-0.2.0.dist-info/entry_points.txt,sha256=_YvgqD7UKu5e3hGjCcduLNcUhL7MPNY0r_pknw8BT1Y,43
+migri-0.2.0.dist-info/top_level.txt,sha256=o8GqJCowJ2vYCXc18UqIH96soq-O2KXBZePk-I-ljHs,11
+migri-0.2.0.dist-info/RECORD,,

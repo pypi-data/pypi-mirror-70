@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: migri
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Database
+Requires-Python: >=3.7
+Requires-Dist: aiofiles (==0.4.*)
+Requires-Dist: asyncpg (>=0.18.*)
+Requires-Dist: click (==7.*)
+Requires-Dist: sqlparse (==0.3.*)
+
+UNKNOWN
+
+

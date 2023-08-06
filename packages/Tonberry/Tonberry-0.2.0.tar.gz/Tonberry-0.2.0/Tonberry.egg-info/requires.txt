@@ -1,0 +1,9 @@
+uvicorn
+dacite
+user-agents
+jinja2
+
+[dev]
+mypy
+black
+isort

@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: redbrick-sdk
+Version: 0.0.5
+Summary: RedBrick platform python SDK!
+Home-page: https://github.com/dereklukacs/redbrick-sdk
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: torch (==1.5.0)
+Requires-Dist: torchvision (==0.6.0)
+Requires-Dist: opencv-python (==4.2.0.34)
+Requires-Dist: numpy (==1.18.5)
+Requires-Dist: matplotlib (==3.2.1)
+Requires-Dist: requests (==2.23.0)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; extra == 'dev'
+Requires-Dist: pydocstyle (==5.0.2) ; extra == 'dev'
+Requires-Dist: pycodestyle (==2.6.0) ; extra == 'dev'
+Requires-Dist: twine (==3.1.1) ; extra == 'dev'
+
+# Introduction
+
+This is an SDK to make integrating with the RedBrick platform as easy as possible. This includes uploading and downloading data
+as well as making your datasets easily available for training.
+
+
+Desired behaviors:
+* Upload:
+    - upload a folder of images to a redbrick dataset
+
+* download:
+    - download images from redbrick, save as .jpg/.png or numpy arrays
+    - download labels and save to specific file formats:
+        - Coco format
+        - darknet training format
+
+* training:
+    - Data in vectorized format ready to be converted to
+
+
+## Quickstart
+
+After creating an account on app.redbrickai.com
+
+```bash
+pip install redbrick-sdk
+```
+
+```python
+import redbrick
+import torchvision
+
+# Setup Redbrick Global context
+client = redbrick.client(org_id="asdasd", api_key="asdasd")
+
+# create a prelabeler instance
+prelabeler = redbrick.prelabeling(project_id="project_id", stage_name="stage_name")
+
+# show an example image
+prelabeler.show_sample()
+
+# import a model
+model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
+model.eval()
+
+# run inference and upload predictions to redbrick
+
+
+```
+
+## Usage
+
+```python
+redbrick.init()
+```
+
+
+
+## Developing
+
+```bash
+pip install -e .[dev]
+

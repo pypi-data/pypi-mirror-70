@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pythonpp
+Version: 1.0
+Summary: Python 3, but with proper encapsulation.
+Home-page: https://github.com/r2dev2bb8/PythonPP
+Author: Ronak Badhe, Kento Nishi
+Author-email: ronak.badhe@gmail.com, kento24gs@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# PythonPP
+Python 3, but with proper encapsulation.
+

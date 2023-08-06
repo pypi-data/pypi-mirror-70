@@ -1,0 +1,8 @@
+README.md
+setup.py
+wavecar2unk.egg-info/PKG-INFO
+wavecar2unk.egg-info/SOURCES.txt
+wavecar2unk.egg-info/dependency_links.txt
+wavecar2unk.egg-info/entry_points.txt
+wavecar2unk.egg-info/requires.txt
+wavecar2unk.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+PypiReadme.md
+README.md
+setup.cfg
+setup.py
+django_satchmo.egg-info/PKG-INFO
+django_satchmo.egg-info/SOURCES.txt
+django_satchmo.egg-info/dependency_links.txt
+django_satchmo.egg-info/requires.txt
+django_satchmo.egg-info/top_level.txt

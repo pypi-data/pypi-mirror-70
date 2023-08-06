@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-satchmo
+Version: 0.0.1
+Summary: A Django Satchmo app maintained .
+Home-page: https://gitlab.com/hermann.kass/django-satchmo
+Author: KALAMAR
+Author-email: entreprise.kalamar@gmail.com
+License: MIT
+Description: # django-satchmo
+        
+        Projet de refonte du projet satchmo pour fonctionner avec Django 3
+        In development
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

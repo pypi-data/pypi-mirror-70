@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ObjectDetectionElsys
+Version: 0.1.2
+Summary: Object detection and classification based on the YOLO & YOLOv2 algorithms implemented using TensorFlow
+Home-page: https://github.com/GenchoBG/ObjectDetection
+Author: Evgeni Dimov
+Author-email: evgenidimovtues@gmail.com
+License: MIT
+Download-URL: https://github.com/GenchoBG/ObjectDetection/archive/v_012.tar.gz
+Description: UNKNOWN
+Keywords: Computer Vision,Object Detection,Image Augmentation,Yolo
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7

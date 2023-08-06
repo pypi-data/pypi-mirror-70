@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ducut
+Version: 0.0.2
+Summary: ducut
+Home-page: https://github.com/Mywayking/
+Author: galen
+Author-email: mywayking@icloud.com
+License: Apache-2.0
+Description: # 电商分词
+        
+        ## 安装
+        `pip install ducut`
+        
+        ## 使用方式
+        ```python
+        from ducut import DuCut
+        resource_path = '<自定义的资源文件>'
+        dc = DuCut(resource_path)
+        line = '万斯 板鞋白红'
+        cu = dc.cut_query(line)
+        print(f"brand:{cu.brand},series:{cu.series},color:{cu.color},category:{cu.category},word:{cu.word},proper:{cu.proper}")
+        ```
+        
+        ## 思路
+        - 语义实体：主要用于一些系统尚未识别的实体词，干预后，该词的切分总是能保持一致，不受其所在的上下文影响。
+        - 语义切分：用于指定在特定上下文中，短语的切分方式，而不影响该短语在其他上下文中的切分方式
+        
+        ## 参考资料
+        - [OpenSearch电商分词](https://developer.aliyun.com/article/659778)
+Keywords: word cut for du
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown

@@ -1,0 +1,88 @@
+Python BatchMailchimp
+=====================
+
+A light wrapper around `mailchimp3 <https://pypi.org/project/mailchimp3/>`__ that makes it easier to use batch
+operations.
+
+Getting Started
+---------------
+
+Installation
+~~~~~~~~~~~~
+
+::
+
+   pip install batch-mailchimp
+
+Initialization
+~~~~~~~~~~~~~~
+
+This can be used as a drop-in replacement for mailchimp3 – just change
+the import at the top:
+
+.. code:: python
+
+   from batch_mailchimp import BatchMailChimp as MailChimp
+
+   client = MailChimp(mc_api='YOUR_API_KEY', mc_user='YOUR_USERNAME')
+
+Examples
+~~~~~~~~
+
+You can use this exactly as you would the ``mailchimp3`` library. The addition is the ``Batch`` class, for keeping track of batch operations. To use it, first create a new batch, then include it in an API call via the ``batch`` keyword argument.
+
+.. code:: python
+
+   from batch_mailchimp import Batch, BatchMailChimp as MailChimp
+
+   client = MailChimp(mc_api='YOUR_API_KEY', mc_user='YOUR_USERNAME')
+
+   # create a batch object...
+   my_batch = Batch()
+
+   # add John Doe with email john.doe@example.com to list matching id '123456'
+   client.lists.members.create('123456', {
+           'email_address': 'john.doe@example.com',
+           'status': 'subscribed',
+           'merge_fields': {
+               'FNAME': 'John',
+               'LNAME': 'Doe',
+           },
+       },
+       batch=my_batch,  # ...and include it in an API call.
+   )
+
+The API call won’t fire immediately, but will instead be added to the batch. When you’re ready, run the batch:
+
+.. code:: python
+
+   my_batch.run()
+
+You can check the status of your batch operation using:
+
+.. code:: python
+
+   my_batch.status()
+
+You can also delete your batch operation using:
+
+.. code:: python
+
+   my_batch.delete()
+
+API Structure and Endpoints
+---------------------------
+
+The API Structure matches that of `mailchimp3 <https://pypi.org/project/mailchimp3/>`__. You should refer to their documentation for usage.
+
+Endpoints are also the same, except for the addition of the ``batch`` keyword.
+
+Support
+-------
+
+If you are having issues, please `create an issue <https://github.com/andylolz/python-batchmailchimp/issues>`__ or `submit a pull request <https://github.com/andylolz/python-batchmailchimp/pulls>`__.
+
+License
+-------
+
+The project is licensed under the MIT License.

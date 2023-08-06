@@ -1,0 +1,10 @@
+opencensus_ext_newrelic/__init__.py,sha256=rAIM57-HWI5h3MpjeXPOZN0Xf9ZwbgsPmCY3poCHdt0,935
+opencensus_ext_newrelic/stats.py,sha256=w54bUNznTyqGQJlU8XqIU6feIwXeGb4m_KFO6klO6WI,7639
+opencensus_ext_newrelic/trace.py,sha256=Sc5sh59jsl5U9zP6l3tc8lT_-1DaLc3SoS0qvELhi-k,5338
+opencensus_ext_newrelic/version.py,sha256=IgYTy6hIJbFXwBR1LJ7CreEcICwcFtGpZe_ern0TpsY,116
+opencensus_ext_newrelic-0.2.1.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+opencensus_ext_newrelic-0.2.1.dist-info/METADATA,sha256=ImfMb3vcYJk-G8R7zxLPlZ8UcSRTWPbmMs9JoRjV1DQ,5390
+opencensus_ext_newrelic-0.2.1.dist-info/THIRD_PARTY_NOTICES.rst,sha256=OhVMCGdRwSkWHjrlMFbnsB7ad_13m2oUQWgqjel4ApQ,711
+opencensus_ext_newrelic-0.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+opencensus_ext_newrelic-0.2.1.dist-info/top_level.txt,sha256=LfA-pBzQNhv62-ZlZhDTBewl86PiSg7jjKOc8HSLuO4,24
+opencensus_ext_newrelic-0.2.1.dist-info/RECORD,,

@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: prioritree-xaudier
+Version: 0.0.1
+Summary: This package contains a graphical interface for project management.
+Home-page: https://github.com/XavierAudier/prioritree
+Author: Xavier Audier
+Author-email: xetal.contact@gmail.com
+License: UNKNOWN
+Description: # Package Description
+        
+        This package shows a graphical interface for project management.
+        A Tree View allows you to organize tasks in a branching architecture.
+        A List View allows you to sort all items according to a priority criterion.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
